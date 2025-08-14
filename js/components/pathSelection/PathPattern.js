@@ -239,31 +239,13 @@ class PathPattern {
             .style('justify-content', 'space-between')
             .style('align-items', 'center');
             
-        titleBar.append('span')
-            .style('font-weight', 'bold')
-            .text(`${patternData.start} → ${patternData.end} 路径树 (${filteredPaths.length} 条路径)`);
-            
-        // 添加关闭按钮
-        titleBar.append('button')
-            .text('×')
-            .style('border', 'none')
-            .style('background', 'none')
-            .style('font-size', '18px')
-            .style('cursor', 'pointer')
-            .style('color', '#666')
-            .style('padding', '0 5px')
-            .on('click', (event) => {
-                event.stopPropagation();
-                patternElement.classed('selected', false);
-                this.removePathDetailView();
-                this.triggerPatternSelection(null, null);
-            });
+
 
         // 创建树状图容器
         const treeContainer = dropdownContainer.append('div')
             .attr('class', 'pattern-tree-container')
-            .style('width', '100%')
-            .style('height', '500px')
+            .style('width', '95%')
+            .style('height', '400px')
             .style('overflow', 'auto')
             .style('padding', '10px');
 
@@ -399,12 +381,9 @@ class PatternTreeVisualization {
                 this.collapseAll();
             });
             
+        // 不再显示“已选择 X 条路径”提示
         this.selectionInfo = controlPanel.append('span')
-            .style('margin-left', 'auto')
-            .style('font-weight', 'bold')
-            .style('color', '#333')
-            .style('font-size', '11px')
-            .text(`${this.pathsData.length} 条路径`);
+            .style('display','none');
     }
     
     render() {
@@ -698,7 +677,7 @@ class PatternTreeVisualization {
     
     filterAndTriggerPaths() {
         if (this.selectedBranches.size === 0) {
-            this.selectionInfo.text(`${this.pathsData.length} 条路径`);
+        // 移除数量更新显示
             return;
         }
         

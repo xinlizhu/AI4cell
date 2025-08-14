@@ -608,7 +608,8 @@ class LineageVis {
                     .attr('class','chart-title')
                     .style('margin-bottom','8px')
                     .style('font-weight','600')
-                    .text(`${type}（${groupPaths.length} 路径平均）`);
+                    // 移除节点标题中的“（X 路径平均）”
+                    .text(`${type}`);
                 const id = `branch-root-${this.treeSessionId}-${idx}`;
                 wrap.append('div').attr('id', id);
                 new LineageChart(id, type, specific, 0, true);
@@ -652,7 +653,7 @@ class LineageVis {
                     .attr('class', 'chart-title')
                     .style('margin-bottom', '8px')
                     .style('font-weight', '600')
-                    .text(`${cellType}（${subset.length} 路径平均）`);
+                    .text(`${cellType}`);
                 const id = `tree-lineage-${this.treeSessionId}-${i}`;
                 wrap.append('div').attr('id', id);
                 // 使用合并模式（传 specificCells 列表，内部做平均/聚合）
@@ -808,7 +809,7 @@ class LineageVis {
                     .attr('class', 'chart-title')
                     .style('margin-bottom', '8px')
                     .style('font-weight', '600')
-                    .text(`${type}（${used.length} 路径平均）`);
+                    .text(`${type}`);
                 const id = `branch-main-${this.treeSessionId}-${i}`;
                 wrap.append('div').attr('id', id);
                 new LineageChart(id, type, specific, i, true);
@@ -848,7 +849,7 @@ class LineageVis {
                     wrap.append('div')
                         .attr('class', 'chart-title')
                         .style('margin-bottom', '8px')
-                        .text(`${type}（${used.length} 路径平均）`);
+                        .text(`${type}`);
                     const id = `branch-fork-${this.treeSessionId}-${i}-${Math.floor(Math.random()*1e6)}`;
                     wrap.append('div').attr('id', id);
                     new LineageChart(id, type, specific, i, true);
