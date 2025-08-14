@@ -32,7 +32,8 @@ class NeighborDetailsPanel {
             .style('gap','12px')
             // 让列表填充剩余空间并内部滚动
             .style('flex','1 1 auto')
-            .style('overflow-y','auto');
+            // 使用 scroll 而不是 auto 以便始终预留滚动条空间（避免内容被压缩挤成一团）
+            .style('overflow-y','scroll');
 
         // 空状态占位
         this.emptyState = this.list.append('div')
@@ -68,7 +69,11 @@ class NeighborDetailsPanel {
             .style('border-radius','8px')
             .style('padding','10px')
             .style('background','#fafafa')
-            .style('overflow','hidden'); // 裁剪内部图表溢出
+            .style('overflow','hidden') // 裁剪内部图表溢出
+            // 防止被父 flex 容器压缩导致“挤成一团”
+            .style('flex','0 0 auto')
+            // 设一个最小高度，保证图表可读
+            .style('min-height','110px');
 
         // Delete button
         wrap.append('button')
