@@ -1,0 +1,146 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,FN1_integrin_aVb5_complex,Branchial arch,FN1,integrin,1.25,0.02
+AGM,发送,2,FN1_integrin_aVb3_complex,Branchial arch,FN1,integrin,1.163,0.004
+AGM,发送,3,APP_FPR2,Branchial arch,APP,FPR2,0.914,0.043
+AGM,发送,4,SEMA3A_NRP1,Branchial arch,SEMA3A,NRP1,0.764,0.016
+AGM,发送,5,VEGFB_NRP1,Branchial arch,VEGFB,NRP1,0.72,0.027
+AGM,发送,6,VEGFA_NRP1,Branchial arch,VEGFA,NRP1,0.704,0.02
+AGM,发送,7,LAMC1_integrin_aVb3_complex,Branchial arch,LAMC1,integrin,0.699,0.007
+AGM,发送,8,MMP2_integrin_aVb3_complex,Branchial arch,MMP2,integrin,0.656,0.004
+AGM,发送,9,IGF1_integrin_aVb3_complex,Branchial arch,IGF1,integrin,0.47,0.006
+AGM,发送,10,GDF11_TGFR_AVR2A,Branchial arch,GDF11,TGFR,0.44,0.045
+AGM,接收,1,COL3A1_ADGRG1,Branchial arch,ADGRG1,COL3A1,1.282,0.027
+AGM,接收,2,COL3A1_integrin_a1b1_complex,Branchial arch,integrin,COL3A1,1.239,0.046
+AGM,接收,3,COL3A1_integrin_a11b1_complex,Branchial arch,integrin,COL3A1,1.23,0.025
+AGM,接收,4,LRFN4_PTPRF,Branchial arch,PTPRF,LRFN4,1.159,0.037
+AGM,接收,5,WNT5A_FZD3_LRP6,Branchial arch,FZD3,WNT5A,0.678,0.037
+AGM,接收,6,WNT5A_FZD2_LRP6,Branchial arch,FZD2,WNT5A,0.678,0.037
+AGM,接收,7,WNT5A_FZD7_LRP6,Branchial arch,FZD7,WNT5A,0.678,0.037
+AGM,接收,8,WNT5A_FRZB,Branchial arch,FRZB,WNT5A,0.655,0.042
+AGM,接收,9,WNT5A_ROR1,Branchial arch,ROR1,WNT5A,0.585,0.05
+AGM,接收,10,WNT5A_FZD6_LRP6,Branchial arch,FZD6,WNT5A,0.583,0.035
+Branchial arch,发送,1,IGF2_IGF2R,Branchial arch,IGF2,IGF2R,2.111,0.026
+Branchial arch,发送,2,IGF2_IGF1R,Branchial arch,IGF2,IGF1R,2.002,0.0
+Branchial arch,发送,3,MDK_PTPRZ1,Branchial arch,MDK,PTPRZ1,1.227,0.0
+Branchial arch,发送,4,FGF10_FGFR2,Branchial arch,FGF10,FGFR2,1.179,0.014
+Branchial arch,发送,5,FN1_integrin_aVb5_complex,Branchial arch,FN1,integrin,1.067,0.015
+Branchial arch,发送,6,DLK1_NOTCH3,Branchial arch,DLK1,NOTCH3,1.021,0.011
+Branchial arch,发送,7,LRFN4_PTPRF,Branchial arch,LRFN4,PTPRF,0.981,0.0
+Branchial arch,发送,8,FN1_integrin_a3b1_complex,Branchial arch,FN1,integrin,0.975,0.023
+Branchial arch,发送,9,FN1_integrin_a11b1_complex,Branchial arch,FN1,integrin,0.937,0.012
+Branchial arch,发送,10,LRFN5_PTPRF,Branchial arch,LRFN5,PTPRF,0.934,0.0
+Branchial arch,接收,1,IGF2_IGF2R,Branchial arch,IGF2R,IGF2,2.111,0.026
+Branchial arch,接收,2,IGF2_IGF1R,Branchial arch,IGF1R,IGF2,2.002,0.0
+Branchial arch,接收,3,MDK_PTPRZ1,Branchial arch,PTPRZ1,MDK,1.227,0.0
+Branchial arch,接收,4,FGF10_FGFR2,Branchial arch,FGFR2,FGF10,1.179,0.014
+Branchial arch,接收,5,FN1_integrin_aVb5_complex,Branchial arch,integrin,FN1,1.067,0.015
+Branchial arch,接收,6,DLK1_NOTCH3,Branchial arch,NOTCH3,DLK1,1.021,0.011
+Branchial arch,接收,7,LRFN4_PTPRF,Branchial arch,PTPRF,LRFN4,0.981,0.0
+Branchial arch,接收,8,FN1_integrin_a3b1_complex,Branchial arch,integrin,FN1,0.975,0.023
+Branchial arch,接收,9,FN1_integrin_a11b1_complex,Branchial arch,integrin,FN1,0.937,0.012
+Branchial arch,接收,10,LRFN5_PTPRF,Branchial arch,PTPRF,LRFN5,0.934,0.0
+Branchial arch_1_107_Target,发送,1,IGF2_IGF1R,Branchial arch,IGF2,IGF1R,1.87,0.028
+Branchial arch_1_107_Target,发送,2,MDK_PTPRZ1,Branchial arch,MDK,PTPRZ1,1.27,0.0
+Branchial arch_1_107_Target,发送,3,FGF10_FGFR2,Branchial arch,FGF10,FGFR2,1.258,0.0
+Branchial arch_1_107_Target,发送,4,FN1_integrin_a3b1_complex,Branchial arch,FN1,integrin,1.145,0.0
+Branchial arch_1_107_Target,发送,5,FN1_integrin_aVb1_complex,Branchial arch,FN1,integrin,1.13,0.016
+Branchial arch_1_107_Target,发送,6,FN1_integrin_aVb5_complex,Branchial arch,FN1,integrin,1.13,0.0
+Branchial arch_1_107_Target,发送,7,DLK1_NOTCH2,Branchial arch,DLK1,NOTCH2,1.099,0.0
+Branchial arch_1_107_Target,发送,8,FN1_integrin_a8b1_complex,Branchial arch,FN1,integrin,0.946,0.002
+Branchial arch_1_107_Target,发送,9,FN1_integrin_a11b1_complex,Branchial arch,FN1,integrin,0.927,0.016
+Branchial arch_1_107_Target,发送,10,FN1_integrin_a5b1_complex,Branchial arch,FN1,integrin,0.919,0.004
+Branchial arch_1_107_Target,接收,1,IGF2_IGF2R,Branchial arch,IGF2R,IGF2,2.067,0.034
+Branchial arch_1_107_Target,接收,2,IGF2_IGF1R,Branchial arch,IGF1R,IGF2,1.958,0.0
+Branchial arch_1_107_Target,接收,3,DLK1_NOTCH3,Branchial arch,NOTCH3,DLK1,1.418,0.0
+Branchial arch_1_107_Target,接收,4,DLK1_NOTCH2,Branchial arch,NOTCH2,DLK1,1.357,0.0
+Branchial arch_1_107_Target,接收,5,DLK1_NOTCH1,Branchial arch,NOTCH1,DLK1,1.349,0.0
+Branchial arch_1_107_Target,接收,6,MDK_PTPRZ1,Branchial arch,PTPRZ1,MDK,1.304,0.0
+Branchial arch_1_107_Target,接收,7,PPIA_BSG,Branchial arch,BSG,PPIA,1.2,0.048
+Branchial arch_1_107_Target,接收,8,LRFN4_PTPRF,Branchial arch,PTPRF,LRFN4,0.949,0.002
+Branchial arch_1_107_Target,接收,9,TENM3_ADGRL2,Branchial arch,ADGRL2,TENM3,0.688,0.002
+Branchial arch_1_107_Target,接收,10,PDGFC_PDGFRA,Branchial arch,PDGFRA,PDGFC,0.687,0.0
+Cavity,发送,1,NRXN3_ADGRL1,Branchial arch,NRXN3,ADGRL1,0.442,0.007
+Cavity,发送,2,EFNA2_EPHA3,Branchial arch,EFNA2,EPHA3,0.235,0.039
+Cavity,发送,3,ANGPT1_TEK,Branchial arch,ANGPT1,TEK,0.232,0.019
+Cavity,接收,1,BMP7_BMPR1A_BMPR2,Branchial arch,BMPR1A,BMP7,0.512,0.011
+Cavity,接收,2,LipoxinA4_byALOX12_FPR2,Branchial arch,byALOX12,LipoxinA4,0.257,0.014
+Heart,发送,1,IGF2_IGF2R,Branchial arch,IGF2,IGF2R,2.627,0.0
+Heart,发送,2,IGF2_IGF1R,Branchial arch,IGF2,IGF1R,1.944,0.0
+Heart,发送,3,PPIA_BSG,Branchial arch,PPIA,BSG,1.311,0.0
+Heart,发送,4,FN1_integrin_aVb1_complex,Branchial arch,FN1,integrin,1.212,0.0
+Heart,发送,5,COL18A1_integrin_a1b1_complex,Branchial arch,COL18A1,integrin,1.12,0.0
+Heart,发送,6,FN1_integrin_a4b1_complex,Branchial arch,FN1,integrin,1.065,0.0
+Heart,发送,7,FN1_integrin_aVb5_complex,Branchial arch,FN1,integrin,1.055,0.027
+Heart,发送,8,COL2A1_integrin_a1b1_complex,Branchial arch,COL2A1,integrin,1.012,0.031
+Heart,发送,9,COL3A1_integrin_a1b1_complex,Branchial arch,COL3A1,integrin,1.0,0.0
+Heart,发送,10,FN1_integrin_a5b1_complex,Branchial arch,FN1,integrin,0.922,0.002
+Heart,接收,1,IGF2_IGF2R,Branchial arch,IGF2R,IGF2,2.308,0.0
+Heart,接收,2,IGF2_IGF1R,Branchial arch,IGF1R,IGF2,2.199,0.0
+Heart,接收,3,FN1_integrin_aVb1_complex,Branchial arch,integrin,FN1,1.271,0.0
+Heart,接收,4,FN1_integrin_aVb5_complex,Branchial arch,integrin,FN1,1.271,0.0
+Heart,接收,5,FN1_integrin_a3b1_complex,Branchial arch,integrin,FN1,1.179,0.0
+Heart,接收,6,FGF2_FGFR2,Branchial arch,FGFR2,FGF2,1.171,0.023
+Heart,接收,7,COL2A1_integrin_a1b1_complex,Branchial arch,integrin,COL2A1,1.143,0.0
+Heart,接收,8,FN1_integrin_a11b1_complex,Branchial arch,integrin,FN1,1.141,0.0
+Heart,接收,9,COL2A1_integrin_a11b1_complex,Branchial arch,integrin,COL2A1,1.134,0.0
+Heart,接收,10,FN1_integrin_a8b1_complex,Branchial arch,integrin,FN1,1.13,0.0
+Neural crest,发送,1,MDK_PTPRZ1,Branchial arch,MDK,PTPRZ1,1.235,0.0
+Neural crest,发送,2,FN1_integrin_aVb1_complex,Branchial arch,FN1,integrin,1.095,0.03
+Neural crest,发送,3,FN1_integrin_aVb5_complex,Branchial arch,FN1,integrin,1.078,0.005
+Neural crest,发送,4,FN1_integrin_a3b1_complex,Branchial arch,FN1,integrin,0.999,0.007
+Neural crest,发送,5,DLK1_NOTCH3,Branchial arch,DLK1,NOTCH3,0.996,0.03
+Neural crest,发送,6,FN1_integrin_a11b1_complex,Branchial arch,FN1,integrin,0.943,0.004
+Neural crest,发送,7,FN1_integrin_a4b1_complex,Branchial arch,FN1,integrin,0.939,0.034
+Neural crest,发送,8,FN1_integrin_a8b1_complex,Branchial arch,FN1,integrin,0.925,0.003
+Neural crest,发送,9,COL18A1_integrin_a11b1_complex,Branchial arch,COL18A1,integrin,0.884,0.007
+Neural crest,发送,10,LRFN4_PTPRF,Branchial arch,LRFN4,PTPRF,0.879,0.036
+Neural crest,接收,1,DLK1_NOTCH3,Branchial arch,NOTCH3,DLK1,1.062,0.0
+Neural crest,接收,2,LRFN4_PTPRF,Branchial arch,PTPRF,LRFN4,0.99,0.0
+Neural crest,接收,3,COL2A1_integrin_a11b1_complex,Branchial arch,integrin,COL2A1,0.944,0.019
+Neural crest,接收,4,COL18A1_integrin_a11b1_complex,Branchial arch,integrin,COL18A1,0.873,0.004
+Neural crest,接收,5,COL3A1_ADGRG1,Branchial arch,ADGRG1,COL3A1,0.787,0.017
+Neural crest,接收,6,COL3A1_integrin_a11b1_complex,Branchial arch,integrin,COL3A1,0.735,0.015
+Neural crest,接收,7,DAG1_NRXN3,Branchial arch,NRXN3,DAG1,0.69,0.003
+Neural crest,接收,8,NTN1_UNC5C,Branchial arch,UNC5C,NTN1,0.675,0.0
+Neural crest,接收,9,Cholesterol_byDHCR24_RORA,Branchial arch,byDHCR24,Cholesterol,0.632,0.018
+Neural crest,接收,10,FLRT2_ADGRL1,Branchial arch,ADGRL1,FLRT2,0.555,0.0
+Notochord,发送,1,IGF2_IGF1R,Branchial arch,IGF2,IGF1R,1.997,0.0
+Notochord,发送,2,DLK1_NOTCH1,Branchial arch,DLK1,NOTCH1,1.282,0.0
+Notochord,发送,3,MDK_PTPRZ1,Branchial arch,MDK,PTPRZ1,1.265,0.0
+Notochord,发送,4,FGF10_FGFR2,Branchial arch,FGF10,FGFR2,1.22,0.0
+Notochord,发送,5,DLK1_NOTCH2,Branchial arch,DLK1,NOTCH2,1.183,0.0
+Notochord,发送,6,COL3A1_ADGRG1,Branchial arch,COL3A1,ADGRG1,1.067,0.0
+Notochord,发送,7,DLK1_NOTCH3,Branchial arch,DLK1,NOTCH3,1.005,0.028
+Notochord,发送,8,FN1_integrin_a11b1_complex,Branchial arch,FN1,integrin,0.997,0.0
+Notochord,发送,9,LRFN4_PTPRF,Branchial arch,LRFN4,PTPRF,0.995,0.0
+Notochord,发送,10,FN1_integrin_a4b1_complex,Branchial arch,FN1,integrin,0.964,0.028
+Notochord,接收,1,NTN1_UNC5C,Branchial arch,UNC5C,NTN1,1.209,0.0
+Notochord,接收,2,NTN1_UNC5B,Branchial arch,UNC5B,NTN1,1.049,0.0
+Notochord,接收,3,SLIT2_ROBO2,Branchial arch,ROBO2,SLIT2,1.042,0.0
+Notochord,接收,4,SHH_PTCH_GAS1_transmembrane_receptor,Branchial arch,PTCH,SHH,0.956,0.0
+Notochord,接收,5,LRFN4_PTPRF,Branchial arch,PTPRF,LRFN4,0.947,0.001
+Notochord,接收,6,SLIT2_ROBO1,Branchial arch,ROBO1,SLIT2,0.941,0.0
+Notochord,接收,7,SHH_PTCH_CDON_transmembrane_receptor,Branchial arch,PTCH,SHH,0.89,0.0
+Notochord,接收,8,SHH_HHIP,Branchial arch,HHIP,SHH,0.839,0.0
+Notochord,接收,9,CADM1_NECTIN3,Branchial arch,NECTIN3,CADM1,0.836,0.0
+Notochord,接收,10,CADM1_CADM1,Branchial arch,CADM1,CADM1,0.825,0.0
+Sclerotome,发送,1,MDK_ALK,Branchial arch,MDK,ALK,1.568,0.013
+Sclerotome,发送,2,VEGFC_KDR,Branchial arch,VEGFC,KDR,0.854,0.045
+Sclerotome,发送,3,PTN_ALK,Branchial arch,PTN,ALK,0.774,0.018
+Sclerotome,发送,4,WNT5A_ROR1,Branchial arch,WNT5A,ROR1,0.774,0.037
+Sclerotome,发送,5,SEMA3A_PlexinA1_complex3,Branchial arch,SEMA3A,PlexinA1,0.602,0.016
+Sclerotome,发送,6,WNT5A_FZD8_LRP5,Branchial arch,WNT5A,FZD8,0.558,0.019
+Sclerotome,发送,7,WNT5A_FZD7_LRP5,Branchial arch,WNT5A,FZD7,0.558,0.035
+Sclerotome,发送,8,SEMA6D_PlexinA1_complex1,Branchial arch,SEMA6D,PlexinA1,0.505,0.025
+Sclerotome,发送,9,WNT5B_FZD8_LRP5,Branchial arch,WNT5B,FZD8,0.493,0.019
+Sclerotome,发送,10,WNT5B_FZD7_LRP5,Branchial arch,WNT5B,FZD7,0.493,0.027
+Sclerotome,接收,1,DLK1_NOTCH3,Branchial arch,NOTCH3,DLK1,1.695,0.013
+Sclerotome,接收,2,DLK1_NOTCH2,Branchial arch,NOTCH2,DLK1,1.634,0.05
+Sclerotome,接收,3,DLK1_NOTCH1,Branchial arch,NOTCH1,DLK1,1.625,0.048
+Sclerotome,接收,4,FGF2_FGFR2,Branchial arch,FGFR2,FGF2,1.507,0.036
+Sclerotome,接收,5,EFNA5_EPHA4,Branchial arch,EPHA4,EFNA5,1.21,0.017
+Sclerotome,接收,6,EFNA5_EPHA7,Branchial arch,EPHA7,EFNA5,1.174,0.019
+Sclerotome,接收,7,EFNA5_EPHB2,Branchial arch,EPHB2,EFNA5,1.148,0.013
+Sclerotome,接收,8,SEMA6D_PlexinA1_complex1,Branchial arch,PlexinA1,SEMA6D,1.019,0.012
+Sclerotome,接收,9,DSC2_DSG2,Branchial arch,DSG2,DSC2,0.948,0.004
+Sclerotome,接收,10,COL11A1_integrin_a1b1_complex,Branchial arch,integrin,COL11A1,0.943,0.031

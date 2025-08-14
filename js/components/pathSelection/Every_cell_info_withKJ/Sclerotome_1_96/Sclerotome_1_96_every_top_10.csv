@@ -1,0 +1,174 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.053,0.0
+AGM,发送,2,DLK1_NOTCH1,Sclerotome,DLK1,NOTCH1,1.046,0.022
+AGM,发送,3,2arachidonoylglycerol_byDAGLB_CNR1,Sclerotome,2arachidonoylglycerol,byDAGLB,1.013,0.0
+AGM,发送,4,COL3A1_integrin_a1b1_complex,Sclerotome,COL3A1,integrin,0.96,0.003
+AGM,发送,5,COL3A1_integrin_a11b1_complex,Sclerotome,COL3A1,integrin,0.96,0.0
+AGM,发送,6,TENM3_ADGRL2,Sclerotome,TENM3,ADGRL2,0.944,0.0
+AGM,发送,7,FN1_integrin_a8b1_complex,Sclerotome,FN1,integrin,0.87,0.0
+AGM,发送,8,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.867,0.022
+AGM,发送,9,FN1_integrin_a4b1_complex,Sclerotome,FN1,integrin,0.806,0.034
+AGM,发送,10,FN1_integrin_a3b1_complex,Sclerotome,FN1,integrin,0.789,0.046
+AGM,接收,1,PPIA_BSG,Sclerotome,BSG,PPIA,1.162,0.001
+AGM,接收,2,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.867,0.022
+AGM,接收,3,PDGFC_PDGFRA,Sclerotome,PDGFRA,PDGFC,0.793,0.006
+AGM,接收,4,TENM3_ADGRL2,Sclerotome,ADGRL2,TENM3,0.742,0.042
+AGM,接收,5,LRFN4_PTPRF,Sclerotome,PTPRF,LRFN4,0.663,0.021
+AGM,接收,6,EFNA5_EPHA7,Sclerotome,EPHA7,EFNA5,0.639,0.043
+AGM,接收,7,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Sclerotome,byALDH1A2,atRetinoicAcid,0.624,0.0
+AGM,接收,8,TENM3_ADGRL3,Sclerotome,ADGRL3,TENM3,0.598,0.002
+AGM,接收,9,IL1RAP_PTPRF,Sclerotome,PTPRF,IL1RAP,0.597,0.031
+AGM,接收,10,LRFN5_PTPRF,Sclerotome,PTPRF,LRFN5,0.591,0.018
+Brain,发送,1,2arachidonoylglycerol_byDAGLB_CNR1,Sclerotome,2arachidonoylglycerol,byDAGLB,1.56,0.003
+Brain,发送,2,CADM1_CADM1,Sclerotome,CADM1,CADM1,1.467,0.007
+Brain,发送,3,SLIT2_ROBO2,Sclerotome,SLIT2,ROBO2,1.372,0.006
+Brain,发送,4,APP_PLXNA4,Sclerotome,APP,PLXNA4,1.122,0.004
+Brain,发送,5,FN1_integrin_aVb5_complex,Sclerotome,FN1,integrin,1.107,0.019
+Brain,发送,6,WNT5A_SFRP1,Sclerotome,WNT5A,SFRP1,1.097,0.018
+Brain,发送,7,APLP2_PLXNA4,Sclerotome,APLP2,PLXNA4,1.084,0.003
+Brain,发送,8,CDH2_CDH2,Sclerotome,CDH2,CDH2,1.067,0.026
+Brain,发送,9,CDH6_CDH6,Sclerotome,CDH6,CDH6,1.044,0.029
+Brain,发送,10,WNT5B_SFRP1,Sclerotome,WNT5B,SFRP1,0.963,0.022
+Brain,接收,1,CADM1_CADM1,Sclerotome,CADM1,CADM1,1.467,0.007
+Brain,接收,2,CADM1_NECTIN3,Sclerotome,NECTIN3,CADM1,1.438,0.005
+Brain,接收,3,DLL3_NOTCH2,Sclerotome,NOTCH2,DLL3,1.347,0.0
+Brain,接收,4,DLL3_NOTCH1,Sclerotome,NOTCH1,DLL3,1.344,0.0
+Brain,接收,5,APP_FPR2,Sclerotome,FPR2,APP,1.309,0.009
+Brain,接收,6,APP_SORL1,Sclerotome,SORL1,APP,1.244,0.007
+Brain,接收,7,DLL3_NOTCH3,Sclerotome,NOTCH3,DLL3,1.222,0.001
+Brain,接收,8,APP_TNFRSF21,Sclerotome,TNFRSF21,APP,1.218,0.01
+Brain,接收,9,SLIT2_ROBO1,Sclerotome,ROBO1,SLIT2,1.186,0.03
+Brain,接收,10,APP_PLXNA4,Sclerotome,PLXNA4,APP,1.167,0.009
+Cavity,发送,1,COL3A1_integrin_a1b1_complex,Sclerotome,COL3A1,integrin,1.003,0.002
+Cavity,发送,2,COL2A1_integrin_a1b1_complex,Sclerotome,COL2A1,integrin,0.786,0.002
+Cavity,发送,3,FN1_integrin_aVb3_complex,Sclerotome,FN1,integrin,0.765,0.001
+Cavity,发送,4,COL1A2_integrin_a1b1_complex,Sclerotome,COL1A2,integrin,0.653,0.001
+Cavity,发送,5,TENM3_ADGRL1,Sclerotome,TENM3,ADGRL1,0.596,0.016
+Cavity,发送,6,FLRT2_ADGRL1,Sclerotome,FLRT2,ADGRL1,0.567,0.025
+Cavity,发送,7,COL26A1_integrin_a1b1_complex,Sclerotome,COL26A1,integrin,0.523,0.0
+Cavity,发送,8,MMP2_integrin_aVb3_complex,Sclerotome,MMP2,integrin,0.485,0.0
+Cavity,发送,9,COL19A1_integrin_a1b1_complex,Sclerotome,COL19A1,integrin,0.416,0.016
+Cavity,发送,10,COL9A1_integrin_a1b1_complex,Sclerotome,COL9A1,integrin,0.389,0.0
+Cavity,接收,1,VEGFA_NRP2,Sclerotome,NRP2,VEGFA,0.424,0.035
+Cavity,接收,2,integrin_aVb3_complex_ADGRA2,Sclerotome,aVb3,integrin,0.195,0.002
+Cavity,接收,3,integrin_aVb3_complex_ADGRE5,Sclerotome,aVb3,integrin,0.107,0.012
+Dermomyotome,发送,1,DLK1_NOTCH2,Sclerotome,DLK1,NOTCH2,1.161,0.0
+Dermomyotome,发送,2,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.053,0.0
+Dermomyotome,发送,3,DLK1_NOTCH1,Sclerotome,DLK1,NOTCH1,1.048,0.044
+Dermomyotome,发送,4,CADM1_CADM1,Sclerotome,CADM1,CADM1,0.997,0.0
+Dermomyotome,发送,5,COL3A1_integrin_a11b1_complex,Sclerotome,COL3A1,integrin,0.962,0.004
+Dermomyotome,发送,6,COL3A1_ADGRG1,Sclerotome,COL3A1,ADGRG1,0.942,0.003
+Dermomyotome,发送,7,TENM3_ADGRL2,Sclerotome,TENM3,ADGRL2,0.895,0.0
+Dermomyotome,发送,8,FN1_integrin_a3b1_complex,Sclerotome,FN1,integrin,0.857,0.001
+Dermomyotome,发送,9,FN1_integrin_a4b1_complex,Sclerotome,FN1,integrin,0.844,0.009
+Dermomyotome,发送,10,FN1_integrin_a11b1_complex,Sclerotome,FN1,integrin,0.781,0.014
+Dermomyotome,接收,1,IGF2_IGF2R,Sclerotome,IGF2R,IGF2,1.845,0.0
+Dermomyotome,接收,2,IGF2_IGF1R,Sclerotome,IGF1R,IGF2,1.795,0.0
+Dermomyotome,接收,3,DLK1_NOTCH2,Sclerotome,NOTCH2,DLK1,1.291,0.0
+Dermomyotome,接收,4,DLK1_NOTCH1,Sclerotome,NOTCH1,DLK1,1.288,0.0
+Dermomyotome,接收,5,PPIA_BSG,Sclerotome,BSG,PPIA,1.195,0.0
+Dermomyotome,接收,6,DLK1_NOTCH3,Sclerotome,NOTCH3,DLK1,1.166,0.0
+Dermomyotome,接收,7,FGF2_FGFR2,Sclerotome,FGFR2,FGF2,1.115,0.028
+Dermomyotome,接收,8,CADM1_CADM1,Sclerotome,CADM1,CADM1,0.997,0.0
+Dermomyotome,接收,9,CADM1_NECTIN3,Sclerotome,NECTIN3,CADM1,0.968,0.0
+Dermomyotome,接收,10,PDGFC_PDGFRA,Sclerotome,PDGFRA,PDGFC,0.883,0.0
+Liver,发送,1,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.066,0.041
+Liver,发送,2,LRFN4_PTPRF,Sclerotome,LRFN4,PTPRF,1.047,0.0
+Liver,发送,3,LRRC4C_PTPRF,Sclerotome,LRRC4C,PTPRF,0.989,0.0
+Liver,发送,4,CXCL12_CXCR4,Sclerotome,CXCL12,CXCR4,0.82,0.0
+Liver,发送,5,NCAM1_AGRN,Sclerotome,NCAM1,AGRN,0.686,0.002
+Liver,发送,6,LAMC1_integrin_a6b1_complex,Sclerotome,LAMC1,integrin,0.649,0.003
+Liver,发送,7,CDH6_CDH6,Sclerotome,CDH6,CDH6,0.642,0.01
+Liver,发送,8,KITLG_KIT,Sclerotome,KITLG,KIT,0.439,0.0
+Liver,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARB,Sclerotome,atRetinoicAcid,byALDH1A2,0.434,0.021
+Liver,发送,10,atRetinoicAcid_byALDH1A2_RAreceptor_RARB_RXRB,Sclerotome,atRetinoicAcid,byALDH1A2,0.434,0.012
+Liver,接收,1,PPIA_BSG,Sclerotome,BSG,PPIA,1.363,0.0
+Liver,接收,2,AGRN_PTPRS,Sclerotome,PTPRS,AGRN,0.844,0.0
+Liver,接收,3,SEMA3C_NRP2,Sclerotome,NRP2,SEMA3C,0.791,0.0
+Liver,接收,4,LRFN5_PTPRF,Sclerotome,PTPRF,LRFN5,0.653,0.012
+Liver,接收,5,LAMC1_integrin_a6b1_complex,Sclerotome,integrin,LAMC1,0.65,0.013
+Liver,接收,6,CDH6_CDH6,Sclerotome,CDH6,CDH6,0.642,0.01
+Liver,接收,7,APP_SORL1,Sclerotome,SORL1,APP,0.618,0.041
+Liver,接收,8,DAG1_NRXN3,Sclerotome,NRXN3,DAG1,0.583,0.049
+Liver,接收,9,LRFN5_PTPRD,Sclerotome,PTPRD,LRFN5,0.553,0.004
+Liver,接收,10,VEGFA_NRP2,Sclerotome,NRP2,VEGFA,0.537,0.015
+Mesenchyme,发送,1,DLK1_NOTCH2,Sclerotome,DLK1,NOTCH2,1.104,0.004
+Mesenchyme,发送,2,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.048,0.0
+Mesenchyme,发送,3,DLK1_NOTCH1,Sclerotome,DLK1,NOTCH1,1.04,0.034
+Mesenchyme,发送,4,COL3A1_ADGRG1,Sclerotome,COL3A1,ADGRG1,0.953,0.0
+Mesenchyme,发送,5,COL3A1_integrin_a11b1_complex,Sclerotome,COL3A1,integrin,0.944,0.003
+Mesenchyme,发送,6,FN1_integrin_a3b1_complex,Sclerotome,FN1,integrin,0.804,0.013
+Mesenchyme,发送,7,CADM1_CADM1,Sclerotome,CADM1,CADM1,0.766,0.009
+Mesenchyme,发送,8,FN1_integrin_a11b1_complex,Sclerotome,FN1,integrin,0.764,0.036
+Mesenchyme,发送,9,TENM3_ADGRL2,Sclerotome,TENM3,ADGRL2,0.756,0.009
+Mesenchyme,发送,10,COL2A1_integrin_a11b1_complex,Sclerotome,COL2A1,integrin,0.727,0.004
+Mesenchyme,接收,1,IGF2_IGF1R,Sclerotome,IGF1R,IGF2,1.605,0.011
+Mesenchyme,接收,2,DLK1_NOTCH2,Sclerotome,NOTCH2,DLK1,1.239,0.0
+Mesenchyme,接收,3,DLK1_NOTCH1,Sclerotome,NOTCH1,DLK1,1.236,0.0
+Mesenchyme,接收,4,PPIA_BSG,Sclerotome,BSG,PPIA,1.152,0.002
+Mesenchyme,接收,5,DLK1_NOTCH3,Sclerotome,NOTCH3,DLK1,1.114,0.0
+Mesenchyme,接收,6,COL18A1_integrin_a1b1_complex,Sclerotome,integrin,COL18A1,0.772,0.001
+Mesenchyme,接收,7,CADM1_CADM1,Sclerotome,CADM1,CADM1,0.766,0.009
+Mesenchyme,接收,8,CADM1_NECTIN3,Sclerotome,NECTIN3,CADM1,0.737,0.0
+Mesenchyme,接收,9,Cholesterol_byDHCR24_RORA,Sclerotome,byDHCR24,Cholesterol,0.634,0.028
+Mesenchyme,接收,10,NECTIN2_NECTIN3,Sclerotome,NECTIN3,NECTIN2,0.63,0.008
+Neural crest,发送,1,IGF2_IGF2R,Sclerotome,IGF2,IGF2R,1.75,0.001
+Neural crest,发送,2,DLK1_NOTCH2,Sclerotome,DLK1,NOTCH2,1.163,0.0
+Neural crest,发送,3,DLK1_NOTCH1,Sclerotome,DLK1,NOTCH1,1.111,0.001
+Neural crest,发送,4,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.054,0.0
+Neural crest,发送,5,COL3A1_integrin_a11b1_complex,Sclerotome,COL3A1,integrin,1.013,0.0
+Neural crest,发送,6,COL3A1_integrin_a1b1_complex,Sclerotome,COL3A1,integrin,0.99,0.0
+Neural crest,发送,7,FN1_integrin_aVb1_complex,Sclerotome,FN1,integrin,0.93,0.0
+Neural crest,发送,8,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.923,0.001
+Neural crest,发送,9,FN1_integrin_aVb5_complex,Sclerotome,FN1,integrin,0.898,0.001
+Neural crest,发送,10,FN1_integrin_a4b1_complex,Sclerotome,FN1,integrin,0.857,0.001
+Neural crest,接收,1,IGF2_IGF2R,Sclerotome,IGF2R,IGF2,1.809,0.0
+Neural crest,接收,2,IGF2_IGF1R,Sclerotome,IGF1R,IGF2,1.759,0.0
+Neural crest,接收,3,COL3A1_integrin_a1b1_complex,Sclerotome,integrin,COL3A1,1.133,0.0
+Neural crest,接收,4,COL2A1_integrin_a1b1_complex,Sclerotome,integrin,COL2A1,0.942,0.0
+Neural crest,接收,5,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.923,0.001
+Neural crest,接收,6,FLRT2_ADGRL3,Sclerotome,ADGRL3,FLRT2,0.853,0.0
+Neural crest,接收,7,COL4A1_ADGRG6,Sclerotome,ADGRG6,COL4A1,0.82,0.0
+Neural crest,接收,8,COL18A1_integrin_a1b1_complex,Sclerotome,integrin,COL18A1,0.79,0.002
+Neural crest,接收,9,FLRT2_ADGRL1,Sclerotome,ADGRL1,FLRT2,0.786,0.0
+Neural crest,接收,10,COL4A1_integrin_a1b1_complex,Sclerotome,integrin,COL4A1,0.784,0.0
+Sclerotome,发送,1,DLK1_NOTCH2,Sclerotome,DLK1,NOTCH2,1.14,0.0
+Sclerotome,发送,2,DLK1_NOTCH1,Sclerotome,DLK1,NOTCH1,1.138,0.0
+Sclerotome,发送,3,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.016,0.004
+Sclerotome,发送,4,COL3A1_integrin_a1b1_complex,Sclerotome,COL3A1,integrin,0.95,0.006
+Sclerotome,发送,5,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.933,0.002
+Sclerotome,发送,6,FN1_integrin_aVb1_complex,Sclerotome,FN1,integrin,0.897,0.001
+Sclerotome,发送,7,FN1_integrin_aVb5_complex,Sclerotome,FN1,integrin,0.897,0.001
+Sclerotome,发送,8,TENM3_ADGRL2,Sclerotome,TENM3,ADGRL2,0.874,0.0
+Sclerotome,发送,9,FN1_integrin_a4b1_complex,Sclerotome,FN1,integrin,0.812,0.022
+Sclerotome,发送,10,FN1_integrin_a8b1_complex,Sclerotome,FN1,integrin,0.799,0.018
+Sclerotome,接收,1,DLK1_NOTCH2,Sclerotome,NOTCH2,DLK1,1.14,0.0
+Sclerotome,接收,2,DLK1_NOTCH1,Sclerotome,NOTCH1,DLK1,1.138,0.0
+Sclerotome,接收,3,DLK1_NOTCH3,Sclerotome,NOTCH3,DLK1,1.016,0.004
+Sclerotome,接收,4,COL3A1_integrin_a1b1_complex,Sclerotome,integrin,COL3A1,0.95,0.006
+Sclerotome,接收,5,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.933,0.002
+Sclerotome,接收,6,FN1_integrin_aVb1_complex,Sclerotome,integrin,FN1,0.897,0.001
+Sclerotome,接收,7,FN1_integrin_aVb5_complex,Sclerotome,integrin,FN1,0.897,0.001
+Sclerotome,接收,8,TENM3_ADGRL2,Sclerotome,ADGRL2,TENM3,0.874,0.0
+Sclerotome,接收,9,FN1_integrin_a4b1_complex,Sclerotome,integrin,FN1,0.812,0.022
+Sclerotome,接收,10,FN1_integrin_a8b1_complex,Sclerotome,integrin,FN1,0.799,0.018
+Sclerotome_1_96_Target,发送,1,DLK1_NOTCH2,Sclerotome,DLK1,NOTCH2,1.196,0.0
+Sclerotome_1_96_Target,发送,2,DLK1_NOTCH1,Sclerotome,DLK1,NOTCH1,1.187,0.0
+Sclerotome_1_96_Target,发送,3,DLK1_NOTCH3,Sclerotome,DLK1,NOTCH3,1.056,0.001
+Sclerotome_1_96_Target,发送,4,COL3A1_integrin_a11b1_complex,Sclerotome,COL3A1,integrin,0.957,0.008
+Sclerotome_1_96_Target,发送,5,FN1_integrin_aVb1_complex,Sclerotome,FN1,integrin,0.938,0.004
+Sclerotome_1_96_Target,发送,6,FN1_integrin_aVb5_complex,Sclerotome,FN1,integrin,0.938,0.001
+Sclerotome_1_96_Target,发送,7,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.903,0.025
+Sclerotome_1_96_Target,发送,8,FN1_integrin_a8b1_complex,Sclerotome,FN1,integrin,0.858,0.0
+Sclerotome_1_96_Target,发送,9,FN1_integrin_a3b1_complex,Sclerotome,FN1,integrin,0.848,0.0
+Sclerotome_1_96_Target,发送,10,TENM3_ADGRL2,Sclerotome,TENM3,ADGRL2,0.797,0.006
+Sclerotome_1_96_Target,接收,1,COL3A1_integrin_a1b1_complex,Sclerotome,integrin,COL3A1,1.109,0.0
+Sclerotome_1_96_Target,接收,2,DLK1_NOTCH2,Sclerotome,NOTCH2,DLK1,1.098,0.047
+Sclerotome_1_96_Target,接收,3,DLK1_NOTCH1,Sclerotome,NOTCH1,DLK1,1.095,0.018
+Sclerotome_1_96_Target,接收,4,FN1_integrin_aVb1_complex,Sclerotome,integrin,FN1,1.011,0.0
+Sclerotome_1_96_Target,接收,5,FN1_integrin_aVb5_complex,Sclerotome,integrin,FN1,1.011,0.0
+Sclerotome_1_96_Target,接收,6,TENM3_ADGRL2,Sclerotome,ADGRL2,TENM3,0.946,0.0
+Sclerotome_1_96_Target,接收,7,FN1_integrin_a4b1_complex,Sclerotome,integrin,FN1,0.925,0.0
+Sclerotome_1_96_Target,接收,8,FN1_integrin_a8b1_complex,Sclerotome,integrin,FN1,0.912,0.0
+Sclerotome_1_96_Target,接收,9,FN1_integrin_a3b1_complex,Sclerotome,integrin,FN1,0.905,0.0
+Sclerotome_1_96_Target,接收,10,MPZL1_MPZL1,Sclerotome,MPZL1,MPZL1,0.903,0.025

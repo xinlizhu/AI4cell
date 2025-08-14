@@ -1,0 +1,13 @@
+annotation,time1,time2,total,ratio
+AGM,452,0,452,0.076
+Brain,1518,0,1518,0.257
+Branchial arch,200,0,200,0.034
+Cavity,882,0,882,0.149
+Connective tissue,283,0,283,0.048
+Dermomyotome,273,0,273,0.046
+Heart,382,0,382,0.065
+Liver,98,0,98,0.017
+Mesenchyme,337,0,337,0.057
+Neural crest,1008,0,1008,0.17
+Notochord,236,0,236,0.04
+Sclerotome,244,0,244,0.041

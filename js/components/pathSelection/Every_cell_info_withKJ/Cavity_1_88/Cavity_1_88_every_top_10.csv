@@ -1,0 +1,107 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,COL1A1_integrin_a11b1_complex,Cavity,COL1A1,integrin,0.655,0.0
+AGM,发送,2,BMP4_BMR1A_AVR2B,Cavity,BMP4,BMR1A,0.26,0.05
+AGM,发送,3,BMP4_BMR1B_AVR2A,Cavity,BMP4,BMR1B,0.198,0.05
+AGM,发送,4,WNT2_FZD4_LRP5,Cavity,WNT2,FZD4,0.186,0.007
+AGM,发送,5,WNT2_FZD4_LRP6,Cavity,WNT2,FZD4,0.181,0.008
+AGM,发送,6,TNC_integrin_a8b1_complex,Cavity,TNC,integrin,0.17,0.0
+AGM,发送,7,THBS1_integrin_a3b1_complex,Cavity,THBS1,integrin,0.169,0.032
+AGM,发送,8,TGM2_ADGRG1,Cavity,TGM2,ADGRG1,0.165,0.028
+AGM,发送,9,TAC3_TACR3,Cavity,TAC3,TACR3,0.1,0.029
+AGM,接收,1,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Cavity,byALDH1A2,atRetinoicAcid,0.511,0.0
+Cavity_1_88_Target,发送,1,WNT5A_SFRP1,Cavity,WNT5A,SFRP1,0.559,0.021
+Cavity_1_88_Target,发送,2,WNT2_SFRP1,Cavity,WNT2,SFRP1,0.554,0.009
+Cavity_1_88_Target,发送,3,LRPAP1_SORT1,Cavity,LRPAP1,SORT1,0.378,0.046
+Cavity_1_88_Target,发送,4,WNT2_SFRP2,Cavity,WNT2,SFRP2,0.332,0.046
+Connective tissue,发送,1,COL1A1_integrin_a1b1_complex,Cavity,COL1A1,integrin,0.66,0.001
+Connective tissue,发送,2,COL1A1_integrin_a11b1_complex,Cavity,COL1A1,integrin,0.656,0.001
+Connective tissue,发送,3,PDGFA_PDGFRA,Cavity,PDGFA,PDGFRA,0.441,0.009
+Connective tissue,发送,4,WNT5A_SFRP1,Cavity,WNT5A,SFRP1,0.429,0.002
+Connective tissue,发送,5,WNT2_SFRP1,Cavity,WNT2,SFRP1,0.425,0.0
+Connective tissue,发送,6,TNC_integrin_a9b1_complex,Cavity,TNC,integrin,0.306,0.011
+Connective tissue,发送,7,BMP4_BMPR1A_BMPR2,Cavity,BMP4,BMPR1A,0.304,0.025
+Connective tissue,发送,8,TNC_integrin_a8b1_complex,Cavity,TNC,integrin,0.163,0.001
+Connective tissue,接收,1,IGF2_IGF2R,Cavity,IGF2R,IGF2,1.844,0.0
+Connective tissue,接收,2,IGF2_IGF1R,Cavity,IGF1R,IGF2,1.68,0.0
+Connective tissue,接收,3,DLK1_NOTCH1,Cavity,NOTCH1,DLK1,1.406,0.0
+Connective tissue,接收,4,DLK1_NOTCH2,Cavity,NOTCH2,DLK1,1.4,0.0
+Connective tissue,接收,5,FN1_integrin_aVb5_complex,Cavity,integrin,FN1,0.92,0.0
+Connective tissue,接收,6,FN1_integrin_aVb1_complex,Cavity,integrin,FN1,0.92,0.0
+Connective tissue,接收,7,APP_FPR2,Cavity,FPR2,APP,0.681,0.0
+Connective tissue,接收,8,APP_TNFRSF21,Cavity,TNFRSF21,APP,0.629,0.0
+Connective tissue,接收,9,WNT2_SFRP1,Cavity,SFRP1,WNT2,0.363,0.009
+Connective tissue,接收,10,WNT2_SFRP2,Cavity,SFRP2,WNT2,0.306,0.0
+Dermomyotome,发送,1,TNC_integrin_a9b1_complex,Cavity,TNC,integrin,0.372,0.0
+Dermomyotome,发送,2,BMP4_BMR1A_AVR2B,Cavity,BMP4,BMR1A,0.264,0.019
+Dermomyotome,发送,3,WNT2_FZD1_LRP5,Cavity,WNT2,FZD1,0.236,0.006
+Dermomyotome,发送,4,WNT2_FZD7_LRP5,Cavity,WNT2,FZD7,0.236,0.009
+Dermomyotome,发送,5,WNT2_FZD3_LRP5,Cavity,WNT2,FZD3,0.236,0.009
+Dermomyotome,发送,6,WNT2_FZD2_LRP5,Cavity,WNT2,FZD2,0.236,0.009
+Dermomyotome,发送,7,BMP4_BMR1A_ACR2A,Cavity,BMP4,BMR1A,0.234,0.041
+Dermomyotome,发送,8,BMP4_BMR1B_AVR2B,Cavity,BMP4,BMR1B,0.216,0.004
+Dermomyotome,发送,9,BMP4_BMPR1B_BMPR2,Cavity,BMP4,BMPR1B,0.216,0.004
+Dermomyotome,发送,10,BMP4_BMR1B_AVR2A,Cavity,BMP4,BMR1B,0.216,0.004
+Dermomyotome,接收,1,DLK1_NOTCH1,Cavity,NOTCH1,DLK1,1.328,0.0
+Dermomyotome,接收,2,DLK1_NOTCH2,Cavity,NOTCH2,DLK1,1.322,0.0
+Dermomyotome,接收,3,CADM1_NECTIN3,Cavity,NECTIN3,CADM1,0.714,0.0
+Dermomyotome,接收,4,NTN1_UNC5B,Cavity,UNC5B,NTN1,0.486,0.0
+Dermomyotome,接收,5,EFNA5_EPHB2,Cavity,EPHB2,EFNA5,0.385,0.008
+Dermomyotome,接收,6,EFNA5_EPHA7,Cavity,EPHA7,EFNA5,0.383,0.015
+Dermomyotome,接收,7,Desmosterol_byDHCR7_NR1H2,Cavity,byDHCR7,Desmosterol,0.178,0.016
+Heart,发送,1,IGF2_IGF2R,Cavity,IGF2,IGF2R,2.2,0.0
+Heart,发送,2,FN1_integrin_aVb1_complex,Cavity,FN1,integrin,0.923,0.001
+Heart,发送,3,COL1A1_integrin_a1b1_complex,Cavity,COL1A1,integrin,0.901,0.0
+Heart,发送,4,COL3A1_integrin_a1b1_complex,Cavity,COL3A1,integrin,0.896,0.0
+Heart,发送,5,COL1A2_integrin_a1b1_complex,Cavity,COL1A2,integrin,0.861,0.0
+Heart,发送,6,LAMC1_integrin_a6b1_complex,Cavity,LAMC1,integrin,0.662,0.0
+Heart,发送,7,NPPA_NPR1,Cavity,NPPA,NPR1,0.62,0.0
+Heart,发送,8,COL4A1_ADGRG6,Cavity,COL4A1,ADGRG6,0.618,0.0
+Heart,发送,9,COL4A1_integrin_a1b1_complex,Cavity,COL4A1,integrin,0.541,0.034
+Heart,发送,10,COL5A2_integrin_a1b1_complex,Cavity,COL5A2,integrin,0.535,0.0
+Heart,接收,1,IGF2_IGF2R,Cavity,IGF2R,IGF2,1.99,0.0
+Heart,接收,2,IGF2_IGF1R,Cavity,IGF1R,IGF2,1.825,0.0
+Heart,接收,3,FN1_integrin_aVb5_complex,Cavity,integrin,FN1,1.267,0.0
+Heart,接收,4,FN1_integrin_aVb1_complex,Cavity,integrin,FN1,1.267,0.0
+Heart,接收,5,APP_FPR2,Cavity,FPR2,APP,0.685,0.0
+Heart,接收,6,APP_TNFRSF21,Cavity,TNFRSF21,APP,0.633,0.0
+Heart,接收,7,SLIT2_ROBO1,Cavity,ROBO1,SLIT2,0.498,0.004
+Heart,接收,8,EFNB3_EPHB2,Cavity,EPHB2,EFNB3,0.429,0.001
+Heart,接收,9,CDH5_CDH5,Cavity,CDH5,CDH5,0.393,0.0
+Heart,接收,10,ANGPT1_TEK,Cavity,TEK,ANGPT1,0.369,0.0
+Liver,发送,1,FLRT3_ADGRL2,Cavity,FLRT3,ADGRL2,0.931,0.037
+Liver,发送,2,TENM4_ADGRL2,Cavity,TENM4,ADGRL2,0.901,0.039
+Liver,发送,3,NCAM1_FGFR1,Cavity,NCAM1,FGFR1,0.845,0.028
+Liver,发送,4,PTPRS_NTRK3,Cavity,PTPRS,NTRK3,0.594,0.012
+Liver,发送,5,WNT5A_FRZB,Cavity,WNT5A,FRZB,0.41,0.034
+Liver,发送,6,WNT2_FRZB,Cavity,WNT2,FRZB,0.406,0.024
+Liver,发送,7,WNT5A_FZD4_LRP6,Cavity,WNT5A,FZD4,0.34,0.028
+Liver,发送,8,WNT2_FZD4_LRP6,Cavity,WNT2,FZD4,0.335,0.02
+Liver,发送,9,WNT5A_FZD5_LRP6,Cavity,WNT5A,FZD5,0.237,0.024
+Liver,发送,10,WNT2_FZD5_LRP6,Cavity,WNT2,FZD5,0.233,0.019
+Liver,接收,1,BMP7_BMPR1A_BMPR2,Cavity,BMPR1A,BMP7,0.668,0.022
+Liver,接收,2,BMP7_BMR1A_ACR2A,Cavity,BMR1A,BMP7,0.631,0.02
+Liver,接收,3,DLL3_NOTCH1,Cavity,NOTCH1,DLL3,0.266,0.036
+Liver,接收,4,DLL3_NOTCH2,Cavity,NOTCH2,DLL3,0.261,0.039
+Mesenchyme,发送,1,TNC_integrin_a9b1_complex,Cavity,TNC,integrin,0.331,0.001
+Mesenchyme,接收,1,DLK1_NOTCH1,Cavity,NOTCH1,DLK1,1.293,0.001
+Mesenchyme,接收,2,DLK1_NOTCH2,Cavity,NOTCH2,DLK1,1.287,0.007
+Mesenchyme,接收,3,Cholesterol_byDHCR24_RORA,Cavity,byDHCR24,Cholesterol,0.518,0.02
+Mesenchyme,接收,4,SDC1_ADGRA2,Cavity,ADGRA2,SDC1,0.338,0.048
+Mesenchyme,接收,5,TF_TFRC,Cavity,TFRC,TF,0.323,0.012
+Sclerotome,发送,1,IGF1_IGF1R_enhancerComGPC3,Cavity,IGF1,IGF1R,0.563,0.011
+Sclerotome,发送,2,IGF1_IGF1R,Cavity,IGF1,IGF1R,0.563,0.011
+Sclerotome,发送,3,CDH2_CDH2,Cavity,CDH2,CDH2,0.523,0.025
+Sclerotome,发送,4,EFNB3_EPHB3,Cavity,EFNB3,EPHB3,0.453,0.01
+Sclerotome,发送,5,EFNB3_EPHB4,Cavity,EFNB3,EPHB4,0.441,0.009
+Sclerotome,发送,6,FLRT3_ADGRL3,Cavity,FLRT3,ADGRL3,0.435,0.008
+Sclerotome,发送,7,EFNB2_EPHB3,Cavity,EFNB2,EPHB3,0.429,0.003
+Sclerotome,发送,8,EFNB2_EPHB4,Cavity,EFNB2,EPHB4,0.417,0.004
+Sclerotome,发送,9,TNC_integrin_a9b1_complex,Cavity,TNC,integrin,0.411,0.023
+Sclerotome,发送,10,TENM3_FLRT3_complex_ADGRL3,Cavity,TENM3,FLRT3,0.405,0.014
+Sclerotome,接收,1,TENM3_ADGRL2,Cavity,ADGRL2,TENM3,0.69,0.007
+Sclerotome,接收,2,EFNA5_EPHA3,Cavity,EPHA3,EFNA5,0.606,0.002
+Sclerotome,接收,3,EFNA5_EPHB2,Cavity,EPHB2,EFNA5,0.606,0.0
+Sclerotome,接收,4,EFNA5_EPHA7,Cavity,EPHA7,EFNA5,0.604,0.001
+Sclerotome,接收,5,CDH2_CDH2,Cavity,CDH2,CDH2,0.523,0.025
+Sclerotome,接收,6,NTN1_UNC5B,Cavity,UNC5B,NTN1,0.467,0.014
+Sclerotome,接收,7,SDC2_ADGRA2,Cavity,ADGRA2,SDC2,0.308,0.028

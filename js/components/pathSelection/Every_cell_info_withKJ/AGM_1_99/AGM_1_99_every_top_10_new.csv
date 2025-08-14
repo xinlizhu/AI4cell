@@ -1,0 +1,229 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,FGF10_FGFR2,AGM,FGF10,FGFR2,1.145,0.0
+AGM,发送,2,SLIT2_ROBO1,AGM,SLIT2,ROBO1,0.612,0.0
+AGM,发送,3,FLRT3_ADGRL2,AGM,FLRT3,ADGRL2,0.57,0.0
+AGM,发送,4,TENM4_ADGRL2,AGM,TENM4,ADGRL2,0.562,0.025
+AGM,发送,5,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.557,0.0
+AGM,发送,6,GJC1_GJC1,AGM,GJC1,GJC1,0.551,0.0
+AGM,发送,7,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.548,0.0
+AGM,发送,8,WNT5A_SFRP1,AGM,WNT5A,SFRP1,0.53,0.0
+AGM,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.524,0.0
+AGM,发送,10,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.524,0.0
+AGM,接收,1,FGF10_FGFR2,AGM,FGFR2,FGF10,1.145,0.0
+AGM,接收,2,SLIT2_ROBO1,AGM,ROBO1,SLIT2,0.612,0.0
+AGM,接收,3,FLRT3_ADGRL2,AGM,ADGRL2,FLRT3,0.57,0.0
+AGM,接收,4,TENM4_ADGRL2,AGM,ADGRL2,TENM4,0.562,0.025
+AGM,接收,5,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,byALDH1A2,atRetinoicAcid,0.557,0.0
+AGM,接收,6,GJC1_GJC1,AGM,GJC1,GJC1,0.551,0.0
+AGM,接收,7,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,byALDH1A2,atRetinoicAcid,0.548,0.0
+AGM,接收,8,WNT5A_SFRP1,AGM,SFRP1,WNT5A,0.53,0.0
+AGM,接收,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,AGM,byALDH1A2,atRetinoicAcid,0.524,0.0
+AGM,接收,10,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,AGM,byALDH1A2,atRetinoicAcid,0.524,0.0
+AGM_1_99_Target,发送,1,MPZL1_MPZL1,AGM,MPZL1,MPZL1,0.827,0.026
+AGM_1_99_Target,发送,2,PDGFC_PDGFRA,AGM,PDGFC,PDGFRA,0.748,0.0
+AGM_1_99_Target,发送,3,TENM3_ADGRL2,AGM,TENM3,ADGRL2,0.715,0.043
+AGM_1_99_Target,发送,4,SLIT2_ROBO1,AGM,SLIT2,ROBO1,0.687,0.0
+AGM_1_99_Target,发送,5,FLRT3_ADGRL2,AGM,FLRT3,ADGRL2,0.648,0.0
+AGM_1_99_Target,发送,6,TENM4_ADGRL2,AGM,TENM4,ADGRL2,0.64,0.001
+AGM_1_99_Target,发送,7,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.629,0.0
+AGM_1_99_Target,发送,8,LRFN4_PTPRD,AGM,LRFN4,PTPRD,0.577,0.002
+AGM_1_99_Target,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.562,0.0
+AGM_1_99_Target,发送,10,GJC1_GJC1,AGM,GJC1,GJC1,0.539,0.011
+AGM_1_99_Target,接收,1,MPZL1_MPZL1,AGM,MPZL1,MPZL1,0.827,0.026
+AGM_1_99_Target,接收,2,PDGFC_PDGFRA,AGM,PDGFRA,PDGFC,0.701,0.008
+AGM_1_99_Target,接收,3,PTPRD_IL1RAPL1,AGM,IL1RAPL1,PTPRD,0.542,0.001
+AGM_1_99_Target,接收,4,GJC1_GJC1,AGM,GJC1,GJC1,0.539,0.011
+AGM_1_99_Target,接收,5,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,byALDH1A2,atRetinoicAcid,0.495,0.0
+AGM_1_99_Target,接收,6,WNT5A_SFRP1,AGM,SFRP1,WNT5A,0.492,0.012
+AGM_1_99_Target,接收,7,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,byALDH1A2,atRetinoicAcid,0.486,0.002
+AGM_1_99_Target,接收,8,WNT5B_SFRP1,AGM,SFRP1,WNT5B,0.479,0.0
+AGM_1_99_Target,接收,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,AGM,byALDH1A2,atRetinoicAcid,0.462,0.0
+AGM_1_99_Target,接收,10,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,AGM,byALDH1A2,atRetinoicAcid,0.462,0.0
+Brain,发送,1,2arachidonoylglycerol_byDAGLB_CNR1,AGM,2arachidonoylglycerol,byDAGLB,1.442,0.008
+Brain,发送,2,CADM1_CADM1,AGM,CADM1,CADM1,1.437,0.014
+Brain,发送,3,SLIT2_ROBO2,AGM,SLIT2,ROBO2,1.356,0.008
+Brain,发送,4,APLP2_PLXNA4,AGM,APLP2,PLXNA4,1.092,0.012
+Brain,发送,5,APP_PLXNA4,AGM,APP,PLXNA4,1.059,0.016
+Brain,发送,6,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,1.039,0.005
+Brain,发送,7,WNT5A_SFRP1,AGM,WNT5A,SFRP1,1.027,0.037
+Brain,发送,8,WNT5B_SFRP1,AGM,WNT5B,SFRP1,0.956,0.04
+Brain,发送,9,WNT2_SFRP1,AGM,WNT2,SFRP1,0.916,0.047
+Brain,发送,10,CDH6_CDH6,AGM,CDH6,CDH6,0.904,0.044
+Brain,接收,1,CADM1_CADM1,AGM,CADM1,CADM1,1.437,0.014
+Brain,接收,2,CADM1_NECTIN3,AGM,NECTIN3,CADM1,1.365,0.016
+Brain,接收,3,APP_FPR2,AGM,FPR2,APP,1.264,0.007
+Brain,接收,4,DLL3_NOTCH2,AGM,NOTCH2,DLL3,1.243,0.0
+Brain,接收,5,DLL3_NOTCH3,AGM,NOTCH3,DLL3,1.239,0.0
+Brain,接收,6,SLIT2_ROBO1,AGM,ROBO1,SLIT2,1.233,0.018
+Brain,接收,7,DLL3_NOTCH1,AGM,NOTCH1,DLL3,1.209,0.0
+Brain,接收,8,APP_TNFRSF21,AGM,TNFRSF21,APP,1.188,0.007
+Brain,接收,9,APP_SORL1,AGM,SORL1,APP,1.161,0.009
+Brain,接收,10,SLIT2_ROBO2,AGM,ROBO2,SLIT2,1.026,0.025
+Branchial arch,发送,1,IGF2_IGF2R,AGM,IGF2,IGF2R,1.942,0.002
+Branchial arch,发送,2,IGF2_IGF1R,AGM,IGF2,IGF1R,1.74,0.033
+Branchial arch,发送,3,PPIA_BSG,AGM,PPIA,BSG,1.353,0.0
+Branchial arch,发送,4,LRFN4_PTPRF,AGM,LRFN4,PTPRF,0.97,0.0
+Branchial arch,发送,5,FN1_integrin_a3b1_complex,AGM,FN1,integrin,0.891,0.013
+Branchial arch,发送,6,COL3A1_ADGRG1,AGM,COL3A1,ADGRG1,0.831,0.008
+Branchial arch,发送,7,TENM3_ADGRL2,AGM,TENM3,ADGRL2,0.809,0.007
+Branchial arch,发送,8,FLRT3_ADGRL2,AGM,FLRT3,ADGRL2,0.742,0.0
+Branchial arch,发送,9,TENM4_ADGRL2,AGM,TENM4,ADGRL2,0.734,0.0
+Branchial arch,发送,10,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.664,0.0
+Branchial arch,接收,1,IGF2_IGF1R,AGM,IGF1R,IGF2,1.762,0.01
+Branchial arch,接收,2,COL18A1_integrin_a1b1_complex,AGM,integrin,COL18A1,0.982,0.0
+Branchial arch,接收,3,COL18A1_integrin_a11b1_complex,AGM,integrin,COL18A1,0.974,0.0
+Branchial arch,接收,4,FN1_integrin_a8b1_complex,AGM,integrin,FN1,0.938,0.027
+Branchial arch,接收,5,SLIT2_ROBO1,AGM,ROBO1,SLIT2,0.732,0.0
+Branchial arch,接收,6,SHH_PTCH_GAS1_transmembrane_receptor,AGM,PTCH,SHH,0.694,0.0
+Branchial arch,接收,7,COL4A1_integrin_a1b1_complex,AGM,integrin,COL4A1,0.692,0.005
+Branchial arch,接收,8,COL4A1_integrin_a11b1_complex,AGM,integrin,COL4A1,0.684,0.004
+Branchial arch,接收,9,WNT5A_SFRP1,AGM,SFRP1,WNT5A,0.672,0.0
+Branchial arch,接收,10,COL2A1_integrin_a1b1_complex,AGM,integrin,COL2A1,0.661,0.021
+Cavity,发送,1,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.489,0.0
+Cavity,发送,2,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.471,0.0
+Cavity,发送,3,COL5A2_integrin_a1b1_complex,AGM,COL5A2,integrin,0.329,0.024
+Cavity,发送,4,MMP2_integrin_aVb3_complex,AGM,MMP2,integrin,0.315,0.041
+Cavity,发送,5,RSPO1_LGR4,AGM,RSPO1,LGR4,0.288,0.029
+Cavity,发送,6,CD276_TREML2,AGM,CD276,TREML2,0.178,0.032
+Cavity,发送,7,THBS1_integrin_aVb3_complex,AGM,THBS1,integrin,0.166,0.003
+Cavity,接收,1,integrin_aVb3_complex_ADGRA2,AGM,aVb3,integrin,0.163,0.049
+Connective tissue,发送,1,PDGFC_PDGFRA,AGM,PDGFC,PDGFRA,0.739,0.001
+Connective tissue,发送,2,Cholesterol_byDHCR24_RORA,AGM,Cholesterol,byDHCR24,0.589,0.044
+Connective tissue,发送,3,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.585,0.0
+Connective tissue,发送,4,WNT5A_SFRP1,AGM,WNT5A,SFRP1,0.58,0.0
+Connective tissue,发送,5,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.57,0.0
+Connective tissue,发送,6,WNT5B_SFRP1,AGM,WNT5B,SFRP1,0.509,0.0
+Connective tissue,发送,7,EFNA5_EPHA3,AGM,EFNA5,EPHA3,0.503,0.002
+Connective tissue,发送,8,PDGFA_PDGFRA,AGM,PDGFA,PDGFRA,0.501,0.008
+Connective tissue,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.499,0.0
+Connective tissue,发送,10,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.499,0.0
+Connective tissue,接收,1,IGF2_IGF1R,AGM,IGF1R,IGF2,1.77,0.0
+Connective tissue,接收,2,DLK1_NOTCH2,AGM,NOTCH2,DLK1,1.293,0.0
+Connective tissue,接收,3,DLK1_NOTCH3,AGM,NOTCH3,DLK1,1.289,0.0
+Connective tissue,接收,4,COL3A1_integrin_a1b1_complex,AGM,integrin,COL3A1,1.287,0.0
+Connective tissue,接收,5,COL3A1_ADGRG1,AGM,ADGRG1,COL3A1,1.282,0.0
+Connective tissue,接收,6,COL3A1_integrin_a11b1_complex,AGM,integrin,COL3A1,1.278,0.0
+Connective tissue,接收,7,DLK1_NOTCH1,AGM,NOTCH1,DLK1,1.259,0.0
+Connective tissue,接收,8,FN1_integrin_aVb1_complex,AGM,integrin,FN1,1.025,0.001
+Connective tissue,接收,9,FN1_integrin_a8b1_complex,AGM,integrin,FN1,0.987,0.0
+Connective tissue,接收,10,FN1_integrin_aVb5_complex,AGM,integrin,FN1,0.976,0.003
+Dermomyotome,发送,1,FGF10_FGFR2,AGM,FGF10,FGFR2,1.144,0.008
+Dermomyotome,发送,2,CADM1_CADM1,AGM,CADM1,CADM1,0.948,0.0
+Dermomyotome,发送,3,CADM1_NECTIN3,AGM,CADM1,NECTIN3,0.747,0.0
+Dermomyotome,发送,4,TENM3_ADGRL2,AGM,TENM3,ADGRL2,0.686,0.047
+Dermomyotome,发送,5,NECTIN2_NECTIN3,AGM,NECTIN2,NECTIN3,0.631,0.0
+Dermomyotome,发送,6,EFNA5_EPHA3,AGM,EFNA5,EPHA3,0.622,0.0
+Dermomyotome,发送,7,FLRT3_ADGRL2,AGM,FLRT3,ADGRL2,0.619,0.0
+Dermomyotome,发送,8,TENM4_ADGRL2,AGM,TENM4,ADGRL2,0.611,0.0
+Dermomyotome,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.598,0.0
+Dermomyotome,发送,10,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.554,0.0
+Dermomyotome,接收,1,IGF2_IGF1R,AGM,IGF1R,IGF2,1.695,0.005
+Dermomyotome,接收,2,DLK1_NOTCH2,AGM,NOTCH2,DLK1,1.272,0.0
+Dermomyotome,接收,3,DLK1_NOTCH3,AGM,NOTCH3,DLK1,1.268,0.0
+Dermomyotome,接收,4,DLK1_NOTCH1,AGM,NOTCH1,DLK1,1.239,0.0
+Dermomyotome,接收,5,PPIA_BSG,AGM,BSG,PPIA,1.19,0.01
+Dermomyotome,接收,6,CADM1_CADM1,AGM,CADM1,CADM1,0.948,0.0
+Dermomyotome,接收,7,CADM1_NECTIN3,AGM,NECTIN3,CADM1,0.876,0.0
+Dermomyotome,接收,8,PDGFC_PDGFRA,AGM,PDGFRA,PDGFC,0.731,0.0
+Dermomyotome,接收,9,NTN1_UNC5C,AGM,UNC5C,NTN1,0.7,0.0
+Dermomyotome,接收,10,TENM4_ADGRL2,AGM,ADGRL2,TENM4,0.581,0.008
+Heart,发送,1,IGF2_IGF2R,AGM,IGF2,IGF2R,2.242,0.0
+Heart,发送,2,PPIA_BSG,AGM,PPIA,BSG,1.302,0.0
+Heart,发送,3,COL3A1_integrin_a1b1_complex,AGM,COL3A1,integrin,0.896,0.0
+Heart,发送,4,NRG3_ERBB4,AGM,NRG3,ERBB4,0.759,0.0
+Heart,发送,5,LAMC1_integrin_a6b1_complex,AGM,LAMC1,integrin,0.734,0.0
+Heart,发送,6,COL18A1_integrin_a1b1_complex,AGM,COL18A1,integrin,0.701,0.017
+Heart,发送,7,CDH2_CDH2,AGM,CDH2,CDH2,0.649,0.0
+Heart,发送,8,EFNA5_EPHA7,AGM,EFNA5,EPHA7,0.588,0.002
+Heart,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.55,0.0
+Heart,发送,10,NRXN1_DAG1,AGM,NRXN1,DAG1,0.541,0.0
+Heart,接收,1,IGF2_IGF2R,AGM,IGF2R,IGF2,2.011,0.0
+Heart,接收,2,IGF2_IGF1R,AGM,IGF1R,IGF2,1.961,0.0
+Heart,接收,3,FN1_integrin_aVb1_complex,AGM,integrin,FN1,1.222,0.0
+Heart,接收,4,FN1_integrin_a8b1_complex,AGM,integrin,FN1,1.184,0.0
+Heart,接收,5,FN1_integrin_aVb5_complex,AGM,integrin,FN1,1.173,0.0
+Heart,接收,6,FN1_integrin_a3b1_complex,AGM,integrin,FN1,1.153,0.0
+Heart,接收,7,FN1_integrin_a11b1_complex,AGM,integrin,FN1,1.111,0.0
+Heart,接收,8,COL18A1_integrin_a1b1_complex,AGM,integrin,COL18A1,0.733,0.007
+Heart,接收,9,COL18A1_integrin_a11b1_complex,AGM,integrin,COL18A1,0.724,0.004
+Heart,接收,10,CDH2_CDH2,AGM,CDH2,CDH2,0.649,0.0
+Liver,发送,1,PPIA_BSG,AGM,PPIA,BSG,1.355,0.0
+Liver,发送,2,FGF10_FGFR2,AGM,FGF10,FGFR2,1.167,0.002
+Liver,发送,3,LRFN4_PTPRF,AGM,LRFN4,PTPRF,1.0,0.0
+Liver,发送,4,COL3A1_ADGRG1,AGM,COL3A1,ADGRG1,0.818,0.001
+Liver,发送,5,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.636,0.0
+Liver,发送,6,NCAM1_AGRN,AGM,NCAM1,AGRN,0.592,0.0
+Liver,发送,7,LAMC1_integrin_a6b1_complex,AGM,LAMC1,integrin,0.575,0.003
+Liver,发送,8,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.536,0.0
+Liver,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARB_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.508,0.0
+Liver,发送,10,atRetinoicAcid_byALDH1A2_RAreceptor_RARB,AGM,atRetinoicAcid,byALDH1A2,0.508,0.0
+Liver,接收,1,IGF2_IGF1R,AGM,IGF1R,IGF2,1.71,0.01
+Liver,接收,2,PPIA_BSG,AGM,BSG,PPIA,1.274,0.0
+Liver,接收,3,FGF10_FGFR2,AGM,FGFR2,FGF10,1.138,0.017
+Liver,接收,4,FN1_integrin_aVb1_complex,AGM,integrin,FN1,1.055,0.0
+Liver,接收,5,DLK1_NOTCH2,AGM,NOTCH2,DLK1,1.036,0.02
+Liver,接收,6,DLK1_NOTCH3,AGM,NOTCH3,DLK1,1.032,0.005
+Liver,接收,7,FN1_integrin_a8b1_complex,AGM,integrin,FN1,1.017,0.0
+Liver,接收,8,FN1_integrin_aVb5_complex,AGM,integrin,FN1,1.005,0.0
+Liver,接收,9,FN1_integrin_a3b1_complex,AGM,integrin,FN1,0.986,0.0
+Liver,接收,10,FN1_integrin_a11b1_complex,AGM,integrin,FN1,0.944,0.0
+Mesenchyme,发送,1,CADM1_CADM1,AGM,CADM1,CADM1,0.916,0.0
+Mesenchyme,发送,2,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.594,0.0
+Mesenchyme,发送,3,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.545,0.0
+Mesenchyme,发送,4,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,AGM,atRetinoicAcid,byALDH1A2,0.509,0.0
+Mesenchyme,发送,5,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.509,0.0
+Mesenchyme,发送,6,EFNA5_EPHA3,AGM,EFNA5,EPHA3,0.503,0.023
+Mesenchyme,发送,7,JAM3_JAM3,AGM,JAM3,JAM3,0.5,0.012
+Mesenchyme,发送,8,atRetinoicAcid_byALDH1A2_RAreceptor_RARG,AGM,atRetinoicAcid,byALDH1A2,0.495,0.0
+Mesenchyme,发送,9,COL5A2_integrin_a11b1_complex,AGM,COL5A2,integrin,0.34,0.011
+Mesenchyme,发送,10,EFNA4_EPHA3,AGM,EFNA4,EPHA3,0.323,0.047
+Mesenchyme,接收,1,DLK1_NOTCH2,AGM,NOTCH2,DLK1,1.326,0.0
+Mesenchyme,接收,2,DLK1_NOTCH3,AGM,NOTCH3,DLK1,1.322,0.0
+Mesenchyme,接收,3,DLK1_NOTCH1,AGM,NOTCH1,DLK1,1.293,0.0
+Mesenchyme,接收,4,COL18A1_integrin_a1b1_complex,AGM,integrin,COL18A1,0.941,0.0
+Mesenchyme,接收,5,COL18A1_integrin_a11b1_complex,AGM,integrin,COL18A1,0.933,0.0
+Mesenchyme,接收,6,CADM1_CADM1,AGM,CADM1,CADM1,0.916,0.0
+Mesenchyme,接收,7,COL3A1_ADGRG1,AGM,ADGRG1,COL3A1,0.872,0.044
+Mesenchyme,接收,8,COL3A1_integrin_a11b1_complex,AGM,integrin,COL3A1,0.869,0.047
+Mesenchyme,接收,9,CADM1_NECTIN3,AGM,NECTIN3,CADM1,0.844,0.0
+Mesenchyme,接收,10,COL1A2_integrin_a1b1_complex,AGM,integrin,COL1A2,0.8,0.0
+Neural crest,发送,1,FGF10_FGFR2,AGM,FGF10,FGFR2,1.242,0.0
+Neural crest,发送,2,PPIA_BSG,AGM,PPIA,BSG,1.187,0.045
+Neural crest,发送,3,COL3A1_integrin_a1b1_complex,AGM,COL3A1,integrin,0.835,0.001
+Neural crest,发送,4,COL3A1_integrin_a11b1_complex,AGM,COL3A1,integrin,0.788,0.044
+Neural crest,发送,5,LRFN4_PTPRF,AGM,LRFN4,PTPRF,0.768,0.0
+Neural crest,发送,6,PDGFC_PDGFRA,AGM,PDGFC,PDGFRA,0.755,0.0
+Neural crest,发送,7,EFNA5_EPHA7,AGM,EFNA5,EPHA7,0.708,0.0
+Neural crest,发送,8,SLIT2_ROBO2,AGM,SLIT2,ROBO2,0.678,0.0
+Neural crest,发送,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,AGM,atRetinoicAcid,byALDH1A2,0.61,0.0
+Neural crest,发送,10,LRFN4_PTPRD,AGM,LRFN4,PTPRD,0.6,0.0
+Neural crest,接收,1,IGF2_IGF2R,AGM,IGF2R,IGF2,1.879,0.0
+Neural crest,接收,2,IGF2_IGF1R,AGM,IGF1R,IGF2,1.829,0.0
+Neural crest,接收,3,COL3A1_integrin_a1b1_complex,AGM,integrin,COL3A1,1.097,0.0
+Neural crest,接收,4,COL3A1_ADGRG1,AGM,ADGRG1,COL3A1,1.093,0.0
+Neural crest,接收,5,COL3A1_integrin_a11b1_complex,AGM,integrin,COL3A1,1.089,0.0
+Neural crest,接收,6,COL2A1_integrin_a1b1_complex,AGM,integrin,COL2A1,1.018,0.0
+Neural crest,接收,7,COL2A1_integrin_a11b1_complex,AGM,integrin,COL2A1,1.01,0.0
+Neural crest,接收,8,COL18A1_integrin_a1b1_complex,AGM,integrin,COL18A1,0.815,0.0
+Neural crest,接收,9,COL18A1_integrin_a11b1_complex,AGM,integrin,COL18A1,0.806,0.0
+Neural crest,接收,10,FLRT2_ADGRL3,AGM,ADGRL3,FLRT2,0.737,0.0
+Sclerotome,发送,1,FGF10_FGFR2,AGM,FGF10,FGFR2,1.138,0.014
+Sclerotome,发送,2,MPZL1_MPZL1,AGM,MPZL1,MPZL1,0.852,0.0
+Sclerotome,发送,3,PDGFC_PDGFRA,AGM,PDGFC,PDGFRA,0.699,0.0
+Sclerotome,发送,4,CADM1_NECTIN3,AGM,CADM1,NECTIN3,0.654,0.019
+Sclerotome,发送,5,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,AGM,atRetinoicAcid,byALDH1A2,0.627,0.0
+Sclerotome,发送,6,EFNA5_EPHA7,AGM,EFNA5,EPHA7,0.61,0.0
+Sclerotome,发送,7,Cholesterol_byDHCR24_RORA,AGM,Cholesterol,byDHCR24,0.586,0.011
+Sclerotome,发送,8,FLRT3_ADGRL2,AGM,FLRT3,ADGRL2,0.583,0.001
+Sclerotome,发送,9,TENM4_ADGRL2,AGM,TENM4,ADGRL2,0.575,0.018
+Sclerotome,发送,10,SLIT2_ROBO1,AGM,SLIT2,ROBO1,0.571,0.009
+Sclerotome,接收,1,DLK1_NOTCH2,AGM,NOTCH2,DLK1,1.023,0.006
+Sclerotome,接收,2,DLK1_NOTCH3,AGM,NOTCH3,DLK1,1.019,0.0
+Sclerotome,接收,3,DLK1_NOTCH1,AGM,NOTCH1,DLK1,0.989,0.032
+Sclerotome,接收,4,COL3A1_integrin_a1b1_complex,AGM,integrin,COL3A1,0.971,0.0
+Sclerotome,接收,5,COL3A1_ADGRG1,AGM,ADGRG1,COL3A1,0.966,0.0
+Sclerotome,接收,6,COL3A1_integrin_a11b1_complex,AGM,integrin,COL3A1,0.963,0.0
+Sclerotome,接收,7,TENM3_ADGRL2,AGM,ADGRL2,TENM3,0.887,0.0
+Sclerotome,接收,8,FN1_integrin_a8b1_complex,AGM,integrin,FN1,0.878,0.002
+Sclerotome,接收,9,MPZL1_MPZL1,AGM,MPZL1,MPZL1,0.852,0.0
+Sclerotome,接收,10,FN1_integrin_a3b1_complex,AGM,integrin,FN1,0.847,0.047

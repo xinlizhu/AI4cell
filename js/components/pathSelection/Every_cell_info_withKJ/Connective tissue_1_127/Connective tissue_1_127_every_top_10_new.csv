@@ -1,0 +1,107 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,NCAM1_FGFR1,Connective tissue,NCAM1,FGFR1,0.811,0.039
+AGM,发送,2,TENM3_ADGRL1,Connective tissue,TENM3,ADGRL1,0.7,0.029
+AGM,发送,3,TENM4_ADGRL1,Connective tissue,TENM4,ADGRL1,0.633,0.034
+AGM,发送,4,TENM4_FLRT3_complex_ADGRL1,Connective tissue,TENM4,FLRT3,0.633,0.034
+AGM,发送,5,FLRT2_ADGRL1,Connective tissue,FLRT2,ADGRL1,0.584,0.036
+AGM,发送,6,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.584,0.016
+AGM,发送,7,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.567,0.046
+AGM,发送,8,PTPRD_IL1RAP,Connective tissue,PTPRD,IL1RAP,0.55,0.031
+AGM,发送,9,WNT2_FZD8_LRP5,Connective tissue,WNT2,FZD8,0.505,0.011
+AGM,发送,10,TENM2_ADGRL1,Connective tissue,TENM2,ADGRL1,0.499,0.038
+AGM,接收,1,IL1RAP_PTPRF,Connective tissue,PTPRF,IL1RAP,0.891,0.03
+AGM,接收,2,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.752,0.041
+AGM,接收,3,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Connective tissue,byALDH1A2,atRetinoicAcid,0.75,0.011
+AGM,接收,4,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Connective tissue,byALDH1A2,atRetinoicAcid,0.726,0.006
+AGM,接收,5,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Connective tissue,byALDH1A2,atRetinoicAcid,0.72,0.006
+AGM,接收,6,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Connective tissue,byALDH1A2,atRetinoicAcid,0.72,0.009
+AGM,接收,7,atRetinoicAcid_byALDH1A2_RAreceptor_RARB_RXRB,Connective tissue,byALDH1A2,atRetinoicAcid,0.696,0.008
+AGM,接收,8,atRetinoicAcid_byALDH1A2_RAreceptor_RARB,Connective tissue,byALDH1A2,atRetinoicAcid,0.696,0.008
+AGM,接收,9,atRetinoicAcid_byALDH1A2_RAreceptor_RARG,Connective tissue,byALDH1A2,atRetinoicAcid,0.678,0.013
+AGM,接收,10,TENM4_FLRT3_complex_ADGRL1,Connective tissue,FLRT3,TENM4,0.566,0.035
+Cavity,发送,1,EFNA5_EPHA5,Connective tissue,EFNA5,EPHA5,0.292,0.002
+Cavity,发送,2,EFNA4_EPHA5,Connective tissue,EFNA4,EPHA5,0.222,0.01
+Cavity,发送,3,EFNA2_EPHA5,Connective tissue,EFNA2,EPHA5,0.184,0.013
+Cavity,发送,4,EFNA1_EPHA5,Connective tissue,EFNA1,EPHA5,0.135,0.007
+Cavity,接收,1,SPP1_integrin_a9b1_complex,Connective tissue,integrin,SPP1,0.348,0.0
+Cavity,接收,2,LGALS3_MERTK,Connective tissue,MERTK,LGALS3,0.326,0.009
+Connective tissue,发送,1,IGF2_IGF2R,Connective tissue,IGF2,IGF2R,1.876,0.0
+Connective tissue,发送,2,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.741,0.001
+Connective tissue,发送,3,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.633,0.0
+Connective tissue,发送,4,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.475,0.0
+Connective tissue,发送,5,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.442,0.0
+Connective tissue,发送,6,PPIA_BSG,Connective tissue,PPIA,BSG,1.141,0.015
+Connective tissue,发送,7,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.91,0.0
+Connective tissue,发送,8,FN1_integrin_a8b1_complex,Connective tissue,FN1,integrin,0.808,0.029
+Connective tissue,发送,9,CADM1_CADM1,Connective tissue,CADM1,CADM1,0.799,0.01
+Connective tissue,发送,10,WNT2_SFRP1,Connective tissue,WNT2,SFRP1,0.797,0.0
+Connective tissue,接收,1,IGF2_IGF2R,Connective tissue,IGF2R,IGF2,1.876,0.0
+Connective tissue,接收,2,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.741,0.001
+Connective tissue,接收,3,DLK1_NOTCH2,Connective tissue,NOTCH2,DLK1,1.633,0.0
+Connective tissue,接收,4,DLK1_NOTCH1,Connective tissue,NOTCH1,DLK1,1.475,0.0
+Connective tissue,接收,5,DLK1_NOTCH3,Connective tissue,NOTCH3,DLK1,1.442,0.0
+Connective tissue,接收,6,PPIA_BSG,Connective tissue,BSG,PPIA,1.141,0.015
+Connective tissue,接收,7,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.91,0.0
+Connective tissue,接收,8,FN1_integrin_a8b1_complex,Connective tissue,integrin,FN1,0.808,0.029
+Connective tissue,接收,9,CADM1_CADM1,Connective tissue,CADM1,CADM1,0.799,0.01
+Connective tissue,接收,10,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.797,0.0
+Connective tissue_1_127_Target,发送,1,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.775,0.046
+Connective tissue_1_127_Target,发送,2,PPIA_BSG,Connective tissue,PPIA,BSG,1.621,0.043
+Connective tissue_1_127_Target,发送,3,CD44_TYROBP,Connective tissue,CD44,TYROBP,1.098,0.042
+Connective tissue_1_127_Target,发送,4,FN1_integrin_a3b1_complex,Connective tissue,FN1,integrin,1.086,0.029
+Connective tissue_1_127_Target,发送,5,IGFBP3_TMEM219,Connective tissue,IGFBP3,TMEM219,0.943,0.01
+Connective tissue_1_127_Target,发送,6,SEMA4D_PLXNB1,Connective tissue,SEMA4D,PLXNB1,0.896,0.01
+Connective tissue_1_127_Target,发送,7,VEGFC_FLT4,Connective tissue,VEGFC,FLT4,0.878,0.0
+Connective tissue_1_127_Target,发送,8,HGF_MET,Connective tissue,HGF,MET,0.843,0.039
+Connective tissue_1_127_Target,发送,9,Glutamate_byGLS_and_SLC1A3_GRIK2,Connective tissue,Glutamate,byGLS,0.715,0.016
+Connective tissue_1_127_Target,发送,10,ProstaglandinE2_byPTGES2_PTGER3,Connective tissue,ProstaglandinE2,byPTGES2,0.683,0.003
+Connective tissue_1_127_Target,接收,1,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,1.515,0.008
+Connective tissue_1_127_Target,接收,2,LRRC4C_PTPRF,Connective tissue,PTPRF,LRRC4C,1.244,0.013
+Connective tissue_1_127_Target,接收,3,LRFN4_PTPRD,Connective tissue,PTPRD,LRFN4,1.174,0.008
+Connective tissue_1_127_Target,接收,4,LRFN4_PTPRS,Connective tissue,PTPRS,LRFN4,1.146,0.01
+Connective tissue_1_127_Target,接收,5,WNT7B_SFRP1,Connective tissue,SFRP1,WNT7B,1.105,0.034
+Connective tissue_1_127_Target,接收,6,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.956,0.005
+Connective tissue_1_127_Target,接收,7,VCAM1_integrin_a9b1_complex,Connective tissue,integrin,VCAM1,0.925,0.013
+Connective tissue_1_127_Target,接收,8,BMPR1B_BMPR2_BMPR1A,Connective tissue,BMPR2,BMPR1B,0.873,0.001
+Connective tissue_1_127_Target,接收,9,WNT7B_FZD7_LRP5,Connective tissue,FZD7,WNT7B,0.774,0.04
+Connective tissue_1_127_Target,接收,10,WNT7B_FZD3_LRP5,Connective tissue,FZD3,WNT7B,0.774,0.04
+Dermomyotome,发送,1,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.614,0.029
+Dermomyotome,发送,2,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.532,0.001
+Dermomyotome,发送,3,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.447,0.023
+Dermomyotome,发送,4,CADM1_CADM1,Connective tissue,CADM1,CADM1,1.203,0.0
+Dermomyotome,发送,5,COL3A1_integrin_a1b1_complex,Connective tissue,COL3A1,integrin,1.036,0.0
+Dermomyotome,发送,6,COL3A1_integrin_a10b1_complex,Connective tissue,COL3A1,integrin,0.995,0.0
+Dermomyotome,发送,7,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.88,0.05
+Dermomyotome,发送,8,COL1A1_integrin_a1b1_complex,Connective tissue,COL1A1,integrin,0.774,0.019
+Dermomyotome,发送,9,COL1A1_integrin_a10b1_complex,Connective tissue,COL1A1,integrin,0.733,0.016
+Dermomyotome,发送,10,COL1A2_integrin_a1b1_complex,Connective tissue,COL1A2,integrin,0.702,0.009
+Dermomyotome,接收,1,CADM1_CADM1,Connective tissue,CADM1,CADM1,1.203,0.0
+Dermomyotome,接收,2,CADM1_NECTIN3,Connective tissue,NECTIN3,CADM1,1.045,0.0
+Dermomyotome,接收,3,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.971,0.0
+Dermomyotome,接收,4,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.88,0.05
+Dermomyotome,接收,5,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.785,0.019
+Dermomyotome,接收,6,LRFN5_PTPRF,Connective tissue,PTPRF,LRFN5,0.694,0.004
+Dermomyotome,接收,7,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.691,0.016
+Dermomyotome,接收,8,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.656,0.017
+Dermomyotome,接收,9,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.653,0.0
+Dermomyotome,接收,10,WNT16_SFRP1,Connective tissue,SFRP1,WNT16,0.624,0.0
+Mesenchyme,发送,1,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.602,0.016
+Mesenchyme,发送,2,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.495,0.0
+Mesenchyme,发送,3,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.464,0.001
+Mesenchyme,发送,4,MDK_PTPRZ1,Connective tissue,MDK,PTPRZ1,1.409,0.0
+Mesenchyme,发送,5,COL3A1_integrin_a11b1_complex,Connective tissue,COL3A1,integrin,1.119,0.0
+Mesenchyme,发送,6,COL3A1_integrin_a1b1_complex,Connective tissue,COL3A1,integrin,1.025,0.0
+Mesenchyme,发送,7,COL18A1_integrin_a11b1_complex,Connective tissue,COL18A1,integrin,0.944,0.001
+Mesenchyme,发送,8,FN1_integrin_a3b1_complex,Connective tissue,FN1,integrin,0.871,0.005
+Mesenchyme,发送,9,COL1A1_integrin_a11b1_complex,Connective tissue,COL1A1,integrin,0.857,0.0
+Mesenchyme,发送,10,FN1_integrin_a11b1_complex,Connective tissue,FN1,integrin,0.857,0.0
+Mesenchyme,接收,1,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.867,0.0
+Mesenchyme,接收,2,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.797,0.0
+Mesenchyme,接收,3,WNT6_SFRP1,Connective tissue,SFRP1,WNT6,0.765,0.0
+Mesenchyme,接收,4,LRRC4C_PTPRF,Connective tissue,PTPRF,LRRC4C,0.716,0.002
+Mesenchyme,接收,5,WNT7B_SFRP1,Connective tissue,SFRP1,WNT7B,0.678,0.013
+Mesenchyme,接收,6,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.631,0.009
+Mesenchyme,接收,7,WNT7A_SFRP1,Connective tissue,SFRP1,WNT7A,0.598,0.0
+Mesenchyme,接收,8,WNT4_SFRP1,Connective tissue,SFRP1,WNT4,0.58,0.006
+Mesenchyme,接收,9,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.559,0.003
+Mesenchyme,接收,10,WNT3_SFRP1,Connective tissue,SFRP1,WNT3,0.556,0.0

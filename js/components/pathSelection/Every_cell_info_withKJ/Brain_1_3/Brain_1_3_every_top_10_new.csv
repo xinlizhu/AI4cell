@@ -1,0 +1,105 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+Brain,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.082,0.024
+Brain,发送,2,LRFN4_PTPRF,Brain,LRFN4,PTPRF,0.808,0.016
+Brain,发送,3,LRRC4B_PTPRF,Brain,LRRC4B,PTPRF,0.759,0.007
+Brain,发送,4,LRRC4C_PTPRF,Brain,LRRC4C,PTPRF,0.757,0.039
+Brain,发送,5,CDH2_CDH2,Brain,CDH2,CDH2,0.742,0.001
+Brain,发送,6,EFNB3_EPHA4,Brain,EFNB3,EPHA4,0.737,0.0
+Brain,发送,7,DLL1_NOTCH1,Brain,DLL1,NOTCH1,0.721,0.0
+Brain,发送,8,PTN_PTPRZ1,Brain,PTN,PTPRZ1,0.712,0.0
+Brain,发送,9,JAM3_JAM3,Brain,JAM3,JAM3,0.668,0.0
+Brain,发送,10,WNT5A_SFRP2,Brain,WNT5A,SFRP2,0.649,0.0
+Brain,接收,1,PPIA_BSG,Brain,BSG,PPIA,1.082,0.024
+Brain,接收,2,LRFN4_PTPRF,Brain,PTPRF,LRFN4,0.808,0.016
+Brain,接收,3,LRRC4B_PTPRF,Brain,PTPRF,LRRC4B,0.759,0.007
+Brain,接收,4,LRRC4C_PTPRF,Brain,PTPRF,LRRC4C,0.757,0.039
+Brain,接收,5,CDH2_CDH2,Brain,CDH2,CDH2,0.742,0.001
+Brain,接收,6,EFNB3_EPHA4,Brain,EPHA4,EFNB3,0.737,0.0
+Brain,接收,7,DLL1_NOTCH1,Brain,NOTCH1,DLL1,0.721,0.0
+Brain,接收,8,PTN_PTPRZ1,Brain,PTPRZ1,PTN,0.712,0.0
+Brain,接收,9,JAM3_JAM3,Brain,JAM3,JAM3,0.668,0.0
+Brain,接收,10,WNT5A_SFRP2,Brain,SFRP2,WNT5A,0.649,0.0
+Brain_1_3_Target,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.191,0.0
+Brain_1_3_Target,发送,2,LRFN4_PTPRF,Brain,LRFN4,PTPRF,0.908,0.003
+Brain_1_3_Target,发送,3,LRRC4B_PTPRF,Brain,LRRC4B,PTPRF,0.86,0.002
+Brain_1_3_Target,发送,4,LRRC4C_PTPRF,Brain,LRRC4C,PTPRF,0.858,0.003
+Brain_1_3_Target,发送,5,PTN_PTPRZ1,Brain,PTN,PTPRZ1,0.725,0.0
+Brain_1_3_Target,发送,6,AGRN_PTPRS,Brain,AGRN,PTPRS,0.719,0.02
+Brain_1_3_Target,发送,7,FN1_integrin_a4b1_complex,Brain,FN1,integrin,0.713,0.01
+Brain_1_3_Target,发送,8,EFNB3_EPHB2,Brain,EFNB3,EPHB2,0.649,0.011
+Brain_1_3_Target,发送,9,WNT5A_SFRP2,Brain,WNT5A,SFRP2,0.647,0.034
+Brain_1_3_Target,发送,10,FN1_integrin_a8b1_complex,Brain,FN1,integrin,0.644,0.028
+Brain_1_3_Target,接收,1,IGF2_IGF1R,Brain,IGF1R,IGF2,1.224,0.021
+Brain_1_3_Target,接收,2,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.047,0.041
+Brain_1_3_Target,接收,3,DLK1_NOTCH1,Brain,NOTCH1,DLK1,0.85,0.004
+Brain_1_3_Target,接收,4,LRFN4_PTPRF,Brain,PTPRF,LRFN4,0.827,0.031
+Brain_1_3_Target,接收,5,EFNB3_EPHA4,Brain,EPHA4,EFNB3,0.819,0.0
+Brain_1_3_Target,接收,6,AGRN_PTPRS,Brain,PTPRS,AGRN,0.764,0.003
+Brain_1_3_Target,接收,7,EFNB3_EPHB2,Brain,EPHB2,EFNB3,0.708,0.003
+Brain_1_3_Target,接收,8,NTN1_DCC,Brain,DCC,NTN1,0.685,0.0
+Brain_1_3_Target,接收,9,COL2A1_integrin_a1b1_complex,Brain,integrin,COL2A1,0.666,0.042
+Brain_1_3_Target,接收,10,WNT5A_SFRP2,Brain,SFRP2,WNT5A,0.663,0.001
+Cavity,接收,1,NTN1_DCC,Brain,DCC,NTN1,0.641,0.0
+Cavity,接收,2,WNT3A_SFRP2,Brain,SFRP2,WNT3A,0.609,0.0
+Cavity,接收,3,SLIT1_ROBO1,Brain,ROBO1,SLIT1,0.377,0.047
+Cavity,接收,4,DKK2_LRP6,Brain,LRP6,DKK2,0.3,0.0
+Mesenchyme,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.183,0.013
+Mesenchyme,发送,2,FN1_integrin_aVb5_complex,Brain,FN1,integrin,0.755,0.033
+Mesenchyme,发送,3,FN1_integrin_aVb3_complex,Brain,FN1,integrin,0.664,0.004
+Mesenchyme,发送,4,NRXN1_DAG1,Brain,NRXN1,DAG1,0.577,0.02
+Mesenchyme,发送,5,DLL1_NOTCH2,Brain,DLL1,NOTCH2,0.573,0.0
+Mesenchyme,发送,6,VEGFA_KDR,Brain,VEGFA,KDR,0.555,0.0
+Mesenchyme,发送,7,NRXN2_DAG1,Brain,NRXN2,DAG1,0.543,0.024
+Mesenchyme,发送,8,EFNB3_EPHB4,Brain,EFNB3,EPHB4,0.532,0.044
+Mesenchyme,发送,9,DAG1_NRXN3,Brain,DAG1,NRXN3,0.531,0.043
+Mesenchyme,发送,10,CDH6_CDH6,Brain,CDH6,CDH6,0.477,0.027
+Mesenchyme,接收,1,IGF2_IGF1R,Brain,IGF1R,IGF2,1.487,0.0
+Mesenchyme,接收,2,IGF2_IGF2R,Brain,IGF2R,IGF2,1.415,0.0
+Mesenchyme,接收,3,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.191,0.0
+Mesenchyme,接收,4,DLK1_NOTCH1,Brain,NOTCH1,DLK1,1.175,0.0
+Mesenchyme,接收,5,COL3A1_ADGRG1,Brain,ADGRG1,COL3A1,1.133,0.0
+Mesenchyme,接收,6,DLK1_NOTCH2,Brain,NOTCH2,DLK1,0.91,0.0
+Mesenchyme,接收,7,DLK1_NOTCH3,Brain,NOTCH3,DLK1,0.886,0.0
+Mesenchyme,接收,8,COL3A1_integrin_a1b1_complex,Brain,integrin,COL3A1,0.881,0.0
+Mesenchyme,接收,9,COL4A1_integrin_a1b1_complex,Brain,integrin,COL4A1,0.86,0.0
+Mesenchyme,接收,10,COL3A1_integrin_a11b1_complex,Brain,integrin,COL3A1,0.858,0.0
+Neural crest,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.194,0.0
+Neural crest,发送,2,EFNA5_EPHA7,Brain,EFNA5,EPHA7,0.86,0.0
+Neural crest,发送,3,MPZL1_MPZL1,Brain,MPZL1,MPZL1,0.804,0.0
+Neural crest,发送,4,CADM1_CADM1,Brain,CADM1,CADM1,0.786,0.009
+Neural crest,发送,5,FN1_integrin_aVb1_complex,Brain,FN1,integrin,0.78,0.019
+Neural crest,发送,6,FN1_integrin_aVb5_complex,Brain,FN1,integrin,0.78,0.0
+Neural crest,发送,7,COL18A1_integrin_a1b1_complex,Brain,COL18A1,integrin,0.751,0.0
+Neural crest,发送,8,CADM1_NECTIN3,Brain,CADM1,NECTIN3,0.75,0.011
+Neural crest,发送,9,EFNA2_EPHA7,Brain,EFNA2,EPHA7,0.73,0.0
+Neural crest,发送,10,EFNA4_EPHA7,Brain,EFNA4,EPHA7,0.725,0.0
+Neural crest,接收,1,IGF2_IGF1R,Brain,IGF1R,IGF2,1.65,0.0
+Neural crest,接收,2,IGF2_IGF2R,Brain,IGF2R,IGF2,1.577,0.0
+Neural crest,接收,3,COL3A1_ADGRG1,Brain,ADGRG1,COL3A1,1.406,0.0
+Neural crest,接收,4,COL3A1_integrin_a1b1_complex,Brain,integrin,COL3A1,1.153,0.0
+Neural crest,接收,5,COL3A1_integrin_a11b1_complex,Brain,integrin,COL3A1,1.131,0.0
+Neural crest,接收,6,FLRT2_ADGRL3,Brain,ADGRL3,FLRT2,1.067,0.0
+Neural crest,接收,7,COL4A1_integrin_a1b1_complex,Brain,integrin,COL4A1,1.057,0.0
+Neural crest,接收,8,COL4A1_integrin_a11b1_complex,Brain,integrin,COL4A1,1.035,0.0
+Neural crest,接收,9,DLK1_NOTCH1,Brain,NOTCH1,DLK1,1.001,0.0
+Neural crest,接收,10,FLRT2_ADGRL1,Brain,ADGRL1,FLRT2,0.98,0.0
+Sclerotome,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.328,0.007
+Sclerotome,发送,2,CADM1_CADM1,Brain,CADM1,CADM1,1.23,0.0
+Sclerotome,发送,3,CDH6_CDH6,Brain,CDH6,CDH6,1.222,0.0
+Sclerotome,发送,4,2arachidonoylglycerol_byDAGLB_CNR1,Brain,2arachidonoylglycerol,byDAGLB,1.01,0.0
+Sclerotome,发送,5,CADM1_NECTIN3,Brain,CADM1,NECTIN3,0.869,0.032
+Sclerotome,发送,6,CDH2_CDH2,Brain,CDH2,CDH2,0.838,0.03
+Sclerotome,发送,7,FN1_integrin_a4b1_complex,Brain,FN1,integrin,0.781,0.028
+Sclerotome,发送,8,DLL1_NOTCH1,Brain,DLL1,NOTCH1,0.773,0.041
+Sclerotome,发送,9,EFNB3_EPHB2,Brain,EFNB3,EPHB2,0.745,0.032
+Sclerotome,发送,10,SLIT2_ROBO1,Brain,SLIT2,ROBO1,0.723,0.01
+Sclerotome,接收,1,COL3A1_ADGRG1,Brain,ADGRG1,COL3A1,1.299,0.0
+Sclerotome,接收,2,CADM1_CADM1,Brain,CADM1,CADM1,1.23,0.0
+Sclerotome,接收,3,CDH6_CDH6,Brain,CDH6,CDH6,1.222,0.0
+Sclerotome,接收,4,CADM1_NECTIN3,Brain,NECTIN3,CADM1,1.199,0.0
+Sclerotome,接收,5,COL3A1_integrin_a1b1_complex,Brain,integrin,COL3A1,1.047,0.0
+Sclerotome,接收,6,COL3A1_integrin_a11b1_complex,Brain,integrin,COL3A1,1.024,0.0
+Sclerotome,接收,7,DLK1_NOTCH1,Brain,NOTCH1,DLK1,0.968,0.013
+Sclerotome,接收,8,COL4A1_integrin_a1b1_complex,Brain,integrin,COL4A1,0.938,0.006
+Sclerotome,接收,9,COL4A1_integrin_a11b1_complex,Brain,integrin,COL4A1,0.916,0.005
+Sclerotome,接收,10,COL18A1_integrin_a1b1_complex,Brain,integrin,COL18A1,0.908,0.021

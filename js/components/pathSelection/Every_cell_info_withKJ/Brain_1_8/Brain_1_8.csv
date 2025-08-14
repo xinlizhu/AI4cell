@@ -1,0 +1,4 @@
+cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
+Brain,target,62,82.7,224.6,0.0,0.0
+Cavity,single_cluster,75,89.7,231.9,10.1,22.61
+Neural crest,single_cluster,104,87.4,211.3,14.1,11.3

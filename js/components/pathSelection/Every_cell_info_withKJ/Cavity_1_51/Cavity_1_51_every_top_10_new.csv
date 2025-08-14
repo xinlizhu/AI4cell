@@ -1,0 +1,63 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+Brain,发送,1,IGF2_IGF1R,Cavity,IGF2,IGF1R,0.896,0.025
+Brain,发送,2,IGF2_IGF2R,Cavity,IGF2,IGF2R,0.804,0.005
+Brain,发送,3,NTN1_UNC5C,Cavity,NTN1,UNC5C,0.655,0.0
+Brain,发送,4,NTN1_DCC,Cavity,NTN1,DCC,0.632,0.0
+Brain,发送,5,WNT5A_SFRP2,Cavity,WNT5A,SFRP2,0.552,0.0
+Brain,发送,6,DLK1_NOTCH1,Cavity,DLK1,NOTCH1,0.549,0.0
+Brain,发送,7,WNT5B_SFRP2,Cavity,WNT5B,SFRP2,0.489,0.0
+Brain,发送,8,DLK1_NOTCH2,Cavity,DLK1,NOTCH2,0.459,0.013
+Brain,发送,9,BMPR1B_BMPR2_BMPR1A,Cavity,BMPR1B,BMPR2,0.435,0.0
+Brain,发送,10,VTN_integrin_aVb1_complex,Cavity,VTN,integrin,0.43,0.0
+Brain,接收,1,EFNA5_EPHB2,Cavity,EPHB2,EFNA5,0.632,0.0
+Brain,接收,2,EFNA5_EPHA4,Cavity,EPHA4,EFNA5,0.562,0.003
+Brain,接收,3,DAG1_NRXN3,Cavity,NRXN3,DAG1,0.469,0.0
+Brain,接收,4,TENM3_ADGRL1,Cavity,ADGRL1,TENM3,0.457,0.008
+Brain,接收,5,EFNB2_EPHB2,Cavity,EPHB2,EFNB2,0.439,0.0
+Brain,接收,6,EFNB1_EPHB2,Cavity,EPHB2,EFNB1,0.388,0.037
+Brain,接收,7,TENM2_ADGRL1,Cavity,ADGRL1,TENM2,0.327,0.0
+Brain,接收,8,NLGN1_NRXN3,Cavity,NRXN3,NLGN1,0.294,0.0
+Brain,接收,9,CLSTN1_NRXN3,Cavity,NRXN3,CLSTN1,0.293,0.004
+Brain,接收,10,NLGN2_NRXN3,Cavity,NRXN3,NLGN2,0.141,0.005
+Cavity_1_51_Target,发送,1,DLK1_NOTCH3,Cavity,DLK1,NOTCH3,0.471,0.011
+Cavity_1_51_Target,接收,1,BMP7_BMR1A_AVR2B,Cavity,BMR1A,BMP7,0.33,0.041
+Neural crest,发送,1,MPZL1_MPZL1,Cavity,MPZL1,MPZL1,0.698,0.008
+Neural crest,发送,2,SLIT2_ROBO2,Cavity,SLIT2,ROBO2,0.673,0.002
+Neural crest,发送,3,EFNA5_EPHA7,Cavity,EFNA5,EPHA7,0.671,0.011
+Neural crest,发送,4,EFNA2_EPHA7,Cavity,EFNA2,EPHA7,0.53,0.002
+Neural crest,发送,5,VTN_integrin_aVb1_complex,Cavity,VTN,integrin,0.497,0.002
+Neural crest,发送,6,NTN1_UNC5B,Cavity,NTN1,UNC5B,0.42,0.004
+Neural crest,发送,7,WNT5A_FRZB,Cavity,WNT5A,FRZB,0.399,0.001
+Neural crest,发送,8,VEGFA_KDR,Cavity,VEGFA,KDR,0.371,0.0
+Neural crest,发送,9,PDGFC_PDGFRA,Cavity,PDGFC,PDGFRA,0.367,0.0
+Neural crest,发送,10,WNT5B_FRZB,Cavity,WNT5B,FRZB,0.336,0.0
+Neural crest,接收,1,COL3A1_ADGRG1,Cavity,ADGRG1,COL3A1,1.308,0.0
+Neural crest,接收,2,IGF2_IGF1R,Cavity,IGF1R,IGF2,1.232,0.0
+Neural crest,接收,3,IGF2_IGF2R,Cavity,IGF2R,IGF2,1.149,0.0
+Neural crest,接收,4,FLRT2_ADGRL3,Cavity,ADGRL3,FLRT2,0.792,0.0
+Neural crest,接收,5,FLRT2_ADGRL1,Cavity,ADGRL1,FLRT2,0.755,0.0
+Neural crest,接收,6,MPZL1_MPZL1,Cavity,MPZL1,MPZL1,0.698,0.008
+Neural crest,接收,7,APP_FPR2,Cavity,FPR2,APP,0.62,0.007
+Neural crest,接收,8,VTN_integrin_aVb1_complex,Cavity,integrin,VTN,0.524,0.003
+Neural crest,接收,9,APP_TNFRSF21,Cavity,TNFRSF21,APP,0.519,0.012
+Neural crest,接收,10,SEMA3C_NRP2,Cavity,NRP2,SEMA3C,0.372,0.0
+Notochord,发送,1,IGF2_IGF1R,Cavity,IGF2,IGF1R,0.976,0.0
+Notochord,发送,2,CADM1_NECTIN3,Cavity,CADM1,NECTIN3,0.747,0.0
+Notochord,发送,3,TENM3_ADGRL2,Cavity,TENM3,ADGRL2,0.679,0.018
+Notochord,发送,4,COL3A1_ADGRG1,Cavity,COL3A1,ADGRG1,0.662,0.0
+Notochord,发送,5,TENM4_ADGRL2,Cavity,TENM4,ADGRL2,0.656,0.001
+Notochord,发送,6,EFNB3_EPHB2,Cavity,EFNB3,EPHB2,0.641,0.026
+Notochord,发送,7,WNT5A_SFRP1,Cavity,WNT5A,SFRP1,0.641,0.0
+Notochord,发送,8,NECTIN2_NECTIN3,Cavity,NECTIN2,NECTIN3,0.623,0.0
+Notochord,发送,9,DLK1_NOTCH1,Cavity,DLK1,NOTCH1,0.603,0.001
+Notochord,发送,10,DLK1_NOTCH2,Cavity,DLK1,NOTCH2,0.602,0.0
+Notochord,接收,1,SLIT2_ROBO1,Cavity,ROBO1,SLIT2,1.038,0.0
+Notochord,接收,2,SHH_PTCH_CDON_transmembrane_receptor,Cavity,PTCH,SHH,0.881,0.0
+Notochord,接收,3,NTN1_UNC5C,Cavity,UNC5C,NTN1,0.873,0.0
+Notochord,接收,4,SHH_PTCH_GAS1_transmembrane_receptor,Cavity,PTCH,SHH,0.868,0.0
+Notochord,接收,5,NTN1_DCC,Cavity,DCC,NTN1,0.841,0.0
+Notochord,接收,6,SHH_PTCH_BOC_transmembrane_receptor,Cavity,PTCH,SHH,0.7,0.0
+Notochord,接收,7,WNT5A_SFRP1,Cavity,SFRP1,WNT5A,0.669,0.0
+Notochord,接收,8,EFNB3_EPHB2,Cavity,EPHB2,EFNB3,0.635,0.046
+Notochord,接收,9,WNT5A_SFRP2,Cavity,SFRP2,WNT5A,0.591,0.0
+Notochord,接收,10,JAM3_JAM3,Cavity,JAM3,JAM3,0.552,0.01

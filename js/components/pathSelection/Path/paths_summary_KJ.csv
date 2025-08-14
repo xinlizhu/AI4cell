@@ -1,0 +1,526 @@
+path_id,length,weight,start_node,end_node,path_string
+0,15,825,Neural crest_1_71,Brain_1_12,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+1,15,844,Neural crest_1_71,Brain_1_7,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7
+2,15,844,Neural crest_1_71,Brain_1_2,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+3,15,844,Neural crest_1_71,Brain_1_3,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+4,15,858,Neural crest_1_71,Brain_1_12,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+5,15,905,Neural crest_1_71,Brain_1_6,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6
+6,15,905,Neural crest_1_71,Brain_1_7,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7
+7,14,784,Neural crest_1_71,Brain_1_4,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+8,14,817,Neural crest_1_71,Brain_1_4,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+9,14,882,Neural crest_1_71,Brain_1_17,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+10,14,656,Neural crest_1_71,Heart_1_72,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+11,14,701,Neural crest_1_71,Heart_1_74,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+12,13,766,Neural crest_1_71,Brain_1_2,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+13,13,766,Neural crest_1_71,Brain_1_3,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+14,13,775,Neural crest_1_71,Brain_1_41,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+15,13,792,Neural crest_1_71,Brain_1_18,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+16,13,792,Neural crest_1_71,Cavity_1_43,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+17,13,585,Neural crest_1_71,Cavity_1_77,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+18,12,737,Neural crest_1_71,Neural crest_1_9,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+19,12,737,Neural crest_1_71,Neural crest_1_11,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+20,12,553,Neural crest_1_71,Cavity_1_79,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+21,11,512,Neural crest_1_71,Mesenchyme_1_124,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+22,11,512,Neural crest_1_71,Connective tissue_1_126,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+23,10,597,Neural crest_1_71,Mesenchyme_1_108,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+24,10,499,Neural crest_1_71,Neural crest_1_110,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+25,9,457,Neural crest_1_71,Connective tissue_1_120,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+26,8,402,Neural crest_1_71,Dermomyotome_1_114,Neural crest_1_71 -> Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_115 -> Dermomyotome_1_114
+27,6,168,Neural crest_1_71,Neural crest_1_60,Neural crest_1_71 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+28,6,168,Neural crest_1_71,Neural crest_1_61,Neural crest_1_71 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+29,5,134,Neural crest_1_71,Neural crest_1_58,Neural crest_1_71 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+30,5,140,Neural crest_1_71,Branchial arch_1_65,Neural crest_1_71 -> Neural crest_1_68 -> Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_65
+31,5,140,Neural crest_1_71,Branchial arch_1_66,Neural crest_1_71 -> Neural crest_1_68 -> Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_66
+32,5,140,Neural crest_1_71,Branchial arch_1_67,Neural crest_1_71 -> Neural crest_1_68 -> Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_67
+33,2,42,Neural crest_1_71,Neural crest_1_69,Neural crest_1_71 -> Neural crest_1_69
+34,2,42,Neural crest_1_71,Neural crest_1_70,Neural crest_1_71 -> Neural crest_1_70
+35,15,820,Neural crest_1_103,Brain_1_4,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+36,15,820,Neural crest_1_103,Neural crest_1_14,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14
+37,15,879,Neural crest_1_103,Brain_1_5,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5
+38,15,881,Neural crest_1_103,Brain_1_4,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+39,15,881,Neural crest_1_103,Neural crest_1_14,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14
+40,14,783,Neural crest_1_103,Brain_1_12,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+41,14,802,Neural crest_1_103,Brain_1_2,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+42,14,802,Neural crest_1_103,Brain_1_3,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+43,14,816,Neural crest_1_103,Brain_1_12,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+44,13,742,Neural crest_1_103,Brain_1_4,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+45,13,775,Neural crest_1_103,Brain_1_4,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+46,13,840,Neural crest_1_103,Brain_1_17,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+47,13,614,Neural crest_1_103,Heart_1_72,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+48,13,659,Neural crest_1_103,Heart_1_74,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+49,12,724,Neural crest_1_103,Brain_1_2,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+50,12,724,Neural crest_1_103,Brain_1_3,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+51,12,733,Neural crest_1_103,Brain_1_41,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+52,12,750,Neural crest_1_103,Brain_1_18,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+53,12,750,Neural crest_1_103,Cavity_1_43,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+54,12,543,Neural crest_1_103,Cavity_1_77,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+55,11,695,Neural crest_1_103,Neural crest_1_9,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+56,11,695,Neural crest_1_103,Neural crest_1_11,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+57,11,511,Neural crest_1_103,Cavity_1_79,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+58,10,470,Neural crest_1_103,Mesenchyme_1_124,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+59,10,470,Neural crest_1_103,Connective tissue_1_126,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+60,9,555,Neural crest_1_103,Mesenchyme_1_108,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+61,9,457,Neural crest_1_103,Neural crest_1_110,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+62,8,415,Neural crest_1_103,Connective tissue_1_120,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+63,7,360,Neural crest_1_103,Dermomyotome_1_114,Neural crest_1_103 -> Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_115 -> Dermomyotome_1_114
+64,15,777,Sclerotome_1_100,Brain_1_12,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+65,15,824,Sclerotome_1_100,Brain_1_7,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7
+66,15,824,Sclerotome_1_100,Brain_1_2,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+67,15,824,Sclerotome_1_100,Brain_1_3,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+68,15,838,Sclerotome_1_100,Brain_1_12,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+69,14,736,Sclerotome_1_100,Brain_1_4,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+70,14,797,Sclerotome_1_100,Brain_1_4,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+71,13,699,Sclerotome_1_100,Brain_1_12,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+72,13,718,Sclerotome_1_100,Brain_1_2,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+73,13,718,Sclerotome_1_100,Brain_1_3,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+74,13,732,Sclerotome_1_100,Brain_1_12,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+75,12,658,Sclerotome_1_100,Brain_1_4,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+76,12,691,Sclerotome_1_100,Brain_1_4,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+77,12,756,Sclerotome_1_100,Brain_1_17,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+78,12,530,Sclerotome_1_100,Heart_1_72,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+79,12,575,Sclerotome_1_100,Heart_1_74,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+80,11,640,Sclerotome_1_100,Brain_1_2,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+81,11,640,Sclerotome_1_100,Brain_1_3,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+82,11,649,Sclerotome_1_100,Brain_1_41,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+83,11,666,Sclerotome_1_100,Brain_1_18,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+84,11,666,Sclerotome_1_100,Cavity_1_43,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+85,11,459,Sclerotome_1_100,Cavity_1_77,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+86,10,611,Sclerotome_1_100,Neural crest_1_9,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+87,10,611,Sclerotome_1_100,Neural crest_1_11,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+88,10,427,Sclerotome_1_100,Cavity_1_79,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+89,9,386,Sclerotome_1_100,Mesenchyme_1_124,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+90,9,386,Sclerotome_1_100,Connective tissue_1_126,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+91,8,471,Sclerotome_1_100,Mesenchyme_1_108,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+92,8,373,Sclerotome_1_100,Neural crest_1_110,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+93,7,331,Sclerotome_1_100,Connective tissue_1_120,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+94,6,276,Sclerotome_1_100,Dermomyotome_1_114,Sclerotome_1_100 -> Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_115 -> Dermomyotome_1_114
+95,15,775,Sclerotome_1_96,Brain_1_4,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+96,15,775,Sclerotome_1_96,Neural crest_1_14,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14
+97,14,710,Sclerotome_1_96,Brain_1_12,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+98,14,757,Sclerotome_1_96,Brain_1_2,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+99,14,757,Sclerotome_1_96,Brain_1_3,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+100,14,771,Sclerotome_1_96,Brain_1_12,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+101,13,669,Sclerotome_1_96,Brain_1_4,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+102,13,730,Sclerotome_1_96,Brain_1_4,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+103,12,632,Sclerotome_1_96,Brain_1_12,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+104,12,651,Sclerotome_1_96,Brain_1_2,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+105,12,651,Sclerotome_1_96,Brain_1_3,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+106,12,665,Sclerotome_1_96,Brain_1_12,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+107,11,591,Sclerotome_1_96,Brain_1_4,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+108,11,624,Sclerotome_1_96,Brain_1_4,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+109,11,689,Sclerotome_1_96,Brain_1_17,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+110,11,463,Sclerotome_1_96,Heart_1_72,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+111,11,508,Sclerotome_1_96,Heart_1_74,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+112,10,573,Sclerotome_1_96,Brain_1_2,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+113,10,573,Sclerotome_1_96,Brain_1_3,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+114,10,582,Sclerotome_1_96,Brain_1_41,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+115,10,599,Sclerotome_1_96,Brain_1_18,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+116,10,599,Sclerotome_1_96,Cavity_1_43,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+117,10,392,Sclerotome_1_96,Cavity_1_77,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+118,9,544,Sclerotome_1_96,Neural crest_1_9,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+119,9,544,Sclerotome_1_96,Neural crest_1_11,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+120,9,360,Sclerotome_1_96,Cavity_1_79,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+121,8,319,Sclerotome_1_96,Mesenchyme_1_124,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+122,8,319,Sclerotome_1_96,Connective tissue_1_126,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+123,7,404,Sclerotome_1_96,Mesenchyme_1_108,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+124,7,306,Sclerotome_1_96,Neural crest_1_110,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+125,6,264,Sclerotome_1_96,Connective tissue_1_120,Sclerotome_1_96 -> Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+126,5,209,Sclerotome_1_96,Dermomyotome_1_114,Sclerotome_1_96 -> Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_115 -> Dermomyotome_1_114
+127,15,763,Sclerotome_1_97,Brain_1_12,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+128,14,722,Sclerotome_1_97,Brain_1_4,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+129,13,657,Sclerotome_1_97,Brain_1_12,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+130,13,704,Sclerotome_1_97,Brain_1_2,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+131,13,704,Sclerotome_1_97,Brain_1_3,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+132,13,718,Sclerotome_1_97,Brain_1_12,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+133,12,616,Sclerotome_1_97,Brain_1_4,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+134,12,677,Sclerotome_1_97,Brain_1_4,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+135,11,579,Sclerotome_1_97,Brain_1_12,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+136,11,598,Sclerotome_1_97,Brain_1_2,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+137,11,598,Sclerotome_1_97,Brain_1_3,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+138,11,612,Sclerotome_1_97,Brain_1_12,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+139,10,538,Sclerotome_1_97,Brain_1_4,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+140,10,571,Sclerotome_1_97,Brain_1_4,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+141,10,636,Sclerotome_1_97,Brain_1_17,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+142,10,410,Sclerotome_1_97,Heart_1_72,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+143,10,455,Sclerotome_1_97,Heart_1_74,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+144,9,520,Sclerotome_1_97,Brain_1_2,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+145,9,520,Sclerotome_1_97,Brain_1_3,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+146,9,529,Sclerotome_1_97,Brain_1_41,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+147,9,546,Sclerotome_1_97,Brain_1_18,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+148,9,546,Sclerotome_1_97,Cavity_1_43,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+149,9,339,Sclerotome_1_97,Cavity_1_77,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+150,8,491,Sclerotome_1_97,Neural crest_1_9,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+151,8,491,Sclerotome_1_97,Neural crest_1_11,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+152,8,307,Sclerotome_1_97,Cavity_1_79,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+153,7,266,Sclerotome_1_97,Mesenchyme_1_124,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+154,7,266,Sclerotome_1_97,Connective tissue_1_126,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+155,6,351,Sclerotome_1_97,Mesenchyme_1_108,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+156,6,253,Sclerotome_1_97,Neural crest_1_110,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+157,5,211,Sclerotome_1_97,Connective tissue_1_120,Sclerotome_1_97 -> AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+158,4,156,Sclerotome_1_97,Dermomyotome_1_114,Sclerotome_1_97 -> Dermomyotome_1_105 -> Dermomyotome_1_115 -> Dermomyotome_1_114
+159,14,684,Dermomyotome_1_105,Brain_1_12,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+160,13,643,Dermomyotome_1_105,Brain_1_4,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+161,12,578,Dermomyotome_1_105,Brain_1_12,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+162,12,625,Dermomyotome_1_105,Brain_1_2,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+163,12,625,Dermomyotome_1_105,Brain_1_3,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+164,12,639,Dermomyotome_1_105,Brain_1_12,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+165,11,537,Dermomyotome_1_105,Brain_1_4,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+166,11,598,Dermomyotome_1_105,Brain_1_4,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+167,10,500,Dermomyotome_1_105,Brain_1_12,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+168,10,519,Dermomyotome_1_105,Brain_1_2,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+169,10,519,Dermomyotome_1_105,Brain_1_3,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+170,10,533,Dermomyotome_1_105,Brain_1_12,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+171,9,459,Dermomyotome_1_105,Brain_1_4,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+172,9,492,Dermomyotome_1_105,Brain_1_4,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+173,9,557,Dermomyotome_1_105,Brain_1_17,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+174,8,441,Dermomyotome_1_105,Brain_1_2,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+175,8,441,Dermomyotome_1_105,Brain_1_3,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+176,8,450,Dermomyotome_1_105,Brain_1_41,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+177,8,467,Dermomyotome_1_105,Brain_1_18,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+178,8,467,Dermomyotome_1_105,Cavity_1_43,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+179,7,412,Dermomyotome_1_105,Neural crest_1_9,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+180,7,412,Dermomyotome_1_105,Neural crest_1_11,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+181,5,272,Dermomyotome_1_105,Mesenchyme_1_108,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+182,5,174,Dermomyotome_1_105,Neural crest_1_110,Dermomyotome_1_105 -> Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+183,3,77,Dermomyotome_1_105,Dermomyotome_1_114,Dermomyotome_1_105 -> Dermomyotome_1_115 -> Dermomyotome_1_114
+184,13,636,Dermomyotome_1_104,Brain_1_12,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+185,12,595,Dermomyotome_1_104,Brain_1_4,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+186,11,530,Dermomyotome_1_104,Brain_1_12,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+187,11,577,Dermomyotome_1_104,Brain_1_2,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+188,11,577,Dermomyotome_1_104,Brain_1_3,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+189,11,591,Dermomyotome_1_104,Brain_1_12,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+190,10,489,Dermomyotome_1_104,Brain_1_4,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+191,10,550,Dermomyotome_1_104,Brain_1_4,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+192,9,452,Dermomyotome_1_104,Brain_1_12,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+193,9,471,Dermomyotome_1_104,Brain_1_2,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+194,9,471,Dermomyotome_1_104,Brain_1_3,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+195,9,485,Dermomyotome_1_104,Brain_1_12,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+196,8,411,Dermomyotome_1_104,Brain_1_4,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+197,8,444,Dermomyotome_1_104,Brain_1_4,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+198,8,509,Dermomyotome_1_104,Brain_1_17,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+199,7,393,Dermomyotome_1_104,Brain_1_2,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+200,7,393,Dermomyotome_1_104,Brain_1_3,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+201,7,402,Dermomyotome_1_104,Brain_1_41,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+202,7,419,Dermomyotome_1_104,Brain_1_18,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+203,7,419,Dermomyotome_1_104,Cavity_1_43,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+204,6,364,Dermomyotome_1_104,Neural crest_1_9,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+205,6,364,Dermomyotome_1_104,Neural crest_1_11,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+206,4,224,Dermomyotome_1_104,Mesenchyme_1_108,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+207,4,126,Dermomyotome_1_104,Neural crest_1_110,Dermomyotome_1_104 -> Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+208,12,600,Branchial arch_1_107,Brain_1_12,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+209,11,559,Branchial arch_1_107,Brain_1_4,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+210,10,494,Branchial arch_1_107,Brain_1_12,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+211,10,541,Branchial arch_1_107,Brain_1_2,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+212,10,541,Branchial arch_1_107,Brain_1_3,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+213,10,555,Branchial arch_1_107,Brain_1_12,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+214,9,453,Branchial arch_1_107,Brain_1_4,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+215,9,514,Branchial arch_1_107,Brain_1_4,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+216,8,416,Branchial arch_1_107,Brain_1_12,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+217,8,435,Branchial arch_1_107,Brain_1_2,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+218,8,435,Branchial arch_1_107,Brain_1_3,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+219,8,449,Branchial arch_1_107,Brain_1_12,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+220,7,375,Branchial arch_1_107,Brain_1_4,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+221,7,408,Branchial arch_1_107,Brain_1_4,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+222,7,473,Branchial arch_1_107,Brain_1_17,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+223,6,357,Branchial arch_1_107,Brain_1_2,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+224,6,357,Branchial arch_1_107,Brain_1_3,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+225,6,366,Branchial arch_1_107,Brain_1_41,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+226,6,383,Branchial arch_1_107,Brain_1_18,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+227,6,383,Branchial arch_1_107,Cavity_1_43,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+228,5,328,Branchial arch_1_107,Neural crest_1_9,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+229,5,328,Branchial arch_1_107,Neural crest_1_11,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+230,3,188,Branchial arch_1_107,Mesenchyme_1_108,Branchial arch_1_107 -> Mesenchyme_1_111 -> Mesenchyme_1_108
+231,3,90,Branchial arch_1_107,Neural crest_1_110,Branchial arch_1_107 -> Mesenchyme_1_106 -> Neural crest_1_110
+232,11,524,Mesenchyme_1_111,Brain_1_12,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+233,10,483,Mesenchyme_1_111,Brain_1_4,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+234,9,418,Mesenchyme_1_111,Brain_1_12,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+235,9,465,Mesenchyme_1_111,Brain_1_2,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+236,9,465,Mesenchyme_1_111,Brain_1_3,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+237,9,479,Mesenchyme_1_111,Brain_1_12,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+238,8,377,Mesenchyme_1_111,Brain_1_4,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+239,8,438,Mesenchyme_1_111,Brain_1_4,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+240,7,340,Mesenchyme_1_111,Brain_1_12,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+241,7,359,Mesenchyme_1_111,Brain_1_2,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+242,7,359,Mesenchyme_1_111,Brain_1_3,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+243,7,373,Mesenchyme_1_111,Brain_1_12,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+244,6,299,Mesenchyme_1_111,Brain_1_4,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+245,6,332,Mesenchyme_1_111,Brain_1_4,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+246,6,397,Mesenchyme_1_111,Brain_1_17,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+247,5,281,Mesenchyme_1_111,Brain_1_2,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+248,5,281,Mesenchyme_1_111,Brain_1_3,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+249,5,290,Mesenchyme_1_111,Brain_1_41,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+250,5,307,Mesenchyme_1_111,Brain_1_18,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+251,5,307,Mesenchyme_1_111,Cavity_1_43,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+252,4,252,Mesenchyme_1_111,Neural crest_1_9,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+253,4,252,Mesenchyme_1_111,Neural crest_1_11,Mesenchyme_1_111 -> Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+254,2,112,Mesenchyme_1_111,Mesenchyme_1_108,Mesenchyme_1_111 -> Mesenchyme_1_108
+255,10,412,Mesenchyme_1_109,Brain_1_12,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+256,9,371,Mesenchyme_1_109,Brain_1_4,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+257,8,306,Mesenchyme_1_109,Brain_1_12,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+258,8,353,Mesenchyme_1_109,Brain_1_2,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+259,8,353,Mesenchyme_1_109,Brain_1_3,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+260,8,367,Mesenchyme_1_109,Brain_1_12,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+261,7,265,Mesenchyme_1_109,Brain_1_4,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+262,7,326,Mesenchyme_1_109,Brain_1_4,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+263,6,228,Mesenchyme_1_109,Brain_1_12,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+264,6,247,Mesenchyme_1_109,Brain_1_2,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+265,6,247,Mesenchyme_1_109,Brain_1_3,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+266,6,261,Mesenchyme_1_109,Brain_1_12,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+267,5,187,Mesenchyme_1_109,Brain_1_4,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+268,5,220,Mesenchyme_1_109,Brain_1_4,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+269,5,285,Mesenchyme_1_109,Brain_1_17,Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+270,4,169,Mesenchyme_1_109,Brain_1_2,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+271,4,169,Mesenchyme_1_109,Brain_1_3,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+272,4,178,Mesenchyme_1_109,Brain_1_41,Mesenchyme_1_109 -> Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+273,4,195,Mesenchyme_1_109,Brain_1_18,Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+274,4,195,Mesenchyme_1_109,Cavity_1_43,Mesenchyme_1_109 -> Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+275,3,140,Mesenchyme_1_109,Neural crest_1_9,Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_9
+276,3,140,Mesenchyme_1_109,Neural crest_1_11,Mesenchyme_1_109 -> Neural crest_1_10 -> Neural crest_1_11
+277,9,334,Neural crest_1_10,Brain_1_12,Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+278,8,293,Neural crest_1_10,Brain_1_4,Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+279,7,228,Neural crest_1_10,Brain_1_12,Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+280,7,275,Neural crest_1_10,Brain_1_2,Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+281,7,275,Neural crest_1_10,Brain_1_3,Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+282,7,289,Neural crest_1_10,Brain_1_12,Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+283,6,187,Neural crest_1_10,Brain_1_4,Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+284,6,248,Neural crest_1_10,Brain_1_4,Neural crest_1_10 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+285,5,150,Neural crest_1_10,Brain_1_12,Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+286,5,169,Neural crest_1_10,Brain_1_2,Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+287,5,169,Neural crest_1_10,Brain_1_3,Neural crest_1_10 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+288,5,183,Neural crest_1_10,Brain_1_12,Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+289,4,109,Neural crest_1_10,Brain_1_4,Neural crest_1_10 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+290,4,142,Neural crest_1_10,Brain_1_4,Neural crest_1_10 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+291,4,207,Neural crest_1_10,Brain_1_17,Neural crest_1_10 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+292,3,91,Neural crest_1_10,Brain_1_2,Neural crest_1_10 -> Brain_1_5 -> Brain_1_2
+293,3,91,Neural crest_1_10,Brain_1_3,Neural crest_1_10 -> Brain_1_5 -> Brain_1_3
+294,3,100,Neural crest_1_10,Brain_1_41,Neural crest_1_10 -> Brain_1_20 -> Brain_1_41
+295,3,117,Neural crest_1_10,Brain_1_18,Neural crest_1_10 -> Notochord_1_21 -> Brain_1_18
+296,3,117,Neural crest_1_10,Cavity_1_43,Neural crest_1_10 -> Notochord_1_21 -> Cavity_1_43
+297,2,62,Neural crest_1_10,Neural crest_1_9,Neural crest_1_10 -> Neural crest_1_9
+298,2,62,Neural crest_1_10,Neural crest_1_11,Neural crest_1_10 -> Neural crest_1_11
+299,4,88,Brain_1_5,Brain_1_12,Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+300,3,47,Brain_1_5,Brain_1_4,Brain_1_5 -> Brain_1_7 -> Brain_1_4
+301,2,29,Brain_1_5,Brain_1_2,Brain_1_5 -> Brain_1_2
+302,2,29,Brain_1_5,Brain_1_3,Brain_1_5 -> Brain_1_3
+303,3,59,Brain_1_7,Brain_1_12,Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+304,2,18,Brain_1_7,Brain_1_4,Brain_1_7 -> Brain_1_4
+305,6,166,Brain_1_8,Brain_1_12,Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+306,5,125,Brain_1_8,Brain_1_4,Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+307,4,107,Brain_1_8,Brain_1_2,Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+308,4,107,Brain_1_8,Brain_1_3,Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+309,4,121,Brain_1_8,Brain_1_12,Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+310,3,80,Brain_1_8,Brain_1_4,Brain_1_8 -> Brain_1_7 -> Brain_1_4
+311,5,104,Brain_1_6,Brain_1_12,Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+312,4,63,Brain_1_6,Brain_1_4,Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+313,3,45,Brain_1_6,Brain_1_2,Brain_1_6 -> Brain_1_5 -> Brain_1_2
+314,3,45,Brain_1_6,Brain_1_3,Brain_1_6 -> Brain_1_5 -> Brain_1_3
+315,2,41,Neural crest_1_14,Brain_1_12,Neural crest_1_14 -> Brain_1_12
+316,12,537,Brain_1_26,Brain_1_12,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+317,11,496,Brain_1_26,Brain_1_4,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+318,10,478,Brain_1_26,Brain_1_2,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+319,10,478,Brain_1_26,Brain_1_3,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+320,10,492,Brain_1_26,Brain_1_12,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+321,9,451,Brain_1_26,Brain_1_4,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+322,6,303,Brain_1_26,Brain_1_41,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_41
+323,6,378,Brain_1_26,Brain_1_17,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+324,5,288,Brain_1_26,Brain_1_18,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Notochord_1_21 -> Brain_1_18
+325,5,288,Brain_1_26,Cavity_1_43,Brain_1_26 -> Brain_1_24 -> Notochord_1_23 -> Notochord_1_21 -> Cavity_1_43
+326,4,265,Brain_1_26,Notochord_1_52,Brain_1_26 -> Brain_1_24 -> Brain_1_25 -> Notochord_1_52
+327,11,390,Brain_1_24,Brain_1_12,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+328,10,349,Brain_1_24,Brain_1_4,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+329,9,331,Brain_1_24,Brain_1_2,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+330,9,331,Brain_1_24,Brain_1_3,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+331,9,345,Brain_1_24,Brain_1_12,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+332,8,304,Brain_1_24,Brain_1_4,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+333,5,156,Brain_1_24,Brain_1_41,Brain_1_24 -> Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_41
+334,5,231,Brain_1_24,Brain_1_17,Brain_1_24 -> Notochord_1_23 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+335,4,141,Brain_1_24,Brain_1_18,Brain_1_24 -> Notochord_1_23 -> Notochord_1_21 -> Brain_1_18
+336,4,141,Brain_1_24,Cavity_1_43,Brain_1_24 -> Notochord_1_23 -> Notochord_1_21 -> Cavity_1_43
+337,3,118,Brain_1_24,Notochord_1_52,Brain_1_24 -> Brain_1_25 -> Notochord_1_52
+338,10,332,Notochord_1_23,Brain_1_12,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+339,9,291,Notochord_1_23,Brain_1_4,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+340,8,273,Notochord_1_23,Brain_1_2,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+341,8,273,Notochord_1_23,Brain_1_3,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+342,8,287,Notochord_1_23,Brain_1_12,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+343,7,246,Notochord_1_23,Brain_1_4,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+344,4,98,Notochord_1_23,Brain_1_41,Notochord_1_23 -> Brain_1_22 -> Brain_1_20 -> Brain_1_41
+345,4,173,Notochord_1_23,Brain_1_17,Notochord_1_23 -> Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+346,3,83,Notochord_1_23,Brain_1_18,Notochord_1_23 -> Notochord_1_21 -> Brain_1_18
+347,3,83,Notochord_1_23,Cavity_1_43,Notochord_1_23 -> Notochord_1_21 -> Cavity_1_43
+348,9,304,Brain_1_22,Brain_1_12,Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+349,8,263,Brain_1_22,Brain_1_4,Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+350,7,245,Brain_1_22,Brain_1_2,Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+351,7,245,Brain_1_22,Brain_1_3,Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+352,7,259,Brain_1_22,Brain_1_12,Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+353,6,218,Brain_1_22,Brain_1_4,Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+354,3,70,Brain_1_22,Brain_1_41,Brain_1_22 -> Brain_1_20 -> Brain_1_41
+355,8,272,Brain_1_20,Brain_1_12,Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+356,7,231,Brain_1_20,Brain_1_4,Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+357,6,213,Brain_1_20,Brain_1_2,Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+358,6,213,Brain_1_20,Brain_1_3,Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+359,6,227,Brain_1_20,Brain_1_12,Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+360,5,186,Brain_1_20,Brain_1_4,Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+361,2,38,Brain_1_20,Brain_1_41,Brain_1_20 -> Brain_1_41
+362,7,234,Brain_1_16,Brain_1_12,Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+363,6,193,Brain_1_16,Brain_1_4,Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+364,5,175,Brain_1_16,Brain_1_2,Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+365,5,175,Brain_1_16,Brain_1_3,Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+366,5,189,Brain_1_16,Brain_1_12,Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+367,4,148,Brain_1_16,Brain_1_4,Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+368,3,145,Notochord_1_21,Brain_1_17,Notochord_1_21 -> Brain_1_19 -> Brain_1_17
+369,2,55,Notochord_1_21,Brain_1_18,Notochord_1_21 -> Brain_1_18
+370,2,55,Notochord_1_21,Cavity_1_43,Notochord_1_21 -> Cavity_1_43
+371,2,90,Brain_1_19,Brain_1_17,Brain_1_19 -> Brain_1_17
+372,2,60,Brain_1_25,Notochord_1_52,Brain_1_25 -> Notochord_1_52
+373,5,126,Cavity_1_35,Neural crest_1_60,Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+374,5,126,Cavity_1_35,Neural crest_1_61,Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+375,4,92,Cavity_1_35,Neural crest_1_58,Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+376,4,103,Neural crest_1_28,Neural crest_1_60,Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+377,4,103,Neural crest_1_28,Neural crest_1_61,Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+378,3,69,Neural crest_1_28,Neural crest_1_58,Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+379,3,54,Neural crest_1_57,Neural crest_1_60,Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+380,3,54,Neural crest_1_57,Neural crest_1_61,Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+381,2,20,Neural crest_1_57,Neural crest_1_58,Neural crest_1_57 -> Neural crest_1_58
+382,5,124,Neural crest_1_31,Neural crest_1_60,Neural crest_1_31 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+383,5,124,Neural crest_1_31,Neural crest_1_61,Neural crest_1_31 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+384,4,90,Neural crest_1_31,Neural crest_1_58,Neural crest_1_31 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+385,2,21,Neural crest_1_31,Neural crest_1_30,Neural crest_1_31 -> Neural crest_1_30
+386,11,447,Brain_1_55,Brain_1_12,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+387,10,406,Brain_1_55,Brain_1_4,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+388,9,348,Brain_1_55,Neural crest_1_60,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+389,9,348,Brain_1_55,Neural crest_1_61,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+390,9,388,Brain_1_55,Brain_1_2,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+391,9,388,Brain_1_55,Brain_1_3,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+392,9,402,Brain_1_55,Brain_1_12,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+393,8,314,Brain_1_55,Neural crest_1_58,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+394,8,361,Brain_1_55,Brain_1_4,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+395,6,244,Brain_1_55,Cavity_1_39,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Cavity_1_37 -> Cavity_1_39
+396,5,222,Brain_1_55,Cavity_1_34,Brain_1_55 -> Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_34
+397,3,93,Brain_1_55,Cavity_1_51,Brain_1_55 -> Brain_1_50 -> Cavity_1_51
+398,2,73,Brain_1_55,Brain_1_54,Brain_1_55 -> Brain_1_54
+399,10,374,Cavity_1_48,Brain_1_12,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+400,9,333,Cavity_1_48,Brain_1_4,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+401,8,275,Cavity_1_48,Neural crest_1_60,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+402,8,275,Cavity_1_48,Neural crest_1_61,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+403,8,315,Cavity_1_48,Brain_1_2,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+404,8,315,Cavity_1_48,Brain_1_3,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+405,8,329,Cavity_1_48,Brain_1_12,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+406,7,241,Cavity_1_48,Neural crest_1_58,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+407,7,288,Cavity_1_48,Brain_1_4,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+408,5,171,Cavity_1_48,Cavity_1_39,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_33 -> Cavity_1_37 -> Cavity_1_39
+409,4,149,Cavity_1_48,Cavity_1_34,Cavity_1_48 -> Cavity_1_49 -> Cavity_1_32 -> Cavity_1_34
+410,9,300,Cavity_1_49,Brain_1_12,Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+411,8,259,Cavity_1_49,Brain_1_4,Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+412,7,201,Cavity_1_49,Neural crest_1_60,Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+413,7,201,Cavity_1_49,Neural crest_1_61,Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+414,7,241,Cavity_1_49,Brain_1_2,Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+415,7,241,Cavity_1_49,Brain_1_3,Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+416,7,255,Cavity_1_49,Brain_1_12,Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+417,6,167,Cavity_1_49,Neural crest_1_58,Cavity_1_49 -> Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+418,6,214,Cavity_1_49,Brain_1_4,Cavity_1_49 -> Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+419,4,97,Cavity_1_49,Cavity_1_39,Cavity_1_49 -> Cavity_1_33 -> Cavity_1_37 -> Cavity_1_39
+420,3,75,Cavity_1_49,Cavity_1_34,Cavity_1_49 -> Cavity_1_32 -> Cavity_1_34
+421,6,156,Cavity_1_32,Neural crest_1_60,Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_60
+422,6,156,Cavity_1_32,Neural crest_1_61,Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_59 -> Neural crest_1_61
+423,5,122,Cavity_1_32,Neural crest_1_58,Cavity_1_32 -> Cavity_1_35 -> Neural crest_1_28 -> Neural crest_1_57 -> Neural crest_1_58
+424,2,30,Cavity_1_32,Cavity_1_34,Cavity_1_32 -> Cavity_1_34
+425,8,255,Cavity_1_33,Brain_1_12,Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+426,7,214,Cavity_1_33,Brain_1_4,Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+427,6,196,Cavity_1_33,Brain_1_2,Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+428,6,196,Cavity_1_33,Brain_1_3,Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+429,6,210,Cavity_1_33,Brain_1_12,Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+430,5,169,Cavity_1_33,Brain_1_4,Cavity_1_33 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+431,3,52,Cavity_1_33,Cavity_1_39,Cavity_1_33 -> Cavity_1_37 -> Cavity_1_39
+432,2,31,Cavity_1_37,Cavity_1_39,Cavity_1_37 -> Cavity_1_39
+433,12,351,Cavity_1_40,Brain_1_12,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+434,11,310,Cavity_1_40,Brain_1_4,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+435,10,292,Cavity_1_40,Brain_1_2,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+436,10,292,Cavity_1_40,Brain_1_3,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+437,10,306,Cavity_1_40,Brain_1_12,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+438,9,265,Cavity_1_40,Brain_1_4,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+439,6,117,Cavity_1_40,Brain_1_41,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_41
+440,4,41,Cavity_1_40,Cavity_1_85,Cavity_1_40 -> Cavity_1_81 -> Cavity_1_83 -> Cavity_1_85
+441,3,28,Cavity_1_40,Cavity_1_44,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_44
+442,3,28,Cavity_1_40,Cavity_1_46,Cavity_1_40 -> Cavity_1_47 -> Cavity_1_46
+443,3,32,Cavity_1_40,Cavity_1_82,Cavity_1_40 -> Cavity_1_81 -> Cavity_1_82
+444,2,14,Cavity_1_40,Cavity_1_80,Cavity_1_40 -> Cavity_1_80
+445,11,337,Cavity_1_47,Brain_1_12,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+446,10,296,Cavity_1_47,Brain_1_4,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+447,9,278,Cavity_1_47,Brain_1_2,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+448,9,278,Cavity_1_47,Brain_1_3,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+449,9,292,Cavity_1_47,Brain_1_12,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+450,8,251,Cavity_1_47,Brain_1_4,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+451,5,103,Cavity_1_47,Brain_1_41,Cavity_1_47 -> Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_41
+452,2,14,Cavity_1_47,Cavity_1_44,Cavity_1_47 -> Cavity_1_44
+453,2,14,Cavity_1_47,Cavity_1_46,Cavity_1_47 -> Cavity_1_46
+454,10,323,Cavity_1_45,Brain_1_12,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+455,9,282,Cavity_1_45,Brain_1_4,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_7 -> Brain_1_4
+456,8,264,Cavity_1_45,Brain_1_2,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_2
+457,8,264,Cavity_1_45,Brain_1_3,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_6 -> Brain_1_5 -> Brain_1_3
+458,8,278,Cavity_1_45,Brain_1_12,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Neural crest_1_14 -> Brain_1_12
+459,7,237,Cavity_1_45,Brain_1_4,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_16 -> Brain_1_8 -> Brain_1_7 -> Brain_1_4
+460,4,89,Cavity_1_45,Brain_1_41,Cavity_1_45 -> Brain_1_22 -> Brain_1_20 -> Brain_1_41
+461,2,20,Brain_1_50,Cavity_1_51,Brain_1_50 -> Cavity_1_51
+462,2,34,Neural crest_1_59,Neural crest_1_60,Neural crest_1_59 -> Neural crest_1_60
+463,2,34,Neural crest_1_59,Neural crest_1_61,Neural crest_1_59 -> Neural crest_1_61
+464,4,98,Neural crest_1_68,Branchial arch_1_65,Neural crest_1_68 -> Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_65
+465,4,98,Neural crest_1_68,Branchial arch_1_66,Neural crest_1_68 -> Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_66
+466,4,98,Neural crest_1_68,Branchial arch_1_67,Neural crest_1_68 -> Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_67
+467,3,41,Neural crest_1_102,Branchial arch_1_65,Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_65
+468,3,41,Neural crest_1_102,Branchial arch_1_66,Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_66
+469,3,41,Neural crest_1_102,Branchial arch_1_67,Neural crest_1_102 -> Branchial arch_1_64 -> Branchial arch_1_67
+470,2,16,Branchial arch_1_64,Branchial arch_1_65,Branchial arch_1_64 -> Branchial arch_1_65
+471,2,16,Branchial arch_1_64,Branchial arch_1_66,Branchial arch_1_64 -> Branchial arch_1_66
+472,2,16,Branchial arch_1_64,Branchial arch_1_67,Branchial arch_1_64 -> Branchial arch_1_67
+473,9,331,AGM_1_118,Heart_1_72,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+474,9,376,AGM_1_118,Heart_1_74,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+475,8,260,AGM_1_118,Cavity_1_77,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+476,7,228,AGM_1_118,Cavity_1_79,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+477,6,187,AGM_1_118,Mesenchyme_1_124,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+478,6,187,AGM_1_118,Connective tissue_1_126,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+479,4,132,AGM_1_118,Connective tissue_1_120,AGM_1_118 -> AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+480,8,277,AGM_1_117,Heart_1_72,AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+481,8,322,AGM_1_117,Heart_1_74,AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+482,7,206,AGM_1_117,Cavity_1_77,AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+483,6,174,AGM_1_117,Cavity_1_79,AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+484,5,133,AGM_1_117,Mesenchyme_1_124,AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+485,5,133,AGM_1_117,Connective tissue_1_126,AGM_1_117 -> AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+486,3,78,AGM_1_117,Connective tissue_1_120,AGM_1_117 -> AGM_1_116 -> Connective tissue_1_120
+487,7,230,AGM_1_116,Heart_1_72,AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+488,7,275,AGM_1_116,Heart_1_74,AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+489,6,159,AGM_1_116,Cavity_1_77,AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+490,5,127,AGM_1_116,Cavity_1_79,AGM_1_116 -> AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+491,4,86,AGM_1_116,Mesenchyme_1_124,AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+492,4,86,AGM_1_116,Connective tissue_1_126,AGM_1_116 -> AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+493,2,31,AGM_1_116,Connective tissue_1_120,AGM_1_116 -> Connective tissue_1_120
+494,6,199,AGM_1_121,Heart_1_72,AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+495,6,244,AGM_1_121,Heart_1_74,AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+496,5,128,AGM_1_121,Cavity_1_77,AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+497,4,96,AGM_1_121,Cavity_1_79,AGM_1_121 -> AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+498,3,55,AGM_1_121,Mesenchyme_1_124,AGM_1_121 -> Connective tissue_1_122 -> Mesenchyme_1_124
+499,3,55,AGM_1_121,Connective tissue_1_126,AGM_1_121 -> Connective tissue_1_122 -> Connective tissue_1_126
+500,5,190,AGM_1_123,Heart_1_72,AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+501,5,235,AGM_1_123,Heart_1_74,AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+502,4,119,AGM_1_123,Cavity_1_77,AGM_1_123 -> Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+503,3,87,AGM_1_123,Cavity_1_79,AGM_1_123 -> Cavity_1_78 -> Cavity_1_79
+504,4,153,Cavity_1_78,Heart_1_72,Cavity_1_78 -> Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+505,4,198,Cavity_1_78,Heart_1_74,Cavity_1_78 -> Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+506,3,82,Cavity_1_78,Cavity_1_77,Cavity_1_78 -> Cavity_1_76 -> Cavity_1_77
+507,2,50,Cavity_1_78,Cavity_1_79,Cavity_1_78 -> Cavity_1_79
+508,3,103,Cavity_1_76,Heart_1_72,Cavity_1_76 -> Heart_1_73 -> Heart_1_72
+509,3,148,Cavity_1_76,Heart_1_74,Cavity_1_76 -> Heart_1_75 -> Heart_1_74
+510,2,32,Cavity_1_76,Cavity_1_77,Cavity_1_76 -> Cavity_1_77
+511,2,71,Heart_1_73,Heart_1_72,Heart_1_73 -> Heart_1_72
+512,2,116,Heart_1_75,Heart_1_74,Heart_1_75 -> Heart_1_74
+513,3,27,Cavity_1_81,Cavity_1_85,Cavity_1_81 -> Cavity_1_83 -> Cavity_1_85
+514,2,18,Cavity_1_81,Cavity_1_82,Cavity_1_81 -> Cavity_1_82
+515,2,9,Cavity_1_83,Cavity_1_85,Cavity_1_83 -> Cavity_1_85
+516,2,11,Cavity_1_88,Mesenchyme_1_91,Cavity_1_88 -> Mesenchyme_1_91
+517,3,20,Cavity_1_90,Mesenchyme_1_94,Cavity_1_90 -> Mesenchyme_1_95 -> Mesenchyme_1_94
+518,2,6,Mesenchyme_1_95,Mesenchyme_1_94,Mesenchyme_1_95 -> Mesenchyme_1_94
+519,3,110,AGM_1_98,AGM_1_119,AGM_1_98 -> AGM_1_99 -> AGM_1_119
+520,2,70,AGM_1_99,AGM_1_119,AGM_1_99 -> AGM_1_119
+521,2,14,Mesenchyme_1_106,Neural crest_1_110,Mesenchyme_1_106 -> Neural crest_1_110
+522,2,29,Dermomyotome_1_115,Dermomyotome_1_114,Dermomyotome_1_115 -> Dermomyotome_1_114
+523,2,46,Connective tissue_1_122,Mesenchyme_1_124,Connective tissue_1_122 -> Mesenchyme_1_124
+524,2,46,Connective tissue_1_122,Connective tissue_1_126,Connective tissue_1_122 -> Connective tissue_1_126

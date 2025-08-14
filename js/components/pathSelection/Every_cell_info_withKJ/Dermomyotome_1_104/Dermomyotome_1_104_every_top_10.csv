@@ -1,0 +1,161 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,IGF2_IGF1R,Dermomyotome,IGF2,IGF1R,1.689,0.0
+AGM,发送,2,IGF2_IGF2R,Dermomyotome,IGF2,IGF2R,1.664,0.0
+AGM,发送,3,DLK1_NOTCH2,Dermomyotome,DLK1,NOTCH2,1.31,0.0
+AGM,发送,4,DLK1_NOTCH3,Dermomyotome,DLK1,NOTCH3,1.305,0.0
+AGM,发送,5,DLK1_NOTCH1,Dermomyotome,DLK1,NOTCH1,1.267,0.0
+AGM,发送,6,CADM1_CADM1,Dermomyotome,CADM1,CADM1,0.978,0.0
+AGM,发送,7,CADM1_NECTIN3,Dermomyotome,CADM1,NECTIN3,0.827,0.0
+AGM,发送,8,PDGFC_PDGFRA,Dermomyotome,PDGFC,PDGFRA,0.707,0.0
+AGM,发送,9,NTN1_UNC5C,Dermomyotome,NTN1,UNC5C,0.618,0.0
+AGM,发送,10,COL4A1_integrin_a1b1_complex,Dermomyotome,COL4A1,integrin,0.565,0.0
+AGM,接收,1,FGF10_FGFR2,Dermomyotome,FGFR2,FGF10,1.176,0.0
+AGM,接收,2,PPIA_BSG,Dermomyotome,BSG,PPIA,1.143,0.022
+AGM,接收,3,CADM1_CADM1,Dermomyotome,CADM1,CADM1,0.978,0.0
+AGM,接收,4,CADM1_NECTIN3,Dermomyotome,NECTIN3,CADM1,0.778,0.022
+AGM,接收,5,COL3A1_integrin_a11b1_complex,Dermomyotome,integrin,COL3A1,0.702,0.036
+AGM,接收,6,TENM3_ADGRL2,Dermomyotome,ADGRL2,TENM3,0.647,0.018
+AGM,接收,7,NECTIN2_NECTIN3,Dermomyotome,NECTIN3,NECTIN2,0.643,0.0
+AGM,接收,8,FLRT3_ADGRL2,Dermomyotome,ADGRL2,FLRT3,0.634,0.0
+AGM,接收,9,TENM4_ADGRL2,Dermomyotome,ADGRL2,TENM4,0.618,0.0
+AGM,接收,10,EFNA5_EPHA3,Dermomyotome,EPHA3,EFNA5,0.593,0.0
+Brain,发送,1,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.712,0.008
+Brain,发送,2,2arachidonoylglycerol_byDAGLB_CNR1,Dermomyotome,2arachidonoylglycerol,byDAGLB,1.486,0.003
+Brain,发送,3,SLIT2_ROBO2,Dermomyotome,SLIT2,ROBO2,1.252,0.011
+Brain,发送,4,APLP2_PLXNA4,Dermomyotome,APLP2,PLXNA4,1.036,0.011
+Brain,发送,5,APP_PLXNA4,Dermomyotome,APP,PLXNA4,1.029,0.009
+Brain,发送,6,CDH2_CDH2,Dermomyotome,CDH2,CDH2,1.017,0.043
+Brain,发送,7,WNT16_SFRP1,Dermomyotome,WNT16,SFRP1,0.991,0.034
+Brain,发送,8,WNT5B_SFRP1,Dermomyotome,WNT5B,SFRP1,0.965,0.048
+Brain,发送,9,WNT16_FZD4_LRP5,Dermomyotome,WNT16,FZD4,0.51,0.014
+Brain,发送,10,WNT16_FZD3_LRP5,Dermomyotome,WNT16,FZD3,0.51,0.036
+Brain,接收,1,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.712,0.008
+Brain,接收,2,CADM1_NECTIN3,Dermomyotome,NECTIN3,CADM1,1.512,0.009
+Brain,接收,3,DLL3_NOTCH2,Dermomyotome,NOTCH2,DLL3,1.327,0.0
+Brain,接收,4,APP_FPR2,Dermomyotome,FPR2,APP,1.275,0.018
+Brain,接收,5,DLL3_NOTCH1,Dermomyotome,NOTCH1,DLL3,1.249,0.002
+Brain,接收,6,DLL3_NOTCH3,Dermomyotome,NOTCH3,DLL3,1.232,0.005
+Brain,接收,7,APP_TNFRSF21,Dermomyotome,TNFRSF21,APP,1.176,0.02
+Brain,接收,8,SLIT2_ROBO1,Dermomyotome,ROBO1,SLIT2,1.153,0.028
+Brain,接收,9,CDH2_CDH2,Dermomyotome,CDH2,CDH2,1.017,0.043
+Brain,接收,10,TF_TFRC,Dermomyotome,TFRC,TF,0.844,0.015
+Connective tissue,发送,1,IGF2_IGF2R,Dermomyotome,IGF2,IGF2R,2.005,0.018
+Connective tissue,发送,2,PPIA_BSG,Dermomyotome,PPIA,BSG,1.643,0.002
+Connective tissue,发送,3,PDGFC_PDGFRA,Dermomyotome,PDGFC,PDGFRA,1.025,0.012
+Connective tissue,发送,4,PDGFA_PDGFRA,Dermomyotome,PDGFA,PDGFRA,0.808,0.03
+Connective tissue,发送,5,NTN1_UNC5B,Dermomyotome,NTN1,UNC5B,0.58,0.045
+Connective tissue,发送,6,LRPAP1_SORT1,Dermomyotome,LRPAP1,SORT1,0.576,0.031
+Connective tissue,发送,7,NECTIN3_PVR,Dermomyotome,NECTIN3,PVR,0.549,0.016
+Connective tissue,发送,8,MSTN_TGFR_AVR2B,Dermomyotome,MSTN,TGFR,0.539,0.015
+Connective tissue,发送,9,BDNF_SORT1,Dermomyotome,BDNF,SORT1,0.53,0.021
+Connective tissue,发送,10,EFNA5_EPHA1,Dermomyotome,EFNA5,EPHA1,0.466,0.016
+Connective tissue,接收,1,IGF2_IGF2R,Dermomyotome,IGF2R,IGF2,1.901,0.021
+Connective tissue,接收,2,IGF2_IGF1R,Dermomyotome,IGF1R,IGF2,1.848,0.031
+Connective tissue,接收,3,DLK1_NOTCH2,Dermomyotome,NOTCH2,DLK1,1.591,0.033
+Connective tissue,接收,4,DLK1_NOTCH1,Dermomyotome,NOTCH1,DLK1,1.513,0.047
+Connective tissue,接收,5,COL1A2_integrin_a11b1_complex,Dermomyotome,integrin,COL1A2,1.388,0.0
+Connective tissue,接收,6,FN1_integrin_aVb1_complex,Dermomyotome,integrin,FN1,1.203,0.011
+Connective tissue,接收,7,FN1_integrin_aVb5_complex,Dermomyotome,integrin,FN1,1.203,0.01
+Connective tissue,接收,8,COL3A1_integrin_a11b1_complex,Dermomyotome,integrin,COL3A1,1.188,0.002
+Connective tissue,接收,9,FN1_integrin_a3b1_complex,Dermomyotome,integrin,FN1,1.184,0.004
+Connective tissue,接收,10,COL18A1_integrin_a11b1_complex,Dermomyotome,integrin,COL18A1,1.177,0.012
+Dermomyotome,发送,1,IGF2_IGF2R,Dermomyotome,IGF2,IGF2R,1.68,0.0
+Dermomyotome,发送,2,IGF2_IGF1R,Dermomyotome,IGF2,IGF1R,1.627,0.0
+Dermomyotome,发送,3,DLK1_NOTCH2,Dermomyotome,DLK1,NOTCH2,1.394,0.0
+Dermomyotome,发送,4,DLK1_NOTCH1,Dermomyotome,DLK1,NOTCH1,1.317,0.0
+Dermomyotome,发送,5,DLK1_NOTCH3,Dermomyotome,DLK1,NOTCH3,1.3,0.0
+Dermomyotome,发送,6,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.207,0.0
+Dermomyotome,发送,7,PPIA_BSG,Dermomyotome,PPIA,BSG,1.146,0.032
+Dermomyotome,发送,8,CADM1_NECTIN3,Dermomyotome,CADM1,NECTIN3,1.006,0.0
+Dermomyotome,发送,9,TENM3_ADGRL2,Dermomyotome,TENM3,ADGRL2,0.703,0.0
+Dermomyotome,发送,10,PDGFC_PDGFRA,Dermomyotome,PDGFC,PDGFRA,0.639,0.008
+Dermomyotome,接收,1,IGF2_IGF2R,Dermomyotome,IGF2R,IGF2,1.68,0.0
+Dermomyotome,接收,2,IGF2_IGF1R,Dermomyotome,IGF1R,IGF2,1.627,0.0
+Dermomyotome,接收,3,DLK1_NOTCH2,Dermomyotome,NOTCH2,DLK1,1.394,0.0
+Dermomyotome,接收,4,DLK1_NOTCH1,Dermomyotome,NOTCH1,DLK1,1.317,0.0
+Dermomyotome,接收,5,DLK1_NOTCH3,Dermomyotome,NOTCH3,DLK1,1.3,0.0
+Dermomyotome,接收,6,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.207,0.0
+Dermomyotome,接收,7,PPIA_BSG,Dermomyotome,BSG,PPIA,1.146,0.032
+Dermomyotome,接收,8,CADM1_NECTIN3,Dermomyotome,NECTIN3,CADM1,1.006,0.0
+Dermomyotome,接收,9,TENM3_ADGRL2,Dermomyotome,ADGRL2,TENM3,0.703,0.0
+Dermomyotome,接收,10,PDGFC_PDGFRA,Dermomyotome,PDGFRA,PDGFC,0.639,0.008
+Dermomyotome_1_104_Target,发送,1,DLK1_NOTCH2,Dermomyotome,DLK1,NOTCH2,1.407,0.0
+Dermomyotome_1_104_Target,发送,2,DLK1_NOTCH3,Dermomyotome,DLK1,NOTCH3,1.4,0.0
+Dermomyotome_1_104_Target,发送,3,MDK_PTPRZ1,Dermomyotome,MDK,PTPRZ1,1.372,0.012
+Dermomyotome_1_104_Target,发送,4,DLK1_NOTCH1,Dermomyotome,DLK1,NOTCH1,1.317,0.001
+Dermomyotome_1_104_Target,发送,5,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.158,0.0
+Dermomyotome_1_104_Target,发送,6,CADM1_NECTIN3,Dermomyotome,CADM1,NECTIN3,0.938,0.0
+Dermomyotome_1_104_Target,发送,7,PDGFC_PDGFRA,Dermomyotome,PDGFC,PDGFRA,0.762,0.0
+Dermomyotome_1_104_Target,发送,8,TENM3_ADGRL2,Dermomyotome,TENM3,ADGRL2,0.733,0.018
+Dermomyotome_1_104_Target,发送,9,TENM4_ADGRL2,Dermomyotome,TENM4,ADGRL2,0.64,0.02
+Dermomyotome_1_104_Target,发送,10,NCAM1_FGFR1,Dermomyotome,NCAM1,FGFR1,0.615,0.0
+Dermomyotome_1_104_Target,接收,1,IGF2_IGF2R,Dermomyotome,IGF2R,IGF2,1.672,0.027
+Dermomyotome_1_104_Target,接收,2,IGF2_IGF1R,Dermomyotome,IGF1R,IGF2,1.619,0.039
+Dermomyotome_1_104_Target,接收,3,DLK1_NOTCH2,Dermomyotome,NOTCH2,DLK1,1.487,0.0
+Dermomyotome_1_104_Target,接收,4,DLK1_NOTCH1,Dermomyotome,NOTCH1,DLK1,1.41,0.0
+Dermomyotome_1_104_Target,接收,5,DLK1_NOTCH3,Dermomyotome,NOTCH3,DLK1,1.392,0.0
+Dermomyotome_1_104_Target,接收,6,PPIA_BSG,Dermomyotome,BSG,PPIA,1.227,0.007
+Dermomyotome_1_104_Target,接收,7,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.158,0.0
+Dermomyotome_1_104_Target,接收,8,FGF2_FGFR2,Dermomyotome,FGFR2,FGF2,1.118,0.005
+Dermomyotome_1_104_Target,接收,9,CADM1_NECTIN3,Dermomyotome,NECTIN3,CADM1,0.958,0.0
+Dermomyotome_1_104_Target,接收,10,COL4A1_integrin_a11b1_complex,Dermomyotome,integrin,COL4A1,0.657,0.004
+Liver,发送,1,DLK1_NOTCH2,Dermomyotome,DLK1,NOTCH2,1.511,0.002
+Liver,发送,2,DLK1_NOTCH3,Dermomyotome,DLK1,NOTCH3,1.474,0.001
+Liver,发送,3,PPIA_BSG,Dermomyotome,PPIA,BSG,1.429,0.005
+Liver,发送,4,DLK1_NOTCH1,Dermomyotome,DLK1,NOTCH1,1.417,0.003
+Liver,发送,5,MDK_ALK,Dermomyotome,MDK,ALK,1.38,0.037
+Liver,发送,6,2arachidonoylglycerol_byDAGLB_CNR1,Dermomyotome,2arachidonoylglycerol,byDAGLB,0.946,0.006
+Liver,发送,7,LRFN4_PTPRF,Dermomyotome,LRFN4,PTPRF,0.918,0.005
+Liver,发送,8,NCAM1_AGRN,Dermomyotome,NCAM1,AGRN,0.721,0.001
+Liver,发送,9,LAMC1_integrin_a6b1_complex,Dermomyotome,LAMC1,integrin,0.623,0.007
+Liver,发送,10,COL4A1_integrin_a1b1_complex,Dermomyotome,COL4A1,integrin,0.583,0.023
+Liver,接收,1,FN1_integrin_a3b1_complex,Dermomyotome,integrin,FN1,0.89,0.042
+Liver,接收,2,FN1_integrin_a4b1_complex,Dermomyotome,integrin,FN1,0.857,0.041
+Liver,接收,3,AGRN_PTPRS,Dermomyotome,PTPRS,AGRN,0.747,0.004
+Liver,接收,4,COL4A1_integrin_a11b1_complex,Dermomyotome,integrin,COL4A1,0.712,0.045
+Liver,接收,5,FLRT3_ADGRL2,Dermomyotome,ADGRL2,FLRT3,0.65,0.049
+Liver,接收,6,EFNA5_EPHA3,Dermomyotome,EPHA3,EFNA5,0.645,0.039
+Liver,接收,7,RBP4_STRA6,Dermomyotome,STRA6,RBP4,0.59,0.0
+Liver,接收,8,CDH6_CDH6,Dermomyotome,CDH6,CDH6,0.551,0.001
+Liver,接收,9,LRPAP1_SORT1,Dermomyotome,SORT1,LRPAP1,0.525,0.001
+Liver,接收,10,EFNA4_EPHA3,Dermomyotome,EPHA3,EFNA4,0.52,0.005
+Mesenchyme,发送,1,IGF2_IGF2R,Dermomyotome,IGF2,IGF2R,1.648,0.002
+Mesenchyme,发送,2,DLK1_NOTCH2,Dermomyotome,DLK1,NOTCH2,1.351,0.0
+Mesenchyme,发送,3,DLK1_NOTCH3,Dermomyotome,DLK1,NOTCH3,1.332,0.0
+Mesenchyme,发送,4,DLK1_NOTCH1,Dermomyotome,DLK1,NOTCH1,1.292,0.0
+Mesenchyme,发送,5,PPIA_BSG,Dermomyotome,PPIA,BSG,1.17,0.004
+Mesenchyme,发送,6,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.026,0.0
+Mesenchyme,发送,7,CADM1_NECTIN3,Dermomyotome,CADM1,NECTIN3,0.85,0.0
+Mesenchyme,发送,8,LRFN4_PTPRF,Dermomyotome,LRFN4,PTPRF,0.693,0.0
+Mesenchyme,发送,9,PDGFC_PDGFRA,Dermomyotome,PDGFC,PDGFRA,0.63,0.004
+Mesenchyme,发送,10,COL4A1_integrin_a11b1_complex,Dermomyotome,COL4A1,integrin,0.569,0.001
+Mesenchyme,接收,1,DLK1_NOTCH2,Dermomyotome,NOTCH2,DLK1,1.391,0.0
+Mesenchyme,接收,2,DLK1_NOTCH1,Dermomyotome,NOTCH1,DLK1,1.314,0.0
+Mesenchyme,接收,3,DLK1_NOTCH3,Dermomyotome,NOTCH3,DLK1,1.297,0.0
+Mesenchyme,接收,4,PPIA_BSG,Dermomyotome,BSG,PPIA,1.138,0.036
+Mesenchyme,接收,5,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.026,0.0
+Mesenchyme,接收,6,CADM1_NECTIN3,Dermomyotome,NECTIN3,CADM1,0.826,0.0
+Mesenchyme,接收,7,COL18A1_integrin_a11b1_complex,Dermomyotome,integrin,COL18A1,0.777,0.0
+Mesenchyme,接收,8,COL3A1_integrin_a11b1_complex,Dermomyotome,integrin,COL3A1,0.714,0.016
+Mesenchyme,接收,9,NECTIN2_NECTIN3,Dermomyotome,NECTIN3,NECTIN2,0.604,0.0
+Mesenchyme,接收,10,COL1A2_integrin_a11b1_complex,Dermomyotome,integrin,COL1A2,0.587,0.0
+Sclerotome,发送,1,IGF2_IGF2R,Dermomyotome,IGF2,IGF2R,1.784,0.0
+Sclerotome,发送,2,IGF2_IGF1R,Dermomyotome,IGF2,IGF1R,1.711,0.0
+Sclerotome,发送,3,DLK1_NOTCH1,Dermomyotome,DLK1,NOTCH1,1.415,0.0
+Sclerotome,发送,4,DLK1_NOTCH2,Dermomyotome,DLK1,NOTCH2,1.378,0.0
+Sclerotome,发送,5,DLK1_NOTCH3,Dermomyotome,DLK1,NOTCH3,1.314,0.0
+Sclerotome,发送,6,PPIA_BSG,Dermomyotome,PPIA,BSG,1.155,0.033
+Sclerotome,发送,7,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.05,0.0
+Sclerotome,发送,8,CADM1_NECTIN3,Dermomyotome,CADM1,NECTIN3,0.941,0.0
+Sclerotome,发送,9,MPZL1_MPZL1,Dermomyotome,MPZL1,MPZL1,0.839,0.004
+Sclerotome,发送,10,PDGFC_PDGFRA,Dermomyotome,PDGFC,PDGFRA,0.79,0.0
+Sclerotome,接收,1,IGF2_IGF2R,Dermomyotome,IGF2R,IGF2,1.705,0.0
+Sclerotome,接收,2,IGF2_IGF1R,Dermomyotome,IGF1R,IGF2,1.652,0.0
+Sclerotome,接收,3,CADM1_CADM1,Dermomyotome,CADM1,CADM1,1.05,0.0
+Sclerotome,接收,4,TENM3_ADGRL2,Dermomyotome,ADGRL2,TENM3,0.937,0.0
+Sclerotome,接收,5,FN1_integrin_aVb1_complex,Dermomyotome,integrin,FN1,0.902,0.0
+Sclerotome,接收,6,FN1_integrin_aVb5_complex,Dermomyotome,integrin,FN1,0.902,0.0
+Sclerotome,接收,7,FN1_integrin_a3b1_complex,Dermomyotome,integrin,FN1,0.883,0.0
+Sclerotome,接收,8,FN1_integrin_a4b1_complex,Dermomyotome,integrin,FN1,0.85,0.0
+Sclerotome,接收,9,COL3A1_integrin_a11b1_complex,Dermomyotome,integrin,COL3A1,0.85,0.0
+Sclerotome,接收,10,CADM1_NECTIN3,Dermomyotome,NECTIN3,CADM1,0.85,0.0

@@ -1,0 +1,6 @@
+cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
+AGM,single_cluster,54,99.9,157.8,10.9,4.82
+Cavity,single_cluster,57,90.4,163.8,2.2,13.38
+Connective tissue,target,24,89.7,161.7,0.0,0.0
+Dermomyotome,single_cluster,83,98.0,154.0,11.3,6.85
+Mesenchyme,single_cluster,37,91.1,159.4,2.6,14.48

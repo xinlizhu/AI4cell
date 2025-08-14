@@ -1,0 +1,49 @@
+start,end,path_num,path_length
+AGM,AGM,2,2.5
+AGM,Cavity,10,5.5
+AGM,Connective tissue,7,3.86
+AGM,Heart,10,7.0
+AGM,Mesenchyme,4,4.5
+Brain,Brain,62,6.21
+Brain,Cavity,6,4.17
+Brain,Neural crest,3,8.67
+Brain,Notochord,3,3.0
+Branchial arch,Brain,19,8.32
+Branchial arch,Branchial arch,3,2.0
+Branchial arch,Cavity,1,6.0
+Branchial arch,Mesenchyme,1,3.0
+Branchial arch,Neural crest,3,4.33
+Cavity,Brain,39,8.08
+Cavity,Cavity,20,2.8
+Cavity,Heart,4,3.5
+Cavity,Mesenchyme,2,2.5
+Cavity,Neural crest,12,6.17
+Connective tissue,Connective tissue,1,2.0
+Connective tissue,Mesenchyme,1,2.0
+Dermomyotome,Brain,38,9.82
+Dermomyotome,Cavity,2,7.5
+Dermomyotome,Dermomyotome,2,2.5
+Dermomyotome,Mesenchyme,2,4.5
+Dermomyotome,Neural crest,6,5.83
+Heart,Heart,2,2.0
+Mesenchyme,Brain,38,6.82
+Mesenchyme,Cavity,2,4.5
+Mesenchyme,Mesenchyme,2,2.0
+Mesenchyme,Neural crest,5,3.2
+Neural crest,Brain,48,10.21
+Neural crest,Branchial arch,9,4.0
+Neural crest,Cavity,7,10.86
+Neural crest,Connective tissue,4,9.5
+Neural crest,Dermomyotome,2,7.5
+Neural crest,Heart,4,13.5
+Neural crest,Mesenchyme,4,10.0
+Neural crest,Neural crest,27,5.89
+Notochord,Brain,11,6.0
+Notochord,Cavity,2,2.5
+Sclerotome,Brain,55,12.15
+Sclerotome,Cavity,9,9.67
+Sclerotome,Connective tissue,6,7.0
+Sclerotome,Dermomyotome,3,5.0
+Sclerotome,Heart,6,11.0
+Sclerotome,Mesenchyme,6,7.5
+Sclerotome,Neural crest,10,9.0

@@ -1,0 +1,161 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,IGF2_IGF1R,Heart,IGF2,IGF1R,2.009,0.0
+AGM,发送,2,FN1_integrin_a8b1_complex,Heart,FN1,integrin,1.236,0.0
+AGM,发送,3,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.234,0.0
+AGM,发送,4,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.194,0.0
+AGM,发送,5,FN1_integrin_a3b1_complex,Heart,FN1,integrin,1.154,0.0
+AGM,发送,6,COL2A1_integrin_a1b1_complex,Heart,COL2A1,integrin,0.896,0.0
+AGM,发送,7,MPZL1_MPZL1,Heart,MPZL1,MPZL1,0.817,0.0
+AGM,发送,8,BMP4_BMPR1A_BMPR2,Heart,BMP4,BMPR1A,0.754,0.0
+AGM,发送,9,DAG1_NRXN3,Heart,DAG1,NRXN3,0.715,0.0
+AGM,发送,10,SLIT2_ROBO1,Heart,SLIT2,ROBO1,0.676,0.0
+AGM,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.36,0.0
+AGM,接收,2,PPIA_BSG,Heart,BSG,PPIA,1.338,0.0
+AGM,接收,3,COL3A1_integrin_a1b1_complex,Heart,integrin,COL3A1,1.19,0.0
+AGM,接收,4,COL3A1_ADGRG1,Heart,ADGRG1,COL3A1,0.998,0.0
+AGM,接收,5,MPZL1_MPZL1,Heart,MPZL1,MPZL1,0.817,0.0
+AGM,接收,6,NRG3_ERBB4,Heart,ERBB4,NRG3,0.756,0.0
+AGM,接收,7,LAMC1_integrin_a6b1_complex,Heart,integrin,LAMC1,0.735,0.01
+AGM,接收,8,COL4A1_integrin_a1b1_complex,Heart,integrin,COL4A1,0.719,0.0
+AGM,接收,9,NRG2_ERBB4,Heart,ERBB4,NRG2,0.693,0.0
+AGM,接收,10,LRFN4_PTPRF,Heart,PTPRF,LRFN4,0.677,0.001
+Branchial arch,发送,1,IGF2_IGF2R,Heart,IGF2,IGF2R,2.357,0.003
+Branchial arch,发送,2,IGF2_IGF1R,Heart,IGF2,IGF1R,2.093,0.0
+Branchial arch,发送,3,FN1_integrin_a3b1_complex,Heart,FN1,integrin,1.329,0.0
+Branchial arch,发送,4,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.252,0.0
+Branchial arch,发送,5,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.252,0.003
+Branchial arch,发送,6,FN1_integrin_aVb3_complex,Heart,FN1,integrin,1.155,0.0
+Branchial arch,发送,7,FN1_integrin_a8b1_complex,Heart,FN1,integrin,1.153,0.0
+Branchial arch,发送,8,FN1_integrin_a4b1_complex,Heart,FN1,integrin,1.148,0.0
+Branchial arch,发送,9,COL2A1_integrin_a1b1_complex,Heart,COL2A1,integrin,0.95,0.0
+Branchial arch,发送,10,BMP4_BMPR1A_BMPR2,Heart,BMP4,BMPR1A,0.883,0.0
+Branchial arch,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.641,0.0
+Branchial arch,接收,2,IGF2_IGF1R,Heart,IGF1R,IGF2,1.954,0.0
+Branchial arch,接收,3,FGF10_FGFR2,Heart,FGFR2,FGF10,1.086,0.004
+Branchial arch,接收,4,COL18A1_integrin_a1b1_complex,Heart,integrin,COL18A1,1.06,0.0
+Branchial arch,接收,5,COL3A1_integrin_a1b1_complex,Heart,integrin,COL3A1,0.95,0.007
+Branchial arch,接收,6,DLK1_NOTCH1,Heart,NOTCH1,DLK1,0.946,0.007
+Branchial arch,接收,7,DLK1_NOTCH3,Heart,NOTCH3,DLK1,0.875,0.019
+Branchial arch,接收,8,DLK1_NOTCH2,Heart,NOTCH2,DLK1,0.873,0.048
+Branchial arch,接收,9,LAMC1_integrin_a6b1_complex,Heart,integrin,LAMC1,0.82,0.0
+Branchial arch,接收,10,COL2A1_integrin_a1b1_complex,Heart,integrin,COL2A1,0.794,0.002
+Cavity,发送,1,IGF2_IGF1R,Heart,IGF2,IGF1R,1.856,0.0
+Cavity,发送,2,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.179,0.024
+Cavity,发送,3,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.152,0.0
+Cavity,发送,4,FN1_integrin_a2Bb3_complex,Heart,FN1,integrin,1.131,0.0
+Cavity,发送,5,FN1_integrin_aVb3_complex,Heart,FN1,integrin,1.131,0.0
+Cavity,发送,6,COL2A1_integrin_a1b1_complex,Heart,COL2A1,integrin,0.91,0.0
+Cavity,发送,7,BMP4_BMPR1A_BMPR2,Heart,BMP4,BMPR1A,0.613,0.0
+Cavity,发送,8,BMP4_BMR1A_ACR2A,Heart,BMP4,BMR1A,0.586,0.0
+Cavity,发送,9,APP_FPR2,Heart,APP,FPR2,0.579,0.005
+Cavity,发送,10,BMP4_BMR1A_AVR2B,Heart,BMP4,BMR1A,0.572,0.0
+Cavity,接收,1,COL1A1_integrin_a1b1_complex,Heart,integrin,COL1A1,0.719,0.0
+Cavity,接收,2,NRG3_ERBB4,Heart,ERBB4,NRG3,0.712,0.0
+Cavity,接收,3,COL1A2_integrin_a1b1_complex,Heart,integrin,COL1A2,0.682,0.0
+Cavity,接收,4,COL5A1_integrin_a1b1_complex,Heart,integrin,COL5A1,0.372,0.021
+Cavity,接收,5,BMP5_BMPR1A_BMPR2,Heart,BMPR1A,BMP5,0.349,0.033
+Cavity,接收,6,LRPAP1_SORT1,Heart,SORT1,LRPAP1,0.336,0.005
+Cavity,接收,7,COL26A1_integrin_a1b1_complex,Heart,integrin,COL26A1,0.327,0.0
+Cavity,接收,8,COL11A1_integrin_a1b1_complex,Heart,integrin,COL11A1,0.316,0.0
+Cavity,接收,9,COL12A1_integrin_a1b1_complex,Heart,integrin,COL12A1,0.295,0.0
+Cavity,接收,10,COL9A1_integrin_a1b1_complex,Heart,integrin,COL9A1,0.282,0.0
+Connective tissue,发送,1,IGF2_IGF2R,Heart,IGF2,IGF2R,2.323,0.014
+Connective tissue,发送,2,IGF2_IGF1R,Heart,IGF2,IGF1R,2.002,0.0
+Connective tissue,发送,3,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.325,0.0
+Connective tissue,发送,4,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.21,0.0
+Connective tissue,发送,5,FN1_integrin_a3b1_complex,Heart,FN1,integrin,1.134,0.0
+Connective tissue,发送,6,FN1_integrin_a8b1_complex,Heart,FN1,integrin,1.132,0.0
+Connective tissue,发送,7,FN1_integrin_a11b1_complex,Heart,FN1,integrin,1.124,0.0
+Connective tissue,发送,8,COL2A1_integrin_a11b1_complex,Heart,COL2A1,integrin,0.893,0.0
+Connective tissue,发送,9,DAG1_NRXN3,Heart,DAG1,NRXN3,0.781,0.0
+Connective tissue,发送,10,COL18A1_integrin_a11b1_complex,Heart,COL18A1,integrin,0.733,0.019
+Connective tissue,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.569,0.0
+Connective tissue,接收,2,IGF2_IGF1R,Heart,IGF1R,IGF2,1.882,0.009
+Connective tissue,接收,3,COL3A1_integrin_a1b1_complex,Heart,integrin,COL3A1,1.723,0.0
+Connective tissue,接收,4,COL3A1_ADGRG1,Heart,ADGRG1,COL3A1,1.531,0.0
+Connective tissue,接收,5,COL1A2_integrin_a1b1_complex,Heart,integrin,COL1A2,1.435,0.0
+Connective tissue,接收,6,COL1A1_integrin_a1b1_complex,Heart,integrin,COL1A1,1.382,0.0
+Connective tissue,接收,7,DLK1_NOTCH1,Heart,NOTCH1,DLK1,1.32,0.0
+Connective tissue,接收,8,PPIA_BSG,Heart,BSG,PPIA,1.317,0.005
+Connective tissue,接收,9,DLK1_NOTCH3,Heart,NOTCH3,DLK1,1.249,0.0
+Connective tissue,接收,10,DLK1_NOTCH2,Heart,NOTCH2,DLK1,1.246,0.0
+Heart,发送,1,IGF2_IGF2R,Heart,IGF2,IGF2R,2.762,0.0
+Heart,发送,2,IGF2_IGF1R,Heart,IGF2,IGF1R,2.075,0.0
+Heart,发送,3,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.375,0.0
+Heart,发送,4,PPIA_BSG,Heart,PPIA,BSG,1.277,0.0
+Heart,发送,5,FN1_integrin_a4b1_complex,Heart,FN1,integrin,1.255,0.0
+Heart,发送,6,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.246,0.0
+Heart,发送,7,FN1_integrin_a3b1_complex,Heart,FN1,integrin,1.177,0.0
+Heart,发送,8,FN1_integrin_a5b1_complex,Heart,FN1,integrin,1.131,0.0
+Heart,发送,9,COL2A1_integrin_a1b1_complex,Heart,COL2A1,integrin,1.1,0.0
+Heart,发送,10,COL18A1_integrin_a1b1_complex,Heart,COL18A1,integrin,0.94,0.0
+Heart,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.762,0.0
+Heart,接收,2,IGF2_IGF1R,Heart,IGF1R,IGF2,2.075,0.0
+Heart,接收,3,FN1_integrin_aVb1_complex,Heart,integrin,FN1,1.375,0.0
+Heart,接收,4,PPIA_BSG,Heart,BSG,PPIA,1.277,0.0
+Heart,接收,5,FN1_integrin_a4b1_complex,Heart,integrin,FN1,1.255,0.0
+Heart,接收,6,FN1_integrin_aVb5_complex,Heart,integrin,FN1,1.246,0.0
+Heart,接收,7,FN1_integrin_a3b1_complex,Heart,integrin,FN1,1.177,0.0
+Heart,接收,8,FN1_integrin_a5b1_complex,Heart,integrin,FN1,1.131,0.0
+Heart,接收,9,COL2A1_integrin_a1b1_complex,Heart,integrin,COL2A1,1.1,0.0
+Heart,接收,10,COL18A1_integrin_a1b1_complex,Heart,integrin,COL18A1,0.94,0.0
+Heart_1_75_Target,发送,1,IGF2_IGF2R,Heart,IGF2,IGF2R,2.809,0.0
+Heart_1_75_Target,发送,2,IGF2_IGF1R,Heart,IGF2,IGF1R,1.997,0.0
+Heart_1_75_Target,发送,3,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.363,0.0
+Heart_1_75_Target,发送,4,PPIA_BSG,Heart,PPIA,BSG,1.301,0.0
+Heart_1_75_Target,发送,5,FN1_integrin_a4b1_complex,Heart,FN1,integrin,1.224,0.0
+Heart_1_75_Target,发送,6,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.195,0.0
+Heart_1_75_Target,发送,7,COL2A1_integrin_a1b1_complex,Heart,COL2A1,integrin,1.123,0.0
+Heart_1_75_Target,发送,8,COL18A1_integrin_a1b1_complex,Heart,COL18A1,integrin,0.962,0.0
+Heart_1_75_Target,发送,9,LAMC1_integrin_a6b1_complex,Heart,LAMC1,integrin,0.91,0.0
+Heart_1_75_Target,发送,10,DAG1_NRXN3,Heart,DAG1,NRXN3,0.844,0.0
+Heart_1_75_Target,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.718,0.0
+Heart_1_75_Target,接收,2,IGF2_IGF1R,Heart,IGF1R,IGF2,2.031,0.0
+Heart_1_75_Target,接收,3,NPPA_NPR1,Heart,NPR1,NPPA,1.606,0.0
+Heart_1_75_Target,接收,4,FN1_integrin_aVb1_complex,Heart,integrin,FN1,1.41,0.0
+Heart_1_75_Target,接收,5,PPIA_BSG,Heart,BSG,PPIA,1.314,0.0
+Heart_1_75_Target,接收,6,FN1_integrin_a4b1_complex,Heart,integrin,FN1,1.29,0.0
+Heart_1_75_Target,接收,7,FN1_integrin_aVb5_complex,Heart,integrin,FN1,1.282,0.0
+Heart_1_75_Target,接收,8,FN1_integrin_a3b1_complex,Heart,integrin,FN1,1.213,0.0
+Heart_1_75_Target,接收,9,FN1_integrin_a5b1_complex,Heart,integrin,FN1,1.167,0.0
+Heart_1_75_Target,接收,10,FGF2_FGFR2,Heart,FGFR2,FGF2,1.098,0.001
+Liver,发送,1,IGF2_IGF1R,Heart,IGF2,IGF1R,1.997,0.0
+Liver,发送,2,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.334,0.0
+Liver,发送,3,PPIA_BSG,Heart,PPIA,BSG,1.298,0.006
+Liver,发送,4,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.241,0.0
+Liver,发送,5,FN1_integrin_a8b1_complex,Heart,FN1,integrin,1.178,0.0
+Liver,发送,6,FN1_integrin_a3b1_complex,Heart,FN1,integrin,1.16,0.0
+Liver,发送,7,FN1_integrin_a11b1_complex,Heart,FN1,integrin,1.138,0.0
+Liver,发送,8,FN1_integrin_a4b1_complex,Heart,FN1,integrin,1.134,0.0
+Liver,发送,9,LRFN4_PTPRF,Heart,LRFN4,PTPRF,0.965,0.0
+Liver,发送,10,COL2A1_integrin_a1b1_complex,Heart,COL2A1,integrin,0.907,0.0
+Liver,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.493,0.0
+Liver,接收,2,PPIA_BSG,Heart,BSG,PPIA,1.445,0.0
+Liver,接收,3,DLK1_NOTCH1,Heart,NOTCH1,DLK1,1.271,0.0
+Liver,接收,4,FN1_integrin_aVb1_complex,Heart,integrin,FN1,1.226,0.023
+Liver,接收,5,DLK1_NOTCH3,Heart,NOTCH3,DLK1,1.2,0.0
+Liver,接收,6,DLK1_NOTCH2,Heart,NOTCH2,DLK1,1.198,0.0
+Liver,接收,7,FGF10_FGFR2,Heart,FGFR2,FGF10,1.122,0.0
+Liver,接收,8,FN1_integrin_a4b1_complex,Heart,integrin,FN1,1.106,0.026
+Liver,接收,9,COL18A1_integrin_a1b1_complex,Heart,integrin,COL18A1,0.868,0.028
+Liver,接收,10,LAMC1_integrin_a6b1_complex,Heart,integrin,LAMC1,0.847,0.0
+Neural crest,发送,1,IGF2_IGF1R,Heart,IGF2,IGF1R,2.029,0.0
+Neural crest,发送,2,FN1_integrin_aVb1_complex,Heart,FN1,integrin,1.373,0.002
+Neural crest,发送,3,FN1_integrin_a3b1_complex,Heart,FN1,integrin,1.363,0.0
+Neural crest,发送,4,FN1_integrin_aVb5_complex,Heart,FN1,integrin,1.349,0.0
+Neural crest,发送,5,FN1_integrin_a4b1_complex,Heart,FN1,integrin,1.145,0.02
+Neural crest,发送,6,FN1_integrin_a8b1_complex,Heart,FN1,integrin,1.139,0.0
+Neural crest,发送,7,FN1_integrin_a10b1_complex,Heart,FN1,integrin,1.123,0.0
+Neural crest,发送,8,LRFN4_PTPRF,Heart,LRFN4,PTPRF,0.948,0.0
+Neural crest,发送,9,COL2A1_integrin_a10b1_complex,Heart,COL2A1,integrin,0.892,0.0
+Neural crest,发送,10,2arachidonoylglycerol_byDAGLB_CNR1,Heart,2arachidonoylglycerol,byDAGLB,0.85,0.003
+Neural crest,接收,1,IGF2_IGF2R,Heart,IGF2R,IGF2,2.627,0.0
+Neural crest,接收,2,IGF2_IGF1R,Heart,IGF1R,IGF2,1.94,0.017
+Neural crest,接收,3,DLK1_NOTCH1,Heart,NOTCH1,DLK1,1.273,0.0
+Neural crest,接收,4,DLK1_NOTCH3,Heart,NOTCH3,DLK1,1.202,0.0
+Neural crest,接收,5,DLK1_NOTCH2,Heart,NOTCH2,DLK1,1.2,0.0
+Neural crest,接收,6,COL18A1_integrin_a1b1_complex,Heart,integrin,COL18A1,1.09,0.0
+Neural crest,接收,7,COL2A1_integrin_a1b1_complex,Heart,integrin,COL2A1,0.913,0.001
+Neural crest,接收,8,APP_PLXNA4,Heart,PLXNA4,APP,0.842,0.0
+Neural crest,接收,9,AGRN_PTPRS,Heart,PTPRS,AGRN,0.84,0.0
+Neural crest,接收,10,LAMC1_integrin_a6b1_complex,Heart,integrin,LAMC1,0.817,0.015
