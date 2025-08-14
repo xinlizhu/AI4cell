@@ -46,10 +46,6 @@ function initializeContainer() {
     console.log('PathView容器查找结果:', container); // 调试日志
     console.log('PathView容器是否为空:', container.empty()); // 调试日志
     
-    if (container.empty()) {
-        console.error('未找到 #pathViewContainer 元素！');
-        return;
-    }
     
     container.selectAll('*').remove();
     

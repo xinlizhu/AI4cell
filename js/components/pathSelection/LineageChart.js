@@ -4,8 +4,9 @@ export class LineageChart {
     constructor(containerId, cellName, detailedPaths = null, pathIndex = null) {
         this.containerId = containerId;
         this.cellName = cellName;
-        this.detailedPaths = detailedPaths; // 详细路径信息
+        this.detailedPaths = detailedPaths; // 详细路径信息或具体细胞数组
         this.pathIndex = pathIndex; // 在路径中的位置
+        this.aggregateMode = Array.isArray(detailedPaths) && (typeof detailedPaths[0] === 'string');
         this.dataLoaded = new Promise((resolve, reject) => {
             this.resolveDataLoaded = resolve;
             this.rejectDataLoaded = reject;
@@ -89,17 +90,41 @@ export class LineageChart {
 
     async loadData() {
         try {
-            // 如果有详细路径信息，需要计算平均值
-            if (this.detailedPaths && this.pathIndex !== null) {
+            if (this.aggregateMode) {
+                await this.loadAggregateSpecificCells();
+            } else if (this.detailedPaths && this.pathIndex !== null) {
                 await this.loadMergedData();
             } else {
-                // 原有的单路径加载逻辑
                 await this.loadSingleData();
             }
-        } catch (error) {
-            console.error(`数据加载失败 for ${this.cellName}:`, error);
+        } catch (e) {
+            console.warn('LineageChart loadData error', e);
             this.handleLoadError();
         }
+    }
+
+    async loadAggregateSpecificCells() {
+        // detailedPaths 为具体细胞名称数组，聚合其 total/cell 数据
+        const totalAll = [];
+        const cellAll = [];
+        for (const cell of this.detailedPaths) {
+            try {
+                const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${cell}/${cell}_total.csv`;
+                const cellPath = `./js/components/pathSelection/Every_cell_info_withKJ2/${cell}/${cell}.csv`;
+                const totalData = await d3.csv(totalPath, d3.autoType);
+                const cellData = await d3.csv(cellPath, d3.autoType);
+                totalAll.push(...totalData);
+                cellAll.push(...cellData);
+            } catch (err) {
+                console.warn('聚合加载失败', cell, err);
+            }
+        }
+        const aggTotal = this.calculateAggregatedTotalData(totalAll);
+        const aggCell = this.calculateAggregatedCellData(cellAll);
+        this.processData(aggTotal, aggCell);
+        this.drawChart();
+        await this.drawCenterImage();
+        this.resolveDataLoaded();
     }
 
     async loadMergedData() {
@@ -234,14 +259,20 @@ export class LineageChart {
         const getBaseName = (name) => name.split('_')[0].toLowerCase();
         const centerBaseName = getBaseName(this.cellName);
 
-        const nonCenterCells = cellData.filter(d => getBaseName(d.cell_type) !== centerBaseName);
-        const totalCells = d3.sum(nonCenterCells, d => d.cell_num);
+        // 包含：不同类型 + 同类型且 cluster_id 不是 target（或没有 cluster_id 信息时默认包含）
+        const neighborCells = cellData.filter(d => {
+            const base = getBaseName(d.cell_type || '');
+            if (base !== centerBaseName) return true;
+            const cluster = (d.cluster_id || '').toString().toLowerCase();
+            return cluster !== 'target';
+        });
+        const totalCells = d3.sum(neighborCells, d => d.cell_num);
 
         const maxSendIntensity = d3.max(totalData, d => d.发送总强度) || 1;
         const maxReceiveIntensity = d3.max(totalData, d => d.接收总强度) || 1;
 
-        let tempData = [];
-        nonCenterCells.forEach(cellInfo => {
+    let tempData = [];
+    neighborCells.forEach(cellInfo => {
             const commData = totalData.find(d => d.邻居细胞.toLowerCase() === cellInfo.cell_type.toLowerCase());
             const proportion = totalCells > 0 ? (cellInfo.cell_num / totalCells) : 0;
 
@@ -446,6 +477,9 @@ export class LineageChart {
                 .style('font-size', '10px')
                 .style('fill', '#999');
         }
+
+        // After existing rendering, overlay same-type count if aggregateMode
+    // 移除先前的文字提示，不再单独显示同型细胞数量
     }
 
     showTooltip(event, data, type) {

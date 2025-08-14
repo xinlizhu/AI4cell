@@ -12,7 +12,8 @@ import warnings
 warnings.filterwarnings('ignore')
 level=6
 class CellAnalyzer:
-    def __init__(self, base_path="F:/allCellChat_level6_withKJ/", output_base="F:/2version/js/components/pathSelection/Every_cell_info_withKJ"):
+    def __init__(self, base_path="F:/allCellChat_level6_withKJ/", 
+                 output_base="F:/2version/js/components/pathSelection/Every_cell_info_withKJ2"):
         self.base_path = base_path
         self.output_base = output_base
         
@@ -51,7 +52,6 @@ class CellAnalyzer:
         print(f"📊 Level {level} 数据包含 {len(self.level_data)} 个细胞")
 
 
-
     def analyze_neighbors(self, target_cell_id, output_dir):
         """分析邻居细胞 - 记录每种细胞类型的重心位置"""
         # 解析细胞ID获取基本信息
@@ -79,7 +79,7 @@ class CellAnalyzer:
         
         # 找到特定的目标细胞（使用embedding_index进一步筛选）
         target_cells = level_data[
-            (level_data['annotation'] == target_cell_name) &
+            (level_data['annotation'] == target_cell_name) & 
             (level_data['embedding_index'] == embedding_index)
         ]
         
@@ -129,10 +129,14 @@ class CellAnalyzer:
         print(f"\n=== 分析各种细胞类型的位置分布 ===")
         
         for annotation in neighbor_cells['annotation'].unique():
-            if annotation == target_cell_name:
-                continue  # 跳过目标细胞本身
-                
-            annotation_cells = neighbor_cells[neighbor_cells['annotation'] == annotation]
+            # 包括目标细胞类型，但排除目标细胞群体本身
+            annotation_cells = neighbor_cells[
+                (neighbor_cells['annotation'] == annotation) & 
+                (neighbor_cells['embedding_index'] != embedding_index)
+            ]
+            
+            if len(annotation_cells) == 0:
+                continue
             
             print(f"\n--- {annotation} ({len(annotation_cells)} 个细胞) ---")
             
@@ -143,7 +147,7 @@ class CellAnalyzer:
             
             # 计算到目标细胞的距离
             distance_to_target = np.sqrt((centroid_x - target_centroid_x)**2 + 
-                                    (centroid_y - target_centroid_y)**2)
+                                        (centroid_y - target_centroid_y)**2)
             
             # 计算紧密度（细胞间平均距离）
             compactness = 0.0
@@ -180,7 +184,7 @@ class CellAnalyzer:
         print(f"📄 邻居统计已保存: {output_filename}")
 
         return neighbor_stats_df
-    
+        
     def analyze_cellphone_channels(self, target_cell_id, output_dir):
         """分析CellPhoneDB通讯通道"""
         # 解析细胞ID获取群体名称

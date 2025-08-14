@@ -8,12 +8,13 @@ export class CellPositionDistribution {
     }
 
     init() {
-        this.container.html('');
+        this.container.html('')
+            .style('height','290px'); // 固定宽度 300
         this.container.append('div')
             .attr('class', 'panel-header')
             .style('font-weight', 'bold')
             .style('margin-bottom', '10px')
-            .text('Neighbor Details');
+            ;
 
         // 详细区域：横向滚动，内含多个 AreaChart
         this.detailsScroll = this.container.append('div')
@@ -46,7 +47,7 @@ export class CellPositionDistribution {
             .style('color', '#666')
             .style('padding', '8px')
             .style('font-style', 'italic')
-            .text('点击左侧总体通讯强度图，查看各邻居的详细趋势');
+            .text('点击总体通讯强度图，查看各邻居的详细趋势');
     }
 
     async renderNeighborCharts(pathCells, neighborCells) {

@@ -1,6 +1,6 @@
 import { LineageChart } from './LineageChart.js';
 import { AreaChart } from './AreaChart.js';
-import { OverallCommChart } from './OverallCommChart.js';
+// 已移除内部 OverallCommChart 渲染；仅通过事件在右侧 Neighbor 面板生成
 // 仅复用 PathView 的类型提取逻辑
 import { extractCellType as pvExtractType } from './PathView.js';
 
@@ -91,43 +91,14 @@ class LineageVis {
             return true;
         });
         const specificCells = this.getSpecificCellsAtDepth(used, depth);
-        if (!this.branchLayout) return;
-
-        // 准备一个“叶子总览”列（在最后追加一列）
-        const maxDepth = Math.max(...this.branchLayout.cols.keys(), -1);
-        const leafColDepth = maxDepth + 1;
-        let leafCol = this.branchLayout.cols.get(leafColDepth);
-        if (!leafCol) {
-            leafCol = this.branchLayout.root.append('div')
-                .attr('class', `branch-col depth-${leafColDepth}`)
-                .style('display', 'flex')
-                .style('flex-direction', 'column')
-                .style('gap', '12px');
-            this.branchLayout.cols.set(leafColDepth, leafCol);
-        }
-
-        // 渲染 OverallCommChart 面板
-        const panel = leafCol.append('div')
-            .attr('class', 'leaf-overall')
-            .style('background-color', '#f9f9f9')
-            .style('border', '1px solid #ddd')
-            .style('border-radius', '8px')
-            .style('padding', '10px')
-            .style('width', '520px')
-            .style('height', '260px')
-            .style('flex-shrink', '0');
-
-        const containerId = `leaf-overall-${this.treeSessionId}-${Date.now()}`;
-        panel.append('div').attr('id', containerId);
-
-        // 统一成描述对象数组
+    // 不再创建任何叶子面板或额外列，只派发右侧事件
         const descriptors = specificCells.map(c => ({ label: c, specificCells: [c] }));
         const neighbors = await this.getAllNeighborCells(descriptors);
-        const chart = new OverallCommChart(containerId, descriptors, neighbors);
-        await chart.render(()=>{});
-
-        // 更新连线，使上一列节点连到“叶子总览”面板（以最近主节点为父）
-        this.updateConnectors();
+        const evt = new CustomEvent('showNeighborDetails', {
+            detail: { pathCells: descriptors, neighborCells: neighbors }
+        });
+        document.dispatchEvent(evt);
+    // 不新增节点，无需更新连线
     }
 
     async renderPath(pathString) {
@@ -140,9 +111,77 @@ class LineageVis {
         // 获取所有邻居细胞类型
         const allNeighborCells = await this.getAllNeighborCells(pathCells);
         
-        // 为这个路径创建一个独立的容器
-        const pathContainer = this.container.append('div')
+        // 构建可缩放 + 拖拽容器（与 PathView 风格统一）
+        let zoomOuter = this.container.select('.lineage-zoom-outer');
+        if (zoomOuter.empty()) {
+            zoomOuter = this.container.append('div')
+                .attr('class','lineage-zoom-outer')
+                .style('width','1200px')
+                .style('height','950px')
+                .style('overflow','hidden')
+                .style('border','1px solid #ddd')
+                .style('border-radius','6px')
+                .style('position','relative')
+                .style('background','#fff')
+                .style('cursor','grab');
+            const inner = zoomOuter.append('div')
+                .attr('class','lineage-zoom-inner')
+                .style('position','absolute')
+                .style('top','0')
+                .style('left','0')
+                .style('transform-origin','0 0');
+            let scale = 1;
+            let translateX = 0, translateY = 0;
+            let isPanning = false;
+            let panStart = [0,0];
+            // 缩放：普通滚轮 => 缩放；按住 shift => 仅水平平移；按住 ctrl => 兼容原逻辑也缩放
+            zoomOuter.on('wheel.zoom', (event)=>{
+                event.preventDefault();
+                if (event.shiftKey) {
+                    // 平移
+                    translateX -= event.deltaY; // 使用 deltaY 横向滚动体验
+                } else {
+                    const mouseX = event.offsetX;
+                    const mouseY = event.offsetY;
+                    const prevScale = scale;
+                    const delta = -event.deltaY * 0.001;
+                    scale = Math.min(3, Math.max(0.3, scale + delta));
+                    // 缩放中心保持指针位置
+                    const k = scale / prevScale;
+                    translateX = mouseX - k * (mouseX - translateX);
+                    translateY = mouseY - k * (mouseY - translateY);
+                }
+                inner.style('transform', `translate(${translateX}px, ${translateY}px) scale(${scale})`);
+            });
+            // 拖拽平移（左键）
+            zoomOuter.on('mousedown.pan', (event)=>{
+                if (event.button !== 0) return; // 仅左键
+                isPanning = true;
+                panStart = [event.clientX - translateX, event.clientY - translateY];
+                zoomOuter.style('cursor','grabbing');
+                event.preventDefault();
+            });
+            d3.select(window).on('mousemove.pan', (event)=>{
+                if (!isPanning) return;
+                translateX = event.clientX - panStart[0];
+                translateY = event.clientY - panStart[1];
+                inner.style('transform', `translate(${translateX}px, ${translateY}px) scale(${scale})`);
+            }).on('mouseup.pan', ()=>{
+                if (isPanning) {
+                    isPanning = false;
+                    zoomOuter.style('cursor','grab');
+                }
+            });
+            // 双击重置
+            zoomOuter.on('dblclick.reset', ()=>{
+                scale = 1; translateX = 0; translateY = 0;
+                inner.style('transform', `translate(0px, 0px) scale(1)`);
+            });
+        }
+        const zoomInner = this.container.select('.lineage-zoom-inner');
+        const pathContainer = zoomInner.append('div')
             .attr('class', `path-container path-${this.pathCount}`)
+            .style('margin','20px')
             .style('margin-bottom', '40px')
             .style('border', '2px solid #e0e0e0')
             .style('border-radius', '10px')
@@ -192,8 +231,7 @@ class LineageVis {
         const pathCharts = [];
         const pathAreaCharts = [];
 
-    // 左侧替换为单一总体强度图（点击打开右侧详细）
-    await this.createOverallChart(mainContainer, pathCells, allNeighborCells);
+    // 不再在 Lineage Vis 中渲染 OverallCommChart；仅右侧显示（保持已派发的机制，若需要此路径仍可单独触发事件，可选择在别处调用 createOverallChart）
 
         // 创建LineageCharts容器
         const lineageContainer = mainContainer.append('div')
@@ -338,8 +376,7 @@ class LineageVis {
         const pathCharts = [];
         const pathAreaCharts = [];
 
-    // 左侧替换为单一总体强度图（点击打开右侧详细）
-    await this.createOverallChart(mainContainer, pathCellDescriptors, allNeighborCells);
+    // 不在此处渲染 OverallCommChart（仅右侧 Neighbor 面板管理）
 
         // 创建LineageCharts容器
         const lineageContainer = mainContainer.append('div')
@@ -424,26 +461,45 @@ class LineageVis {
 
 
 
-        const chartsRow = chartPane.append('div')
+        // 缩放/拖拽外壳
+        const zoomOuter = chartPane.append('div')
+            .attr('class','lineage-zoom-outer')
+            .style('width','1200px')
+            .style('height','960px')
+            .style('overflow','hidden')
+            .style('border','1px solid #e0e0e0')
+            .style('border-radius','6px')
+            .style('position','relative')
+            .style('background','#fff')
+            .style('cursor','grab');
+        const zoomInner = zoomOuter.append('div')
+            .attr('class','lineage-zoom-inner')
+            .style('position','absolute')
+            .style('top','0')
+            .style('left','0')
+            .style('transform-origin','0 0')
+            .style('padding','8px');
+
+        const chartsRow = zoomInner.append('div')
             .attr('class', 'charts-row')
             .style('display', 'flex')
             .style('gap', '24px')
             .style('align-items', 'stretch')
             .style('flex-wrap', 'nowrap')
-            .style('overflow-x', 'auto')
             .style('position', 'relative')
             .style('padding', '8px 8px 8px 8px');
 
-        // 覆盖连接线层（随着内容滚动）
-        const overlay = chartsRow.append('svg')
+        // 覆盖连接线层：放在未缩放的 zoomOuter 上，使用屏幕坐标避免缩放错位
+        const overlay = zoomOuter.append('svg')
             .attr('class', 'connector-layer')
             .style('position', 'absolute')
             .style('top', '0')
             .style('left', '0')
+            .style('width', '100%')
+            .style('height', '100%')
             .style('pointer-events', 'none')
-            .style('z-index', '1');
+            .style('z-index', '5');
         const overlayG = overlay.append('g');
-        // 箭头
         const defs = overlay.append('defs');
         defs.append('marker')
             .attr('id', 'lv-arrow')
@@ -465,9 +521,103 @@ class LineageVis {
             overlayG
         };
 
-    // 监听滚动与窗口尺寸变化以更新连接线
-    chartsRow.on('scroll', () => this.updateConnectors());
-    window.addEventListener('resize', () => this.updateConnectors());
+        // 平移 & 缩放交互（与单路径模式一致）
+        let scale = 1;
+        let translateX = 0, translateY = 0;
+        let isPanning = false;
+        let panStart = [0,0];
+        zoomOuter.on('wheel.zoom', (event)=>{
+            event.preventDefault();
+            if (event.shiftKey) {
+                translateX -= event.deltaY; // shift + 滚轮做水平平移
+            } else {
+                const mouseX = event.offsetX;
+                const mouseY = event.offsetY;
+                const prevScale = scale;
+                const delta = -event.deltaY * 0.001;
+                scale = Math.min(3, Math.max(0.3, scale + delta));
+                const k = scale / prevScale;
+                translateX = mouseX - k * (mouseX - translateX);
+                translateY = mouseY - k * (mouseY - translateY);
+            }
+            zoomInner.style('transform', `translate(${translateX}px, ${translateY}px) scale(${scale})`);
+            this.updateConnectors();
+        });
+        zoomOuter.on('mousedown.pan', (event)=>{
+            if (event.button !== 0) return;
+            isPanning = true;
+            panStart = [event.clientX - translateX, event.clientY - translateY];
+            zoomOuter.style('cursor','grabbing');
+            event.preventDefault();
+        });
+        d3.select(window).on('mousemove.panTree', (event)=>{
+            if (!isPanning) return;
+            translateX = event.clientX - panStart[0];
+            translateY = event.clientY - panStart[1];
+            zoomInner.style('transform', `translate(${translateX}px, ${translateY}px) scale(${scale})`);
+            this.updateConnectors();
+        }).on('mouseup.panTree', ()=>{
+            if (isPanning) { isPanning = false; zoomOuter.style('cursor','grab'); }
+        });
+        zoomOuter.on('dblclick.reset', ()=>{
+            scale = 1; translateX = 0; translateY = 0;
+            zoomInner.style('transform', `translate(0px, 0px) scale(1)`);
+            this.updateConnectors();
+        });
+
+        window.addEventListener('resize', () => this.updateConnectors());
+
+        // === 初始根节点渲染（之前为空导致只有细长框）===
+        // 将多条路径的首个细胞类型聚合，作为 depth 0 列展示，便于后续继续分叉
+        if (!this.branchLayout.cols.has(0)) {
+            const col0 = this.branchLayout.root.append('div')
+                .attr('class', 'branch-col depth-0')
+                .style('display', 'flex')
+                .style('flex-direction', 'column')
+                .style('gap', '16px')
+                .style('align-items', 'center')
+                .style('position', 'relative')
+                .style('z-index', '2')
+                .style('flex', '0 0 560px')
+                .style('min-width', '560px');
+            this.branchLayout.cols.set(0, col0);
+
+            // 分组：路径起点类型 -> 路径数组
+            const startGroups = d3.group(pathsData, p => {
+                const first = p.path_string.split(' -> ')[0];
+                return pvExtractType(first.trim());
+            });
+            // 按路径数降序，第一类设为主节点
+            const sorted = Array.from(startGroups.entries()).sort((a,b)=> b[1].length - a[1].length);
+            sorted.forEach(([type, groupPaths], idx) => {
+                const specific = this.getSpecificCellsAtDepth(groupPaths, 0);
+                const key = type; // depth0 key 直接用类型
+                const wrap = col0.append('div')
+                    .attr('class', 'branch-chart')
+                    .attr('data-main', idx === 0 ? '1' : '0')
+                    .attr('data-cell', type)
+                    .attr('data-key', key)
+                    .attr('data-parent-key', '')
+                    .attr('data-depth', '0')
+                    .style('text-align','center')
+                    .style('width','520px')
+                    .style('margin','0 auto')
+                    .style('padding-top', idx === 0 ? null : '6px')
+                    .style('border-top', idx === 0 ? null : '1px dashed #ddd');
+                wrap.append('div')
+                    .attr('class','chart-title')
+                    .style('margin-bottom','8px')
+                    .style('font-weight','600')
+                    .text(`${type}（${groupPaths.length} 路径平均）`);
+                const id = `branch-root-${this.treeSessionId}-${idx}`;
+                wrap.append('div').attr('id', id);
+                new LineageChart(id, type, specific, 0, true);
+                if (idx !== 0) this.renderedForkKeys.add(key); // 记录 fork，避免重复
+            });
+
+            // 初始布局计算
+            this.reflowBranchLayout();
+        }
     }
 
     onTreeNodeClick(d, allPaths, chartsRow) {
@@ -640,7 +790,7 @@ class LineageVis {
                 // 创建主节点（只建一次）
                 // 父已不再是叶子，移除父的叶子总览面板
                 if (parentKey) {
-                    this.branchLayout.root.selectAll(`.leaf-overall[data-leaf-of='${parentKey}']`).remove();
+                    // 过去会移除父的叶子汇总面板，现在已不再创建，可忽略
                 }
                 const used = prefixSubset(i + 1);
                 const specific = this.getSpecificCellsAtDepth(used, i);
@@ -679,7 +829,7 @@ class LineageVis {
                 } else {
                     // 父已不再是叶子，移除父的叶子总览面板
                     if (parentKey) {
-                        this.branchLayout.root.selectAll(`.leaf-overall[data-leaf-of='${parentKey}']`).remove();
+                        // 过去会移除父的叶子汇总面板，现在已不再创建，可忽略
                     }
                     const used = prefixSubset(i + 1);
                     const specific = this.getSpecificCellsAtDepth(used, i);
@@ -712,31 +862,14 @@ class LineageVis {
     // 在最后一列（链末端）追加一个分叉子项：以该节点对应的 subset 为基准
     // 最后一层若已有主节点且类型不同，上面的循环已在该层创建了分叉；若该列无主节点，上面的循环已建主节点
 
-        // 更新连线（基于 data-parent-key 连接）
-    this.updateConnectors();
+    // 树形重新排版 & 连接线更新
+    this.reflowBranchLayout();
     }
 
     async ensureLeafPanel(leafKey, depth, usedPaths) {
         if (!this.branchLayout) return;
-        // 若面板已存在则不重复创建
-        if (!this.branchLayout.root.selectAll(`.leaf-overall[data-leaf-of='${leafKey}']`).empty()) return;
-
-        // 下一列用于放置叶子总览
-        const colDepth = depth + 1;
-        let col = this.branchLayout.cols.get(colDepth);
-        if (!col) {
-            col = this.branchLayout.root.append('div')
-                .attr('class', `branch-col depth-${colDepth}`)
-                .style('display', 'flex')
-                .style('flex-direction', 'column')
-                .style('gap', '12px');
-            this.branchLayout.cols.set(colDepth, col);
-        }
-
-        // 构建“按深度聚合”的描述：label 使用细胞类型，specificCells 为该深度前缀匹配到的具体细胞集合
-    const types = leafKey.split('->').map(s => s.trim()).filter(Boolean);
-    // 关键修复：优先使用传入的 usedPaths（该叶子的专属子集），避免不同叶子共享同一总体数据
-    const basePaths = (Array.isArray(usedPaths) && usedPaths.length > 0) ? usedPaths : (this.currentPathsSubset || []);
+        const types = leafKey.split('->').map(s => s.trim()).filter(Boolean);
+        const basePaths = (Array.isArray(usedPaths) && usedPaths.length > 0) ? usedPaths : (this.currentPathsSubset || []);
         const prefixSubset = (prefLen) => {
             const pref = types.slice(0, prefLen);
             return basePaths.filter(p => {
@@ -747,34 +880,10 @@ class LineageVis {
             });
         };
         const descriptors = types.map((t, i) => ({ label: t, specificCells: this.getSpecificCellsAtDepth(prefixSubset(i+1), i) }));
-    const type = (types[types.length - 1] || '').trim();
-    const neighbors = await this.getAllNeighborCells(descriptors);
-
-        const panel = col.append('div')
-            .attr('class', 'leaf-overall')
-            .attr('data-leaf-of', leafKey)
-            .attr('data-leaf-type', type)
-            .attr('data-parent-key', leafKey)
-            .attr('data-depth', String(colDepth))
-            .style('background-color', '#f9f9f9')
-            .style('border', '1px solid #ddd')
-            .style('border-radius', '8px')
-            .style('padding', '10px')
-            .style('width', '520px')
-            .style('height', '260px')
-            .style('flex-shrink', '0');
-        const containerId = `leaf-overall-${this.treeSessionId}-${Date.now()}-${Math.floor(Math.random()*1e6)}`;
-        panel.append('div').attr('id', containerId);
-    const chart = new OverallCommChart(containerId, descriptors, neighbors);
-        await chart.render(() => {
-            const evt = new CustomEvent('showNeighborDetails', {
-                detail: { pathCells: descriptors, neighborCells: neighbors }
-            });
-            document.dispatchEvent(evt);
-        });
-
-        // 渲染后刷新连线
-        this.updateConnectors();
+        const neighbors = await this.getAllNeighborCells(descriptors);
+        const evt = new CustomEvent('showNeighborDetails', { detail: { pathCells: descriptors, neighborCells: neighbors } });
+        document.dispatchEvent(evt);
+        // 不再创建叶子列 / 面板
     }
 
     updateConnectors() {
@@ -785,14 +894,17 @@ class LineageVis {
         if (!overlay || !g) return;
 
         // 尺寸覆盖整个内容区域
+        const zoomOuter = this.container.select('.lineage-zoom-outer').node();
         overlay
-            .attr('width', row.scrollWidth)
-            .attr('height', row.scrollHeight);
+            .attr('width', zoomOuter ? zoomOuter.clientWidth : row.scrollWidth)
+            .attr('height', zoomOuter ? zoomOuter.clientHeight : row.scrollHeight);
         g.selectAll('*').remove();
 
         // 工具：取元素中心点（左右边缘中点）
-        const getRect = el => el.getBoundingClientRect();
-        const base = row.getBoundingClientRect();
+    const getRect = el => el.getBoundingClientRect();
+    // 使用未发生 transform 的外层容器作为基准，避免平移/缩放被相互抵消
+    const outer = this.container.select('.lineage-zoom-outer').node();
+    const base = outer ? outer.getBoundingClientRect() : row.getBoundingClientRect();
         const sx = row.scrollLeft; // 修正横向滚动
         const sy = row.scrollTop;
         const centerRight = el => {
@@ -831,19 +943,108 @@ class LineageVis {
         cols.forEach((d, idx) => {
             const col = this.branchLayout.cols.get(d);
             if (!col) return;
-            col.selectAll('.branch-chart, .leaf-overall').each((_, i, nodes) => {
+            col.selectAll('.branch-chart').each((_, i, nodes) => {
                 const node = nodes[i];
                 const pk = node.getAttribute('data-parent-key') || '';
                 const parent = findParentNode(pk, idx) || findNearestPrevMain(idx);
                 if (!parent) return;
                 const src = centerRight(parent);
                 const dst = centerLeft(node);
-                // 叶子总览使用虚线；分叉节点虚线；主节点实线
-                const isLeafPanel = node.classList.contains('leaf-overall');
-                const isFork = isLeafPanel || node.getAttribute('data-main') === '0';
+                // 分叉节点虚线；主节点实线
+                const isFork = node.getAttribute('data-main') === '0';
                 this.drawConnector(g, src, dst, isFork);
             });
         });
+    }
+
+    // 重新排版：把每次增量后的列转换为“紧凑树”垂直分布
+    reflowBranchLayout() {
+        if (!this.branchLayout) return;
+        // 收集节点
+        const nodeInfos = new Map();
+        this.branchLayout.root.selectAll('.branch-chart').each((_, i, nodes) => {
+            const el = nodes[i];
+            const key = el.getAttribute('data-key');
+            const parentKey = el.getAttribute('data-parent-key') || '';
+            const depth = +(el.getAttribute('data-depth') || 0);
+            nodeInfos.set(key, { key, parentKey, depth, el, children: [], y: 0 });
+        });
+        // 建立 children 列表
+        nodeInfos.forEach(info => {
+            if (info.parentKey && nodeInfos.has(info.parentKey)) {
+                nodeInfos.get(info.parentKey).children.push(info);
+            }
+        });
+        // 找根集合（无 parent 或 parent 不存在）
+        const roots = [];
+        nodeInfos.forEach(info => {
+            if (!info.parentKey || !nodeInfos.has(info.parentKey)) roots.push(info);
+        });
+        // 若多根，虚拟根统一
+        const virtualRoot = { key: '__root__', depth: -1, children: roots, y: 0 };
+        // 叶子排序：按出现顺序（在 nodeInfos 的插入顺序）
+        const leaves = [];
+        nodeInfos.forEach(info => { if (info.children.length === 0) leaves.push(info); });
+        // 按 depth / DOM 顺序排序 leaves
+        leaves.sort((a,b)=> (a.depth - b.depth) || 0);
+        // 叶间距（可调）
+        const leafGap = 300; // px between leaf centers
+        let nextLeafIndex = 0;
+        function assignY(node) {
+            if (node.children.length === 0) {
+                node.y = nextLeafIndex * leafGap;
+                nextLeafIndex++;
+            } else {
+                node.children.forEach(assignY);
+                // 父 y = 子 y 平均
+                node.y = node.children.reduce((s,c)=>s+c.y,0)/node.children.length;
+            }
+        }
+        assignY(virtualRoot);
+        // 基于真实节点高度做垂直偏移，防止顶部被裁剪
+        const allNodeArray = Array.from(nodeInfos.values());
+        // 先测量高度
+        allNodeArray.forEach(n => {
+            const rect = n.el.getBoundingClientRect();
+            n.height = rect.height || 240;
+            n.half = n.height / 2;
+        });
+        // 计算需要的偏移（使最小 top >= paddingTop）
+        const paddingTop = 30; // 视觉留白
+        let minTopCandidate = Infinity;
+        allNodeArray.forEach(n => {
+            const topIfPlaced = n.y - n.half; // 未加 offset 的 top
+            if (topIfPlaced < minTopCandidate) minTopCandidate = topIfPlaced;
+        });
+        const offset = (minTopCandidate === Infinity ? 0 : -minTopCandidate) + paddingTop;
+        // 计算总高度（最大 bottom 后再加一点底部 padding）
+        let maxBottom = -Infinity;
+        allNodeArray.forEach(n => {
+            const bottomIfPlaced = n.y + n.half + offset;
+            if (bottomIfPlaced > maxBottom) maxBottom = bottomIfPlaced;
+        });
+        const totalHeight = maxBottom + paddingTop; // 底部再加与顶部相同的留白
+        // 应用定位
+        const cols = [...this.branchLayout.cols.keys()].sort((a,b)=>a-b);
+        cols.forEach(depth => {
+            const col = this.branchLayout.cols.get(depth);
+            if (!col) return;
+            col.style('position','relative')
+                .style('display','block')
+                .style('min-width','560px')
+                .style('height', totalHeight + 'px');
+            // 当前深度节点
+            const depthNodes = [];
+            nodeInfos.forEach(n => { if (n.depth === depth) depthNodes.push(n); });
+            depthNodes.forEach(n => {
+                const sel = d3.select(n.el);
+                sel.style('position','absolute')
+                   .style('top', (n.y - n.half + offset) + 'px')
+                   .style('left','0');
+            });
+        });
+        // 更新连接线（需要等待浏览器应用新布局，使用 requestAnimationFrame）
+        requestAnimationFrame(()=>this.updateConnectors());
     }
 
     drawConnector(g, src, dst, dashed) {
@@ -921,36 +1122,13 @@ class LineageVis {
     }
 
     async createOverallChart(parentContainer, pathCellsOrDescriptors, neighborCells) {
-        const panel = parentContainer.append('div')
-            .attr('class', 'overall-comm-container')
-            .style('background-color', '#f9f9f9')
-            .style('border', '1px solid #ddd')
-            .style('border-radius', '8px')
-            .style('padding', '15px')
-            .style('width', '500px')
-            .style('height', '250px')
-            .style('flex-shrink', '0');
-
-        const containerId = `overall-comm-${this.pathCount}`;
-        panel.append('div').attr('id', containerId);
-
-        const chart = new OverallCommChart(containerId, pathCellsOrDescriptors, neighborCells);
-        await chart.render(async () => {
-            // 点击后在右侧显示邻居细节 area charts
-            try {
-                // 统一成描述对象数组，便于右侧复用 AreaChart
-                const descriptors = Array.isArray(pathCellsOrDescriptors)
-                    ? pathCellsOrDescriptors.map(item => (typeof item === 'string' ? { label: item, specificCells: [item] } : item))
-                    : [];
-                const neighbors = await this.getAllNeighborCells(descriptors);
-                const event = new CustomEvent('showNeighborDetails', {
-                    detail: { pathCells: descriptors, neighborCells: neighbors }
-                });
-                document.dispatchEvent(event);
-            } catch (e) {
-                console.warn('Failed to prepare neighbor details:', e);
-            }
-        });
+        // 仅派发事件：右侧 Neighbor Details 追加对应 OverallCommChart
+        const descriptors = Array.isArray(pathCellsOrDescriptors)
+            ? pathCellsOrDescriptors.map(item => (typeof item === 'string' ? { label: item, specificCells: [item] } : item))
+            : [];
+        const neighbors = await this.getAllNeighborCells(descriptors);
+        const evt = new CustomEvent('showNeighborDetails', { detail: { pathCells: descriptors, neighborCells: neighbors } });
+        document.dispatchEvent(evt);
     }
 
     renderDetailsWhenReady(pathCharts, pathAreaCharts, pathContainer) {

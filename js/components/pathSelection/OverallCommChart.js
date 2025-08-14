@@ -50,9 +50,11 @@ export class OverallCommChart {
         this.containerId = containerId;
         this.pathCellsOrDescriptors = pathCellsOrDescriptors;
         this.neighborCells = neighborCells || [];
-        this.margin = { top: 10, right: 10, bottom: 30, left: 40 };
-        this.width = 500 - this.margin.left - this.margin.right;
-        this.height = 250 - this.margin.top - this.margin.bottom;
+    this.margin = { top: 10, right: 10, bottom: 30, left: 40 };
+    // 宽度改为在 render 时根据父容器自动计算；先设一个基准
+    this.baseWidth = 500;
+    this.width = null; // 延迟计算
+    this.height = 250 - this.margin.top - this.margin.bottom;
 
         // 颜色映射：优先与既有类型色一致，回退到 Category10
         this.typeColorMap = {
@@ -70,11 +72,21 @@ export class OverallCommChart {
         const { positions: data, keys } = await computeStackedSeries(this.pathCellsOrDescriptors, this.neighborCells);
 
         const container = d3.select(`#${this.containerId}`);
+        container
+            .style('position','relative')
+            .style('overflow','hidden'); // 避免 SVG 内容（旋转文字、描边）溢出
         container.selectAll('*').remove();
+
+        // 动态计算可用宽度（含 padding），不足时使用基准宽度
+        const bboxParent = container.node().parentNode?.getBoundingClientRect?.() || { width: this.baseWidth };
+        const bboxSelf = container.node().getBoundingClientRect();
+        const fullWidth = (bboxSelf.width > 40 ? bboxSelf.width : (bboxParent.width > 40 ? bboxParent.width : this.baseWidth));
+        this.width = fullWidth - this.margin.left - this.margin.right;
 
         const svg = container.append('svg')
             .attr('width', this.width + this.margin.left + this.margin.right)
-            .attr('height', this.height + this.margin.top + this.margin.bottom);
+            .attr('height', this.height + this.margin.top + this.margin.bottom)
+            .attr('class','overall-comm-svg');
 
         const g = svg.append('g')
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
@@ -88,7 +100,7 @@ export class OverallCommChart {
             .domain([0, d3.max(data, d => d3.sum(keys, k => +d[k] || 0)) || 1])
             .range([this.height, 0]);
 
-        // 生成堆叠层
+    // 生成堆叠层
         const stack = d3.stack()
             .keys(keys)
             .order(d3.stackOrderNone)

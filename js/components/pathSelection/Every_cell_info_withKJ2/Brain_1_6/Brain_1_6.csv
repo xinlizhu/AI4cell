@@ -1,0 +1,7 @@
+cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
+Brain,single_cluster,709,107.6,230.0,13.5,33.06
+Brain,target,16,98.8,240.3,0.0,0.0
+Cavity,single_cluster,144,107.7,240.5,8.9,23.72
+Mesenchyme,single_cluster,25,154.7,192.4,73.6,2.99
+Neural crest,single_cluster,55,142.0,197.5,60.8,19.06
+Sclerotome,single_cluster,10,150.2,192.7,70.1,1.84

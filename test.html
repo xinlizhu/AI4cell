@@ -14,7 +14,6 @@
             <div id="cellSelectionContainer" class="view-container">
                 <!-- CellSelection-test.js 的内容将在这里生成 -->
             </div>
-            <div class="panel-header">Path Pattern</div>
             <div id="pathPatternContainer" class="view-container">
                 <!-- PathPattern.js 的内容将在这里生成 -->
             </div>
@@ -31,11 +30,16 @@
 
         <!-- 右侧面板 -->
         <div class="right-panel">
+            <div class="panel-header">Neighbor Details</div>
             <div id="cellPositionContainer" class="view-container">
                 <!-- Cell Position Distribution内容 -->
             </div>
-            <div id="markerViewContainer" class="view-container">
+            <!-- <div id="markerViewContainer" class="view-container"> -->
                 <!-- Marker View内容 -->
+            <!-- </div> -->
+
+            <div id="neighborDetailsContainer" class="view-container" style="height:700px;min-height:700px;max-height:700px;display:flex;flex-direction:column;">
+                <!-- OverallCommChart 将在这里渲染 -->
             </div>
         </div>
 
@@ -49,5 +53,6 @@
     <script type="module" src="./js/components/pathSelection/LineageVis.js"></script>
     <script type="module" src="./js/components/rightPanel/CellPositionDistribution.js"></script>
     <script type="module" src="./js/components/rightPanel/MarkerView.js"></script>
+    <script type="module" src="./js/components/rightPanel/NeighborDetails.js"></script>
 </body>
 </html>

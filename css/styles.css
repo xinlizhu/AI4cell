@@ -6,6 +6,19 @@ body {
     color: #333;
 }
 
+/* 统一面板标题样式 */
+.panel-header {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    color: #222;
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+}
+
 /* 主容器，使用 flex 布局 */
 .main-container {
     display: flex;
@@ -26,7 +39,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex-grow: 1; /* 占据剩余空间 */
+    /* 取消占满剩余空间，避免把右侧面板挤远 */
+    flex: 0 0 auto;
 }
 
 /* 视图容器通用样式 */
@@ -46,8 +60,10 @@ body {
     flex-direction: column; /* 垂直排列：图表行在上方，表格在下方 */
     gap: 20px; /* 图表行和表格之间的间距 */
     align-items: flex-start;
-    min-height: 350px;
-    overflow-x: auto; /* 允许整个容器在内容超宽时水平滚动 */
+    min-height: 1025px;
+    width: 1250px; /* 固定宽度，避免清空后收缩成一条 */
+    min-width: 1250px; /* 防止在 flex 收缩时变窄 */
+    overflow-x: visible; /* 外层不强制滚动，滚动交给内部 zoom 容器 */
 }
 
 /* 【新增】图表行的容器 */
@@ -155,6 +171,21 @@ body {
     flex-shrink: 0;
 }
 
+/* 固定 Neighbor Overall Communication 容器高度 700 */
+#neighborDetailsContainer {
+    min-height: 700px;
+    max-height: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 固定 Cell Position Distribution 容器宽度 */
+#cellPositionContainer {
+    height: 290px;
+    flex: 0 0 290px; /* 防止被拉伸或收缩 */
+}
+
 /* Marker表格样式 */
 .marker-table th,
 .marker-table td {
@@ -169,7 +200,7 @@ body {
 
 
 #pathPatternContainer {
-    max-height: 1200px; /* 翻倍整体容器高度上限 */
+    max-height: 780px; /* 限制整体容器最大高度，原为1200 */
     overflow-y: auto;
     overflow-x: hidden; /* 不显示水平滚动条 */
 }
@@ -441,5 +472,24 @@ body {
 .node-bg {
     stroke: #333;
     stroke-width: 1px;
+}
+
+/* --- LineageVis 拖拽缩放容器样式增强 --- */
+.lineage-zoom-outer {
+    background: #fff;
+    user-select: none;
+    touch-action: none; /* 防止触摸浏览器默认滚动影响缩放 */
+    position: relative;
+    overflow: hidden; /* 由 JS 控制内部平移 */
+}
+.lineage-zoom-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+/* 在缩放时给一点平滑过渡（可选） */
+.lineage-zoom-inner.scaling-transition {
+    transition: transform 0.12s ease-out;
 }
 
