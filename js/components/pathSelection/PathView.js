@@ -1,5 +1,5 @@
 // 读取 CSV 文件
-const csvFilePath = './js/components/pathSelection/Path/paths_summary_KJ.csv';
+const csvFilePath = './js/components/pathSelection/Path/paths_summary_KJ_L4.csv';
 
 // 用于存储路径数据
 let pathsData = [];

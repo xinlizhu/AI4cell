@@ -10,10 +10,10 @@ from collections import defaultdict
 import os
 import warnings
 warnings.filterwarnings('ignore')
-level=6
+level=4
 class CellAnalyzer:
-    def __init__(self, base_path="F:/allCellChat_level6_withKJ/", 
-                 output_base="F:/2version/js/components/pathSelection/Every_cell_info_withKJ2"):
+    def __init__(self, base_path="F:/allCellChat_level4_withKJ/", 
+                 output_base="F:/2version/js/components/pathSelection/Every_cell_info_withKJL4"):
         self.base_path = base_path
         self.output_base = output_base
         
@@ -24,7 +24,7 @@ class CellAnalyzer:
         try:
             self.annotation_df = pd.read_csv('./KJ/cell_annotation_all.csv')
             self.embedding_df = pd.read_csv('./KJ/cell_embedding_info.csv')
-            self.embedding_names = pd.read_csv('./KJ/embedding_level6_names_only.csv')
+            self.embedding_names = pd.read_csv('./KJ/embedding_level4_names_only.csv')
             print(f"✅ 成功加载数据文件")
         except FileNotFoundError as e:
             print(f"❌ 无法找到文件: {e}")
@@ -455,9 +455,9 @@ class CellAnalyzer:
                 self.analyze_neighbors(cell_id, output_dir)
 
                 # analyze_neighbors
-                # # 3. 分析CellPhoneDB通讯
-                # print("📞 分析细胞通讯...")
-                # self.analyze_cellphone_channels(cell_id, output_dir)
+                # 3. 分析CellPhoneDB通讯
+                print("📞 分析细胞通讯...")
+                self.analyze_cellphone_channels(cell_id, output_dir)
                 
                 print(f"✅ {cell_id} 处理完成!")
                 processed_count += 1

@@ -1,9 +1,0 @@
-cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
-AGM,single_cluster,109,115.3,157.5,15.4,11.59
-Cavity,single_cluster,65,123.2,153.6,6.6,21.43
-Connective tissue,single_cluster,33,95.7,150.3,33.9,3.73
-Dermomyotome,single_cluster,252,121.8,155.4,8.7,19.91
-Liver,single_cluster,2,116.5,157.0,14.1,1.0
-Mesenchyme,single_cluster,121,139.1,159.7,12.6,19.74
-Mesenchyme,target,112,129.5,151.6,0.0,0.0
-Sclerotome,single_cluster,105,138.5,164.5,15.7,7.5

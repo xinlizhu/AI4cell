@@ -15,10 +15,10 @@ class NeighborDetailsPanel {
             .style('display','flex')
             .style('flex-direction','column')
             .style('gap','8px')
-            // 确保最小高度 700px（覆盖仅在 CSS 中设置不生效的情况）
-            .style('min-height','700px')
-            .style('max-height','700px')
-            .style('height','700px');
+            // 更新为固定高度 1000px
+            .style('min-height','1020px')
+            .style('max-height','1020px')
+            .style('height','1020px');
 
         this.container.append('h4')
             .style('margin','0')

@@ -1,7 +1,0 @@
-cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
-AGM,single_cluster,129,131.2,175.6,14.9,7.98
-Branchial arch,single_cluster,8,127.8,184.9,11.8,7.54
-Cavity,target,32,117.0,180.0,0.0,0.0
-Connective tissue,single_cluster,15,114.3,169.1,11.3,2.74
-Heart,single_cluster,364,116.4,182.9,2.9,10.93
-Liver,single_cluster,93,124.8,170.7,12.1,6.86

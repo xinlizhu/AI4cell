@@ -65,7 +65,7 @@ export class AreaChart {
                 };
 
                 for (const cellName of specificCells) {
-                    const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${cellName}/${cellName}_total.csv`;
+                    const totalPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${cellName}/${cellName}_total.csv`;
                     try {
                         const totalData = await d3.csv(totalPath, d3.autoType);
                         const neighborData = totalData.find(d => d.邻居细胞 && d.邻居细胞.toLowerCase() === this.neighborCellType.toLowerCase());

@@ -2,7 +2,7 @@ export class CellLocation {
     constructor(options = {}) {
         this.annotationPath = options.annotationPath || './js/components/KJ/cell_annotation_all.csv';
         this.embeddingPath = options.embeddingPath || './js/components/KJ/cell_embedding_info.csv';
-        this.embeddingLevel = options.embeddingLevel || 6;
+        this.embeddingLevel = options.embeddingLevel || 4;
         this.cache = {
             loaded: false,
             merged: [],

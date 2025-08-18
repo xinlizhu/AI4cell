@@ -1,48 +1,62 @@
 
-// 计算堆叠面积图数据：每个位置上，按邻居类型分解 (value = 发送总强度 + 接收总强度)
+// 计算上下两层堆叠面积图数据：上=接收(receive)，下=发送(send)
 async function computeStackedSeries(pathCellsOrDescriptors, neighborCells) {
-    // 统一为 {label, specificCells[]} 结构
     const descriptors = pathCellsOrDescriptors.map(item => (
         typeof item === 'string' ? { label: item, specificCells: [item] } : item
     ));
 
-    // 邻居集合：优先使用传入的列表，否则在扫描数据时动态汇总
     const neighborSet = new Set(Array.isArray(neighborCells) ? neighborCells : []);
-    const positions = [];
+    const receivePositions = []; // 每个位置：{ index, label, neighborA: recvVal, ... }
+    const sendPositions = [];    // 每个位置：{ index, label, neighborA: sendVal, ... }
 
     for (let i = 0; i < descriptors.length; i++) {
         const desc = descriptors[i];
-        const totals = {}; // { neighbor: value }
+        const totalsReceive = {}; // { neighbor: receiveVal }
+        const totalsSend = {};    // { neighbor: sendVal }
 
         for (const sc of desc.specificCells) {
-            const totalCsv = `./js/components/pathSelection/Every_cell_info_withKJ/${sc}/${sc}_total.csv`;
+            const totalCsv = `./js/components/pathSelection/Every_cell_info_withKJL4/${sc}/${sc}_total.csv`;
             try {
                 const rows = await d3.csv(totalCsv, d3.autoType);
                 for (const r of rows) {
                     const n = r['邻居细胞'];
                     if (!n) continue;
-                    if (neighborSet.size > 0 && !neighborSet.has(n)) continue; // 传入列表则过滤
-                    if (neighborSet.size === 0) neighborSet.add(n); // 动态收集
-                    const val = (+r['发送总强度'] || 0) + (+r['接收总强度'] || 0);
-                    totals[n] = (totals[n] || 0) + val;
+                    if (neighborSet.size > 0 && !neighborSet.has(n)) continue;
+                    if (neighborSet.size === 0) neighborSet.add(n);
+                    const sendVal = (+r['发送总强度'] || 0);
+                    const recvVal = (+r['接收总强度'] || 0);
+                    totalsSend[n] = (totalsSend[n] || 0) + sendVal;
+                    totalsReceive[n] = (totalsReceive[n] || 0) + recvVal;
                 }
             } catch (e) {
                 console.warn('读取失败（忽略该 specificCell）:', totalCsv, e);
             }
         }
 
-        // 保证所有邻居键存在（缺省为 0）
-        const posObj = { index: i, label: desc.label };
-        for (const n of neighborSet) posObj[n] = totals[n] || 0;
-        positions.push(posObj);
+        const recvObj = { index: i, label: desc.label };
+        const sendObj = { index: i, label: desc.label };
+        for (const n of neighborSet) {
+            recvObj[n] = totalsReceive[n] || 0;
+            sendObj[n] = totalsSend[n] || 0;
+        }
+        receivePositions.push(recvObj);
+        sendPositions.push(sendObj);
     }
 
-    // 将键按总量降序排序，便于更稳定的层叠展示
     const keys = Array.from(neighborSet);
-    const totalsByKey = new Map(keys.map(k => [k, d3.sum(positions, d => +d[k] || 0)]));
+    // 排序依据：接收+发送总量降序
+    const totalsByKey = new Map(keys.map(k => [k, (
+        d3.sum(receivePositions, d => +d[k] || 0) + d3.sum(sendPositions, d => +d[k] || 0)
+    )]));
     keys.sort((a, b) => (totalsByKey.get(b) || 0) - (totalsByKey.get(a) || 0));
 
-    return { positions, keys };
+    // 计算总体最大值用于 y 轴对称范围
+    const maxReceivePerPos = receivePositions.map(p => d3.sum(keys, k => +p[k] || 0));
+    const maxSendPerPos = sendPositions.map(p => d3.sum(keys, k => +p[k] || 0));
+    const maxReceiveTotal = d3.max(maxReceivePerPos) || 1;
+    const maxSendTotal = d3.max(maxSendPerPos) || 1;
+
+    return { receivePositions, sendPositions, keys, maxReceiveTotal, maxSendTotal };
 }
 
 export class OverallCommChart {
@@ -69,7 +83,7 @@ export class OverallCommChart {
     }
 
     async render(onClick) {
-        const { positions: data, keys } = await computeStackedSeries(this.pathCellsOrDescriptors, this.neighborCells);
+        const { receivePositions, sendPositions, keys, maxReceiveTotal, maxSendTotal } = await computeStackedSeries(this.pathCellsOrDescriptors, this.neighborCells);
 
         const container = d3.select(`#${this.containerId}`);
         container
@@ -92,23 +106,36 @@ export class OverallCommChart {
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
 
         const x = d3.scaleLinear()
-            .domain([0, Math.max(1, data.length - 1)])
+            .domain([0, Math.max(1, receivePositions.length - 1)])
             .range([0, this.width]);
-
-        // y 轴：堆叠后最大总量
+        // y 轴：中心 0，上正下负
         const y = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d3.sum(keys, k => +d[k] || 0)) || 1])
+            .domain([-maxSendTotal, maxReceiveTotal])
             .range([this.height, 0]);
-
-    // 生成堆叠层
-        const stack = d3.stack()
-            .keys(keys)
-            .order(d3.stackOrderNone)
-            .offset(d3.stackOffsetNone);
-        const series = stack(data);
-
-        // 面积生成器
-        const area = d3.area()
+        const centerY = y(0);
+        // 生成堆叠层（接收 & 发送）
+        const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
+        const receiveSeries = stack(receivePositions);
+        const sendSeriesRaw = stack(sendPositions);
+        // 将发送部分转换为负值区间
+        const sendSeries = sendSeriesRaw.map(layer => {
+            const negLayer = layer.map(seg => {
+                const arr = [ -seg[1], -seg[0] ]; // 负值区间
+                // 保留原来的 data 引用供 area 访问 d.data.index
+                arr.data = seg.data;
+                return arr;
+            });
+            negLayer.key = layer.key;
+            return negLayer;
+        });
+        // 面积生成器（上）
+        const areaReceive = d3.area()
+            .x(d => x(d.data.index))
+            .y0(d => y(d[0]))
+            .y1(d => y(d[1]))
+            .curve(d3.curveMonotoneX);
+        // 面积生成器（下）
+        const areaSend = d3.area()
             .x(d => x(d.data.index))
             .y0(d => y(d[0]))
             .y1(d => y(d[1]))
@@ -125,23 +152,71 @@ export class OverallCommChart {
             return this.scheme[idx];
         };
 
-        // 绘制各层
-        g.selectAll('.stack-layer')
-            .data(series)
+        // 绘制接收层（上半）
+        g.selectAll('.stack-layer-receive')
+            .data(receiveSeries)
             .enter()
             .append('path')
-            .attr('class', 'stack-layer')
-            .attr('d', area)
+            .attr('class', 'stack-layer-receive')
+            .attr('d', areaReceive)
             .attr('fill', s => colorFor(s.key))
-            .attr('fill-opacity', 0.9)
+            .attr('fill-opacity', 0.95)
+            .attr('stroke', 'white')
+            .attr('stroke-width', 1);
+        // 绘制发送层（下半）
+        g.selectAll('.stack-layer-send')
+            .data(sendSeries)
+            .enter()
+            .append('path')
+            .attr('class', 'stack-layer-send')
+            .attr('d', areaSend)
+            .attr('fill', s => colorFor(s.key))
+            .attr('fill-opacity', 0.55)
             .attr('stroke', 'white')
             .attr('stroke-width', 1);
 
+        // 计算总接收/总发送用于叠加折线
+        const receiveTotals = receivePositions.map(p => ({ index: p.index, total: d3.sum(keys, k => +p[k] || 0) }));
+        const sendTotals = sendPositions.map(p => ({ index: p.index, total: d3.sum(keys, k => +p[k] || 0) }));
+
+        const lineReceive = d3.line()
+            .x(d => x(d.index))
+            .y(d => y(d.total))
+            .curve(d3.curveMonotoneX);
+        const lineSend = d3.line()
+            .x(d => x(d.index))
+            .y(d => y(-d.total))
+            .curve(d3.curveMonotoneX);
+
+        g.append('path')
+            .attr('class','total-line receive')
+            .attr('d', lineReceive(receiveTotals))
+            .attr('fill','none')
+            .attr('stroke','#222')
+            .attr('stroke-width',1.5);
+        g.append('path')
+            .attr('class','total-line send')
+            .attr('d', lineSend(sendTotals))
+            .attr('fill','none')
+            .attr('stroke','#222')
+            .attr('stroke-width',1.5)
+            .attr('stroke-dasharray','4,3');
+
+        // 中心 0 轴
+        g.append('line')
+            .attr('x1', 0)
+            .attr('x2', this.width)
+            .attr('y1', centerY)
+            .attr('y2', centerY)
+            .attr('stroke', '#555')
+            .attr('stroke-width', 1)
+            .attr('stroke-dasharray','2,2');
+
         const xAxis = d3.axisBottom(x)
-            .tickValues(data.map(d => d.index))
+            .tickValues(receivePositions.map(d => d.index))
             .tickFormat(i => {
                 const idx = Math.round(i);
-                return data[idx] ? data[idx].label : `${idx}`;
+                return receivePositions[idx] ? receivePositions[idx].label : `${idx}`;
             });
 
         g.append('g')
@@ -166,19 +241,43 @@ export class OverallCommChart {
             .style('font-size', '11px')
           : tooltip;
 
-        // 悬浮交互（逐层）
-        g.selectAll('.stack-layer')
-            .on('mousemove', (event, layer) => {
-                const [mx] = d3.pointer(event, g.node());
-                const i = Math.round(x.invert(mx));
-                const d = data[Math.max(0, Math.min(data.length - 1, i))];
-                const val = +d[layer.key] || 0;
-                tip.style('opacity', 1)
-                   .style('left', (event.pageX + 10) + 'px')
-                   .style('top', (event.pageY - 24) + 'px')
-                   .html(`<strong>${layer.key}</strong><br/>总强度: ${val.toFixed(3)}`);
-            })
-            .on('mouseout', () => tip.style('opacity', 0));
+        // 悬浮交互：区分上下
+        const bindHover = (selector, isReceive) => {
+            g.selectAll(selector)
+                .on('mousemove', (event, layer) => {
+                    const [mx] = d3.pointer(event, g.node());
+                    const i = Math.round(x.invert(mx));
+                    const idx = Math.max(0, Math.min(receivePositions.length - 1, i));
+                    const dRecv = receivePositions[idx];
+                    const dSend = sendPositions[idx];
+                    const val = isReceive ? (+dRecv[layer.key] || 0) : (+dSend[layer.key] || 0);
+                    tip.style('opacity', 1)
+                        .style('left', (event.pageX + 10) + 'px')
+                        .style('top', (event.pageY - 24) + 'px')
+                        .html(`<strong>${layer.key}</strong><br/>${isReceive?'接收':'发送'}强度: ${val.toFixed(3)}`);
+                })
+                .on('mouseout', () => tip.style('opacity', 0));
+        };
+        bindHover('.stack-layer-receive', true);
+        bindHover('.stack-layer-send', false);
+
+        // 总量折线悬浮提示
+        const bindTotalHover = (selector, isReceive) => {
+            g.selectAll(selector)
+                .on('mousemove', (event) => {
+                    const [mx] = d3.pointer(event, g.node());
+                    const i = Math.round(x.invert(mx));
+                    const idx = Math.max(0, Math.min(receivePositions.length - 1, i));
+                    const val = isReceive ? receiveTotals[idx].total : sendTotals[idx].total;
+                    tip.style('opacity', 1)
+                        .style('left', (event.pageX + 10) + 'px')
+                        .style('top', (event.pageY - 24) + 'px')
+                        .html(`<strong>${isReceive?'总接收':'总发送'}强度</strong><br/>值: ${val.toFixed(3)}`);
+                })
+                .on('mouseout', () => tip.style('opacity', 0));
+        };
+        bindTotalHover('.total-line.receive', true);
+        bindTotalHover('.total-line.send', false);
 
         // 交互：点击整体图，触发回调在右侧展示详细（保持原行为）
         if (typeof onClick === 'function') {

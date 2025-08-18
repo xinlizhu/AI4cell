@@ -1,0 +1,19 @@
+start,end,path_num,path_length
+AGM,Heart,2,5.5
+Brain,Brain,8,5.75
+Brain,Cavity,3,5.33
+Brain,Notochord,1,4.0
+Branchial arch,Brain,4,6.0
+Branchial arch,Cavity,1,6.0
+Branchial arch,Neural crest,2,5.0
+Cavity,Brain,2,6.0
+Dermomyotome,Mesenchyme,2,4.5
+Dermomyotome,Neural crest,2,6.0
+Mesenchyme,Brain,13,5.54
+Mesenchyme,Cavity,1,5.0
+Mesenchyme,Neural crest,2,4.0
+Neural crest,Brain,2,5.0
+Sclerotome,Connective tissue,2,5.5
+Sclerotome,Dermomyotome,2,5.5
+Sclerotome,Mesenchyme,1,6.0
+Sclerotome,Neural crest,1,6.0

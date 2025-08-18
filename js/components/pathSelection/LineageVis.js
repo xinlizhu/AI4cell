@@ -1082,7 +1082,7 @@ class LineageVis {
             const specificCells = typeof item === 'string' ? [item] : (item.specificCells || []);
             for (const cellName of specificCells) {
                 try {
-                    const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${cellName}/${cellName}_total.csv`;
+                    const totalPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${cellName}/${cellName}_total.csv`;
                     const totalData = await d3.csv(totalPath, d3.autoType);
                     totalData.forEach(d => {
                         if (d.邻居细胞 && !String(d.邻居细胞).endsWith('Target')) {
@@ -1103,7 +1103,7 @@ class LineageVis {
                 const specificCells = typeof item === 'string' ? [item] : (item.specificCells || []);
                 for (const cellName of specificCells) {
                     try {
-                        const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${cellName}/${cellName}_total.csv`;
+                        const totalPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${cellName}/${cellName}_total.csv`;
                         const totalData = await d3.csv(totalPath, d3.autoType);
                         const neighborData = totalData.find(d => d.邻居细胞 === neighborType);
                         if (neighborData) {

@@ -1,5 +1,0 @@
-cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
-Brain,target,10,92.8,214.3,0.0,0.0
-Branchial arch,single_cluster,3,106.3,208.7,14.7,1.14
-Cavity,single_cluster,49,94.5,216.4,2.7,15.32
-Neural crest,single_cluster,293,95.5,211.3,4.0,13.38

@@ -1,0 +1,8 @@
+cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
+AGM,single_cluster,2,124.5,194.5,20.5,1.41
+Brain,single_cluster,228,130.0,213.0,8.6,15.91
+Branchial arch,single_cluster,95,122.6,199.4,15.4,7.72
+Cavity,single_cluster,213,120.6,229.0,14.2,12.37
+Neural crest,single_cluster,341,116.5,213.1,5.3,18.77
+Notochord,single_cluster,137,115.3,222.5,9.9,17.61
+Notochord,target,99,121.6,214.8,0.0,0.0

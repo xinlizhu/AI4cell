@@ -1,0 +1,141 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.174,0.009
+AGM,发送,2,NTN1_UNC5B,Notochord,NTN1,UNC5B,1.137,0.004
+AGM,发送,3,FN1_integrin_aVb5_complex,Notochord,FN1,integrin,0.97,0.006
+AGM,发送,4,APP_FPR2,Notochord,APP,FPR2,0.945,0.023
+AGM,发送,5,FN1_integrin_aVb3_complex,Notochord,FN1,integrin,0.882,0.0
+AGM,发送,6,VTN_integrin_aVb1_complex,Notochord,VTN,integrin,0.879,0.004
+AGM,发送,7,SHH_HHIP,Notochord,SHH,HHIP,0.87,0.001
+AGM,发送,8,SHH_PTCH_BOC_transmembrane_receptor,Notochord,SHH,PTCH,0.85,0.001
+AGM,发送,9,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,SHH,PTCH,0.85,0.013
+AGM,发送,10,CDH6_CDH6,Notochord,CDH6,CDH6,0.827,0.041
+AGM,接收,1,IGF2_IGF1R,Notochord,IGF1R,IGF2,2.061,0.004
+AGM,接收,2,IGF2_IGF2R,Notochord,IGF2R,IGF2,1.87,0.011
+AGM,接收,3,COL3A1_ADGRG1,Notochord,ADGRG1,COL3A1,1.433,0.018
+AGM,接收,4,COL3A1_integrin_a1b1_complex,Notochord,integrin,COL3A1,1.26,0.027
+AGM,接收,5,COL3A1_integrin_a11b1_complex,Notochord,integrin,COL3A1,1.256,0.03
+AGM,接收,6,FN1_integrin_aVb1_complex,Notochord,integrin,FN1,1.18,0.042
+AGM,接收,7,NECTIN2_NECTIN3,Notochord,NECTIN3,NECTIN2,0.904,0.041
+AGM,接收,8,CDH6_CDH6,Notochord,CDH6,CDH6,0.827,0.041
+AGM,接收,9,JAG1_NOTCH2,Notochord,NOTCH2,JAG1,0.739,0.019
+AGM,接收,10,COL9A1_integrin_a1b1_complex,Notochord,integrin,COL9A1,0.586,0.033
+Brain,发送,1,SLIT2_ROBO1,Notochord,SLIT2,ROBO1,1.281,0.0
+Brain,发送,2,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.127,0.0
+Brain,发送,3,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,SHH,PTCH,1.065,0.0
+Brain,发送,4,NTN1_DCC,Notochord,NTN1,DCC,1.024,0.0
+Brain,发送,5,WNT5A_SFRP1,Notochord,WNT5A,SFRP1,0.929,0.0
+Brain,发送,6,2arachidonoylglycerol_byDAGLB_CNR1,Notochord,2arachidonoylglycerol,byDAGLB,0.908,0.0
+Brain,发送,7,WNT5A_SFRP2,Notochord,WNT5A,SFRP2,0.899,0.0
+Brain,发送,8,CDH2_CDH2,Notochord,CDH2,CDH2,0.878,0.0
+Brain,发送,9,SHH_PTCH_BOC_transmembrane_receptor,Notochord,SHH,PTCH,0.853,0.0
+Brain,发送,10,COL3A1_ADGRG1,Notochord,COL3A1,ADGRG1,0.843,0.001
+Brain,接收,1,PPIA_BSG,Notochord,BSG,PPIA,1.28,0.0
+Brain,接收,2,CADM1_NECTIN3,Notochord,NECTIN3,CADM1,0.998,0.0
+Brain,接收,3,CDH2_CDH2,Notochord,CDH2,CDH2,0.878,0.0
+Brain,接收,4,CADM1_CADM1,Notochord,CADM1,CADM1,0.83,0.001
+Brain,接收,5,LRRC4C_PTPRF,Notochord,PTPRF,LRRC4C,0.803,0.05
+Brain,接收,6,LRRC4B_PTPRF,Notochord,PTPRF,LRRC4B,0.788,0.026
+Brain,接收,7,JAM3_JAM3,Notochord,JAM3,JAM3,0.728,0.0
+Brain,接收,8,NECTIN1_NECTIN3,Notochord,NECTIN3,NECTIN1,0.702,0.0
+Brain,接收,9,TENM3_ADGRL2,Notochord,ADGRL2,TENM3,0.691,0.0
+Brain,接收,10,NECTIN2_NECTIN3,Notochord,NECTIN3,NECTIN2,0.686,0.0
+Branchial arch,发送,1,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.275,0.0
+Branchial arch,发送,2,SLIT2_ROBO1,Notochord,SLIT2,ROBO1,1.21,0.0
+Branchial arch,发送,3,IGF2_IGF2R,Notochord,IGF2,IGF2R,1.162,0.02
+Branchial arch,发送,4,NTN1_UNC5C,Notochord,NTN1,UNC5C,1.145,0.0
+Branchial arch,发送,5,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,SHH,PTCH,0.945,0.0
+Branchial arch,发送,6,NTN1_UNC5B,Notochord,NTN1,UNC5B,0.924,0.0
+Branchial arch,发送,7,SHH_PTCH_CDON_transmembrane_receptor,Notochord,SHH,PTCH,0.858,0.0
+Branchial arch,发送,8,SHH_HHIP,Notochord,SHH,HHIP,0.837,0.0
+Branchial arch,发送,9,FN1_integrin_aVb1_complex,Notochord,FN1,integrin,0.825,0.002
+Branchial arch,发送,10,FN1_integrin_aVb5_complex,Notochord,FN1,integrin,0.818,0.0
+Branchial arch,接收,1,IGF2_IGF1R,Notochord,IGF1R,IGF2,1.964,0.0
+Branchial arch,接收,2,IGF2_IGF2R,Notochord,IGF2R,IGF2,1.772,0.0
+Branchial arch,接收,3,DLK1_NOTCH2,Notochord,NOTCH2,DLK1,1.299,0.0
+Branchial arch,接收,4,MDK_PTPRZ1,Notochord,PTPRZ1,MDK,1.248,0.0
+Branchial arch,接收,5,DLK1_NOTCH1,Notochord,NOTCH1,DLK1,1.248,0.0
+Branchial arch,接收,6,PPIA_BSG,Notochord,BSG,PPIA,1.209,0.002
+Branchial arch,接收,7,DLK1_NOTCH3,Notochord,NOTCH3,DLK1,1.135,0.0
+Branchial arch,接收,8,FN1_integrin_aVb1_complex,Notochord,integrin,FN1,0.986,0.0
+Branchial arch,接收,9,COL3A1_ADGRG1,Notochord,ADGRG1,COL3A1,0.884,0.0
+Branchial arch,接收,10,CADM1_NECTIN3,Notochord,NECTIN3,CADM1,0.861,0.0
+Cavity,发送,1,SLIT2_ROBO1,Notochord,SLIT2,ROBO1,1.105,0.0
+Cavity,发送,2,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.086,0.0
+Cavity,发送,3,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,SHH,PTCH,0.891,0.0
+Cavity,发送,4,SHH_PTCH_CDON_transmembrane_receptor,Notochord,SHH,PTCH,0.859,0.0
+Cavity,发送,5,NTN1_DCC,Notochord,NTN1,DCC,0.736,0.0
+Cavity,发送,6,NTN1_UNC5C,Notochord,NTN1,UNC5C,0.719,0.0
+Cavity,发送,7,EFNB3_EPHB2,Notochord,EFNB3,EPHB2,0.697,0.0
+Cavity,发送,8,NTN1_UNC5B,Notochord,NTN1,UNC5B,0.694,0.0
+Cavity,发送,9,WNT5A_SFRP1,Notochord,WNT5A,SFRP1,0.678,0.023
+Cavity,发送,10,CDH2_CDH2,Notochord,CDH2,CDH2,0.665,0.026
+Cavity,接收,1,PPIA_BSG,Notochord,BSG,PPIA,1.237,0.0
+Cavity,接收,2,CADM1_NECTIN3,Notochord,NECTIN3,CADM1,0.82,0.0
+Cavity,接收,3,NECTIN1_NECTIN3,Notochord,NECTIN3,NECTIN1,0.676,0.0
+Cavity,接收,4,NECTIN2_NECTIN3,Notochord,NECTIN3,NECTIN2,0.676,0.0
+Cavity,接收,5,CDH2_CDH2,Notochord,CDH2,CDH2,0.665,0.026
+Cavity,接收,6,CDH6_CDH6,Notochord,CDH6,CDH6,0.589,0.0
+Cavity,接收,7,EFNB3_EPHB2,Notochord,EPHB2,EFNB3,0.579,0.005
+Cavity,接收,8,JAM2_JAM3,Notochord,JAM3,JAM2,0.536,0.0
+Cavity,接收,9,VTN_integrin_aVb1_complex,Notochord,integrin,VTN,0.513,0.0
+Cavity,接收,10,TENM4_ADGRL3,Notochord,ADGRL3,TENM4,0.479,0.03
+Neural crest,发送,1,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.224,0.0
+Neural crest,发送,2,SLIT2_ROBO1,Notochord,SLIT2,ROBO1,1.198,0.0
+Neural crest,发送,3,NTN1_UNC5C,Notochord,NTN1,UNC5C,0.901,0.0
+Neural crest,发送,4,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,SHH,PTCH,0.87,0.0
+Neural crest,发送,5,CADM1_CADM1,Notochord,CADM1,CADM1,0.834,0.001
+Neural crest,发送,6,SHH_PTCH_CDON_transmembrane_receptor,Notochord,SHH,PTCH,0.813,0.0
+Neural crest,发送,7,NTN1_UNC5B,Notochord,NTN1,UNC5B,0.774,0.0
+Neural crest,发送,8,FN1_integrin_aVb5_complex,Notochord,FN1,integrin,0.769,0.001
+Neural crest,发送,9,COL4A1_integrin_a1b1_complex,Notochord,COL4A1,integrin,0.716,0.0
+Neural crest,发送,10,NTN1_DCC,Notochord,NTN1,DCC,0.712,0.0
+Neural crest,接收,1,IGF2_IGF1R,Notochord,IGF1R,IGF2,1.686,0.0
+Neural crest,接收,2,IGF2_IGF2R,Notochord,IGF2R,IGF2,1.494,0.0
+Neural crest,接收,3,COL3A1_ADGRG1,Notochord,ADGRG1,COL3A1,1.129,0.0
+Neural crest,接收,4,CADM1_NECTIN3,Notochord,NECTIN3,CADM1,1.003,0.0
+Neural crest,接收,5,COL3A1_integrin_a1b1_complex,Notochord,integrin,COL3A1,0.956,0.0
+Neural crest,接收,6,COL3A1_integrin_a11b1_complex,Notochord,integrin,COL3A1,0.952,0.0
+Neural crest,接收,7,DLK1_NOTCH2,Notochord,NOTCH2,DLK1,0.885,0.0
+Neural crest,接收,8,CADM1_CADM1,Notochord,CADM1,CADM1,0.834,0.001
+Neural crest,接收,9,DLK1_NOTCH1,Notochord,NOTCH1,DLK1,0.834,0.0
+Neural crest,接收,10,NECTIN2_NECTIN3,Notochord,NECTIN3,NECTIN2,0.83,0.0
+Notochord,发送,1,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.14,0.0
+Notochord,发送,2,SLIT2_ROBO1,Notochord,SLIT2,ROBO1,1.138,0.0
+Notochord,发送,3,CADM1_NECTIN3,Notochord,CADM1,NECTIN3,1.002,0.0
+Notochord,发送,4,CDH2_CDH2,Notochord,CDH2,CDH2,0.889,0.0
+Notochord,发送,5,CDH6_CDH6,Notochord,CDH6,CDH6,0.884,0.0
+Notochord,发送,6,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,SHH,PTCH,0.873,0.0
+Notochord,发送,7,SHH_PTCH_CDON_transmembrane_receptor,Notochord,SHH,PTCH,0.847,0.0
+Notochord,发送,8,COL3A1_ADGRG1,Notochord,COL3A1,ADGRG1,0.84,0.0
+Notochord,发送,9,CADM1_CADM1,Notochord,CADM1,CADM1,0.833,0.04
+Notochord,发送,10,FN1_integrin_aVb1_complex,Notochord,FN1,integrin,0.826,0.002
+Notochord,接收,1,SLIT2_ROBO2,Notochord,ROBO2,SLIT2,1.14,0.0
+Notochord,接收,2,SLIT2_ROBO1,Notochord,ROBO1,SLIT2,1.138,0.0
+Notochord,接收,3,CADM1_NECTIN3,Notochord,NECTIN3,CADM1,1.002,0.0
+Notochord,接收,4,CDH2_CDH2,Notochord,CDH2,CDH2,0.889,0.0
+Notochord,接收,5,CDH6_CDH6,Notochord,CDH6,CDH6,0.884,0.0
+Notochord,接收,6,SHH_PTCH_GAS1_transmembrane_receptor,Notochord,PTCH,SHH,0.873,0.0
+Notochord,接收,7,SHH_PTCH_CDON_transmembrane_receptor,Notochord,PTCH,SHH,0.847,0.0
+Notochord,接收,8,COL3A1_ADGRG1,Notochord,ADGRG1,COL3A1,0.84,0.0
+Notochord,接收,9,CADM1_CADM1,Notochord,CADM1,CADM1,0.833,0.04
+Notochord,接收,10,FN1_integrin_aVb1_complex,Notochord,integrin,FN1,0.826,0.002
+Notochord_1_5_Target,发送,1,SLIT2_ROBO1,Notochord,SLIT2,ROBO1,1.147,0.0
+Notochord_1_5_Target,发送,2,WNT5A_SFRP1,Notochord,WNT5A,SFRP1,1.136,0.0
+Notochord_1_5_Target,发送,3,SLIT2_ROBO2,Notochord,SLIT2,ROBO2,1.092,0.0
+Notochord_1_5_Target,发送,4,COL3A1_ADGRG1,Notochord,COL3A1,ADGRG1,1.049,0.0
+Notochord_1_5_Target,发送,5,CADM1_NECTIN3,Notochord,CADM1,NECTIN3,0.989,0.0
+Notochord_1_5_Target,发送,6,LRRC4C_PTPRF,Notochord,LRRC4C,PTPRF,0.978,0.0
+Notochord_1_5_Target,发送,7,LRFN4_PTPRF,Notochord,LRFN4,PTPRF,0.971,0.0
+Notochord_1_5_Target,发送,8,WNT5B_SFRP1,Notochord,WNT5B,SFRP1,0.958,0.0
+Notochord_1_5_Target,发送,9,CDH2_CDH2,Notochord,CDH2,CDH2,0.908,0.0
+Notochord_1_5_Target,发送,10,JAM3_JAM3,Notochord,JAM3,JAM3,0.837,0.0
+Notochord_1_5_Target,接收,1,PPIA_BSG,Notochord,BSG,PPIA,1.214,0.0
+Notochord_1_5_Target,接收,2,MDK_PTPRZ1,Notochord,PTPRZ1,MDK,1.099,0.005
+Notochord_1_5_Target,接收,3,FN1_integrin_aVb1_complex,Notochord,integrin,FN1,0.997,0.0
+Notochord_1_5_Target,接收,4,CADM1_NECTIN3,Notochord,NECTIN3,CADM1,0.923,0.0
+Notochord_1_5_Target,接收,5,CDH2_CDH2,Notochord,CDH2,CDH2,0.908,0.0
+Notochord_1_5_Target,接收,6,NTN1_DCC,Notochord,DCC,NTN1,0.888,0.0
+Notochord_1_5_Target,接收,7,FN1_integrin_aVb5_complex,Notochord,integrin,FN1,0.872,0.0
+Notochord_1_5_Target,接收,8,EFNB3_EPHB2,Notochord,EPHB2,EFNB3,0.866,0.0
+Notochord_1_5_Target,接收,9,FN1_integrin_a11b1_complex,Notochord,integrin,FN1,0.852,0.0
+Notochord_1_5_Target,接收,10,NTN1_UNC5B,Notochord,UNC5B,NTN1,0.85,0.0

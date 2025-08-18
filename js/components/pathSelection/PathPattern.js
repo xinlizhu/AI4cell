@@ -7,8 +7,8 @@ class PathPattern {
             console.error(`Container ${containerId} not found.`);
             return;
         }
-        this.csvFilePath = './js/components/pathSelection/Path/path_analysis_results_KJ.csv';
-        this.pathsSummaryPath = './js/components/pathSelection/Path/paths_summary_KJ.csv';
+        this.csvFilePath = './js/components/pathSelection/Path/path_analysis_results_KJ_L4.csv';
+        this.pathsSummaryPath = './js/components/pathSelection/Path/paths_summary_KJ_L4.csv';
         this.allPatterns = [];
         this.allPaths = [];
         this.selectedCells = [];

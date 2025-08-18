@@ -109,8 +109,8 @@ export class LineageChart {
         const cellAll = [];
         for (const cell of this.detailedPaths) {
             try {
-                const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${cell}/${cell}_total.csv`;
-                const cellPath = `./js/components/pathSelection/Every_cell_info_withKJ2/${cell}/${cell}.csv`;
+                const totalPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${cell}/${cell}_total.csv`;
+                const cellPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${cell}/${cell}.csv`;
                 const totalData = await d3.csv(totalPath, d3.autoType);
                 const cellData = await d3.csv(cellPath, d3.autoType);
                 totalAll.push(...totalData);
@@ -153,8 +153,8 @@ export class LineageChart {
 
         for (const specificCellName of specificCellNames) {
             try {
-                const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${specificCellName}/${specificCellName}_total.csv`;
-                const cellPath = `./js/components/pathSelection/Every_cell_info_withKJ/${specificCellName}/${specificCellName}.csv`;
+                const totalPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${specificCellName}/${specificCellName}_total.csv`;
+                const cellPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${specificCellName}/${specificCellName}.csv`;
 
                 const totalData = await d3.csv(totalPath, d3.autoType);
                 const cellData = await d3.csv(cellPath, d3.autoType);
@@ -178,8 +178,8 @@ export class LineageChart {
 
     async loadSingleData() {
         // 原有的加载逻辑
-        const totalPath = `./js/components/pathSelection/Every_cell_info_withKJ/${this.cellName}/${this.cellName}_total.csv`;
-        const cellPath = `./js/components/pathSelection/Every_cell_info_withKJ/${this.cellName}/${this.cellName}.csv`;
+        const totalPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${this.cellName}/${this.cellName}_total.csv`;
+        const cellPath = `./js/components/pathSelection/Every_cell_info_withKJL4/${this.cellName}/${this.cellName}.csv`;
 
         const totalData = await d3.csv(totalPath, d3.autoType);
         const cellData = await d3.csv(cellPath, d3.autoType);
@@ -440,7 +440,7 @@ export class LineageChart {
         // 使用 CellLocation 渲染迷你位置散点（固定 L6）
         try {
             if (!LineageChart._cellLocation) {
-                LineageChart._cellLocation = new CellLocation({ embeddingLevel: 6 });
+                LineageChart._cellLocation = new CellLocation({ embeddingLevel: 4 });
             }
             // 计算该位置具体细胞集合
             let specificCells = [];

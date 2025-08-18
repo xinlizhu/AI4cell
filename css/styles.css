@@ -171,11 +171,11 @@ body {
     flex-shrink: 0;
 }
 
-/* 固定 Neighbor Overall Communication 容器高度 700 */
+/* 固定 Neighbor Overall Communication 容器高度 1000 */
 #neighborDetailsContainer {
-    min-height: 700px;
-    max-height: 700px;
-    height: 700px;
+    min-height: 1000px;
+    max-height: 1000px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
 }

@@ -90,7 +90,7 @@ export class MarkerView {
     async loadAndRenderData(neighborCell, communicationType) {
         if (!this.cellName) return;
 
-        const filePath = `./js/components/pathSelection/Every_cell_info_withKJ/${this.cellName}/${this.cellName}_every_top_10_new.csv`;
+        const filePath = `./js/components/pathSelection/Every_cell_info_withKJL4/${this.cellName}/${this.cellName}_every_top_10_new.csv`;
         
         try {
             let allData;
