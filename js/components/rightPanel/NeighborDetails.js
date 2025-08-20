@@ -62,8 +62,10 @@ class NeighborDetailsPanel {
     appendChart(descriptors, neighborCells) {
         this.chartCount += 1;
     if (this.emptyState) { this.emptyState.remove(); this.emptyState = null; }
+        const pathKey = descriptors.map(d=>d.label).join('->');
         const wrap = this.list.append('div')
             .attr('class','neighbor-chart-wrapper')
+            .attr('data-path-key', pathKey)
             .style('position','relative')
             .style('border','1px solid #ddd')
             .style('border-radius','8px')
@@ -103,6 +105,9 @@ class NeighborDetailsPanel {
     wrap.append('div').attr('id', chartId).style('width','100%');
         const chart = new OverallCommChart(chartId, descriptors, neighborCells);
         chart.render(()=>{});
+
+    // 通知可能的连线管理器重新绘制
+    document.dispatchEvent(new CustomEvent('neighborChartAdded', { detail: { pathKey, wrapper: wrap.node() } }));
     }
 }
 

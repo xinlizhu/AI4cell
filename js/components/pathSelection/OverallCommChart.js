@@ -202,16 +202,6 @@ export class OverallCommChart {
             .attr('stroke-width',1.5)
             .attr('stroke-dasharray','4,3');
 
-        // 中心 0 轴
-        g.append('line')
-            .attr('x1', 0)
-            .attr('x2', this.width)
-            .attr('y1', centerY)
-            .attr('y2', centerY)
-            .attr('stroke', '#555')
-            .attr('stroke-width', 1)
-            .attr('stroke-dasharray','2,2');
-
         const xAxis = d3.axisBottom(x)
             .tickValues(receivePositions.map(d => d.index))
             .tickFormat(i => {
@@ -219,10 +209,13 @@ export class OverallCommChart {
                 return receivePositions[idx] ? receivePositions[idx].label : `${idx}`;
             });
 
-        g.append('g')
-            .attr('transform', `translate(0,${this.height})`)
-            .call(xAxis)
-            .selectAll('text')
+        const xAxisG = g.append('g')
+            .attr('transform', `translate(0,${centerY})`)
+            .call(xAxis);
+        xAxisG.select('.domain')
+            .attr('stroke', '#555')
+            .attr('stroke-width', 1); // 实线
+        xAxisG.selectAll('text')
             .style('font-size', '10px')
             .attr('text-anchor', 'end')
             .attr('transform', 'rotate(-30)');
