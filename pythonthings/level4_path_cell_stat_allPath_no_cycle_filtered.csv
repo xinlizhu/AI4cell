@@ -1,0 +1,32 @@
+start,end,value
+Neural crest_1_17,Neural crest_1_15,170
+Neural crest_1_15,Neural crest_1_14,145
+Neural crest_1_14,Brain_1_6,100
+Brain_1_6,Brain_1_0,367
+Neural crest_1_15,Neural crest_1_7,145
+Neural crest_1_7,Neural crest_1_3,128
+Neural crest_1_3,Brain_1_1,120
+Neural crest_1_3,Neural crest_1_2,120
+Brain_1_6,Brain_1_4,367
+Brain_1_6,Notochord_1_5,367
+Neural crest_1_14,Brain_1_13,100
+Brain_1_13,Cavity_1_12,208
+Cavity_1_12,Cavity_1_8,168
+Cavity_1_12,Cavity_1_9,168
+Cavity_1_8,Cavity_1_10,84
+Cavity_1_10,Cavity_1_11,56
+Neural crest_1_17,Branchial arch_1_16,170
+Branchial arch_1_16,Heart_1_18,77
+Heart_1_18,Cavity_1_19,373
+Cavity_1_10,Cavity_1_20,56
+Cavity_1_20,Cavity_1_21,51
+Cavity_1_20,Cavity_1_22,51
+Cavity_1_20,Mesenchyme_1_23,51
+Neural crest_1_17,Neural crest_1_25,170
+Neural crest_1_25,AGM_1_24,144
+AGM_1_24,Dermomyotome_1_26,151
+Neural crest_1_25,Mesenchyme_1_27,144
+AGM_1_24,AGM_1_29,151
+AGM_1_29,Dermomyotome_1_28,177
+Heart_1_18,Connective tissue_1_30,373
+Cavity_1_19,Connective tissue_1_31,190

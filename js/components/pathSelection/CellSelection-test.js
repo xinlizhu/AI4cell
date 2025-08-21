@@ -44,7 +44,11 @@ class CellSelectionTest {
                     time1: parseInt(values[1]),
                     time2: parseInt(values[2]),
                     total: parseInt(values[3]),
-                    ratio: parseFloat(values[4])
+                    ratio: parseFloat(values[4]),
+                    out: parseInt(values[5]),
+                    in: parseInt(values[6]),
+                    outtype: parseInt(values[7]),
+                    intype: parseInt(values[8])
                 };
             });
 
@@ -91,24 +95,36 @@ class CellSelectionTest {
 
         const itemsUpdate = itemsEnter.merge(items);
 
-        itemsUpdate.selectAll('.cell-color').remove();
-        itemsUpdate.selectAll('.cell-name').remove();
-        itemsUpdate.selectAll('.cell-percentage').remove();
+        // 清空并重新构建内部结构（两行卡片）
+        itemsUpdate.html('');
 
-        itemsUpdate.append('div')
+        const row1 = itemsUpdate.append('div')
+            .attr('class', 'cell-row1');
+
+        row1.append('div')
             .attr('class', 'cell-color')
             .style('background-color', d => this.colors[d.annotation] || '#999');
 
-        itemsUpdate.append('div')
+        row1.append('div')
             .attr('class', 'cell-name')
             .text(d => d.annotation);
 
-        itemsUpdate.append('div')
+        row1.append('div')
             .attr('class', 'cell-percentage')
             .text(d => `${(d.ratio * 100).toFixed(1)}%`);
 
+        const row2 = itemsUpdate.append('div')
+            .attr('class', 'cell-row2');
 
-        
+        const metrics = ['out','in','outtype','intype'];
+        const labels = { out: 'O', in: 'I', outtype: 'oT', intype: 'iT' };
+        row2.selectAll('.cell-metric')
+            .data(d => metrics.map(k => ({ key: k, value: d[k] })))
+            .enter()
+            .append('div')
+            .attr('class', 'cell-metric')
+            .attr('title', m => `${labels[m.key]}: ${m.value}`)
+            .text(m => `${labels[m.key]}:${m.value}`);
 
         items.exit().remove();
         this.updateSelection();

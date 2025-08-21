@@ -112,7 +112,8 @@ export class OverallCommChart {
         const y = d3.scaleLinear()
             .domain([-maxSendTotal, maxReceiveTotal])
             .range([this.height, 0]);
-        const centerY = y(0);
+    const centerY = y(0);
+    const gapPx = 4; // 中轴到上下区域各留 2 像素空隙
         // 生成堆叠层（接收 & 发送）
         const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
         const receiveSeries = stack(receivePositions);
@@ -131,14 +132,14 @@ export class OverallCommChart {
         // 面积生成器（上）
         const areaReceive = d3.area()
             .x(d => x(d.data.index))
-            .y0(d => y(d[0]))
-            .y1(d => y(d[1]))
+            .y0(d => y(d[0]) - gapPx)
+            .y1(d => y(d[1]) - gapPx)
             .curve(d3.curveMonotoneX);
         // 面积生成器（下）
         const areaSend = d3.area()
             .x(d => x(d.data.index))
-            .y0(d => y(d[0]))
-            .y1(d => y(d[1]))
+            .y0(d => y(d[0]) + gapPx)
+            .y1(d => y(d[1]) + gapPx)
             .curve(d3.curveMonotoneX);
 
         // 颜色函数
@@ -181,11 +182,11 @@ export class OverallCommChart {
 
         const lineReceive = d3.line()
             .x(d => x(d.index))
-            .y(d => y(d.total))
+            .y(d => y(d.total) - gapPx)
             .curve(d3.curveMonotoneX);
         const lineSend = d3.line()
             .x(d => x(d.index))
-            .y(d => y(-d.total))
+            .y(d => y(-d.total) + gapPx)
             .curve(d3.curveMonotoneX);
 
         g.append('path')

@@ -1,13 +1,13 @@
-annotation,time1,time2,total,ratio
-AGM,452,0,452,0.076
-Brain,1518,0,1518,0.257
-Branchial arch,200,0,200,0.034
-Cavity,882,0,882,0.149
-Connective tissue,283,0,283,0.048
-Dermomyotome,273,0,273,0.046
-Heart,382,0,382,0.065
-Liver,98,0,98,0.017
-Mesenchyme,337,0,337,0.057
-Neural crest,1008,0,1008,0.17
-Notochord,236,0,236,0.04
-Sclerotome,244,0,244,0.041
+annotation,time1,time2,total,ratio,out,in,outtype,intype
+AGM,452,0,452,0.076,328,144,1,1
+Brain,1518,0,1518,0.257,575,320,2,1
+Branchial arch,200,0,200,0.034,77,170,1,1
+Cavity,882,0,882,0.149,241,581,2,2
+Connective tissue,283,0,283,0.048,0,563,0,2
+Dermomyotome,273,0,273,0.046,0,328,0,1
+Heart,382,0,382,0.065,746,77,2,1
+Liver,98,0,98,0.017,0,0,0,0
+Mesenchyme,337,0,337,0.057,0,195,0,2
+Neural crest,1008,0,1008,0.17,778,0,4,0
+Notochord,236,0,236,0.04,0,367,0,1
+Sclerotome,244,0,244,0.041,0,0,0,0

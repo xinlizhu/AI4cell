@@ -1,5 +1,3 @@
-import { PathViewer } from './PathView.js';
-
 class PathPattern {
     constructor(containerId) {
         this.container = d3.select(containerId);
@@ -186,7 +184,6 @@ class PathPattern {
             .text(d => d.end);
     }
 
-    // 修改为显示树状图而不是原来的PathViewer
     showPatternTreeView(patternElement, patternData) {
         console.log('Showing pattern tree view for:', patternData);
         
@@ -210,47 +207,12 @@ class PathPattern {
             return;
         }
 
-        // 创建下拉容器
         const dropdownContainer = patternElement
             .append('div')
-            .attr('class', 'path-view-dropdown')
-            .style('margin-top', '10px')
-            // 固定为整行宽度
-            .style('align-self', 'stretch')
-            // 抵消父容器 .pattern-item 的左右 5px 内边距，左右贴边
-            .style('width', 'calc(100% + 10px)')
-            .style('margin-left', '-5px')
-            .style('margin-right', '-5px')
-            .style('box-sizing', 'border-box')
-            .style('border', '1px solid #ddd')
-            .style('border-radius', '5px')
-            .style('background-color', '#fff')
-            .style('box-shadow', '0 2px 8px rgba(0,0,0,0.1)')
-            .on('click', (event) => {
-                event.stopPropagation(); // 阻止事件冒泡
-            });
+            .attr('class', 'path-view-dropdown compact')
+            .on('click', (event) => event.stopPropagation());
 
-        // 添加标题和关闭按钮
-        const titleBar = dropdownContainer.append('div')
-            .style('padding', '10px 14px')
-            .style('border-bottom', '1px solid #eee')
-            .style('background-color', '#f8f9fa')
-            .style('display', 'flex')
-            .style('justify-content', 'space-between')
-            .style('align-items', 'center');
-            
-
-
-        // 创建树状图容器
-        const treeContainer = dropdownContainer.append('div')
-            .attr('class', 'pattern-tree-container')
-            .style('width', '95%')
-            .style('height', '400px')
-            .style('overflow', 'auto')
-            .style('padding', '10px');
-
-        // 创建树状图可视化
-        new PatternTreeVisualization(treeContainer, filteredPaths, this.colors);
+        new PatternTreeVisualization(dropdownContainer, filteredPaths, this.colors);
     }
 
     // 根据pattern筛选路径的函数
@@ -303,87 +265,25 @@ class PatternTreeVisualization {
         this.pathsData = pathsData;
         this.colors = colors;
         this.selectedBranches = new Set();
-        this.width = 800;
-        this.height = 450;
+        this.width = 370;
+        this.height = 340;
         
         this.init();
     }
     
     init() {
-        this.container.selectAll('*').remove();
-        this.createControlPanel();
-        
+    this.container.selectAll('*').remove();
+    this.selectionInfo = null;
+
         this.svg = this.container.append('svg')
+            .attr('class','path-tree-svg')
             .attr('width', this.width)
             .attr('height', this.height)
-            .style('border', '1px solid #ddd')
-            .style('border-radius', '3px')
-            .on('click', (event) => {
-                event.stopPropagation(); // 阻止SVG点击事件冒泡
-            });
-            
-        this.g = this.svg.append('g')
-            .attr('transform', 'translate(30, 30)');
-            
-        const zoom = d3.zoom()
-            .scaleExtent([0.5, 3])
-            .on('zoom', (event) => {
-                this.g.attr('transform', event.transform);
-            });
-            
+            .on('click', e => e.stopPropagation());
+        this.g = this.svg.append('g').attr('transform','translate(30,30)');
+        const zoom = d3.zoom().scaleExtent([0.5,3]).on('zoom', (ev)=> this.g.attr('transform', ev.transform));
         this.svg.call(zoom);
         this.render();
-    }
-    
-    createControlPanel() {
-        const controlPanel = this.container.append('div')
-            .style('margin-bottom', '8px')
-            .style('padding', '8px')
-            .style('background-color', '#f8f9fa')
-            .style('border-radius', '3px')
-            .style('display', 'flex')
-            .style('gap', '8px')
-            .style('align-items', 'center')
-            .style('font-size', '12px')
-            .on('click', (event) => {
-                event.stopPropagation(); // 阻止控制面板点击事件冒泡
-            });
-            
-        controlPanel.append('span')
-            .style('font-weight', 'bold')
-            .text('控制:');
-            
-        controlPanel.append('button')
-            .text('展开')
-            .style('padding', '4px 8px')
-            .style('border', 'none')
-            .style('border-radius', '2px')
-            .style('background-color', '#4ecdc4')
-            .style('color', 'white')
-            .style('cursor', 'pointer')
-            .style('font-size', '11px')
-            .on('click', (event) => {
-                event.stopPropagation(); // 阻止按钮点击事件冒泡
-                this.expandAll();
-            });
-            
-        controlPanel.append('button')
-            .text('折叠')
-            .style('padding', '4px 8px')
-            .style('border', 'none')
-            .style('border-radius', '2px')
-            .style('background-color', '#45b7d1')
-            .style('color', 'white')
-            .style('cursor', 'pointer')
-            .style('font-size', '11px')
-            .on('click', (event) => {
-                event.stopPropagation(); // 阻止按钮点击事件冒泡
-                this.collapseAll();
-            });
-            
-        // 不再显示“已选择 X 条路径”提示
-        this.selectionInfo = controlPanel.append('span')
-            .style('display','none');
     }
     
     render() {
@@ -539,7 +439,7 @@ class PatternTreeVisualization {
                 return Math.max(80, textLength * 6 + 20);
             })
             .attr('height', 24)
-            .attr('rx', 4)
+            .attr('rx', 1)
             .style('fill', d => {
                 if (d.data.name === 'root') return 'transparent';
                 return this.colors[d.data.name] || '#e0e0e0';
@@ -558,7 +458,7 @@ class PatternTreeVisualization {
             .style('text-shadow', '1px 1px 1px rgba(0,0,0,0.7)')
             .text(d => {
                 if (d.data.name === 'root') return '';
-                return `${d.data.name} (${d.data.count})`;
+                return `${d.data.name}`;
             });
             
         // 展开/折叠按钮 - 只为有子节点的节点添加
@@ -682,7 +582,9 @@ class PatternTreeVisualization {
         }
         
         const selectedPaths = this.getUnionPaths(); // 并集
-        this.selectionInfo.text(`已选择 ${selectedPaths.length} 条路径 (并集)`);
+        if (this.selectionInfo && typeof this.selectionInfo.text === 'function') {
+            this.selectionInfo.text(`已选择 ${selectedPaths.length} 条路径 (并集)`);
+        }
         
         // 计算所选分支的最大深度，用于限制展示层级（选到哪就展示到哪）
         let depthLimit = null;

@@ -8,19 +8,80 @@ class LineageVis {
         this.initializeGlobalControls();
     // 状态
     this.treeSessionId = 0;
-    this.currentChain = [];
     this.currentPathsSubset = [];
     this.branchLayout = null; // {root, cols: Map(depth -> columnDiv)}
     this.renderedForkKeys = new Set();
     this.nodePathMap = {};
     this.currentPreviewKey = null;
-    this.activePreviewHosts = [];
     // 布局参数
     this.layoutConfig = {
-        columnWidth: 560,   // 列固定宽度（保持不变）
+        columnWidth: 300,   // 列固定宽度（保持不变）
         chartWidth: 380,    // 每个 branch-chart 内实际图表卡片宽度（原 520）
         colGap: 24          // 列之间 gap（原来就是 24）
     };
+    }
+
+    updateAfterPathMerge(newAllPaths) {
+        if (!this.branchLayout) return this.renderTreeExplorer(newAllPaths);
+        this.currentPathsSubset = newAllPaths;
+        // 重新统计根层分组
+        const startGroups = d3.group(newAllPaths, p => {
+            const first = p.path_string.split(' -> ')[0];
+            return pvExtractType(first.trim());
+        });
+        const sorted = Array.from(startGroups.entries()).sort((a,b)=> b[1].length - a[1].length);
+        const col0 = this.branchLayout.cols.get(0);
+        if (!col0) return this.renderTreeExplorer(newAllPaths);
+        // 现有根节点 key 集合
+        const existing = new Set();
+        col0.selectAll('.branch-chart').each(function(){ existing.add(this.getAttribute('data-key')); });
+        // 添加缺失的根节点
+        let idxAdd = 0;
+        sorted.forEach(([type, groupPaths]) => {
+            const key = type;
+            this.nodePathMap[key] = groupPaths.slice();
+            if (!existing.has(key)) {
+                const specific = this.getSpecificCellsAtDepth(groupPaths, 0);
+                const wrap = col0.append('div')
+                    .attr('class','branch-chart')
+                    .attr('data-main','0')
+                    .attr('data-cell', type)
+                    .attr('data-key', key)
+                    .attr('data-parent-key','')
+                    .attr('data-depth','0')
+                    .style('text-align','center')
+                    .style('border-top','1px dashed #ddd')
+                    .style('padding-top','6px')
+                    .style('width', this.layoutConfig.chartWidth + 'px')
+                    .style('margin','0 auto');
+                wrap.append('div')
+                    .attr('class','chart-title')
+                    .style('margin-bottom','8px')
+                    .text(type);
+                const id = `branch-root-added-${this.treeSessionId}-${Date.now()}-${idxAdd++}`;
+                wrap.append('div').attr('id', id).classed('lc-host', true);
+                new LineageChart(id, type, this.getSpecificCellsAtDepth(groupPaths,0), 0, true);
+                this.renderedForkKeys.add(key);
+            } else {
+                // 已存在根节点：刷新其图表以反映新增路径累计数据
+                const nodeSel = col0.select(`.branch-chart[data-key='${key}']`);
+                if (!nodeSel.empty()) {
+                    // 根节点中隐藏的预览要清理（仅针对根层）
+                    nodeSel.selectAll('.lc-preview-host').remove();
+                    const hostSel = nodeSel.select('.lc-host');
+                    if (!hostSel.empty()) {
+                        const hostId = hostSel.attr('id');
+                        hostSel.selectAll('*').remove();
+                        const specific = this.getSpecificCellsAtDepth(groupPaths, 0);
+                        new LineageChart(hostId, type, specific, 0, true);
+                    }
+                }
+            }
+        });
+        // 重新布局（根节点新增可能影响高度）
+        this.reflowBranchLayout();
+        this.updateConnectors();
+        this.scheduleLinkageUpdate();
     }
 
     initializeGlobalControls() {
@@ -42,9 +103,17 @@ class LineageVis {
             const depthLimit = event.detail.depthLimit; // 选到哪就展示到哪
             
             if (!selectedPathData || selectedPathData.length === 0) return;
-            // 统一按多路径逻辑处理；即便只有 1 条也当作集合进入分叉模式，避免依赖已删除的单路径渲染函数
+            // 合并：多次在 PathView 里点分支，会产生新的路径集合；需要把新的累加进来而不是覆盖
+            const mergePaths = (oldArr, newArr) => {
+                const map = new Map();
+                (oldArr || []).forEach(p => { if (p && p.path_string) map.set(p.path_string, p); });
+                (newArr || []).forEach(p => { if (p && p.path_string) map.set(p.path_string, p); });
+                return Array.from(map.values());
+            };
             if (this.branchLayout) {
-                this.currentPathsSubset = selectedPathData;
+                // 已有视图：只更新根节点 & nodePathMap，保留已展开分支
+                const merged = mergePaths(this.currentPathsSubset, selectedPathData);
+                this.updateAfterPathMerge(merged);
             } else {
                 this.renderTreeExplorer(selectedPathData);
             }
@@ -66,44 +135,31 @@ class LineageVis {
     renderTreeExplorer(pathsData) {
         this.container.selectAll('*').remove();
         this.treeSessionId += 1;
-        this.currentChain = [];
         this.currentPathsSubset = pathsData;
         this.renderedForkKeys.clear();
 
-        const chartPane = this.container
-            .append('div')
-            .attr('class', 'lcharts-pane')
-            .style('border', '1px solid #ddd')
-            .style('border-radius', '8px')
-            .style('background', '#fafafa')
-            .style('padding', '12px');
-
-        const controls = chartPane.append('div')
-            .attr('class', 'lv-controls')
-            .style('display', 'flex')
-            .style('justify-content', 'flex-end')
-            .style('margin-bottom', '8px');
-        controls.append('button')
-            .text('清空')
-            .style('padding', '4px 10px')
-            .style('border', '1px solid #ccc')
-            .style('border-radius', '4px')
-            .style('background', '#fff')
-            .style('cursor', 'pointer')
-            .on('click', () => this.clearLineageView());
-
-
-
-        const zoomOuter = chartPane.append('div')
+        const zoomOuter = this.container.append('div')
             .attr('class','lineage-zoom-outer')
-            .style('width','1200px')
+            .style('width','100%')
             .style('height','960px')
             .style('overflow','hidden')
-            .style('border','1px solid #e0e0e0')
-            .style('border-radius','6px')
             .style('position','relative')
             .style('background','#fff')
             .style('cursor','grab');
+        // 顶部右上角清空按钮（绝对定位）
+        zoomOuter.append('button')
+            .text('清空')
+            .attr('class','lv-clear-btn')
+            .style('position','absolute')
+            .style('top','8px')
+            .style('right','8px')
+            .style('z-index','10')
+            .style('padding','4px 10px')
+            .style('border','1px solid #ccc')
+            .style('background','#fff')
+            .style('border-radius','4px')
+            .style('cursor','pointer')
+            .on('click', () => this.clearLineageView());
         const zoomInner = zoomOuter.append('div')
             .attr('class','lineage-zoom-inner')
             .style('position','absolute')
@@ -121,6 +177,8 @@ class LineageVis {
             .style('position', 'relative')
             .style('padding', '8px 8px 8px 8px');
 
+        // 连接线 overlay 之前设置为 pointer-events:auto 且较高 z-index，会覆盖下方圆弧导致弧的 hover 失效
+        // 调整：降低 z-index，并关闭 overlay 自身空白区域的事件，让弧能接收鼠标；保留路径本身的事件（路径已在后面单独设 pointer-events:stroke）
         const overlay = zoomOuter.append('svg')
             .attr('class', 'connector-layer')
             .style('position', 'absolute')
@@ -128,8 +186,8 @@ class LineageVis {
             .style('left', '0')
             .style('width', '100%')
             .style('height', '100%')
-            .style('pointer-events', 'auto')
-            .style('z-index', '5');
+            .style('pointer-events', 'none')
+            .style('z-index', '1');
         const overlayG = overlay.append('g');
         const defs = overlay.append('defs');
         defs.append('marker')
@@ -259,57 +317,8 @@ class LineageVis {
 
     renderIncrementalBranch(chain, pathsAtNode) {
         if (!this.branchLayout) {
-            this.container.selectAll('*').remove();
-            const wrapper = this.container.append('div')
-                .attr('class', 'lcharts-pane')
-                .style('border', '1px solid #ddd')
-                .style('border-radius', '8px')
-                .style('background', '#fafafa')
-                .style('padding', '12px');
-            const controls = wrapper.append('div')
-                .style('display', 'flex')
-                .style('justify-content', 'flex-end')
-                .style('margin-bottom', '8px');
-            controls.append('button')
-                .text('清空')
-                .style('padding', '4px 10px')
-                .style('border', '1px solid #ccc')
-                .style('border-radius', '4px')
-                .style('background', '#fff')
-                .style('cursor', 'pointer')
-                .on('click', () => this.clearLineageView());
-
-            const row = wrapper.append('div')
-                .attr('class', 'charts-row')
-                .style('display', 'flex')
-                .style('gap', '16px')
-                .style('align-items', 'flex-start')
-                .style('flex-wrap', 'nowrap')
-                .style('overflow-x', 'auto')
-                .style('position', 'relative');
-            const overlay = row.append('svg')
-                .attr('class', 'connector-layer')
-                .style('position', 'absolute')
-                .style('top', '0')
-                .style('left', '0')
-                .style('pointer-events', 'auto');
-            const overlayG = overlay.append('g');
-            const defs = overlay.append('defs');
-            defs.append('marker')
-                .attr('id', 'lv-arrow')
-                .attr('viewBox', '0 0 10 10')
-                .attr('refX', 10)
-                .attr('refY', 5)
-                .attr('markerWidth', 6)
-                .attr('markerHeight', 6)
-                .attr('orient', 'auto-start-reverse')
-                .append('path')
-                .attr('d', 'M 0 0 L 10 5 L 0 10 z')
-                .attr('fill', '#999');
-            this.branchLayout = { root: row, cols: new Map(), overlay, overlayG };
-
-            row.on('scroll', () => this.updateConnectors());
-            window.addEventListener('resize', () => this.updateConnectors());
+            // 若尚未初始化，直接调用多路径初始渲染（统一布局体系）
+            this.renderTreeExplorer(this.currentPathsSubset || []);
         }
 
         for (let depth = 0; depth < chain.length; depth++) {
@@ -640,7 +649,6 @@ class LineageVis {
         const subsetPaths = this.nodePathMap[childKey];
         if (!Array.isArray(subsetPaths) || subsetPaths.length === 0) return;
         this.currentPreviewKey = childKey;
-        this.activePreviewHosts = [];
         for (let depth = 0; depth < chain.length; depth++) {
             const prefixKey = chain.slice(0, depth + 1).join('->');
             const nodeSel = this.branchLayout.root.select(`.branch-chart[data-key='${prefixKey}']`);
@@ -660,7 +668,6 @@ class LineageVis {
                 .attr('id', previewId)
                 .style('position','relative')
                 .style('z-index','3');
-            this.activePreviewHosts.push(host);
             new LineageChart(previewId, chain[depth], specificCells, depth, true);
         }
         chain.forEach((_, depth)=>{
@@ -680,7 +687,6 @@ class LineageVis {
             .classed('preview-active', false)
             .style('box-shadow', null);
         this.currentPreviewKey = null;
-        this.activePreviewHosts = [];
     }
 
     scheduleLinkageUpdate() {
@@ -716,8 +722,18 @@ class LineageVis {
             const target = map.get(key);
             const r1 = node.getBoundingClientRect();
             const r2 = target.getBoundingClientRect();
-            const x1 = r1.right; const y1 = r1.top + r1.height/2;
-            const x2 = r2.left; const y2 = r2.top + 18;
+            const x1 = r1.right;
+            const y1 = r1.top + r1.height/2; // 源节点垂直中心
+            let x2 = r2.left;
+            let y2 = r2.top + r2.height/2;   // 目标元素左边垂直中点
+            // 计算 LineageVis 容器右边界，超过则截断，不再绘制外部部分
+            const lineageRight = r1.right > r2.left ? Math.max(r1.right, this.container.node().getBoundingClientRect().right)
+                                 : this.container.node().getBoundingClientRect().right;
+            const clipRight = this.container.node().getBoundingClientRect().right; // 仅可绘制到此
+            if (x2 > clipRight) {
+                x2 = clipRight - 2; // 留一点像素避免覆盖边框
+            }
+            if (x2 <= x1) return; // 若目标在可绘制范围外或倒置则跳过
             const mx = (x1 + x2)/2;
             const path = document.createElementNS('http://www.w3.org/2000/svg','path');
             path.setAttribute('d', `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
@@ -726,12 +742,7 @@ class LineageVis {
             path.setAttribute('fill','none');
             path.setAttribute('class','ln-cross-link');
             g.appendChild(path);
-            const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
-            circle.setAttribute('cx', x2);
-            circle.setAttribute('cy', y2);
-            circle.setAttribute('r','3');
-            circle.setAttribute('fill','#1e90ff');
-            g.appendChild(circle);
+            // 不再绘制终点圆，避免越界显示
         });
     }
 
@@ -739,11 +750,9 @@ class LineageVis {
         this.container.selectAll('*').remove();
         this.branchLayout = null;
         this.renderedForkKeys.clear();
-        this.currentChain = [];
         this.currentPathsSubset = [];
     this.nodePathMap = {};
     this.currentPreviewKey = null;
-    this.activePreviewHosts = [];
         d3.selectAll('.path-container').remove();
     }
 
@@ -792,9 +801,6 @@ class LineageVis {
             .sort((a, b) => b.totalIntensity - a.totalIntensity)
             .map(d => d.type);
     }
-
-
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {

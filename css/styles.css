@@ -1,9 +1,33 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 0 10px 10px 10px; /* 顶部留给全局标题栏 */
     background-color: #f8f9fa;
     color: #333;
+}
+
+/* 全局顶栏 */
+.app-topbar {
+    position: sticky; /* 保持在顶部 */
+    top: 0;
+    z-index: 1000;
+    background: #111; /* 黑底 */
+    color: #fff;
+    padding: 8px 18px 10px 18px;
+    width: 2100px;
+    margin: 0 -10px 12px -10px; /* 拉伸到左右边缘，与 body 内边距配合 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1;
 }
 
 /* 统一面板标题样式 */
@@ -120,14 +144,15 @@ body {
 
 .cell-item {
     display: flex;
-    align-items: center;
-    padding: 2px;
+    flex-direction: column; /* 改为纵向堆叠两行 */
+    gap: 2px;
+    padding: 4px 6px 6px 6px;
     border: 1px solid transparent;
     border-radius: 6px;
     box-sizing: border-box;
     transition: background-color 0.2s, border-color 0.2s;
     cursor: pointer;
-    width: calc(50% - 4px); /* 每个项目占据大约一半宽度，减去部分间距 */
+    width: calc(50% - 4px); /* 保持两列布局 */
 }
 
 .cell-item:hover {
@@ -153,6 +178,33 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 500;
+}
+
+/* 行容器 */
+.cell-row1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cell-row2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    font-size: 11px;
+    color: #555;
+    padding-left: 20px; /* 与色块+名称对齐 */
+}
+
+.cell-metric {
+    background: #f3f4f6;
+    border-radius: 3px;
+    padding: 1px 4px;
+    line-height: 1.2;
+}
+
+.cell-item.selected .cell-metric {
+    background: #e1f0ff;
 }
 
 .cell-percentage {
@@ -200,7 +252,7 @@ body {
 
 
 #pathPatternContainer {
-    max-height: 780px; /* 限制整体容器最大高度，原为1200 */
+    max-height: 645px; /* 限制整体容器最大高度，原为1200 */
     overflow-y: auto;
     overflow-x: hidden; /* 不显示水平滚动条 */
 }
@@ -214,25 +266,24 @@ body {
 .pattern-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1px;
 }
 
 .pattern-item {
     display: flex;
     flex-direction: column; /* 改为垂直布局以容纳下拉菜单 */
     align-items: stretch; /* 让子元素撑满宽度 */
-    padding: 5px;
-    border: 1px solid transparent;
-    border-radius: 8px;
+    padding: 4px;
+    border: 0px solid transparent;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
+    transition: background-color 0.5s, border-color 0.2s;
 }
 
 .pattern-item-content { /* 新增：包裹原有内容的容器 */
     /* 改为固定三列网格：起点 | 连接区 | 终点 */
     display: grid;
     grid-template-columns: 110px 180px 110px;
-    column-gap: 8px;
+    column-gap: 0px;
     align-items: center;
 }
 
@@ -245,18 +296,10 @@ body {
     border-color: #90caf9;
 }
 
-.pattern-node-wrapper {
-    /* 固定左右列宽，文本在 pill 内省略 */
-    width: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
 
 .pattern-node {
     padding: 6px 12px;
-    border-radius: 15px;
+    border-radius: 2px;
     font-size: 12px;
     font-weight: 500;
     color: white;
@@ -291,17 +334,21 @@ body {
 
 /* --- 新增：PathView 下拉菜单样式 --- */
 .path-view-dropdown {
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 8px;
+    padding: 6px 8px 10px 8px;
     background-color: #f8f9fa;
-    border-top: 2px solid #dee2e6;
-    border-radius: 0 0 6px 6px;
-    /* 固定为整行并贴齐 pattern-item 的外边缘（抵消左右 5px 内边距） */
-    width: calc(100% + 10px);
-    margin-left: -5px;
-    margin-right: -5px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    width: 100%;
     box-sizing: border-box;
 }
+
+.path-view-dropdown.compact { /* 去掉阴影和多余的外边距 */
+    box-shadow: none;
+}
+
+/* PatternTree 控件与 SVG */
+.path-tree-svg { border:1px solid #d0d7de; border-radius:4px; background:#fff; }
 
 .path-detail-item {
     padding: 8px;

@@ -1,0 +1,11 @@
+﻿annotation,out,in,outtype,intype
+AGM,328,144,1,1
+Brain,575,320,2,1
+Branchial arch,77,170,1,1
+Cavity,241,581,2,2
+Connective tissue,0,563,0,2
+Dermomyotome,0,328,0,1
+Heart,746,77,2,1
+Mesenchyme,0,195,0,2
+Neural crest,778,0,4,0
+Notochord,0,367,0,1
