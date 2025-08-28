@@ -709,19 +709,11 @@ export class LineageChart {
     }
 
     showTooltip(event, data, type) {
-    const globalCap = (window.__neighborCellGlobalMax && window.__neighborCellGlobalMax[data.cellType]) || 0;
-    const fillPct = globalCap > 0 ? (data.cellNum / globalCap * 100).toFixed(1) : '0.0';
-    let content = `<strong>${data.cellType}</strong><br/>细胞数量: ${data.cellNum} / 全局最大 ${globalCap}<br/>槽位占用: ${fillPct}%<br/>本图占比: ${(data.proportion * 100).toFixed(1)}%`;
+    let content = `<strong>${data.cellType}</strong><br/>细胞数量: ${data.cellNum}`;
 
         if (data.hasComm) {
             const intensity = type === '发送' ? data.sendIntensity : data.receiveIntensity;
-            const channels = type === '发送' ? data.sendChannels : data.receiveChannels;
-            const avgIntensity = type === '发送' ? data.sendAvgIntensity : data.receiveAvgIntensity;
-            content += `<hr style="margin: 4px 0; border-color: #555;">
-                        ${type}强度: ${intensity.toFixed(3)}<br/>
-                        ${type}通道数: ${channels}<br/>
-                        平均强度: ${avgIntensity.toFixed(4)}<br/>
-                        总通讯强度: ${data.totalIntensity.toFixed(3)}`;
+            content += `<hr style="margin: 4px 0; border-color: #555;">${type}强度: ${intensity.toFixed(3)}`;
         } else {
             content += `<hr style="margin: 4px 0; border-color: #555;">无通讯数据`;
         }
