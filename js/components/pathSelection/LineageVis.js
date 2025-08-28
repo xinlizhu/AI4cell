@@ -6,19 +6,22 @@ class LineageVis {
         this.container = d3.select(containerId);
         this.registerEventListeners();
         this.initializeGlobalControls();
-    // 状态
-    this.treeSessionId = 0;
-    this.currentPathsSubset = [];
-    this.branchLayout = null; // {root, cols: Map(depth -> columnDiv)}
-    this.renderedForkKeys = new Set();
-    this.nodePathMap = {};
-    this.currentPreviewKey = null;
-    // 布局参数
-    this.layoutConfig = {
-        columnWidth: 300,   // 列固定宽度（保持不变）
-        chartWidth: 380,    // 每个 branch-chart 内实际图表卡片宽度（原 520）
-        colGap: 24          // 列之间 gap（原来就是 24）
-    };
+        // 状态
+        this.treeSessionId = 0;
+        this.currentPathsSubset = [];
+        this.branchLayout = null; // {root, cols: Map(depth -> columnDiv)}
+        this.renderedForkKeys = new Set();
+        this.nodePathMap = {};
+        this.currentPreviewKey = null;
+    // 预览锁定（点击切换）
+    this.previewLocked = false;
+    this.lockedPreviewKey = null;
+        // 布局参数
+        this.layoutConfig = {
+            columnWidth: 500,   // 放大 2 倍
+            chartWidth: 660,    // 与 LineageChart scaleFactor=2 匹配
+            colGap: 200          // 稍微加大间距
+        };
     }
 
     updateAfterPathMerge(newAllPaths) {
@@ -56,7 +59,7 @@ class LineageVis {
                     .style('margin','0 auto');
                 wrap.append('div')
                     .attr('class','chart-title')
-                    .style('margin-bottom','8px')
+                    .style('margin-bottom','16px')
                     .text(type);
                 const id = `branch-root-added-${this.treeSessionId}-${Date.now()}-${idxAdd++}`;
                 wrap.append('div').attr('id', id).classed('lc-host', true);
@@ -93,6 +96,36 @@ class LineageVis {
                 .style('justify-content', 'flex-end')
                 .style('gap', '8px')
                 .style('margin-bottom', '8px');
+
+            // 指标选择下拉框（控制 LineageChart 内外环使用哪种强度数据）
+            const metricSelect = bar.append('select')
+                .attr('class', 'lineage-metric-select')
+                .style('padding', '2px 4px')
+                .style('font-size', '12px');
+
+            const options = [
+                { value: '总强度', label: '总强度' },
+                { value: '通道数', label: '通道数' },
+                { value: '平均通道数', label: '平均通道数' },
+                { value: '平均通道强度', label: '平均通道强度' },
+                { value: '细胞接收强度', label: '细胞平均强度' } // 使用“细胞接收强度”关键字匹配用户描述
+            ];
+            metricSelect.selectAll('option')
+                .data(options)
+                .enter()
+                .append('option')
+                .attr('value', d => d.value)
+                .text(d => d.label);
+
+            // 恢复全局模式（若之前已选择）
+            const savedMode = window.lineageMetricMode || '总强度';
+            metricSelect.property('value', savedMode);
+
+            metricSelect.on('change', (event) => {
+                const mode = event.target.value;
+                window.lineageMetricMode = mode; // 记住选择
+                document.dispatchEvent(new CustomEvent('lineageMetricModeChanged', { detail: { mode } }));
+            });
         }
     }
 
@@ -126,14 +159,16 @@ class LineageVis {
         });
     }
 
-
-
-
-
-
-
     renderTreeExplorer(pathsData) {
+    // 清除内容并重建（保留/恢复全局控制条）
+        const hasControls = !this.container.select('.lv-global-controls').empty();
         this.container.selectAll('*').remove();
+        if (!hasControls) {
+            this.initializeGlobalControls();
+        } else {
+            // 重新创建控制条后面的内容容器
+            this.initializeGlobalControls();
+        }
         this.treeSessionId += 1;
         this.currentPathsSubset = pathsData;
         this.renderedForkKeys.clear();
@@ -177,8 +212,7 @@ class LineageVis {
             .style('position', 'relative')
             .style('padding', '8px 8px 8px 8px');
 
-        // 连接线 overlay 之前设置为 pointer-events:auto 且较高 z-index，会覆盖下方圆弧导致弧的 hover 失效
-        // 调整：降低 z-index，并关闭 overlay 自身空白区域的事件，让弧能接收鼠标；保留路径本身的事件（路径已在后面单独设 pointer-events:stroke）
+    // 连接线 overlay：降低 z-index，并关闭空白区域事件（路径命中区域另设）
         const overlay = zoomOuter.append('svg')
             .attr('class', 'connector-layer')
             .style('position', 'absolute')
@@ -293,7 +327,7 @@ class LineageVis {
                     .style('border-top', idx === 0 ? null : '1px dashed #ddd');
                 wrap.append('div')
                     .attr('class','chart-title')
-                    .style('margin-bottom','8px')
+                    .style('margin-bottom','16px')
                     .style('font-weight','600')
                     .text(`${type}`);
                 const id = `branch-root-${this.treeSessionId}-${idx}`;
@@ -337,9 +371,17 @@ class LineageVis {
             }
         }
 
-        const allBasePaths = (Array.isArray(pathsAtNode) && pathsAtNode.length > 0)
-            ? pathsAtNode
-            : (this.currentPathsSubset || []);
+        // 使用“当前全量合集 ∪ 本次传入子集”的并集，避免只看最后一次点击的那部分
+        const allBasePaths = (() => {
+            const base = Array.isArray(this.currentPathsSubset) ? this.currentPathsSubset : [];
+            if (Array.isArray(pathsAtNode) && pathsAtNode.length > 0) {
+                const map = new Map();
+                base.forEach(p => { if (p && p.path_string) map.set(p.path_string, p); });
+                pathsAtNode.forEach(p => { if (p && p.path_string) map.set(p.path_string, p); });
+                return Array.from(map.values());
+            }
+            return base;
+        })();
 
     const prefixSubset = (prefixLen) => {
             const pref = chain.slice(0, prefixLen);
@@ -377,7 +419,7 @@ class LineageVis {
                     .style('margin', '0 auto');
                 wrap.append('div')
                     .attr('class', 'chart-title')
-                    .style('margin-bottom', '8px')
+                    .style('margin-bottom', '16px')
                     .style('font-weight', '600')
                     .text(`${type}`);
                 const id = `branch-main-${this.treeSessionId}-${i}`;
@@ -389,6 +431,23 @@ class LineageVis {
 
             const mainType = mainSel.attr('data-cell');
             const mainParentKey = mainSel.attr('data-parent-key') || '';
+
+            // 若主节点已存在且与当前链一致，则刷新该节点为“聚合后的 specificCells”
+            if (mainType === type && mainParentKey === (parentKey || '')) {
+                const used = prefixSubset(i + 1);
+                this.nodePathMap[key] = used.slice();
+                const specific = this.getSpecificCellsAtDepth(used, i);
+                const hostSel = mainSel.select('.lc-host');
+                if (!hostSel.empty()) {
+                    const hostId = hostSel.attr('id');
+                    // 清理预览与旧图
+                    mainSel.selectAll('.lc-preview-host').remove();
+                    hostSel.selectAll('*').remove();
+                    new LineageChart(hostId, type, specific, i, true);
+                }
+                if (i === lastDepth) this.ensureLeafPanel(key, i, used);
+                // 同层的分叉逻辑继续判断添加
+            }
             if (mainType !== type || mainParentKey !== (parentKey || '')) {
                 if (this.renderedForkKeys.has(key) || !col.selectAll(`.branch-chart[data-key='${key}']`).empty()) {
                 } else {
@@ -404,12 +463,12 @@ class LineageVis {
                         .attr('data-depth', String(i))
                         .style('text-align', 'center')
                         .style('border-top', '1px dashed #ddd')
-                        .style('padding-top', '6px')
+                        .style('padding-top', '12px')
                         .style('width', this.layoutConfig.chartWidth + 'px')
                         .style('margin', '0 auto');
                     wrap.append('div')
                         .attr('class', 'chart-title')
-                        .style('margin-bottom', '8px')
+                        .style('margin-bottom', '16px')
                         .text(`${type}`);
                     const id = `branch-fork-${this.treeSessionId}-${i}-${Math.floor(Math.random()*1e6)}`;
                         wrap.append('div').attr('id', id).classed('lc-host', true);
@@ -536,6 +595,7 @@ class LineageVis {
         g.selectAll('path.lv-connector, path.lv-connector-hit').on('.preview', null);
         g.selectAll('path.lv-connector-hit')
             .on('mouseover.preview', (event) => {
+                if (this.previewLocked) return; // 锁定时不响应悬停预览切换
                 const childKey = event.currentTarget.getAttribute('data-child-key');
                 g.selectAll('path.lv-connector').filter(function(){
                     return this.getAttribute('data-child-key') === childKey;
@@ -544,11 +604,66 @@ class LineageVis {
             })
             .on('mouseout.preview', (event) => {
                 const childKey = event.currentTarget.getAttribute('data-child-key');
+                // 若已锁定并且是锁定的路径，则保持高亮与预览
+                if (this.previewLocked && this.lockedPreviewKey === childKey) {
+                    g.selectAll('path.lv-connector').filter(function(){
+                        return this.getAttribute('data-child-key') === childKey;
+                    }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                    return;
+                }
+                // 恢复该条的默认样式
                 g.selectAll('path.lv-connector').filter(function(){
                     return this.getAttribute('data-child-key') === childKey;
                 }).attr('stroke', '#999').attr('stroke-width', 1.5);
-                this.clearPreviewPath();
+                // 未锁定时才清理预览
+                if (!this.previewLocked) this.clearPreviewPath();
+            })
+            .on('click.preview', (event) => {
+                const childKey = event.currentTarget.getAttribute('data-child-key');
+                if (!childKey) return;
+                if (!this.previewLocked) {
+                    // 锁定当前预览
+                    this.previewLocked = true;
+                    this.lockedPreviewKey = childKey;
+                    this.previewPathByChildKey(childKey);
+                    g.selectAll('path.lv-connector').filter(function(){
+                        return this.getAttribute('data-child-key') === childKey;
+                    }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                } else {
+                    if (this.lockedPreviewKey === childKey) {
+                        // 解锁
+                        this.previewLocked = false;
+                        this.lockedPreviewKey = null;
+                        this.clearPreviewPath();
+                        // 恢复样式
+                        g.selectAll('path.lv-connector').filter(function(){
+                            return this.getAttribute('data-child-key') === childKey;
+                        }).attr('stroke', '#999').attr('stroke-width', 1.5);
+                    } else {
+                        // 切换锁定到另一条
+                        const prevKey = this.lockedPreviewKey;
+                        this.lockedPreviewKey = childKey;
+                        if (prevKey) {
+                            g.selectAll('path.lv-connector').filter(function(){
+                                return this.getAttribute('data-child-key') === prevKey;
+                            }).attr('stroke', '#999').attr('stroke-width', 1.5);
+                        }
+                        this.previewPathByChildKey(childKey);
+                        g.selectAll('path.lv-connector').filter(function(){
+                            return this.getAttribute('data-child-key') === childKey;
+                        }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                    }
+                }
             });
+
+        // 若存在被锁定的预览，重绘后恢复其高亮与内容
+        if (this.previewLocked && this.lockedPreviewKey) {
+            const k = this.lockedPreviewKey;
+            g.selectAll('path.lv-connector').filter(function(){
+                return this.getAttribute('data-child-key') === k;
+            }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+            this.previewPathByChildKey(k);
+        }
     }
 
     reflowBranchLayout() {
@@ -574,7 +689,7 @@ class LineageVis {
         const leaves = [];
         nodeInfos.forEach(info => { if (info.children.length === 0) leaves.push(info); });
         leaves.sort((a,b)=> (a.depth - b.depth) || 0);
-        const leafGap = 300; // px between leaf centers
+    const leafGap = 600; // 放大后加大节点垂直间距，避免标题重叠
         let nextLeafIndex = 0;
         function assignY(node) {
             if (node.children.length === 0) {
@@ -612,7 +727,7 @@ class LineageVis {
             if (!col) return;
             col.style('position','relative')
                 .style('display','block')
-                .style('min-width','560px')
+                .style('min-width', this.layoutConfig.chartWidth + 'px')
                 .style('height', totalHeight + 'px');
             const depthNodes = [];
             nodeInfos.forEach(n => { if (n.depth === depth) depthNodes.push(n); });
@@ -747,13 +862,38 @@ class LineageVis {
     }
 
     clearLineageView() {
+        // 1) 清空本容器与本实例状态
         this.container.selectAll('*').remove();
         this.branchLayout = null;
         this.renderedForkKeys.clear();
         this.currentPathsSubset = [];
-    this.nodePathMap = {};
-    this.currentPreviewKey = null;
+        this.nodePathMap = {};
+        this.currentPreviewKey = null;
+        this.previewLocked = false;
+        this.lockedPreviewKey = null;
         d3.selectAll('.path-container').remove();
+
+    // 2) 通知右侧面板清空（保留其容器与监听）
+    try { document.dispatchEvent(new CustomEvent('clearNeighborDetails')); } catch (_) {}
+
+        // 3) 移除跨面板连线覆盖层
+        try {
+            const svg = document.getElementById('lineage-neighbor-link-overlay');
+            if (svg && svg.parentNode) svg.parentNode.removeChild(svg);
+        } catch (_) {}
+
+        // 4) 重置全局变量/注册表/最大值（彻底清空）
+        try { window.__lineageCharts = []; } catch (_) {}
+        try { window.__neighborCellGlobalMax = {}; } catch (_) {}
+        try { window.__overallCommCharts = []; } catch (_) {}
+        try { window.__overallCommGlobalMaxByMode = {}; } catch (_) {}
+    try { window.__overallCommGlobalRangeByMode = {}; } catch (_) {}
+    try { window.__lineageGlobalRangeByMode = {}; } catch (_) {}
+        // 指标模式恢复默认
+        try { window.lineageMetricMode = '总强度'; } catch (_) {}
+        try { window.__overallCommCurrentMode = '总强度'; } catch (_) {}
+        // 触发一次模式变化，便于其他监听者同步复位（若存在）
+        try { document.dispatchEvent(new CustomEvent('lineageMetricModeChanged', { detail: { mode: '总强度' } })); } catch (_) {}
     }
 
     async getAllNeighborCells(pathCellsOrDescriptors) {

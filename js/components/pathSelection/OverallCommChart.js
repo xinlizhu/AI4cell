@@ -1,6 +1,7 @@
 
 // 计算上下两层堆叠面积图数据：上=接收(receive)，下=发送(send)
-async function computeStackedSeries(pathCellsOrDescriptors, neighborCells) {
+// metricMode 与 LineageVis 的下拉框保持一致
+async function computeStackedSeries(pathCellsOrDescriptors, neighborCells, metricMode) {
     const descriptors = pathCellsOrDescriptors.map(item => (
         typeof item === 'string' ? { label: item, specificCells: [item] } : item
     ));
@@ -9,12 +10,30 @@ async function computeStackedSeries(pathCellsOrDescriptors, neighborCells) {
     const receivePositions = []; // 每个位置：{ index, label, neighborA: recvVal, ... }
     const sendPositions = [];    // 每个位置：{ index, label, neighborA: sendVal, ... }
 
+    const mode = metricMode || (typeof window !== 'undefined' && (window.lineageMetricMode || window.__overallCommCurrentMode)) || '总强度';
+    const mapVals = (row) => {
+        switch (mode) {
+            case '通道数':
+                return { send: (+row['发送通道数'] || 0), recv: (+row['接收通道数'] || 0) };
+            case '平均通道数':
+                return { send: (+row['平均发送通道数'] || 0), recv: (+row['平均接收通道数'] || 0) };
+            case '平均通道强度':
+                return { send: (+row['发送平均强度'] || 0), recv: (+row['接收平均强度'] || 0) };
+            case '细胞接收强度': // 使用细胞层面平均强度（发送/接收）
+            case '细胞平均强度':
+                return { send: (+row['细胞发送平均强度'] || 0), recv: (+row['细胞接收平均强度'] || 0) };
+            case '总强度':
+            default:
+                return { send: (+row['发送总强度'] || 0), recv: (+row['接收总强度'] || 0) };
+        }
+    };
+
     for (let i = 0; i < descriptors.length; i++) {
         const desc = descriptors[i];
         const totalsReceive = {}; // { neighbor: receiveVal }
         const totalsSend = {};    // { neighbor: sendVal }
 
-        for (const sc of desc.specificCells) {
+    for (const sc of desc.specificCells) {
             const totalCsv = `./js/components/pathSelection/Every_cell_info_withKJL4/${sc}/${sc}_total.csv`;
             try {
                 const rows = await d3.csv(totalCsv, d3.autoType);
@@ -23,8 +42,7 @@ async function computeStackedSeries(pathCellsOrDescriptors, neighborCells) {
                     if (!n) continue;
                     if (neighborSet.size > 0 && !neighborSet.has(n)) continue;
                     if (neighborSet.size === 0) neighborSet.add(n);
-                    const sendVal = (+r['发送总强度'] || 0);
-                    const recvVal = (+r['接收总强度'] || 0);
+            const { send: sendVal, recv: recvVal } = mapVals(r);
                     totalsSend[n] = (totalsSend[n] || 0) + sendVal;
                     totalsReceive[n] = (totalsReceive[n] || 0) + recvVal;
                 }
@@ -64,6 +82,20 @@ export class OverallCommChart {
         this.containerId = containerId;
         this.pathCellsOrDescriptors = pathCellsOrDescriptors;
         this.neighborCells = neighborCells || [];
+        // 指标模式（与 LineageVis 选择同步）
+        this.metricMode = (typeof window !== 'undefined' && (window.lineageMetricMode || window.__overallCommCurrentMode)) || '总强度';
+        // 全局注册，供统一尺度时广播重绘（按模式隔离最大值）
+        if (!window.__overallCommCharts) window.__overallCommCharts = [];
+        if (!window.__overallCommGlobalMaxByMode) window.__overallCommGlobalMaxByMode = {};
+        if (!window.__overallCommCurrentMode) window.__overallCommCurrentMode = this.metricMode;
+        // 如存在旧版全局最大值，迁移到“总强度”模式下
+        if (window.__overallCommGlobalMax && !window.__overallCommGlobalMaxByMode['总强度']) {
+            window.__overallCommGlobalMaxByMode['总强度'] = Object.assign({ receive: 0, send: 0 }, window.__overallCommGlobalMax);
+            try { delete window.__overallCommGlobalMax; } catch(_) {}
+        }
+        window.__overallCommCharts.push(this);
+        // 记录最近一次 render 的点击回调，便于广播时复用
+        this._onClick = null;
     this.margin = { top: 10, right: 10, bottom: 30, left: 40 };
     // 宽度改为在 render 时根据父容器自动计算；先设一个基准
     this.baseWidth = 500;
@@ -80,10 +112,33 @@ export class OverallCommChart {
             'Spinal cord': '#8A2BE2', 'Surface ectoderm': '#FF1493', 'Urogenital ridge': '#00CED1'
         };
         this.scheme = d3.schemeCategory10;
+
+        // 只注册一次模式监听器
+        if (!window.__overallCommModeListenerAttached) {
+            document.addEventListener('lineageMetricModeChanged', (event) => {
+                const mode = (event && event.detail && event.detail.mode) || window.lineageMetricMode || '总强度';
+                window.__overallCommCurrentMode = mode;
+                // 重置该模式下的全局最大值，避免跨模式串扰
+                if (!window.__overallCommGlobalMaxByMode) window.__overallCommGlobalMaxByMode = {};
+                window.__overallCommGlobalMaxByMode[mode] = { receive: 0, send: 0 };
+                // 同步重置该模式的全局百分位范围
+                if (!window.__overallCommGlobalRangeByMode) window.__overallCommGlobalRangeByMode = {};
+                window.__overallCommGlobalRangeByMode[mode] = { low: Infinity, high: 0 };
+                const list = Array.isArray(window.__overallCommCharts) ? window.__overallCommCharts : [];
+                list.forEach(ch => { try { ch.setMetricMode(mode); ch.render(ch._onClick); } catch(_) {} });
+            });
+            window.__overallCommModeListenerAttached = true;
+        }
+    }
+
+    setMetricMode(mode) {
+        this.metricMode = mode || this.metricMode || '总强度';
     }
 
     async render(onClick) {
-        const { receivePositions, sendPositions, keys, maxReceiveTotal, maxSendTotal } = await computeStackedSeries(this.pathCellsOrDescriptors, this.neighborCells);
+        this._onClick = onClick || this._onClick;
+        const mode = this.metricMode || window.__overallCommCurrentMode || window.lineageMetricMode || '总强度';
+        const { receivePositions, sendPositions, keys, maxReceiveTotal, maxSendTotal } = await computeStackedSeries(this.pathCellsOrDescriptors, this.neighborCells, mode);
 
         const container = d3.select(`#${this.containerId}`);
         container
@@ -108,12 +163,46 @@ export class OverallCommChart {
         const x = d3.scaleLinear()
             .domain([0, Math.max(1, receivePositions.length - 1)])
             .range([0, this.width]);
-        // y 轴：中心 0，上正下负
+    // y 轴：中心 0，上正下负；统一标尺 + P5–P99 百分位截断 + gamma 映射
+    const gByMode = window.__overallCommGlobalMaxByMode || {};
+    const gMax = gByMode[mode] || { receive: 0, send: 0 };
+        // 先基于当前实例的总量计算稳健范围
+        const allTotalsAbs = [];
+        receivePositions.forEach((p,i)=>{ allTotalsAbs.push(Math.abs(d3.sum(keys, k => +p[k] || 0))); });
+        sendPositions.forEach((p,i)=>{ allTotalsAbs.push(Math.abs(d3.sum(keys, k => +p[k] || 0))); });
+        const sorted = allTotalsAbs.slice().sort((a,b)=>a-b);
+        const q = (arr, t) => (arr.length ? d3.quantileSorted(arr, t) || 0 : 0);
+        let localLow = q(sorted, 0.05);
+        let localHigh = q(sorted, 0.99);
+        if (!(localHigh > localLow)) { localLow = 0; localHigh = Math.max(1, d3.max(sorted) || 1); }
+
+        // 读取/更新全局范围（按模式），用于实例间统一
+        if (!window.__overallCommGlobalRangeByMode) window.__overallCommGlobalRangeByMode = {};
+        const grStore = window.__overallCommGlobalRangeByMode;
+        const prevRange = grStore[mode] || { low: Infinity, high: 0 };
+        const newLow = Math.min(prevRange.low, localLow);
+        const newHigh = Math.max(prevRange.high, localHigh);
+        // 暂不写回，等绘制结束后统一调用 _updateGlobalRangeIfNeeded 再决定是否广播
+        const usedLow = isFinite(prevRange.low) ? prevRange.low : localLow;
+        const usedHigh = (prevRange.high && prevRange.high > 0) ? prevRange.high : localHigh;
+
+        const eps = 1e-9;
+        const rng = Math.max(usedHigh - usedLow, eps);
+        const gamma = 1; // 拉大上界、压小下界
+        const T = (v) => {
+            const s = v >= 0 ? 1 : -1;
+            const a = Math.abs(v || 0);
+            let z = (a - usedLow) / rng; // P5–P99 范围归一化
+            if (!isFinite(z)) z = 0;
+            z = Math.max(0, Math.min(1, z));
+            const zg = Math.pow(z, gamma);
+            return s * zg;
+        };
         const y = d3.scaleLinear()
-            .domain([-maxSendTotal, maxReceiveTotal])
+            .domain([-1, 1])
             .range([this.height, 0]);
     const centerY = y(0);
-    const gapPx = 4; // 中轴到上下区域各留 2 像素空隙
+    const gapPx = 1; // 中轴到上下区域各留 2 像素空隙
         // 生成堆叠层（接收 & 发送）
         const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
         const receiveSeries = stack(receivePositions);
@@ -130,16 +219,16 @@ export class OverallCommChart {
             return negLayer;
         });
         // 面积生成器（上）
-        const areaReceive = d3.area()
+    const areaReceive = d3.area()
             .x(d => x(d.data.index))
-            .y0(d => y(d[0]) - gapPx)
-            .y1(d => y(d[1]) - gapPx)
+            .y0(d => y(T(d[0])) - gapPx)
+            .y1(d => y(T(d[1])) - gapPx)
             .curve(d3.curveMonotoneX);
         // 面积生成器（下）
-        const areaSend = d3.area()
+    const areaSend = d3.area()
             .x(d => x(d.data.index))
-            .y0(d => y(d[0]) + gapPx)
-            .y1(d => y(d[1]) + gapPx)
+            .y0(d => y(T(d[0])) + gapPx)
+            .y1(d => y(T(d[1])) + gapPx)
             .curve(d3.curveMonotoneX);
 
         // 颜色函数
@@ -180,13 +269,13 @@ export class OverallCommChart {
         const receiveTotals = receivePositions.map(p => ({ index: p.index, total: d3.sum(keys, k => +p[k] || 0) }));
         const sendTotals = sendPositions.map(p => ({ index: p.index, total: d3.sum(keys, k => +p[k] || 0) }));
 
-        const lineReceive = d3.line()
+    const lineReceive = d3.line()
             .x(d => x(d.index))
-            .y(d => y(d.total) - gapPx)
+            .y(d => y(T(d.total)) - gapPx)
             .curve(d3.curveMonotoneX);
-        const lineSend = d3.line()
+    const lineSend = d3.line()
             .x(d => x(d.index))
-            .y(d => y(-d.total) + gapPx)
+            .y(d => y(T(-d.total)) + gapPx)
             .curve(d3.curveMonotoneX);
 
         g.append('path')
@@ -244,11 +333,12 @@ export class OverallCommChart {
                     const idx = Math.max(0, Math.min(receivePositions.length - 1, i));
                     const dRecv = receivePositions[idx];
                     const dSend = sendPositions[idx];
-                    const val = isReceive ? (+dRecv[layer.key] || 0) : (+dSend[layer.key] || 0);
+                    const raw = isReceive ? (+dRecv[layer.key] || 0) : (+dSend[layer.key] || 0);
+                    const val = raw;
                     tip.style('opacity', 1)
                         .style('left', (event.pageX + 10) + 'px')
                         .style('top', (event.pageY - 24) + 'px')
-                        .html(`<strong>${layer.key}</strong><br/>${isReceive?'接收':'发送'}强度: ${val.toFixed(3)}`);
+                        .html(`<strong>${layer.key}</strong><br/>${isReceive?'接收':'发送'}: ${val.toFixed(3)}`);
                 })
                 .on('mouseout', () => tip.style('opacity', 0));
         };
@@ -266,7 +356,7 @@ export class OverallCommChart {
                     tip.style('opacity', 1)
                         .style('left', (event.pageX + 10) + 'px')
                         .style('top', (event.pageY - 24) + 'px')
-                        .html(`<strong>${isReceive?'总接收':'总发送'}强度</strong><br/>值: ${val.toFixed(3)}`);
+                        .html(`<strong>${isReceive?'总接收':'总发送'}</strong><br/>值: ${val.toFixed(3)}`);
                 })
                 .on('mouseout', () => tip.style('opacity', 0));
         };
@@ -278,5 +368,42 @@ export class OverallCommChart {
             svg.style('cursor', 'pointer')
                .on('click', () => onClick());
         }
+
+        // 渲染结束后，尝试更新全局最大值并广播需要时的统一重绘
+    const changedMax = this._updateGlobalMaxIfNeeded(maxReceiveTotal, maxSendTotal, mode);
+        const changedRange = this._updateGlobalRangeIfNeeded(localLow, localHigh, mode);
+        if (changedMax || changedRange) this._broadcastGlobalRescale();
+    }
+
+    _updateGlobalMaxIfNeeded(localReceiveMax, localSendMax, mode) {
+        if (!window.__overallCommGlobalMaxByMode) window.__overallCommGlobalMaxByMode = {};
+        const m = mode || window.__overallCommCurrentMode || '总强度';
+        if (!window.__overallCommGlobalMaxByMode[m]) window.__overallCommGlobalMaxByMode[m] = { receive: 0, send: 0 };
+        const g = window.__overallCommGlobalMaxByMode[m];
+    // 统一标尺存储：仍分别维护，但下游取 max(receive, send)
+    const newReceive = Math.max(g.receive || 0, localReceiveMax || 0);
+    const newSend = Math.max(g.send || 0, localSendMax || 0);
+    const changed = (newReceive !== (g.receive || 0)) || (newSend !== (g.send || 0));
+    if (changed) { g.receive = newReceive; g.send = newSend; }
+        return changed;
+    }
+
+    _updateGlobalRangeIfNeeded(localLow, localHigh, mode) {
+        if (!window.__overallCommGlobalRangeByMode) window.__overallCommGlobalRangeByMode = {};
+        const m = mode || window.__overallCommCurrentMode || '总强度';
+        const g = window.__overallCommGlobalRangeByMode[m] || { low: Infinity, high: 0 };
+        const newLow = Math.min(g.low, localLow);
+        const newHigh = Math.max(g.high, localHigh);
+        const changed = (newLow !== g.low) || (newHigh !== g.high);
+        if (changed) window.__overallCommGlobalRangeByMode[m] = { low: newLow, high: newHigh };
+        return changed;
+    }
+
+    _broadcastGlobalRescale() {
+        const list = Array.isArray(window.__overallCommCharts) ? window.__overallCommCharts : [];
+        // 触发所有实例按新的全局尺度重绘；避免自触发死循环，因为更新后不再增加全局最大值
+        list.forEach(ch => {
+            try { ch.render(ch._onClick); } catch (e) { /* noop */ }
+        });
     }
 }

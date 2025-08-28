@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 level=4
 class CellAnalyzer:
     def __init__(self, base_path="F:/allCellChat_level4_withKJ/", 
-                 output_base="F:/2version/js/components/pathSelection/Every_cell_info_withKJL4"):
+                 output_base="F:/3version_L4/js/components/pathSelection/Every_cell_info_withKJL4"):
         self.base_path = base_path
         self.output_base = output_base
         
@@ -403,6 +403,54 @@ class CellAnalyzer:
         total_filename = os.path.join(output_dir, f"{target_cell_id}_total.csv")
         top10_filename = os.path.join(output_dir, f"{target_cell_id}_every_top_10.csv")
         
+        # ---------------------------------------------
+        # 新增: 计算目标群细胞数，并添加"细胞接收平均强度"与"细胞发送平均强度"
+        # 仅依赖 target_cell_id (格式: Annotation_Time_EmbeddingIndex)
+        parts = target_cell_id.split('_')
+        target_cells_count = None
+        if len(parts) >= 3:
+            try:
+                ann = parts[0]
+                tp = int(parts[1])
+                emb_idx = int(parts[2])
+                target_cells_count = len(self.merged_df[
+                    (self.merged_df['annotation'] == ann) &
+                    (self.merged_df['time'] == tp) &
+                    (self.merged_df['embedding_index'] == emb_idx) &
+                    (self.merged_df['embedding_level'] == level)
+                ])
+            except Exception:
+                target_cells_count = None
+        # 回退: 若解析失败，则按注释+当前 level 统计
+        if not target_cells_count:
+            target_cells_count = len(self.merged_df[
+                (self.merged_df['annotation'] == target_cell) &
+                (self.merged_df['embedding_level'] == level)
+            ])
+
+        if target_cells_count == 0:
+            # 避免除零，设置为1占位，使新增列为与总强度相同值（或可设为0）
+            print(f"⚠️ 未找到目标细胞计数, target_cell_id={target_cell_id}, 使用占位1")
+            target_cells_count = 1
+
+        # 添加两列: 细胞接收平均强度, 细胞发送平均强度
+        total_df['细胞接收平均强度'] = total_df['接收总强度'] / target_cells_count
+        total_df['细胞发送平均强度'] = total_df['发送总强度'] / target_cells_count
+        # 新增三列: 平均发送通道数, 平均接收通道数, 总平均通道数（并兼容一个别名列“总平均平均通道数”）
+        if '发送通道数' in total_df.columns:
+            total_df['平均发送通道数'] = total_df['发送通道数'] / target_cells_count
+        else:
+            total_df['平均发送通道数'] = 0
+        if '接收通道数' in total_df.columns:
+            total_df['平均接收通道数'] = total_df['接收通道数'] / target_cells_count
+        else:
+            total_df['平均接收通道数'] = 0
+        if '总通道数' in total_df.columns:
+            total_df['总平均通道数'] = total_df['总通道数'] / target_cells_count
+        else:
+            total_df['总平均通道数'] = 0
+        # ---------------------------------------------
+
         try:
             send_df.to_csv(send_filename, index=False, encoding='utf-8-sig')
             receive_df.to_csv(receive_filename, index=False, encoding='utf-8-sig')

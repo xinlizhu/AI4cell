@@ -1,0 +1,179 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.184,0.014
+AGM,发送,2,COL18A1_integrin_a1b1_complex,Mesenchyme,COL18A1,integrin,0.883,0.0
+AGM,发送,3,COL18A1_integrin_a11b1_complex,Mesenchyme,COL18A1,integrin,0.865,0.0
+AGM,发送,4,TENM2_ADGRL2,Mesenchyme,TENM2,ADGRL2,0.423,0.037
+AGM,发送,5,TENM2_FLRT3_complex_ADGRL2,Mesenchyme,TENM2,FLRT3,0.423,0.037
+AGM,发送,6,VEGFB_NRP1,Mesenchyme,VEGFB,NRP1,0.422,0.0
+AGM,发送,7,WNT7B_SFRP1,Mesenchyme,WNT7B,SFRP1,0.383,0.0
+AGM,发送,8,VEGFB_FLT1_complex,Mesenchyme,VEGFB,FLT1,0.374,0.0
+AGM,发送,9,VEGFB_FLT1,Mesenchyme,VEGFB,FLT1,0.374,0.0
+AGM,发送,10,WNT6_SFRP1,Mesenchyme,WNT6,SFRP1,0.372,0.0
+AGM,接收,1,IGF2_IGF2R,Mesenchyme,IGF2R,IGF2,1.735,0.001
+AGM,接收,2,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Mesenchyme,byALDH1A2,atRetinoicAcid,0.652,0.0
+AGM,接收,3,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Mesenchyme,byALDH1A2,atRetinoicAcid,0.635,0.0
+AGM,接收,4,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Mesenchyme,byALDH1A2,atRetinoicAcid,0.631,0.0
+AGM,接收,5,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Mesenchyme,byALDH1A2,atRetinoicAcid,0.631,0.0
+AGM,接收,6,EFNA5_EPHA7,Mesenchyme,EPHA7,EFNA5,0.576,0.025
+AGM,接收,7,DAG1_NRXN3,Mesenchyme,NRXN3,DAG1,0.534,0.006
+AGM,接收,8,SLIT2_ROBO1,Mesenchyme,ROBO1,SLIT2,0.512,0.038
+AGM,接收,9,NRXN1_DAG1,Mesenchyme,DAG1,NRXN1,0.49,0.05
+AGM,接收,10,TENM4_FLRT3_complex_ADGRL1,Mesenchyme,FLRT3,TENM4,0.401,0.004
+Brain,发送,1,DLK1_NOTCH1,Mesenchyme,DLK1,NOTCH1,1.41,0.0
+Brain,发送,2,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.269,0.013
+Brain,发送,3,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.241,0.0
+Brain,发送,4,COL3A1_ADGRG1,Mesenchyme,COL3A1,ADGRG1,1.039,0.0
+Brain,发送,5,COL18A1_integrin_a1b1_complex,Mesenchyme,COL18A1,integrin,0.927,0.0
+Brain,发送,6,COL4A1_integrin_a1b1_complex,Mesenchyme,COL4A1,integrin,0.705,0.008
+Brain,发送,7,COL2A1_integrin_a1b1_complex,Mesenchyme,COL2A1,integrin,0.689,0.02
+Brain,发送,8,NTN1_DCC,Mesenchyme,NTN1,DCC,0.592,0.0
+Brain,发送,9,DAG1_NRXN3,Mesenchyme,DAG1,NRXN3,0.525,0.025
+Brain,发送,10,NCAM1_AGRN,Mesenchyme,NCAM1,AGRN,0.506,0.048
+Brain,接收,1,AGRN_PTPRS,Mesenchyme,PTPRS,AGRN,0.606,0.035
+Brain,接收,2,NRXN1_DAG1,Mesenchyme,DAG1,NRXN1,0.533,0.004
+Brain,接收,3,NRXN2_DAG1,Mesenchyme,DAG1,NRXN2,0.499,0.002
+Brain,接收,4,EFNB3_EPHB3,Mesenchyme,EPHB3,EFNB3,0.458,0.001
+Brain,接收,5,CDH5_CDH5,Mesenchyme,CDH5,CDH5,0.413,0.0
+Brain,接收,6,EFNB3_EPHB4,Mesenchyme,EPHB4,EFNB3,0.398,0.037
+Brain,接收,7,DLL3_NOTCH2,Mesenchyme,NOTCH2,DLL3,0.389,0.0
+Brain,接收,8,DLL3_NOTCH1,Mesenchyme,NOTCH1,DLL3,0.386,0.0
+Brain,接收,9,EFNB1_EPHB3,Mesenchyme,EPHB3,EFNB1,0.362,0.01
+Brain,接收,10,LRPAP1_SORT1,Mesenchyme,SORT1,LRPAP1,0.356,0.004
+Connective tissue,发送,1,IGF2_IGF2R,Mesenchyme,IGF2,IGF2R,1.932,0.0
+Connective tissue,发送,2,PPIA_BSG,Mesenchyme,PPIA,BSG,1.418,0.0
+Connective tissue,发送,3,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.256,0.001
+Connective tissue,发送,4,COL18A1_integrin_a11b1_complex,Mesenchyme,COL18A1,integrin,0.894,0.0
+Connective tissue,发送,5,COL18A1_integrin_a1b1_complex,Mesenchyme,COL18A1,integrin,0.878,0.001
+Connective tissue,发送,6,CADM1_NECTIN3,Mesenchyme,CADM1,NECTIN3,0.827,0.041
+Connective tissue,发送,7,COL4A1_integrin_a11b1_complex,Mesenchyme,COL4A1,integrin,0.673,0.048
+Connective tissue,发送,8,NRXN1_DAG1,Mesenchyme,NRXN1,DAG1,0.593,0.005
+Connective tissue,发送,9,DAG1_NRXN3,Mesenchyme,DAG1,NRXN3,0.53,0.046
+Connective tissue,发送,10,APP_PLXNA4,Mesenchyme,APP,PLXNA4,0.512,0.004
+Connective tissue,接收,1,IGF2_IGF2R,Mesenchyme,IGF2R,IGF2,2.196,0.0
+Connective tissue,接收,2,IGF2_IGF1R,Mesenchyme,IGF1R,IGF2,1.966,0.0
+Connective tissue,接收,3,COL1A1_integrin_a11b1_complex,Mesenchyme,integrin,COL1A1,1.727,0.0
+Connective tissue,接收,4,DLK1_NOTCH2,Mesenchyme,NOTCH2,DLK1,1.677,0.0
+Connective tissue,接收,5,DLK1_NOTCH1,Mesenchyme,NOTCH1,DLK1,1.674,0.0
+Connective tissue,接收,6,COL1A2_integrin_a11b1_complex,Mesenchyme,integrin,COL1A2,1.619,0.0
+Connective tissue,接收,7,DLK1_NOTCH3,Mesenchyme,NOTCH3,DLK1,1.602,0.0
+Connective tissue,接收,8,COL3A1_integrin_a11b1_complex,Mesenchyme,integrin,COL3A1,1.59,0.0
+Connective tissue,接收,9,COL18A1_integrin_a11b1_complex,Mesenchyme,integrin,COL18A1,1.292,0.0
+Connective tissue,接收,10,FN1_integrin_aVb5_complex,Mesenchyme,integrin,FN1,1.236,0.0
+Dermomyotome,发送,1,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.299,0.002
+Dermomyotome,发送,2,DLK1_NOTCH1,Mesenchyme,DLK1,NOTCH1,1.224,0.034
+Dermomyotome,发送,3,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.22,0.0
+Dermomyotome,发送,4,CADM1_CADM1,Mesenchyme,CADM1,CADM1,1.061,0.0
+Dermomyotome,发送,5,COL18A1_integrin_a11b1_complex,Mesenchyme,COL18A1,integrin,0.87,0.0
+Dermomyotome,发送,6,CADM1_NECTIN3,Mesenchyme,CADM1,NECTIN3,0.853,0.001
+Dermomyotome,发送,7,NECTIN2_NECTIN3,Mesenchyme,NECTIN2,NECTIN3,0.605,0.031
+Dermomyotome,发送,8,LAMC1_integrin_a6b1_complex,Mesenchyme,LAMC1,integrin,0.504,0.017
+Dermomyotome,发送,9,NECTIN1_NECTIN3,Mesenchyme,NECTIN1,NECTIN3,0.498,0.003
+Dermomyotome,发送,10,NRXN1_DAG1,Mesenchyme,NRXN1,DAG1,0.476,0.025
+Dermomyotome,接收,1,IGF2_IGF2R,Mesenchyme,IGF2R,IGF2,1.751,0.0
+Dermomyotome,接收,2,DLK1_NOTCH2,Mesenchyme,NOTCH2,DLK1,1.366,0.0
+Dermomyotome,接收,3,DLK1_NOTCH1,Mesenchyme,NOTCH1,DLK1,1.363,0.0
+Dermomyotome,接收,4,DLK1_NOTCH3,Mesenchyme,NOTCH3,DLK1,1.292,0.0
+Dermomyotome,接收,5,PPIA_BSG,Mesenchyme,BSG,PPIA,1.142,0.011
+Dermomyotome,接收,6,CADM1_CADM1,Mesenchyme,CADM1,CADM1,1.061,0.0
+Dermomyotome,接收,7,CADM1_NECTIN3,Mesenchyme,NECTIN3,CADM1,0.831,0.003
+Dermomyotome,接收,8,NTN1_UNC5C,Mesenchyme,UNC5C,NTN1,0.582,0.0
+Dermomyotome,接收,9,DAG1_NRXN3,Mesenchyme,NRXN3,DAG1,0.537,0.003
+Dermomyotome,接收,10,NTN1_UNC5B,Mesenchyme,UNC5B,NTN1,0.514,0.0
+Liver,发送,1,DLK1_NOTCH1,Mesenchyme,DLK1,NOTCH1,1.831,0.006
+Liver,发送,2,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.6,0.042
+Liver,发送,3,PPIA_BSG,Mesenchyme,PPIA,BSG,1.597,0.008
+Liver,发送,4,2arachidonoylglycerol_byDAGLB_CNR1,Mesenchyme,2arachidonoylglycerol,byDAGLB,1.037,0.047
+Liver,发送,5,TENM4_ADGRL2,Mesenchyme,TENM4,ADGRL2,0.983,0.049
+Liver,发送,6,NCAM1_FGFR1,Mesenchyme,NCAM1,FGFR1,0.903,0.037
+Liver,发送,7,TENM2_ADGRL2,Mesenchyme,TENM2,ADGRL2,0.873,0.021
+Liver,发送,8,TENM2_FLRT3_complex_ADGRL2,Mesenchyme,TENM2,FLRT3,0.873,0.021
+Liver,发送,9,PTPRS_NTRK3,Mesenchyme,PTPRS,NTRK3,0.7,0.012
+Liver,发送,10,CDH3_CDH3,Mesenchyme,CDH3,CDH3,0.688,0.026
+Liver,接收,1,KITLG_KIT,Mesenchyme,KIT,KITLG,1.029,0.002
+Liver,接收,2,LRRC4C_PTPRF,Mesenchyme,PTPRF,LRRC4C,0.823,0.037
+Liver,接收,3,BMP7_BMPR1A_BMPR2,Mesenchyme,BMPR1A,BMP7,0.751,0.01
+Liver,接收,4,BMP7_BMPR1B_BMPR2,Mesenchyme,BMPR1B,BMP7,0.706,0.005
+Liver,接收,5,BMP7_BMR1B_AVR2A,Mesenchyme,BMR1B,BMP7,0.701,0.005
+Liver,接收,6,BMP7_BMR1A_ACR2A,Mesenchyme,BMR1A,BMP7,0.701,0.007
+Liver,接收,7,CDH3_CDH3,Mesenchyme,CDH3,CDH3,0.688,0.026
+Liver,接收,8,BMP7_BMR1B_AVR2B,Mesenchyme,BMR1B,BMP7,0.679,0.009
+Liver,接收,9,BMP7_BMR1A_AVR2B,Mesenchyme,BMR1A,BMP7,0.679,0.011
+Liver,接收,10,WNT5A_SFRP2,Mesenchyme,SFRP2,WNT5A,0.622,0.043
+Mesenchyme,发送,1,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.263,0.033
+Mesenchyme,发送,2,DLK1_NOTCH1,Mesenchyme,DLK1,NOTCH1,1.26,0.007
+Mesenchyme,发送,3,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.188,0.017
+Mesenchyme,发送,4,COL18A1_integrin_a11b1_complex,Mesenchyme,COL18A1,integrin,0.88,0.001
+Mesenchyme,发送,5,DAG1_NRXN3,Mesenchyme,DAG1,NRXN3,0.571,0.001
+Mesenchyme,发送,6,NRXN1_DAG1,Mesenchyme,NRXN1,DAG1,0.511,0.016
+Mesenchyme,发送,7,EFNB3_EPHB3,Mesenchyme,EFNB3,EPHB3,0.396,0.016
+Mesenchyme,发送,8,WNT7B_SFRP2,Mesenchyme,WNT7B,SFRP2,0.273,0.025
+Mesenchyme,发送,9,WNT7B_FZD1_LRP5,Mesenchyme,WNT7B,FZD1,0.21,0.02
+Mesenchyme,接收,1,DLK1_NOTCH2,Mesenchyme,NOTCH2,DLK1,1.263,0.033
+Mesenchyme,接收,2,DLK1_NOTCH1,Mesenchyme,NOTCH1,DLK1,1.26,0.007
+Mesenchyme,接收,3,DLK1_NOTCH3,Mesenchyme,NOTCH3,DLK1,1.188,0.017
+Mesenchyme,接收,4,COL18A1_integrin_a11b1_complex,Mesenchyme,integrin,COL18A1,0.88,0.001
+Mesenchyme,接收,5,DAG1_NRXN3,Mesenchyme,NRXN3,DAG1,0.571,0.001
+Mesenchyme,接收,6,NRXN1_DAG1,Mesenchyme,DAG1,NRXN1,0.511,0.016
+Mesenchyme,接收,7,EFNB3_EPHB3,Mesenchyme,EPHB3,EFNB3,0.396,0.016
+Mesenchyme,接收,8,WNT7B_SFRP2,Mesenchyme,SFRP2,WNT7B,0.273,0.025
+Mesenchyme,接收,9,WNT7B_FZD1_LRP5,Mesenchyme,FZD1,WNT7B,0.21,0.02
+Mesenchyme_1_27_Target,发送,1,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.274,0.008
+Mesenchyme_1_27_Target,发送,2,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.229,0.001
+Mesenchyme_1_27_Target,发送,3,COL18A1_integrin_a11b1_complex,Mesenchyme,COL18A1,integrin,0.876,0.0
+Mesenchyme_1_27_Target,发送,4,DAG1_NRXN3,Mesenchyme,DAG1,NRXN3,0.513,0.04
+Mesenchyme_1_27_Target,发送,5,SLITRK5_PTPRS,Mesenchyme,SLITRK5,PTPRS,0.385,0.009
+Mesenchyme_1_27_Target,发送,6,WNT7B_SFRP1,Mesenchyme,WNT7B,SFRP1,0.32,0.001
+Mesenchyme_1_27_Target,发送,7,WNT6_SFRP1,Mesenchyme,WNT6,SFRP1,0.309,0.024
+Mesenchyme_1_27_Target,发送,8,WNT7B_SFRP2,Mesenchyme,WNT7B,SFRP2,0.25,0.023
+Mesenchyme_1_27_Target,发送,9,WNT7B_FZD2_LRP5,Mesenchyme,WNT7B,FZD2,0.223,0.005
+Mesenchyme_1_27_Target,发送,10,WNT7B_FZD3_LRP5,Mesenchyme,WNT7B,FZD3,0.223,0.005
+Mesenchyme_1_27_Target,接收,1,DLK1_NOTCH2,Mesenchyme,NOTCH2,DLK1,1.235,0.024
+Mesenchyme_1_27_Target,接收,2,DLK1_NOTCH1,Mesenchyme,NOTCH1,DLK1,1.232,0.012
+Mesenchyme_1_27_Target,接收,3,DLK1_NOTCH3,Mesenchyme,NOTCH3,DLK1,1.16,0.009
+Mesenchyme_1_27_Target,接收,4,COL18A1_integrin_a11b1_complex,Mesenchyme,integrin,COL18A1,0.78,0.0
+Mesenchyme_1_27_Target,接收,5,COL2A1_integrin_a11b1_complex,Mesenchyme,integrin,COL2A1,0.641,0.017
+Mesenchyme_1_27_Target,接收,6,DAG1_NRXN3,Mesenchyme,NRXN3,DAG1,0.499,0.034
+Mesenchyme_1_27_Target,接收,7,EFNB3_EPHB3,Mesenchyme,EPHB3,EFNB3,0.373,0.014
+Mesenchyme_1_27_Target,接收,8,LRPAP1_SORT1,Mesenchyme,SORT1,LRPAP1,0.327,0.015
+Mesenchyme_1_27_Target,接收,9,EFNB1_EPHB3,Mesenchyme,EPHB3,EFNB1,0.322,0.043
+Mesenchyme_1_27_Target,接收,10,CLSTN1_NRXN3,Mesenchyme,NRXN3,CLSTN1,0.278,0.011
+Neural crest,发送,1,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.396,0.0
+Neural crest,发送,2,DLK1_NOTCH1,Mesenchyme,DLK1,NOTCH1,1.394,0.0
+Neural crest,发送,3,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.183,0.018
+Neural crest,发送,4,COL18A1_integrin_a1b1_complex,Mesenchyme,COL18A1,integrin,0.99,0.0
+Neural crest,发送,5,COL18A1_integrin_a11b1_complex,Mesenchyme,COL18A1,integrin,0.944,0.0
+Neural crest,发送,6,COL3A1_integrin_a1b1_complex,Mesenchyme,COL3A1,integrin,0.92,0.012
+Neural crest,发送,7,CADM1_NECTIN3,Mesenchyme,CADM1,NECTIN3,0.812,0.028
+Neural crest,发送,8,COL4A1_ADGRG6,Mesenchyme,COL4A1,ADGRG6,0.802,0.0
+Neural crest,发送,9,COL4A1_integrin_a1b1_complex,Mesenchyme,COL4A1,integrin,0.769,0.0
+Neural crest,发送,10,COL2A1_integrin_a1b1_complex,Mesenchyme,COL2A1,integrin,0.753,0.001
+Neural crest,接收,1,IGF2_IGF2R,Mesenchyme,IGF2R,IGF2,1.666,0.037
+Neural crest,接收,2,COL3A1_integrin_a11b1_complex,Mesenchyme,integrin,COL3A1,1.183,0.0
+Neural crest,接收,3,COL4A1_integrin_a11b1_complex,Mesenchyme,integrin,COL4A1,0.958,0.0
+Neural crest,接收,4,FLRT2_ADGRL1,Mesenchyme,ADGRL1,FLRT2,0.947,0.0
+Neural crest,接收,5,FLRT2_ADGRL3,Mesenchyme,ADGRL3,FLRT2,0.921,0.0
+Neural crest,接收,6,COL18A1_integrin_a11b1_complex,Mesenchyme,integrin,COL18A1,0.832,0.001
+Neural crest,接收,7,COL2A1_integrin_a11b1_complex,Mesenchyme,integrin,COL2A1,0.775,0.0
+Neural crest,接收,8,APP_FPR2,Mesenchyme,FPR2,APP,0.679,0.0
+Neural crest,接收,9,COL1A2_integrin_a11b1_complex,Mesenchyme,integrin,COL1A2,0.673,0.002
+Neural crest,接收,10,APP_TNFRSF21,Mesenchyme,TNFRSF21,APP,0.614,0.0
+Sclerotome,发送,1,DLK1_NOTCH2,Mesenchyme,DLK1,NOTCH2,1.334,0.0
+Sclerotome,发送,2,DLK1_NOTCH1,Mesenchyme,DLK1,NOTCH1,1.33,0.0
+Sclerotome,发送,3,DLK1_NOTCH3,Mesenchyme,DLK1,NOTCH3,1.203,0.004
+Sclerotome,发送,4,COL18A1_integrin_a1b1_complex,Mesenchyme,COL18A1,integrin,0.875,0.0
+Sclerotome,发送,5,CADM1_NECTIN3,Mesenchyme,CADM1,NECTIN3,0.8,0.026
+Sclerotome,发送,6,COL4A1_ADGRG6,Mesenchyme,COL4A1,ADGRG6,0.678,0.029
+Sclerotome,发送,7,Cholesterol_byDHCR24_RORA,Mesenchyme,Cholesterol,byDHCR24,0.676,0.0
+Sclerotome,发送,8,PDGFC_PDGFRA,Mesenchyme,PDGFC,PDGFRA,0.661,0.015
+Sclerotome,发送,9,DAG1_NRXN3,Mesenchyme,DAG1,NRXN3,0.552,0.004
+Sclerotome,发送,10,PDGFA_PDGFRA,Mesenchyme,PDGFA,PDGFRA,0.533,0.0
+Sclerotome,接收,1,COL3A1_integrin_a11b1_complex,Mesenchyme,integrin,COL3A1,0.995,0.0
+Sclerotome,接收,2,FN1_integrin_aVb5_complex,Mesenchyme,integrin,FN1,0.86,0.0
+Sclerotome,接收,3,FN1_integrin_aVb1_complex,Mesenchyme,integrin,FN1,0.86,0.001
+Sclerotome,接收,4,FN1_integrin_a11b1_complex,Mesenchyme,integrin,FN1,0.797,0.0
+Sclerotome,接收,5,TENM3_ADGRL2,Mesenchyme,ADGRL2,TENM3,0.738,0.001
+Sclerotome,接收,6,COL2A1_integrin_a11b1_complex,Mesenchyme,integrin,COL2A1,0.736,0.0
+Sclerotome,接收,7,TENM3_ADGRL1,Mesenchyme,ADGRL1,TENM3,0.635,0.0
+Sclerotome,接收,8,EFNA5_EPHA7,Mesenchyme,EPHA7,EFNA5,0.631,0.0
+Sclerotome,接收,9,TENM3_ADGRL3,Mesenchyme,ADGRL3,TENM3,0.609,0.0
+Sclerotome,接收,10,FLRT2_ADGRL1,Mesenchyme,ADGRL1,FLRT2,0.606,0.0

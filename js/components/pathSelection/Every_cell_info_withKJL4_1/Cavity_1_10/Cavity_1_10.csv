@@ -1,0 +1,11 @@
+cell_type,cluster_id,cell_num,x,y,distance_to_target,compactness
+Brain,single_cluster,1065,113.1,226.3,9.0,34.5
+Branchial arch,single_cluster,89,115.5,200.6,29.5,6.39
+Cavity,single_cluster,409,119.0,226.1,14.9,27.0
+Cavity,target,56,104.2,227.9,0.0,0.0
+Dermomyotome,single_cluster,49,138.1,158.1,77.5,5.13
+Heart,single_cluster,77,112.8,190.5,38.4,4.75
+Mesenchyme,single_cluster,88,142.2,158.5,79.1,11.04
+Neural crest,single_cluster,388,100.8,206.3,21.9,16.33
+Notochord,single_cluster,47,116.8,220.7,14.5,7.71
+Sclerotome,single_cluster,15,134.4,163.3,71.3,9.89

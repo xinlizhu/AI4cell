@@ -42,8 +42,7 @@ class PathPattern {
             this.allPatterns = patternsData;
             this.allPaths = pathsData;
 
-            console.log('Path patterns loaded:', this.allPatterns);
-            console.log('All detail paths loaded:', this.allPaths);
+            // data loaded
         } catch (error) {
             console.error('Error loading CSV data:', error);
         }
@@ -52,7 +51,7 @@ class PathPattern {
     addEventListeners() {
         document.addEventListener('cellSelectionChange', (event) => {
             this.selectedCells = event.detail.selectedCells || [];
-            console.log('PathPattern received cell selection change:', this.selectedCells);
+            // selection changed
             this.removePathDetailView();
             this.updateVisualization();
         });
@@ -185,11 +184,10 @@ class PathPattern {
     }
 
     showPatternTreeView(patternElement, patternData) {
-        console.log('Showing pattern tree view for:', patternData);
-        
+    // show tree view
         // 根据选中的pattern筛选路径
         const filteredPaths = this.filterPathsByPattern(patternData);
-        console.log('Filtered paths for pattern:', filteredPaths);
+    // filtered paths
 
         if (filteredPaths.length === 0) {
             const dropdownContainer = patternElement
@@ -254,7 +252,7 @@ class PathPattern {
             }
         });
         document.dispatchEvent(event);
-        console.log(`Pattern selected, dispatched event with:`, { start_cell: startCell, end_cell: endCell });
+    // event dispatched
     }
 }
 
@@ -393,7 +391,7 @@ class PatternTreeVisualization {
         const nodes = root.descendants();
         const links = root.links();
         
-        console.log('Drawing tree with nodes:', nodes.length, 'links:', links.length);
+    // draw tree
         
         // 绘制连接线
         this.g.selectAll('.tree-link')
@@ -465,7 +463,7 @@ class PatternTreeVisualization {
         const nodesWithChildren = nodeGroups.filter(d => {
             const hasChildren = (d.children || d._children) && d.data.name !== 'root';
             if (hasChildren) {
-                console.log(`Node ${d.data.name} has children:`, !!d.children, 'or _children:', !!d._children);
+                // has children
             }
             return hasChildren;
         });
@@ -508,18 +506,14 @@ class PatternTreeVisualization {
             .style('font-size', '10px')
             .style('font-weight', 'bold')
             .style('pointer-events', 'none')
-            .text(d => {
-                const symbol = d.children ? '−' : '+';
-                console.log(`Button symbol for ${d.data.name}:`, symbol, 'children:', !!d.children);
-                return symbol;
-            });
+            .text(d => d.children ? '−' : '+');
     }
     
     // 添加节点点击处理方法
     handleNodeClick(event, d) {
         if (d.data.name === 'root') return;
         
-        console.log('Node clicked:', d.data.name); // 调试日志
+    // node clicked
         
         const nodeId = d.data.id;
         
@@ -608,7 +602,7 @@ class PatternTreeVisualization {
             }
         });
         document.dispatchEvent(event);
-        console.log('触发Pattern树状路径选择事件:', selectedPaths);
+    // trigger pathSelected
     }
     
     // 新的方法：获取所有选中分支的路径并集
@@ -672,26 +666,24 @@ class PatternTreeVisualization {
     }
     
     toggle(d) {
-        console.log('Toggling node:', d.data.name);
-        console.log('Before toggle - children:', d.children, '_children:', d._children);
+    // toggle node
         
         if (d.children) {
             d._children = d.children;
             d.children = null;
-            console.log('Collapsed node:', d.data.name);
+            // collapsed
         } else if (d._children) {
             d.children = d._children;
             d._children = null;
-            console.log('Expanded node:', d.data.name);
+            // expanded
         } else {
-            console.log('Node has no children to toggle:', d.data.name);
+            // no children
         }
-        
-        console.log('After toggle - children:', d.children, '_children:', d._children);
+        // toggled
     }
     
     updateTree() {
-        console.log('Updating tree...'); // 调试日志
+    // update tree
         
         // 不要重新调用 render()，而是重新计算布局并更新现有树
         const treeLayout = d3.tree()
@@ -715,7 +707,7 @@ class PatternTreeVisualization {
     }
     
     expandAll() {
-        console.log('Expanding all nodes...');
+    // expand all
         let expandedCount = 0;
         this.root.descendants().forEach(d => {
             if (d._children) {
@@ -724,12 +716,12 @@ class PatternTreeVisualization {
                 expandedCount++;
             }
         });
-        console.log(`Expanded ${expandedCount} nodes`);
+    // expanded count: ${expandedCount}
         this.updateTree();
     }
     
     collapseAll() {
-        console.log('Collapsing all nodes...');
+    // collapse all
         let collapsedCount = 0;
         this.root.descendants().forEach(d => {
             if (d.children && d.depth > 0) { // 不折叠根节点
@@ -738,7 +730,7 @@ class PatternTreeVisualization {
                 collapsedCount++;
             }
         });
-        console.log(`Collapsed ${collapsedCount} nodes`);
+    // collapsed count: ${collapsedCount}
         this.updateTree();
     }
 }

@@ -53,7 +53,7 @@ class CellSelectionTest {
             });
 
             this.data.sort((a, b) => b.ratio - a.ratio);
-            console.log('数据加载完成:', this.data);
+            // data loaded
         } catch (error) {
             console.error('加载数据失败:', error);
         }
@@ -142,7 +142,7 @@ class CellSelectionTest {
             }
         });
         document.dispatchEvent(event); // 改为 document.dispatchEvent
-        console.log('触发细胞选择事件:', Array.from(this.selectedCells)); // 添加调试日志
+    // selection event dispatched
     }
 }
 

@@ -52,6 +52,23 @@ class NeighborDetailsPanel {
             if (!Array.isArray(pathCells) || pathCells.length===0) return;
             this.appendChart(pathCells, neighborCells || []);
         });
+
+        // Clear event: remove all charts and restore empty state
+        document.addEventListener('clearNeighborDetails', ()=>{
+            try {
+                this.list.selectAll('*').remove();
+                this.chartCount = 0;
+                this.emptyState = this.list.append('div')
+                    .attr('class','neighbor-empty')
+                    .style('flex','1 1 auto')
+                    .style('display','flex')
+                    .style('align-items','center')
+                    .style('justify-content','center')
+                    .style('color','#999')
+                    .style('font-size','12px')
+                    .text('暂无数据');
+            } catch(_) {}
+        });
     }
 
     summarizePath(descriptors) {
