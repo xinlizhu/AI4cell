@@ -1163,14 +1163,14 @@ class LineageVis {
                 detail: {
                     pathCells: pathDescriptors,
                     neighborCells: neighborCells,
-                    title: `套索选择 (${selectedNodes.length} 个节点)`
+                    title: `Lasso Selection (${selectedNodes.length} nodes)`
                 }
             }));
             
             console.log('showNeighborDetails event dispatched with detail:', {
                 pathCells: pathDescriptors,
                 neighborCells: neighborCells,
-                title: `套索选择 (${selectedNodes.length} 个节点)`
+                title: `Lasso Selection (${selectedNodes.length} nodes)`
             });
             
         } catch (error) {
