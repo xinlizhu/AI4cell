@@ -701,7 +701,7 @@ export class LineageChart {
             centerGroup.append('text')
                 .attr('text-anchor', 'middle')
                 .attr('dy', '0.3em')
-                .text('无图片')
+                .text('No image')
                 .style('font-size', '10px')
                 .style('fill', '#999');
         }
@@ -711,13 +711,13 @@ export class LineageChart {
     }
 
     showTooltip(event, data, type) {
-    let content = `<strong>${data.cellType}</strong><br/>细胞数量: ${data.cellNum}`;
+    let content = `<strong>${data.cellType}</strong><br/>Cell Count: ${data.cellNum}`;
 
         if (data.hasComm) {
             const intensity = type === '发送' ? data.sendIntensity : data.receiveIntensity;
-            content += `<hr style="margin: 4px 0; border-color: #555;">${type}强度: ${intensity.toFixed(3)}`;
+            content += `<hr style="margin: 4px 0; border-color: #555;">${type === '发送' ? 'Send' : 'Receive'} Intensity: ${intensity.toFixed(3)}`;
         } else {
-            content += `<hr style="margin: 4px 0; border-color: #555;">无通讯数据`;
+            content += `<hr style="margin: 4px 0; border-color: #555;">No communication data`;
         }
 
         this.tooltip
@@ -740,7 +740,7 @@ export class LineageChart {
                 .attr('text-anchor', 'middle')
                 .attr('x', 0)
                 .attr('y', 0)
-                .text('无数据')
+                .text('No data')
                 .style('font-size', '12px')
                 .style('fill', '#999');
         } catch (_) {

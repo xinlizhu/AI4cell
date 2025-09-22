@@ -21,7 +21,7 @@ export class ChannelView {
             .style('font-weight', 'bold')
             .style('margin-bottom', '10px')
             .style('font-size', '18px')
-            .text('细胞通信通道');
+            .text('Cell Communication Channels');
 
         // 创建SVG容器
         this.svg = this.container.append('svg')
@@ -40,7 +40,7 @@ export class ChannelView {
             .attr('text-anchor', 'middle')
             .attr('font-weight', 'bold')
             .attr('font-size', '16px')
-            .text('接收 Top 10');
+            .text('Receive Top 10');
 
         // 创建发送区域（下半部分）
         this.sendGroup = this.svg.append('g')
@@ -53,7 +53,7 @@ export class ChannelView {
             .attr('text-anchor', 'middle')
             .attr('font-weight', 'bold')
             .attr('font-size', '16px')
-            .text('发送 Top 10');
+            .text('Send Top 10');
 
         // 创建提示文本
         this.showEmptyState();
@@ -82,7 +82,7 @@ export class ChannelView {
             .attr('text-anchor', 'middle')
             .attr('font-size', '14px')
             .attr('fill', '#666')
-            .text('点击弧线查看通道详情');
+            .text('Click arc to view channel details');
 
         this.sendGroup.append('text')
             .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
@@ -90,7 +90,7 @@ export class ChannelView {
             .attr('text-anchor', 'middle')
             .attr('font-size', '14px')
             .attr('fill', '#666')
-            .text('点击弧线查看通道详情');
+            .text('Click arc to view channel details');
     }
 
     async updateChannelData(currentCellName, neighborCellName, clickedType, specificCells = null) {
@@ -273,10 +273,10 @@ export class ChannelView {
 
         // 更新标题
         this.receiveGroup.select('text')
-            .text(`${targetCellName} → ${sourceCellName} (接收 Top 10)`);
+            .text(`${targetCellName} → ${sourceCellName} (Receive Top 10)`);
         
         this.sendGroup.select('text')
-            .text(`${sourceCellName} → ${targetCellName} (发送 Top 10)`);
+            .text(`${sourceCellName} → ${targetCellName} (Send Top 10)`);
 
         // 渲染接收数据
         this.renderChannelList(this.receiveGroup, data.receive, 'receive');
@@ -295,7 +295,7 @@ export class ChannelView {
             
             // 更新接收区域标题：currentCellName 接收来自 neighborCellName 的通道
             this.receiveGroup.select('text')
-                .text(`${neighborCellName} → ${currentCellName} (接收 Top 10)`);
+                .text(`${neighborCellName} → ${currentCellName} (Receive Top 10)`);
             
             // 在CSV数据中，方向='发送'且邻居细胞=neighborCellName 表示neighborCellName发送给currentCellName
             // 这就是currentCellName的接收数据
@@ -311,7 +311,7 @@ export class ChannelView {
             
             // 更新发送区域标题：currentCellName 发送给 neighborCellName 的通道
             this.sendGroup.select('text')
-                .text(`${currentCellName} → ${neighborCellName} (发送 Top 10)`);
+                .text(`${currentCellName} → ${neighborCellName} (Send Top 10)`);
             
             // 在CSV数据中，方向='接收'且邻居细胞=neighborCellName 表示currentCellName发送给neighborCellName
             // 这就是currentCellName的发送数据
@@ -407,11 +407,11 @@ export class ChannelView {
                 .style('pointer-events', 'none')
                 .style('z-index', '1000')
                 .html(`
-                    <strong>通道:</strong> ${d.channel}<br>
-                    <strong>强度:</strong> ${d.intensity.toFixed(3)}<br>
-                    <strong>显著性:</strong> ${d.significance.toFixed(4)}<br>
-                    <strong>邻居基因:</strong> ${d.neighborGene || 'N/A'}<br>
-                    <strong>目标基因:</strong> ${d.targetGene || 'N/A'}
+                    <strong>Channel:</strong> ${d.channel}<br>
+                    <strong>Intensity:</strong> ${d.intensity.toFixed(3)}<br>
+                    <strong>Significance:</strong> ${d.significance.toFixed(4)}<br>
+                    <strong>Neighbor Gene:</strong> ${d.neighborGene || 'N/A'}<br>
+                    <strong>Target Gene:</strong> ${d.targetGene || 'N/A'}
                 `);
 
             tooltip.style('left', (event.pageX + 10) + 'px')
@@ -435,6 +435,6 @@ export class ChannelView {
             .attr('text-anchor', 'middle')
             .attr('font-size', '14px')
             .attr('fill', '#d73027')
-            .text(`错误: ${message}`);
+            .text(`Error: ${message}`);
     }
 }

@@ -1,14 +1,14 @@
 
-// 计算上下两层堆叠面积图数据：上=接收(receive)，下=发送(send)
-// metricMode 与 LineageVis 的下拉框保持一致
-async function computeStackedSeries(pathCellsOrDescriptors, neighborCells, metricMode) {
+// 计算三个独立图表的数据：细胞总数、发送通信、接收通信
+async function computeThreeChartSeries(pathCellsOrDescriptors, neighborCells, metricMode) {
     const descriptors = pathCellsOrDescriptors.map(item => (
         typeof item === 'string' ? { label: item, specificCells: [item] } : item
     ));
 
     const neighborSet = new Set(Array.isArray(neighborCells) ? neighborCells : []);
-    const receivePositions = []; // 每个位置：{ index, label, neighborA: recvVal, ... }
-    const sendPositions = [];    // 每个位置：{ index, label, neighborA: sendVal, ... }
+    const cellCountPositions = []; // 细胞总数数据
+    const receivePositions = []; // 接收通信数据
+    const sendPositions = [];    // 发送通信数据
 
     const mode = metricMode || (typeof window !== 'undefined' && (window.lineageMetricMode || window.__overallCommCurrentMode)) || '总强度';
     const mapVals = (row) => {
@@ -19,7 +19,7 @@ async function computeStackedSeries(pathCellsOrDescriptors, neighborCells, metri
                 return { send: (+row['平均发送通道数'] || 0), recv: (+row['平均接收通道数'] || 0) };
             case '平均通道强度':
                 return { send: (+row['发送平均强度'] || 0), recv: (+row['接收平均强度'] || 0) };
-            case '细胞接收强度': // 使用细胞层面平均强度（发送/接收）
+            case '细胞接收强度':
             case '细胞平均强度':
                 return { send: (+row['细胞发送平均强度'] || 0), recv: (+row['细胞接收平均强度'] || 0) };
             case '总强度':
@@ -32,8 +32,19 @@ async function computeStackedSeries(pathCellsOrDescriptors, neighborCells, metri
         const desc = descriptors[i];
         const totalsReceive = {}; // { neighbor: receiveVal }
         const totalsSend = {};    // { neighbor: sendVal }
+        let totalCellCount = 0;   // 该位置的总细胞数
 
-    for (const sc of desc.specificCells) {
+        for (const sc of desc.specificCells) {
+            // 读取细胞总数
+            const cellCsv = `./js/components/pathSelection/Every_cell_info_withKJL4/${sc}/${sc}.csv`;
+            try {
+                const cellRows = await d3.csv(cellCsv, d3.autoType);
+                totalCellCount += d3.sum(cellRows, d => d.cell_num || 0);
+            } catch (e) {
+                console.warn('读取细胞数据失败（忽略该 specificCell）:', cellCsv, e);
+            }
+
+            // 读取通信数据
             const totalCsv = `./js/components/pathSelection/Every_cell_info_withKJL4/${sc}/${sc}_total.csv`;
             try {
                 const rows = await d3.csv(totalCsv, d3.autoType);
@@ -42,15 +53,19 @@ async function computeStackedSeries(pathCellsOrDescriptors, neighborCells, metri
                     if (!n) continue;
                     if (neighborSet.size > 0 && !neighborSet.has(n)) continue;
                     if (neighborSet.size === 0) neighborSet.add(n);
-            const { send: sendVal, recv: recvVal } = mapVals(r);
+                    const { send: sendVal, recv: recvVal } = mapVals(r);
                     totalsSend[n] = (totalsSend[n] || 0) + sendVal;
                     totalsReceive[n] = (totalsReceive[n] || 0) + recvVal;
                 }
             } catch (e) {
-                console.warn('读取失败（忽略该 specificCell）:', totalCsv, e);
+                console.warn('读取通信数据失败（忽略该 specificCell）:', totalCsv, e);
             }
         }
 
+        // 细胞总数数据
+        cellCountPositions.push({ index: i, label: desc.label, totalCells: totalCellCount });
+
+        // 接收和发送数据
         const recvObj = { index: i, label: desc.label };
         const sendObj = { index: i, label: desc.label };
         for (const n of neighborSet) {
@@ -68,13 +83,7 @@ async function computeStackedSeries(pathCellsOrDescriptors, neighborCells, metri
     )]));
     keys.sort((a, b) => (totalsByKey.get(b) || 0) - (totalsByKey.get(a) || 0));
 
-    // 计算总体最大值用于 y 轴对称范围
-    const maxReceivePerPos = receivePositions.map(p => d3.sum(keys, k => +p[k] || 0));
-    const maxSendPerPos = sendPositions.map(p => d3.sum(keys, k => +p[k] || 0));
-    const maxReceiveTotal = d3.max(maxReceivePerPos) || 1;
-    const maxSendTotal = d3.max(maxSendPerPos) || 1;
-
-    return { receivePositions, sendPositions, keys, maxReceiveTotal, maxSendTotal };
+    return { cellCountPositions, receivePositions, sendPositions, keys };
 }
 
 export class OverallCommChart {
@@ -138,179 +147,234 @@ export class OverallCommChart {
     async render(onClick) {
         this._onClick = onClick || this._onClick;
         const mode = this.metricMode || window.__overallCommCurrentMode || window.lineageMetricMode || '总强度';
-        const { receivePositions, sendPositions, keys, maxReceiveTotal, maxSendTotal } = await computeStackedSeries(this.pathCellsOrDescriptors, this.neighborCells, mode);
+        const { cellCountPositions, receivePositions, sendPositions, keys } = await computeThreeChartSeries(this.pathCellsOrDescriptors, this.neighborCells, mode);
 
         const container = d3.select(`#${this.containerId}`);
         container
             .style('position','relative')
-            .style('overflow','hidden'); // 避免 SVG 内容（旋转文字、描边）溢出
+            .style('overflow','hidden')
+            .style('display', 'flex')
+            .style('flex-direction', 'row')
+            .style('gap', '8px');
         container.selectAll('*').remove();
 
-        // 动态计算可用宽度（含 padding），不足时使用基准宽度
+        // 动态计算可用宽度
         const bboxParent = container.node().parentNode?.getBoundingClientRect?.() || { width: this.baseWidth };
         const bboxSelf = container.node().getBoundingClientRect();
         const fullWidth = (bboxSelf.width > 40 ? bboxSelf.width : (bboxParent.width > 40 ? bboxParent.width : this.baseWidth));
-        this.width = fullWidth - this.margin.left - this.margin.right;
+        // 每个图表容器宽度，减去边框、padding和间隙
+        const containerWidth = (fullWidth - 24) / 3; // 3个容器，减去间隙和边距
+        // SVG实际绘图宽度，减去左右边距
+        this.width = containerWidth - this.margin.left - this.margin.right - 10; // 减去padding
 
+        // 创建三个图表容器，横向排列
+        const chartHeight = 120;
+        
+        // 1. 细胞总数图
+        const cellCountContainer = container.append('div')
+            .style('border', '1px solid #ddd')
+            .style('border-radius', '4px')
+            .style('padding', '4px')
+            .style('flex', '1')
+            .style('min-width', '0');
+        
+        cellCountContainer.append('div')
+            .style('font-size', '12px')
+            .style('font-weight', 'bold')
+            .style('margin-bottom', '4px')
+            .style('text-align', 'center')
+            .text('Cell Count');
+
+        this.renderCellCountChart(cellCountContainer, cellCountPositions, chartHeight);
+
+        // 2. 接收通信图
+        const receiveContainer = container.append('div')
+            .style('border', '1px solid #ddd')
+            .style('border-radius', '4px')
+            .style('padding', '4px')
+            .style('flex', '1')
+            .style('min-width', '0');
+            
+        receiveContainer.append('div')
+            .style('font-size', '12px')
+            .style('font-weight', 'bold')
+            .style('margin-bottom', '4px')
+            .style('text-align', 'center')
+            .text('Receive Communication');
+
+        this.renderCommChart(receiveContainer, receivePositions, keys, chartHeight, 'receive');
+
+        // 3. 发送通信图
+        const sendContainer = container.append('div')
+            .style('border', '1px solid #ddd')
+            .style('border-radius', '4px')
+            .style('padding', '4px')
+            .style('flex', '1')
+            .style('min-width', '0');
+            
+        sendContainer.append('div')
+            .style('font-size', '12px')
+            .style('font-weight', 'bold')
+            .style('margin-bottom', '4px')
+            .style('text-align', 'center')
+            .text('Send Communication');
+
+        this.renderCommChart(sendContainer, sendPositions, keys, chartHeight, 'send');
+    }
+
+    renderCellCountChart(container, cellCountPositions, height) {
         const svg = container.append('svg')
-            .attr('width', this.width + this.margin.left + this.margin.right)
-            .attr('height', this.height + this.margin.top + this.margin.bottom)
-            .attr('class','overall-comm-svg');
+            .attr('width', '100%')
+            .attr('height', height)
+            .attr('class', 'cell-count-svg')
+            .attr('viewBox', `0 0 ${this.width + this.margin.left + this.margin.right} ${height}`);
 
         const g = svg.append('g')
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
 
         const x = d3.scaleLinear()
-            .domain([0, Math.max(1, receivePositions.length - 1)])
+            .domain([0, Math.max(1, cellCountPositions.length - 1)])
             .range([0, this.width]);
-    // y 轴：中心 0，上正下负；统一标尺 + P5–P99 百分位截断 + gamma 映射
-    const gByMode = window.__overallCommGlobalMaxByMode || {};
-    const gMax = gByMode[mode] || { receive: 0, send: 0 };
-        // 先基于当前实例的总量计算稳健范围
-        const allTotalsAbs = [];
-        receivePositions.forEach((p,i)=>{ allTotalsAbs.push(Math.abs(d3.sum(keys, k => +p[k] || 0))); });
-        sendPositions.forEach((p,i)=>{ allTotalsAbs.push(Math.abs(d3.sum(keys, k => +p[k] || 0))); });
-        const sorted = allTotalsAbs.slice().sort((a,b)=>a-b);
-        const q = (arr, t) => (arr.length ? d3.quantileSorted(arr, t) || 0 : 0);
-        let localLow = q(sorted, 0.05);
-        let localHigh = q(sorted, 0.99);
-        if (!(localHigh > localLow)) { localLow = 0; localHigh = Math.max(1, d3.max(sorted) || 1); }
 
-        // 读取/更新全局范围（按模式），用于实例间统一
-        if (!window.__overallCommGlobalRangeByMode) window.__overallCommGlobalRangeByMode = {};
-        const grStore = window.__overallCommGlobalRangeByMode;
-        const prevRange = grStore[mode] || { low: Infinity, high: 0 };
-        const newLow = Math.min(prevRange.low, localLow);
-        const newHigh = Math.max(prevRange.high, localHigh);
-        // 暂不写回，等绘制结束后统一调用 _updateGlobalRangeIfNeeded 再决定是否广播
-        const usedLow = isFinite(prevRange.low) ? prevRange.low : localLow;
-        const usedHigh = (prevRange.high && prevRange.high > 0) ? prevRange.high : localHigh;
-
-        const eps = 1e-9;
-        const rng = Math.max(usedHigh - usedLow, eps);
-        const gamma = 1; // 拉大上界、压小下界
-        const T = (v) => {
-            const s = v >= 0 ? 1 : -1;
-            const a = Math.abs(v || 0);
-            let z = (a - usedLow) / rng; // P5–P99 范围归一化
-            if (!isFinite(z)) z = 0;
-            z = Math.max(0, Math.min(1, z));
-            const zg = Math.pow(z, gamma);
-            return s * zg;
-        };
+        const maxCellCount = d3.max(cellCountPositions, d => d.totalCells) || 1;
         const y = d3.scaleLinear()
-            .domain([-1, 1])
-            .range([this.height, 0]);
-    const centerY = y(0);
-    const gapPx = 1; // 中轴到上下区域各留 2 像素空隙
-        // 生成堆叠层（接收 & 发送）
-        const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
-        const receiveSeries = stack(receivePositions);
-        const sendSeriesRaw = stack(sendPositions);
-        // 将发送部分转换为负值区间
-        const sendSeries = sendSeriesRaw.map(layer => {
-            const negLayer = layer.map(seg => {
-                const arr = [ -seg[1], -seg[0] ]; // 负值区间
-                // 保留原来的 data 引用供 area 访问 d.data.index
-                arr.data = seg.data;
-                return arr;
-            });
-            negLayer.key = layer.key;
-            return negLayer;
-        });
-        // 面积生成器（上）
-    const areaReceive = d3.area()
-            .x(d => x(d.data.index))
-            .y0(d => y(T(d[0])) - gapPx)
-            .y1(d => y(T(d[1])) - gapPx)
+            .domain([0, maxCellCount])
+            .range([height - this.margin.top - this.margin.bottom, 0]);
+
+        // 绘制折线图
+        const line = d3.line()
+            .x(d => x(d.index))
+            .y(d => y(d.totalCells))
             .curve(d3.curveMonotoneX);
-        // 面积生成器（下）
-    const areaSend = d3.area()
+
+        // 绘制折线
+        g.append('path')
+            .datum(cellCountPositions)
+            .attr('fill', 'none')
+            .attr('stroke', '#4CAF50')
+            .attr('stroke-width', 2)
+            .attr('d', line);
+
+        // 绘制数据点
+        g.selectAll('.cell-dot')
+            .data(cellCountPositions)
+            .enter()
+            .append('circle')
+            .attr('class', 'cell-dot')
+            .attr('cx', d => x(d.index))
+            .attr('cy', d => y(d.totalCells))
+            .attr('r', 3)
+            .attr('fill', '#4CAF50')
+            .attr('stroke', 'white')
+            .attr('stroke-width', 1);
+
+        // 添加数值标签
+        g.selectAll('.cell-label')
+            .data(cellCountPositions)
+            .enter()
+            .append('text')
+            .attr('class', 'cell-label')
+            .attr('x', d => x(d.index))
+            .attr('y', d => y(d.totalCells) - 8)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '9px')
+            .attr('fill', '#333')
+            .text(d => d.totalCells);
+
+        // X轴
+        const xAxis = d3.axisBottom(x)
+            .tickValues(cellCountPositions.map(d => d.index))
+            .tickFormat(i => {
+                const idx = Math.round(i);
+                return cellCountPositions[idx] ? cellCountPositions[idx].label : `${idx}`;
+            });
+
+        g.append('g')
+            .attr('transform', `translate(0,${height - this.margin.top - this.margin.bottom})`)
+            .call(xAxis)
+            .selectAll('text')
+            .style('font-size', '8px')
+            .attr('text-anchor', 'end')
+            .attr('transform', 'rotate(-45)');
+
+        // Y轴
+        const yAxis = d3.axisLeft(y).ticks(3);
+        g.append('g')
+            .call(yAxis)
+            .selectAll('text')
+            .style('font-size', '8px');
+    }
+
+    renderCommChart(container, positions, keys, height, type) {
+        const svg = container.append('svg')
+            .attr('width', '100%')
+            .attr('height', height)
+            .attr('class', `${type}-comm-svg`)
+            .attr('viewBox', `0 0 ${this.width + this.margin.left + this.margin.right} ${height}`);
+
+        const g = svg.append('g')
+            .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
+
+        const x = d3.scaleLinear()
+            .domain([0, Math.max(1, positions.length - 1)])
+            .range([0, this.width]);
+
+        // 计算最大值
+        const maxTotal = d3.max(positions, p => d3.sum(keys, k => +p[k] || 0)) || 1;
+        const y = d3.scaleLinear()
+            .domain([0, maxTotal])
+            .range([height - this.margin.top - this.margin.bottom, 0]);
+
+        // 生成堆叠数据
+        const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
+        const series = stack(positions);
+
+        // 面积生成器
+        const area = d3.area()
             .x(d => x(d.data.index))
-            .y0(d => y(T(d[0])) + gapPx)
-            .y1(d => y(T(d[1])) + gapPx)
+            .y0(d => y(d[0]))
+            .y1(d => y(d[1]))
             .curve(d3.curveMonotoneX);
 
         // 颜色函数
         const colorFor = (key) => {
             const base = (key || '').split('_')[0];
             if (this.typeColorMap[base]) return this.typeColorMap[base];
-            // 稳定哈希回退
             let hash = 0; const s = String(base);
             for (let i = 0; i < s.length; i++) { hash = ((hash << 5) - hash) + s.charCodeAt(i); hash |= 0; }
             const idx = Math.abs(hash) % this.scheme.length;
             return this.scheme[idx];
         };
 
-        // 绘制接收层（上半）
-        g.selectAll('.stack-layer-receive')
-            .data(receiveSeries)
+        // 绘制堆叠面积图
+        g.selectAll('.stack-layer')
+            .data(series)
             .enter()
             .append('path')
-            .attr('class', 'stack-layer-receive')
-            .attr('d', areaReceive)
+            .attr('class', 'stack-layer')
+            .attr('d', area)
             .attr('fill', s => colorFor(s.key))
-            .attr('fill-opacity', 0.95)
+            .attr('fill-opacity', 0.8)
             .attr('stroke', 'white')
-            .attr('stroke-width', 1);
-        // 绘制发送层（下半）
-        g.selectAll('.stack-layer-send')
-            .data(sendSeries)
-            .enter()
-            .append('path')
-            .attr('class', 'stack-layer-send')
-            .attr('d', areaSend)
-            .attr('fill', s => colorFor(s.key))
-            .attr('fill-opacity', 0.55)
-            .attr('stroke', 'white')
-            .attr('stroke-width', 1);
+            .attr('stroke-width', 0.5);
 
-        // 计算总接收/总发送用于叠加折线
-        const receiveTotals = receivePositions.map(p => ({ index: p.index, total: d3.sum(keys, k => +p[k] || 0) }));
-        const sendTotals = sendPositions.map(p => ({ index: p.index, total: d3.sum(keys, k => +p[k] || 0) }));
-
-    const lineReceive = d3.line()
-            .x(d => x(d.index))
-            .y(d => y(T(d.total)) - gapPx)
-            .curve(d3.curveMonotoneX);
-    const lineSend = d3.line()
-            .x(d => x(d.index))
-            .y(d => y(T(-d.total)) + gapPx)
-            .curve(d3.curveMonotoneX);
-
-        g.append('path')
-            .attr('class','total-line receive')
-            .attr('d', lineReceive(receiveTotals))
-            .attr('fill','none')
-            .attr('stroke','#222')
-            .attr('stroke-width',1.5);
-        g.append('path')
-            .attr('class','total-line send')
-            .attr('d', lineSend(sendTotals))
-            .attr('fill','none')
-            .attr('stroke','#222')
-            .attr('stroke-width',1.5)
-            .attr('stroke-dasharray','4,3');
-
+        // X轴
         const xAxis = d3.axisBottom(x)
-            .tickValues(receivePositions.map(d => d.index))
+            .tickValues(positions.map(d => d.index))
             .tickFormat(i => {
                 const idx = Math.round(i);
-                return receivePositions[idx] ? receivePositions[idx].label : `${idx}`;
+                return positions[idx] ? positions[idx].label : `${idx}`;
             });
 
-        const xAxisG = g.append('g')
-            .attr('transform', `translate(0,${centerY})`)
-            .call(xAxis);
-        xAxisG.select('.domain')
-            .attr('stroke', '#555')
-            .attr('stroke-width', 1); // 实线
-        xAxisG.selectAll('text')
-            .style('font-size', '10px')
+        g.append('g')
+            .attr('transform', `translate(0,${height - this.margin.top - this.margin.bottom})`)
+            .call(xAxis)
+            .selectAll('text')
+            .style('font-size', '7px')
             .attr('text-anchor', 'end')
-            .attr('transform', 'rotate(-30)');
+            .attr('transform', 'rotate(-45)');
 
-        // 简单工具提示：显示层名与该位置值
+        // 工具提示
         const tooltip = d3.select('body').select('.overall-stacked-tooltip');
         const tip = tooltip.empty() ? d3.select('body').append('div')
             .attr('class', 'overall-stacked-tooltip')
@@ -324,55 +388,20 @@ export class OverallCommChart {
             .style('font-size', '11px')
           : tooltip;
 
-        // 悬浮交互：区分上下
-        const bindHover = (selector, isReceive) => {
-            g.selectAll(selector)
-                .on('mousemove', (event, layer) => {
-                    const [mx] = d3.pointer(event, g.node());
-                    const i = Math.round(x.invert(mx));
-                    const idx = Math.max(0, Math.min(receivePositions.length - 1, i));
-                    const dRecv = receivePositions[idx];
-                    const dSend = sendPositions[idx];
-                    const raw = isReceive ? (+dRecv[layer.key] || 0) : (+dSend[layer.key] || 0);
-                    const val = raw;
-                    tip.style('opacity', 1)
-                        .style('left', (event.pageX + 10) + 'px')
-                        .style('top', (event.pageY - 24) + 'px')
-                        .html(`<strong>${layer.key}</strong><br/>${isReceive?'接收':'发送'}: ${val.toFixed(3)}`);
-                })
-                .on('mouseout', () => tip.style('opacity', 0));
-        };
-        bindHover('.stack-layer-receive', true);
-        bindHover('.stack-layer-send', false);
-
-        // 总量折线悬浮提示
-        const bindTotalHover = (selector, isReceive) => {
-            g.selectAll(selector)
-                .on('mousemove', (event) => {
-                    const [mx] = d3.pointer(event, g.node());
-                    const i = Math.round(x.invert(mx));
-                    const idx = Math.max(0, Math.min(receivePositions.length - 1, i));
-                    const val = isReceive ? receiveTotals[idx].total : sendTotals[idx].total;
-                    tip.style('opacity', 1)
-                        .style('left', (event.pageX + 10) + 'px')
-                        .style('top', (event.pageY - 24) + 'px')
-                        .html(`<strong>${isReceive?'总接收':'总发送'}</strong><br/>值: ${val.toFixed(3)}`);
-                })
-                .on('mouseout', () => tip.style('opacity', 0));
-        };
-        bindTotalHover('.total-line.receive', true);
-        bindTotalHover('.total-line.send', false);
-
-        // 交互：点击整体图，触发回调在右侧展示详细（保持原行为）
-        if (typeof onClick === 'function') {
-            svg.style('cursor', 'pointer')
-               .on('click', () => onClick());
-        }
-
-        // 渲染结束后，尝试更新全局最大值并广播需要时的统一重绘
-    const changedMax = this._updateGlobalMaxIfNeeded(maxReceiveTotal, maxSendTotal, mode);
-        const changedRange = this._updateGlobalRangeIfNeeded(localLow, localHigh, mode);
-        if (changedMax || changedRange) this._broadcastGlobalRescale();
+        // 悬浮交互
+        g.selectAll('.stack-layer')
+            .on('mousemove', (event, layer) => {
+                const [mx] = d3.pointer(event, g.node());
+                const i = Math.round(x.invert(mx));
+                const idx = Math.max(0, Math.min(positions.length - 1, i));
+                const d = positions[idx];
+                const val = +d[layer.key] || 0;
+                tip.style('opacity', 1)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 24) + 'px')
+                    .html(`<strong>${layer.key}</strong><br/>${type === 'receive' ? 'Receive' : 'Send'}: ${val.toFixed(3)}`);
+            })
+            .on('mouseout', () => tip.style('opacity', 0));
     }
 
     _updateGlobalMaxIfNeeded(localReceiveMax, localSendMax, mode) {

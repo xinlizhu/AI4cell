@@ -107,7 +107,7 @@ class LineageVis {
             modeGroup.append('label')
                 .style('font-size', '12px')
                 .style('color', '#666')
-                .text('鼠标模式:');
+                .text('Mouse Mode:');
 
             const modeSelect = modeGroup.append('select')
                 .attr('class', 'mouse-mode-select')
@@ -115,8 +115,8 @@ class LineageVis {
                 .style('font-size', '12px');
 
             const modeOptions = [
-                { value: 'pan', label: '拖拽' },
-                { value: 'lasso', label: '套索' }
+                { value: 'pan', label: 'Pan' },
+                { value: 'lasso', label: 'Lasso' }
             ];
             modeSelect.selectAll('option')
                 .data(modeOptions)
@@ -141,11 +141,11 @@ class LineageVis {
                 .style('font-size', '12px');
 
             const options = [
-                { value: '总强度', label: '总强度' },
-                { value: '通道数', label: '通道数' },
-                { value: '平均通道数', label: '平均通道数' },
-                { value: '平均通道强度', label: '平均通道强度' },
-                { value: '细胞接收强度', label: '细胞平均强度' } // 使用“细胞接收强度”关键字匹配用户描述
+                { value: '总强度', label: 'Total Intensity' },
+                { value: '通道数', label: 'Channel Count' },
+                { value: '平均通道数', label: 'Avg Channel Count' },
+                { value: '平均通道强度', label: 'Avg Channel Intensity' },
+                { value: '细胞接收强度', label: 'Cell Avg Intensity' } // 使用“细胞接收强度”关键字匹配用户描述
             ];
             metricSelect.selectAll('option')
                 .data(options)
@@ -220,7 +220,7 @@ class LineageVis {
             .style('cursor','grab');
         // 顶部右上角清空按钮（绝对定位）
         zoomOuter.append('button')
-            .text('清空')
+            .text('Clear')
             .attr('class','lv-clear-btn')
             .style('position','absolute')
             .style('top','8px')
