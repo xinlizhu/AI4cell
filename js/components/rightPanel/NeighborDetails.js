@@ -15,10 +15,10 @@ class NeighborDetailsPanel {
             .style('display','flex')
             .style('flex-direction','column')
             .style('gap','8px')
-            // 更新为固定高度 1000px
-            .style('min-height','1020px')
-            .style('max-height','1020px')
-            .style('height','1020px');
+            // 更新为固定高度 300px
+            .style('min-height','350px')
+            .style('max-height','350px')
+            .style('height','350px');
 
         this.container.append('h4')
             .style('margin','0')
@@ -48,9 +48,14 @@ class NeighborDetailsPanel {
 
         // Event listener: each event appends a new chart block
         document.addEventListener('showNeighborDetails', (e)=>{
-            const { pathCells, neighborCells } = e.detail || {};
-            if (!Array.isArray(pathCells) || pathCells.length===0) return;
-            this.appendChart(pathCells, neighborCells || []);
+            console.log('showNeighborDetails event received:', e.detail);
+            const { pathCells, neighborCells, title } = e.detail || {};
+            if (!Array.isArray(pathCells) || pathCells.length===0) {
+                console.warn('Invalid pathCells data:', pathCells);
+                return;
+            }
+            console.log('Appending chart with pathCells:', pathCells, 'neighborCells:', neighborCells);
+            this.appendChart(pathCells, neighborCells || [], title);
         });
 
         // Clear event: remove all charts and restore empty state
@@ -76,9 +81,9 @@ class NeighborDetailsPanel {
         return descriptors.map(d => d.label).join(' -> ');
     }
 
-    appendChart(descriptors, neighborCells) {
+    appendChart(descriptors, neighborCells, title = null) {
         this.chartCount += 1;
-    if (this.emptyState) { this.emptyState.remove(); this.emptyState = null; }
+        if (this.emptyState) { this.emptyState.remove(); this.emptyState = null; }
         const pathKey = descriptors.map(d=>d.label).join('->');
         const wrap = this.list.append('div')
             .attr('class','neighbor-chart-wrapper')
@@ -110,13 +115,14 @@ class NeighborDetailsPanel {
             .style('font-size','12px')
             .on('click', () => wrap.remove());
 
-        // Title
+        // Title - 使用传入的标题或默认标题
+        const displayTitle = title || `(${this.chartCount}) ${this.summarizePath(descriptors)}`;
         wrap.append('div')
             .attr('class','neighbor-chart-title')
             .style('font-weight','600')
             .style('margin-bottom','6px')
             .style('font-size','13px')
-            .text(`(${this.chartCount}) ${this.summarizePath(descriptors)}`);
+            .text(displayTitle);
 
         const chartId = `neighbor-overall-${Date.now()}-${Math.floor(Math.random()*1e6)}`;
     wrap.append('div').attr('id', chartId).style('width','100%');

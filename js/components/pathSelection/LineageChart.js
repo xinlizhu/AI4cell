@@ -437,7 +437,8 @@ export class LineageChart {
                             detail: {
                                 cellName: this.cellName,
                                 neighborCell: d.cellType,
-                                communicationType: 'receive'
+                                communicationType: 'receive',
+                                specificCells: this.detailedPaths
                             }
                         }));
                     });
@@ -474,7 +475,8 @@ export class LineageChart {
                             detail: {
                                 cellName: this.cellName,
                                 neighborCell: d.cellType,
-                                communicationType: 'send'
+                                communicationType: 'send',
+                                specificCells: this.detailedPaths
                             }
                         }));
                     });

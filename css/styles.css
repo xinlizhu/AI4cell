@@ -14,7 +14,7 @@ body {
     background: #111; /* 黑底 */
     color: #fff;
     padding: 8px 18px 10px 18px;
-    width: 2100px;
+    width: 2130px;
     margin: 0 -10px 12px -10px; /* 拉伸到左右边缘，与 body 内边距配合 */
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     border-bottom: 2px solid #333;
@@ -65,6 +65,7 @@ body {
     gap: 15px;
     /* 取消占满剩余空间，避免把右侧面板挤远 */
     flex: 0 0 auto;
+    width: 1270px; /* 设置固定宽度来容纳内容 */
 }
 
 /* 视图容器通用样式 */
@@ -84,7 +85,7 @@ body {
     flex-direction: column; /* 垂直排列：图表行在上方，表格在下方 */
     gap: 20px; /* 图表行和表格之间的间距 */
     align-items: flex-start;
-    min-height: 1025px;
+    min-height: 650px;
     width: 1250px; /* 固定宽度，避免清空后收缩成一条 */
     min-width: 1250px; /* 防止在 flex 收缩时变窄 */
     overflow-x: visible; /* 外层不强制滚动，滚动交给内部 zoom 容器 */
@@ -223,11 +224,11 @@ body {
     flex-shrink: 0;
 }
 
-/* 固定 Neighbor Overall Communication 容器高度 1000 */
+/* 固定 Neighbor Overall Communication 容器高度 400 */
 #neighborDetailsContainer {
-    min-height: 1000px;
-    max-height: 1000px;
-    height: 1000px;
+    min-height: 400px;
+    max-height: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
 }

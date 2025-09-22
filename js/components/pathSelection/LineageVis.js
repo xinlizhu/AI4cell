@@ -13,9 +13,11 @@ class LineageVis {
         this.renderedForkKeys = new Set();
         this.nodePathMap = {};
         this.currentPreviewKey = null;
-    // 预览锁定（点击切换）
-    this.previewLocked = false;
-    this.lockedPreviewKey = null;
+        // 预览锁定（点击切换）
+        this.previewLocked = false;
+        this.lockedPreviewKey = null;
+        // 鼠标操作模式
+        this.mouseMode = 'pan'; // 默认拖拽模式
         // 布局参数
         this.layoutConfig = {
             columnWidth: 500,   // 放大 2 倍
@@ -84,7 +86,6 @@ class LineageVis {
         // 重新布局（根节点新增可能影响高度）
         this.reflowBranchLayout();
         this.updateConnectors();
-        this.scheduleLinkageUpdate();
     }
 
     initializeGlobalControls() {
@@ -96,6 +97,42 @@ class LineageVis {
                 .style('justify-content', 'flex-end')
                 .style('gap', '8px')
                 .style('margin-bottom', '8px');
+
+            // 鼠标操作模式选择框
+            const modeGroup = bar.append('div')
+                .style('display', 'flex')
+                .style('align-items', 'center')
+                .style('gap', '4px');
+            
+            modeGroup.append('label')
+                .style('font-size', '12px')
+                .style('color', '#666')
+                .text('鼠标模式:');
+
+            const modeSelect = modeGroup.append('select')
+                .attr('class', 'mouse-mode-select')
+                .style('padding', '2px 4px')
+                .style('font-size', '12px');
+
+            const modeOptions = [
+                { value: 'pan', label: '拖拽' },
+                { value: 'lasso', label: '套索' }
+            ];
+            modeSelect.selectAll('option')
+                .data(modeOptions)
+                .enter()
+                .append('option')
+                .attr('value', d => d.value)
+                .text(d => d.label);
+
+            // 默认拖拽模式
+            this.mouseMode = 'pan';
+            modeSelect.property('value', 'pan');
+
+            modeSelect.on('change', (event) => {
+                this.mouseMode = event.target.value;
+                this.updateMouseMode();
+            });
 
             // 指标选择下拉框（控制 LineageChart 内外环使用哪种强度数据）
             const metricSelect = bar.append('select')
@@ -176,7 +213,7 @@ class LineageVis {
         const zoomOuter = this.container.append('div')
             .attr('class','lineage-zoom-outer')
             .style('width','100%')
-            .style('height','960px')
+            .style('height','600px')
             .style('overflow','hidden')
             .style('position','relative')
             .style('background','#fff')
@@ -240,54 +277,28 @@ class LineageVis {
             root: chartsRow,
             cols: new Map(),
             overlay,
-            overlayG
+            overlayG,
+            zoomOuter,
+            zoomInner
+        };
+
+        // 套索相关状态
+        this.lassoData = {
+            isDrawing: false,
+            path: [],
+            lassoGroup: null
         };
 
         let scale = 1;
         let translateX = 0, translateY = 0;
         let isPanning = false;
         let panStart = [0,0];
-        zoomOuter.on('wheel.zoom', (event)=>{
-            event.preventDefault();
-            if (event.shiftKey) {
-                translateX -= event.deltaY; // shift + 滚轮做水平平移
-            } else {
-                const mouseX = event.offsetX;
-                const mouseY = event.offsetY;
-                const prevScale = scale;
-                const delta = -event.deltaY * 0.001;
-                scale = Math.min(3, Math.max(0.3, scale + delta));
-                const k = scale / prevScale;
-                translateX = mouseX - k * (mouseX - translateX);
-                translateY = mouseY - k * (mouseY - translateY);
-            }
-            zoomInner.style('transform', `translate(${translateX}px, ${translateY}px) scale(${scale})`);
-            this.updateConnectors();
-            this.scheduleLinkageUpdate();
-        });
-        zoomOuter.on('mousedown.pan', (event)=>{
-            if (event.button !== 0) return;
-            isPanning = true;
-            panStart = [event.clientX - translateX, event.clientY - translateY];
-            zoomOuter.style('cursor','grabbing');
-            event.preventDefault();
-        });
-        d3.select(window).on('mousemove.panTree', (event)=>{
-            if (!isPanning) return;
-            translateX = event.clientX - panStart[0];
-            translateY = event.clientY - panStart[1];
-            zoomInner.style('transform', `translate(${translateX}px, ${translateY}px) scale(${scale})`);
-            this.updateConnectors();
-            this.scheduleLinkageUpdate();
-        }).on('mouseup.panTree', ()=>{
-            if (isPanning) { isPanning = false; zoomOuter.style('cursor','grab'); }
-        });
-        zoomOuter.on('dblclick.reset', ()=>{
-            scale = 1; translateX = 0; translateY = 0;
-            zoomInner.style('transform', `translate(0px, 0px) scale(1)`);
-            this.updateConnectors();
-            this.scheduleLinkageUpdate();
-        });
+
+        // 保存状态供模式切换使用
+        this.viewState = { scale, translateX, translateY, isPanning, panStart };
+
+        // 初始化鼠标事件
+        this.setupMouseEvents();
 
         window.addEventListener('resize', () => this.updateConnectors());
 
@@ -445,7 +456,10 @@ class LineageVis {
                     hostSel.selectAll('*').remove();
                     new LineageChart(hostId, type, specific, i, true);
                 }
-                if (i === lastDepth) this.ensureLeafPanel(key, i, used);
+                if (i === lastDepth) {
+                    // 注释掉自动生成 NeighborDetails，只在套索选择时才生成
+                    // this.ensureLeafPanel(key, i, used);
+                }
                 // 同层的分叉逻辑继续判断添加
             }
             if (mainType !== type || mainParentKey !== (parentKey || '')) {
@@ -474,7 +488,10 @@ class LineageVis {
                         wrap.append('div').attr('id', id).classed('lc-host', true);
                     new LineageChart(id, type, specific, i, true);
                     this.renderedForkKeys.add(key);
-                    if (i === lastDepth) this.ensureLeafPanel(key, i, used);
+                    if (i === lastDepth) {
+                        // 注释掉自动生成 NeighborDetails，只在套索选择时才生成
+                        // this.ensureLeafPanel(key, i, used);
+                    }
                 }
             }
         }
@@ -496,14 +513,14 @@ class LineageVis {
         };
         const descriptors = types.map((t, i) => ({ label: t, specificCells: this.getSpecificCellsAtDepth(prefixSubset(i+1), i) }));
         const neighbors = await this.getAllNeighborCells(descriptors);
-        const evt = new CustomEvent('showNeighborDetails', { detail: { pathCells: descriptors, neighborCells: neighbors } });
-        document.dispatchEvent(evt);
+        // 注释掉自动生成事件，只在套索选择时才触发
+        // const evt = new CustomEvent('showNeighborDetails', { detail: { pathCells: descriptors, neighborCells: neighbors } });
+        // document.dispatchEvent(evt);
 
         try {
             const nodeSel = this.branchLayout.root.select(`.branch-chart[data-key='${leafKey}']`);
             if (!nodeSel.empty()) {
                 nodeSel.attr('data-path-key', leafKey);
-                this.scheduleLinkageUpdate();
             }
         } catch(e) {}
 
@@ -804,63 +821,6 @@ class LineageVis {
         this.currentPreviewKey = null;
     }
 
-    scheduleLinkageUpdate() {
-        if (this._pendingLinkUpdate) return;
-        this._pendingLinkUpdate = true;
-        requestAnimationFrame(()=>{ this._pendingLinkUpdate = false; this.drawCrossPanelLinks(); });
-    }
-
-    drawCrossPanelLinks() {
-        const leftRoot = this.container.node();
-        const rightRoot = document.querySelector('#neighborDetailsContainer');
-        if (!leftRoot || !rightRoot) return;
-        let svg = document.querySelector('#lineage-neighbor-link-overlay');
-        if (!svg) {
-            svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-            svg.setAttribute('id','lineage-neighbor-link-overlay');
-            Object.assign(svg.style, { position:'fixed', left:'0', top:'0', width:'100vw', height:'100vh', pointerEvents:'none', zIndex: 40 });
-            document.body.appendChild(svg);
-            window.addEventListener('resize', ()=> this.scheduleLinkageUpdate());
-            document.addEventListener('scroll', ()=> this.scheduleLinkageUpdate(), true); // 捕捉任意滚动
-            document.addEventListener('neighborChartAdded', ()=> this.scheduleLinkageUpdate());
-        }
-        while (svg.firstChild) svg.removeChild(svg.firstChild);
-        const g = document.createElementNS('http://www.w3.org/2000/svg','g');
-        svg.appendChild(g);
-        const neighborBlocks = Array.from(document.querySelectorAll('.neighbor-chart-wrapper[data-path-key]'));
-        if (neighborBlocks.length === 0) return;
-        const map = new Map(); neighborBlocks.forEach(el=> map.set(el.getAttribute('data-path-key'), el));
-        const leftNodes = Array.from(leftRoot.querySelectorAll('.branch-chart[data-path-key]'));
-        leftNodes.forEach(node => {
-            const key = node.getAttribute('data-path-key');
-            if (!map.has(key)) return;
-            const target = map.get(key);
-            const r1 = node.getBoundingClientRect();
-            const r2 = target.getBoundingClientRect();
-            const x1 = r1.right;
-            const y1 = r1.top + r1.height/2; // 源节点垂直中心
-            let x2 = r2.left;
-            let y2 = r2.top + r2.height/2;   // 目标元素左边垂直中点
-            // 计算 LineageVis 容器右边界，超过则截断，不再绘制外部部分
-            const lineageRight = r1.right > r2.left ? Math.max(r1.right, this.container.node().getBoundingClientRect().right)
-                                 : this.container.node().getBoundingClientRect().right;
-            const clipRight = this.container.node().getBoundingClientRect().right; // 仅可绘制到此
-            if (x2 > clipRight) {
-                x2 = clipRight - 2; // 留一点像素避免覆盖边框
-            }
-            if (x2 <= x1) return; // 若目标在可绘制范围外或倒置则跳过
-            const mx = (x1 + x2)/2;
-            const path = document.createElementNS('http://www.w3.org/2000/svg','path');
-            path.setAttribute('d', `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
-            path.setAttribute('stroke', '#c0c5cc');
-            path.setAttribute('stroke-width','2');
-            path.setAttribute('fill','none');
-            path.setAttribute('class','ln-cross-link');
-            g.appendChild(path);
-            // 不再绘制终点圆，避免越界显示
-        });
-    }
-
     clearLineageView() {
         // 1) 清空本容器与本实例状态
         this.container.selectAll('*').remove();
@@ -871,18 +831,15 @@ class LineageVis {
         this.currentPreviewKey = null;
         this.previewLocked = false;
         this.lockedPreviewKey = null;
+        // 重置套索状态
+        this.clearLassoPath();
+        this.mouseMode = 'pan'; // 重置为拖拽模式
         d3.selectAll('.path-container').remove();
 
     // 2) 通知右侧面板清空（保留其容器与监听）
     try { document.dispatchEvent(new CustomEvent('clearNeighborDetails')); } catch (_) {}
 
-        // 3) 移除跨面板连线覆盖层
-        try {
-            const svg = document.getElementById('lineage-neighbor-link-overlay');
-            if (svg && svg.parentNode) svg.parentNode.removeChild(svg);
-        } catch (_) {}
-
-        // 4) 重置全局变量/注册表/最大值（彻底清空）
+        // 3) 重置全局变量/注册表/最大值（彻底清空）
         try { window.__lineageCharts = []; } catch (_) {}
         try { window.__neighborCellGlobalMax = {}; } catch (_) {}
         try { window.__overallCommCharts = []; } catch (_) {}
@@ -940,6 +897,317 @@ class LineageVis {
         return neighborsWithIntensity
             .sort((a, b) => b.totalIntensity - a.totalIntensity)
             .map(d => d.type);
+    }
+
+    // 设置鼠标事件
+    setupMouseEvents() {
+        if (!this.branchLayout) return;
+        
+        const { zoomOuter, zoomInner } = this.branchLayout;
+        
+        // 滚轮缩放事件（两种模式都支持）
+        zoomOuter.on('wheel.zoom', (event) => {
+            event.preventDefault();
+            if (event.shiftKey) {
+                this.viewState.translateX -= event.deltaY; // shift + 滚轮做水平平移
+            } else {
+                const mouseX = event.offsetX;
+                const mouseY = event.offsetY;
+                const prevScale = this.viewState.scale;
+                const delta = -event.deltaY * 0.001;
+                this.viewState.scale = Math.min(3, Math.max(0.3, this.viewState.scale + delta));
+                const k = this.viewState.scale / prevScale;
+                this.viewState.translateX = mouseX - k * (mouseX - this.viewState.translateX);
+                this.viewState.translateY = mouseY - k * (mouseY - this.viewState.translateY);
+            }
+            zoomInner.style('transform', `translate(${this.viewState.translateX}px, ${this.viewState.translateY}px) scale(${this.viewState.scale})`);
+            this.updateConnectors();
+        });
+
+        // 双击重置（两种模式都支持）
+        zoomOuter.on('dblclick.reset', () => {
+            this.viewState.scale = 1;
+            this.viewState.translateX = 0;
+            this.viewState.translateY = 0;
+            zoomInner.style('transform', `translate(0px, 0px) scale(1)`);
+            this.updateConnectors();
+        });
+
+        this.updateMouseMode();
+    }
+
+    // 更新鼠标模式
+    updateMouseMode() {
+        if (!this.branchLayout) return;
+        
+        const { zoomOuter, overlay } = this.branchLayout;
+        
+        // 清除之前的事件监听器
+        zoomOuter.on('mousedown.mode', null);
+        d3.select(window).on('mousemove.mode', null).on('mouseup.mode', null);
+        
+        // 清除套索路径
+        this.clearLassoPath();
+
+        if (this.mouseMode === 'pan') {
+            this.setupPanMode();
+        } else if (this.mouseMode === 'lasso') {
+            this.setupLassoMode();
+        }
+    }
+
+    // 设置拖拽模式
+    setupPanMode() {
+        const { zoomOuter, zoomInner } = this.branchLayout;
+        
+        zoomOuter.style('cursor', 'grab');
+        
+        zoomOuter.on('mousedown.mode', (event) => {
+            if (event.button !== 0) return;
+            this.viewState.isPanning = true;
+            this.viewState.panStart = [event.clientX - this.viewState.translateX, event.clientY - this.viewState.translateY];
+            zoomOuter.style('cursor', 'grabbing');
+            event.preventDefault();
+        });
+        
+        d3.select(window).on('mousemove.mode', (event) => {
+            if (!this.viewState.isPanning) return;
+            this.viewState.translateX = event.clientX - this.viewState.panStart[0];
+            this.viewState.translateY = event.clientY - this.viewState.panStart[1];
+            zoomInner.style('transform', `translate(${this.viewState.translateX}px, ${this.viewState.translateY}px) scale(${this.viewState.scale})`);
+            this.updateConnectors();
+        }).on('mouseup.mode', () => {
+            if (this.viewState.isPanning) {
+                this.viewState.isPanning = false;
+                zoomOuter.style('cursor', 'grab');
+            }
+        });
+    }
+
+    // 设置套索模式
+    setupLassoMode() {
+        const { zoomOuter, overlay, overlayG } = this.branchLayout;
+        
+        zoomOuter.style('cursor', 'crosshair');
+        
+        zoomOuter.on('mousedown.mode', (event) => {
+            if (event.button !== 0) return;
+            
+            const rect = zoomOuter.node().getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            
+            this.lassoData.isDrawing = true;
+            this.lassoData.path = [[x, y]];
+            
+            // 创建套索路径
+            if (!this.lassoData.lassoGroup) {
+                this.lassoData.lassoGroup = overlayG.append('g').attr('class', 'lasso-group');
+            }
+            
+            this.lassoData.lassoGroup.selectAll('*').remove();
+            this.lassoData.lassoGroup.append('path')
+                .attr('class', 'lasso-path')
+                .style('fill', 'rgba(0, 100, 255, 0.1)')
+                .style('stroke', '#0066ff')
+                .style('stroke-width', '2px')
+                .style('stroke-dasharray', '5,5')
+                .style('pointer-events', 'none');
+            
+            event.preventDefault();
+        });
+        
+        d3.select(window).on('mousemove.mode', (event) => {
+            if (!this.lassoData.isDrawing) return;
+            
+            const rect = zoomOuter.node().getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            
+            this.lassoData.path.push([x, y]);
+            this.updateLassoPath();
+        }).on('mouseup.mode', () => {
+            if (this.lassoData.isDrawing) {
+                this.lassoData.isDrawing = false;
+                this.finalizeLasso();
+            }
+        });
+    }
+
+    // 更新套索路径显示
+    updateLassoPath() {
+        if (!this.lassoData.lassoGroup || this.lassoData.path.length < 2) return;
+        
+        const line = d3.line()
+            .x(d => d[0])
+            .y(d => d[1])
+            .curve(d3.curveLinear);
+        
+        // 闭合路径
+        const closedPath = [...this.lassoData.path, this.lassoData.path[0]];
+        
+        this.lassoData.lassoGroup.select('.lasso-path')
+            .attr('d', line(closedPath));
+    }
+
+    // 完成套索选择
+    finalizeLasso() {
+        const selectedNodes = this.getNodesInLasso();
+        
+        if (selectedNodes.length > 0) {
+            this.handleLassoSelection(selectedNodes);
+        }
+        
+        // 清除套索路径
+        setTimeout(() => this.clearLassoPath(), 500);
+    }
+
+    // 获取套索内的节点
+    getNodesInLasso() {
+        if (!this.lassoData.path || this.lassoData.path.length < 3) return [];
+        
+        const selectedNodes = [];
+        const { zoomOuter, zoomInner } = this.branchLayout;
+        
+        // 保存对 LineageVis 实例的引用
+        const self = this;
+        
+        // 获取所有 LineageChart 节点
+        zoomInner.selectAll('.branch-chart').each(function() {
+            const chartElement = d3.select(this);
+            const rect = this.getBoundingClientRect();
+            const outerRect = zoomOuter.node().getBoundingClientRect();
+            
+            // 计算节点在 zoomOuter 坐标系中的中心点
+            const centerX = rect.left + rect.width / 2 - outerRect.left;
+            const centerY = rect.top + rect.height / 2 - outerRect.top;
+            
+            // 检查点是否在套索内 - 使用 self 而不是 this
+            if (self.pointInPolygon([centerX, centerY], self.lassoData.path)) {
+                const cellType = chartElement.attr('data-cell');
+                const key = chartElement.attr('data-key');
+                const depth = +chartElement.attr('data-depth') || 0;
+                
+                if (cellType && key) {
+                    selectedNodes.push({
+                        cellType,
+                        key,
+                        depth,
+                        element: this, // 这里的 this 是 DOM 元素，这是正确的
+                        paths: self.nodePathMap[key] || []
+                    });
+                }
+            }
+        });
+        
+        return selectedNodes;
+    }
+
+    // 点在多边形内判断（射线法）
+    pointInPolygon(point, polygon) {
+        const [x, y] = point;
+        let inside = false;
+        
+        for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+            const [xi, yi] = polygon[i];
+            const [xj, yj] = polygon[j];
+            
+            if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) {
+                inside = !inside;
+            }
+        }
+        
+        return inside;
+    }
+
+    // 处理套索选择结果
+    async handleLassoSelection(selectedNodes) {
+        console.log('Lasso selected nodes:', selectedNodes);
+        
+        // 收集所有选中节点的路径和描述符
+        const allSelectedPaths = [];
+        const pathDescriptors = [];
+        
+        selectedNodes.forEach(node => {
+            if (node.paths && node.paths.length > 0) {
+                allSelectedPaths.push(...node.paths);
+            }
+            
+            // 根据节点类型和深度获取具体细胞
+            const specificCells = this.getSpecificCellsForNode(node);
+            
+            if (specificCells.length > 0) {
+                // 创建描述符格式，与原有的 ensureLeafPanel 保持一致
+                pathDescriptors.push({
+                    label: node.cellType,
+                    specificCells: specificCells
+                });
+            }
+        });
+        
+        if (pathDescriptors.length === 0) {
+            console.warn('No specific cells found for selected nodes');
+            return;
+        }
+        
+        console.log('Selected path descriptors:', pathDescriptors);
+        
+        // 获取邻居细胞并生成 OverallCommChart
+        try {
+            const neighborCells = await this.getAllNeighborCells(pathDescriptors);
+            
+            console.log('Generated neighbor cells:', neighborCells);
+            
+            // 触发右侧面板显示
+            document.dispatchEvent(new CustomEvent('showNeighborDetails', {
+                detail: {
+                    pathCells: pathDescriptors,
+                    neighborCells: neighborCells,
+                    title: `套索选择 (${selectedNodes.length} 个节点)`
+                }
+            }));
+            
+            console.log('showNeighborDetails event dispatched with detail:', {
+                pathCells: pathDescriptors,
+                neighborCells: neighborCells,
+                title: `套索选择 (${selectedNodes.length} 个节点)`
+            });
+            
+        } catch (error) {
+            console.error('Error processing lasso selection:', error);
+        }
+    }
+
+    // 根据节点获取具体细胞列表
+    getSpecificCellsForNode(node) {
+        console.log('Getting specific cells for node:', node);
+        
+        if (node.paths && node.paths.length > 0) {
+            // 从路径中提取该深度的具体细胞
+            const cells = this.getSpecificCellsAtDepth(node.paths, node.depth);
+            console.log(`From paths at depth ${node.depth}:`, cells);
+            return cells;
+        }
+        
+        // 如果没有路径信息，尝试从节点映射中获取
+        if (this.nodePathMap[node.key]) {
+            const cells = this.getSpecificCellsAtDepth(this.nodePathMap[node.key], node.depth);
+            console.log(`From nodePathMap[${node.key}] at depth ${node.depth}:`, cells);
+            return cells;
+        }
+        
+        console.log('No specific cells found for node:', node);
+        return [];
+    }
+
+    // 清除套索路径
+    clearLassoPath() {
+        if (this.lassoData.lassoGroup) {
+            this.lassoData.lassoGroup.remove();
+            this.lassoData.lassoGroup = null;
+        }
+        this.lassoData.path = [];
+        this.lassoData.isDrawing = false;
     }
 }
 
