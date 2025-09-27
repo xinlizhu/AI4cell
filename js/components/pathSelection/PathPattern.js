@@ -22,9 +22,43 @@ class PathPattern {
     }
 
     async init() {
+        this.addStyles();
         await this.loadData();
         this.render();
         this.addEventListeners();
+    }
+
+    addStyles() {
+        // 添加CSS样式
+        if (!document.getElementById('pathpattern-styles')) {
+            const style = document.createElement('style');
+            style.id = 'pathpattern-styles';
+            style.textContent = `
+                .pattern-node .node-circle {
+                    transition: all 0.2s ease;
+                }
+                
+                .pattern-node:hover .node-circle {
+                    transform: scale(1.1);
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+                }
+                
+                .pattern-node:hover .node-text {
+                    font-weight: 600;
+                    color: #222;
+                }
+                
+                .pattern-item:hover {
+                    background-color: rgba(0,0,0,0.02);
+                }
+                
+                .pattern-item.selected {
+                    background-color: rgba(33, 150, 243, 0.08);
+                    border-left: 3px solid #2196F3;
+                }
+            `;
+            document.head.appendChild(style);
+        }
     }
 
     async loadData() {
@@ -137,13 +171,36 @@ class PathPattern {
             .style('justify-content', 'flex-end')
             .style('align-items', 'center');
 
-        leftWrap.append('div')
+        // 左侧节点：小圆圈 + 文字
+        const leftNodeContainer = leftWrap.append('div')
             .attr('class', 'pattern-node start-node')
-            .style('width', `${leftColWidth}px`)
+            .style('display', 'flex')
+            .style('align-items', 'center')
+            .style('justify-content', 'flex-start')
+            .style('width', `${leftColWidth}px`);
+        
+        // 左侧小圆圈（先添加，在文字前面）
+        leftNodeContainer.append('div')
+            .attr('class', 'node-circle')
+            .style('width', '12px')
+            .style('height', '12px')
+            .style('border-radius', '50%')
+            .style('background-color', d => this.colors[d.start] || '#ccc')
+            .style('border', '2px solid white')
+            .style('box-shadow', '0 1px 3px rgba(0,0,0,0.2)')
+            .style('flex-shrink', '0')
+            .style('margin-right', '6px');
+        
+        // 左侧文字（放在圆圈后面）
+        leftNodeContainer.append('span')
+            .attr('class', 'node-text')
+            .style('font-size', '12px')
+            .style('font-weight', '500')
+            .style('color', '#333')
             .style('white-space', 'nowrap')
             .style('overflow', 'hidden')
             .style('text-overflow', 'ellipsis')
-            .style('background-color', d => this.colors[d.start] || '#ccc')
+            .style('max-width', `${leftColWidth - 20}px`) // 留空间给圆圈
             .text(d => d.start);
 
         // 固定宽度的中间连接区域，内部条形宽度=平均路径长度，高度=路径数
@@ -173,13 +230,36 @@ class PathPattern {
             .style('justify-content', 'flex-start')
             .style('align-items', 'center');
 
-        rightWrap.append('div')
+        // 右侧节点：小圆圈 + 文字
+        const rightNodeContainer = rightWrap.append('div')
             .attr('class', 'pattern-node end-node')
-            .style('width', `${rightColWidth}px`)
+            .style('display', 'flex')
+            .style('align-items', 'center')
+            .style('justify-content', 'flex-start')
+            .style('width', `${rightColWidth}px`);
+        
+        // 右侧小圆圈（先添加，在文字左侧）
+        rightNodeContainer.append('div')
+            .attr('class', 'node-circle')
+            .style('width', '12px')
+            .style('height', '12px')
+            .style('border-radius', '50%')
+            .style('background-color', d => this.colors[d.end] || '#ccc')
+            .style('border', '2px solid white')
+            .style('box-shadow', '0 1px 3px rgba(0,0,0,0.2)')
+            .style('flex-shrink', '0')
+            .style('margin-right', '6px');
+        
+        // 右侧文字
+        rightNodeContainer.append('span')
+            .attr('class', 'node-text')
+            .style('font-size', '12px')
+            .style('font-weight', '500')
+            .style('color', '#333')
             .style('white-space', 'nowrap')
             .style('overflow', 'hidden')
             .style('text-overflow', 'ellipsis')
-            .style('background-color', d => this.colors[d.end] || '#ccc')
+            .style('max-width', `${rightColWidth - 20}px`) // 留空间给圆圈
             .text(d => d.end);
     }
 
@@ -401,10 +481,35 @@ class PatternTreeVisualization {
             .attr('d', d => {
                 const source = d.source;
                 const target = d.target;
-                return `M${source.y},${source.x}
-                        C${(source.y + target.y) / 2},${source.x}
-                         ${(source.y + target.y) / 2},${target.x}
-                         ${target.y},${target.x}`;
+                
+                // 节点布局：展开按钮(-35) -> 圆圈(-20) -> 文字(-10及以后)
+                // 我们需要让连接线从右侧连接到左侧，避开所有元素
+                
+                // 计算文字长度来确定右边界
+                const sourceTextLength = (source.data.name || '').length;
+                const targetTextLength = (target.data.name || '').length;
+                
+                // 源节点右边界：文字结束位置 + 安全距离
+                const sourceRightBound = Math.max(sourceTextLength * 5, 40) + 10;
+                // 目标节点左边界：展开按钮位置 - 安全距离  
+                const targetLeftBound = -45;
+                
+                // 连接线起点：源节点右侧
+                const sourceX = source.x;
+                const sourceY = source.y + sourceRightBound;
+                
+                // 连接线终点：目标节点左侧
+                const targetX = target.x; 
+                const targetY = target.y + targetLeftBound;
+                
+                // 使用L形连接线，避免穿过节点
+                // 先水平延伸，再垂直，最后水平连接
+                const midY = sourceY + (targetY - sourceY) * 0.7;
+                
+                return `M${sourceY},${sourceX}
+                        C${midY},${sourceX}
+                         ${midY},${targetX}
+                         ${targetY},${targetX}`;
             })
             .style('fill', 'none')
             .style('stroke', '#999')
@@ -423,37 +528,29 @@ class PatternTreeVisualization {
                 this.handleNodeClick(event, d);
             });
             
-        // 节点背景
-        nodeGroups.append('rect')
-            .attr('class', 'node-bg')
-            .attr('x', d => {
-                const textLength = (d.data.name || '').length;
-                const width = Math.max(80, textLength * 6 + 20);
-                return -width/2;
-            })
-            .attr('y', -12)
-            .attr('width', d => {
-                const textLength = (d.data.name || '').length;
-                return Math.max(80, textLength * 6 + 20);
-            })
-            .attr('height', 24)
-            .attr('rx', 1)
+        // 节点小圆圈
+        nodeGroups.append('circle')
+            .attr('class', 'node-circle')
+            .attr('cx', -20) // 圆圈在文字左侧更远的位置
+            .attr('cy', 0)
+            .attr('r', 6)
             .style('fill', d => {
                 if (d.data.name === 'root') return 'transparent';
                 return this.colors[d.data.name] || '#e0e0e0';
             })
-            .style('stroke', d => (d.data.name === 'root' ? 'none' : '#333'))
-            .style('stroke-width', 1)
-            .style('opacity', 0.9);
+            .style('stroke', d => (d.data.name === 'root' ? 'none' : 'white'))
+            .style('stroke-width', 2)
+            .style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.2))'); // 添加阴影效果
             
         // 节点文本
         nodeGroups.append('text')
-            .attr('text-anchor', 'middle')
+            .attr('x', -10) // 文字在圆圈右侧
+            .attr('text-anchor', 'start') // 文字左对齐
             .attr('dy', '0.35em')
             .style('font-size', '10px')
             .style('font-weight', 'bold')
-            .style('fill', 'white')
-            .style('text-shadow', '1px 1px 1px rgba(0,0,0,0.7)')
+            .style('fill', '#333')
+            .style('text-shadow', 'none')
             .text(d => {
                 if (d.data.name === 'root') return '';
                 return `${d.data.name}`;
@@ -472,17 +569,14 @@ class PatternTreeVisualization {
         
         nodesWithChildren.append('circle')
             .attr('class', 'toggle-btn')
-            .attr('cx', d => {
-                const textLength = (d.data.name || '').length;
-                const width = Math.max(80, textLength * 6 + 20);
-                return width/2 + 10;
-            })
+            .attr('cx', -35) // 展开按钮放在圆圈左侧固定位置
             .attr('cy', 0)
-            .attr('r', 8)
+            .attr('r', 7)
             .style('fill', '#fff')
-            .style('stroke', '#333')
-            .style('stroke-width', 1)
+            .style('stroke', '#666')
+            .style('stroke-width', 1.5)
             .style('cursor', 'pointer')
+            .style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.15))')
             .on('click', (event, d) => {
                 event.stopPropagation();
                 console.log('Toggle button clicked for:', d.data.name);
@@ -495,17 +589,14 @@ class PatternTreeVisualization {
             });
             
         nodesWithChildren.append('text')
-            .attr('x', d => {
-                const textLength = (d.data.name || '').length;
-                const width = Math.max(80, textLength * 6 + 20);
-                return width/2 + 10;
-            })
+            .attr('x', -35) // 展开按钮文字对应位置
             .attr('y', 0)
             .attr('text-anchor', 'middle')
             .attr('dy', '0.35em')
             .style('font-size', '10px')
             .style('font-weight', 'bold')
             .style('pointer-events', 'none')
+            .style('fill', '#666')
             .text(d => d.children ? '−' : '+');
     }
     
@@ -557,15 +648,24 @@ class PatternTreeVisualization {
     }
     
     updateNodeSelection() {
-        this.g.selectAll('.tree-node .node-bg')
+        this.g.selectAll('.tree-node .node-circle')
             .style('stroke-width', d => {
-                return this.selectedBranches.has(d.data.id) ? 3 : 1;
+                return this.selectedBranches.has(d.data.id) ? 3 : 2;
             })
             .style('stroke', d => {
-                return this.selectedBranches.has(d.data.id) ? '#ff6b6b' : '#333';
+                return this.selectedBranches.has(d.data.id) ? '#ff6b6b' : 'white';
             })
-            .style('opacity', d => {
-                return this.selectedBranches.has(d.data.id) ? 1 : 0.9;
+            .style('r', d => {
+                return this.selectedBranches.has(d.data.id) ? 8 : 6; // 选中时圆圈略大
+            });
+        
+        // 同时更新文字样式
+        this.g.selectAll('.tree-node text')
+            .style('font-weight', d => {
+                return this.selectedBranches.has(d.data.id) ? 'bold' : 'bold';
+            })
+            .style('fill', d => {
+                return this.selectedBranches.has(d.data.id) ? '#ff6b6b' : '#333';
             });
     }
     
