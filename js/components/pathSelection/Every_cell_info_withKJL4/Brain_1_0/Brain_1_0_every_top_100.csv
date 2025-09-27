@@ -1,0 +1,900 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+Brain,发送,1,MDK_PTPRZ1,Brain,MDK,PTPRZ1,1.152,0.0
+Brain,发送,2,PPIA_BSG,Brain,PPIA,BSG,1.13,0.0
+Brain,发送,3,CDH2_CDH2,Brain,CDH2,CDH2,0.849,0.0
+Brain,发送,4,LRFN4_PTPRF,Brain,LRFN4,PTPRF,0.73,0.0
+Brain,发送,5,LRRC4C_PTPRF,Brain,LRRC4C,PTPRF,0.722,0.0
+Brain,发送,6,TENM3_ADGRL2,Brain,TENM3,ADGRL2,0.722,0.0
+Brain,发送,7,LRRC4B_PTPRF,Brain,LRRC4B,PTPRF,0.699,0.0
+Brain,发送,8,PTN_PTPRZ1,Brain,PTN,PTPRZ1,0.694,0.0
+Brain,发送,9,CADM1_NECTIN3,Brain,CADM1,NECTIN3,0.69,0.0
+Brain,发送,10,DLK1_NOTCH1,Brain,DLK1,NOTCH1,0.685,0.015
+Brain,发送,11,TENM4_ADGRL2,Brain,TENM4,ADGRL2,0.617,0.0
+Brain,发送,12,JAM3_JAM3,Brain,JAM3,JAM3,0.594,0.0
+Brain,发送,13,AGRN_PTPRS,Brain,AGRN,PTPRS,0.556,0.001
+Brain,发送,14,NTN1_DCC,Brain,NTN1,DCC,0.539,0.0
+Brain,发送,15,TENM3_ADGRL3,Brain,TENM3,ADGRL3,0.535,0.0
+Brain,发送,16,WNT7B_SFRP2,Brain,WNT7B,SFRP2,0.529,0.0
+Brain,发送,17,FLRT3_ADGRL2,Brain,FLRT3,ADGRL2,0.521,0.0
+Brain,发送,18,TENM2_FLRT3_complex_ADGRL2,Brain,TENM2,FLRT3,0.52,0.0
+Brain,发送,19,TENM2_ADGRL2,Brain,TENM2,ADGRL2,0.52,0.0
+Brain,发送,20,EFNB3_EPHB2,Brain,EFNB3,EPHB2,0.518,0.0
+Brain,发送,21,EFNA5_EPHB2,Brain,EFNA5,EPHB2,0.515,0.0
+Brain,发送,22,DLL1_NOTCH1,Brain,DLL1,NOTCH1,0.509,0.0
+Brain,发送,23,EFNB3_EPHA4,Brain,EFNB3,EPHA4,0.505,0.0
+Brain,发送,24,EFNA5_EPHA4,Brain,EFNA5,EPHA4,0.502,0.0
+Brain,发送,25,WNT5A_SFRP2,Brain,WNT5A,SFRP2,0.5,0.0
+Brain,发送,26,EFNB1_EPHB2,Brain,EFNB1,EPHB2,0.487,0.0
+Brain,发送,27,GJC1_GJC1,Brain,GJC1,GJC1,0.48,0.048
+Brain,发送,28,WNT7B_SFRP1,Brain,WNT7B,SFRP1,0.478,0.0
+Brain,发送,29,JAM2_JAM3,Brain,JAM2,JAM3,0.476,0.0
+Brain,发送,30,EFNB1_EPHA4,Brain,EFNB1,EPHA4,0.474,0.0
+Brain,发送,31,WNT5B_SFRP2,Brain,WNT5B,SFRP2,0.474,0.0
+Brain,发送,32,SLIT2_ROBO1,Brain,SLIT2,ROBO1,0.473,0.0
+Brain,发送,33,TENM3_ADGRL1,Brain,TENM3,ADGRL1,0.467,0.0
+Brain,发送,34,EFNB2_EPHB2,Brain,EFNB2,EPHB2,0.465,0.0
+Brain,发送,35,JAG1_NOTCH1,Brain,JAG1,NOTCH1,0.46,0.0
+Brain,发送,36,NRXN1_DAG1,Brain,NRXN1,DAG1,0.455,0.0
+Brain,发送,37,NECTIN1_NECTIN3,Brain,NECTIN1,NECTIN3,0.455,0.0
+Brain,发送,38,DAG1_NRXN3,Brain,DAG1,NRXN3,0.453,0.0
+Brain,发送,39,EFNB2_EPHA4,Brain,EFNB2,EPHA4,0.452,0.0
+Brain,发送,40,WNT5A_SFRP1,Brain,WNT5A,SFRP1,0.449,0.0
+Brain,发送,41,BMPR1B_BMPR2_BMPR1A,Brain,BMPR1B,BMPR2,0.447,0.004
+Brain,发送,42,NRXN2_DAG1,Brain,NRXN2,DAG1,0.446,0.0
+Brain,发送,43,EFNA5_EPHA3,Brain,EFNA5,EPHA3,0.436,0.0
+Brain,发送,44,WNT3A_SFRP2,Brain,WNT3A,SFRP2,0.435,0.0
+Brain,发送,45,TENM4_ADGRL3,Brain,TENM4,ADGRL3,0.43,0.0
+Brain,发送,46,DLL3_NOTCH1,Brain,DLL3,NOTCH1,0.424,0.0
+Brain,发送,47,WNT5B_SFRP1,Brain,WNT5B,SFRP1,0.423,0.0
+Brain,发送,48,WNT9A_SFRP2,Brain,WNT9A,SFRP2,0.415,0.0
+Brain,发送,49,NCAM1_AGRN,Brain,NCAM1,AGRN,0.405,0.0
+Brain,发送,50,NCAM1_FGFR1,Brain,NCAM1,FGFR1,0.395,0.0
+Brain,发送,51,EFNB3_EPHB4,Brain,EFNB3,EPHB4,0.388,0.0
+Brain,发送,52,WNT3A_SFRP1,Brain,WNT3A,SFRP1,0.384,0.0
+Brain,发送,53,LRFN4_PTPRD,Brain,LRFN4,PTPRD,0.383,0.0
+Brain,发送,54,EFNA5_EPHA5,Brain,EFNA5,EPHA5,0.372,0.0
+Brain,发送,55,EFNB3_EPHB1,Brain,EFNB3,EPHB1,0.37,0.0
+Brain,发送,56,WNT9A_SFRP1,Brain,WNT9A,SFRP1,0.364,0.0
+Brain,发送,57,DLL1_NOTCH2,Brain,DLL1,NOTCH2,0.362,0.0
+Brain,发送,58,SLITRK5_PTPRS,Brain,SLITRK5,PTPRS,0.361,0.0
+Brain,发送,59,LRFN4_PTPRS,Brain,LRFN4,PTPRS,0.36,0.007
+Brain,发送,60,EFNB1_EPHB4,Brain,EFNB1,EPHB4,0.357,0.0
+Brain,发送,61,EFNA2_EPHA4,Brain,EFNA2,EPHA4,0.355,0.0
+Brain,发送,62,EFNB3_EPHB3,Brain,EFNB3,EPHB3,0.355,0.0
+Brain,发送,63,SLIT2_ROBO2,Brain,SLIT2,ROBO2,0.354,0.0
+Brain,发送,64,LRRC4B_PTPRD,Brain,LRRC4B,PTPRD,0.351,0.0
+Brain,发送,65,PTPRS_NTRK3,Brain,PTPRS,NTRK3,0.346,0.0
+Brain,发送,66,PTPRD_IL1RAPL1,Brain,PTPRD,IL1RAPL1,0.343,0.001
+Brain,发送,67,EFNB1_EPHB1,Brain,EFNB1,EPHB1,0.339,0.0
+Brain,发送,68,DLL1_NOTCH3,Brain,DLL1,NOTCH3,0.339,0.0
+Brain,发送,69,TENM2_ADGRL3,Brain,TENM2,ADGRL3,0.334,0.0
+Brain,发送,70,FLRT3_ADGRL3,Brain,FLRT3,ADGRL3,0.334,0.0
+Brain,发送,71,TENM3_FLRT3_complex_ADGRL3,Brain,TENM3,FLRT3,0.334,0.0
+Brain,发送,72,EFNB2_EPHB4,Brain,EFNB2,EPHB4,0.334,0.0
+Brain,发送,73,LRRC4B_PTPRS,Brain,LRRC4B,PTPRS,0.328,0.0
+Brain,发送,74,EFNB1_EPHB3,Brain,EFNB1,EPHB3,0.325,0.0
+Brain,发送,75,NTN1_UNC5C,Brain,NTN1,UNC5C,0.323,0.001
+Brain,发送,76,EFNB2_EPHB1,Brain,EFNB2,EPHB1,0.317,0.0
+Brain,发送,77,NRG3_ERBB4,Brain,NRG3,ERBB4,0.315,0.0
+Brain,发送,78,WNT7B_FZD10_LRP5,Brain,WNT7B,FZD10,0.312,0.0
+Brain,发送,79,WNT7B_FZD2_LRP5,Brain,WNT7B,FZD2,0.312,0.0
+Brain,发送,80,WNT7B_FZD3_LRP5,Brain,WNT7B,FZD3,0.312,0.0
+Brain,发送,81,EFNA4_EPHA4,Brain,EFNA4,EPHA4,0.307,0.0
+Brain,发送,82,EFNB2_EPHB3,Brain,EFNB2,EPHB3,0.302,0.0
+Brain,发送,83,WNT7B_FZD10_LRP6,Brain,WNT7B,FZD10,0.301,0.0
+Brain,发送,84,WNT7B_FZD3_LRP6,Brain,WNT7B,FZD3,0.301,0.0
+Brain,发送,85,WNT7B_FZD2_LRP6,Brain,WNT7B,FZD2,0.301,0.0
+Brain,发送,86,SLIT1_ROBO1,Brain,SLIT1,ROBO1,0.293,0.0
+Brain,发送,87,EFNA2_EPHA3,Brain,EFNA2,EPHA3,0.289,0.0
+Brain,发送,88,JAG1_NOTCH3,Brain,JAG1,NOTCH3,0.289,0.0
+Brain,发送,89,WNT5A_FZD10_LRP5,Brain,WNT5A,FZD10,0.283,0.028
+Brain,发送,90,WNT5A_FZD2_LRP5,Brain,WNT5A,FZD2,0.283,0.028
+Brain,发送,91,WNT5A_FZD3_LRP5,Brain,WNT5A,FZD3,0.283,0.028
+Brain,发送,92,NLGN1_NRXN1,Brain,NLGN1,NRXN1,0.278,0.0
+Brain,发送,93,DLL3_NOTCH2,Brain,DLL3,NOTCH2,0.278,0.001
+Brain,发送,94,WNT7B_FZD7_LRP6,Brain,WNT7B,FZD7,0.275,0.0
+Brain,发送,95,NLGN1_NRXN3,Brain,NLGN1,NRXN3,0.275,0.001
+Brain,发送,96,WNT7B_FZD7_LRP5,Brain,WNT7B,FZD7,0.275,0.0
+Brain,发送,97,LRPAP1_SORT1,Brain,LRPAP1,SORT1,0.273,0.001
+Brain,发送,98,WNT5A_FZD10_LRP6,Brain,WNT5A,FZD10,0.271,0.042
+Brain,发送,99,WNT5A_FZD3_LRP6,Brain,WNT5A,FZD3,0.271,0.042
+Brain,发送,100,WNT5A_FZD2_LRP6,Brain,WNT5A,FZD2,0.271,0.042
+Brain,接收,1,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.152,0.0
+Brain,接收,2,PPIA_BSG,Brain,BSG,PPIA,1.13,0.0
+Brain,接收,3,CDH2_CDH2,Brain,CDH2,CDH2,0.849,0.0
+Brain,接收,4,LRFN4_PTPRF,Brain,PTPRF,LRFN4,0.73,0.0
+Brain,接收,5,LRRC4C_PTPRF,Brain,PTPRF,LRRC4C,0.722,0.0
+Brain,接收,6,TENM3_ADGRL2,Brain,ADGRL2,TENM3,0.722,0.0
+Brain,接收,7,LRRC4B_PTPRF,Brain,PTPRF,LRRC4B,0.699,0.0
+Brain,接收,8,PTN_PTPRZ1,Brain,PTPRZ1,PTN,0.694,0.0
+Brain,接收,9,CADM1_NECTIN3,Brain,NECTIN3,CADM1,0.69,0.0
+Brain,接收,10,DLK1_NOTCH1,Brain,NOTCH1,DLK1,0.685,0.015
+Brain,接收,11,TENM4_ADGRL2,Brain,ADGRL2,TENM4,0.617,0.0
+Brain,接收,12,JAM3_JAM3,Brain,JAM3,JAM3,0.594,0.0
+Brain,接收,13,AGRN_PTPRS,Brain,PTPRS,AGRN,0.556,0.001
+Brain,接收,14,NTN1_DCC,Brain,DCC,NTN1,0.539,0.0
+Brain,接收,15,TENM3_ADGRL3,Brain,ADGRL3,TENM3,0.535,0.0
+Brain,接收,16,WNT7B_SFRP2,Brain,SFRP2,WNT7B,0.529,0.0
+Brain,接收,17,FLRT3_ADGRL2,Brain,ADGRL2,FLRT3,0.521,0.0
+Brain,接收,18,TENM2_FLRT3_complex_ADGRL2,Brain,FLRT3,TENM2,0.52,0.0
+Brain,接收,19,TENM2_ADGRL2,Brain,ADGRL2,TENM2,0.52,0.0
+Brain,接收,20,EFNB3_EPHB2,Brain,EPHB2,EFNB3,0.518,0.0
+Brain,接收,21,EFNA5_EPHB2,Brain,EPHB2,EFNA5,0.515,0.0
+Brain,接收,22,DLL1_NOTCH1,Brain,NOTCH1,DLL1,0.509,0.0
+Brain,接收,23,EFNB3_EPHA4,Brain,EPHA4,EFNB3,0.505,0.0
+Brain,接收,24,EFNA5_EPHA4,Brain,EPHA4,EFNA5,0.502,0.0
+Brain,接收,25,WNT5A_SFRP2,Brain,SFRP2,WNT5A,0.5,0.0
+Brain,接收,26,EFNB1_EPHB2,Brain,EPHB2,EFNB1,0.487,0.0
+Brain,接收,27,GJC1_GJC1,Brain,GJC1,GJC1,0.48,0.048
+Brain,接收,28,WNT7B_SFRP1,Brain,SFRP1,WNT7B,0.478,0.0
+Brain,接收,29,JAM2_JAM3,Brain,JAM3,JAM2,0.476,0.0
+Brain,接收,30,EFNB1_EPHA4,Brain,EPHA4,EFNB1,0.474,0.0
+Brain,接收,31,WNT5B_SFRP2,Brain,SFRP2,WNT5B,0.474,0.0
+Brain,接收,32,SLIT2_ROBO1,Brain,ROBO1,SLIT2,0.473,0.0
+Brain,接收,33,TENM3_ADGRL1,Brain,ADGRL1,TENM3,0.467,0.0
+Brain,接收,34,EFNB2_EPHB2,Brain,EPHB2,EFNB2,0.465,0.0
+Brain,接收,35,JAG1_NOTCH1,Brain,NOTCH1,JAG1,0.46,0.0
+Brain,接收,36,NRXN1_DAG1,Brain,DAG1,NRXN1,0.455,0.0
+Brain,接收,37,NECTIN1_NECTIN3,Brain,NECTIN3,NECTIN1,0.455,0.0
+Brain,接收,38,DAG1_NRXN3,Brain,NRXN3,DAG1,0.453,0.0
+Brain,接收,39,EFNB2_EPHA4,Brain,EPHA4,EFNB2,0.452,0.0
+Brain,接收,40,WNT5A_SFRP1,Brain,SFRP1,WNT5A,0.449,0.0
+Brain,接收,41,BMPR1B_BMPR2_BMPR1A,Brain,BMPR2,BMPR1B,0.447,0.004
+Brain,接收,42,NRXN2_DAG1,Brain,DAG1,NRXN2,0.446,0.0
+Brain,接收,43,EFNA5_EPHA3,Brain,EPHA3,EFNA5,0.436,0.0
+Brain,接收,44,WNT3A_SFRP2,Brain,SFRP2,WNT3A,0.435,0.0
+Brain,接收,45,TENM4_ADGRL3,Brain,ADGRL3,TENM4,0.43,0.0
+Brain,接收,46,DLL3_NOTCH1,Brain,NOTCH1,DLL3,0.424,0.0
+Brain,接收,47,WNT5B_SFRP1,Brain,SFRP1,WNT5B,0.423,0.0
+Brain,接收,48,WNT9A_SFRP2,Brain,SFRP2,WNT9A,0.415,0.0
+Brain,接收,49,NCAM1_AGRN,Brain,AGRN,NCAM1,0.405,0.0
+Brain,接收,50,NCAM1_FGFR1,Brain,FGFR1,NCAM1,0.395,0.0
+Brain,接收,51,EFNB3_EPHB4,Brain,EPHB4,EFNB3,0.388,0.0
+Brain,接收,52,WNT3A_SFRP1,Brain,SFRP1,WNT3A,0.384,0.0
+Brain,接收,53,LRFN4_PTPRD,Brain,PTPRD,LRFN4,0.383,0.0
+Brain,接收,54,EFNA5_EPHA5,Brain,EPHA5,EFNA5,0.372,0.0
+Brain,接收,55,EFNB3_EPHB1,Brain,EPHB1,EFNB3,0.37,0.0
+Brain,接收,56,WNT9A_SFRP1,Brain,SFRP1,WNT9A,0.364,0.0
+Brain,接收,57,DLL1_NOTCH2,Brain,NOTCH2,DLL1,0.362,0.0
+Brain,接收,58,SLITRK5_PTPRS,Brain,PTPRS,SLITRK5,0.361,0.0
+Brain,接收,59,LRFN4_PTPRS,Brain,PTPRS,LRFN4,0.36,0.007
+Brain,接收,60,EFNB1_EPHB4,Brain,EPHB4,EFNB1,0.357,0.0
+Brain,接收,61,EFNA2_EPHA4,Brain,EPHA4,EFNA2,0.355,0.0
+Brain,接收,62,EFNB3_EPHB3,Brain,EPHB3,EFNB3,0.355,0.0
+Brain,接收,63,SLIT2_ROBO2,Brain,ROBO2,SLIT2,0.354,0.0
+Brain,接收,64,LRRC4B_PTPRD,Brain,PTPRD,LRRC4B,0.351,0.0
+Brain,接收,65,PTPRS_NTRK3,Brain,NTRK3,PTPRS,0.346,0.0
+Brain,接收,66,PTPRD_IL1RAPL1,Brain,IL1RAPL1,PTPRD,0.343,0.001
+Brain,接收,67,EFNB1_EPHB1,Brain,EPHB1,EFNB1,0.339,0.0
+Brain,接收,68,DLL1_NOTCH3,Brain,NOTCH3,DLL1,0.339,0.0
+Brain,接收,69,TENM2_ADGRL3,Brain,ADGRL3,TENM2,0.334,0.0
+Brain,接收,70,FLRT3_ADGRL3,Brain,ADGRL3,FLRT3,0.334,0.0
+Brain,接收,71,TENM3_FLRT3_complex_ADGRL3,Brain,FLRT3,TENM3,0.334,0.0
+Brain,接收,72,EFNB2_EPHB4,Brain,EPHB4,EFNB2,0.334,0.0
+Brain,接收,73,LRRC4B_PTPRS,Brain,PTPRS,LRRC4B,0.328,0.0
+Brain,接收,74,EFNB1_EPHB3,Brain,EPHB3,EFNB1,0.325,0.0
+Brain,接收,75,NTN1_UNC5C,Brain,UNC5C,NTN1,0.323,0.001
+Brain,接收,76,EFNB2_EPHB1,Brain,EPHB1,EFNB2,0.317,0.0
+Brain,接收,77,NRG3_ERBB4,Brain,ERBB4,NRG3,0.315,0.0
+Brain,接收,78,WNT7B_FZD10_LRP5,Brain,FZD10,WNT7B,0.312,0.0
+Brain,接收,79,WNT7B_FZD2_LRP5,Brain,FZD2,WNT7B,0.312,0.0
+Brain,接收,80,WNT7B_FZD3_LRP5,Brain,FZD3,WNT7B,0.312,0.0
+Brain,接收,81,EFNA4_EPHA4,Brain,EPHA4,EFNA4,0.307,0.0
+Brain,接收,82,EFNB2_EPHB3,Brain,EPHB3,EFNB2,0.302,0.0
+Brain,接收,83,WNT7B_FZD10_LRP6,Brain,FZD10,WNT7B,0.301,0.0
+Brain,接收,84,WNT7B_FZD3_LRP6,Brain,FZD3,WNT7B,0.301,0.0
+Brain,接收,85,WNT7B_FZD2_LRP6,Brain,FZD2,WNT7B,0.301,0.0
+Brain,接收,86,SLIT1_ROBO1,Brain,ROBO1,SLIT1,0.293,0.0
+Brain,接收,87,EFNA2_EPHA3,Brain,EPHA3,EFNA2,0.289,0.0
+Brain,接收,88,JAG1_NOTCH3,Brain,NOTCH3,JAG1,0.289,0.0
+Brain,接收,89,WNT5A_FZD10_LRP5,Brain,FZD10,WNT5A,0.283,0.028
+Brain,接收,90,WNT5A_FZD2_LRP5,Brain,FZD2,WNT5A,0.283,0.028
+Brain,接收,91,WNT5A_FZD3_LRP5,Brain,FZD3,WNT5A,0.283,0.028
+Brain,接收,92,NLGN1_NRXN1,Brain,NRXN1,NLGN1,0.278,0.0
+Brain,接收,93,DLL3_NOTCH2,Brain,NOTCH2,DLL3,0.278,0.001
+Brain,接收,94,WNT7B_FZD7_LRP6,Brain,FZD7,WNT7B,0.275,0.0
+Brain,接收,95,NLGN1_NRXN3,Brain,NRXN3,NLGN1,0.275,0.001
+Brain,接收,96,WNT7B_FZD7_LRP5,Brain,FZD7,WNT7B,0.275,0.0
+Brain,接收,97,LRPAP1_SORT1,Brain,SORT1,LRPAP1,0.273,0.001
+Brain,接收,98,WNT5A_FZD10_LRP6,Brain,FZD10,WNT5A,0.271,0.042
+Brain,接收,99,WNT5A_FZD3_LRP6,Brain,FZD3,WNT5A,0.271,0.042
+Brain,接收,100,WNT5A_FZD2_LRP6,Brain,FZD2,WNT5A,0.271,0.042
+Brain_1_0_Target,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.168,0.002
+Brain_1_0_Target,发送,2,LRFN4_PTPRF,Brain,LRFN4,PTPRF,0.827,0.0
+Brain_1_0_Target,发送,3,LRRC4C_PTPRF,Brain,LRRC4C,PTPRF,0.819,0.0
+Brain_1_0_Target,发送,4,LRRC4B_PTPRF,Brain,LRRC4B,PTPRF,0.795,0.0
+Brain_1_0_Target,发送,5,AGRN_PTPRS,Brain,AGRN,PTPRS,0.631,0.001
+Brain_1_0_Target,发送,6,FN1_integrin_a4b1_complex,Brain,FN1,integrin,0.631,0.016
+Brain_1_0_Target,发送,7,PTN_PTPRZ1,Brain,PTN,PTPRZ1,0.618,0.001
+Brain_1_0_Target,发送,8,JAM3_JAM3,Brain,JAM3,JAM3,0.593,0.004
+Brain_1_0_Target,发送,9,WNT7B_SFRP1,Brain,WNT7B,SFRP1,0.593,0.0
+Brain_1_0_Target,发送,10,WNT7B_SFRP2,Brain,WNT7B,SFRP2,0.565,0.001
+Brain_1_0_Target,发送,11,WNT5A_SFRP1,Brain,WNT5A,SFRP1,0.564,0.0
+Brain_1_0_Target,发送,12,WNT5B_SFRP1,Brain,WNT5B,SFRP1,0.538,0.0
+Brain_1_0_Target,发送,13,WNT5A_SFRP2,Brain,WNT5A,SFRP2,0.536,0.001
+Brain_1_0_Target,发送,14,EFNB3_EPHA4,Brain,EFNB3,EPHA4,0.513,0.007
+Brain_1_0_Target,发送,15,WNT5B_SFRP2,Brain,WNT5B,SFRP2,0.51,0.001
+Brain_1_0_Target,发送,16,WNT3A_SFRP1,Brain,WNT3A,SFRP1,0.5,0.0
+Brain_1_0_Target,发送,17,DLL1_NOTCH1,Brain,DLL1,NOTCH1,0.498,0.002
+Brain_1_0_Target,发送,18,TENM3_ADGRL1,Brain,TENM3,ADGRL1,0.488,0.003
+Brain_1_0_Target,发送,19,NCAM1_AGRN,Brain,NCAM1,AGRN,0.484,0.0
+Brain_1_0_Target,发送,20,EFNB1_EPHA4,Brain,EFNB1,EPHA4,0.482,0.005
+Brain_1_0_Target,发送,21,WNT9A_SFRP1,Brain,WNT9A,SFRP1,0.48,0.0
+Brain_1_0_Target,发送,22,JAM2_JAM3,Brain,JAM2,JAM3,0.476,0.003
+Brain_1_0_Target,发送,23,WNT3A_SFRP2,Brain,WNT3A,SFRP2,0.472,0.001
+Brain_1_0_Target,发送,24,EFNB2_EPHA4,Brain,EFNB2,EPHA4,0.459,0.007
+Brain_1_0_Target,发送,25,WNT9A_SFRP2,Brain,WNT9A,SFRP2,0.452,0.001
+Brain_1_0_Target,发送,26,EFNB1_EPHB2,Brain,EFNB1,EPHB2,0.452,0.037
+Brain_1_0_Target,发送,27,DAG1_NRXN3,Brain,DAG1,NRXN3,0.45,0.046
+Brain_1_0_Target,发送,28,JAG1_NOTCH1,Brain,JAG1,NOTCH1,0.449,0.027
+Brain_1_0_Target,发送,29,SLITRK5_PTPRS,Brain,SLITRK5,PTPRS,0.435,0.0
+Brain_1_0_Target,发送,30,LRFN4_PTPRS,Brain,LRFN4,PTPRS,0.435,0.002
+Brain_1_0_Target,发送,31,DLL3_NOTCH1,Brain,DLL3,NOTCH1,0.414,0.012
+Brain_1_0_Target,发送,32,LRRC4B_PTPRS,Brain,LRRC4B,PTPRS,0.403,0.001
+Brain_1_0_Target,发送,33,EFNB3_EPHB4,Brain,EFNB3,EPHB4,0.397,0.024
+Brain_1_0_Target,发送,34,PTPRD_IL1RAPL1,Brain,PTPRD,IL1RAPL1,0.389,0.0
+Brain_1_0_Target,发送,35,DLL1_NOTCH2,Brain,DLL1,NOTCH2,0.376,0.013
+Brain_1_0_Target,发送,36,EFNB1_EPHB4,Brain,EFNB1,EPHB4,0.366,0.005
+Brain_1_0_Target,发送,37,EFNA2_EPHA4,Brain,EFNA2,EPHA4,0.362,0.044
+Brain_1_0_Target,发送,38,COL19A1_integrin_a1b1_complex,Brain,COL19A1,integrin,0.349,0.046
+Brain_1_0_Target,发送,39,EFNB2_EPHB4,Brain,EFNB2,EPHB4,0.344,0.015
+Brain_1_0_Target,发送,40,CDH5_CDH5,Brain,CDH5,CDH5,0.329,0.011
+Brain_1_0_Target,发送,41,DLL1_NOTCH3,Brain,DLL1,NOTCH3,0.325,0.002
+Brain_1_0_Target,发送,42,EFNB1_EPHB3,Brain,EFNB1,EPHB3,0.323,0.031
+Brain_1_0_Target,发送,43,TENM2_ADGRL1,Brain,TENM2,ADGRL1,0.287,0.002
+Brain_1_0_Target,发送,44,TENM2_FLRT3_complex_ADGRL1,Brain,TENM2,FLRT3,0.287,0.002
+Brain_1_0_Target,发送,45,JAM2_integrin_a4b1_complex,Brain,JAM2,integrin,0.286,0.0
+Brain_1_0_Target,发送,46,WNT7B_FZD7_LRP5,Brain,WNT7B,FZD7,0.282,0.009
+Brain_1_0_Target,发送,47,NLGN1_NRXN1,Brain,NLGN1,NRXN1,0.281,0.038
+Brain_1_0_Target,发送,48,VEGFA_NRP2,Brain,VEGFA,NRP2,0.269,0.023
+Brain_1_0_Target,发送,49,WNT7B_FRZB,Brain,WNT7B,FRZB,0.258,0.008
+Brain_1_0_Target,发送,50,SEMA4D_PLXNB1,Brain,SEMA4D,PLXNB1,0.257,0.005
+Brain_1_0_Target,发送,51,RSPO1_LGR4,Brain,RSPO1,LGR4,0.233,0.041
+Brain_1_0_Target,发送,52,COL4A5_integrin_a1b1_complex,Brain,COL4A5,integrin,0.229,0.003
+Brain_1_0_Target,发送,53,Glutamate_byGLS_and_SLC1A2_GRM7,Brain,Glutamate,byGLS,0.226,0.021
+Brain_1_0_Target,发送,54,Desmosterol_byDHCR7_NR1H2,Brain,Desmosterol,byDHCR7,0.213,0.032
+Brain_1_0_Target,发送,55,COL4A5_integrin_a11b1_complex,Brain,COL4A5,integrin,0.2,0.001
+Brain_1_0_Target,发送,56,Glutamate_byGLS_and_SLC1A2_GRIK3,Brain,Glutamate,byGLS,0.192,0.02
+Brain_1_0_Target,发送,57,NRXN2_ADGRL1,Brain,NRXN2,ADGRL1,0.192,0.049
+Brain_1_0_Target,发送,58,SEMA3F_NRP2,Brain,SEMA3F,NRP2,0.191,0.025
+Brain_1_0_Target,发送,59,SEMA3C_NRP2,Brain,SEMA3C,NRP2,0.184,0.046
+Brain_1_0_Target,发送,60,NELL2_ROBO3,Brain,NELL2,ROBO3,0.172,0.0
+Brain_1_0_Target,发送,61,RSPO1_Kremen1_LRP6,Brain,RSPO1,Kremen1,0.168,0.043
+Brain_1_0_Target,发送,62,VCAM1_integrin_a4b1_complex,Brain,VCAM1,integrin,0.153,0.038
+Brain_1_0_Target,发送,63,COL4A6_integrin_a1b1_complex,Brain,COL4A6,integrin,0.151,0.016
+Brain_1_0_Target,发送,64,Glutamate_byGLS_and_SLC1A2_Glutamate_Kainate_3_5_complex,Brain,Glutamate,byGLS,0.137,0.0
+Brain_1_0_Target,发送,65,Glutamate_byGLS_and_SLC1A2_Glutamate_Kainate_2_5_complex,Brain,Glutamate,byGLS,0.137,0.0
+Brain_1_0_Target,发送,66,Glutamate_byGLS_and_SLC1A2_GRM3,Brain,Glutamate,byGLS,0.124,0.015
+Brain_1_0_Target,发送,67,COL4A6_integrin_a11b1_complex,Brain,COL4A6,integrin,0.122,0.035
+Brain_1_0_Target,接收,1,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.169,0.002
+Brain_1_0_Target,接收,2,IGF2_IGF1R,Brain,IGF1R,IGF2,1.159,0.0
+Brain_1_0_Target,接收,3,IGF2_IGF2R,Brain,IGF2R,IGF2,1.078,0.0
+Brain_1_0_Target,接收,4,LRFN4_PTPRF,Brain,PTPRF,LRFN4,0.758,0.0
+Brain_1_0_Target,接收,5,DLK1_NOTCH1,Brain,NOTCH1,DLK1,0.755,0.009
+Brain_1_0_Target,接收,6,PTN_PTPRZ1,Brain,PTPRZ1,PTN,0.641,0.004
+Brain_1_0_Target,接收,7,AGRN_PTPRS,Brain,PTPRS,AGRN,0.635,0.0
+Brain_1_0_Target,接收,8,EFNB3_EPHB2,Brain,EPHB2,EFNB3,0.602,0.0
+Brain_1_0_Target,接收,9,JAM3_JAM3,Brain,JAM3,JAM3,0.593,0.004
+Brain_1_0_Target,接收,10,NTN1_DCC,Brain,DCC,NTN1,0.591,0.0
+Brain_1_0_Target,接收,11,EFNB3_EPHA4,Brain,EPHA4,EFNB3,0.589,0.0
+Brain_1_0_Target,接收,12,DLK1_NOTCH3,Brain,NOTCH3,DLK1,0.585,0.04
+Brain_1_0_Target,接收,13,WNT5A_SFRP2,Brain,SFRP2,WNT5A,0.508,0.001
+Brain_1_0_Target,接收,14,DLL1_NOTCH1,Brain,NOTCH1,DLL1,0.485,0.001
+Brain_1_0_Target,接收,15,WNT7B_SFRP2,Brain,SFRP2,WNT7B,0.474,0.016
+Brain_1_0_Target,接收,16,EFNB3_EPHB4,Brain,EPHB4,EFNB3,0.471,0.0
+Brain_1_0_Target,接收,17,EFNB1_EPHB2,Brain,EPHB2,EFNB1,0.465,0.017
+Brain_1_0_Target,接收,18,DLL3_NOTCH1,Brain,NOTCH1,DLL3,0.462,0.0
+Brain_1_0_Target,接收,19,NECTIN1_NECTIN3,Brain,NECTIN3,NECTIN1,0.461,0.002
+Brain_1_0_Target,接收,20,NRXN1_DAG1,Brain,DAG1,NRXN1,0.459,0.005
+Brain_1_0_Target,接收,21,WNT5A_SFRP1,Brain,SFRP1,WNT5A,0.457,0.045
+Brain_1_0_Target,接收,22,EFNB3_EPHB1,Brain,EPHB1,EFNB3,0.454,0.0
+Brain_1_0_Target,接收,23,EFNB1_EPHA4,Brain,EPHA4,EFNB1,0.452,0.037
+Brain_1_0_Target,接收,24,JAM2_JAM3,Brain,JAM3,JAM2,0.439,0.014
+Brain_1_0_Target,接收,25,WNT5B_SFRP2,Brain,SFRP2,WNT5B,0.439,0.019
+Brain_1_0_Target,接收,26,EFNB3_EPHB3,Brain,EPHB3,EFNB3,0.439,0.0
+Brain_1_0_Target,接收,27,JAG1_NOTCH1,Brain,NOTCH1,JAG1,0.431,0.042
+Brain_1_0_Target,接收,28,WNT6_SFRP2,Brain,SFRP2,WNT6,0.423,0.0
+Brain_1_0_Target,接收,29,PTPRS_NTRK3,Brain,NTRK3,PTPRS,0.421,0.0
+Brain_1_0_Target,接收,30,JAG2_NOTCH1,Brain,NOTCH1,JAG2,0.416,0.0
+Brain_1_0_Target,接收,31,LRFN4_PTPRD,Brain,PTPRD,LRFN4,0.41,0.0
+Brain_1_0_Target,接收,32,NCAM1_FGFR1,Brain,FGFR1,NCAM1,0.406,0.025
+Brain_1_0_Target,接收,33,LRFN4_PTPRS,Brain,PTPRS,LRFN4,0.388,0.005
+Brain_1_0_Target,接收,34,NTN1_UNC5C,Brain,UNC5C,NTN1,0.375,0.001
+Brain_1_0_Target,接收,35,WNT6_SFRP1,Brain,SFRP1,WNT6,0.371,0.0
+Brain_1_0_Target,接收,36,BMP4_BMPR1A_BMPR2,Brain,BMPR1A,BMP4,0.337,0.005
+Brain_1_0_Target,接收,37,CDH5_CDH5,Brain,CDH5,CDH5,0.329,0.011
+Brain_1_0_Target,接收,38,EFNA4_EPHA4,Brain,EPHA4,EFNA4,0.325,0.028
+Brain_1_0_Target,接收,39,COL1A1_integrin_a1b1_complex,Brain,integrin,COL1A1,0.322,0.0
+Brain_1_0_Target,接收,40,DLL3_NOTCH2,Brain,NOTCH2,DLL3,0.316,0.002
+Brain_1_0_Target,接收,41,DLL1_NOTCH3,Brain,NOTCH3,DLL1,0.314,0.016
+Brain_1_0_Target,接收,42,COL1A1_integrin_a11b1_complex,Brain,integrin,COL1A1,0.312,0.0
+Brain_1_0_Target,接收,43,BMP4_BMR1A_AVR2B,Brain,BMR1A,BMP4,0.31,0.002
+Brain_1_0_Target,接收,44,Cholesterol_byDHCR7_RORA,Brain,byDHCR7,Cholesterol,0.304,0.006
+Brain_1_0_Target,接收,45,BMP4_BMR1A_ACR2A,Brain,BMR1A,BMP4,0.304,0.001
+Brain_1_0_Target,接收,46,NRG3_ERBB4,Brain,ERBB4,NRG3,0.302,0.005
+Brain_1_0_Target,接收,47,SLIT1_ROBO1,Brain,ROBO1,SLIT1,0.298,0.037
+Brain_1_0_Target,接收,48,DLL3_NOTCH3,Brain,NOTCH3,DLL3,0.292,0.0
+Brain_1_0_Target,接收,49,VEGFA_NRP2,Brain,NRP2,VEGFA,0.282,0.007
+Brain_1_0_Target,接收,50,VEGFA_FLT1_complex,Brain,FLT1,VEGFA,0.275,0.013
+Brain_1_0_Target,接收,51,VEGFA_FLT1,Brain,FLT1,VEGFA,0.275,0.013
+Brain_1_0_Target,接收,52,JAG2_NOTCH2,Brain,NOTCH2,JAG2,0.27,0.004
+Brain_1_0_Target,接收,53,EFNA4_EPHA3,Brain,EPHA3,EFNA4,0.26,0.036
+Brain_1_0_Target,接收,54,JAG2_NOTCH3,Brain,NOTCH3,JAG2,0.246,0.0
+Brain_1_0_Target,接收,55,Desmosterol_byDHCR7_NR1H2,Brain,byDHCR7,Desmosterol,0.244,0.001
+Brain_1_0_Target,接收,56,BMP4_BMPR1B_BMPR2,Brain,BMPR1B,BMP4,0.239,0.007
+Brain_1_0_Target,接收,57,BMP4_BMR1B_AVR2A,Brain,BMR1B,BMP4,0.239,0.007
+Brain_1_0_Target,接收,58,BMP4_BMR1B_AVR2B,Brain,BMR1B,BMP4,0.239,0.007
+Brain_1_0_Target,接收,59,Glutamate_byGLS_and_SLC1A2_GRIK2,Brain,byGLS,Glutamate,0.236,0.034
+Brain_1_0_Target,接收,60,THBS1_integrin_a3b1_complex,Brain,integrin,THBS1,0.226,0.004
+Brain_1_0_Target,接收,61,NTN1_UNC5B,Brain,UNC5B,NTN1,0.222,0.02
+Brain_1_0_Target,接收,62,SOSTDC1_LRP5,Brain,LRP5,SOSTDC1,0.22,0.011
+Brain_1_0_Target,接收,63,SOSTDC1_LRP6,Brain,LRP6,SOSTDC1,0.208,0.011
+Brain_1_0_Target,接收,64,WNT6_FZD10_LRP5,Brain,FZD10,WNT6,0.206,0.005
+Brain_1_0_Target,接收,65,WNT6_FZD2_LRP5,Brain,FZD2,WNT6,0.206,0.005
+Brain_1_0_Target,接收,66,WNT6_FZD3_LRP5,Brain,FZD3,WNT6,0.206,0.005
+Brain_1_0_Target,接收,67,EFNA4_EPHA5,Brain,EPHA5,EFNA4,0.196,0.045
+Brain_1_0_Target,接收,68,WNT6_FZD10_LRP6,Brain,FZD10,WNT6,0.194,0.002
+Brain_1_0_Target,接收,69,WNT6_FZD2_LRP6,Brain,FZD2,WNT6,0.194,0.002
+Brain_1_0_Target,接收,70,WNT6_FZD3_LRP6,Brain,FZD3,WNT6,0.194,0.002
+Brain_1_0_Target,接收,71,Glutamate_byGLS_and_SLC1A2_GRIK3,Brain,byGLS,Glutamate,0.191,0.01
+Brain_1_0_Target,接收,72,WNT6_FZD1_LRP5,Brain,FZD1,WNT6,0.145,0.005
+Brain_1_0_Target,接收,73,WNT6_FZD1_LRP6,Brain,FZD1,WNT6,0.145,0.005
+Brain_1_0_Target,接收,74,COL6A3_integrin_a1b1_complex,Brain,integrin,COL6A3,0.139,0.0
+Brain_1_0_Target,接收,75,WNT6_FRZB,Brain,FRZB,WNT6,0.138,0.046
+Brain_1_0_Target,接收,76,Glutamate_byGLS_and_SLC1A2_GRM3,Brain,byGLS,Glutamate,0.129,0.013
+Brain_1_0_Target,接收,77,COL6A3_integrin_a11b1_complex,Brain,integrin,COL6A3,0.129,0.0
+Brain_1_0_Target,接收,78,NLGN2_NRXN1,Brain,NRXN1,NLGN2,0.118,0.033
+Brain_1_0_Target,接收,79,NLGN2_NRXN2,Brain,NRXN2,NLGN2,0.109,0.019
+Brain_1_0_Target,接收,80,WNT6_FZD8_LRP5,Brain,FZD8,WNT6,0.103,0.01
+Brain_1_0_Target,接收,81,WNT6_FZD8_LRP6,Brain,FZD8,WNT6,0.103,0.01
+Branchial arch,发送,1,FTL_SCARA5,Brain,FTL,SCARA5,1.482,0.0
+Branchial arch,发送,2,IGF2_IGF1R,Brain,IGF2,IGF1R,1.436,0.007
+Branchial arch,发送,3,LRFN4_PTPRF,Brain,LRFN4,PTPRF,1.232,0.003
+Branchial arch,发送,4,LRRC4C_PTPRF,Brain,LRRC4C,PTPRF,1.224,0.003
+Branchial arch,发送,5,LRRC4B_PTPRF,Brain,LRRC4B,PTPRF,1.2,0.003
+Branchial arch,发送,6,CADM1_NECTIN3,Brain,CADM1,NECTIN3,1.053,0.02
+Branchial arch,发送,7,IGF1_IGF1R_enhancerComGPC3,Brain,IGF1,IGF1R,1.003,0.0
+Branchial arch,发送,8,IGF1_IGF1R,Brain,IGF1,IGF1R,1.003,0.003
+Branchial arch,发送,9,DLK1_NOTCH3,Brain,DLK1,NOTCH3,0.924,0.004
+Branchial arch,发送,10,FN1_integrin_a3b1_complex,Brain,FN1,integrin,0.839,0.01
+Branchial arch,发送,11,NECTIN2_NECTIN3,Brain,NECTIN2,NECTIN3,0.833,0.028
+Branchial arch,发送,12,NCAM1_AGRN,Brain,NCAM1,AGRN,0.822,0.017
+Branchial arch,发送,13,NECTIN1_NECTIN3,Brain,NECTIN1,NECTIN3,0.818,0.019
+Branchial arch,发送,14,DLL1_NOTCH3,Brain,DLL1,NOTCH3,0.748,0.0
+Branchial arch,发送,15,JAG1_NOTCH3,Brain,JAG1,NOTCH3,0.699,0.0
+Branchial arch,发送,16,SLIT2_ROBO2,Brain,SLIT2,ROBO2,0.674,0.015
+Branchial arch,发送,17,DLL3_NOTCH3,Brain,DLL3,NOTCH3,0.663,0.0
+Branchial arch,发送,18,SEMA4D_PLXNB2,Brain,SEMA4D,PLXNB2,0.586,0.032
+Branchial arch,发送,19,EFNA5_EPHA2,Brain,EFNA5,EPHA2,0.574,0.005
+Branchial arch,发送,20,SEMA4C_PLXNB2,Brain,SEMA4C,PLXNB2,0.571,0.032
+Branchial arch,发送,21,EFNB1_EPHA2,Brain,EFNB1,EPHA2,0.546,0.005
+Branchial arch,发送,22,SEMA4D_PLXNB1,Brain,SEMA4D,PLXNB1,0.444,0.048
+Branchial arch,发送,23,EFNA2_EPHA2,Brain,EFNA2,EPHA2,0.427,0.005
+Branchial arch,发送,24,WNT7B_FZD4_LRP6,Brain,WNT7B,FZD4,0.408,0.005
+Branchial arch,发送,25,WNT7B_FZD5_LRP6,Brain,WNT7B,FZD5,0.408,0.0
+Branchial arch,发送,26,THBS1_integrin_a3b1_complex,Brain,THBS1,integrin,0.403,0.012
+Branchial arch,发送,27,EFNA4_EPHA2,Brain,EFNA4,EPHA2,0.379,0.007
+Branchial arch,发送,28,WNT5A_FZD4_LRP6,Brain,WNT5A,FZD4,0.378,0.008
+Branchial arch,发送,29,WNT5A_FZD5_LRP6,Brain,WNT5A,FZD5,0.378,0.003
+Branchial arch,发送,30,WNT5B_FZD4_LRP6,Brain,WNT5B,FZD4,0.353,0.008
+Branchial arch,发送,31,WNT5B_FZD5_LRP6,Brain,WNT5B,FZD5,0.353,0.001
+Branchial arch,发送,32,WNT7B_FZD1_LRP6,Brain,WNT7B,FZD1,0.352,0.018
+Branchial arch,发送,33,WNT3A_FZD5_LRP6,Brain,WNT3A,FZD5,0.314,0.001
+Branchial arch,发送,34,WNT3A_FZD4_LRP6,Brain,WNT3A,FZD4,0.314,0.007
+Branchial arch,发送,35,WNT9A_FZD4_LRP6,Brain,WNT9A,FZD4,0.294,0.008
+Branchial arch,发送,36,WNT9A_FZD5_LRP6,Brain,WNT9A,FZD5,0.294,0.001
+Branchial arch,发送,37,WNT3A_FZD1_LRP6,Brain,WNT3A,FZD1,0.258,0.041
+Branchial arch,发送,38,SHH_HHIP,Brain,SHH,HHIP,0.248,0.021
+Branchial arch,发送,39,Glutamate_byGLS_and_SLC1A3_Glutamate_Kainate_2_4_complex,Brain,Glutamate,byGLS,0.208,0.048
+Branchial arch,发送,40,Glutamate_byGLS_and_SLC1A3_Glutamate_Kainate_3_4_complex,Brain,Glutamate,byGLS,0.206,0.037
+Branchial arch,发送,41,Glutamate_byGLS_and_SLC1A2_Glutamate_Kainate_2_4_complex,Brain,Glutamate,byGLS,0.197,0.028
+Branchial arch,发送,42,Glutamate_byGLS_and_SLC1A2_Glutamate_Kainate_3_4_complex,Brain,Glutamate,byGLS,0.195,0.017
+Branchial arch,发送,43,Glutamate_byGLS_and_SLC1A2_GRM1,Brain,Glutamate,byGLS,0.195,0.041
+Branchial arch,发送,44,SEMA3A_PlexinA4_complex1,Brain,SEMA3A,PlexinA4,0.192,0.049
+Branchial arch,接收,1,IGF2_IGF1R,Brain,IGF1R,IGF2,1.718,0.0
+Branchial arch,接收,2,IGF2_IGF2R,Brain,IGF2R,IGF2,1.637,0.0
+Branchial arch,接收,3,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.399,0.022
+Branchial arch,接收,4,DLK1_NOTCH1,Brain,NOTCH1,DLK1,1.397,0.001
+Branchial arch,接收,5,FGF2_FGFR2,Brain,FGFR2,FGF2,1.265,0.033
+Branchial arch,接收,6,DLK1_NOTCH2,Brain,NOTCH2,DLK1,1.25,0.002
+Branchial arch,接收,7,DLK1_NOTCH3,Brain,NOTCH3,DLK1,1.226,0.002
+Branchial arch,接收,8,LRFN5_PTPRF,Brain,PTPRF,LRFN5,1.085,0.0
+Branchial arch,接收,9,COL2A1_integrin_a1b1_complex,Brain,integrin,COL2A1,1.073,0.009
+Branchial arch,接收,10,COL2A1_integrin_a11b1_complex,Brain,integrin,COL2A1,1.064,0.006
+Branchial arch,接收,11,COL18A1_integrin_a1b1_complex,Brain,integrin,COL18A1,1.037,0.021
+Branchial arch,接收,12,COL18A1_integrin_a11b1_complex,Brain,integrin,COL18A1,1.027,0.021
+Branchial arch,接收,13,LRFN4_PTPRF,Brain,PTPRF,LRFN4,0.984,0.016
+Branchial arch,接收,14,AGRN_PTPRS,Brain,PTPRS,AGRN,0.973,0.015
+Branchial arch,接收,15,APP_FPR2,Brain,FPR2,APP,0.946,0.02
+Branchial arch,接收,16,EFNB2_EPHB2,Brain,EPHB2,EFNB2,0.89,0.005
+Branchial arch,接收,17,APP_TNFRSF21,Brain,TNFRSF21,APP,0.878,0.02
+Branchial arch,接收,18,EFNB2_EPHA4,Brain,EPHA4,EFNB2,0.877,0.006
+Branchial arch,接收,19,EFNB2_EPHB4,Brain,EPHB4,EFNB2,0.76,0.009
+Branchial arch,接收,20,Glutamate_byGLS_and_SLC1A3_GRIK2,Brain,byGLS,Glutamate,0.744,0.0
+Branchial arch,接收,21,EFNB2_EPHB1,Brain,EPHB1,EFNB2,0.742,0.006
+Branchial arch,接收,22,LRFN5_PTPRD,Brain,PTPRD,LRFN5,0.737,0.0
+Branchial arch,接收,23,EFNB2_EPHB3,Brain,EPHB3,EFNB2,0.728,0.01
+Branchial arch,接收,24,LRFN5_PTPRS,Brain,PTPRS,LRFN5,0.715,0.0
+Branchial arch,接收,25,Glutamate_byGLS_and_SLC1A3_GRM7,Brain,byGLS,Glutamate,0.715,0.0
+Branchial arch,接收,26,Glutamate_byGLS_and_SLC1A3_GRIK3,Brain,byGLS,Glutamate,0.698,0.0
+Branchial arch,接收,27,Glutamate_byGLS_and_SLC1A3_GRIA4,Brain,byGLS,Glutamate,0.66,0.0
+Branchial arch,接收,28,Glutamate_byGLS_and_SLC1A3_GRM3,Brain,byGLS,Glutamate,0.637,0.0
+Branchial arch,接收,29,LRFN4_PTPRD,Brain,PTPRD,LRFN4,0.636,0.02
+Branchial arch,接收,30,Glutamate_byGLS_and_SLC1A3_GRM8,Brain,byGLS,Glutamate,0.628,0.0
+Branchial arch,接收,31,LRFN4_PTPRS,Brain,PTPRS,LRFN4,0.614,0.024
+Branchial arch,接收,32,SLITRK2_PTPRD,Brain,PTPRD,SLITRK2,0.583,0.003
+Branchial arch,接收,33,SLITRK2_PTPRS,Brain,PTPRS,SLITRK2,0.561,0.005
+Branchial arch,接收,34,LRRTM4_PTPRS,Brain,PTPRS,LRRTM4,0.52,0.005
+Branchial arch,接收,35,CD80_CTLA4,Brain,CTLA4,CD80,0.45,0.038
+Branchial arch,接收,36,FGF2_FGFR1,Brain,FGFR1,FGF2,0.381,0.041
+Branchial arch,接收,37,FGF2_FGFR3,Brain,FGFR3,FGF2,0.378,0.031
+Branchial arch,接收,38,EDN3_EDNRB,Brain,EDNRB,EDN3,0.326,0.031
+Branchial arch,接收,39,LRRTM4_NRXN1,Brain,NRXN1,LRRTM4,0.306,0.006
+Branchial arch,接收,40,LRRTM4_NRXN3,Brain,NRXN3,LRRTM4,0.303,0.006
+Branchial arch,接收,41,integrin_aVb5_complex_ADGRB1,Brain,aVb5,integrin,0.298,0.048
+Branchial arch,接收,42,LRRTM4_NRXN2,Brain,NRXN2,LRRTM4,0.296,0.005
+Branchial arch,接收,43,COL8A1_integrin_a1b1_complex,Brain,integrin,COL8A1,0.29,0.001
+Branchial arch,接收,44,TGFB2_TGFBR3,Brain,TGFBR3,TGFB2,0.29,0.033
+Branchial arch,接收,45,COL8A1_integrin_a11b1_complex,Brain,integrin,COL8A1,0.28,0.001
+Branchial arch,接收,46,CD80_NGFR,Brain,NGFR,CD80,0.162,0.05
+Cavity,接收,1,NTN1_DCC,Brain,DCC,NTN1,0.518,0.0
+Cavity,接收,2,SHH_PTCH_BOC_transmembrane_receptor,Brain,PTCH,SHH,0.242,0.0
+Mesenchyme,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.227,0.007
+Mesenchyme,发送,2,FN1_integrin_aVb5_complex,Brain,FN1,integrin,0.721,0.006
+Mesenchyme,发送,3,DLK1_NOTCH2,Brain,DLK1,NOTCH2,0.666,0.032
+Mesenchyme,发送,4,FN1_integrin_aVb3_complex,Brain,FN1,integrin,0.607,0.002
+Mesenchyme,发送,5,NRXN1_DAG1,Brain,NRXN1,DAG1,0.534,0.025
+Mesenchyme,发送,6,DAG1_NRXN3,Brain,DAG1,NRXN3,0.529,0.003
+Mesenchyme,发送,7,NRXN2_DAG1,Brain,NRXN2,DAG1,0.525,0.021
+Mesenchyme,发送,8,VEGFA_KDR,Brain,VEGFA,KDR,0.505,0.0
+Mesenchyme,发送,9,CDH6_CDH6,Brain,CDH6,CDH6,0.504,0.0
+Mesenchyme,发送,10,DLL1_NOTCH2,Brain,DLL1,NOTCH2,0.49,0.001
+Mesenchyme,发送,11,JAG1_NOTCH2,Brain,JAG1,NOTCH2,0.441,0.005
+Mesenchyme,发送,12,VEGFC_KDR,Brain,VEGFC,KDR,0.43,0.0
+Mesenchyme,发送,13,DLL3_NOTCH2,Brain,DLL3,NOTCH2,0.406,0.001
+Mesenchyme,发送,14,NTN1_UNC5C,Brain,NTN1,UNC5C,0.395,0.043
+Mesenchyme,发送,15,NLGN1_NRXN3,Brain,NLGN1,NRXN3,0.351,0.007
+Mesenchyme,发送,16,LAMC1_integrin_aVb3_complex,Brain,LAMC1,integrin,0.331,0.014
+Mesenchyme,发送,17,CLSTN1_NRXN3,Brain,CLSTN1,NRXN3,0.318,0.007
+Mesenchyme,发送,18,VEGFB_NRP1,Brain,VEGFB,NRP1,0.311,0.0
+Mesenchyme,发送,19,VEGFA_NRP2,Brain,VEGFA,NRP2,0.3,0.038
+Mesenchyme,发送,20,SEMA6D_PlexinA1_complex1,Brain,SEMA6D,PlexinA1,0.297,0.019
+Mesenchyme,发送,21,WNT7B_FZD7_LRP5,Brain,WNT7B,FZD7,0.29,0.027
+Mesenchyme,发送,22,SEMA4D_PLXNB1,Brain,SEMA4D,PLXNB1,0.281,0.029
+Mesenchyme,发送,23,LPAR1_ADGRE5,Brain,LPAR1,ADGRE5,0.272,0.008
+Mesenchyme,发送,24,WNT7B_FZD1_LRP5,Brain,WNT7B,FZD1,0.267,0.021
+Mesenchyme,发送,25,JAM2_integrin_a4b1_complex,Brain,JAM2,integrin,0.262,0.04
+Mesenchyme,发送,26,VEGFA_NRP1,Brain,VEGFA,NRP1,0.262,0.002
+Mesenchyme,发送,27,WNT7B_FZD1_LRP6,Brain,WNT7B,FZD1,0.257,0.029
+Mesenchyme,发送,28,WNT7B_FZD6_LRP6,Brain,WNT7B,FZD6,0.242,0.003
+Mesenchyme,发送,29,WNT7B_FZD6_LRP5,Brain,WNT7B,FZD6,0.242,0.003
+Mesenchyme,发送,30,NTN1_UNC5B,Brain,NTN1,UNC5B,0.239,0.021
+Mesenchyme,发送,31,integrin_aVb1_complex_ADGRE5,Brain,integrin,aVb1,0.237,0.025
+Mesenchyme,发送,32,SEMA3F_NRP2,Brain,SEMA3F,NRP2,0.221,0.036
+Mesenchyme,发送,33,COL4A5_integrin_a11b1_complex,Brain,COL4A5,integrin,0.217,0.029
+Mesenchyme,发送,34,SEMA3C_NRP2,Brain,SEMA3C,NRP2,0.214,0.048
+Mesenchyme,发送,35,WNT5A_FZD6_LRP6,Brain,WNT5A,FZD6,0.213,0.045
+Mesenchyme,发送,36,WNT5A_FZD6_LRP5,Brain,WNT5A,FZD6,0.213,0.046
+Mesenchyme,发送,37,Glutamate_byGLS_and_SLC1A3_GRIK1,Brain,Glutamate,byGLS,0.209,0.012
+Mesenchyme,发送,38,SEMA3A_PlexinA1_complex3,Brain,SEMA3A,PlexinA1,0.206,0.013
+Mesenchyme,发送,39,SEMA3A_NRP1,Brain,SEMA3A,NRP1,0.206,0.015
+Mesenchyme,发送,40,Glutamate_byGLS_and_SLC1A2_GRIK1,Brain,Glutamate,byGLS,0.198,0.003
+Mesenchyme,发送,41,VTN_integrin_aVb3_complex,Brain,VTN,integrin,0.198,0.028
+Mesenchyme,发送,42,SEMA3A_PlexinA3_complex1,Brain,SEMA3A,PlexinA3,0.191,0.001
+Mesenchyme,发送,43,WNT5B_FZD6_LRP6,Brain,WNT5B,FZD6,0.187,0.026
+Mesenchyme,发送,44,WNT5B_FZD6_LRP5,Brain,WNT5B,FZD6,0.187,0.028
+Mesenchyme,发送,45,Glutamate_byGLS_and_SLC1A3_GRM8,Brain,Glutamate,byGLS,0.187,0.041
+Mesenchyme,发送,46,NLGN2_NRXN3,Brain,NLGN2,NRXN3,0.186,0.01
+Mesenchyme,发送,47,Glutamate_byGLS_and_SLC1A2_GRM8,Brain,Glutamate,byGLS,0.176,0.004
+Mesenchyme,发送,48,THBS1_integrin_aVb3_complex,Brain,THBS1,integrin,0.17,0.006
+Mesenchyme,发送,49,LPAR2_ADGRE5,Brain,LPAR2,ADGRE5,0.149,0.007
+Mesenchyme,发送,50,WNT3A_FZD6_LRP6,Brain,WNT3A,FZD6,0.148,0.012
+Mesenchyme,发送,51,WNT3A_FZD6_LRP5,Brain,WNT3A,FZD6,0.148,0.012
+Mesenchyme,发送,52,IGF1_integrin_aVb3_complex,Brain,IGF1,integrin,0.136,0.023
+Mesenchyme,发送,53,GDF11_ACVR_1B2A_receptor,Brain,GDF11,ACVR,0.13,0.023
+Mesenchyme,发送,54,GDF11_ACVR_1B2B_receptor,Brain,GDF11,ACVR,0.13,0.024
+Mesenchyme,发送,55,WNT9A_FZD6_LRP6,Brain,WNT9A,FZD6,0.128,0.022
+Mesenchyme,发送,56,WNT9A_FZD6_LRP5,Brain,WNT9A,FZD6,0.128,0.024
+Mesenchyme,接收,1,IGF2_IGF1R,Brain,IGF1R,IGF2,1.501,0.0
+Mesenchyme,接收,2,IGF2_IGF2R,Brain,IGF2R,IGF2,1.42,0.0
+Mesenchyme,接收,3,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.285,0.0
+Mesenchyme,接收,4,COL3A1_ADGRG1,Brain,ADGRG1,COL3A1,1.083,0.0
+Mesenchyme,接收,5,DLK1_NOTCH1,Brain,NOTCH1,DLK1,1.069,0.0
+Mesenchyme,接收,6,DLK1_NOTCH2,Brain,NOTCH2,DLK1,0.922,0.0
+Mesenchyme,接收,7,COL3A1_integrin_a1b1_complex,Brain,integrin,COL3A1,0.91,0.0
+Mesenchyme,接收,8,COL3A1_integrin_a11b1_complex,Brain,integrin,COL3A1,0.9,0.0
+Mesenchyme,接收,9,DLK1_NOTCH3,Brain,NOTCH3,DLK1,0.899,0.0
+Mesenchyme,接收,10,COL4A1_integrin_a1b1_complex,Brain,integrin,COL4A1,0.833,0.0
+Mesenchyme,接收,11,COL18A1_integrin_a1b1_complex,Brain,integrin,COL18A1,0.831,0.0
+Mesenchyme,接收,12,COL4A1_integrin_a11b1_complex,Brain,integrin,COL4A1,0.823,0.0
+Mesenchyme,接收,13,COL18A1_integrin_a11b1_complex,Brain,integrin,COL18A1,0.821,0.0
+Mesenchyme,接收,14,COL2A1_integrin_a1b1_complex,Brain,integrin,COL2A1,0.708,0.007
+Mesenchyme,接收,15,COL2A1_integrin_a11b1_complex,Brain,integrin,COL2A1,0.698,0.003
+Mesenchyme,接收,16,NECTIN2_NECTIN3,Brain,NECTIN3,NECTIN2,0.677,0.0
+Mesenchyme,接收,17,Cholesterol_byDHCR24_RORA,Brain,byDHCR24,Cholesterol,0.639,0.037
+Mesenchyme,接收,18,APP_FPR2,Brain,FPR2,APP,0.595,0.049
+Mesenchyme,接收,19,DAG1_NRXN3,Brain,NRXN3,DAG1,0.531,0.033
+Mesenchyme,接收,20,FLRT2_ADGRL3,Brain,ADGRL3,FLRT2,0.523,0.016
+Mesenchyme,接收,21,WNT6_SFRP2,Brain,SFRP2,WNT6,0.519,0.0
+Mesenchyme,接收,22,LAMC1_integrin_a6b1_complex,Brain,integrin,LAMC1,0.504,0.023
+Mesenchyme,接收,23,CDH6_CDH6,Brain,CDH6,CDH6,0.504,0.0
+Mesenchyme,接收,24,WNT6_SFRP1,Brain,SFRP1,WNT6,0.468,0.0
+Mesenchyme,接收,25,IGF1_IGF1R_enhancerComGPC3,Brain,IGF1R,IGF1,0.461,0.011
+Mesenchyme,接收,26,IGF1_IGF1R,Brain,IGF1R,IGF1,0.461,0.011
+Mesenchyme,接收,27,FLRT2_ADGRL1,Brain,ADGRL1,FLRT2,0.454,0.037
+Mesenchyme,接收,28,COL4A2_integrin_a1b1_complex,Brain,integrin,COL4A2,0.438,0.013
+Mesenchyme,接收,29,COL4A2_integrin_a11b1_complex,Brain,integrin,COL4A2,0.428,0.01
+Mesenchyme,接收,30,BMP4_BMPR1A_BMPR2,Brain,BMPR1A,BMP4,0.425,0.002
+Mesenchyme,接收,31,EFNA1_EPHA7,Brain,EPHA7,EFNA1,0.415,0.001
+Mesenchyme,接收,32,BMP4_BMR1A_AVR2B,Brain,BMR1A,BMP4,0.398,0.0
+Mesenchyme,接收,33,EFNA1_EPHA4,Brain,EPHA4,EFNA1,0.394,0.0
+Mesenchyme,接收,34,BMP4_BMR1A_ACR2A,Brain,BMR1A,BMP4,0.392,0.0
+Mesenchyme,接收,35,COL1A1_integrin_a1b1_complex,Brain,integrin,COL1A1,0.389,0.003
+Mesenchyme,接收,36,VTN_integrin_aVb1_complex,Brain,integrin,VTN,0.386,0.025
+Mesenchyme,接收,37,TF_TFRC,Brain,TFRC,TF,0.384,0.0
+Mesenchyme,接收,38,COL1A1_integrin_a11b1_complex,Brain,integrin,COL1A1,0.379,0.002
+Mesenchyme,接收,39,BMP5_BMPR1A_BMPR2,Brain,BMPR1A,BMP5,0.358,0.0
+Mesenchyme,接收,40,BMP5_BMR1A_AVR2B,Brain,BMR1A,BMP5,0.332,0.0
+Mesenchyme,接收,41,EFNA1_EPHA3,Brain,EPHA3,EFNA1,0.328,0.0
+Mesenchyme,接收,42,BMP4_BMPR1B_BMPR2,Brain,BMPR1B,BMP4,0.327,0.002
+Mesenchyme,接收,43,BMP4_BMR1B_AVR2A,Brain,BMR1B,BMP4,0.327,0.002
+Mesenchyme,接收,44,BMP4_BMR1B_AVR2B,Brain,BMR1B,BMP4,0.327,0.002
+Mesenchyme,接收,45,BMP5_BMR1A_ACR2A,Brain,BMR1A,BMP5,0.325,0.0
+Mesenchyme,接收,46,TGM2_ADGRG1,Brain,ADGRG1,TGM2,0.324,0.0
+Mesenchyme,接收,47,WNT6_FZD10_LRP5,Brain,FZD10,WNT6,0.302,0.0
+Mesenchyme,接收,48,WNT6_FZD2_LRP5,Brain,FZD2,WNT6,0.302,0.0
+Mesenchyme,接收,49,WNT6_FZD3_LRP5,Brain,FZD3,WNT6,0.302,0.0
+Mesenchyme,接收,50,COL26A1_integrin_a1b1_complex,Brain,integrin,COL26A1,0.302,0.029
+Mesenchyme,接收,51,COL26A1_integrin_a11b1_complex,Brain,integrin,COL26A1,0.292,0.021
+Mesenchyme,接收,52,WNT6_FZD10_LRP6,Brain,FZD10,WNT6,0.29,0.0
+Mesenchyme,接收,53,WNT6_FZD2_LRP6,Brain,FZD2,WNT6,0.29,0.0
+Mesenchyme,接收,54,WNT6_FZD3_LRP6,Brain,FZD3,WNT6,0.29,0.0
+Mesenchyme,接收,55,PDGFA_PDGFRA,Brain,PDGFRA,PDGFA,0.269,0.01
+Mesenchyme,接收,56,WNT6_FZD7_LRP5,Brain,FZD7,WNT6,0.265,0.0
+Mesenchyme,接收,57,WNT6_FZD7_LRP6,Brain,FZD7,WNT6,0.265,0.0
+Mesenchyme,接收,58,EFNA1_EPHA5,Brain,EPHA5,EFNA1,0.264,0.0
+Mesenchyme,接收,59,BMP5_BMPR1B_BMPR2,Brain,BMPR1B,BMP5,0.26,0.0
+Mesenchyme,接收,60,BMP5_BMR1B_AVR2A,Brain,BMR1B,BMP5,0.26,0.0
+Mesenchyme,接收,61,BMP5_BMR1B_AVR2B,Brain,BMR1B,BMP5,0.26,0.0
+Mesenchyme,接收,62,IGFBP3_TMEM219,Brain,TMEM219,IGFBP3,0.255,0.016
+Mesenchyme,接收,63,integrin_aVb5_complex_ADGRB1,Brain,aVb5,integrin,0.255,0.002
+Mesenchyme,接收,64,COL9A1_integrin_a1b1_complex,Brain,integrin,COL9A1,0.255,0.003
+Mesenchyme,接收,65,NRXN3_ADGRL1,Brain,ADGRL1,NRXN3,0.254,0.011
+Mesenchyme,接收,66,EDN3_EDNRB,Brain,EDNRB,EDN3,0.253,0.0
+Mesenchyme,接收,67,COL9A1_integrin_a11b1_complex,Brain,integrin,COL9A1,0.245,0.002
+Mesenchyme,接收,68,WNT6_FZD1_LRP5,Brain,FZD1,WNT6,0.242,0.0
+Mesenchyme,接收,69,WNT6_FZD1_LRP6,Brain,FZD1,WNT6,0.242,0.0
+Mesenchyme,接收,70,SHH_PTCH_BOC_transmembrane_receptor,Brain,PTCH,SHH,0.239,0.028
+Mesenchyme,接收,71,WNT6_FRZB,Brain,FRZB,WNT6,0.234,0.0
+Mesenchyme,接收,72,BMP5_ACVR_1A2A_receptor,Brain,ACVR,BMP5,0.231,0.0
+Mesenchyme,接收,73,BMP5_ACVR_1A2B_receptor,Brain,ACVR,BMP5,0.231,0.0
+Mesenchyme,接收,74,BMP5_ACVR1_BMPR2,Brain,ACVR1,BMP5,0.231,0.0
+Mesenchyme,接收,75,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Brain,byALDH1A2,atRetinoicAcid,0.224,0.001
+Mesenchyme,接收,76,L1CAM_integrin_aVb1_complex,Brain,integrin,L1CAM,0.221,0.006
+Mesenchyme,接收,77,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Brain,byALDH1A2,atRetinoicAcid,0.212,0.001
+Mesenchyme,接收,78,WNT6_FZD8_LRP5,Brain,FZD8,WNT6,0.2,0.0
+Mesenchyme,接收,79,WNT6_FZD8_LRP6,Brain,FZD8,WNT6,0.2,0.0
+Mesenchyme,接收,80,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Brain,byALDH1A2,atRetinoicAcid,0.187,0.001
+Mesenchyme,接收,81,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Brain,byALDH1A2,atRetinoicAcid,0.187,0.001
+Mesenchyme,接收,82,EDN3_EDNRA,Brain,EDNRA,EDN3,0.181,0.001
+Mesenchyme,接收,83,COL6A2_integrin_a11b1_complex,Brain,integrin,COL6A2,0.116,0.034
+Neural crest,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.17,0.0
+Neural crest,发送,2,CADM1_CADM1,Brain,CADM1,CADM1,0.761,0.0
+Neural crest,发送,3,FN1_integrin_aVb1_complex,Brain,FN1,integrin,0.723,0.0
+Neural crest,发送,4,FN1_integrin_aVb5_complex,Brain,FN1,integrin,0.723,0.0
+Neural crest,发送,5,MPZL1_MPZL1,Brain,MPZL1,MPZL1,0.715,0.0
+Neural crest,发送,6,TENM3_ADGRL2,Brain,TENM3,ADGRL2,0.713,0.0
+Neural crest,发送,7,EFNA5_EPHA7,Brain,EFNA5,EPHA7,0.647,0.0
+Neural crest,发送,8,FN1_integrin_a8b1_complex,Brain,FN1,integrin,0.613,0.0
+Neural crest,发送,9,FN1_integrin_a11b1_complex,Brain,FN1,integrin,0.603,0.0
+Neural crest,发送,10,Cholesterol_byDHCR24_RORA,Brain,Cholesterol,byDHCR24,0.601,0.0
+Neural crest,发送,11,DLK1_NOTCH2,Brain,DLK1,NOTCH2,0.6,0.034
+Neural crest,发送,12,PTN_PTPRZ1,Brain,PTN,PTPRZ1,0.591,0.0
+Neural crest,发送,13,TENM2_FLRT3_complex_ADGRL2,Brain,TENM2,FLRT3,0.512,0.0
+Neural crest,发送,14,TENM2_ADGRL2,Brain,TENM2,ADGRL2,0.512,0.0
+Neural crest,发送,15,EFNA2_EPHA7,Brain,EFNA2,EPHA7,0.5,0.0
+Neural crest,发送,16,SLIT2_ROBO1,Brain,SLIT2,ROBO1,0.496,0.0
+Neural crest,发送,17,TENM3_ADGRL1,Brain,TENM3,ADGRL1,0.477,0.0
+Neural crest,发送,18,BMPR1B_BMPR2_BMPR1A,Brain,BMPR1B,BMPR2,0.455,0.023
+Neural crest,发送,19,EFNA4_EPHA7,Brain,EFNA4,EPHA7,0.452,0.0
+Neural crest,发送,20,DAG1_NRXN3,Brain,DAG1,NRXN3,0.443,0.013
+Neural crest,发送,21,EFNB3_EPHB4,Brain,EFNB3,EPHB4,0.427,0.0
+Neural crest,发送,22,DLL1_NOTCH2,Brain,DLL1,NOTCH2,0.424,0.0
+Neural crest,发送,23,VEGFA_KDR,Brain,VEGFA,KDR,0.411,0.0
+Neural crest,发送,24,EFNB3_EPHB3,Brain,EFNB3,EPHB3,0.405,0.0
+Neural crest,发送,25,EFNB1_EPHB4,Brain,EFNB1,EPHB4,0.396,0.0
+Neural crest,发送,26,NCAM1_FGFR1,Brain,NCAM1,FGFR1,0.386,0.021
+Neural crest,发送,27,SLIT2_ROBO2,Brain,SLIT2,ROBO2,0.375,0.0
+Neural crest,发送,28,JAG1_NOTCH2,Brain,JAG1,NOTCH2,0.375,0.0
+Neural crest,发送,29,EFNB1_EPHB3,Brain,EFNB1,EPHB3,0.374,0.0
+Neural crest,发送,30,EFNB2_EPHB4,Brain,EFNB2,EPHB4,0.374,0.0
+Neural crest,发送,31,SHH_PTCH_GAS1_transmembrane_receptor,Brain,SHH,PTCH,0.372,0.0
+Neural crest,发送,32,SDC1_ADGRA2,Brain,SDC1,ADGRA2,0.371,0.0
+Neural crest,发送,33,COL19A1_integrin_a1b1_complex,Brain,COL19A1,integrin,0.368,0.0
+Neural crest,发送,34,PDGFC_PDGFRA,Brain,PDGFC,PDGFRA,0.368,0.0
+Neural crest,发送,35,PTPRD_IL1RAPL1,Brain,PTPRD,IL1RAPL1,0.361,0.0
+Neural crest,发送,36,EFNB2_EPHB3,Brain,EFNB2,EPHB3,0.352,0.0
+Neural crest,发送,37,COL19A1_integrin_a11b1_complex,Brain,COL19A1,integrin,0.344,0.0
+Neural crest,发送,38,WNT5A_ROR2,Brain,WNT5A,ROR2,0.341,0.0
+Neural crest,发送,39,DLL3_NOTCH2,Brain,DLL3,NOTCH2,0.34,0.0
+Neural crest,发送,40,VEGFB_FLT1_complex,Brain,VEGFB,FLT1,0.338,0.0
+Neural crest,发送,41,VEGFB_FLT1,Brain,VEGFB,FLT1,0.338,0.0
+Neural crest,发送,42,CDH5_CDH5,Brain,CDH5,CDH5,0.338,0.0
+Neural crest,发送,43,VEGFC_KDR,Brain,VEGFC,KDR,0.336,0.0
+Neural crest,发送,44,VCAM1_integrin_a9b1_complex,Brain,VCAM1,integrin,0.326,0.0
+Neural crest,发送,45,WNT7B_FZD2_LRP5,Brain,WNT7B,FZD2,0.324,0.0
+Neural crest,发送,46,WNT7B_FZD3_LRP5,Brain,WNT7B,FZD3,0.324,0.0
+Neural crest,发送,47,WNT7B_FZD7_LRP5,Brain,WNT7B,FZD7,0.324,0.0
+Neural crest,发送,48,Cholesterol_byDHCR7_RORA,Brain,Cholesterol,byDHCR7,0.324,0.0
+Neural crest,发送,49,SLIT1_ROBO1,Brain,SLIT1,ROBO1,0.316,0.0
+Neural crest,发送,50,VTN_integrin_aVb1_complex,Brain,VTN,integrin,0.315,0.003
+Neural crest,发送,51,BMP4_BMPR1A_BMPR2,Brain,BMP4,BMPR1A,0.312,0.019
+Neural crest,发送,52,WNT5A_ROR1,Brain,WNT5A,ROR1,0.311,0.0
+Neural crest,发送,53,WNT7B_FZD3_LRP6,Brain,WNT7B,FZD3,0.308,0.0
+Neural crest,发送,54,WNT7B_FZD7_LRP6,Brain,WNT7B,FZD7,0.308,0.0
+Neural crest,发送,55,WNT7B_FZD2_LRP6,Brain,WNT7B,FZD2,0.308,0.0
+Neural crest,发送,56,BMP7_BMPR1A_BMPR2,Brain,BMP7,BMPR1A,0.308,0.0
+Neural crest,发送,57,SEMA4D_PLXNB2,Brain,SEMA4D,PLXNB2,0.303,0.004
+Neural crest,发送,58,ESAM_ESAM,Brain,ESAM,ESAM,0.3,0.0
+Neural crest,发送,59,PDGFA_PDGFRA,Brain,PDGFA,PDGFRA,0.3,0.0
+Neural crest,发送,60,WNT5A_FZD2_LRP5,Brain,WNT5A,FZD2,0.294,0.012
+Neural crest,发送,61,WNT5A_FZD3_LRP5,Brain,WNT5A,FZD3,0.294,0.012
+Neural crest,发送,62,WNT5A_FZD7_LRP5,Brain,WNT5A,FZD7,0.294,0.0
+Neural crest,发送,63,WNT7B_FRZB,Brain,WNT7B,FRZB,0.292,0.0
+Neural crest,发送,64,CDH6_CDH6,Brain,CDH6,CDH6,0.292,0.035
+Neural crest,发送,65,VEGFA_FLT1_complex,Brain,VEGFA,FLT1,0.289,0.0
+Neural crest,发送,66,VEGFA_FLT1,Brain,VEGFA,FLT1,0.289,0.0
+Neural crest,发送,67,DLL1_NOTCH3,Brain,DLL1,NOTCH3,0.289,0.007
+Neural crest,发送,68,SEMA4C_PLXNB2,Brain,SEMA4C,PLXNB2,0.287,0.003
+Neural crest,发送,69,Glutamate_byGLS_and_SLC1A3_GRIK2,Brain,Glutamate,byGLS,0.285,0.001
+Neural crest,发送,70,WNT5A_FZD3_LRP6,Brain,WNT5A,FZD3,0.278,0.035
+Neural crest,发送,71,WNT5A_FZD2_LRP6,Brain,WNT5A,FZD2,0.278,0.035
+Neural crest,发送,72,WNT5A_FZD7_LRP6,Brain,WNT5A,FZD7,0.278,0.002
+Neural crest,发送,73,TENM2_ADGRL1,Brain,TENM2,ADGRL1,0.276,0.0
+Neural crest,发送,74,TENM2_FLRT3_complex_ADGRL1,Brain,TENM2,FLRT3,0.276,0.0
+Neural crest,发送,75,Cholesterol_byLIPA_RORA,Brain,Cholesterol,byLIPA,0.275,0.0
+Neural crest,发送,76,Glutamate_byGLS_and_SLC1A2_GRIK2,Brain,Glutamate,byGLS,0.274,0.0
+Neural crest,发送,77,WNT5B_FZD7_LRP5,Brain,WNT5B,FZD7,0.268,0.0
+Neural crest,发送,78,WNT5B_FZD2_LRP5,Brain,WNT5B,FZD2,0.268,0.001
+Neural crest,发送,79,WNT5B_FZD3_LRP5,Brain,WNT5B,FZD3,0.268,0.001
+Neural crest,发送,80,SEMA6D_PlexinA1_complex1,Brain,SEMA6D,PlexinA1,0.266,0.005
+Neural crest,发送,81,WNT7B_FZD1_LRP5,Brain,WNT7B,FZD1,0.264,0.0
+Neural crest,发送,82,WNT7B_FZD1_LRP6,Brain,WNT7B,FZD1,0.264,0.0
+Neural crest,发送,83,SDC2_ADGRA2,Brain,SDC2,ADGRA2,0.263,0.0
+Neural crest,发送,84,VEGFB_NRP1,Brain,VEGFB,NRP1,0.263,0.0
+Neural crest,发送,85,WNT5A_FRZB,Brain,WNT5A,FRZB,0.262,0.0
+Neural crest,发送,86,JAM2_integrin_a4b1_complex,Brain,JAM2,integrin,0.262,0.0
+Neural crest,发送,87,VEGFA_NRP2,Brain,VEGFA,NRP2,0.262,0.0
+Neural crest,发送,88,WNT5B_FZD7_LRP6,Brain,WNT5B,FZD7,0.253,0.0
+Neural crest,发送,89,WNT5B_FZD3_LRP6,Brain,WNT5B,FZD3,0.253,0.003
+Neural crest,发送,90,WNT5B_FZD2_LRP6,Brain,WNT5B,FZD2,0.253,0.003
+Neural crest,发送,91,WNT7B_FZD4_LRP5,Brain,WNT7B,FZD4,0.249,0.0
+Neural crest,发送,92,WNT7B_FZD4_LRP6,Brain,WNT7B,FZD4,0.249,0.0
+Neural crest,发送,93,COL4A5_integrin_a1b1_complex,Brain,COL4A5,integrin,0.248,0.0
+Neural crest,发送,94,Glutamate_byGLS_and_SLC1A3_GRM7,Brain,Glutamate,byGLS,0.246,0.038
+Neural crest,发送,95,RSPO1_LGR4,Brain,RSPO1,LGR4,0.241,0.0
+Neural crest,发送,96,RSPO3_LGR4,Brain,RSPO3,LGR4,0.238,0.009
+Neural crest,发送,97,WNT5B_FRZB,Brain,WNT5B,FRZB,0.237,0.0
+Neural crest,发送,98,NTN1_UNC5B,Brain,NTN1,UNC5B,0.237,0.0
+Neural crest,发送,99,Glutamate_byGLS_and_SLC1A2_GRM7,Brain,Glutamate,byGLS,0.236,0.0
+Neural crest,发送,100,COL11A1_integrin_a1b1_complex,Brain,COL11A1,integrin,0.233,0.0
+Neural crest,接收,1,IGF2_IGF1R,Brain,IGF1R,IGF2,1.22,0.0
+Neural crest,接收,2,IGF2_IGF2R,Brain,IGF2R,IGF2,1.139,0.0
+Neural crest,接收,3,MDK_PTPRZ1,Brain,PTPRZ1,MDK,1.112,0.014
+Neural crest,接收,4,COL3A1_ADGRG1,Brain,ADGRG1,COL3A1,1.108,0.0
+Neural crest,接收,5,COL3A1_integrin_a1b1_complex,Brain,integrin,COL3A1,0.935,0.0
+Neural crest,接收,6,COL3A1_integrin_a11b1_complex,Brain,integrin,COL3A1,0.925,0.0
+Neural crest,接收,7,DLK1_NOTCH1,Brain,NOTCH1,DLK1,0.857,0.0
+Neural crest,接收,8,COL4A1_integrin_a1b1_complex,Brain,integrin,COL4A1,0.838,0.0
+Neural crest,接收,9,COL4A1_integrin_a11b1_complex,Brain,integrin,COL4A1,0.828,0.0
+Neural crest,接收,10,CADM1_CADM1,Brain,CADM1,CADM1,0.761,0.0
+Neural crest,接收,11,CADM1_NECTIN3,Brain,NECTIN3,CADM1,0.734,0.0
+Neural crest,接收,12,LRFN4_PTPRF,Brain,PTPRF,LRFN4,0.729,0.0
+Neural crest,接收,13,FN1_integrin_aVb1_complex,Brain,integrin,FN1,0.728,0.0
+Neural crest,接收,14,MPZL1_MPZL1,Brain,MPZL1,MPZL1,0.715,0.0
+Neural crest,接收,15,TENM3_ADGRL2,Brain,ADGRL2,TENM3,0.714,0.0
+Neural crest,接收,16,DLK1_NOTCH2,Brain,NOTCH2,DLK1,0.71,0.0
+Neural crest,接收,17,COL1A2_integrin_a1b1_complex,Brain,integrin,COL1A2,0.708,0.0
+Neural crest,接收,18,FLRT2_ADGRL3,Brain,ADGRL3,FLRT2,0.704,0.0
+Neural crest,接收,19,COL1A2_integrin_a11b1_complex,Brain,integrin,COL1A2,0.699,0.0
+Neural crest,接收,20,FN1_integrin_aVb5_complex,Brain,integrin,FN1,0.69,0.004
+Neural crest,接收,21,TENM4_ADGRL2,Brain,ADGRL2,TENM4,0.688,0.0
+Neural crest,接收,22,DLK1_NOTCH3,Brain,NOTCH3,DLK1,0.686,0.0
+Neural crest,接收,23,COL2A1_integrin_a1b1_complex,Brain,integrin,COL2A1,0.671,0.0
+Neural crest,接收,24,FN1_integrin_a3b1_complex,Brain,integrin,FN1,0.663,0.0
+Neural crest,接收,25,COL2A1_integrin_a11b1_complex,Brain,integrin,COL2A1,0.661,0.0
+Neural crest,接收,26,FN1_integrin_a4b1_complex,Brain,integrin,FN1,0.658,0.0
+Neural crest,接收,27,COL18A1_integrin_a1b1_complex,Brain,integrin,COL18A1,0.638,0.0
+Neural crest,接收,28,FLRT2_ADGRL1,Brain,ADGRL1,FLRT2,0.636,0.0
+Neural crest,接收,29,FN1_integrin_a11b1_complex,Brain,integrin,FN1,0.63,0.0
+Neural crest,接收,30,COL18A1_integrin_a11b1_complex,Brain,integrin,COL18A1,0.629,0.0
+Neural crest,接收,31,APP_FPR2,Brain,FPR2,APP,0.62,0.0
+Neural crest,接收,32,NECTIN2_NECTIN3,Brain,NECTIN3,NECTIN2,0.592,0.0
+Neural crest,接收,33,Cholesterol_byDHCR24_RORA,Brain,byDHCR24,Cholesterol,0.574,0.002
+Neural crest,接收,34,EFNA5_EPHA7,Brain,EPHA7,EFNA5,0.568,0.014
+Neural crest,接收,35,FLRT3_ADGRL2,Brain,ADGRL2,FLRT3,0.565,0.0
+Neural crest,接收,36,EFNA5_EPHB2,Brain,EPHB2,EFNA5,0.56,0.0
+Neural crest,接收,37,APP_TNFRSF21,Brain,TNFRSF21,APP,0.551,0.0
+Neural crest,接收,38,EFNA5_EPHA4,Brain,EPHA4,EFNA5,0.547,0.0
+Neural crest,接收,39,TENM3_ADGRL3,Brain,ADGRL3,TENM3,0.528,0.0
+Neural crest,接收,40,CXCL12_CXCR4,Brain,CXCR4,CXCL12,0.527,0.0
+Neural crest,接收,41,WNT5A_SFRP2,Brain,SFRP2,WNT5A,0.527,0.0
+Neural crest,接收,42,TENM4_ADGRL3,Brain,ADGRL3,TENM4,0.502,0.0
+Neural crest,接收,43,BMPR1B_BMPR2_BMPR1A,Brain,BMPR2,BMPR1B,0.495,0.0
+Neural crest,接收,44,EFNA5_EPHA3,Brain,EPHA3,EFNA5,0.481,0.0
+Neural crest,接收,45,NTN1_DCC,Brain,DCC,NTN1,0.478,0.0
+Neural crest,接收,46,WNT5A_SFRP1,Brain,SFRP1,WNT5A,0.476,0.0
+Neural crest,接收,47,COL4A2_integrin_a1b1_complex,Brain,integrin,COL4A2,0.471,0.0
+Neural crest,接收,48,WNT5B_SFRP2,Brain,SFRP2,WNT5B,0.47,0.0
+Neural crest,接收,49,COL4A2_integrin_a11b1_complex,Brain,integrin,COL4A2,0.461,0.0
+Neural crest,接收,50,TENM3_ADGRL1,Brain,ADGRL1,TENM3,0.459,0.012
+Neural crest,接收,51,LAMC1_integrin_a6b1_complex,Brain,integrin,LAMC1,0.455,0.0
+Neural crest,接收,52,IGF1_IGF1R_enhancerComGPC3,Brain,IGF1R,IGF1,0.441,0.0
+Neural crest,接收,53,IGF1_IGF1R,Brain,IGF1R,IGF1,0.441,0.0
+Neural crest,接收,54,JAG1_NOTCH1,Brain,NOTCH1,JAG1,0.434,0.0
+Neural crest,接收,55,TENM4_ADGRL1,Brain,ADGRL1,TENM4,0.433,0.0
+Neural crest,接收,56,NRXN1_DAG1,Brain,DAG1,NRXN1,0.431,0.043
+Neural crest,接收,57,WNT5B_SFRP1,Brain,SFRP1,WNT5B,0.418,0.0
+Neural crest,接收,58,EFNA5_EPHA5,Brain,EPHA5,EFNA5,0.417,0.0
+Neural crest,接收,59,EFNB2_EPHB2,Brain,EPHB2,EFNB2,0.416,0.02
+Neural crest,接收,60,NCAM1_FGFR1,Brain,FGFR1,NCAM1,0.383,0.019
+Neural crest,接收,61,LRFN4_PTPRD,Brain,PTPRD,LRFN4,0.382,0.004
+Neural crest,接收,62,FLRT3_ADGRL3,Brain,ADGRL3,FLRT3,0.378,0.0
+Neural crest,接收,63,TENM3_FLRT3_complex_ADGRL3,Brain,FLRT3,TENM3,0.378,0.0
+Neural crest,接收,64,EFNA4_EPHA4,Brain,EPHA4,EFNA4,0.34,0.0
+Neural crest,接收,65,EFNA2_EPHA4,Brain,EPHA4,EFNA2,0.339,0.015
+Neural crest,接收,66,CDH5_CDH5,Brain,CDH5,CDH5,0.338,0.0
+Neural crest,接收,67,BMP4_BMPR1A_BMPR2,Brain,BMPR1A,BMP4,0.333,0.0
+Neural crest,接收,68,COL26A1_integrin_a1b1_complex,Brain,integrin,COL26A1,0.332,0.0
+Neural crest,接收,69,EFNA1_EPHA7,Brain,EPHA7,EFNA1,0.325,0.0
+Neural crest,接收,70,COL26A1_integrin_a11b1_complex,Brain,integrin,COL26A1,0.322,0.0
+Neural crest,接收,71,FGF8_FGFR3,Brain,FGFR3,FGF8,0.32,0.0
+Neural crest,接收,72,VTN_integrin_aVb1_complex,Brain,integrin,VTN,0.316,0.008
+Neural crest,接收,73,WNT5A_FZD10_LRP5,Brain,FZD10,WNT5A,0.31,0.0
+Neural crest,接收,74,TENM4_FLRT3_complex_ADGRL1,Brain,FLRT3,TENM4,0.31,0.0
+Neural crest,接收,75,WNT5A_FZD2_LRP5,Brain,FZD2,WNT5A,0.31,0.0
+Neural crest,接收,76,WNT5A_FZD3_LRP5,Brain,FZD3,WNT5A,0.31,0.0
+Neural crest,接收,77,Glutamate_byGLS_and_SLC1A3_GRIK2,Brain,byGLS,Glutamate,0.306,0.0
+Neural crest,接收,78,BMP4_BMR1A_AVR2B,Brain,BMR1A,BMP4,0.306,0.0
+Neural crest,接收,79,TGM2_ADGRG1,Brain,ADGRG1,TGM2,0.303,0.0
+Neural crest,接收,80,EFNA1_EPHA4,Brain,EPHA4,EFNA1,0.303,0.0
+Neural crest,接收,81,ESAM_ESAM,Brain,ESAM,ESAM,0.3,0.0
+Neural crest,接收,82,BMP4_BMR1A_ACR2A,Brain,BMR1A,BMP4,0.3,0.0
+Neural crest,接收,83,WNT5A_FZD10_LRP6,Brain,FZD10,WNT5A,0.299,0.001
+Neural crest,接收,84,NRG3_ERBB4,Brain,ERBB4,NRG3,0.299,0.0
+Neural crest,接收,85,WNT5A_FZD3_LRP6,Brain,FZD3,WNT5A,0.299,0.001
+Neural crest,接收,86,WNT5A_FZD2_LRP6,Brain,FZD2,WNT5A,0.299,0.001
+Neural crest,接收,87,IGFBP3_TMEM219,Brain,TMEM219,IGFBP3,0.295,0.0
+Neural crest,接收,88,CDH6_CDH6,Brain,CDH6,CDH6,0.292,0.035
+Neural crest,接收,89,COL1A1_integrin_a1b1_complex,Brain,integrin,COL1A1,0.284,0.0
+Neural crest,接收,90,Glutamate_byGLS_and_SLC1A3_GRM7,Brain,byGLS,Glutamate,0.278,0.0
+Neural crest,接收,91,COL5A2_integrin_a1b1_complex,Brain,integrin,COL5A2,0.276,0.0
+Neural crest,接收,92,EFNA4_EPHA3,Brain,EPHA3,EFNA4,0.275,0.0
+Neural crest,接收,93,COL1A1_integrin_a11b1_complex,Brain,integrin,COL1A1,0.274,0.0
+Neural crest,接收,94,EFNA2_EPHA3,Brain,EPHA3,EFNA2,0.273,0.016
+Neural crest,接收,95,WNT5A_FZD7_LRP5,Brain,FZD7,WNT5A,0.273,0.042
+Neural crest,接收,96,WNT5A_FZD7_LRP6,Brain,FZD7,WNT5A,0.273,0.038
+Neural crest,接收,97,COL5A2_integrin_a11b1_complex,Brain,integrin,COL5A2,0.266,0.0
+Neural crest,接收,98,BMP5_BMPR1A_BMPR2,Brain,BMPR1A,BMP5,0.263,0.003
+Neural crest,接收,99,Glutamate_byGLS_and_SLC1A3_GRIK3,Brain,byGLS,Glutamate,0.261,0.0
+Neural crest,接收,100,integrin_aVb5_complex_ADGRB1,Brain,aVb5,integrin,0.257,0.0
+Sclerotome,发送,1,PPIA_BSG,Brain,PPIA,BSG,1.349,0.003
+Sclerotome,发送,2,CDH6_CDH6,Brain,CDH6,CDH6,1.248,0.0
+Sclerotome,发送,3,CADM1_CADM1,Brain,CADM1,CADM1,1.228,0.0
+Sclerotome,发送,4,2arachidonoylglycerol_byDAGLB_CNR1,Brain,2arachidonoylglycerol,byDAGLB,0.99,0.0
+Sclerotome,发送,5,CDH2_CDH2,Brain,CDH2,CDH2,0.891,0.035
+Sclerotome,发送,6,CADM1_NECTIN3,Brain,CADM1,NECTIN3,0.867,0.015
+Sclerotome,发送,7,DLK1_NOTCH1,Brain,DLK1,NOTCH1,0.857,0.041
+Sclerotome,发送,8,FN1_integrin_a4b1_complex,Brain,FN1,integrin,0.729,0.03
+Sclerotome,发送,9,DLL1_NOTCH1,Brain,DLL1,NOTCH1,0.681,0.008
+Sclerotome,发送,10,SLIT2_ROBO1,Brain,SLIT2,ROBO1,0.68,0.005
+Sclerotome,发送,11,NECTIN2_NECTIN3,Brain,NECTIN2,NECTIN3,0.647,0.032
+Sclerotome,发送,12,WNT5A_ROR1,Brain,WNT5A,ROR1,0.637,0.0
+Sclerotome,发送,13,NECTIN1_NECTIN3,Brain,NECTIN1,NECTIN3,0.632,0.01
+Sclerotome,发送,14,JAG1_NOTCH1,Brain,JAG1,NOTCH1,0.631,0.018
+Sclerotome,发送,15,EFNB3_EPHB2,Brain,EFNB3,EPHB2,0.62,0.027
+Sclerotome,发送,16,DLL3_NOTCH1,Brain,DLL3,NOTCH1,0.596,0.015
+Sclerotome,发送,17,EFNB1_EPHB2,Brain,EFNB1,EPHB2,0.589,0.021
+Sclerotome,发送,18,EFNB2_EPHB2,Brain,EFNB2,EPHB2,0.566,0.026
+Sclerotome,发送,19,LAMC1_integrin_a6b1_complex,Brain,LAMC1,integrin,0.554,0.022
+Sclerotome,发送,20,NTN1_UNC5C,Brain,NTN1,UNC5C,0.524,0.016
+Sclerotome,发送,21,SLIT1_ROBO1,Brain,SLIT1,ROBO1,0.499,0.014
+Sclerotome,发送,22,VEGFA_NRP2,Brain,VEGFA,NRP2,0.494,0.003
+Sclerotome,发送,23,DLL1_NOTCH2,Brain,DLL1,NOTCH2,0.487,0.03
+Sclerotome,发送,24,EFNB3_EPHB3,Brain,EFNB3,EPHB3,0.47,0.009
+Sclerotome,发送,25,DLL1_NOTCH3,Brain,DLL1,NOTCH3,0.455,0.006
+Sclerotome,发送,26,COL19A1_integrin_a1b1_complex,Brain,COL19A1,integrin,0.447,0.031
+Sclerotome,发送,27,VCAM1_integrin_a9b1_complex,Brain,VCAM1,integrin,0.444,0.0
+Sclerotome,发送,28,EFNB1_EPHB3,Brain,EFNB1,EPHB3,0.439,0.006
+Sclerotome,发送,29,PSAP_GPR37,Brain,PSAP,GPR37,0.421,0.0
+Sclerotome,发送,30,EFNB2_EPHB3,Brain,EFNB2,EPHB3,0.417,0.008
+Sclerotome,发送,31,SEMA3F_NRP2,Brain,SEMA3F,NRP2,0.416,0.002
+Sclerotome,发送,32,Glutamate_byGLS_and_SLC1A3_GRIK2,Brain,Glutamate,byGLS,0.409,0.033
+Sclerotome,发送,33,SEMA3C_NRP2,Brain,SEMA3C,NRP2,0.409,0.003
+Sclerotome,发送,34,JAG1_NOTCH3,Brain,JAG1,NOTCH3,0.406,0.024
+Sclerotome,发送,35,Glutamate_byGLS_and_SLC1A2_GRIK2,Brain,Glutamate,byGLS,0.398,0.011
+Sclerotome,发送,36,JAM2_integrin_a4b1_complex,Brain,JAM2,integrin,0.384,0.008
+Sclerotome,发送,37,DLL3_NOTCH3,Brain,DLL3,NOTCH3,0.37,0.018
+Sclerotome,发送,38,WNT7B_FZD2_LRP6,Brain,WNT7B,FZD2,0.366,0.047
+Sclerotome,发送,39,KITLG_KIT,Brain,KITLG,KIT,0.357,0.006
+Sclerotome,发送,40,GDF11_TGFR_AVR2B,Brain,GDF11,TGFR,0.339,0.028
+Sclerotome,发送,41,COL4A5_integrin_a1b1_complex,Brain,COL4A5,integrin,0.327,0.014
+Sclerotome,发送,42,WNT7B_FZD1_LRP6,Brain,WNT7B,FZD1,0.316,0.01
+Sclerotome,发送,43,COL11A1_integrin_a1b1_complex,Brain,COL11A1,integrin,0.311,0.045
+Sclerotome,发送,44,WNT7B_FZD7_LRP6,Brain,WNT7B,FZD7,0.307,0.031
+Sclerotome,发送,45,Glutamate_byGLS_and_SLC1A2_GRM7,Brain,Glutamate,byGLS,0.304,0.039
+Sclerotome,发送,46,COL5A1_integrin_a1b1_complex,Brain,COL5A1,integrin,0.299,0.049
+Sclerotome,发送,47,WNT5B_FZD1_LRP6,Brain,WNT5B,FZD1,0.261,0.031
+Sclerotome,发送,48,VCAM1_integrin_a4b1_complex,Brain,VCAM1,integrin,0.251,0.03
+Sclerotome,发送,49,COL4A6_integrin_a1b1_complex,Brain,COL4A6,integrin,0.249,0.024
+Sclerotome,发送,50,WNT7B_FZD5_LRP6,Brain,WNT7B,FZD5,0.245,0.005
+Sclerotome,发送,51,COL4A5_ADGRG6,Brain,COL4A5,ADGRG6,0.231,0.015
+Sclerotome,发送,52,WNT3A_FZD1_LRP6,Brain,WNT3A,FZD1,0.222,0.024
+Sclerotome,发送,53,WNT5A_FZD5_LRP6,Brain,WNT5A,FZD5,0.216,0.018
+Sclerotome,发送,54,WNT9A_FZD1_LRP6,Brain,WNT9A,FZD1,0.202,0.027
+Sclerotome,发送,55,Glutamate_byGLS_and_SLC1A2_GRIK1,Brain,Glutamate,byGLS,0.199,0.028
+Sclerotome,发送,56,WNT5B_FZD5_LRP6,Brain,WNT5B,FZD5,0.19,0.01
+Sclerotome,发送,57,COL4A6_ADGRG6,Brain,COL4A6,ADGRG6,0.153,0.035
+Sclerotome,发送,58,WNT3A_FZD5_LRP6,Brain,WNT3A,FZD5,0.151,0.006
+Sclerotome,发送,59,SHH_PTCH2_GAS1_transmembrane_receptor,Brain,SHH,PTCH2,0.137,0.034
+Sclerotome,发送,60,SHH_PTCH2_BOC_transmembrane_receptor,Brain,SHH,PTCH2,0.137,0.022
+Sclerotome,发送,61,WNT9A_FZD5_LRP6,Brain,WNT9A,FZD5,0.131,0.008
+Sclerotome,接收,1,CDH6_CDH6,Brain,CDH6,CDH6,1.248,0.0
+Sclerotome,接收,2,CADM1_CADM1,Brain,CADM1,CADM1,1.228,0.0
+Sclerotome,接收,3,COL3A1_ADGRG1,Brain,ADGRG1,COL3A1,1.21,0.0
+Sclerotome,接收,4,CADM1_NECTIN3,Brain,NECTIN3,CADM1,1.201,0.0
+Sclerotome,接收,5,COL3A1_integrin_a1b1_complex,Brain,integrin,COL3A1,1.037,0.0
+Sclerotome,接收,6,COL3A1_integrin_a11b1_complex,Brain,integrin,COL3A1,1.028,0.0
+Sclerotome,接收,7,COL4A1_integrin_a1b1_complex,Brain,integrin,COL4A1,0.929,0.0
+Sclerotome,接收,8,COL4A1_integrin_a11b1_complex,Brain,integrin,COL4A1,0.919,0.0
+Sclerotome,接收,9,FN1_integrin_aVb1_complex,Brain,integrin,FN1,0.903,0.022
+Sclerotome,接收,10,COL18A1_integrin_a1b1_complex,Brain,integrin,COL18A1,0.898,0.002
+Sclerotome,接收,11,CDH2_CDH2,Brain,CDH2,CDH2,0.891,0.035
+Sclerotome,接收,12,COL18A1_integrin_a11b1_complex,Brain,integrin,COL18A1,0.889,0.002
+Sclerotome,接收,13,FN1_integrin_aVb5_complex,Brain,integrin,FN1,0.865,0.029
+Sclerotome,接收,14,FN1_integrin_a3b1_complex,Brain,integrin,FN1,0.838,0.017
+Sclerotome,接收,15,FN1_integrin_a4b1_complex,Brain,integrin,FN1,0.833,0.019
+Sclerotome,接收,16,FN1_integrin_a11b1_complex,Brain,integrin,FN1,0.805,0.02
+Sclerotome,接收,17,TENM4_ADGRL2,Brain,ADGRL2,TENM4,0.781,0.041
+Sclerotome,接收,18,MSTN_TGFR_AVR2B,Brain,TGFR,MSTN,0.637,0.0
+Sclerotome,接收,19,PDGFC_PDGFRA,Brain,PDGFRA,PDGFC,0.637,0.0
+Sclerotome,接收,20,LAMC1_integrin_a6b1_complex,Brain,integrin,LAMC1,0.635,0.013
+Sclerotome,接收,21,MSTN_TGFR_AVR2A,Brain,TGFR,MSTN,0.631,0.0
+Sclerotome,接收,22,FLRT2_ADGRL3,Brain,ADGRL3,FLRT2,0.602,0.02
+Sclerotome,接收,23,TENM4_ADGRL3,Brain,ADGRL3,TENM4,0.594,0.032
+Sclerotome,接收,24,FLRT2_ADGRL1,Brain,ADGRL1,FLRT2,0.533,0.042
+Sclerotome,接收,25,JAM2_JAM3,Brain,JAM3,JAM2,0.517,0.049
+Sclerotome,接收,26,CLSTN1_NRXN1,Brain,NRXN1,CLSTN1,0.503,0.002
+Sclerotome,接收,27,CLSTN1_NRXN3,Brain,NRXN3,CLSTN1,0.5,0.003
+Sclerotome,接收,28,CLSTN1_NRXN2,Brain,NRXN2,CLSTN1,0.494,0.003
+Sclerotome,接收,29,BMP4_BMPR1A_BMPR2,Brain,BMPR1A,BMP4,0.471,0.01
+Sclerotome,接收,30,SLITRK2_PTPRD,Brain,PTPRD,SLITRK2,0.466,0.0
+Sclerotome,接收,31,CXCL12_CXCR4,Brain,CXCR4,CXCL12,0.455,0.031
+Sclerotome,接收,32,BMP4_BMR1A_AVR2B,Brain,BMR1A,BMP4,0.444,0.008
+Sclerotome,接收,33,SLITRK2_PTPRS,Brain,PTPRS,SLITRK2,0.443,0.0
+Sclerotome,接收,34,BMP4_BMR1A_ACR2A,Brain,BMR1A,BMP4,0.438,0.007
+Sclerotome,接收,35,TENM1_ADGRL2,Brain,ADGRL2,TENM1,0.431,0.045
+Sclerotome,接收,36,COL26A1_integrin_a1b1_complex,Brain,integrin,COL26A1,0.398,0.018
+Sclerotome,接收,37,COL26A1_integrin_a11b1_complex,Brain,integrin,COL26A1,0.388,0.015
+Sclerotome,接收,38,SEMA4C_PLXNB2,Brain,PLXNB2,SEMA4C,0.385,0.02
+Sclerotome,接收,39,BMP4_BMPR1B_BMPR2,Brain,BMPR1B,BMP4,0.373,0.011
+Sclerotome,接收,40,BMP4_BMR1B_AVR2A,Brain,BMR1B,BMP4,0.373,0.011
+Sclerotome,接收,41,BMP4_BMR1B_AVR2B,Brain,BMR1B,BMP4,0.373,0.011
+Sclerotome,接收,42,NLGN3_PTPRD,Brain,PTPRD,NLGN3,0.368,0.031
+Sclerotome,接收,43,COL5A2_integrin_a1b1_complex,Brain,integrin,COL5A2,0.349,0.048
+Sclerotome,接收,44,COL5A2_integrin_a11b1_complex,Brain,integrin,COL5A2,0.339,0.041
+Sclerotome,接收,45,COL11A1_integrin_a1b1_complex,Brain,integrin,COL11A1,0.332,0.049
+Sclerotome,接收,46,COL11A1_integrin_a11b1_complex,Brain,integrin,COL11A1,0.323,0.048
+Sclerotome,接收,47,BMP7_BMR1A_ACR2A,Brain,BMR1A,BMP7,0.307,0.05
+Sclerotome,接收,48,COL9A1_integrin_a1b1_complex,Brain,integrin,COL9A1,0.292,0.025
+Sclerotome,接收,49,COL9A1_integrin_a11b1_complex,Brain,integrin,COL9A1,0.282,0.019
+Sclerotome,接收,50,NRG2_ERBB4,Brain,ERBB4,NRG2,0.252,0.017
+Sclerotome,接收,51,L1CAM_integrin_aVb1_complex,Brain,integrin,L1CAM,0.247,0.03
+Sclerotome,接收,52,TENM1_ADGRL3,Brain,ADGRL3,TENM1,0.244,0.038
+Sclerotome,接收,53,BDNF_SORT1,Brain,SORT1,BDNF,0.243,0.004
+Sclerotome,接收,54,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Brain,byALDH1A2,atRetinoicAcid,0.229,0.026
+Sclerotome,接收,55,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Brain,byALDH1A2,atRetinoicAcid,0.217,0.023
+Sclerotome,接收,56,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Brain,byALDH1A2,atRetinoicAcid,0.192,0.028
+Sclerotome,接收,57,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Brain,byALDH1A2,atRetinoicAcid,0.192,0.028
+Sclerotome,接收,58,BDNF_NTRK2,Brain,NTRK2,BDNF,0.14,0.003
+Sclerotome,接收,59,BDNF_NGFR,Brain,NGFR,BDNF,0.133,0.009

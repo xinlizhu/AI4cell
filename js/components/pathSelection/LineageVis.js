@@ -1163,7 +1163,8 @@ class LineageVis {
                 detail: {
                     pathCells: pathDescriptors,
                     neighborCells: neighborCells,
-                    title: `Lasso Selection (${selectedNodes.length} nodes)`
+                    title: `Lasso Selection (${selectedNodes.length} nodes)`,
+                    lassoSelection: true  // 标记这是套索选择
                 }
             }));
             

@@ -1,0 +1,132 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+Brain,发送,1,NTN1_DCC,Cavity,NTN1,DCC,0.569,0.0
+Brain,发送,2,EFNB3_EPHA4,Cavity,EFNB3,EPHA4,0.568,0.021
+Brain,发送,3,WNT5A_SFRP2,Cavity,WNT5A,SFRP2,0.532,0.0
+Brain,发送,4,NTN1_UNC5C,Cavity,NTN1,UNC5C,0.497,0.024
+Brain,发送,5,WNT5B_SFRP2,Cavity,WNT5B,SFRP2,0.483,0.0
+Brain,发送,6,JAG1_NOTCH1,Cavity,JAG1,NOTCH1,0.423,0.043
+Brain,发送,7,SHH_PTCH_BOC_transmembrane_receptor,Cavity,SHH,PTCH,0.385,0.0
+Brain,发送,8,VTN_integrin_aVb1_complex,Cavity,VTN,integrin,0.375,0.008
+Brain,发送,9,EFNA2_EPHA4,Cavity,EFNA2,EPHA4,0.362,0.025
+Brain,发送,10,SLIT1_ROBO1,Cavity,SLIT1,ROBO1,0.338,0.009
+Brain,发送,11,EFNA4_EPHA4,Cavity,EFNA4,EPHA4,0.31,0.044
+Brain,发送,12,BMP7_BMPR1A_BMPR2,Cavity,BMP7,BMPR1A,0.307,0.0
+Brain,发送,13,BMP7_BMR1A_AVR2B,Cavity,BMP7,BMR1A,0.268,0.007
+Brain,发送,14,BMP7_BMR1A_ACR2A,Cavity,BMP7,BMR1A,0.264,0.0
+Brain,发送,15,BMP7_BMR1B_AVR2B,Cavity,BMP7,BMR1B,0.211,0.004
+Brain,发送,16,BMP7_BMR1B_AVR2A,Cavity,BMP7,BMR1B,0.211,0.004
+Brain,发送,17,BMP7_BMPR1B_BMPR2,Cavity,BMP7,BMPR1B,0.211,0.004
+Brain,发送,18,NRXN3_ADGRL1,Cavity,NRXN3,ADGRL1,0.195,0.014
+Brain,发送,19,BMP7_ACVR_1A2B_receptor,Cavity,BMP7,ACVR,0.175,0.006
+Brain,发送,20,BMP7_ACVR_1A2A_receptor,Cavity,BMP7,ACVR,0.175,0.006
+Brain,发送,21,BMP7_ACVR1_BMPR2,Cavity,BMP7,ACVR1,0.175,0.006
+Brain,接收,1,EFNA5_EPHB2,Cavity,EPHB2,EFNA5,0.573,0.003
+Brain,接收,2,DAG1_NRXN3,Cavity,NRXN3,DAG1,0.468,0.001
+Brain,接收,3,EFNB1_EPHB2,Cavity,EPHB2,EFNB1,0.462,0.0
+Brain,接收,4,EFNB2_EPHB2,Cavity,EPHB2,EFNB2,0.446,0.002
+Brain,接收,5,NLGN1_NRXN3,Cavity,NRXN3,NLGN1,0.281,0.004
+Brain,接收,6,CLSTN1_NRXN3,Cavity,NRXN3,CLSTN1,0.272,0.022
+Brain,接收,7,WNT7B_FZD10_LRP6,Cavity,FZD10,WNT7B,0.254,0.027
+Brain,接收,8,BMP6_BMR1A_AVR2B,Cavity,BMR1A,BMP6,0.234,0.034
+Brain,接收,9,NLGN2_NRXN3,Cavity,NRXN3,NLGN2,0.129,0.025
+Cavity,发送,1,BMP7_BMR1A_AVR2B,Cavity,BMP7,BMR1A,0.273,0.02
+Cavity,接收,1,BMP7_BMR1A_AVR2B,Cavity,BMR1A,BMP7,0.273,0.02
+Cavity_1_8_Target,接收,1,NTN1_UNC5C,Cavity,UNC5C,NTN1,0.569,0.003
+Cavity_1_8_Target,接收,2,VTN_integrin_aVb1_complex,Cavity,integrin,VTN,0.426,0.011
+Cavity_1_8_Target,接收,3,WNT7A_FZD10_LRP6,Cavity,FZD10,WNT7A,0.205,0.036
+Neural crest,发送,1,IGF2_IGF2R,Cavity,IGF2,IGF2R,0.807,0.021
+Neural crest,发送,2,SLIT2_ROBO2,Cavity,SLIT2,ROBO2,0.518,0.029
+Neural crest,发送,3,SHH_PTCH_GAS1_transmembrane_receptor,Cavity,SHH,PTCH,0.512,0.019
+Neural crest,发送,4,EFNA2_EPHA7,Cavity,EFNA2,EPHA7,0.415,0.003
+Neural crest,发送,5,VTN_integrin_aVb1_complex,Cavity,VTN,integrin,0.411,0.002
+Neural crest,发送,6,EFNA4_EPHA7,Cavity,EFNA4,EPHA7,0.363,0.004
+Neural crest,发送,7,BMP7_BMPR1A_BMPR2,Cavity,BMP7,BMPR1A,0.355,0.0
+Neural crest,发送,8,WNT5A_ROR2,Cavity,WNT5A,ROR2,0.345,0.0
+Neural crest,发送,9,PDGFC_PDGFRA,Cavity,PDGFC,PDGFRA,0.333,0.0
+Neural crest,发送,10,VEGFA_KDR,Cavity,VEGFA,KDR,0.332,0.0
+Neural crest,发送,11,WNT5A_ROR1,Cavity,WNT5A,ROR1,0.319,0.04
+Neural crest,发送,12,VEGFB_FLT1_complex,Cavity,VEGFB,FLT1,0.301,0.0
+Neural crest,发送,13,VEGFB_FLT1,Cavity,VEGFB,FLT1,0.301,0.002
+Neural crest,发送,14,COL4A2_integrin_a11b1_complex,Cavity,COL4A2,integrin,0.28,0.039
+Neural crest,发送,15,BMP7_BMR1A_ACR2A,Cavity,BMP7,BMR1A,0.266,0.042
+Neural crest,发送,16,BMP7_BMR1B_AVR2A,Cavity,BMP7,BMR1B,0.254,0.0
+Neural crest,发送,17,BMP7_BMPR1B_BMPR2,Cavity,BMP7,BMPR1B,0.254,0.0
+Neural crest,发送,18,VEGFA_FLT1_complex,Cavity,VEGFA,FLT1,0.231,0.003
+Neural crest,发送,19,VEGFA_FLT1,Cavity,VEGFA,FLT1,0.231,0.006
+Neural crest,发送,20,SEMA6D_PlexinA1_complex1,Cavity,SEMA6D,PlexinA1,0.228,0.036
+Neural crest,发送,21,SDC2_ADGRA2,Cavity,SDC2,ADGRA2,0.181,0.049
+Neural crest,接收,1,IGF2_IGF1R,Cavity,IGF1R,IGF2,1.125,0.0
+Neural crest,接收,2,COL3A1_ADGRG1,Cavity,ADGRG1,COL3A1,1.076,0.0
+Neural crest,接收,3,IGF2_IGF2R,Cavity,IGF2R,IGF2,1.03,0.0
+Neural crest,接收,4,FLRT2_ADGRL3,Cavity,ADGRL3,FLRT2,0.596,0.0
+Neural crest,接收,5,APP_FPR2,Cavity,FPR2,APP,0.588,0.0
+Neural crest,接收,6,FLRT2_ADGRL1,Cavity,ADGRL1,FLRT2,0.536,0.0
+Neural crest,接收,7,KITLG_KIT,Cavity,KIT,KITLG,0.318,0.002
+Neural crest,接收,8,BMP4_BMR1A_AVR2B,Cavity,BMR1A,BMP4,0.283,0.01
+Neural crest,接收,9,SEMA3C_NRP2,Cavity,NRP2,SEMA3C,0.253,0.0
+Neural crest,接收,10,BMP5_BMR1A_AVR2B,Cavity,BMR1A,BMP5,0.232,0.001
+Notochord,发送,1,IGF2_IGF1R,Cavity,IGF2,IGF1R,0.957,0.0
+Notochord,发送,2,CADM1_NECTIN3,Cavity,CADM1,NECTIN3,0.776,0.0
+Notochord,发送,3,WNT5A_SFRP1,Cavity,WNT5A,SFRP1,0.682,0.0
+Notochord,发送,4,COL3A1_ADGRG1,Cavity,COL3A1,ADGRG1,0.66,0.026
+Notochord,发送,5,WNT5B_SFRP1,Cavity,WNT5B,SFRP1,0.633,0.0
+Notochord,发送,6,EFNB3_EPHB2,Cavity,EFNB3,EPHB2,0.632,0.0
+Notochord,发送,7,NECTIN2_NECTIN3,Cavity,NECTIN2,NECTIN3,0.629,0.0
+Notochord,发送,8,DLK1_NOTCH1,Cavity,DLK1,NOTCH1,0.627,0.048
+Notochord,发送,9,NECTIN1_NECTIN3,Cavity,NECTIN1,NECTIN3,0.606,0.0
+Notochord,发送,10,DLK1_NOTCH2,Cavity,DLK1,NOTCH2,0.591,0.0
+Notochord,发送,11,CDH6_CDH6,Cavity,CDH6,CDH6,0.525,0.0
+Notochord,发送,12,JAM2_JAM3,Cavity,JAM2,JAM3,0.518,0.0
+Notochord,发送,13,JAG1_NOTCH1,Cavity,JAG1,NOTCH1,0.493,0.0
+Notochord,发送,14,DLL1_NOTCH1,Cavity,DLL1,NOTCH1,0.488,0.048
+Notochord,发送,15,EFNB3_EPHB1,Cavity,EFNB3,EPHB1,0.485,0.01
+Notochord,发送,16,TENM2_FLRT3_complex_ADGRL2,Cavity,TENM2,FLRT3,0.481,0.05
+Notochord,发送,17,JAG1_NOTCH2,Cavity,JAG1,NOTCH2,0.457,0.0
+Notochord,发送,18,DLL1_NOTCH2,Cavity,DLL1,NOTCH2,0.452,0.0
+Notochord,发送,19,VTN_integrin_aVb1_complex,Cavity,VTN,integrin,0.417,0.0
+Notochord,发送,20,RSPO1_LGR4,Cavity,RSPO1,LGR4,0.338,0.0
+Notochord,发送,21,LRPAP1_SORT1,Cavity,LRPAP1,SORT1,0.304,0.036
+Notochord,发送,22,Cholesterol_byDHCR7_RORA,Cavity,Cholesterol,byDHCR7,0.297,0.043
+Notochord,发送,23,BMP7_BMR1A_ACR2A,Cavity,BMP7,BMR1A,0.282,0.003
+Notochord,发送,24,BMP7_BMR1A_AVR2B,Cavity,BMP7,BMR1A,0.279,0.042
+Notochord,发送,25,SHH_HHIP,Cavity,SHH,HHIP,0.247,0.0
+Notochord,发送,26,CXCL12_CXCR4,Cavity,CXCL12,CXCR4,0.238,0.026
+Notochord,发送,27,NRXN3_ADGRL1,Cavity,NRXN3,ADGRL1,0.214,0.017
+Notochord,发送,28,BMP7_ACVR_1A2B_receptor,Cavity,BMP7,ACVR,0.189,0.011
+Notochord,发送,29,BMP7_ACVR_1A2A_receptor,Cavity,BMP7,ACVR,0.189,0.011
+Notochord,发送,30,BMP7_ACVR1_BMPR2,Cavity,BMP7,ACVR1,0.189,0.011
+Notochord,接收,1,SLIT2_ROBO1,Cavity,ROBO1,SLIT2,0.933,0.0
+Notochord,接收,2,NTN1_UNC5C,Cavity,UNC5C,NTN1,0.881,0.0
+Notochord,接收,3,NTN1_DCC,Cavity,DCC,NTN1,0.829,0.0
+Notochord,接收,4,SHH_PTCH_CDON_transmembrane_receptor,Cavity,PTCH,SHH,0.804,0.0
+Notochord,接收,5,SHH_PTCH_GAS1_transmembrane_receptor,Cavity,PTCH,SHH,0.804,0.0
+Notochord,接收,6,FN1_integrin_aVb5_complex,Cavity,integrin,FN1,0.701,0.011
+Notochord,接收,7,SHH_PTCH_BOC_transmembrane_receptor,Cavity,PTCH,SHH,0.686,0.0
+Notochord,接收,8,EFNB3_EPHB2,Cavity,EPHB2,EFNB3,0.678,0.0
+Notochord,接收,9,EFNB3_EPHA4,Cavity,EPHA4,EFNB3,0.606,0.008
+Notochord,接收,10,CDH6_CDH6,Cavity,CDH6,CDH6,0.525,0.0
+Notochord,接收,11,APP_FPR2,Cavity,FPR2,APP,0.523,0.023
+Notochord,接收,12,DAG1_NRXN3,Cavity,NRXN3,DAG1,0.522,0.0
+Notochord,接收,13,KITLG_KIT,Cavity,KIT,KITLG,0.505,0.0
+Notochord,接收,14,VTN_integrin_aVb1_complex,Cavity,integrin,VTN,0.499,0.0
+Notochord,接收,15,SLIT1_ROBO1,Cavity,ROBO1,SLIT1,0.441,0.0
+Notochord,接收,16,WNT5A_FZD10_LRP6,Cavity,FZD10,WNT5A,0.423,0.0
+Notochord,接收,17,WNT5A_FZD3_LRP6,Cavity,FZD3,WNT5A,0.423,0.0
+Notochord,接收,18,WNT5A_FZD2_LRP6,Cavity,FZD2,WNT5A,0.423,0.0
+Notochord,接收,19,WNT5A_ROR1,Cavity,ROR1,WNT5A,0.396,0.0
+Notochord,接收,20,WNT5A_FZD7_LRP6,Cavity,FZD7,WNT5A,0.394,0.0
+Notochord,接收,21,WNT5A_FZD10_LRP5,Cavity,FZD10,WNT5A,0.388,0.0
+Notochord,接收,22,WNT5A_FZD2_LRP5,Cavity,FZD2,WNT5A,0.388,0.0
+Notochord,接收,23,WNT5A_FZD3_LRP5,Cavity,FZD3,WNT5A,0.388,0.0
+Notochord,接收,24,WNT5A_FZD7_LRP5,Cavity,FZD7,WNT5A,0.388,0.0
+Notochord,接收,25,FLRT2_ADGRL1,Cavity,ADGRL1,FLRT2,0.337,0.009
+Notochord,接收,26,Glutamate_byGLS_and_SLC1A3_GRM7,Cavity,byGLS,Glutamate,0.335,0.0
+Notochord,接收,27,Glutamate_byGLS_and_SLC1A3_GRIK3,Cavity,byGLS,Glutamate,0.322,0.0
+Notochord,接收,28,Glutamate_byGLS_and_SLC1A3_GRIK2,Cavity,byGLS,Glutamate,0.319,0.0
+Notochord,接收,29,LRPAP1_SORT1,Cavity,SORT1,LRPAP1,0.306,0.025
+Notochord,接收,30,CLSTN1_NRXN3,Cavity,NRXN3,CLSTN1,0.293,0.029
+Notochord,接收,31,BMP7_BMR1A_AVR2B,Cavity,BMR1A,BMP7,0.284,0.013
+Notochord,接收,32,SEMA3E_PLXND1,Cavity,PLXND1,SEMA3E,0.21,0.043
+Notochord,接收,33,CLSTN2_NRXN3,Cavity,NRXN3,CLSTN2,0.193,0.0
+Notochord,接收,34,NRXN1_CBLN1_complex_GRID2,Cavity,CBLN1,NRXN1,0.179,0.05
+Notochord,接收,35,NLGN2_NRXN3,Cavity,NRXN3,NLGN2,0.14,0.015

@@ -1,0 +1,1364 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+AGM,发送,1,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.812,0.0
+AGM,发送,2,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.475,0.0
+AGM,发送,3,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.45,0.0
+AGM,发送,4,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.421,0.0
+AGM,发送,5,COL3A1_integrin_a1b1_complex,Connective tissue,COL3A1,integrin,1.087,0.0
+AGM,发送,6,COL3A1_ADGRG1,Connective tissue,COL3A1,ADGRG1,1.078,0.0
+AGM,发送,7,COL3A1_integrin_a11b1_complex,Connective tissue,COL3A1,integrin,1.076,0.0
+AGM,发送,8,COL1A1_integrin_a1b1_complex,Connective tissue,COL1A1,integrin,0.849,0.0
+AGM,发送,9,COL1A1_integrin_a11b1_complex,Connective tissue,COL1A1,integrin,0.838,0.0
+AGM,发送,10,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.825,0.0
+AGM,发送,11,COL18A1_integrin_a1b1_complex,Connective tissue,COL18A1,integrin,0.808,0.0
+AGM,发送,12,COL18A1_integrin_a11b1_complex,Connective tissue,COL18A1,integrin,0.797,0.0
+AGM,发送,13,COL1A2_integrin_a1b1_complex,Connective tissue,COL1A2,integrin,0.788,0.0
+AGM,发送,14,COL1A2_integrin_a11b1_complex,Connective tissue,COL1A2,integrin,0.777,0.0
+AGM,发送,15,WNT2_SFRP1,Connective tissue,WNT2,SFRP1,0.672,0.0
+AGM,发送,16,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.67,0.0
+AGM,发送,17,APP_FPR2,Connective tissue,APP,FPR2,0.666,0.0
+AGM,发送,18,CADM1_CADM1,Connective tissue,CADM1,CADM1,0.64,0.004
+AGM,发送,19,LRFN4_PTPRF,Connective tissue,LRFN4,PTPRF,0.614,0.017
+AGM,发送,20,DAG1_NRXN3,Connective tissue,DAG1,NRXN3,0.599,0.0
+AGM,发送,21,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.582,0.0
+AGM,发送,22,TENM3_ADGRL2,Connective tissue,TENM3,ADGRL2,0.568,0.0
+AGM,发送,23,Cholesterol_byDHCR24_RORA,Connective tissue,Cholesterol,byDHCR24,0.561,0.0
+AGM,发送,24,APP_SORL1,Connective tissue,APP,SORL1,0.548,0.0
+AGM,发送,25,IGF1_IGF1R,Connective tissue,IGF1,IGF1R,0.532,0.0
+AGM,发送,26,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1,IGF1R,0.532,0.0
+AGM,发送,27,PDGFC_PDGFRA,Connective tissue,PDGFC,PDGFRA,0.524,0.028
+AGM,发送,28,SLIT2_ROBO1,Connective tissue,SLIT2,ROBO1,0.516,0.0
+AGM,发送,29,WNT5A_SFRP1,Connective tissue,WNT5A,SFRP1,0.514,0.0
+AGM,发送,30,COL5A2_integrin_a1b1_complex,Connective tissue,COL5A2,integrin,0.504,0.0
+AGM,发送,31,FLRT3_ADGRL3,Connective tissue,FLRT3,ADGRL3,0.503,0.0
+AGM,发送,32,COL5A2_integrin_a11b1_complex,Connective tissue,COL5A2,integrin,0.493,0.0
+AGM,发送,33,AGRN_PTPRS,Connective tissue,AGRN,PTPRS,0.491,0.006
+AGM,发送,34,TENM4_ADGRL2,Connective tissue,TENM4,ADGRL2,0.48,0.014
+AGM,发送,35,GJC1_GJC1,Connective tissue,GJC1,GJC1,0.477,0.0
+AGM,发送,36,PDGFA_PDGFRA,Connective tissue,PDGFA,PDGFRA,0.474,0.0
+AGM,发送,37,WNT6_SFRP1,Connective tissue,WNT6,SFRP1,0.472,0.0
+AGM,发送,38,NCAM1_FGFR1,Connective tissue,NCAM1,FGFR1,0.463,0.001
+AGM,发送,39,LRFN4_PTPRD,Connective tissue,LRFN4,PTPRD,0.462,0.0
+AGM,发送,40,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.462,0.006
+AGM,发送,41,NCAM1_AGRN,Connective tissue,NCAM1,AGRN,0.455,0.017
+AGM,发送,42,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.446,0.0
+AGM,发送,43,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.446,0.0
+AGM,发送,44,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.446,0.0
+AGM,发送,45,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.446,0.0
+AGM,发送,46,WNT7B_SFRP1,Connective tissue,WNT7B,SFRP1,0.445,0.0
+AGM,发送,47,WNT2_FZD4_LRP5,Connective tissue,WNT2,FZD4,0.445,0.0
+AGM,发送,48,WNT2_FZD4_LRP6,Connective tissue,WNT2,FZD4,0.444,0.0
+AGM,发送,49,WNT2_FZD1_LRP6,Connective tissue,WNT2,FZD1,0.444,0.0
+AGM,发送,50,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.444,0.0
+AGM,发送,51,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.444,0.0
+AGM,发送,52,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.444,0.0
+AGM,发送,53,WNT4_SFRP1,Connective tissue,WNT4,SFRP1,0.439,0.0
+AGM,发送,54,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.432,0.0
+AGM,发送,55,SEMA3A_NRP1,Connective tissue,SEMA3A,NRP1,0.432,0.0
+AGM,发送,56,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.424,0.0
+AGM,发送,57,WNT5B_SFRP1,Connective tissue,WNT5B,SFRP1,0.416,0.019
+AGM,发送,58,BMP4_BMPR1A_BMPR2,Connective tissue,BMP4,BMPR1A,0.41,0.0
+AGM,发送,59,SEMA3A_PlexinA1_complex3,Connective tissue,SEMA3A,PlexinA1,0.409,0.0
+AGM,发送,60,TENM3_ADGRL1,Connective tissue,TENM3,ADGRL1,0.405,0.007
+AGM,发送,61,TENM3_ADGRL3,Connective tissue,TENM3,ADGRL3,0.401,0.0
+AGM,发送,62,TENM3_FLRT3_complex_ADGRL3,Connective tissue,TENM3,FLRT3,0.401,0.0
+AGM,发送,63,CDH3_CDH3,Connective tissue,CDH3,CDH3,0.399,0.0
+AGM,发送,64,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.396,0.0
+AGM,发送,65,COL5A1_integrin_a1b1_complex,Connective tissue,COL5A1,integrin,0.382,0.0
+AGM,发送,66,WNT2_FZD5_LRP5,Connective tissue,WNT2,FZD5,0.376,0.0
+AGM,发送,67,WNT2_FZD5_LRP6,Connective tissue,WNT2,FZD5,0.376,0.0
+AGM,发送,68,TENM2_FLRT3_complex_ADGRL2,Connective tissue,TENM2,FLRT3,0.375,0.001
+AGM,发送,69,TENM2_ADGRL2,Connective tissue,TENM2,ADGRL2,0.375,0.001
+AGM,发送,70,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.374,0.0
+AGM,发送,71,COL5A1_integrin_a11b1_complex,Connective tissue,COL5A1,integrin,0.371,0.0
+AGM,发送,72,WNT2_FRZB,Connective tissue,WNT2,FRZB,0.365,0.0
+AGM,发送,73,COL2A1_integrin_a11b1_complex,Connective tissue,COL2A1,integrin,0.363,0.009
+AGM,发送,74,SEMA3A_PlexinA3_complex1,Connective tissue,SEMA3A,PlexinA3,0.36,0.0
+AGM,发送,75,SDC1_ADGRA2,Connective tissue,SDC1,ADGRA2,0.349,0.002
+AGM,发送,76,EFNB3_EPHB4,Connective tissue,EFNB3,EPHB4,0.345,0.01
+AGM,发送,77,BMP4_BMR1A_AVR2B,Connective tissue,BMP4,BMR1A,0.34,0.0
+AGM,发送,78,BMP4_BMR1A_ACR2A,Connective tissue,BMP4,BMR1A,0.338,0.0
+AGM,发送,79,NECTIN1_NECTIN3,Connective tissue,NECTIN1,NECTIN3,0.327,0.016
+AGM,发送,80,EFNB3_EPHB2,Connective tissue,EFNB3,EPHB2,0.327,0.036
+AGM,发送,81,LRFN4_PTPRS,Connective tissue,LRFN4,PTPRS,0.326,0.021
+AGM,发送,82,VEGFB_NRP1,Connective tissue,VEGFB,NRP1,0.326,0.029
+AGM,发送,83,RSPO1_LGR4,Connective tissue,RSPO1,LGR4,0.323,0.0
+AGM,发送,84,SLITRK5_PTPRS,Connective tissue,SLITRK5,PTPRS,0.313,0.0
+AGM,发送,85,TENM4_ADGRL3,Connective tissue,TENM4,ADGRL3,0.312,0.002
+AGM,发送,86,EFNA4_EPHA7,Connective tissue,EFNA4,EPHA7,0.312,0.021
+AGM,发送,87,BMP4_BMR1B_AVR2A,Connective tissue,BMP4,BMR1B,0.31,0.0
+AGM,发送,88,BMP4_BMPR1B_BMPR2,Connective tissue,BMP4,BMPR1B,0.31,0.0
+AGM,发送,89,BMP4_BMR1B_AVR2B,Connective tissue,BMP4,BMR1B,0.31,0.0
+AGM,发送,90,SEMA3C_NRP2,Connective tissue,SEMA3C,NRP2,0.309,0.015
+AGM,发送,91,SEMA3E_PLXND1,Connective tissue,SEMA3E,PLXND1,0.298,0.002
+AGM,发送,92,WNT5A_FZD7_LRP5,Connective tissue,WNT5A,FZD7,0.288,0.0
+AGM,发送,93,WNT5A_FZD2_LRP5,Connective tissue,WNT5A,FZD2,0.288,0.0
+AGM,发送,94,WNT5A_FZD3_LRP5,Connective tissue,WNT5A,FZD3,0.288,0.0
+AGM,发送,95,WNT5A_FZD4_LRP5,Connective tissue,WNT5A,FZD4,0.287,0.0
+AGM,发送,96,Cholesterol_byLIPA_RORA,Connective tissue,Cholesterol,byLIPA,0.287,0.0
+AGM,发送,97,WNT5A_FZD3_LRP6,Connective tissue,WNT5A,FZD3,0.286,0.0
+AGM,发送,98,WNT5A_FZD2_LRP6,Connective tissue,WNT5A,FZD2,0.286,0.0
+AGM,发送,99,WNT5A_FZD7_LRP6,Connective tissue,WNT5A,FZD7,0.286,0.0
+AGM,发送,100,WNT5A_FZD4_LRP6,Connective tissue,WNT5A,FZD4,0.286,0.0
+AGM,接收,1,FGF10_FGFR2,Connective tissue,FGFR2,FGF10,1.196,0.0
+AGM,接收,2,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.825,0.0
+AGM,接收,3,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.734,0.0
+AGM,接收,4,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.713,0.0
+AGM,接收,5,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,0.665,0.0
+AGM,接收,6,CADM1_CADM1,Connective tissue,CADM1,CADM1,0.64,0.004
+AGM,接收,7,CADM1_NECTIN3,Connective tissue,NECTIN3,CADM1,0.615,0.0
+AGM,接收,8,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Connective tissue,byALDH1A2,atRetinoicAcid,0.586,0.0
+AGM,接收,9,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.569,0.0
+AGM,接收,10,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.565,0.0
+AGM,接收,11,FLRT3_ADGRL2,Connective tissue,ADGRL2,FLRT3,0.556,0.002
+AGM,接收,12,TENM3_ADGRL2,Connective tissue,ADGRL2,TENM3,0.556,0.002
+AGM,接收,13,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.551,0.0
+AGM,接收,14,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Connective tissue,byALDH1A2,atRetinoicAcid,0.54,0.0
+AGM,接收,15,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.538,0.0
+AGM,接收,16,TENM4_ADGRL2,Connective tissue,ADGRL2,TENM4,0.533,0.0
+AGM,接收,17,EFNA5_EPHA7,Connective tissue,EPHA7,EFNA5,0.532,0.0
+AGM,接收,18,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Connective tissue,byALDH1A2,atRetinoicAcid,0.518,0.0
+AGM,接收,19,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Connective tissue,byALDH1A2,atRetinoicAcid,0.518,0.0
+AGM,接收,20,SLIT2_ROBO1,Connective tissue,ROBO1,SLIT2,0.515,0.0
+AGM,接收,21,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.509,0.001
+AGM,接收,22,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.505,0.0
+AGM,接收,23,atRetinoicAcid_byALDH1A2_RAreceptor_RARB_RXRB,Connective tissue,byALDH1A2,atRetinoicAcid,0.504,0.0
+AGM,接收,24,atRetinoicAcid_byALDH1A2_RAreceptor_RARB,Connective tissue,byALDH1A2,atRetinoicAcid,0.504,0.0
+AGM,接收,25,atRetinoicAcid_byALDH1A2_RAreceptor_RARG,Connective tissue,byALDH1A2,atRetinoicAcid,0.503,0.0
+AGM,接收,26,NCAM1_AGRN,Connective tissue,AGRN,NCAM1,0.496,0.0
+AGM,接收,27,EFNA5_EPHA4,Connective tissue,EPHA4,EFNA5,0.495,0.0
+AGM,接收,28,BMPR1B_BMPR2_BMPR1A,Connective tissue,BMPR2,BMPR1B,0.483,0.0
+AGM,接收,29,GJC1_GJC1,Connective tissue,GJC1,GJC1,0.477,0.0
+AGM,接收,30,AGRN_PTPRS,Connective tissue,PTPRS,AGRN,0.47,0.031
+AGM,接收,31,EFNA1_EPHA3,Connective tissue,EPHA3,EFNA1,0.469,0.0
+AGM,接收,32,NECTIN2_NECTIN3,Connective tissue,NECTIN3,NECTIN2,0.469,0.005
+AGM,接收,33,EFNA5_EPHB2,Connective tissue,EPHB2,EFNA5,0.467,0.0
+AGM,接收,34,APLP2_PLXNA4,Connective tissue,PLXNA4,APLP2,0.466,0.008
+AGM,接收,35,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.462,0.006
+AGM,接收,36,NCAM1_FGFR1,Connective tissue,FGFR1,NCAM1,0.455,0.001
+AGM,接收,37,PTPRD_IL1RAPL1,Connective tissue,IL1RAPL1,PTPRD,0.422,0.0
+AGM,接收,38,TENM3_ADGRL1,Connective tissue,ADGRL1,TENM3,0.41,0.0
+AGM,接收,39,CDH3_CDH3,Connective tissue,CDH3,CDH3,0.399,0.0
+AGM,接收,40,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.396,0.0
+AGM,接收,41,SLIT2_ROBO2,Connective tissue,ROBO2,SLIT2,0.392,0.0
+AGM,接收,42,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.388,0.0
+AGM,接收,43,TENM4_ADGRL1,Connective tissue,ADGRL1,TENM4,0.387,0.0
+AGM,接收,44,TENM4_FLRT3_complex_ADGRL1,Connective tissue,FLRT3,TENM4,0.387,0.0
+AGM,接收,45,TENM2_FLRT3_complex_ADGRL2,Connective tissue,FLRT3,TENM2,0.364,0.015
+AGM,接收,46,TENM2_ADGRL2,Connective tissue,ADGRL2,TENM2,0.364,0.015
+AGM,接收,47,EFNA4_EPHA7,Connective tissue,EPHA7,EFNA4,0.362,0.0
+AGM,接收,48,VEGFA_NRP2,Connective tissue,NRP2,VEGFA,0.351,0.006
+AGM,接收,49,SEMA4C_PLXNB2,Connective tissue,PLXNB2,SEMA4C,0.347,0.0
+AGM,接收,50,SDC1_ADGRA2,Connective tissue,ADGRA2,SDC1,0.344,0.001
+AGM,接收,51,TENM3_FLRT3_complex_ADGRL3,Connective tissue,FLRT3,TENM3,0.343,0.027
+AGM,接收,52,SEMA3C_NRP2,Connective tissue,NRP2,SEMA3C,0.343,0.0
+AGM,接收,53,NECTIN1_NECTIN3,Connective tissue,NECTIN3,NECTIN1,0.331,0.014
+AGM,接收,54,EFNB2_EPHA4,Connective tissue,EPHA4,EFNB2,0.325,0.0
+AGM,接收,55,EFNA4_EPHA4,Connective tissue,EPHA4,EFNA4,0.325,0.0
+AGM,接收,56,EFNB2_EPHB3,Connective tissue,EPHB3,EFNB2,0.324,0.0
+AGM,接收,57,TENM4_ADGRL3,Connective tissue,ADGRL3,TENM4,0.321,0.001
+AGM,接收,58,EFNB3_EPHA4,Connective tissue,EPHA4,EFNB3,0.314,0.026
+AGM,接收,59,EFNB3_EPHB3,Connective tissue,EPHB3,EFNB3,0.313,0.023
+AGM,接收,60,FLRT2_ADGRL1,Connective tissue,ADGRL1,FLRT2,0.313,0.006
+AGM,接收,61,JAG1_NOTCH2,Connective tissue,NOTCH2,JAG1,0.31,0.0
+AGM,接收,62,KITLG_KIT,Connective tissue,KIT,KITLG,0.309,0.001
+AGM,接收,63,WNT5A_ROR1,Connective tissue,ROR1,WNT5A,0.305,0.0
+AGM,接收,64,EFNA2_EPHA7,Connective tissue,EPHA7,EFNA2,0.302,0.0
+AGM,接收,65,SEMA3F_NRP2,Connective tissue,NRP2,SEMA3F,0.302,0.003
+AGM,接收,66,TNC_integrin_a9b1_complex,Connective tissue,integrin,TNC,0.301,0.014
+AGM,接收,67,EFNB2_EPHB2,Connective tissue,EPHB2,EFNB2,0.297,0.008
+AGM,接收,68,EFNB2_EPHB4,Connective tissue,EPHB4,EFNB2,0.292,0.049
+AGM,接收,69,BMP5_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP5,0.288,0.037
+AGM,接收,70,GDF6_BMPR1A_BMPR2,Connective tissue,BMPR1A,GDF6,0.286,0.001
+AGM,接收,71,EFNB1_EPHA4,Connective tissue,EPHA4,EFNB1,0.286,0.0
+AGM,接收,72,EFNB1_EPHB3,Connective tissue,EPHB3,EFNB1,0.285,0.0
+AGM,接收,73,IGFBP3_TMEM219,Connective tissue,TMEM219,IGFBP3,0.284,0.0
+AGM,接收,74,SEMA6D_PlexinA1_complex1,Connective tissue,PlexinA1,SEMA6D,0.269,0.0
+AGM,接收,75,EFNA1_EPHA7,Connective tissue,EPHA7,EFNA1,0.267,0.002
+AGM,接收,76,EFNA2_EPHA4,Connective tissue,EPHA4,EFNA2,0.265,0.0
+AGM,接收,77,ANGPT1_TEK,Connective tissue,TEK,ANGPT1,0.264,0.015
+AGM,接收,78,SDC2_ADGRA2,Connective tissue,ADGRA2,SDC2,0.261,0.002
+AGM,接收,79,COL26A1_integrin_a11b1_complex,Connective tissue,integrin,COL26A1,0.236,0.001
+AGM,接收,80,LPAR1_ADGRE5,Connective tissue,ADGRE5,LPAR1,0.235,0.015
+AGM,接收,81,NRXN3_ADGRL1,Connective tissue,ADGRL1,NRXN3,0.235,0.029
+AGM,接收,82,integrin_aVb1_complex_ADGRE5,Connective tissue,aVb1,integrin,0.233,0.038
+AGM,接收,83,EFNA1_EPHA4,Connective tissue,EPHA4,EFNA1,0.229,0.0
+AGM,接收,84,TENM2_ADGRL1,Connective tissue,ADGRL1,TENM2,0.218,0.014
+AGM,接收,85,TENM2_FLRT3_complex_ADGRL1,Connective tissue,FLRT3,TENM2,0.218,0.014
+AGM,接收,86,BMP5_BMR1A_AVR2B,Connective tissue,BMR1A,BMP5,0.217,0.029
+AGM,接收,87,JAG1_NOTCH1,Connective tissue,NOTCH1,JAG1,0.212,0.046
+AGM,接收,88,SEMA4D_PLXNB1,Connective tissue,PLXNB1,SEMA4D,0.21,0.027
+AGM,接收,89,WNT5B_SFRP2,Connective tissue,SFRP2,WNT5B,0.209,0.018
+AGM,接收,90,THBS1_integrin_a3b1_complex,Connective tissue,integrin,THBS1,0.208,0.004
+AGM,接收,91,PDGFD_PDGFR_complex,Connective tissue,PDGFR,PDGFD,0.207,0.0
+AGM,接收,92,PDGFD_PDGFRB,Connective tissue,PDGFRB,PDGFD,0.207,0.0
+AGM,接收,93,WNT5B_FZD1_LRP5,Connective tissue,FZD1,WNT5B,0.206,0.032
+AGM,接收,94,WNT5B_FZD1_LRP6,Connective tissue,FZD1,WNT5B,0.202,0.028
+AGM,接收,95,GDF6_BMR1A_ACR2A,Connective tissue,BMR1A,GDF6,0.19,0.003
+AGM,接收,96,WNT5A_FRZB,Connective tissue,FRZB,WNT5A,0.19,0.004
+AGM,接收,97,RBP4_STRA6,Connective tissue,STRA6,RBP4,0.188,0.007
+AGM,接收,98,WNT5A_FZD10_LRP5,Connective tissue,FZD10,WNT5A,0.182,0.001
+AGM,接收,99,WNT5A_FZD10_LRP6,Connective tissue,FZD10,WNT5A,0.182,0.001
+AGM,接收,100,WNT5B_FRZB,Connective tissue,FRZB,WNT5B,0.172,0.0
+Cavity,发送,1,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.421,0.0
+Cavity,发送,2,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.412,0.0
+Cavity,发送,3,COL3A1_ADGRG1,Connective tissue,COL3A1,ADGRG1,1.1,0.0
+Cavity,发送,4,APP_FPR2,Connective tissue,APP,FPR2,0.585,0.0
+Cavity,发送,5,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.569,0.0
+Cavity,发送,6,WNT2_SFRP1,Connective tissue,WNT2,SFRP1,0.475,0.013
+Cavity,发送,7,FLRT3_ADGRL3,Connective tissue,FLRT3,ADGRL3,0.441,0.0
+Cavity,发送,8,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.375,0.0
+Cavity,发送,9,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.37,0.0
+Cavity,发送,10,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.37,0.0
+Cavity,发送,11,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.37,0.0
+Cavity,发送,12,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.363,0.0
+Cavity,发送,13,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.363,0.0
+Cavity,发送,14,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.363,0.0
+Cavity,发送,15,Glutamate_byGLS_and_SLC1A3_GRM7,Connective tissue,Glutamate,byGLS,0.262,0.002
+Cavity,发送,16,RSPO1_LGR4,Connective tissue,RSPO1,LGR4,0.258,0.005
+Cavity,发送,17,WNT6_SFRP2,Connective tissue,WNT6,SFRP2,0.175,0.019
+Cavity,接收,1,COL1A1_integrin_a11b1_complex,Connective tissue,integrin,COL1A1,0.632,0.004
+Cavity,接收,2,COL1A2_integrin_a11b1_complex,Connective tissue,integrin,COL1A2,0.608,0.048
+Cavity,接收,3,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.531,0.021
+Cavity,接收,4,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.53,0.0
+Cavity,接收,5,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.527,0.0
+Cavity,接收,6,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.525,0.0
+Cavity,接收,7,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.523,0.0
+Cavity,接收,8,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.46,0.0
+Cavity,接收,9,TNC_integrin_a9b1_complex,Connective tissue,integrin,TNC,0.337,0.0
+Cavity,接收,10,WNT5A_ROR1,Connective tissue,ROR1,WNT5A,0.267,0.031
+Cavity,接收,11,TNC_integrin_a8b1_complex,Connective tissue,integrin,TNC,0.199,0.0
+Cavity,接收,12,THBS1_integrin_a3b1_complex,Connective tissue,integrin,THBS1,0.198,0.024
+Connective tissue,发送,1,IGF2_IGF2R,Connective tissue,IGF2,IGF2R,1.955,0.0
+Connective tissue,发送,2,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.786,0.0
+Connective tissue,发送,3,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.576,0.0
+Connective tissue,发送,4,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.478,0.0
+Connective tissue,发送,5,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.401,0.0
+Connective tissue,发送,6,COL3A1_integrin_a11b1_complex,Connective tissue,COL3A1,integrin,1.082,0.0
+Connective tissue,发送,7,FN1_integrin_a8b1_complex,Connective tissue,FN1,integrin,0.869,0.02
+Connective tissue,发送,8,COL1A1_integrin_a11b1_complex,Connective tissue,COL1A1,integrin,0.844,0.0
+Connective tissue,发送,9,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.819,0.003
+Connective tissue,发送,10,COL18A1_integrin_a11b1_complex,Connective tissue,COL18A1,integrin,0.803,0.0
+Connective tissue,发送,11,COL1A2_integrin_a11b1_complex,Connective tissue,COL1A2,integrin,0.783,0.0
+Connective tissue,发送,12,WNT2_SFRP1,Connective tissue,WNT2,SFRP1,0.771,0.0
+Connective tissue,发送,13,LRFN4_PTPRF,Connective tissue,LRFN4,PTPRF,0.693,0.0
+Connective tissue,发送,14,APP_FPR2,Connective tissue,APP,FPR2,0.678,0.0
+Connective tissue,发送,15,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.672,0.0
+Connective tissue,发送,16,PDGFC_PDGFRA,Connective tissue,PDGFC,PDGFRA,0.67,0.0
+Connective tissue,发送,17,EFNA5_EPHA3,Connective tissue,EFNA5,EPHA3,0.621,0.0
+Connective tissue,发送,18,PDGFA_PDGFRA,Connective tissue,PDGFA,PDGFRA,0.62,0.0
+Connective tissue,发送,19,WNT5A_SFRP1,Connective tissue,WNT5A,SFRP1,0.613,0.0
+Connective tissue,发送,20,APP_PLXNA4,Connective tissue,APP,PLXNA4,0.598,0.0
+Connective tissue,发送,21,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.576,0.0
+Connective tissue,发送,22,WNT6_SFRP1,Connective tissue,WNT6,SFRP1,0.571,0.0
+Connective tissue,发送,23,TENM3_ADGRL2,Connective tissue,TENM3,ADGRL2,0.57,0.002
+Connective tissue,发送,24,CADM1_NECTIN3,Connective tissue,CADM1,NECTIN3,0.567,0.029
+Connective tissue,发送,25,DAG1_NRXN3,Connective tissue,DAG1,NRXN3,0.563,0.001
+Connective tissue,发送,26,EFNA4_EPHA3,Connective tissue,EFNA4,EPHA3,0.551,0.0
+Connective tissue,发送,27,WNT7B_SFRP1,Connective tissue,WNT7B,SFRP1,0.544,0.0
+Connective tissue,发送,28,APP_SORL1,Connective tissue,APP,SORL1,0.544,0.0
+Connective tissue,发送,29,WNT4_SFRP1,Connective tissue,WNT4,SFRP1,0.538,0.0
+Connective tissue,发送,30,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.533,0.0
+Connective tissue,发送,31,WNT5B_SFRP1,Connective tissue,WNT5B,SFRP1,0.514,0.0
+Connective tissue,发送,32,IGF1_IGF1R,Connective tissue,IGF1,IGF1R,0.506,0.002
+Connective tissue,发送,33,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1,IGF1R,0.506,0.002
+Connective tissue,发送,34,EFNA2_EPHA3,Connective tissue,EFNA2,EPHA3,0.505,0.0
+Connective tissue,发送,35,Cholesterol_byDHCR24_RORA,Connective tissue,Cholesterol,byDHCR24,0.501,0.036
+Connective tissue,发送,36,COL5A2_integrin_a11b1_complex,Connective tissue,COL5A2,integrin,0.499,0.0
+Connective tissue,发送,37,AGRN_PTPRS,Connective tissue,AGRN,PTPRS,0.495,0.011
+Connective tissue,发送,38,TENM4_ADGRL2,Connective tissue,TENM4,ADGRL2,0.482,0.015
+Connective tissue,发送,39,NCAM1_AGRN,Connective tissue,NCAM1,AGRN,0.48,0.001
+Connective tissue,发送,40,APLP2_PLXNA4,Connective tissue,APLP2,PLXNA4,0.479,0.004
+Connective tissue,发送,41,EFNA1_EPHA3,Connective tissue,EFNA1,EPHA3,0.476,0.0
+Connective tissue,发送,42,FLRT3_ADGRL3,Connective tissue,FLRT3,ADGRL3,0.46,0.0
+Connective tissue,发送,43,NCAM1_FGFR1,Connective tissue,NCAM1,FGFR1,0.439,0.021
+Connective tissue,发送,44,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.428,0.0
+Connective tissue,发送,45,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.426,0.0
+Connective tissue,发送,46,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.426,0.0
+Connective tissue,发送,47,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.426,0.0
+Connective tissue,发送,48,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.426,0.0
+Connective tissue,发送,49,BMP4_BMPR1A_BMPR2,Connective tissue,BMP4,BMPR1A,0.425,0.001
+Connective tissue,发送,50,TENM3_ADGRL1,Connective tissue,TENM3,ADGRL1,0.424,0.001
+Connective tissue,发送,51,WNT2_FZD1_LRP6,Connective tissue,WNT2,FZD1,0.421,0.0
+Connective tissue,发送,52,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.421,0.0
+Connective tissue,发送,53,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.421,0.0
+Connective tissue,发送,54,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.421,0.0
+Connective tissue,发送,55,CDH3_CDH3,Connective tissue,CDH3,CDH3,0.404,0.006
+Connective tissue,发送,56,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.401,0.005
+Connective tissue,发送,57,SEMA3A_PlexinA4_complex1,Connective tissue,SEMA3A,PlexinA4,0.397,0.0
+Connective tissue,发送,58,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.397,0.0
+Connective tissue,发送,59,SEMA3A_PlexinA1_complex3,Connective tissue,SEMA3A,PlexinA1,0.397,0.0
+Connective tissue,发送,60,SEMA3A_NRP1,Connective tissue,SEMA3A,NRP1,0.397,0.0
+Connective tissue,发送,61,WNT2_FRZB,Connective tissue,WNT2,FRZB,0.391,0.0
+Connective tissue,发送,62,SEMA4D_PLXNB2,Connective tissue,SEMA4D,PLXNB2,0.387,0.0
+Connective tissue,发送,63,EFNB3_EPHA4,Connective tissue,EFNB3,EPHA4,0.384,0.0
+Connective tissue,发送,64,WNT2_FZD10_LRP6,Connective tissue,WNT2,FZD10,0.383,0.0
+Connective tissue,发送,65,WNT2_FZD10_LRP5,Connective tissue,WNT2,FZD10,0.383,0.0
+Connective tissue,发送,66,EFNB3_EPHB3,Connective tissue,EFNB3,EPHB3,0.383,0.0
+Connective tissue,发送,67,EFNA5_EPHA4,Connective tissue,EFNA5,EPHA4,0.381,0.017
+Connective tissue,发送,68,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.379,0.0
+Connective tissue,发送,69,COL5A1_integrin_a11b1_complex,Connective tissue,COL5A1,integrin,0.377,0.0
+Connective tissue,发送,70,TENM2_FLRT3_complex_ADGRL2,Connective tissue,TENM2,FLRT3,0.377,0.005
+Connective tissue,发送,71,TENM2_ADGRL2,Connective tissue,TENM2,ADGRL2,0.377,0.005
+Connective tissue,发送,72,COL2A1_integrin_a11b1_complex,Connective tissue,COL2A1,integrin,0.369,0.015
+Connective tissue,发送,73,WNT2_FZD6_LRP6,Connective tissue,WNT2,FZD6,0.366,0.0
+Connective tissue,发送,74,WNT2_FZD6_LRP5,Connective tissue,WNT2,FZD6,0.366,0.0
+Connective tissue,发送,75,SDC1_ADGRA2,Connective tissue,SDC1,ADGRA2,0.363,0.001
+Connective tissue,发送,76,NECTIN1_NECTIN3,Connective tissue,NECTIN1,NECTIN3,0.363,0.0
+Connective tissue,发送,77,TENM3_ADGRL3,Connective tissue,TENM3,ADGRL3,0.357,0.044
+Connective tissue,发送,78,TENM3_FLRT3_complex_ADGRL3,Connective tissue,TENM3,FLRT3,0.357,0.019
+Connective tissue,发送,79,EFNB3_EPHB2,Connective tissue,EFNB3,EPHB2,0.356,0.005
+Connective tissue,发送,80,BMP4_BMR1A_AVR2B,Connective tissue,BMP4,BMR1A,0.354,0.0
+Connective tissue,发送,81,COL19A1_integrin_a11b1_complex,Connective tissue,COL19A1,integrin,0.351,0.049
+Connective tissue,发送,82,EFNB3_EPHB4,Connective tissue,EFNB3,EPHB4,0.351,0.011
+Connective tissue,发送,83,WNT2_FZD4_LRP5,Connective tissue,WNT2,FZD4,0.35,0.0
+Connective tissue,发送,84,WNT2_FZD4_LRP6,Connective tissue,WNT2,FZD4,0.35,0.0
+Connective tissue,发送,85,WNT5A_ROR1,Connective tissue,WNT5A,ROR1,0.349,0.0
+Connective tissue,发送,86,EFNA4_EPHA7,Connective tissue,EFNA4,EPHA7,0.348,0.004
+Connective tissue,发送,87,VEGFA_NRP2,Connective tissue,VEGFA,NRP2,0.339,0.043
+Connective tissue,发送,88,SEMA4C_PLXNB2,Connective tissue,SEMA4C,PLXNB2,0.336,0.0
+Connective tissue,发送,89,TENM4_ADGRL1,Connective tissue,TENM4,ADGRL1,0.336,0.035
+Connective tissue,发送,90,TENM4_FLRT3_complex_ADGRL1,Connective tissue,TENM4,FLRT3,0.336,0.032
+Connective tissue,发送,91,LRFN4_PTPRS,Connective tissue,LRFN4,PTPRS,0.33,0.027
+Connective tissue,发送,92,BMP4_BMR1A_ACR2A,Connective tissue,BMP4,BMR1A,0.329,0.0
+Connective tissue,发送,93,VCAM1_integrin_a9b1_complex,Connective tissue,VCAM1,integrin,0.324,0.0
+Connective tissue,发送,94,SEMA3C_NRP2,Connective tissue,SEMA3C,NRP2,0.324,0.011
+Connective tissue,发送,95,SLITRK5_PTPRS,Connective tissue,SLITRK5,PTPRS,0.318,0.001
+Connective tissue,发送,96,JAG1_NOTCH2,Connective tissue,JAG1,NOTCH2,0.315,0.0
+Connective tissue,发送,97,EFNB2_EPHA4,Connective tissue,EFNB2,EPHA4,0.313,0.0
+Connective tissue,发送,98,EFNB2_EPHB3,Connective tissue,EFNB2,EPHB3,0.312,0.0
+Connective tissue,发送,99,EFNA4_EPHA4,Connective tissue,EFNA4,EPHA4,0.311,0.001
+Connective tissue,发送,100,JAG2_NOTCH2,Connective tissue,JAG2,NOTCH2,0.31,0.0
+Connective tissue,接收,1,IGF2_IGF2R,Connective tissue,IGF2R,IGF2,1.955,0.0
+Connective tissue,接收,2,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.786,0.0
+Connective tissue,接收,3,DLK1_NOTCH2,Connective tissue,NOTCH2,DLK1,1.576,0.0
+Connective tissue,接收,4,DLK1_NOTCH1,Connective tissue,NOTCH1,DLK1,1.478,0.0
+Connective tissue,接收,5,DLK1_NOTCH3,Connective tissue,NOTCH3,DLK1,1.401,0.0
+Connective tissue,接收,6,COL3A1_integrin_a11b1_complex,Connective tissue,integrin,COL3A1,1.082,0.0
+Connective tissue,接收,7,FN1_integrin_a8b1_complex,Connective tissue,integrin,FN1,0.869,0.02
+Connective tissue,接收,8,COL1A1_integrin_a11b1_complex,Connective tissue,integrin,COL1A1,0.844,0.0
+Connective tissue,接收,9,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.819,0.003
+Connective tissue,接收,10,COL18A1_integrin_a11b1_complex,Connective tissue,integrin,COL18A1,0.803,0.0
+Connective tissue,接收,11,COL1A2_integrin_a11b1_complex,Connective tissue,integrin,COL1A2,0.783,0.0
+Connective tissue,接收,12,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.771,0.0
+Connective tissue,接收,13,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,0.693,0.0
+Connective tissue,接收,14,APP_FPR2,Connective tissue,FPR2,APP,0.678,0.0
+Connective tissue,接收,15,FLRT3_ADGRL2,Connective tissue,ADGRL2,FLRT3,0.672,0.0
+Connective tissue,接收,16,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.67,0.0
+Connective tissue,接收,17,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.621,0.0
+Connective tissue,接收,18,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.62,0.0
+Connective tissue,接收,19,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.613,0.0
+Connective tissue,接收,20,APP_PLXNA4,Connective tissue,PLXNA4,APP,0.598,0.0
+Connective tissue,接收,21,APP_TNFRSF21,Connective tissue,TNFRSF21,APP,0.576,0.0
+Connective tissue,接收,22,WNT6_SFRP1,Connective tissue,SFRP1,WNT6,0.571,0.0
+Connective tissue,接收,23,TENM3_ADGRL2,Connective tissue,ADGRL2,TENM3,0.57,0.002
+Connective tissue,接收,24,CADM1_NECTIN3,Connective tissue,NECTIN3,CADM1,0.567,0.029
+Connective tissue,接收,25,DAG1_NRXN3,Connective tissue,NRXN3,DAG1,0.563,0.001
+Connective tissue,接收,26,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.551,0.0
+Connective tissue,接收,27,WNT7B_SFRP1,Connective tissue,SFRP1,WNT7B,0.544,0.0
+Connective tissue,接收,28,APP_SORL1,Connective tissue,SORL1,APP,0.544,0.0
+Connective tissue,接收,29,WNT4_SFRP1,Connective tissue,SFRP1,WNT4,0.538,0.0
+Connective tissue,接收,30,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.533,0.0
+Connective tissue,接收,31,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.514,0.0
+Connective tissue,接收,32,IGF1_IGF1R,Connective tissue,IGF1R,IGF1,0.506,0.002
+Connective tissue,接收,33,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1R,IGF1,0.506,0.002
+Connective tissue,接收,34,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.505,0.0
+Connective tissue,接收,35,Cholesterol_byDHCR24_RORA,Connective tissue,byDHCR24,Cholesterol,0.501,0.036
+Connective tissue,接收,36,COL5A2_integrin_a11b1_complex,Connective tissue,integrin,COL5A2,0.499,0.0
+Connective tissue,接收,37,AGRN_PTPRS,Connective tissue,PTPRS,AGRN,0.495,0.011
+Connective tissue,接收,38,TENM4_ADGRL2,Connective tissue,ADGRL2,TENM4,0.482,0.015
+Connective tissue,接收,39,NCAM1_AGRN,Connective tissue,AGRN,NCAM1,0.48,0.001
+Connective tissue,接收,40,APLP2_PLXNA4,Connective tissue,PLXNA4,APLP2,0.479,0.004
+Connective tissue,接收,41,EFNA1_EPHA3,Connective tissue,EPHA3,EFNA1,0.476,0.0
+Connective tissue,接收,42,FLRT3_ADGRL3,Connective tissue,ADGRL3,FLRT3,0.46,0.0
+Connective tissue,接收,43,NCAM1_FGFR1,Connective tissue,FGFR1,NCAM1,0.439,0.021
+Connective tissue,接收,44,WNT2_SFRP2,Connective tissue,SFRP2,WNT2,0.428,0.0
+Connective tissue,接收,45,WNT2_FZD1_LRP5,Connective tissue,FZD1,WNT2,0.426,0.0
+Connective tissue,接收,46,WNT2_FZD2_LRP5,Connective tissue,FZD2,WNT2,0.426,0.0
+Connective tissue,接收,47,WNT2_FZD3_LRP5,Connective tissue,FZD3,WNT2,0.426,0.0
+Connective tissue,接收,48,WNT2_FZD7_LRP5,Connective tissue,FZD7,WNT2,0.426,0.0
+Connective tissue,接收,49,BMP4_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP4,0.425,0.001
+Connective tissue,接收,50,TENM3_ADGRL1,Connective tissue,ADGRL1,TENM3,0.424,0.001
+Connective tissue,接收,51,WNT2_FZD1_LRP6,Connective tissue,FZD1,WNT2,0.421,0.0
+Connective tissue,接收,52,WNT2_FZD2_LRP6,Connective tissue,FZD2,WNT2,0.421,0.0
+Connective tissue,接收,53,WNT2_FZD7_LRP6,Connective tissue,FZD7,WNT2,0.421,0.0
+Connective tissue,接收,54,WNT2_FZD3_LRP6,Connective tissue,FZD3,WNT2,0.421,0.0
+Connective tissue,接收,55,CDH3_CDH3,Connective tissue,CDH3,CDH3,0.404,0.006
+Connective tissue,接收,56,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.401,0.005
+Connective tissue,接收,57,SEMA3A_PlexinA4_complex1,Connective tissue,PlexinA4,SEMA3A,0.397,0.0
+Connective tissue,接收,58,SEMA3A_PlexinA2_complex1,Connective tissue,PlexinA2,SEMA3A,0.397,0.0
+Connective tissue,接收,59,SEMA3A_PlexinA1_complex3,Connective tissue,PlexinA1,SEMA3A,0.397,0.0
+Connective tissue,接收,60,SEMA3A_NRP1,Connective tissue,NRP1,SEMA3A,0.397,0.0
+Connective tissue,接收,61,WNT2_FRZB,Connective tissue,FRZB,WNT2,0.391,0.0
+Connective tissue,接收,62,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.387,0.0
+Connective tissue,接收,63,EFNB3_EPHA4,Connective tissue,EPHA4,EFNB3,0.384,0.0
+Connective tissue,接收,64,WNT2_FZD10_LRP6,Connective tissue,FZD10,WNT2,0.383,0.0
+Connective tissue,接收,65,WNT2_FZD10_LRP5,Connective tissue,FZD10,WNT2,0.383,0.0
+Connective tissue,接收,66,EFNB3_EPHB3,Connective tissue,EPHB3,EFNB3,0.383,0.0
+Connective tissue,接收,67,EFNA5_EPHA4,Connective tissue,EPHA4,EFNA5,0.381,0.017
+Connective tissue,接收,68,SLITRK6_PTPRS,Connective tissue,PTPRS,SLITRK6,0.379,0.0
+Connective tissue,接收,69,COL5A1_integrin_a11b1_complex,Connective tissue,integrin,COL5A1,0.377,0.0
+Connective tissue,接收,70,TENM2_FLRT3_complex_ADGRL2,Connective tissue,FLRT3,TENM2,0.377,0.005
+Connective tissue,接收,71,TENM2_ADGRL2,Connective tissue,ADGRL2,TENM2,0.377,0.005
+Connective tissue,接收,72,COL2A1_integrin_a11b1_complex,Connective tissue,integrin,COL2A1,0.369,0.015
+Connective tissue,接收,73,WNT2_FZD6_LRP6,Connective tissue,FZD6,WNT2,0.366,0.0
+Connective tissue,接收,74,WNT2_FZD6_LRP5,Connective tissue,FZD6,WNT2,0.366,0.0
+Connective tissue,接收,75,SDC1_ADGRA2,Connective tissue,ADGRA2,SDC1,0.363,0.001
+Connective tissue,接收,76,NECTIN1_NECTIN3,Connective tissue,NECTIN3,NECTIN1,0.363,0.0
+Connective tissue,接收,77,TENM3_ADGRL3,Connective tissue,ADGRL3,TENM3,0.357,0.044
+Connective tissue,接收,78,TENM3_FLRT3_complex_ADGRL3,Connective tissue,FLRT3,TENM3,0.357,0.019
+Connective tissue,接收,79,EFNB3_EPHB2,Connective tissue,EPHB2,EFNB3,0.356,0.005
+Connective tissue,接收,80,BMP4_BMR1A_AVR2B,Connective tissue,BMR1A,BMP4,0.354,0.0
+Connective tissue,接收,81,COL19A1_integrin_a11b1_complex,Connective tissue,integrin,COL19A1,0.351,0.049
+Connective tissue,接收,82,EFNB3_EPHB4,Connective tissue,EPHB4,EFNB3,0.351,0.011
+Connective tissue,接收,83,WNT2_FZD4_LRP5,Connective tissue,FZD4,WNT2,0.35,0.0
+Connective tissue,接收,84,WNT2_FZD4_LRP6,Connective tissue,FZD4,WNT2,0.35,0.0
+Connective tissue,接收,85,WNT5A_ROR1,Connective tissue,ROR1,WNT5A,0.349,0.0
+Connective tissue,接收,86,EFNA4_EPHA7,Connective tissue,EPHA7,EFNA4,0.348,0.004
+Connective tissue,接收,87,VEGFA_NRP2,Connective tissue,NRP2,VEGFA,0.339,0.043
+Connective tissue,接收,88,SEMA4C_PLXNB2,Connective tissue,PLXNB2,SEMA4C,0.336,0.0
+Connective tissue,接收,89,TENM4_ADGRL1,Connective tissue,ADGRL1,TENM4,0.336,0.035
+Connective tissue,接收,90,TENM4_FLRT3_complex_ADGRL1,Connective tissue,FLRT3,TENM4,0.336,0.032
+Connective tissue,接收,91,LRFN4_PTPRS,Connective tissue,PTPRS,LRFN4,0.33,0.027
+Connective tissue,接收,92,BMP4_BMR1A_ACR2A,Connective tissue,BMR1A,BMP4,0.329,0.0
+Connective tissue,接收,93,VCAM1_integrin_a9b1_complex,Connective tissue,integrin,VCAM1,0.324,0.0
+Connective tissue,接收,94,SEMA3C_NRP2,Connective tissue,NRP2,SEMA3C,0.324,0.011
+Connective tissue,接收,95,SLITRK5_PTPRS,Connective tissue,PTPRS,SLITRK5,0.318,0.001
+Connective tissue,接收,96,JAG1_NOTCH2,Connective tissue,NOTCH2,JAG1,0.315,0.0
+Connective tissue,接收,97,EFNB2_EPHA4,Connective tissue,EPHA4,EFNB2,0.313,0.0
+Connective tissue,接收,98,EFNB2_EPHB3,Connective tissue,EPHB3,EFNB2,0.312,0.0
+Connective tissue,接收,99,EFNA4_EPHA4,Connective tissue,EPHA4,EFNA4,0.311,0.001
+Connective tissue,接收,100,JAG2_NOTCH2,Connective tissue,NOTCH2,JAG2,0.31,0.0
+Connective tissue_1_30_Target,发送,1,IGF2_IGF2R,Connective tissue,IGF2,IGF2R,2.004,0.0
+Connective tissue_1_30_Target,发送,2,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.805,0.0
+Connective tissue_1_30_Target,发送,3,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.502,0.0
+Connective tissue_1_30_Target,发送,4,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.409,0.0
+Connective tissue_1_30_Target,发送,5,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.407,0.0
+Connective tissue_1_30_Target,发送,6,COL3A1_integrin_a1b1_complex,Connective tissue,COL3A1,integrin,1.075,0.0
+Connective tissue_1_30_Target,发送,7,COL1A1_integrin_a1b1_complex,Connective tissue,COL1A1,integrin,0.837,0.0
+Connective tissue_1_30_Target,发送,8,COL18A1_integrin_a1b1_complex,Connective tissue,COL18A1,integrin,0.796,0.0
+Connective tissue_1_30_Target,发送,9,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.779,0.007
+Connective tissue_1_30_Target,发送,10,COL1A2_integrin_a1b1_complex,Connective tissue,COL1A2,integrin,0.775,0.0
+Connective tissue_1_30_Target,发送,11,WNT2_SFRP1,Connective tissue,WNT2,SFRP1,0.747,0.0
+Connective tissue_1_30_Target,发送,12,DAG1_NRXN3,Connective tissue,DAG1,NRXN3,0.635,0.0
+Connective tissue_1_30_Target,发送,13,APP_PLXNA4,Connective tissue,APP,PLXNA4,0.631,0.0
+Connective tissue_1_30_Target,发送,14,APP_FPR2,Connective tissue,APP,FPR2,0.63,0.0
+Connective tissue_1_30_Target,发送,15,PDGFC_PDGFRA,Connective tissue,PDGFC,PDGFRA,0.603,0.0
+Connective tissue_1_30_Target,发送,16,WNT5A_SFRP1,Connective tissue,WNT5A,SFRP1,0.589,0.0
+Connective tissue_1_30_Target,发送,17,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.572,0.014
+Connective tissue_1_30_Target,发送,18,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.568,0.0
+Connective tissue_1_30_Target,发送,19,PDGFA_PDGFRA,Connective tissue,PDGFA,PDGFRA,0.552,0.0
+Connective tissue_1_30_Target,发送,20,WNT6_SFRP1,Connective tissue,WNT6,SFRP1,0.548,0.0
+Connective tissue_1_30_Target,发送,21,Cholesterol_byDHCR24_RORA,Connective tissue,Cholesterol,byDHCR24,0.537,0.001
+Connective tissue_1_30_Target,发送,22,IGF1_IGF1R,Connective tissue,IGF1,IGF1R,0.525,0.002
+Connective tissue_1_30_Target,发送,23,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1,IGF1R,0.525,0.002
+Connective tissue_1_30_Target,发送,24,WNT7B_SFRP1,Connective tissue,WNT7B,SFRP1,0.521,0.0
+Connective tissue_1_30_Target,发送,25,WNT4_SFRP1,Connective tissue,WNT4,SFRP1,0.514,0.0
+Connective tissue_1_30_Target,发送,26,APLP2_PLXNA4,Connective tissue,APLP2,PLXNA4,0.512,0.0
+Connective tissue_1_30_Target,发送,27,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.503,0.0
+Connective tissue_1_30_Target,发送,28,SEMA3A_NRP1,Connective tissue,SEMA3A,NRP1,0.503,0.0
+Connective tissue_1_30_Target,发送,29,COL5A2_integrin_a1b1_complex,Connective tissue,COL5A2,integrin,0.492,0.002
+Connective tissue_1_30_Target,发送,30,WNT5B_SFRP1,Connective tissue,WNT5B,SFRP1,0.491,0.0
+Connective tissue_1_30_Target,发送,31,FLRT3_ADGRL3,Connective tissue,FLRT3,ADGRL3,0.449,0.0
+Connective tissue_1_30_Target,发送,32,BMP4_BMPR1A_BMPR2,Connective tissue,BMP4,BMPR1A,0.448,0.0
+Connective tissue_1_30_Target,发送,33,SEMA3A_PlexinA4_complex1,Connective tissue,SEMA3A,PlexinA4,0.442,0.0
+Connective tissue_1_30_Target,发送,34,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.434,0.0
+Connective tissue_1_30_Target,发送,35,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.428,0.0
+Connective tissue_1_30_Target,发送,36,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.428,0.0
+Connective tissue_1_30_Target,发送,37,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.428,0.0
+Connective tissue_1_30_Target,发送,38,WNT2_FZD1_LRP6,Connective tissue,WNT2,FZD1,0.425,0.0
+Connective tissue_1_30_Target,发送,39,VEGFA_KDR,Connective tissue,VEGFA,KDR,0.425,0.0
+Connective tissue_1_30_Target,发送,40,SEMA3A_PlexinA1_complex3,Connective tissue,SEMA3A,PlexinA1,0.421,0.0
+Connective tissue_1_30_Target,发送,41,VEGFC_KDR,Connective tissue,VEGFC,KDR,0.416,0.0
+Connective tissue_1_30_Target,发送,42,TENM3_ADGRL1,Connective tissue,TENM3,ADGRL1,0.408,0.012
+Connective tissue_1_30_Target,发送,43,WNT5A_ROR1,Connective tissue,WNT5A,ROR1,0.407,0.0
+Connective tissue_1_30_Target,发送,44,VEGFB_NRP1,Connective tissue,VEGFB,NRP1,0.397,0.0
+Connective tissue_1_30_Target,发送,45,VEGFA_NRP2,Connective tissue,VEGFA,NRP2,0.395,0.002
+Connective tissue_1_30_Target,发送,46,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.383,0.0
+Connective tissue_1_30_Target,发送,47,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.383,0.0
+Connective tissue_1_30_Target,发送,48,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.383,0.0
+Connective tissue_1_30_Target,发送,49,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.383,0.0
+Connective tissue_1_30_Target,发送,50,WNT2_FZD4_LRP5,Connective tissue,WNT2,FZD4,0.382,0.0
+Connective tissue_1_30_Target,发送,51,WNT2_FZD4_LRP6,Connective tissue,WNT2,FZD4,0.382,0.0
+Connective tissue_1_30_Target,发送,52,SEMA3C_NRP2,Connective tissue,SEMA3C,NRP2,0.38,0.0
+Connective tissue_1_30_Target,发送,53,COL5A1_integrin_a1b1_complex,Connective tissue,COL5A1,integrin,0.369,0.0
+Connective tissue_1_30_Target,发送,54,SEMA3A_PlexinA3_complex1,Connective tissue,SEMA3A,PlexinA3,0.367,0.0
+Connective tissue_1_30_Target,发送,55,EFNB3_EPHB2,Connective tissue,EFNB3,EPHB2,0.364,0.003
+Connective tissue_1_30_Target,发送,56,WNT2_FZD6_LRP6,Connective tissue,WNT2,FZD6,0.36,0.0
+Connective tissue_1_30_Target,发送,57,WNT2_FZD6_LRP5,Connective tissue,WNT2,FZD6,0.36,0.0
+Connective tissue_1_30_Target,发送,58,CDH5_CDH5,Connective tissue,CDH5,CDH5,0.354,0.043
+Connective tissue_1_30_Target,发送,59,WNT2_FZD8_LRP6,Connective tissue,WNT2,FZD8,0.352,0.0
+Connective tissue_1_30_Target,发送,60,WNT2_FZD8_LRP5,Connective tissue,WNT2,FZD8,0.352,0.0
+Connective tissue_1_30_Target,发送,61,WNT2_FRZB,Connective tissue,WNT2,FRZB,0.35,0.0
+Connective tissue_1_30_Target,发送,62,RSPO1_LGR4,Connective tissue,RSPO1,LGR4,0.343,0.0
+Connective tissue_1_30_Target,发送,63,SEMA3F_NRP2,Connective tissue,SEMA3F,NRP2,0.342,0.0
+Connective tissue_1_30_Target,发送,64,BMP4_BMR1A_ACR2A,Connective tissue,BMP4,BMR1A,0.34,0.0
+Connective tissue_1_30_Target,发送,65,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.34,0.008
+Connective tissue_1_30_Target,发送,66,TGFB2_TGFBR3,Connective tissue,TGFB2,TGFBR3,0.336,0.004
+Connective tissue_1_30_Target,发送,67,BMP7_BMPR1A_BMPR2,Connective tissue,BMP7,BMPR1A,0.324,0.013
+Connective tissue_1_30_Target,发送,68,SEMA3E_PLXND1,Connective tissue,SEMA3E,PLXND1,0.316,0.0
+Connective tissue_1_30_Target,发送,69,BMP4_BMR1A_AVR2B,Connective tissue,BMP4,BMR1A,0.312,0.014
+Connective tissue_1_30_Target,发送,70,NTN1_UNC5C,Connective tissue,NTN1,UNC5C,0.308,0.023
+Connective tissue_1_30_Target,发送,71,EFNB2_EPHB2,Connective tissue,EFNB2,EPHB2,0.293,0.05
+Connective tissue_1_30_Target,发送,72,VEGFB_FLT1_complex,Connective tissue,VEGFB,FLT1,0.292,0.047
+Connective tissue_1_30_Target,发送,73,VEGFB_FLT1,Connective tissue,VEGFB,FLT1,0.292,0.047
+Connective tissue_1_30_Target,发送,74,BMP2_BMPR1A_BMPR2,Connective tissue,BMP2,BMPR1A,0.291,0.007
+Connective tissue_1_30_Target,发送,75,EFNB1_EPHB2,Connective tissue,EFNB1,EPHB2,0.289,0.019
+Connective tissue_1_30_Target,发送,76,VEGFA_NRP1,Connective tissue,VEGFA,NRP1,0.286,0.011
+Connective tissue_1_30_Target,发送,77,TGFB3_TGFBR3,Connective tissue,TGFB3,TGFBR3,0.284,0.0
+Connective tissue_1_30_Target,发送,78,EFNB3_EPHB1,Connective tissue,EFNB3,EPHB1,0.279,0.003
+Connective tissue_1_30_Target,发送,79,WNT5A_ROR2,Connective tissue,WNT5A,ROR2,0.279,0.009
+Connective tissue_1_30_Target,发送,80,WNT5A_SFRP2,Connective tissue,WNT5A,SFRP2,0.276,0.006
+Connective tissue_1_30_Target,发送,81,WNT5A_FZD3_LRP6,Connective tissue,WNT5A,FZD3,0.27,0.011
+Connective tissue_1_30_Target,发送,82,WNT5A_FZD2_LRP6,Connective tissue,WNT5A,FZD2,0.27,0.011
+Connective tissue_1_30_Target,发送,83,WNT5A_FZD7_LRP6,Connective tissue,WNT5A,FZD7,0.27,0.011
+Connective tissue_1_30_Target,发送,84,SEMA6A_PlexinA2_complex1,Connective tissue,SEMA6A,PlexinA2,0.267,0.002
+Connective tissue_1_30_Target,发送,85,ANGPT1_TEK,Connective tissue,ANGPT1,TEK,0.266,0.05
+Connective tissue_1_30_Target,发送,86,Cholesterol_byLIPA_RORA,Connective tissue,Cholesterol,byLIPA,0.263,0.03
+Connective tissue_1_30_Target,发送,87,LPAR1_ADGRE5,Connective tissue,LPAR1,ADGRE5,0.26,0.001
+Connective tissue_1_30_Target,发送,88,CLSTN1_NRXN3,Connective tissue,CLSTN1,NRXN3,0.249,0.014
+Connective tissue_1_30_Target,发送,89,DKK2_LRP6,Connective tissue,DKK2,LRP6,0.24,0.005
+Connective tissue_1_30_Target,发送,90,JAG2_NOTCH2,Connective tissue,JAG2,NOTCH2,0.236,0.034
+Connective tissue_1_30_Target,发送,91,RSPO1_Kremen1_LRP6,Connective tissue,RSPO1,Kremen1,0.234,0.0
+Connective tissue_1_30_Target,发送,92,WNT6_SFRP2,Connective tissue,WNT6,SFRP2,0.234,0.0
+Connective tissue_1_30_Target,发送,93,WNT6_FZD7_LRP6,Connective tissue,WNT6,FZD7,0.228,0.0
+Connective tissue_1_30_Target,发送,94,WNT6_FZD3_LRP6,Connective tissue,WNT6,FZD3,0.228,0.0
+Connective tissue_1_30_Target,发送,95,WNT6_FZD2_LRP6,Connective tissue,WNT6,FZD2,0.228,0.0
+Connective tissue_1_30_Target,发送,96,WNT6_FZD1_LRP6,Connective tissue,WNT6,FZD1,0.225,0.0
+Connective tissue_1_30_Target,发送,97,WNT5A_FZD4_LRP5,Connective tissue,WNT5A,FZD4,0.224,0.033
+Connective tissue_1_30_Target,发送,98,WNT5A_FZD4_LRP6,Connective tissue,WNT5A,FZD4,0.224,0.033
+Connective tissue_1_30_Target,发送,99,TGFB2_TGFbeta_receptor1,Connective tissue,TGFB2,TGFbeta,0.222,0.003
+Connective tissue_1_30_Target,发送,100,EFNB2_EPHB1,Connective tissue,EFNB2,EPHB1,0.208,0.032
+Connective tissue_1_30_Target,接收,1,IGF2_IGF2R,Connective tissue,IGF2R,IGF2,1.909,0.009
+Connective tissue_1_30_Target,接收,2,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.74,0.0
+Connective tissue_1_30_Target,接收,3,DLK1_NOTCH2,Connective tissue,NOTCH2,DLK1,1.423,0.0
+Connective tissue_1_30_Target,接收,4,DLK1_NOTCH1,Connective tissue,NOTCH1,DLK1,1.325,0.0
+Connective tissue_1_30_Target,接收,5,COL3A1_integrin_a11b1_complex,Connective tissue,integrin,COL3A1,1.284,0.0
+Connective tissue_1_30_Target,接收,6,DLK1_NOTCH3,Connective tissue,NOTCH3,DLK1,1.248,0.0
+Connective tissue_1_30_Target,接收,7,FGF10_FGFR2,Connective tissue,FGFR2,FGF10,1.175,0.0
+Connective tissue_1_30_Target,接收,8,COL1A2_integrin_a11b1_complex,Connective tissue,integrin,COL1A2,1.001,0.0
+Connective tissue_1_30_Target,接收,9,FN1_integrin_aVb5_complex,Connective tissue,integrin,FN1,0.976,0.006
+Connective tissue_1_30_Target,接收,10,FN1_integrin_aVb1_complex,Connective tissue,integrin,FN1,0.976,0.027
+Connective tissue_1_30_Target,接收,11,COL1A1_integrin_a11b1_complex,Connective tissue,integrin,COL1A1,0.963,0.0
+Connective tissue_1_30_Target,接收,12,FN1_integrin_a8b1_complex,Connective tissue,integrin,FN1,0.94,0.002
+Connective tissue_1_30_Target,接收,13,FN1_integrin_a3b1_complex,Connective tissue,integrin,FN1,0.904,0.01
+Connective tissue_1_30_Target,接收,14,FN1_integrin_a4b1_complex,Connective tissue,integrin,FN1,0.875,0.014
+Connective tissue_1_30_Target,接收,15,FN1_integrin_a11b1_complex,Connective tissue,integrin,FN1,0.869,0.01
+Connective tissue_1_30_Target,接收,16,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.779,0.007
+Connective tissue_1_30_Target,接收,17,COL18A1_integrin_a11b1_complex,Connective tissue,integrin,COL18A1,0.758,0.001
+Connective tissue_1_30_Target,接收,18,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,0.686,0.0
+Connective tissue_1_30_Target,接收,19,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.684,0.0
+Connective tissue_1_30_Target,接收,20,COL5A2_integrin_a11b1_complex,Connective tissue,integrin,COL5A2,0.672,0.0
+Connective tissue_1_30_Target,接收,21,APP_FPR2,Connective tissue,FPR2,APP,0.604,0.001
+Connective tissue_1_30_Target,接收,22,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.593,0.0
+Connective tissue_1_30_Target,接收,23,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.586,0.001
+Connective tissue_1_30_Target,接收,24,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.585,0.0
+Connective tissue_1_30_Target,接收,25,TENM3_ADGRL2,Connective tissue,ADGRL2,TENM3,0.578,0.006
+Connective tissue_1_30_Target,接收,26,FLRT3_ADGRL2,Connective tissue,ADGRL2,FLRT3,0.569,0.017
+Connective tissue_1_30_Target,接收,27,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.563,0.0
+Connective tissue_1_30_Target,接收,28,NCAM1_AGRN,Connective tissue,AGRN,NCAM1,0.536,0.0
+Connective tissue_1_30_Target,接收,29,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.535,0.0
+Connective tissue_1_30_Target,接收,30,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.526,0.0
+Connective tissue_1_30_Target,接收,31,APP_PLXNA4,Connective tissue,PLXNA4,APP,0.524,0.001
+Connective tissue_1_30_Target,接收,32,WNT6_SFRP1,Connective tissue,SFRP1,WNT6,0.503,0.0
+Connective tissue_1_30_Target,接收,33,APP_TNFRSF21,Connective tissue,TNFRSF21,APP,0.502,0.014
+Connective tissue_1_30_Target,接收,34,WNT7B_SFRP1,Connective tissue,SFRP1,WNT7B,0.499,0.0
+Connective tissue_1_30_Target,接收,35,NCAM1_FGFR1,Connective tissue,FGFR1,NCAM1,0.495,0.0
+Connective tissue_1_30_Target,接收,36,APP_SORL1,Connective tissue,SORL1,APP,0.47,0.013
+Connective tissue_1_30_Target,接收,37,EFNA1_EPHA3,Connective tissue,EPHA3,EFNA1,0.47,0.0
+Connective tissue_1_30_Target,接收,38,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.465,0.0
+Connective tissue_1_30_Target,接收,39,TENM3_ADGRL1,Connective tissue,ADGRL1,TENM3,0.432,0.006
+Connective tissue_1_30_Target,接收,40,BMP4_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP4,0.429,0.0
+Connective tissue_1_30_Target,接收,41,TENM2_FLRT3_complex_ADGRL2,Connective tissue,FLRT3,TENM2,0.404,0.001
+Connective tissue_1_30_Target,接收,42,TENM2_ADGRL2,Connective tissue,ADGRL2,TENM2,0.404,0.001
+Connective tissue_1_30_Target,接收,43,EFNB3_EPHA4,Connective tissue,EPHA4,EFNB3,0.394,0.0
+Connective tissue_1_30_Target,接收,44,EFNB3_EPHB3,Connective tissue,EPHB3,EFNB3,0.393,0.001
+Connective tissue_1_30_Target,接收,45,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.378,0.0
+Connective tissue_1_30_Target,接收,46,EFNB3_EPHB2,Connective tissue,EPHB2,EFNB3,0.366,0.009
+Connective tissue_1_30_Target,接收,47,EFNB3_EPHB4,Connective tissue,EPHB4,EFNB3,0.361,0.014
+Connective tissue_1_30_Target,接收,48,TGFB2_TGFBR3,Connective tissue,TGFBR3,TGFB2,0.36,0.001
+Connective tissue_1_30_Target,接收,49,BMP4_BMR1A_AVR2B,Connective tissue,BMR1A,BMP4,0.358,0.0
+Connective tissue_1_30_Target,接收,50,TENM3_FLRT3_complex_ADGRL3,Connective tissue,FLRT3,TENM3,0.356,0.029
+Connective tissue_1_30_Target,接收,51,CDH5_CDH5,Connective tissue,CDH5,CDH5,0.354,0.043
+Connective tissue_1_30_Target,接收,52,EFNB2_EPHA4,Connective tissue,EPHA4,EFNB2,0.349,0.0
+Connective tissue_1_30_Target,接收,53,EFNB2_EPHB3,Connective tissue,EPHB3,EFNB2,0.348,0.0
+Connective tissue_1_30_Target,接收,54,WNT2_SFRP2,Connective tissue,SFRP2,WNT2,0.342,0.0
+Connective tissue_1_30_Target,接收,55,WNT2_FZD1_LRP5,Connective tissue,FZD1,WNT2,0.339,0.0
+Connective tissue_1_30_Target,接收,56,WNT2_FZD2_LRP5,Connective tissue,FZD2,WNT2,0.339,0.0
+Connective tissue_1_30_Target,接收,57,WNT2_FZD3_LRP5,Connective tissue,FZD3,WNT2,0.339,0.0
+Connective tissue_1_30_Target,接收,58,WNT2_FZD7_LRP5,Connective tissue,FZD7,WNT2,0.339,0.0
+Connective tissue_1_30_Target,接收,59,WNT2_FZD1_LRP6,Connective tissue,FZD1,WNT2,0.335,0.0
+Connective tissue_1_30_Target,接收,60,WNT2_FZD2_LRP6,Connective tissue,FZD2,WNT2,0.335,0.001
+Connective tissue_1_30_Target,接收,61,WNT2_FZD7_LRP6,Connective tissue,FZD7,WNT2,0.335,0.001
+Connective tissue_1_30_Target,接收,62,WNT2_FZD3_LRP6,Connective tissue,FZD3,WNT2,0.335,0.001
+Connective tissue_1_30_Target,接收,63,SEMA4C_PLXNB2,Connective tissue,PLXNB2,SEMA4C,0.334,0.0
+Connective tissue_1_30_Target,接收,64,BMP4_BMR1A_ACR2A,Connective tissue,BMR1A,BMP4,0.333,0.003
+Connective tissue_1_30_Target,接收,65,SEMA3A_PlexinA4_complex1,Connective tissue,PlexinA4,SEMA3A,0.332,0.001
+Connective tissue_1_30_Target,接收,66,SEMA3A_PlexinA1_complex3,Connective tissue,PlexinA1,SEMA3A,0.332,0.031
+Connective tissue_1_30_Target,接收,67,DKK2_LRP6,Connective tissue,LRP6,DKK2,0.329,0.0
+Connective tissue_1_30_Target,接收,68,COL5A1_integrin_a11b1_complex,Connective tissue,integrin,COL5A1,0.329,0.002
+Connective tissue_1_30_Target,接收,69,WNT5A_ROR1,Connective tissue,ROR1,WNT5A,0.329,0.0
+Connective tissue_1_30_Target,接收,70,EFNB1_EPHA4,Connective tissue,EPHA4,EFNB1,0.325,0.0
+Connective tissue_1_30_Target,接收,71,EFNB1_EPHB3,Connective tissue,EPHB3,EFNB1,0.324,0.0
+Connective tissue_1_30_Target,接收,72,EFNA4_EPHA7,Connective tissue,EPHA7,EFNA4,0.324,0.033
+Connective tissue_1_30_Target,接收,73,EFNB2_EPHB2,Connective tissue,EPHB2,EFNB2,0.321,0.009
+Connective tissue_1_30_Target,接收,74,EFNB2_EPHB4,Connective tissue,EPHB4,EFNB2,0.317,0.021
+Connective tissue_1_30_Target,接收,75,TNC_integrin_a9b1_complex,Connective tissue,integrin,TNC,0.317,0.005
+Connective tissue_1_30_Target,接收,76,COL4A5_integrin_a11b1_complex,Connective tissue,integrin,COL4A5,0.311,0.0
+Connective tissue_1_30_Target,接收,77,BMP5_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP5,0.31,0.008
+Connective tissue_1_30_Target,接收,78,WNT2_FRZB,Connective tissue,FRZB,WNT2,0.305,0.0
+Connective tissue_1_30_Target,接收,79,WNT2_FZD10_LRP6,Connective tissue,FZD10,WNT2,0.297,0.0
+Connective tissue_1_30_Target,接收,80,WNT2_FZD10_LRP5,Connective tissue,FZD10,WNT2,0.297,0.0
+Connective tissue_1_30_Target,接收,81,EFNB1_EPHB2,Connective tissue,EPHB2,EFNB1,0.297,0.006
+Connective tissue_1_30_Target,接收,82,PGF_NRP2,Connective tissue,NRP2,PGF,0.293,0.0
+Connective tissue_1_30_Target,接收,83,VCAM1_integrin_a9b1_complex,Connective tissue,integrin,VCAM1,0.293,0.035
+Connective tissue_1_30_Target,接收,84,EFNB1_EPHB4,Connective tissue,EPHB4,EFNB1,0.292,0.024
+Connective tissue_1_30_Target,接收,85,ANGPT1_TEK,Connective tissue,TEK,ANGPT1,0.288,0.007
+Connective tissue_1_30_Target,接收,86,EFNA4_EPHA4,Connective tissue,EPHA4,EFNA4,0.286,0.007
+Connective tissue_1_30_Target,接收,87,VEGFC_KDR,Connective tissue,KDR,VEGFC,0.286,0.042
+Connective tissue_1_30_Target,接收,88,TGFB2_TGFbeta_receptor1,Connective tissue,TGFbeta,TGFB2,0.284,0.0
+Connective tissue_1_30_Target,接收,89,TGFB2_TGFbeta_receptor2,Connective tissue,TGFbeta,TGFB2,0.284,0.0
+Connective tissue_1_30_Target,接收,90,WNT2_FZD6_LRP6,Connective tissue,FZD6,WNT2,0.28,0.0
+Connective tissue_1_30_Target,接收,91,WNT2_FZD6_LRP5,Connective tissue,FZD6,WNT2,0.28,0.0
+Connective tissue_1_30_Target,接收,92,NRXN3_ADGRL1,Connective tissue,ADGRL1,NRXN3,0.271,0.005
+Connective tissue_1_30_Target,接收,93,SEMA6D_PlexinA1_complex1,Connective tissue,PlexinA1,SEMA6D,0.267,0.0
+Connective tissue_1_30_Target,接收,94,SDC2_ADGRA2,Connective tissue,ADGRA2,SDC2,0.267,0.01
+Connective tissue_1_30_Target,接收,95,EFNA1_EPHA7,Connective tissue,EPHA7,EFNA1,0.267,0.01
+Connective tissue_1_30_Target,接收,96,WNT2_FZD4_LRP5,Connective tissue,FZD4,WNT2,0.264,0.009
+Connective tissue_1_30_Target,接收,97,WNT2_FZD4_LRP6,Connective tissue,FZD4,WNT2,0.264,0.01
+Connective tissue_1_30_Target,接收,98,IGFBP3_TMEM219,Connective tissue,TMEM219,IGFBP3,0.263,0.043
+Connective tissue_1_30_Target,接收,99,WNT5A_ROR2,Connective tissue,ROR2,WNT5A,0.262,0.042
+Connective tissue_1_30_Target,接收,100,TENM2_ADGRL1,Connective tissue,ADGRL1,TENM2,0.258,0.001
+Dermomyotome,发送,1,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.738,0.002
+Dermomyotome,发送,2,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.525,0.0
+Dermomyotome,发送,3,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.506,0.0
+Dermomyotome,发送,4,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.49,0.0
+Dermomyotome,发送,5,CADM1_CADM1,Connective tissue,CADM1,CADM1,0.915,0.0
+Dermomyotome,发送,6,FN1_integrin_a3b1_complex,Connective tissue,FN1,integrin,0.86,0.045
+Dermomyotome,发送,7,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.757,0.0
+Dermomyotome,发送,8,APP_FPR2,Connective tissue,APP,FPR2,0.687,0.0
+Dermomyotome,发送,9,TENM3_ADGRL2,Connective tissue,TENM3,ADGRL2,0.654,0.0
+Dermomyotome,发送,10,CADM1_NECTIN3,Connective tissue,CADM1,NECTIN3,0.653,0.001
+Dermomyotome,发送,11,LAMC1_integrin_a6b1_complex,Connective tissue,LAMC1,integrin,0.639,0.0
+Dermomyotome,发送,12,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.592,0.0
+Dermomyotome,发送,13,DAG1_NRXN3,Connective tissue,DAG1,NRXN3,0.57,0.002
+Dermomyotome,发送,14,TENM4_ADGRL2,Connective tissue,TENM4,ADGRL2,0.566,0.0
+Dermomyotome,发送,15,AGRN_PTPRS,Connective tissue,AGRN,PTPRS,0.534,0.001
+Dermomyotome,发送,16,NECTIN2_NECTIN3,Connective tissue,NECTIN2,NECTIN3,0.527,0.001
+Dermomyotome,发送,17,Cholesterol_byDHCR24_RORA,Connective tissue,Cholesterol,byDHCR24,0.524,0.009
+Dermomyotome,发送,18,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.503,0.002
+Dermomyotome,发送,19,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.481,0.0
+Dermomyotome,发送,20,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.481,0.0
+Dermomyotome,发送,21,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.481,0.0
+Dermomyotome,发送,22,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.479,0.0
+Dermomyotome,发送,23,NCAM1_FGFR1,Connective tissue,NCAM1,FGFR1,0.466,0.004
+Dermomyotome,发送,24,FLRT3_ADGRL3,Connective tissue,FLRT3,ADGRL3,0.463,0.0
+Dermomyotome,发送,25,TENM2_FLRT3_complex_ADGRL2,Connective tissue,TENM2,FLRT3,0.461,0.0
+Dermomyotome,发送,26,TENM2_ADGRL2,Connective tissue,TENM2,ADGRL2,0.461,0.0
+Dermomyotome,发送,27,EFNA5_EPHA3,Connective tissue,EFNA5,EPHA3,0.459,0.015
+Dermomyotome,发送,28,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.451,0.0
+Dermomyotome,发送,29,NECTIN1_NECTIN3,Connective tissue,NECTIN1,NECTIN3,0.448,0.0
+Dermomyotome,发送,30,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.448,0.0
+Dermomyotome,发送,31,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.418,0.0
+Dermomyotome,发送,32,BMP4_BMR1A_AVR2B,Connective tissue,BMP4,BMR1A,0.389,0.0
+Dermomyotome,发送,33,WNT2_FZD1_LRP6,Connective tissue,WNT2,FZD1,0.388,0.0
+Dermomyotome,发送,34,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.388,0.0
+Dermomyotome,发送,35,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.388,0.0
+Dermomyotome,发送,36,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.388,0.0
+Dermomyotome,发送,37,EFNA4_EPHA3,Connective tissue,EFNA4,EPHA3,0.388,0.002
+Dermomyotome,发送,38,EFNB3_EPHB2,Connective tissue,EFNB3,EPHB2,0.379,0.0
+Dermomyotome,发送,39,LRFN4_PTPRS,Connective tissue,LRFN4,PTPRS,0.369,0.006
+Dermomyotome,发送,40,TENM3_ADGRL3,Connective tissue,TENM3,ADGRL3,0.361,0.044
+Dermomyotome,发送,41,TENM3_FLRT3_complex_ADGRL3,Connective tissue,TENM3,FLRT3,0.361,0.014
+Dermomyotome,发送,42,SLITRK5_PTPRS,Connective tissue,SLITRK5,PTPRS,0.357,0.0
+Dermomyotome,发送,43,EFNB3_EPHA4,Connective tissue,EFNB3,EPHA4,0.35,0.007
+Dermomyotome,发送,44,EFNB3_EPHB4,Connective tissue,EFNB3,EPHB4,0.344,0.042
+Dermomyotome,发送,45,EFNA2_EPHA3,Connective tissue,EFNA2,EPHA3,0.343,0.001
+Dermomyotome,发送,46,RSPO1_LGR4,Connective tissue,RSPO1,LGR4,0.339,0.0
+Dermomyotome,发送,47,EFNB3_EPHB3,Connective tissue,EFNB3,EPHB3,0.325,0.044
+Dermomyotome,发送,48,WNT5A_FZD7_LRP5,Connective tissue,WNT5A,FZD7,0.323,0.0
+Dermomyotome,发送,49,WNT5A_FZD2_LRP5,Connective tissue,WNT5A,FZD2,0.323,0.0
+Dermomyotome,发送,50,WNT5A_FZD3_LRP5,Connective tissue,WNT5A,FZD3,0.323,0.0
+Dermomyotome,发送,51,VCAM1_integrin_a9b1_complex,Connective tissue,VCAM1,integrin,0.323,0.019
+Dermomyotome,发送,52,EFNA1_EPHA3,Connective tissue,EFNA1,EPHA3,0.313,0.001
+Dermomyotome,发送,53,EFNB2_EPHB2,Connective tissue,EFNB2,EPHB2,0.308,0.022
+Dermomyotome,发送,54,EFNB1_EPHB2,Connective tissue,EFNB1,EPHB2,0.304,0.005
+Dermomyotome,发送,55,JAM2_JAM3,Connective tissue,JAM2,JAM3,0.293,0.0
+Dermomyotome,发送,56,WNT5A_SFRP2,Connective tissue,WNT5A,SFRP2,0.293,0.0
+Dermomyotome,发送,57,BMP4_BMR1B_AVR2A,Connective tissue,BMP4,BMR1B,0.281,0.0
+Dermomyotome,发送,58,BMP4_BMPR1B_BMPR2,Connective tissue,BMP4,BMPR1B,0.281,0.001
+Dermomyotome,发送,59,BMP4_BMR1B_AVR2B,Connective tissue,BMP4,BMR1B,0.281,0.001
+Dermomyotome,发送,60,WNT6_FZD3_LRP5,Connective tissue,WNT6,FZD3,0.281,0.0
+Dermomyotome,发送,61,WNT6_FZD7_LRP5,Connective tissue,WNT6,FZD7,0.281,0.0
+Dermomyotome,发送,62,WNT6_FZD2_LRP5,Connective tissue,WNT6,FZD2,0.281,0.0
+Dermomyotome,发送,63,WNT6_FZD1_LRP5,Connective tissue,WNT6,FZD1,0.279,0.0
+Dermomyotome,发送,64,EFNA4_EPHA4,Connective tissue,EFNA4,EPHA4,0.277,0.02
+Dermomyotome,发送,65,EFNB1_EPHA4,Connective tissue,EFNB1,EPHA4,0.275,0.022
+Dermomyotome,发送,66,BMP7_BMR1A_AVR2B,Connective tissue,BMP7,BMR1A,0.266,0.002
+Dermomyotome,发送,67,JAG1_NOTCH2,Connective tissue,JAG1,NOTCH2,0.264,0.035
+Dermomyotome,发送,68,JAG2_NOTCH2,Connective tissue,JAG2,NOTCH2,0.26,0.007
+Dermomyotome,发送,69,CD248_IL6R,Connective tissue,CD248,IL6R,0.255,0.0
+Dermomyotome,发送,70,WNT7B_FZD7_LRP5,Connective tissue,WNT7B,FZD7,0.254,0.0
+Dermomyotome,发送,71,WNT7B_FZD2_LRP5,Connective tissue,WNT7B,FZD2,0.254,0.0
+Dermomyotome,发送,72,WNT7B_FZD3_LRP5,Connective tissue,WNT7B,FZD3,0.254,0.0
+Dermomyotome,发送,73,GDF11_TGFR_AVR2B,Connective tissue,GDF11,TGFR,0.254,0.0
+Dermomyotome,发送,74,WNT7B_FZD1_LRP5,Connective tissue,WNT7B,FZD1,0.252,0.0
+Dermomyotome,发送,75,WNT6_SFRP2,Connective tissue,WNT6,SFRP2,0.251,0.0
+Dermomyotome,发送,76,SOSTDC1_LRP5,Connective tissue,SOSTDC1,LRP5,0.249,0.0
+Dermomyotome,发送,77,WNT4_FZD3_LRP5,Connective tissue,WNT4,FZD3,0.248,0.0
+Dermomyotome,发送,78,WNT4_FZD2_LRP5,Connective tissue,WNT4,FZD2,0.248,0.0
+Dermomyotome,发送,79,WNT4_FZD7_LRP5,Connective tissue,WNT4,FZD7,0.248,0.0
+Dermomyotome,发送,80,WNT4_FZD1_LRP5,Connective tissue,WNT4,FZD1,0.246,0.0
+Dermomyotome,发送,81,JAG1_NOTCH1,Connective tissue,JAG1,NOTCH1,0.245,0.012
+Dermomyotome,发送,82,JAG2_NOTCH1,Connective tissue,JAG2,NOTCH1,0.24,0.001
+Dermomyotome,发送,83,RSPO1_Kremen1_LRP6,Connective tissue,RSPO1,Kremen1,0.237,0.0
+Dermomyotome,发送,84,BMP2_BMR1A_AVR2B,Connective tissue,BMP2,BMR1A,0.232,0.0
+Dermomyotome,发送,85,EFNA2_EPHA4,Connective tissue,EFNA2,EPHA4,0.231,0.017
+Dermomyotome,发送,86,JAG1_NOTCH3,Connective tissue,JAG1,NOTCH3,0.229,0.0
+Dermomyotome,发送,87,BMP5_BMR1A_AVR2B,Connective tissue,BMP5,BMR1A,0.229,0.029
+Dermomyotome,发送,88,Glutamate_byGLS_and_SLC1A3_GRIK2,Connective tissue,Glutamate,byGLS,0.228,0.002
+Dermomyotome,发送,89,SEMA4D_PLXNB1,Connective tissue,SEMA4D,PLXNB1,0.227,0.026
+Dermomyotome,发送,90,WNT5B_FZD2_LRP5,Connective tissue,WNT5B,FZD2,0.225,0.026
+Dermomyotome,发送,91,WNT5B_FZD3_LRP5,Connective tissue,WNT5B,FZD3,0.225,0.025
+Dermomyotome,发送,92,WNT5B_FZD7_LRP5,Connective tissue,WNT5B,FZD7,0.225,0.026
+Dermomyotome,发送,93,JAG2_NOTCH3,Connective tissue,JAG2,NOTCH3,0.225,0.0
+Dermomyotome,发送,94,WNT7B_SFRP2,Connective tissue,WNT7B,SFRP2,0.224,0.0
+Dermomyotome,发送,95,WNT5B_FZD1_LRP5,Connective tissue,WNT5B,FZD1,0.223,0.015
+Dermomyotome,发送,96,WNT4_SFRP2,Connective tissue,WNT4,SFRP2,0.218,0.001
+Dermomyotome,发送,97,EFNA1_EPHA4,Connective tissue,EFNA1,EPHA4,0.202,0.037
+Dermomyotome,发送,98,WNT6_FZD1_LRP6,Connective tissue,WNT6,FZD1,0.188,0.012
+Dermomyotome,发送,99,WNT6_FZD7_LRP6,Connective tissue,WNT6,FZD7,0.188,0.034
+Dermomyotome,发送,100,WNT6_FZD3_LRP6,Connective tissue,WNT6,FZD3,0.188,0.032
+Dermomyotome,接收,1,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.67,0.05
+Dermomyotome,接收,2,DLK1_NOTCH2,Connective tissue,NOTCH2,DLK1,1.463,0.0
+Dermomyotome,接收,3,DLK1_NOTCH1,Connective tissue,NOTCH1,DLK1,1.365,0.0
+Dermomyotome,接收,4,DLK1_NOTCH3,Connective tissue,NOTCH3,DLK1,1.288,0.0
+Dermomyotome,接收,5,PPIA_BSG,Connective tissue,BSG,PPIA,1.269,0.002
+Dermomyotome,接收,6,CADM1_CADM1,Connective tissue,CADM1,CADM1,0.915,0.0
+Dermomyotome,接收,7,CADM1_NECTIN3,Connective tissue,NECTIN3,CADM1,0.89,0.0
+Dermomyotome,接收,8,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.873,0.0
+Dermomyotome,接收,9,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.749,0.0
+Dermomyotome,接收,10,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,0.711,0.0
+Dermomyotome,接收,11,NTN1_UNC5B,Connective tissue,UNC5B,NTN1,0.626,0.0
+Dermomyotome,接收,12,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.626,0.0
+Dermomyotome,接收,13,WNT16_SFRP1,Connective tissue,SFRP1,WNT16,0.603,0.0
+Dermomyotome,接收,14,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.572,0.0
+Dermomyotome,接收,15,NTN1_UNC5C,Connective tissue,UNC5C,NTN1,0.568,0.0
+Dermomyotome,接收,16,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.558,0.0
+Dermomyotome,接收,17,NRXN1_DAG1,Connective tissue,DAG1,NRXN1,0.555,0.0
+Dermomyotome,接收,18,NCAM1_AGRN,Connective tissue,AGRN,NCAM1,0.548,0.0
+Dermomyotome,接收,19,EFNA5_EPHA7,Connective tissue,EPHA7,EFNA5,0.547,0.0
+Dermomyotome,接收,20,TENM4_ADGRL2,Connective tissue,ADGRL2,TENM4,0.525,0.0
+Dermomyotome,接收,21,EFNA5_EPHA4,Connective tissue,EPHA4,EFNA5,0.509,0.0
+Dermomyotome,接收,22,NCAM1_FGFR1,Connective tissue,FGFR1,NCAM1,0.507,0.0
+Dermomyotome,接收,23,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.503,0.002
+Dermomyotome,接收,24,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.502,0.0
+Dermomyotome,接收,25,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.499,0.0
+Dermomyotome,接收,26,EFNA5_EPHB2,Connective tissue,EPHB2,EFNA5,0.481,0.0
+Dermomyotome,接收,27,NECTIN2_NECTIN3,Connective tissue,NECTIN3,NECTIN2,0.48,0.014
+Dermomyotome,接收,28,COL2A1_integrin_a11b1_complex,Connective tissue,integrin,COL2A1,0.471,0.0
+Dermomyotome,接收,29,BMPR1B_BMPR2_BMPR1A,Connective tissue,BMPR2,BMPR1B,0.454,0.003
+Dermomyotome,接收,30,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.448,0.0
+Dermomyotome,接收,31,NECTIN1_NECTIN3,Connective tissue,NECTIN3,NECTIN1,0.412,0.0
+Dermomyotome,接收,32,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.404,0.0
+Dermomyotome,接收,33,TENM4_ADGRL1,Connective tissue,ADGRL1,TENM4,0.379,0.004
+Dermomyotome,接收,34,TENM4_FLRT3_complex_ADGRL1,Connective tissue,FLRT3,TENM4,0.379,0.003
+Dermomyotome,接收,35,VEGFA_NRP2,Connective tissue,NRP2,VEGFA,0.373,0.007
+Dermomyotome,接收,36,SEMA4C_PLXNB2,Connective tissue,PLXNB2,SEMA4C,0.371,0.0
+Dermomyotome,接收,37,SDC1_ADGRA2,Connective tissue,ADGRA2,SDC1,0.361,0.004
+Dermomyotome,接收,38,SEMA3A_PlexinA4_complex1,Connective tissue,PlexinA4,SEMA3A,0.36,0.0
+Dermomyotome,接收,39,SEMA3A_PlexinA2_complex1,Connective tissue,PlexinA2,SEMA3A,0.36,0.012
+Dermomyotome,接收,40,SEMA3A_PlexinA1_complex3,Connective tissue,PlexinA1,SEMA3A,0.36,0.003
+Dermomyotome,接收,41,SEMA3A_NRP1,Connective tissue,NRP1,SEMA3A,0.36,0.017
+Dermomyotome,接收,42,LRFN4_PTPRS,Connective tissue,PTPRS,LRFN4,0.348,0.011
+Dermomyotome,接收,43,SLIT1_ROBO1,Connective tissue,ROBO1,SLIT1,0.338,0.003
+Dermomyotome,接收,44,TENM1_ADGRL2,Connective tissue,ADGRL2,TENM1,0.333,0.002
+Dermomyotome,接收,45,LPAR1_ADGRE5,Connective tissue,ADGRE5,LPAR1,0.326,0.0
+Dermomyotome,接收,46,NLGN1_NRXN3,Connective tissue,NRXN3,NLGN1,0.322,0.016
+Dermomyotome,接收,47,SEMA3F_NRP2,Connective tissue,NRP2,SEMA3F,0.318,0.0
+Dermomyotome,接收,48,TENM4_ADGRL3,Connective tissue,ADGRL3,TENM4,0.312,0.039
+Dermomyotome,接收,49,WNT5A_ROR1,Connective tissue,ROR1,WNT5A,0.309,0.001
+Dermomyotome,接收,50,EFNA2_EPHA7,Connective tissue,EPHA7,EFNA2,0.3,0.007
+Dermomyotome,接收,51,EFNB1_EPHA4,Connective tissue,EPHA4,EFNB1,0.294,0.002
+Dermomyotome,接收,52,EFNB1_EPHB3,Connective tissue,EPHB3,EFNB1,0.293,0.001
+Dermomyotome,接收,53,SEMA6A_PlexinA2_complex1,Connective tissue,PlexinA2,SEMA6A,0.278,0.006
+Dermomyotome,接收,54,COL26A1_integrin_a11b1_complex,Connective tissue,integrin,COL26A1,0.269,0.001
+Dermomyotome,接收,55,MSTN_TGFR_AVR2B,Connective tissue,TGFR,MSTN,0.265,0.0
+Dermomyotome,接收,56,EFNA2_EPHA4,Connective tissue,EPHA4,EFNA2,0.263,0.0
+Dermomyotome,接收,57,WNT16_SFRP2,Connective tissue,SFRP2,WNT16,0.26,0.0
+Dermomyotome,接收,58,WNT16_FZD1_LRP5,Connective tissue,FZD1,WNT16,0.258,0.0
+Dermomyotome,接收,59,WNT16_FZD2_LRP5,Connective tissue,FZD2,WNT16,0.258,0.0
+Dermomyotome,接收,60,WNT16_FZD7_LRP5,Connective tissue,FZD7,WNT16,0.258,0.0
+Dermomyotome,接收,61,WNT16_FZD3_LRP5,Connective tissue,FZD3,WNT16,0.258,0.0
+Dermomyotome,接收,62,WNT16_FZD1_LRP6,Connective tissue,FZD1,WNT16,0.254,0.0
+Dermomyotome,接收,63,WNT16_FZD2_LRP6,Connective tissue,FZD2,WNT16,0.254,0.0
+Dermomyotome,接收,64,WNT16_FZD3_LRP6,Connective tissue,FZD3,WNT16,0.254,0.0
+Dermomyotome,接收,65,WNT16_FZD7_LRP6,Connective tissue,FZD7,WNT16,0.254,0.0
+Dermomyotome,接收,66,Cholesterol_byDHCR7_RORA,Connective tissue,byDHCR7,Cholesterol,0.253,0.031
+Dermomyotome,接收,67,MSTN_TGFR_AVR2A,Connective tissue,TGFR,MSTN,0.24,0.0
+Dermomyotome,接收,68,GDF11_TGFR_AVR2B,Connective tissue,TGFR,GDF11,0.232,0.0
+Dermomyotome,接收,69,Desmosterol_byDHCR7_NR1H2,Connective tissue,byDHCR7,Desmosterol,0.228,0.002
+Dermomyotome,接收,70,SEMA4D_PLXNB1,Connective tissue,PLXNB1,SEMA4D,0.227,0.027
+Dermomyotome,接收,71,WNT16_FRZB,Connective tissue,FRZB,WNT16,0.224,0.0
+Dermomyotome,接收,72,WNT16_FZD10_LRP6,Connective tissue,FZD10,WNT16,0.216,0.0
+Dermomyotome,接收,73,WNT16_FZD10_LRP5,Connective tissue,FZD10,WNT16,0.216,0.0
+Dermomyotome,接收,74,CLSTN2_NRXN3,Connective tissue,NRXN3,CLSTN2,0.216,0.001
+Dermomyotome,接收,75,WNT5B_SFRP2,Connective tissue,SFRP2,WNT5B,0.215,0.023
+Dermomyotome,接收,76,WNT5B_FZD1_LRP5,Connective tissue,FZD1,WNT5B,0.213,0.049
+Dermomyotome,接收,77,GDF11_TGFR_AVR2A,Connective tissue,TGFR,GDF11,0.207,0.01
+Dermomyotome,接收,78,WNT16_FZD6_LRP6,Connective tissue,FZD6,WNT16,0.199,0.0
+Dermomyotome,接收,79,WNT16_FZD6_LRP5,Connective tissue,FZD6,WNT16,0.199,0.0
+Dermomyotome,接收,80,COL13A1_integrin_a11b1_complex,Connective tissue,integrin,COL13A1,0.198,0.0
+Dermomyotome,接收,81,WNT5A_FRZB,Connective tissue,FRZB,WNT5A,0.193,0.031
+Dermomyotome,接收,82,NRXN1_ADGRL1,Connective tissue,ADGRL1,NRXN1,0.191,0.002
+Dermomyotome,接收,83,TENM1_ADGRL1,Connective tissue,ADGRL1,TENM1,0.187,0.006
+Dermomyotome,接收,84,WNT5A_FZD10_LRP5,Connective tissue,FZD10,WNT5A,0.185,0.024
+Dermomyotome,接收,85,WNT5A_FZD10_LRP6,Connective tissue,FZD10,WNT5A,0.185,0.024
+Dermomyotome,接收,86,MSTN_ACVR_1B2B_receptor,Connective tissue,ACVR,MSTN,0.184,0.0
+Dermomyotome,接收,87,WNT16_FZD4_LRP5,Connective tissue,FZD4,WNT16,0.183,0.0
+Dermomyotome,接收,88,WNT16_FZD4_LRP6,Connective tissue,FZD4,WNT16,0.183,0.0
+Dermomyotome,接收,89,WNT5B_FRZB,Connective tissue,FRZB,WNT5B,0.178,0.001
+Dermomyotome,接收,90,WNT5B_FZD10_LRP5,Connective tissue,FZD10,WNT5B,0.171,0.0
+Dermomyotome,接收,91,WNT5B_FZD10_LRP6,Connective tissue,FZD10,WNT5B,0.171,0.0
+Dermomyotome,接收,92,VEGFC_FLT4,Connective tissue,FLT4,VEGFC,0.163,0.029
+Dermomyotome,接收,93,WNT5B_FZD6_LRP6,Connective tissue,FZD6,WNT5B,0.153,0.024
+Dermomyotome,接收,94,WNT5B_FZD6_LRP5,Connective tissue,FZD6,WNT5B,0.153,0.024
+Dermomyotome,接收,95,GDF11_ACVR_1B2A_receptor,Connective tissue,ACVR,GDF11,0.151,0.002
+Dermomyotome,接收,96,GDF11_ACVR_1B2B_receptor,Connective tissue,ACVR,GDF11,0.151,0.002
+Dermomyotome,接收,97,LPAR2_ADGRE5,Connective tissue,ADGRE5,LPAR2,0.145,0.005
+Heart,发送,1,IGF2_IGF2R,Connective tissue,IGF2,IGF2R,2.562,0.0
+Heart,发送,2,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.799,0.0
+Heart,发送,3,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.554,0.0
+Heart,发送,4,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.432,0.0
+Heart,发送,5,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.418,0.0
+Heart,发送,6,COL3A1_integrin_a1b1_complex,Connective tissue,COL3A1,integrin,1.286,0.0
+Heart,发送,7,PPIA_BSG,Connective tissue,PPIA,BSG,1.283,0.0
+Heart,发送,8,COL3A1_ADGRG1,Connective tissue,COL3A1,ADGRG1,1.083,0.0
+Heart,发送,9,COL1A1_integrin_a1b1_complex,Connective tissue,COL1A1,integrin,1.047,0.0
+Heart,发送,10,COL18A1_integrin_a1b1_complex,Connective tissue,COL18A1,integrin,1.006,0.0
+Heart,发送,11,COL1A2_integrin_a1b1_complex,Connective tissue,COL1A2,integrin,0.986,0.0
+Heart,发送,12,FN1_integrin_aVb1_complex,Connective tissue,FN1,integrin,0.984,0.007
+Heart,发送,13,FN1_integrin_a4b1_complex,Connective tissue,FN1,integrin,0.889,0.0
+Heart,发送,14,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.736,0.028
+Heart,发送,15,DAG1_NRXN3,Connective tissue,DAG1,NRXN3,0.722,0.0
+Heart,发送,16,COL5A2_integrin_a1b1_complex,Connective tissue,COL5A2,integrin,0.702,0.0
+Heart,发送,17,APP_PLXNA4,Connective tissue,APP,PLXNA4,0.685,0.0
+Heart,发送,18,LAMC1_integrin_a6b1_complex,Connective tissue,LAMC1,integrin,0.684,0.0
+Heart,发送,19,APP_FPR2,Connective tissue,APP,FPR2,0.622,0.0
+Heart,发送,20,COL4A1_ADGRG6,Connective tissue,COL4A1,ADGRG6,0.621,0.0
+Heart,发送,21,NRG3_ERBB4,Connective tissue,NRG3,ERBB4,0.617,0.0
+Heart,发送,22,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.607,0.0
+Heart,发送,23,APP_SORL1,Connective tissue,APP,SORL1,0.606,0.0
+Heart,发送,24,COL4A1_integrin_a1b1_complex,Connective tissue,COL4A1,integrin,0.606,0.0
+Heart,发送,25,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.594,0.001
+Heart,发送,26,COL5A1_integrin_a1b1_complex,Connective tissue,COL5A1,integrin,0.58,0.0
+Heart,发送,27,COL2A1_integrin_a1b1_complex,Connective tissue,COL2A1,integrin,0.572,0.0
+Heart,发送,28,APLP2_PLXNA4,Connective tissue,APLP2,PLXNA4,0.566,0.0
+Heart,发送,29,COL19A1_integrin_a1b1_complex,Connective tissue,COL19A1,integrin,0.554,0.0
+Heart,发送,30,WNT2_SFRP1,Connective tissue,WNT2,SFRP1,0.523,0.001
+Heart,发送,31,IGF1_IGF1R,Connective tissue,IGF1,IGF1R,0.519,0.003
+Heart,发送,32,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1,IGF1R,0.519,0.003
+Heart,发送,33,SEMA3A_NRP1,Connective tissue,SEMA3A,NRP1,0.511,0.0
+Heart,发送,34,SEMA3A_PlexinA4_complex1,Connective tissue,SEMA3A,PlexinA4,0.497,0.0
+Heart,发送,35,AGRN_PTPRS,Connective tissue,AGRN,PTPRS,0.47,0.048
+Heart,发送,36,COL4A2_ADGRG6,Connective tissue,COL4A2,ADGRG6,0.469,0.0
+Heart,发送,37,COL4A2_integrin_a1b1_complex,Connective tissue,COL4A2,integrin,0.454,0.0
+Heart,发送,38,SEMA3E_PLXND1,Connective tissue,SEMA3E,PLXND1,0.446,0.0
+Heart,发送,39,COL26A1_integrin_a1b1_complex,Connective tissue,COL26A1,integrin,0.44,0.0
+Heart,发送,40,COL4A5_ADGRG6,Connective tissue,COL4A5,ADGRG6,0.435,0.0
+Heart,发送,41,WNT2_SFRP5,Connective tissue,WNT2,SFRP5,0.434,0.0
+Heart,发送,42,BMP4_BMPR1A_BMPR2,Connective tissue,BMP4,BMPR1A,0.434,0.0
+Heart,发送,43,WNT2_FZD4_LRP6,Connective tissue,WNT2,FZD4,0.428,0.0
+Heart,发送,44,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.428,0.0
+Heart,发送,45,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.428,0.0
+Heart,发送,46,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.428,0.0
+Heart,发送,47,CDH5_CDH5,Connective tissue,CDH5,CDH5,0.428,0.0
+Heart,发送,48,COL4A5_integrin_a1b1_complex,Connective tissue,COL4A5,integrin,0.421,0.0
+Heart,发送,49,VEGFA_KDR,Connective tissue,VEGFA,KDR,0.409,0.0
+Heart,发送,50,VEGFB_NRP1,Connective tissue,VEGFB,NRP1,0.405,0.0
+Heart,发送,51,WNT2_FZD1_LRP6,Connective tissue,WNT2,FZD1,0.403,0.0
+Heart,发送,52,WNT2_FZD4_LRP5,Connective tissue,WNT2,FZD4,0.402,0.0
+Heart,发送,53,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.402,0.0
+Heart,发送,54,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.402,0.0
+Heart,发送,55,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.402,0.0
+Heart,发送,56,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.402,0.0
+Heart,发送,57,VEGFC_KDR,Connective tissue,VEGFC,KDR,0.4,0.0
+Heart,发送,58,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.392,0.0
+Heart,发送,59,TGFB2_TGFBR3,Connective tissue,TGFB2,TGFBR3,0.39,0.0
+Heart,发送,60,COL9A1_integrin_a1b1_complex,Connective tissue,COL9A1,integrin,0.382,0.0
+Heart,发送,61,NLGN1_NRXN3,Connective tissue,NLGN1,NRXN3,0.378,0.0
+Heart,发送,62,COL4A6_ADGRG6,Connective tissue,COL4A6,ADGRG6,0.367,0.0
+Heart,发送,63,EFNB3_EPHB4,Connective tissue,EFNB3,EPHB4,0.367,0.005
+Heart,发送,64,WNT2_FZD8_LRP6,Connective tissue,WNT2,FZD8,0.364,0.0
+Heart,发送,65,WNT2_FZD8_LRP5,Connective tissue,WNT2,FZD8,0.364,0.0
+Heart,发送,66,VEGFB_FLT1_complex,Connective tissue,VEGFB,FLT1,0.364,0.0
+Heart,发送,67,VEGFB_FLT1,Connective tissue,VEGFB,FLT1,0.364,0.0
+Heart,发送,68,COL11A1_integrin_a1b1_complex,Connective tissue,COL11A1,integrin,0.363,0.0
+Heart,发送,69,SEMA3A_PlexinA1_complex3,Connective tissue,SEMA3A,PlexinA1,0.356,0.0
+Heart,发送,70,SDC1_ADGRA2,Connective tissue,SDC1,ADGRA2,0.354,0.003
+Heart,发送,71,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.354,0.001
+Heart,发送,72,COL4A6_integrin_a1b1_complex,Connective tissue,COL4A6,integrin,0.353,0.0
+Heart,发送,73,EFNA4_EPHA7,Connective tissue,EFNA4,EPHA7,0.349,0.004
+Heart,发送,74,EFNB3_EPHB3,Connective tissue,EFNB3,EPHB3,0.343,0.005
+Heart,发送,75,TGFB3_TGFBR3,Connective tissue,TGFB3,TGFBR3,0.338,0.0
+Heart,发送,76,CLSTN1_NRXN3,Connective tissue,CLSTN1,NRXN3,0.337,0.0
+Heart,发送,77,LRPAP1_SORT1,Connective tissue,LRPAP1,SORT1,0.335,0.0
+Heart,发送,78,EFNB3_EPHA4,Connective tissue,EFNB3,EPHA4,0.33,0.015
+Heart,发送,79,LAMA2_ADGRG6,Connective tissue,LAMA2,ADGRG6,0.325,0.0
+Heart,发送,80,RSPO1_LGR4,Connective tissue,RSPO1,LGR4,0.325,0.0
+Heart,发送,81,ESAM_ESAM,Connective tissue,ESAM,ESAM,0.324,0.0
+Heart,发送,82,NECTIN3_PVR,Connective tissue,NECTIN3,PVR,0.322,0.0
+Heart,发送,83,PRNP_ADGRG6,Connective tissue,PRNP,ADGRG6,0.319,0.0
+Heart,发送,84,COL16A1_integrin_a1b1_complex,Connective tissue,COL16A1,integrin,0.318,0.0
+Heart,发送,85,COL6A3_integrin_a1b1_complex,Connective tissue,COL6A3,integrin,0.315,0.0
+Heart,发送,86,BMP7_BMPR1A_BMPR2,Connective tissue,BMP7,BMPR1A,0.31,0.018
+Heart,发送,87,COL15A1_integrin_a1b1_complex,Connective tissue,COL15A1,integrin,0.309,0.0
+Heart,发送,88,BMP4_BMR1A_ACR2A,Connective tissue,BMP4,BMR1A,0.305,0.019
+Heart,发送,89,EFNA2_EPHA7,Connective tissue,EFNA2,EPHA7,0.303,0.003
+Heart,发送,90,WNT5A_ROR2,Connective tissue,WNT5A,ROR2,0.299,0.0
+Heart,发送,91,COL27A1_integrin_a1b1_complex,Connective tissue,COL27A1,integrin,0.298,0.0
+Heart,发送,92,COL14A1_integrin_a1b1_complex,Connective tissue,COL14A1,integrin,0.296,0.0
+Heart,发送,93,GJC1_GJA5,Connective tissue,GJC1,GJA5,0.295,0.0
+Heart,发送,94,VEGFA_NRP1,Connective tissue,VEGFA,NRP1,0.294,0.002
+Heart,发送,95,SLITRK5_PTPRS,Connective tissue,SLITRK5,PTPRS,0.293,0.046
+Heart,发送,96,JAG1_NOTCH1,Connective tissue,JAG1,NOTCH1,0.293,0.0
+Heart,发送,97,EFNB1_EPHB4,Connective tissue,EFNB1,EPHB4,0.292,0.024
+Heart,发送,98,ANGPT1_TEK,Connective tissue,ANGPT1,TEK,0.291,0.004
+Heart,发送,99,JAG2_NOTCH1,Connective tissue,JAG2,NOTCH1,0.289,0.0
+Heart,发送,100,NTN1_UNC5B,Connective tissue,NTN1,UNC5B,0.289,0.027
+Heart,接收,1,IGF2_IGF2R,Connective tissue,IGF2R,IGF2,2.118,0.0
+Heart,接收,2,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.949,0.0
+Heart,接收,3,FN1_integrin_aVb5_complex,Connective tissue,integrin,FN1,1.192,0.0
+Heart,接收,4,FN1_integrin_aVb1_complex,Connective tissue,integrin,FN1,1.192,0.0
+Heart,接收,5,FN1_integrin_a8b1_complex,Connective tissue,integrin,FN1,1.156,0.0
+Heart,接收,6,FN1_integrin_a3b1_complex,Connective tissue,integrin,FN1,1.12,0.0
+Heart,接收,7,FN1_integrin_a4b1_complex,Connective tissue,integrin,FN1,1.091,0.0
+Heart,接收,8,FN1_integrin_a11b1_complex,Connective tissue,integrin,FN1,1.085,0.0
+Heart,接收,9,COL4A1_integrin_a11b1_complex,Connective tissue,integrin,COL4A1,0.784,0.0
+Heart,接收,10,COL18A1_integrin_a11b1_complex,Connective tissue,integrin,COL18A1,0.749,0.0
+Heart,接收,11,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.736,0.028
+Heart,接收,12,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,0.657,0.0
+Heart,接收,13,APP_FPR2,Connective tissue,FPR2,APP,0.624,0.0
+Heart,接收,14,CDH2_CDH2,Connective tissue,CDH2,CDH2,0.607,0.0
+Heart,接收,15,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.603,0.002
+Heart,接收,16,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.601,0.0
+Heart,接收,17,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.576,0.0
+Heart,接收,18,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.556,0.0
+Heart,接收,19,DAG1_NRXN3,Connective tissue,NRXN3,DAG1,0.552,0.008
+Heart,接收,20,TENM3_ADGRL2,Connective tissue,ADGRL2,TENM3,0.549,0.018
+Heart,接收,21,APP_PLXNA4,Connective tissue,PLXNA4,APP,0.544,0.0
+Heart,接收,22,SLIT2_ROBO1,Connective tissue,ROBO1,SLIT2,0.541,0.001
+Heart,接收,23,NECTIN2_NECTIN3,Connective tissue,NECTIN3,NECTIN2,0.541,0.0
+Heart,接收,24,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.531,0.0
+Heart,接收,25,APLP2_PLXNA4,Connective tissue,PLXNA4,APLP2,0.528,0.0
+Heart,接收,26,APP_TNFRSF21,Connective tissue,TNFRSF21,APP,0.522,0.001
+Heart,接收,27,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.515,0.0
+Heart,接收,28,WNT4_SFRP1,Connective tissue,SFRP1,WNT4,0.507,0.0
+Heart,接收,29,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.505,0.0
+Heart,接收,30,EFNA1_EPHA3,Connective tissue,EPHA3,EFNA1,0.493,0.0
+Heart,接收,31,APP_SORL1,Connective tissue,SORL1,APP,0.489,0.0
+Heart,接收,32,IGF1_IGF1R,Connective tissue,IGF1R,IGF1,0.482,0.009
+Heart,接收,33,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1R,IGF1,0.482,0.009
+Heart,接收,34,ANGPT1_TEK,Connective tissue,TEK,ANGPT1,0.464,0.0
+Heart,接收,35,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.463,0.0
+Heart,接收,36,EFNB3_EPHA4,Connective tissue,EPHA4,EFNB3,0.462,0.0
+Heart,接收,37,EFNB3_EPHB3,Connective tissue,EPHB3,EFNB3,0.462,0.0
+Heart,接收,38,VCAM1_integrin_a9b1_complex,Connective tissue,integrin,VCAM1,0.453,0.0
+Heart,接收,39,EFNB3_EPHB2,Connective tissue,EPHB2,EFNB3,0.434,0.0
+Heart,接收,40,BMPR1B_BMPR2_BMPR1A,Connective tissue,BMPR2,BMPR1B,0.431,0.013
+Heart,接收,41,EFNB3_EPHB4,Connective tissue,EPHB4,EFNB3,0.43,0.0
+Heart,接收,42,CDH5_CDH5,Connective tissue,CDH5,CDH5,0.428,0.0
+Heart,接收,43,COL19A1_integrin_a11b1_complex,Connective tissue,integrin,COL19A1,0.427,0.0
+Heart,接收,44,VEGFA_NRP2,Connective tissue,NRP2,VEGFA,0.42,0.0
+Heart,接收,45,TENM2_FLRT3_complex_ADGRL2,Connective tissue,FLRT3,TENM2,0.418,0.0
+Heart,接收,46,TENM2_ADGRL2,Connective tissue,ADGRL2,TENM2,0.418,0.0
+Heart,接收,47,SLIT2_ROBO2,Connective tissue,ROBO2,SLIT2,0.417,0.001
+Heart,接收,48,BMP4_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP4,0.407,0.004
+Heart,接收,49,TENM3_ADGRL1,Connective tissue,ADGRL1,TENM3,0.403,0.025
+Heart,接收,50,BMP7_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP7,0.401,0.0
+Heart,接收,51,COL2A1_integrin_a11b1_complex,Connective tissue,integrin,COL2A1,0.401,0.001
+Heart,接收,52,FLRT2_ADGRL1,Connective tissue,ADGRL1,FLRT2,0.377,0.0
+Heart,接收,53,TNC_integrin_a9b1_complex,Connective tissue,integrin,TNC,0.373,0.0
+Heart,接收,54,VEGFA_KDR,Connective tissue,KDR,VEGFA,0.365,0.004
+Heart,接收,55,NRXN3_ADGRL1,Connective tissue,ADGRL1,NRXN3,0.358,0.0
+Heart,接收,56,VEGFB_NRP1,Connective tissue,NRP1,VEGFB,0.356,0.003
+Heart,接收,57,COL4A2_integrin_a11b1_complex,Connective tissue,integrin,COL4A2,0.353,0.0
+Heart,接收,58,SEMA4C_PLXNB2,Connective tissue,PLXNB2,SEMA4C,0.352,0.0
+Heart,接收,59,VEGFB_FLT1_complex,Connective tissue,FLT1,VEGFB,0.347,0.0
+Heart,接收,60,VEGFB_FLT1,Connective tissue,FLT1,VEGFB,0.347,0.0
+Heart,接收,61,BMP5_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP5,0.346,0.001
+Heart,接收,62,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.341,0.005
+Heart,接收,63,BMP4_BMR1A_AVR2B,Connective tissue,BMR1A,BMP4,0.336,0.001
+Heart,接收,64,SEMA3C_NRP2,Connective tissue,NRP2,SEMA3C,0.331,0.017
+Heart,接收,65,BMP7_BMR1A_AVR2B,Connective tissue,BMR1A,BMP7,0.33,0.0
+Heart,接收,66,EFNB2_EPHA4,Connective tissue,EPHA4,EFNB2,0.329,0.0
+Heart,接收,67,EFNB2_EPHB3,Connective tissue,EPHB3,EFNB2,0.328,0.001
+Heart,接收,68,ESAM_ESAM,Connective tissue,ESAM,ESAM,0.324,0.0
+Heart,接收,69,WNT5A_ROR1,Connective tissue,ROR1,WNT5A,0.312,0.0
+Heart,接收,70,JAG1_NOTCH2,Connective tissue,NOTCH2,JAG1,0.31,0.0
+Heart,接收,71,BMP4_BMR1A_ACR2A,Connective tissue,BMR1A,BMP4,0.31,0.01
+Heart,接收,72,FLRT2_ADGRL3,Connective tissue,ADGRL3,FLRT2,0.31,0.0
+Heart,接收,73,COL4A5_integrin_a11b1_complex,Connective tissue,integrin,COL4A5,0.306,0.0
+Heart,接收,74,BMP7_BMR1A_ACR2A,Connective tissue,BMR1A,BMP7,0.305,0.0
+Heart,接收,75,EFNB2_EPHB2,Connective tissue,EPHB2,EFNB2,0.301,0.032
+Heart,接收,76,SLITRK5_PTPRS,Connective tissue,PTPRS,SLITRK5,0.299,0.02
+Heart,接收,77,DSC2_DSG2,Connective tissue,DSG2,DSC2,0.298,0.0
+Heart,接收,78,Glutamate_byGLS_and_SLC1A3_GRM7,Connective tissue,byGLS,Glutamate,0.296,0.0
+Heart,接收,79,EFNB1_EPHA4,Connective tissue,EPHA4,EFNB1,0.295,0.001
+Heart,接收,80,NTN1_UNC5B,Connective tissue,UNC5B,NTN1,0.295,0.015
+Heart,接收,81,EFNB1_EPHB3,Connective tissue,EPHB3,EFNB1,0.294,0.001
+Heart,接收,82,integrin_aVb1_complex_ADGRE5,Connective tissue,aVb1,integrin,0.294,0.0
+Heart,接收,83,EFNA1_EPHA7,Connective tissue,EPHA7,EFNA1,0.291,0.002
+Heart,接收,84,BMP7_ACVR_1A2B_receptor,Connective tissue,ACVR,BMP7,0.288,0.0
+Heart,接收,85,BMP7_ACVR_1A2A_receptor,Connective tissue,ACVR,BMP7,0.288,0.0
+Heart,接收,86,BMP7_ACVR1_BMPR2,Connective tissue,ACVR1,BMP7,0.288,0.0
+Heart,接收,87,BMP2_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP2,0.284,0.001
+Heart,接收,88,LRPAP1_SORT1,Connective tissue,SORT1,LRPAP1,0.278,0.039
+Heart,接收,89,DLL1_NOTCH2,Connective tissue,NOTCH2,DLL1,0.277,0.0
+Heart,接收,90,BMP5_BMR1A_AVR2B,Connective tissue,BMR1A,BMP5,0.275,0.0
+Heart,接收,91,TENM2_ADGRL1,Connective tissue,ADGRL1,TENM2,0.272,0.0
+Heart,接收,92,TENM2_FLRT3_complex_ADGRL1,Connective tissue,FLRT3,TENM2,0.272,0.0
+Heart,接收,93,EFNA4_EPHA4,Connective tissue,EPHA4,EFNA4,0.265,0.032
+Heart,接收,94,VEGFA_NRP1,Connective tissue,NRP1,VEGFA,0.262,0.045
+Heart,接收,95,WNT2_SFRP2,Connective tissue,SFRP2,WNT2,0.259,0.047
+Heart,接收,96,SEMA6D_PlexinA1_complex1,Connective tissue,PlexinA1,SEMA6D,0.255,0.001
+Heart,接收,97,EFNA1_EPHA4,Connective tissue,EPHA4,EFNA1,0.254,0.0
+Heart,接收,98,VEGFA_FLT1_complex,Connective tissue,FLT1,VEGFA,0.253,0.002
+Heart,接收,99,VEGFA_FLT1,Connective tissue,FLT1,VEGFA,0.253,0.002
+Heart,接收,100,VCAM1_integrin_a4b1_complex,Connective tissue,integrin,VCAM1,0.251,0.0
+Liver,发送,1,IGF2_IGF2R,Connective tissue,IGF2,IGF2R,1.995,0.0
+Liver,发送,2,IGF2_IGF1R,Connective tissue,IGF2,IGF1R,1.778,0.0
+Liver,发送,3,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.584,0.0
+Liver,发送,4,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.57,0.0
+Liver,发送,5,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.485,0.0
+Liver,发送,6,PPIA_BSG,Connective tissue,PPIA,BSG,1.321,0.0
+Liver,发送,7,COL3A1_ADGRG1,Connective tissue,COL3A1,ADGRG1,1.145,0.0
+Liver,发送,8,COL3A1_integrin_a11b1_complex,Connective tissue,COL3A1,integrin,1.085,0.0
+Liver,发送,9,FN1_integrin_aVb1_complex,Connective tissue,FN1,integrin,0.997,0.01
+Liver,发送,10,LRFN4_PTPRF,Connective tissue,LRFN4,PTPRF,0.954,0.0
+Liver,发送,11,COL1A1_integrin_a11b1_complex,Connective tissue,COL1A1,integrin,0.847,0.0
+Liver,发送,12,COL18A1_integrin_a11b1_complex,Connective tissue,COL18A1,integrin,0.805,0.0
+Liver,发送,13,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.793,0.009
+Liver,发送,14,COL1A2_integrin_a11b1_complex,Connective tissue,COL1A2,integrin,0.785,0.0
+Liver,发送,15,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.675,0.0
+Liver,发送,16,DAG1_NRXN3,Connective tissue,DAG1,NRXN3,0.612,0.0
+Liver,发送,17,NCAM1_AGRN,Connective tissue,NCAM1,AGRN,0.596,0.0
+Liver,发送,18,APP_FPR2,Connective tissue,APP,FPR2,0.595,0.0
+Liver,发送,19,LAMC1_integrin_a6b1_complex,Connective tissue,LAMC1,integrin,0.59,0.0
+Liver,发送,20,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.587,0.0
+Liver,发送,21,TENM3_ADGRL2,Connective tissue,TENM3,ADGRL2,0.573,0.012
+Liver,发送,22,Cholesterol_byDHCR24_RORA,Connective tissue,Cholesterol,byDHCR24,0.566,0.0
+Liver,发送,23,AGRN_PTPRS,Connective tissue,AGRN,PTPRS,0.511,0.007
+Liver,发送,24,COL5A2_integrin_a11b1_complex,Connective tissue,COL5A2,integrin,0.501,0.0
+Liver,发送,25,IGF1_IGF1R,Connective tissue,IGF1,IGF1R,0.498,0.034
+Liver,发送,26,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1,IGF1R,0.498,0.034
+Liver,发送,27,SEMA3A_NRP1,Connective tissue,SEMA3A,NRP1,0.474,0.0
+Liver,发送,28,WNT2_SFRP5,Connective tissue,WNT2,SFRP5,0.458,0.0
+Liver,发送,29,SLIT2_ROBO2,Connective tissue,SLIT2,ROBO2,0.458,0.0
+Liver,发送,30,WNT2_FZD5_LRP5,Connective tissue,WNT2,FZD5,0.432,0.0
+Liver,发送,31,WNT2_FZD1_LRP5,Connective tissue,WNT2,FZD1,0.432,0.0
+Liver,发送,32,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.432,0.0
+Liver,发送,33,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.432,0.0
+Liver,发送,34,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.432,0.0
+Liver,发送,35,SEMA3A_PlexinA1_complex3,Connective tissue,SEMA3A,PlexinA1,0.429,0.0
+Liver,发送,36,WNT2_FZD5_LRP6,Connective tissue,WNT2,FZD5,0.424,0.0
+Liver,发送,37,WNT2_FZD1_LRP6,Connective tissue,WNT2,FZD1,0.424,0.0
+Liver,发送,38,WNT2_FZD2_LRP6,Connective tissue,WNT2,FZD2,0.424,0.0
+Liver,发送,39,WNT2_FZD7_LRP6,Connective tissue,WNT2,FZD7,0.424,0.0
+Liver,发送,40,WNT2_FZD3_LRP6,Connective tissue,WNT2,FZD3,0.424,0.0
+Liver,发送,41,TENM3_ADGRL1,Connective tissue,TENM3,ADGRL1,0.406,0.035
+Liver,发送,42,WNT2_FZD4_LRP5,Connective tissue,WNT2,FZD4,0.405,0.0
+Liver,发送,43,WNT2_FZD4_LRP6,Connective tissue,WNT2,FZD4,0.405,0.0
+Liver,发送,44,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.395,0.0
+Liver,发送,45,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.388,0.001
+Liver,发送,46,TENM2_FLRT3_complex_ADGRL2,Connective tissue,TENM2,FLRT3,0.38,0.039
+Liver,发送,47,TENM2_ADGRL2,Connective tissue,TENM2,ADGRL2,0.38,0.039
+Liver,发送,48,COL5A1_integrin_a11b1_complex,Connective tissue,COL5A1,integrin,0.379,0.0
+Liver,发送,49,WNT2_FZD8_LRP6,Connective tissue,WNT2,FZD8,0.378,0.0
+Liver,发送,50,WNT2_FZD8_LRP5,Connective tissue,WNT2,FZD8,0.378,0.0
+Liver,发送,51,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.376,0.0
+Liver,发送,52,SEMA3A_PlexinA3_complex1,Connective tissue,SEMA3A,PlexinA3,0.375,0.0
+Liver,发送,53,EFNB3_EPHB4,Connective tissue,EFNB3,EPHB4,0.374,0.009
+Liver,发送,54,CDH3_CDH3,Connective tissue,CDH3,CDH3,0.373,0.01
+Liver,发送,55,COL2A1_integrin_a11b1_complex,Connective tissue,COL2A1,integrin,0.371,0.01
+Liver,发送,56,VEGFB_NRP1,Connective tissue,VEGFB,NRP1,0.369,0.003
+Liver,发送,57,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.368,0.042
+Liver,发送,58,EFNB3_EPHB2,Connective tissue,EFNB3,EPHB2,0.363,0.009
+Liver,发送,59,LRFN4_PTPRS,Connective tissue,LRFN4,PTPRS,0.347,0.035
+Liver,发送,60,SLITRK5_PTPRS,Connective tissue,SLITRK5,PTPRS,0.334,0.006
+Liver,发送,61,EFNB3_EPHA4,Connective tissue,EFNB3,EPHA4,0.331,0.042
+Liver,发送,62,EFNB3_EPHB3,Connective tissue,EFNB3,EPHB3,0.324,0.038
+Liver,发送,63,JAG1_NOTCH2,Connective tissue,JAG1,NOTCH2,0.323,0.0
+Liver,发送,64,JAG2_NOTCH2,Connective tissue,JAG2,NOTCH2,0.319,0.0
+Liver,发送,65,KITLG_KIT,Connective tissue,KITLG,KIT,0.316,0.008
+Liver,发送,66,SEMA4D_PLXNB1,Connective tissue,SEMA4D,PLXNB1,0.315,0.0
+Liver,发送,67,RSPO1_LGR4,Connective tissue,RSPO1,LGR4,0.313,0.001
+Liver,发送,68,JAG1_NOTCH1,Connective tissue,JAG1,NOTCH1,0.309,0.0
+Liver,发送,69,JAG2_NOTCH1,Connective tissue,JAG2,NOTCH1,0.305,0.0
+Liver,发送,70,WNT5A_SFRP5,Connective tissue,WNT5A,SFRP5,0.3,0.0
+Liver,发送,71,EFNB1_EPHB4,Connective tissue,EFNB1,EPHB4,0.299,0.028
+Liver,发送,72,WNT5A_ROR2,Connective tissue,WNT5A,ROR2,0.295,0.006
+Liver,发送,73,Cholesterol_byLIPA_RORA,Connective tissue,Cholesterol,byLIPA,0.292,0.009
+Liver,发送,74,EFNB1_EPHB2,Connective tissue,EFNB1,EPHB2,0.288,0.033
+Liver,发送,75,BMP4_BMPR1B_BMPR2,Connective tissue,BMP4,BMPR1B,0.277,0.005
+Liver,发送,76,BMP4_BMR1B_AVR2B,Connective tissue,BMP4,BMR1B,0.277,0.003
+Liver,发送,77,Cholesterol_byDHCR7_RORA,Connective tissue,Cholesterol,byDHCR7,0.275,0.014
+Liver,发送,78,WNT5A_FZD5_LRP5,Connective tissue,WNT5A,FZD5,0.274,0.0
+Liver,发送,79,WNT5A_FZD7_LRP5,Connective tissue,WNT5A,FZD7,0.274,0.023
+Liver,发送,80,WNT5A_FZD2_LRP5,Connective tissue,WNT5A,FZD2,0.274,0.026
+Liver,发送,81,WNT5A_FZD3_LRP5,Connective tissue,WNT5A,FZD3,0.274,0.025
+Liver,发送,82,BMP4_BMR1B_AVR2A,Connective tissue,BMP4,BMR1B,0.274,0.003
+Liver,发送,83,WNT5A_FZD5_LRP6,Connective tissue,WNT5A,FZD5,0.266,0.0
+Liver,发送,84,WNT5A_FZD3_LRP6,Connective tissue,WNT5A,FZD3,0.266,0.035
+Liver,发送,85,WNT5A_FZD2_LRP6,Connective tissue,WNT5A,FZD2,0.266,0.039
+Liver,发送,86,WNT5A_FZD7_LRP6,Connective tissue,WNT5A,FZD7,0.266,0.036
+Liver,发送,87,WNT6_SFRP5,Connective tissue,WNT6,SFRP5,0.258,0.0
+Liver,发送,88,COL4A2_integrin_a11b1_complex,Connective tissue,COL4A2,integrin,0.254,0.037
+Liver,发送,89,WNT5A_FZD4_LRP5,Connective tissue,WNT5A,FZD4,0.247,0.005
+Liver,发送,90,WNT5A_FZD4_LRP6,Connective tissue,WNT5A,FZD4,0.247,0.003
+Liver,发送,91,Glutamate_byGLS_and_SLC1A3_GRIA3,Connective tissue,Glutamate,byGLS,0.246,0.0
+Liver,发送,92,BMP7_ACVR1_BMPR2,Connective tissue,BMP7,ACVR1,0.239,0.005
+Liver,发送,93,COL26A1_integrin_a11b1_complex,Connective tissue,COL26A1,integrin,0.239,0.006
+Liver,发送,94,DKK2_LRP6,Connective tissue,DKK2,LRP6,0.237,0.018
+Liver,发送,95,WNT6_FZD5_LRP5,Connective tissue,WNT6,FZD5,0.232,0.0
+Liver,发送,96,WNT6_FZD1_LRP5,Connective tissue,WNT6,FZD1,0.232,0.001
+Liver,发送,97,WNT6_FZD3_LRP5,Connective tissue,WNT6,FZD3,0.232,0.003
+Liver,发送,98,WNT6_FZD7_LRP5,Connective tissue,WNT6,FZD7,0.232,0.003
+Liver,发送,99,WNT6_FZD2_LRP5,Connective tissue,WNT6,FZD2,0.232,0.003
+Liver,发送,100,WNT7B_SFRP5,Connective tissue,WNT7B,SFRP5,0.231,0.0
+Liver,接收,1,IGF2_IGF2R,Connective tissue,IGF2R,IGF2,1.894,0.034
+Liver,接收,2,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.725,0.004
+Liver,接收,3,DLK1_NOTCH2,Connective tissue,NOTCH2,DLK1,1.443,0.0
+Liver,接收,4,DLK1_NOTCH1,Connective tissue,NOTCH1,DLK1,1.345,0.0
+Liver,接收,5,PPIA_BSG,Connective tissue,BSG,PPIA,1.322,0.0
+Liver,接收,6,DLK1_NOTCH3,Connective tissue,NOTCH3,DLK1,1.268,0.0
+Liver,接收,7,FGF10_FGFR2,Connective tissue,FGFR2,FGF10,1.22,0.0
+Liver,接收,8,FN1_integrin_aVb5_complex,Connective tissue,integrin,FN1,1.14,0.0
+Liver,接收,9,FN1_integrin_aVb1_complex,Connective tissue,integrin,FN1,1.14,0.0
+Liver,接收,10,FN1_integrin_a8b1_complex,Connective tissue,integrin,FN1,1.104,0.0
+Liver,接收,11,FN1_integrin_a3b1_complex,Connective tissue,integrin,FN1,1.068,0.0
+Liver,接收,12,FN1_integrin_a4b1_complex,Connective tissue,integrin,FN1,1.04,0.0
+Liver,接收,13,FN1_integrin_a11b1_complex,Connective tissue,integrin,FN1,1.033,0.0
+Liver,接收,14,RBP4_STRA6,Connective tissue,STRA6,RBP4,0.885,0.0
+Liver,接收,15,TF_TFRC,Connective tissue,TFRC,TF,0.841,0.0
+Liver,接收,16,MPZL1_MPZL1,Connective tissue,MPZL1,MPZL1,0.793,0.009
+Liver,接收,17,PDGFC_PDGFRA,Connective tissue,PDGFRA,PDGFC,0.711,0.0
+Liver,接收,18,LRRC4C_PTPRF,Connective tissue,PTPRF,LRRC4C,0.653,0.0
+Liver,接收,19,LRFN4_PTPRF,Connective tissue,PTPRF,LRFN4,0.648,0.005
+Liver,接收,20,AGRN_PTPRS,Connective tissue,PTPRS,AGRN,0.611,0.0
+Liver,接收,21,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.591,0.0
+Liver,接收,22,APLP2_PLXNA4,Connective tissue,PLXNA4,APLP2,0.59,0.0
+Liver,接收,23,EFNA5_EPHA3,Connective tissue,EPHA3,EFNA5,0.569,0.0
+Liver,接收,24,COL4A1_integrin_a11b1_complex,Connective tissue,integrin,COL4A1,0.553,0.007
+Liver,接收,25,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.526,0.0
+Liver,接收,26,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.523,0.0
+Liver,接收,27,WNT5A_SFRP1,Connective tissue,SFRP1,WNT5A,0.512,0.001
+Liver,接收,28,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.504,0.0
+Liver,接收,29,F2_F2R,Connective tissue,F2R,F2,0.494,0.0
+Liver,接收,30,SEMA3C_NRP2,Connective tissue,NRP2,SEMA3C,0.486,0.0
+Liver,接收,31,NECTIN2_NECTIN3,Connective tissue,NECTIN3,NECTIN2,0.484,0.017
+Liver,接收,32,VTN_integrin_aVb1_complex,Connective tissue,integrin,VTN,0.482,0.0
+Liver,接收,33,EFNA1_EPHA3,Connective tissue,EPHA3,EFNA1,0.479,0.0
+Liver,接收,34,BMPR1B_BMPR2_BMPR1A,Connective tissue,BMPR2,BMPR1B,0.45,0.004
+Liver,接收,35,VEGFA_NRP2,Connective tissue,NRP2,VEGFA,0.438,0.0
+Liver,接收,36,KITLG_KIT,Connective tissue,KIT,KITLG,0.402,0.0
+Liver,接收,37,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.397,0.0
+Liver,接收,38,EFNA4_EPHA7,Connective tissue,EPHA7,EFNA4,0.389,0.0
+Liver,接收,39,SDC1_ADGRA2,Connective tissue,ADGRA2,SDC1,0.388,0.001
+Liver,接收,40,VEGFA_KDR,Connective tissue,KDR,VEGFA,0.382,0.001
+Liver,接收,41,NECTIN1_NECTIN3,Connective tissue,NECTIN3,NECTIN1,0.376,0.001
+Liver,接收,42,FLRT2_ADGRL1,Connective tissue,ADGRL1,FLRT2,0.376,0.002
+Liver,接收,43,CDH3_CDH3,Connective tissue,CDH3,CDH3,0.373,0.01
+Liver,接收,44,JAM3_JAM3,Connective tissue,JAM3,JAM3,0.368,0.042
+Liver,接收,45,SEMA4C_PLXNB2,Connective tissue,PLXNB2,SEMA4C,0.354,0.0
+Liver,接收,46,TNC_integrin_a9b1_complex,Connective tissue,integrin,TNC,0.354,0.0
+Liver,接收,47,EFNA4_EPHA4,Connective tissue,EPHA4,EFNA4,0.351,0.0
+Liver,接收,48,VCAM1_integrin_a9b1_complex,Connective tissue,integrin,VCAM1,0.351,0.001
+Liver,接收,49,TENM1_ADGRL2,Connective tissue,ADGRL2,TENM1,0.332,0.005
+Liver,接收,50,EFNB2_EPHA4,Connective tissue,EPHA4,EFNB2,0.324,0.005
+Liver,接收,51,EFNB2_EPHB3,Connective tissue,EPHB3,EFNB2,0.323,0.005
+Liver,接收,52,BMP7_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP7,0.322,0.02
+Liver,接收,53,LRPAP1_SORT1,Connective tissue,SORT1,LRPAP1,0.32,0.005
+Liver,接收,54,FLRT2_ADGRL3,Connective tissue,ADGRL3,FLRT2,0.31,0.015
+Liver,接收,55,integrin_aVb1_complex_ADGRE5,Connective tissue,aVb1,integrin,0.307,0.001
+Liver,接收,56,EFNA2_EPHA7,Connective tissue,EPHA7,EFNA2,0.302,0.005
+Liver,接收,57,SEMA3F_NRP2,Connective tissue,NRP2,SEMA3F,0.298,0.011
+Liver,接收,58,APOA1_ABCA1,Connective tissue,ABCA1,APOA1,0.293,0.0
+Liver,接收,59,VEGFC_KDR,Connective tissue,KDR,VEGFC,0.293,0.047
+Liver,接收,60,VEGFA_NRP1,Connective tissue,NRP1,VEGFA,0.28,0.024
+Liver,接收,61,EFNA1_EPHA7,Connective tissue,EPHA7,EFNA1,0.277,0.005
+Liver,接收,62,VEGFA_FLT1_complex,Connective tissue,FLT1,VEGFA,0.271,0.002
+Liver,接收,63,VEGFA_FLT1,Connective tissue,FLT1,VEGFA,0.271,0.002
+Liver,接收,64,EFNB1_EPHB3,Connective tissue,EPHB3,EFNB1,0.269,0.042
+Liver,接收,65,SDC2_ADGRA2,Connective tissue,ADGRA2,SDC2,0.267,0.01
+Liver,接收,66,EFNA2_EPHA4,Connective tissue,EPHA4,EFNA2,0.264,0.0
+Liver,接收,67,BMP7_BMR1A_AVR2B,Connective tissue,BMR1A,BMP7,0.251,0.016
+Liver,接收,68,EFNA1_EPHA4,Connective tissue,EPHA4,EFNA1,0.239,0.002
+Liver,接收,69,BMP7_BMR1A_ACR2A,Connective tissue,BMR1A,BMP7,0.225,0.047
+Liver,接收,70,DSC2_DSG2,Connective tissue,DSG2,DSC2,0.224,0.01
+Liver,接收,71,DKK1_LRP5,Connective tissue,LRP5,DKK1,0.221,0.0
+Liver,接收,72,SEMA4D_PLXNB1,Connective tissue,PLXNB1,SEMA4D,0.22,0.048
+Liver,接收,73,FGFR4_TGFBR3,Connective tissue,TGFBR3,FGFR4,0.219,0.022
+Liver,接收,74,DKK1_LRP6,Connective tissue,LRP6,DKK1,0.217,0.0
+Liver,接收,75,TNC_integrin_a8b1_complex,Connective tissue,integrin,TNC,0.216,0.0
+Liver,接收,76,BMP7_ACVR_1A2B_receptor,Connective tissue,ACVR,BMP7,0.209,0.031
+Liver,接收,77,BMP7_ACVR_1A2A_receptor,Connective tissue,ACVR,BMP7,0.209,0.028
+Liver,接收,78,BMP7_ACVR1_BMPR2,Connective tissue,ACVR1,BMP7,0.209,0.04
+Liver,接收,79,GAS6_AXL,Connective tissue,AXL,GAS6,0.206,0.0
+Liver,接收,80,GAS6_MERTK,Connective tissue,MERTK,GAS6,0.199,0.001
+Liver,接收,81,GDF11_TGFR_AVR2B,Connective tissue,TGFR,GDF11,0.199,0.045
+Liver,接收,82,SHH_PTCH_BOC_transmembrane_receptor,Connective tissue,PTCH,SHH,0.195,0.0
+Liver,接收,83,TENM1_ADGRL1,Connective tissue,ADGRL1,TENM1,0.186,0.002
+Liver,接收,84,VEGFC_FLT4,Connective tissue,FLT4,VEGFC,0.182,0.011
+Liver,接收,85,COL27A1_integrin_a11b1_complex,Connective tissue,integrin,COL27A1,0.134,0.0
+Mesenchyme,发送,1,DLK1_NOTCH3,Connective tissue,DLK1,NOTCH3,1.782,0.0
+Mesenchyme,发送,2,DLK1_NOTCH2,Connective tissue,DLK1,NOTCH2,1.514,0.0
+Mesenchyme,发送,3,DLK1_NOTCH1,Connective tissue,DLK1,NOTCH1,1.445,0.0
+Mesenchyme,发送,4,COL3A1_ADGRG1,Connective tissue,COL3A1,ADGRG1,1.323,0.0
+Mesenchyme,发送,5,COL3A1_integrin_a11b1_complex,Connective tissue,COL3A1,integrin,1.217,0.0
+Mesenchyme,发送,6,CD24_SELP,Connective tissue,CD24,SELP,1.216,0.002
+Mesenchyme,发送,7,COL3A1_integrin_a1b1_complex,Connective tissue,COL3A1,integrin,1.143,0.001
+Mesenchyme,发送,8,FN1_integrin_a3b1_complex,Connective tissue,FN1,integrin,1.006,0.008
+Mesenchyme,发送,9,FN1_integrin_aVb5_complex,Connective tissue,FN1,integrin,0.998,0.033
+Mesenchyme,发送,10,COL1A1_integrin_a11b1_complex,Connective tissue,COL1A1,integrin,0.979,0.0
+Mesenchyme,发送,11,COL18A1_integrin_a11b1_complex,Connective tissue,COL18A1,integrin,0.938,0.0
+Mesenchyme,发送,12,FN1_integrin_a11b1_complex,Connective tissue,FN1,integrin,0.933,0.012
+Mesenchyme,发送,13,COL1A2_integrin_a11b1_complex,Connective tissue,COL1A2,integrin,0.918,0.0
+Mesenchyme,发送,14,COL1A1_integrin_a1b1_complex,Connective tissue,COL1A1,integrin,0.905,0.0
+Mesenchyme,发送,15,COL18A1_integrin_a1b1_complex,Connective tissue,COL18A1,integrin,0.864,0.019
+Mesenchyme,发送,16,COL1A2_integrin_a1b1_complex,Connective tissue,COL1A2,integrin,0.843,0.009
+Mesenchyme,发送,17,AGRN_PTPRS,Connective tissue,AGRN,PTPRS,0.81,0.001
+Mesenchyme,发送,18,BMP4_BMR1A_AVR2B,Connective tissue,BMP4,BMR1A,0.777,0.0
+Mesenchyme,发送,19,APP_TNFRSF21,Connective tissue,APP,TNFRSF21,0.767,0.0
+Mesenchyme,发送,20,EFNA5_EPHA3,Connective tissue,EFNA5,EPHA3,0.766,0.003
+Mesenchyme,发送,21,FLRT3_ADGRL2,Connective tissue,FLRT3,ADGRL2,0.72,0.039
+Mesenchyme,发送,22,EFNA4_EPHA3,Connective tissue,EFNA4,EPHA3,0.695,0.002
+Mesenchyme,发送,23,SLITRK6_PTPRS,Connective tissue,SLITRK6,PTPRS,0.693,0.001
+Mesenchyme,发送,24,BMP7_BMR1A_AVR2B,Connective tissue,BMP7,BMR1A,0.654,0.0
+Mesenchyme,发送,25,EFNA2_EPHA3,Connective tissue,EFNA2,EPHA3,0.65,0.002
+Mesenchyme,发送,26,LRFN4_PTPRS,Connective tissue,LRFN4,PTPRS,0.645,0.002
+Mesenchyme,发送,27,COL5A2_integrin_a11b1_complex,Connective tissue,COL5A2,integrin,0.634,0.0
+Mesenchyme,发送,28,SLITRK5_PTPRS,Connective tissue,SLITRK5,PTPRS,0.632,0.001
+Mesenchyme,发送,29,BMP4_BMR1A_ACR2A,Connective tissue,BMP4,BMR1A,0.625,0.001
+Mesenchyme,发送,30,BMP2_BMR1A_AVR2B,Connective tissue,BMP2,BMR1A,0.62,0.0
+Mesenchyme,发送,31,EFNA1_EPHA3,Connective tissue,EFNA1,EPHA3,0.62,0.002
+Mesenchyme,发送,32,BMP5_BMR1A_AVR2B,Connective tissue,BMP5,BMR1A,0.617,0.0
+Mesenchyme,发送,33,COL5A2_integrin_a1b1_complex,Connective tissue,COL5A2,integrin,0.56,0.033
+Mesenchyme,发送,34,FLRT3_ADGRL3,Connective tissue,FLRT3,ADGRL3,0.54,0.017
+Mesenchyme,发送,35,COL4A1_integrin_a11b1_complex,Connective tissue,COL4A1,integrin,0.538,0.049
+Mesenchyme,发送,36,JAG1_NOTCH3,Connective tissue,JAG1,NOTCH3,0.521,0.002
+Mesenchyme,发送,37,JAG2_NOTCH3,Connective tissue,JAG2,NOTCH3,0.517,0.0
+Mesenchyme,发送,38,COL5A1_integrin_a11b1_complex,Connective tissue,COL5A1,integrin,0.512,0.0
+Mesenchyme,发送,39,COL2A1_integrin_a11b1_complex,Connective tissue,COL2A1,integrin,0.504,0.006
+Mesenchyme,发送,40,BMP7_BMR1A_ACR2A,Connective tissue,BMP7,BMR1A,0.502,0.002
+Mesenchyme,发送,41,COL19A1_integrin_a11b1_complex,Connective tissue,COL19A1,integrin,0.486,0.006
+Mesenchyme,发送,42,BMP2_BMR1A_ACR2A,Connective tissue,BMP2,BMR1A,0.468,0.002
+Mesenchyme,发送,43,BMP5_BMR1A_ACR2A,Connective tissue,BMP5,BMR1A,0.465,0.003
+Mesenchyme,发送,44,KITLG_KIT,Connective tissue,KITLG,KIT,0.457,0.009
+Mesenchyme,发送,45,WNT2_FZD6_LRP5,Connective tissue,WNT2,FZD6,0.442,0.0
+Mesenchyme,发送,46,WNT2_FZD2_LRP5,Connective tissue,WNT2,FZD2,0.442,0.006
+Mesenchyme,发送,47,WNT2_FZD3_LRP5,Connective tissue,WNT2,FZD3,0.442,0.007
+Mesenchyme,发送,48,WNT2_FZD7_LRP5,Connective tissue,WNT2,FZD7,0.442,0.0
+Mesenchyme,发送,49,COL5A1_integrin_a1b1_complex,Connective tissue,COL5A1,integrin,0.438,0.034
+Mesenchyme,发送,50,WNT2_FRZB,Connective tissue,WNT2,FRZB,0.418,0.001
+Mesenchyme,发送,51,WNT2_SFRP2,Connective tissue,WNT2,SFRP2,0.418,0.035
+Mesenchyme,发送,52,LRPAP1_SORT1,Connective tissue,LRPAP1,SORT1,0.405,0.039
+Mesenchyme,发送,53,COL4A2_integrin_a11b1_complex,Connective tissue,COL4A2,integrin,0.386,0.006
+Mesenchyme,发送,54,SEMA3A_PlexinA2_complex1,Connective tissue,SEMA3A,PlexinA2,0.383,0.032
+Mesenchyme,发送,55,SEMA3A_PlexinA1_complex3,Connective tissue,SEMA3A,PlexinA1,0.383,0.024
+Mesenchyme,发送,56,COL26A1_integrin_a11b1_complex,Connective tissue,COL26A1,integrin,0.372,0.003
+Mesenchyme,发送,57,atRetinoicAcid_byALDH1A2_RAreceptor_RARG,Connective tissue,atRetinoicAcid,byALDH1A2,0.37,0.02
+Mesenchyme,发送,58,SDC2_FGFR4,Connective tissue,SDC2,FGFR4,0.361,0.001
+Mesenchyme,发送,59,TGM2_ADGRG1,Connective tissue,TGM2,ADGRG1,0.354,0.006
+Mesenchyme,发送,60,COL4A5_integrin_a11b1_complex,Connective tissue,COL4A5,integrin,0.353,0.01
+Mesenchyme,发送,61,GDF11_TGFR_AVR2A,Connective tissue,GDF11,TGFR,0.343,0.008
+Mesenchyme,发送,62,GDF11_TGFR_AVR2B,Connective tissue,GDF11,TGFR,0.343,0.014
+Mesenchyme,发送,63,COL9A1_integrin_a11b1_complex,Connective tissue,COL9A1,integrin,0.313,0.003
+Mesenchyme,发送,64,NTN1_DCC,Connective tissue,NTN1,DCC,0.312,0.009
+Mesenchyme,发送,65,EFNA5_EPHA1,Connective tissue,EFNA5,EPHA1,0.299,0.038
+Mesenchyme,发送,66,THBS1_integrin_a3b1_complex,Connective tissue,THBS1,integrin,0.299,0.027
+Mesenchyme,发送,67,COL11A1_integrin_a11b1_complex,Connective tissue,COL11A1,integrin,0.295,0.006
+Mesenchyme,发送,68,WNT5A_FZD6_LRP5,Connective tissue,WNT5A,FZD6,0.284,0.012
+Mesenchyme,发送,69,COL4A6_integrin_a11b1_complex,Connective tissue,COL4A6,integrin,0.284,0.009
+Mesenchyme,发送,70,WNT5A_FRZB,Connective tissue,WNT5A,FRZB,0.26,0.048
+Mesenchyme,发送,71,COL16A1_integrin_a11b1_complex,Connective tissue,COL16A1,integrin,0.25,0.003
+Mesenchyme,发送,72,COL6A3_integrin_a11b1_complex,Connective tissue,COL6A3,integrin,0.246,0.005
+Mesenchyme,发送,73,WNT6_FZD6_LRP5,Connective tissue,WNT6,FZD6,0.242,0.002
+Mesenchyme,发送,74,COL15A1_integrin_a11b1_complex,Connective tissue,COL15A1,integrin,0.241,0.007
+Mesenchyme,发送,75,COL27A1_integrin_a11b1_complex,Connective tissue,COL27A1,integrin,0.23,0.006
+Mesenchyme,发送,76,EFNA4_EPHA1,Connective tissue,EFNA4,EPHA1,0.229,0.008
+Mesenchyme,发送,77,COL14A1_integrin_a11b1_complex,Connective tissue,COL14A1,integrin,0.227,0.009
+Mesenchyme,发送,78,WNT6_FRZB,Connective tissue,WNT6,FRZB,0.219,0.027
+Mesenchyme,发送,79,WNT7B_FZD6_LRP5,Connective tissue,WNT7B,FZD6,0.215,0.008
+Mesenchyme,发送,80,WNT4_FZD6_LRP5,Connective tissue,WNT4,FZD6,0.209,0.012
+Mesenchyme,发送,81,Glutamate_byGLS_and_SLC1A3_Glutamate_Kainate_3_4_complex,Connective tissue,Glutamate,byGLS,0.195,0.015
+Mesenchyme,发送,82,SerotoninDopamin_byDDC_HTR5A,Connective tissue,SerotoninDopamin,byDDC,0.187,0.003
+Mesenchyme,发送,83,EFNA2_EPHA1,Connective tissue,EFNA2,EPHA1,0.183,0.006
+Mesenchyme,发送,84,CD34_SELP,Connective tissue,CD34,SELP,0.18,0.014
+Mesenchyme,发送,85,EFNA1_EPHA1,Connective tissue,EFNA1,EPHA1,0.154,0.014
+Mesenchyme,发送,86,JAG1_CD46,Connective tissue,JAG1,CD46,0.151,0.013
+Mesenchyme,接收,1,IGF2_IGF1R,Connective tissue,IGF1R,IGF2,1.869,0.03
+Mesenchyme,接收,2,DLK1_NOTCH2,Connective tissue,NOTCH2,DLK1,1.511,0.009
+Mesenchyme,接收,3,DLK1_NOTCH1,Connective tissue,NOTCH1,DLK1,1.413,0.027
+Mesenchyme,接收,4,DLK1_NOTCH3,Connective tissue,NOTCH3,DLK1,1.336,0.042
+Mesenchyme,接收,5,COL18A1_integrin_a11b1_complex,Connective tissue,integrin,COL18A1,0.948,0.02
+Mesenchyme,接收,6,COL2A1_integrin_a11b1_complex,Connective tissue,integrin,COL2A1,0.913,0.0
+Mesenchyme,接收,7,PDGFA_PDGFRA,Connective tissue,PDGFRA,PDGFA,0.906,0.0
+Mesenchyme,接收,8,WNT6_SFRP1,Connective tissue,SFRP1,WNT6,0.743,0.0
+Mesenchyme,接收,9,IGF1_IGF1R,Connective tissue,IGF1R,IGF1,0.719,0.004
+Mesenchyme,接收,10,IGF1_IGF1R_enhancerComGPC3,Connective tissue,IGF1R,IGF1,0.719,0.004
+Mesenchyme,接收,11,WNT2_SFRP1,Connective tissue,SFRP1,WNT2,0.702,0.014
+Mesenchyme,接收,12,EFNA4_EPHA3,Connective tissue,EPHA3,EFNA4,0.618,0.003
+Mesenchyme,接收,13,COL4A2_integrin_a11b1_complex,Connective tissue,integrin,COL4A2,0.617,0.0
+Mesenchyme,接收,14,WNT4_SFRP1,Connective tissue,SFRP1,WNT4,0.567,0.004
+Mesenchyme,接收,15,EFNA2_EPHA3,Connective tissue,EPHA3,EFNA2,0.557,0.0
+Mesenchyme,接收,16,SLITRK6_PTPRS,Connective tissue,PTPRS,SLITRK6,0.54,0.001
+Mesenchyme,接收,17,FLRT2_ADGRL1,Connective tissue,ADGRL1,FLRT2,0.535,0.019
+Mesenchyme,接收,18,WNT7B_SFRP1,Connective tissue,SFRP1,WNT7B,0.533,0.012
+Mesenchyme,接收,19,WNT5B_SFRP1,Connective tissue,SFRP1,WNT5B,0.533,0.032
+Mesenchyme,接收,20,JAG2_NOTCH2,Connective tissue,NOTCH2,JAG2,0.501,0.001
+Mesenchyme,接收,21,TGFB2_TGFBR3,Connective tissue,TGFBR3,TGFB2,0.48,0.019
+Mesenchyme,接收,22,FLRT2_ADGRL3,Connective tissue,ADGRL3,FLRT2,0.468,0.034
+Mesenchyme,接收,23,SEMA4D_PLXNB2,Connective tissue,PLXNB2,SEMA4D,0.462,0.025
+Mesenchyme,接收,24,NTN1_UNC5B,Connective tissue,UNC5B,NTN1,0.441,0.025
+Mesenchyme,接收,25,TENM1_ADGRL2,Connective tissue,ADGRL2,TENM1,0.408,0.015
+Mesenchyme,接收,26,JAG2_NOTCH1,Connective tissue,NOTCH1,JAG2,0.403,0.002
+Mesenchyme,接收,27,TGFB2_TGFbeta_receptor1,Connective tissue,TGFbeta,TGFB2,0.403,0.013
+Mesenchyme,接收,28,TGFB2_TGFbeta_receptor2,Connective tissue,TGFbeta,TGFB2,0.403,0.013
+Mesenchyme,接收,29,WNT6_SFRP2,Connective tissue,SFRP2,WNT6,0.401,0.002
+Mesenchyme,接收,30,WNT6_FZD1_LRP5,Connective tissue,FZD1,WNT6,0.398,0.003
+Mesenchyme,接收,31,WNT6_FZD3_LRP5,Connective tissue,FZD3,WNT6,0.398,0.003
+Mesenchyme,接收,32,WNT6_FZD7_LRP5,Connective tissue,FZD7,WNT6,0.398,0.003
+Mesenchyme,接收,33,WNT6_FZD2_LRP5,Connective tissue,FZD2,WNT6,0.398,0.003
+Mesenchyme,接收,34,WNT6_FZD1_LRP6,Connective tissue,FZD1,WNT6,0.394,0.005
+Mesenchyme,接收,35,WNT6_FZD7_LRP6,Connective tissue,FZD7,WNT6,0.394,0.006
+Mesenchyme,接收,36,WNT6_FZD3_LRP6,Connective tissue,FZD3,WNT6,0.394,0.006
+Mesenchyme,接收,37,WNT6_FZD2_LRP6,Connective tissue,FZD2,WNT6,0.394,0.006
+Mesenchyme,接收,38,FGFR4_TGFBR3,Connective tissue,TGFBR3,FGFR4,0.383,0.0
+Mesenchyme,接收,39,WNT6_FRZB,Connective tissue,FRZB,WNT6,0.364,0.002
+Mesenchyme,接收,40,L1CAM_integrin_a9b1_complex,Connective tissue,integrin,L1CAM,0.361,0.005
+Mesenchyme,接收,41,WNT6_FZD10_LRP6,Connective tissue,FZD10,WNT6,0.356,0.002
+Mesenchyme,接收,42,WNT6_FZD10_LRP5,Connective tissue,FZD10,WNT6,0.356,0.002
+Mesenchyme,接收,43,WNT6_FZD6_LRP6,Connective tissue,FZD6,WNT6,0.339,0.004
+Mesenchyme,接收,44,WNT6_FZD6_LRP5,Connective tissue,FZD6,WNT6,0.339,0.004
+Mesenchyme,接收,45,JAG2_VASN,Connective tissue,VASN,JAG2,0.338,0.003
+Mesenchyme,接收,46,JAG2_NOTCH3,Connective tissue,NOTCH3,JAG2,0.326,0.012
+Mesenchyme,接收,47,WNT6_FZD4_LRP5,Connective tissue,FZD4,WNT6,0.323,0.013
+Mesenchyme,接收,48,WNT6_FZD4_LRP6,Connective tissue,FZD4,WNT6,0.323,0.012
+Mesenchyme,接收,49,BMP6_BMPR1A_BMPR2,Connective tissue,BMPR1A,BMP6,0.319,0.011
+Mesenchyme,接收,50,LPAR2_ADGRE5,Connective tissue,ADGRE5,LPAR2,0.308,0.004
+Mesenchyme,接收,51,DSC2_DSG2,Connective tissue,DSG2,DSC2,0.307,0.04
+Mesenchyme,接收,52,TENM1_ADGRL1,Connective tissue,ADGRL1,TENM1,0.263,0.017
+Mesenchyme,接收,53,L1CAM_integrin_aVb1_complex,Connective tissue,integrin,L1CAM,0.26,0.042
+Mesenchyme,接收,54,BMP6_BMR1A_AVR2B,Connective tissue,BMR1A,BMP6,0.248,0.016
+Mesenchyme,接收,55,BMP6_BMR1A_ACR2A,Connective tissue,BMR1A,BMP6,0.223,0.024
+Mesenchyme,接收,56,BMP6_ACVR_1A2A_receptor,Connective tissue,ACVR,BMP6,0.206,0.02
+Mesenchyme,接收,57,BMP6_ACVR1_BMPR2,Connective tissue,ACVR1,BMP6,0.206,0.022
+Mesenchyme,接收,58,BMP6_ACVR_1A2B_receptor,Connective tissue,ACVR,BMP6,0.206,0.021
+Mesenchyme,接收,59,NRG2_ERBB3,Connective tissue,ERBB3,NRG2,0.199,0.011
+Mesenchyme,接收,60,TENM1_ADGRL3,Connective tissue,ADGRL3,TENM1,0.196,0.034
+Mesenchyme,接收,61,WNT4_FZD10_LRP6,Connective tissue,FZD10,WNT4,0.179,0.048
+Mesenchyme,接收,62,WNT4_FZD10_LRP5,Connective tissue,FZD10,WNT4,0.179,0.048
+Mesenchyme,接收,63,COL5A3_integrin_a11b1_complex,Connective tissue,integrin,COL5A3,0.176,0.002
+Mesenchyme,接收,64,PI16_TNFRSF21,Connective tissue,TNFRSF21,PI16,0.152,0.015
+Mesenchyme,接收,65,VEGFD_FLT4,Connective tissue,FLT4,VEGFD,0.147,0.046
+Mesenchyme,接收,66,COL8A1_integrin_a11b1_complex,Connective tissue,integrin,COL8A1,0.129,0.031

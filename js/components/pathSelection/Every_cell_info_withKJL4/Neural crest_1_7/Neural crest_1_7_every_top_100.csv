@@ -1,0 +1,1499 @@
+﻿邻居细胞,方向,排名,通道,目标细胞,目标细胞基因,邻居细胞基因,强度,显著性
+Brain,发送,1,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.359,0.0
+Brain,发送,2,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.266,0.0
+Brain,发送,3,MDK_PTPRZ1,Neural crest,MDK,PTPRZ1,1.179,0.0
+Brain,发送,4,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,1.063,0.0
+Brain,发送,5,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,0.9,0.0
+Brain,发送,6,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.894,0.0
+Brain,发送,7,DLK1_NOTCH1,Neural crest,DLK1,NOTCH1,0.874,0.0
+Brain,发送,8,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.768,0.0
+Brain,发送,9,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.761,0.0
+Brain,发送,10,DLK1_NOTCH2,Neural crest,DLK1,NOTCH2,0.759,0.049
+Brain,发送,11,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.745,0.0
+Brain,发送,12,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.738,0.0
+Brain,发送,13,DLK1_NOTCH3,Neural crest,DLK1,NOTCH3,0.731,0.0
+Brain,发送,14,CADM1_CADM1,Neural crest,CADM1,CADM1,0.723,0.01
+Brain,发送,15,TENM3_ADGRL2,Neural crest,TENM3,ADGRL2,0.706,0.0
+Brain,发送,16,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.7,0.0
+Brain,发送,17,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.693,0.0
+Brain,发送,18,CADM1_NECTIN3,Neural crest,CADM1,NECTIN3,0.688,0.008
+Brain,发送,19,TENM4_ADGRL2,Neural crest,TENM4,ADGRL2,0.663,0.0
+Brain,发送,20,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.663,0.0
+Brain,发送,21,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.649,0.0
+Brain,发送,22,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.643,0.0
+Brain,发送,23,CDH2_CDH2,Neural crest,CDH2,CDH2,0.632,0.0
+Brain,发送,24,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.628,0.0
+Brain,发送,25,APP_FPR2,Neural crest,APP,FPR2,0.614,0.0
+Brain,发送,26,NECTIN2_NECTIN3,Neural crest,NECTIN2,NECTIN3,0.589,0.0
+Brain,发送,27,EFNA5_EPHB2,Neural crest,EFNA5,EPHB2,0.581,0.0
+Brain,发送,28,FLRT3_ADGRL2,Neural crest,FLRT3,ADGRL2,0.575,0.0
+Brain,发送,29,APP_TNFRSF21,Neural crest,APP,TNFRSF21,0.543,0.0
+Brain,发送,30,EFNA5_EPHA3,Neural crest,EFNA5,EPHA3,0.513,0.0
+Brain,发送,31,EFNA5_EPHA4,Neural crest,EFNA5,EPHA4,0.511,0.0
+Brain,发送,32,WNT5A_SFRP1,Neural crest,WNT5A,SFRP1,0.509,0.0
+Brain,发送,33,NTN1_DCC,Neural crest,NTN1,DCC,0.508,0.0
+Brain,发送,34,BMPR1B_BMPR2_BMPR1A,Neural crest,BMPR1B,BMPR2,0.494,0.0
+Brain,发送,35,TENM2_FLRT3_complex_ADGRL2,Neural crest,TENM2,FLRT3,0.477,0.0
+Brain,发送,36,TENM2_ADGRL2,Neural crest,TENM2,ADGRL2,0.477,0.0
+Brain,发送,37,PTN_PTPRZ1,Neural crest,PTN,PTPRZ1,0.456,0.001
+Brain,发送,38,LAMC1_integrin_a6b1_complex,Neural crest,LAMC1,integrin,0.454,0.0
+Brain,发送,39,WNT5A_SFRP2,Neural crest,WNT5A,SFRP2,0.45,0.0
+Brain,发送,40,CXCL12_CXCR4,Neural crest,CXCL12,CXCR4,0.448,0.0
+Brain,发送,41,EFNB3_EPHB2,Neural crest,EFNB3,EPHB2,0.439,0.007
+Brain,发送,42,EFNB2_EPHB2,Neural crest,EFNB2,EPHB2,0.435,0.0
+Brain,发送,43,EFNB1_EPHB2,Neural crest,EFNB1,EPHB2,0.434,0.0
+Brain,发送,44,WNT5B_SFRP1,Neural crest,WNT5B,SFRP1,0.432,0.0
+Brain,发送,45,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.431,0.0
+Brain,发送,46,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.424,0.0
+Brain,发送,47,EFNA5_EPHA5,Neural crest,EFNA5,EPHA5,0.417,0.0
+Brain,发送,48,JAG1_NOTCH1,Neural crest,JAG1,NOTCH1,0.397,0.0
+Brain,发送,49,WNT7B_SFRP1,Neural crest,WNT7B,SFRP1,0.394,0.016
+Brain,发送,50,WNT5B_SFRP2,Neural crest,WNT5B,SFRP2,0.373,0.0
+Brain,发送,51,NCAM1_FGFR1,Neural crest,NCAM1,FGFR1,0.368,0.041
+Brain,发送,52,PTPRD_IL1RAPL1,Neural crest,PTPRD,IL1RAPL1,0.367,0.006
+Brain,发送,53,EFNB2_EPHA4,Neural crest,EFNB2,EPHA4,0.366,0.021
+Brain,发送,54,JAG2_NOTCH1,Neural crest,JAG2,NOTCH1,0.357,0.0
+Brain,发送,55,EFNA4_EPHA3,Neural crest,EFNA4,EPHA3,0.336,0.0
+Brain,发送,56,WNT7B_SFRP2,Neural crest,WNT7B,SFRP2,0.335,0.0
+Brain,发送,57,EFNA4_EPHA4,Neural crest,EFNA4,EPHA4,0.334,0.0
+Brain,发送,58,WNT5A_FZD3_LRP5,Neural crest,WNT5A,FZD3,0.334,0.0
+Brain,发送,59,WNT5A_FZD2_LRP5,Neural crest,WNT5A,FZD2,0.334,0.0
+Brain,发送,60,Glutamate_byGLS_and_SLC1A3_GRIK2,Neural crest,Glutamate,byGLS,0.324,0.0
+Brain,发送,61,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.322,0.0
+Brain,发送,62,BMP4_BMR1A_AVR2B,Neural crest,BMP4,BMR1A,0.319,0.0
+Brain,发送,63,COL1A1_integrin_a11b1_complex,Neural crest,COL1A1,integrin,0.315,0.0
+Brain,发送,64,BMP4_BMR1A_ACR2A,Neural crest,BMP4,BMR1A,0.309,0.0
+Brain,发送,65,NRG3_ERBB4,Neural crest,NRG3,ERBB4,0.304,0.0
+Brain,发送,66,TGM2_ADGRG1,Neural crest,TGM2,ADGRG1,0.301,0.0
+Brain,发送,67,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.297,0.0
+Brain,发送,68,WNT5A_FZD10_LRP5,Neural crest,WNT5A,FZD10,0.295,0.0
+Brain,发送,69,WNT5A_FZD10_LRP6,Neural crest,WNT5A,FZD10,0.295,0.0
+Brain,发送,70,COL26A1_integrin_a11b1_complex,Neural crest,COL26A1,integrin,0.291,0.0
+Brain,发送,71,IGFBP3_TMEM219,Neural crest,IGFBP3,TMEM219,0.286,0.0
+Brain,发送,72,FGF8_FGFR3,Neural crest,FGF8,FGFR3,0.283,0.0
+Brain,发送,73,EFNA2_EPHA3,Neural crest,EFNA2,EPHA3,0.282,0.0
+Brain,发送,74,BMP7_BMR1A_AVR2B,Neural crest,BMP7,BMR1A,0.276,0.0
+Brain,发送,75,EFNA1_EPHA3,Neural crest,EFNA1,EPHA3,0.271,0.0
+Brain,发送,76,EFNA1_EPHA4,Neural crest,EFNA1,EPHA4,0.268,0.0
+Brain,发送,77,BMP7_BMR1A_ACR2A,Neural crest,BMP7,BMR1A,0.265,0.0
+Brain,发送,78,EFNB2_EPHB1,Neural crest,EFNB2,EPHB1,0.261,0.007
+Brain,发送,79,WNT5B_FZD3_LRP5,Neural crest,WNT5B,FZD3,0.257,0.008
+Brain,发送,80,WNT5B_FZD2_LRP5,Neural crest,WNT5B,FZD2,0.257,0.008
+Brain,发送,81,Glutamate_byGLS_and_SLC1A3_GRIK3,Neural crest,Glutamate,byGLS,0.246,0.0
+Brain,发送,82,integrin_aVb5_complex_ADGRB1,Neural crest,integrin,aVb5,0.245,0.0
+Brain,发送,83,EFNA4_EPHA5,Neural crest,EFNA4,EPHA5,0.241,0.0
+Brain,发送,84,COL11A1_integrin_a11b1_complex,Neural crest,COL11A1,integrin,0.236,0.032
+Brain,发送,85,WNT5A_FZD8_LRP6,Neural crest,WNT5A,FZD8,0.235,0.017
+Brain,发送,86,WNT5A_FZD8_LRP5,Neural crest,WNT5A,FZD8,0.235,0.017
+Brain,发送,87,WNT5A_FDZ8_RYK,Neural crest,WNT5A,FDZ8,0.235,0.017
+Brain,发送,88,COL9A1_integrin_a1b1_complex,Neural crest,COL9A1,integrin,0.235,0.002
+Brain,发送,89,BMP5_BMR1A_AVR2B,Neural crest,BMP5,BMR1A,0.232,0.002
+Brain,发送,90,COL5A1_integrin_a11b1_complex,Neural crest,COL5A1,integrin,0.232,0.014
+Brain,发送,91,Glutamate_byGLS_and_SLC1A3_GRIA4,Neural crest,Glutamate,byGLS,0.229,0.015
+Brain,发送,92,COL9A1_integrin_a11b1_complex,Neural crest,COL9A1,integrin,0.228,0.0
+Brain,发送,93,GDF11_TGFR_AVR2B,Neural crest,GDF11,TGFR,0.222,0.006
+Brain,发送,94,BMP5_BMR1A_ACR2A,Neural crest,BMP5,BMR1A,0.221,0.001
+Brain,发送,95,WNT5B_FZD10_LRP5,Neural crest,WNT5B,FZD10,0.219,0.0
+Brain,发送,96,WNT5B_FZD10_LRP6,Neural crest,WNT5B,FZD10,0.219,0.0
+Brain,发送,97,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.219,0.004
+Brain,发送,98,JAG2_NOTCH3,Neural crest,JAG2,NOTCH3,0.214,0.0
+Brain,发送,99,CD248_IL6R,Neural crest,CD248,IL6R,0.213,0.0
+Brain,发送,100,GDF11_TGFR_AVR2A,Neural crest,GDF11,TGFR,0.212,0.01
+Brain,接收,1,PPIA_BSG,Neural crest,BSG,PPIA,1.165,0.0
+Brain,接收,2,CADM1_CADM1,Neural crest,CADM1,CADM1,0.723,0.01
+Brain,接收,3,TENM3_ADGRL2,Neural crest,ADGRL2,TENM3,0.674,0.011
+Brain,接收,4,CDH2_CDH2,Neural crest,CDH2,CDH2,0.632,0.0
+Brain,接收,5,Cholesterol_byDHCR24_RORA,Neural crest,byDHCR24,Cholesterol,0.614,0.003
+Brain,接收,6,EFNA5_EPHA7,Neural crest,EPHA7,EFNA5,0.576,0.0
+Brain,接收,7,TENM3_ADGRL1,Neural crest,ADGRL1,TENM3,0.507,0.0
+Brain,接收,8,TENM3_ADGRL3,Neural crest,ADGRL3,TENM3,0.491,0.002
+Brain,接收,9,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.456,0.0
+Brain,接收,10,PTN_PTPRZ1,Neural crest,PTPRZ1,PTN,0.446,0.018
+Brain,接收,11,NRXN1_DAG1,Neural crest,DAG1,NRXN1,0.443,0.041
+Brain,接收,12,NRXN2_DAG1,Neural crest,DAG1,NRXN2,0.433,0.027
+Brain,接收,13,WNT7B_SFRP1,Neural crest,SFRP1,WNT7B,0.432,0.0
+Brain,接收,14,EFNA4_EPHA7,Neural crest,EPHA7,EFNA4,0.415,0.0
+Brain,接收,15,EFNB1_EPHA4,Neural crest,EPHA4,EFNB1,0.412,0.0
+Brain,接收,16,LRFN4_PTPRD,Neural crest,PTPRD,LRFN4,0.401,0.001
+Brain,接收,17,EFNB1_EPHB4,Neural crest,EPHB4,EFNB1,0.395,0.0
+Brain,接收,18,EFNB1_EPHB2,Neural crest,EPHB2,EFNB1,0.393,0.048
+Brain,接收,19,DLL1_NOTCH2,Neural crest,NOTCH2,DLL1,0.387,0.0
+Brain,接收,20,NTN1_UNC5C,Neural crest,UNC5C,NTN1,0.382,0.021
+Brain,接收,21,LRRC4B_PTPRD,Neural crest,PTPRD,LRRC4B,0.367,0.0
+Brain,接收,22,JAM2_JAM3,Neural crest,JAM3,JAM2,0.366,0.044
+Brain,接收,23,JAG1_NOTCH2,Neural crest,NOTCH2,JAG1,0.365,0.0
+Brain,接收,24,EFNB1_EPHB3,Neural crest,EPHB3,EFNB1,0.361,0.0
+Brain,接收,25,WNT7B_SFRP2,Neural crest,SFRP2,WNT7B,0.359,0.0
+Brain,接收,26,WNT7B_FZD2_LRP6,Neural crest,FZD2,WNT7B,0.35,0.0
+Brain,接收,27,WNT7B_FZD3_LRP6,Neural crest,FZD3,WNT7B,0.35,0.0
+Brain,接收,28,WNT7B_FZD7_LRP6,Neural crest,FZD7,WNT7B,0.35,0.0
+Brain,接收,29,WNT5A_ROR2,Neural crest,ROR2,WNT5A,0.35,0.0
+Brain,接收,30,VEGFA_KDR,Neural crest,KDR,VEGFA,0.343,0.001
+Brain,接收,31,WNT7B_FZD3_LRP5,Neural crest,FZD3,WNT7B,0.335,0.0
+Brain,接收,32,WNT7B_FZD2_LRP5,Neural crest,FZD2,WNT7B,0.335,0.0
+Brain,接收,33,WNT7B_FZD7_LRP5,Neural crest,FZD7,WNT7B,0.335,0.0
+Brain,接收,34,Cholesterol_byDHCR7_RORA,Neural crest,byDHCR7,Cholesterol,0.327,0.0
+Brain,接收,35,WNT7B_FRZB,Neural crest,FRZB,WNT7B,0.324,0.0
+Brain,接收,36,SLITRK5_PTPRS,Neural crest,PTPRS,SLITRK5,0.322,0.014
+Brain,接收,37,EFNB2_EPHB4,Neural crest,EPHB4,EFNB2,0.321,0.01
+Brain,接收,38,VEGFB_FLT1_complex,Neural crest,FLT1,VEGFB,0.321,0.0
+Brain,接收,39,VEGFB_FLT1,Neural crest,FLT1,VEGFB,0.321,0.0
+Brain,接收,40,DLL3_NOTCH2,Neural crest,NOTCH2,DLL3,0.315,0.0
+Brain,接收,41,SEMA3E_PLXND1,Neural crest,PLXND1,SEMA3E,0.309,0.0
+Brain,接收,42,WNT7B_FZD1_LRP6,Neural crest,FZD1,WNT7B,0.305,0.0
+Brain,接收,43,WNT7B_FZD1_LRP5,Neural crest,FZD1,WNT7B,0.305,0.0
+Brain,接收,44,WNT5A_ROR1,Neural crest,ROR1,WNT5A,0.302,0.0
+Brain,接收,45,NLGN1_NRXN3,Neural crest,NRXN3,NLGN1,0.297,0.0
+Brain,接收,46,EFNB2_EPHB3,Neural crest,EPHB3,EFNB2,0.287,0.021
+Brain,接收,47,VEGFB_NRP1,Neural crest,NRP1,VEGFB,0.283,0.0
+Brain,接收,48,WNT5A_FRZB,Neural crest,FRZB,WNT5A,0.282,0.049
+Brain,接收,49,SEMA4D_PLXNB2,Neural crest,PLXNB2,SEMA4D,0.281,0.008
+Brain,接收,50,WNT7B_FZD4_LRP6,Neural crest,FZD4,WNT7B,0.275,0.0
+Brain,接收,51,WNT7B_FZD4_LRP5,Neural crest,FZD4,WNT7B,0.275,0.0
+Brain,接收,52,DLL1_NOTCH3,Neural crest,NOTCH3,DLL1,0.275,0.0
+Brain,接收,53,Cholesterol_byLIPA_RORA,Neural crest,byLIPA,Cholesterol,0.273,0.031
+Brain,接收,54,SEMA4C_PLXNB2,Neural crest,PLXNB2,SEMA4C,0.271,0.042
+Brain,接收,55,VEGFA_FLT1_complex,Neural crest,FLT1,VEGFA,0.262,0.008
+Brain,接收,56,VEGFA_FLT1,Neural crest,FLT1,VEGFA,0.262,0.008
+Brain,接收,57,WNT7B_FZD10_LRP5,Neural crest,FZD10,WNT7B,0.259,0.0
+Brain,接收,58,WNT7B_FZD10_LRP6,Neural crest,FZD10,WNT7B,0.259,0.0
+Brain,接收,59,WNT7B_FZD6_LRP5,Neural crest,FZD6,WNT7B,0.258,0.0
+Brain,接收,60,WNT7B_FZD6_LRP6,Neural crest,FZD6,WNT7B,0.258,0.0
+Brain,接收,61,WNT5B_FZD7_LRP6,Neural crest,FZD7,WNT5B,0.257,0.032
+Brain,接收,62,WNT7B_FZD8_LRP6,Neural crest,FZD8,WNT7B,0.254,0.0
+Brain,接收,63,WNT7B_FZD8_LRP5,Neural crest,FZD8,WNT7B,0.254,0.0
+Brain,接收,64,TENM2_FLRT3_complex_ADGRL1,Neural crest,FLRT3,TENM2,0.25,0.0
+Brain,接收,65,TENM2_ADGRL1,Neural crest,ADGRL1,TENM2,0.25,0.0
+Brain,接收,66,SEMA6A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA6A,0.25,0.044
+Brain,接收,67,VEGFA_NRP2,Neural crest,NRP2,VEGFA,0.249,0.041
+Brain,接收,68,JAM2_integrin_a4b1_complex,Neural crest,integrin,JAM2,0.247,0.0
+Brain,接收,69,CLSTN1_NRXN3,Neural crest,NRXN3,CLSTN1,0.246,0.025
+Brain,接收,70,RSPO3_LGR4,Neural crest,LGR4,RSPO3,0.237,0.015
+Brain,接收,71,Glutamate_byGLS_and_SLC1A2_GRIK2,Neural crest,byGLS,Glutamate,0.233,0.0
+Brain,接收,72,WNT5A_FZD4_LRP6,Neural crest,FZD4,WNT5A,0.233,0.041
+Brain,接收,73,WNT5A_FZD4_LRP5,Neural crest,FZD4,WNT5A,0.233,0.041
+Brain,接收,74,WNT5B_FRZB,Neural crest,FRZB,WNT5B,0.231,0.0
+Brain,接收,75,Glutamate_byGLS_and_SLC1A2_GRM7,Neural crest,byGLS,Glutamate,0.224,0.0
+Brain,接收,76,VEGFA_NRP1,Neural crest,NRP1,VEGFA,0.224,0.003
+Brain,接收,77,NRXN1_ADGRL1,Neural crest,ADGRL1,NRXN1,0.207,0.0
+Brain,接收,78,DLL3_NOTCH3,Neural crest,NOTCH3,DLL3,0.202,0.008
+Brain,接收,79,NRXN2_ADGRL1,Neural crest,ADGRL1,NRXN2,0.197,0.0
+Brain,接收,80,RSPO1_LGR4,Neural crest,LGR4,RSPO1,0.189,0.002
+Brain,接收,81,WNT7A_FZD7_LRP6,Neural crest,FZD7,WNT7A,0.188,0.0
+Brain,接收,82,WNT7A_FZD2_LRP6,Neural crest,FZD2,WNT7A,0.188,0.001
+Brain,接收,83,WNT7A_FZD3_LRP6,Neural crest,FZD3,WNT7A,0.188,0.001
+Brain,接收,84,WNT5B_FZD4_LRP6,Neural crest,FZD4,WNT5B,0.182,0.0
+Brain,接收,85,WNT5B_FZD4_LRP5,Neural crest,FZD4,WNT5B,0.182,0.0
+Brain,接收,86,JAG1_VASN,Neural crest,VASN,JAG1,0.181,0.0
+Brain,接收,87,COL4A5_integrin_a1b1_complex,Neural crest,integrin,COL4A5,0.177,0.0
+Brain,接收,88,WNT7A_FZD7_LRP5,Neural crest,FZD7,WNT7A,0.173,0.004
+Brain,接收,89,WNT7A_FZD2_LRP5,Neural crest,FZD2,WNT7A,0.173,0.009
+Brain,接收,90,WNT7A_FZD3_LRP5,Neural crest,FZD3,WNT7A,0.173,0.009
+Brain,接收,91,Glutamate_byGLS_and_SLC1A2_GRIA4,Neural crest,byGLS,Glutamate,0.167,0.0
+Brain,接收,92,WNT5B_FZD6_LRP6,Neural crest,FZD6,WNT5B,0.165,0.005
+Brain,接收,93,WNT5B_FZD6_LRP5,Neural crest,FZD6,WNT5B,0.165,0.005
+Brain,接收,94,COL4A5_integrin_a11b1_complex,Neural crest,integrin,COL4A5,0.163,0.0
+Brain,接收,95,WNT7A_FRZB,Neural crest,FRZB,WNT7A,0.162,0.0
+Brain,接收,96,Glutamate_byGLS_and_SLC1A2_GRIK3,Neural crest,byGLS,Glutamate,0.148,0.0
+Brain,接收,97,WNT7A_FZD1_LRP5,Neural crest,FZD1,WNT7A,0.143,0.005
+Brain,接收,98,WNT7A_FZD1_LRP6,Neural crest,FZD1,WNT7A,0.143,0.005
+Brain,接收,99,Glutamate_byGLS_and_SLC1A2_GRIA3,Neural crest,byGLS,Glutamate,0.137,0.0
+Brain,接收,100,RSPO1_Kremen1_LRP6,Neural crest,Kremen1,RSPO1,0.136,0.0
+Branchial arch,发送,1,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.522,0.0
+Branchial arch,发送,2,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.447,0.0
+Branchial arch,发送,3,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,0.917,0.0
+Branchial arch,发送,4,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.908,0.0
+Branchial arch,发送,5,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,0.9,0.0
+Branchial arch,发送,6,FN1_integrin_aVb5_complex,Neural crest,FN1,integrin,0.828,0.0
+Branchial arch,发送,7,FN1_integrin_aVb1_complex,Neural crest,FN1,integrin,0.828,0.0
+Branchial arch,发送,8,DLK1_NOTCH2,Neural crest,DLK1,NOTCH2,0.809,0.002
+Branchial arch,发送,9,FN1_integrin_a3b1_complex,Neural crest,FN1,integrin,0.783,0.0
+Branchial arch,发送,10,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.777,0.007
+Branchial arch,发送,11,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.776,0.0
+Branchial arch,发送,12,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.767,0.0
+Branchial arch,发送,13,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.752,0.0
+Branchial arch,发送,14,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.744,0.0
+Branchial arch,发送,15,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.74,0.0
+Branchial arch,发送,16,DLK1_NOTCH3,Neural crest,DLK1,NOTCH3,0.73,0.001
+Branchial arch,发送,17,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.708,0.0
+Branchial arch,发送,18,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.699,0.0
+Branchial arch,发送,19,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.699,0.009
+Branchial arch,发送,20,TENM3_ADGRL2,Neural crest,TENM3,ADGRL2,0.694,0.039
+Branchial arch,发送,21,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.657,0.0
+Branchial arch,发送,22,NTN1_UNC5C,Neural crest,NTN1,UNC5C,0.655,0.0
+Branchial arch,发送,23,TENM4_ADGRL2,Neural crest,TENM4,ADGRL2,0.651,0.026
+Branchial arch,发送,24,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.649,0.0
+Branchial arch,发送,25,APP_FPR2,Neural crest,APP,FPR2,0.63,0.0
+Branchial arch,发送,26,NECTIN2_NECTIN3,Neural crest,NECTIN2,NECTIN3,0.595,0.003
+Branchial arch,发送,27,BMPR1B_BMPR2_BMPR1A,Neural crest,BMPR1B,BMPR2,0.578,0.0
+Branchial arch,发送,28,FLRT3_ADGRL2,Neural crest,FLRT3,ADGRL2,0.563,0.015
+Branchial arch,发送,29,EFNA5_EPHA4,Neural crest,EFNA5,EPHA4,0.555,0.0
+Branchial arch,发送,30,APP_TNFRSF21,Neural crest,APP,TNFRSF21,0.532,0.013
+Branchial arch,发送,31,TENM3_ADGRL3,Neural crest,TENM3,ADGRL3,0.525,0.0
+Branchial arch,发送,32,APP_PLXNA4,Neural crest,APP,PLXNA4,0.521,0.0
+Branchial arch,发送,33,GJC1_GJC1,Neural crest,GJC1,GJC1,0.516,0.022
+Branchial arch,发送,34,APP_SORL1,Neural crest,APP,SORL1,0.502,0.001
+Branchial arch,发送,35,DAG1_NRXN3,Neural crest,DAG1,NRXN3,0.495,0.018
+Branchial arch,发送,36,IGF1_IGF1R,Neural crest,IGF1,IGF1R,0.485,0.002
+Branchial arch,发送,37,IGF1_IGF1R_enhancerComGPC3,Neural crest,IGF1,IGF1R,0.485,0.002
+Branchial arch,发送,38,TENM3_ADGRL1,Neural crest,TENM3,ADGRL1,0.483,0.017
+Branchial arch,发送,39,TENM4_ADGRL3,Neural crest,TENM4,ADGRL3,0.481,0.001
+Branchial arch,发送,40,PDGFC_PDGFRA,Neural crest,PDGFC,PDGFRA,0.473,0.0
+Branchial arch,发送,41,BMP4_BMPR1A_BMPR2,Neural crest,BMP4,BMPR1A,0.457,0.0
+Branchial arch,发送,42,LAMC1_integrin_a6b1_complex,Neural crest,LAMC1,integrin,0.453,0.029
+Branchial arch,发送,43,VTN_integrin_aVb1_complex,Neural crest,VTN,integrin,0.447,0.001
+Branchial arch,发送,44,LRFN4_PTPRD,Neural crest,LRFN4,PTPRD,0.443,0.008
+Branchial arch,发送,45,TENM4_ADGRL1,Neural crest,TENM4,ADGRL1,0.44,0.011
+Branchial arch,发送,46,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.439,0.0
+Branchial arch,发送,47,PDGFA_PDGFRA,Neural crest,PDGFA,PDGFRA,0.431,0.0
+Branchial arch,发送,48,WNT5A_FRZB,Neural crest,WNT5A,FRZB,0.431,0.0
+Branchial arch,发送,49,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.43,0.009
+Branchial arch,发送,50,APLP2_PLXNA4,Neural crest,APLP2,PLXNA4,0.42,0.0
+Branchial arch,发送,51,BMP7_BMPR1A_BMPR2,Neural crest,BMP7,BMPR1A,0.414,0.0
+Branchial arch,发送,52,EFNB2_EPHA4,Neural crest,EFNB2,EPHA4,0.41,0.002
+Branchial arch,发送,53,EFNB1_EPHA4,Neural crest,EFNB1,EPHA4,0.409,0.018
+Branchial arch,发送,54,NTN1_UNC5B,Neural crest,NTN1,UNC5B,0.406,0.0
+Branchial arch,发送,55,CDH5_CDH5,Neural crest,CDH5,CDH5,0.403,0.0
+Branchial arch,发送,56,TENM3_FLRT3_complex_ADGRL3,Neural crest,TENM3,FLRT3,0.393,0.0
+Branchial arch,发送,57,FLRT3_ADGRL3,Neural crest,FLRT3,ADGRL3,0.393,0.0
+Branchial arch,发送,58,SDC1_ADGRA2,Neural crest,SDC1,ADGRA2,0.389,0.0
+Branchial arch,发送,59,WNT5A_FZD2_LRP6,Neural crest,WNT5A,FZD2,0.38,0.001
+Branchial arch,发送,60,WNT5A_FZD3_LRP6,Neural crest,WNT5A,FZD3,0.38,0.001
+Branchial arch,发送,61,WNT5A_FZD7_LRP6,Neural crest,WNT5A,FZD7,0.38,0.0
+Branchial arch,发送,62,EFNA4_EPHA4,Neural crest,EFNA4,EPHA4,0.379,0.0
+Branchial arch,发送,63,BMP5_BMPR1A_BMPR2,Neural crest,BMP5,BMPR1A,0.37,0.0
+Branchial arch,发送,64,EFNB2_EPHB4,Neural crest,EFNB2,EPHB4,0.365,0.0
+Branchial arch,发送,65,EFNB1_EPHB4,Neural crest,EFNB1,EPHB4,0.364,0.007
+Branchial arch,发送,66,WNT5B_FRZB,Neural crest,WNT5B,FRZB,0.354,0.0
+Branchial arch,发送,67,TENM4_FLRT3_complex_ADGRL1,Neural crest,TENM4,FLRT3,0.352,0.003
+Branchial arch,发送,68,WNT5A_FZD3_LRP5,Neural crest,WNT5A,FZD3,0.345,0.02
+Branchial arch,发送,69,WNT5A_FZD2_LRP5,Neural crest,WNT5A,FZD2,0.345,0.02
+Branchial arch,发送,70,WNT5A_FZD7_LRP5,Neural crest,WNT5A,FZD7,0.345,0.002
+Branchial arch,发送,71,EFNB2_EPHB3,Neural crest,EFNB2,EPHB3,0.336,0.0
+Branchial arch,发送,72,EFNB1_EPHB3,Neural crest,EFNB1,EPHB3,0.334,0.001
+Branchial arch,发送,73,COL1A1_integrin_a11b1_complex,Neural crest,COL1A1,integrin,0.33,0.0
+Branchial arch,发送,74,EFNA2_EPHA4,Neural crest,EFNA2,EPHA4,0.325,0.03
+Branchial arch,发送,75,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.321,0.004
+Branchial arch,发送,76,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.317,0.0
+Branchial arch,发送,77,WNT7B_FRZB,Neural crest,WNT7B,FRZB,0.316,0.0
+Branchial arch,发送,78,EFNA1_EPHA4,Neural crest,EFNA1,EPHA4,0.313,0.0
+Branchial arch,发送,79,THBS1_integrin_a3b1_complex,Neural crest,THBS1,integrin,0.309,0.0
+Branchial arch,发送,80,COL26A1_integrin_a11b1_complex,Neural crest,COL26A1,integrin,0.305,0.0
+Branchial arch,发送,81,WNT5B_FZD3_LRP6,Neural crest,WNT5B,FZD3,0.303,0.002
+Branchial arch,发送,82,WNT5B_FZD2_LRP6,Neural crest,WNT5B,FZD2,0.303,0.002
+Branchial arch,发送,83,WNT5B_FZD1_LRP6,Neural crest,WNT5B,FZD1,0.303,0.0
+Branchial arch,发送,84,WNT5B_FZD7_LRP6,Neural crest,WNT5B,FZD7,0.303,0.0
+Branchial arch,发送,85,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.297,0.013
+Branchial arch,发送,86,TENM2_ADGRL3,Neural crest,TENM2,ADGRL3,0.295,0.002
+Branchial arch,发送,87,VEGFA_NRP2,Neural crest,VEGFA,NRP2,0.286,0.009
+Branchial arch,发送,88,DKK2_LRP6,Neural crest,DKK2,LRP6,0.272,0.001
+Branchial arch,发送,89,WNT5B_FZD7_LRP5,Neural crest,WNT5B,FZD7,0.268,0.013
+Branchial arch,发送,90,WNT5B_FZD1_LRP5,Neural crest,WNT5B,FZD1,0.268,0.0
+Branchial arch,发送,91,COL5A2_integrin_a11b1_complex,Neural crest,COL5A2,integrin,0.268,0.027
+Branchial arch,发送,92,SDC2_ADGRA2,Neural crest,SDC2,ADGRA2,0.267,0.019
+Branchial arch,发送,93,LPAR1_ADGRE5,Neural crest,LPAR1,ADGRE5,0.266,0.019
+Branchial arch,发送,94,WNT7B_FZD1_LRP6,Neural crest,WNT7B,FZD1,0.265,0.0
+Branchial arch,发送,95,WNT7B_FZD7_LRP6,Neural crest,WNT7B,FZD7,0.265,0.027
+Branchial arch,发送,96,SEMA6A_PlexinA2_complex1,Neural crest,SEMA6A,PlexinA2,0.264,0.012
+Branchial arch,发送,97,NRXN3_ADGRL1,Neural crest,NRXN3,ADGRL1,0.255,0.01
+Branchial arch,发送,98,TENM2_FLRT3_complex_ADGRL1,Neural crest,TENM2,FLRT3,0.254,0.016
+Branchial arch,发送,99,TENM2_ADGRL1,Neural crest,TENM2,ADGRL1,0.254,0.016
+Branchial arch,发送,100,WNT5A_FZD4_LRP6,Neural crest,WNT5A,FZD4,0.254,0.009
+Branchial arch,接收,1,IGF2_IGF2R,Neural crest,IGF2R,IGF2,1.815,0.0
+Branchial arch,接收,2,IGF2_IGF1R,Neural crest,IGF1R,IGF2,1.785,0.0
+Branchial arch,接收,3,DLK1_NOTCH2,Neural crest,NOTCH2,DLK1,1.34,0.0
+Branchial arch,接收,4,DLK1_NOTCH1,Neural crest,NOTCH1,DLK1,1.285,0.0
+Branchial arch,接收,5,MDK_PTPRZ1,Neural crest,PTPRZ1,MDK,1.268,0.0
+Branchial arch,接收,6,DLK1_NOTCH3,Neural crest,NOTCH3,DLK1,1.228,0.0
+Branchial arch,接收,7,PPIA_BSG,Neural crest,BSG,PPIA,1.134,0.008
+Branchial arch,接收,8,FN1_integrin_aVb1_complex,Neural crest,integrin,FN1,0.926,0.0
+Branchial arch,接收,9,FN1_integrin_aVb5_complex,Neural crest,integrin,FN1,0.913,0.0
+Branchial arch,接收,10,COL18A1_integrin_a1b1_complex,Neural crest,integrin,COL18A1,0.825,0.0
+Branchial arch,接收,11,COL18A1_integrin_a11b1_complex,Neural crest,integrin,COL18A1,0.811,0.0
+Branchial arch,接收,12,FN1_integrin_a4b1_complex,Neural crest,integrin,FN1,0.808,0.0
+Branchial arch,接收,13,FN1_integrin_a3b1_complex,Neural crest,integrin,FN1,0.806,0.0
+Branchial arch,接收,14,FN1_integrin_a11b1_complex,Neural crest,integrin,FN1,0.803,0.0
+Branchial arch,接收,15,FN1_integrin_a8b1_complex,Neural crest,integrin,FN1,0.794,0.0
+Branchial arch,接收,16,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.777,0.007
+Branchial arch,接收,17,COL2A1_integrin_a1b1_complex,Neural crest,integrin,COL2A1,0.707,0.028
+Branchial arch,接收,18,COL2A1_integrin_a11b1_complex,Neural crest,integrin,COL2A1,0.692,0.034
+Branchial arch,接收,19,PDGFC_PDGFRA,Neural crest,PDGFRA,PDGFC,0.635,0.0
+Branchial arch,接收,20,EFNA5_EPHA7,Neural crest,EPHA7,EFNA5,0.618,0.002
+Branchial arch,接收,21,APP_FPR2,Neural crest,FPR2,APP,0.617,0.009
+Branchial arch,接收,22,APP_TNFRSF21,Neural crest,TNFRSF21,APP,0.564,0.005
+Branchial arch,接收,23,FLRT3_ADGRL2,Neural crest,ADGRL2,FLRT3,0.55,0.021
+Branchial arch,接收,24,PTN_PTPRZ1,Neural crest,PTPRZ1,PTN,0.548,0.0
+Branchial arch,接收,25,EFNA4_EPHA7,Neural crest,EPHA7,EFNA4,0.524,0.0
+Branchial arch,接收,26,APP_SORL1,Neural crest,SORL1,APP,0.521,0.003
+Branchial arch,接收,27,GJC1_GJC1,Neural crest,GJC1,GJC1,0.516,0.022
+Branchial arch,接收,28,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.472,0.0
+Branchial arch,接收,29,IGF1_IGF1R,Neural crest,IGF1R,IGF1,0.46,0.006
+Branchial arch,接收,30,IGF1_IGF1R_enhancerComGPC3,Neural crest,IGF1R,IGF1,0.46,0.006
+Branchial arch,接收,31,SEMA3A_PlexinA1_complex3,Neural crest,PlexinA1,SEMA3A,0.456,0.0
+Branchial arch,接收,32,SEMA3A_NRP1,Neural crest,NRP1,SEMA3A,0.456,0.0
+Branchial arch,接收,33,SEMA3A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA3A,0.453,0.0
+Branchial arch,接收,34,LRFN4_PTPRD,Neural crest,PTPRD,LRFN4,0.428,0.001
+Branchial arch,接收,35,EFNA1_EPHA7,Neural crest,EPHA7,EFNA1,0.427,0.0
+Branchial arch,接收,36,PTPRD_IL1RAPL1,Neural crest,IL1RAPL1,PTPRD,0.416,0.006
+Branchial arch,接收,37,VEGFA_KDR,Neural crest,KDR,VEGFA,0.415,0.0
+Branchial arch,接收,38,CDH5_CDH5,Neural crest,CDH5,CDH5,0.403,0.0
+Branchial arch,接收,39,PDGFA_PDGFRA,Neural crest,PDGFRA,PDGFA,0.4,0.0
+Branchial arch,接收,40,BMP4_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP4,0.399,0.001
+Branchial arch,接收,41,COL9A1_integrin_a1b1_complex,Neural crest,integrin,COL9A1,0.384,0.0
+Branchial arch,接收,42,Cholesterol_byLIPA_RORA,Neural crest,byLIPA,Cholesterol,0.37,0.0
+Branchial arch,接收,43,COL9A1_integrin_a11b1_complex,Neural crest,integrin,COL9A1,0.369,0.0
+Branchial arch,接收,44,TENM3_FLRT3_complex_ADGRL3,Neural crest,FLRT3,TENM3,0.368,0.008
+Branchial arch,接收,45,FLRT3_ADGRL3,Neural crest,ADGRL3,FLRT3,0.368,0.008
+Branchial arch,接收,46,EFNA4_EPHA4,Neural crest,EPHA4,EFNA4,0.36,0.0
+Branchial arch,接收,47,TENM4_FLRT3_complex_ADGRL1,Neural crest,FLRT3,TENM4,0.359,0.002
+Branchial arch,接收,48,VEGFC_KDR,Neural crest,KDR,VEGFC,0.358,0.0
+Branchial arch,接收,49,COL5A2_integrin_a1b1_complex,Neural crest,integrin,COL5A2,0.348,0.0
+Branchial arch,接收,50,GDF6_BMPR1A_BMPR2,Neural crest,BMPR1A,GDF6,0.337,0.0
+Branchial arch,接收,51,COL5A2_integrin_a11b1_complex,Neural crest,integrin,COL5A2,0.334,0.0
+Branchial arch,接收,52,VEGFA_FLT1_complex,Neural crest,FLT1,VEGFA,0.333,0.0
+Branchial arch,接收,53,VEGFA_FLT1,Neural crest,FLT1,VEGFA,0.333,0.0
+Branchial arch,接收,54,VCAM1_integrin_a9b1_complex,Neural crest,integrin,VCAM1,0.331,0.0
+Branchial arch,接收,55,BMP4_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP4,0.331,0.0
+Branchial arch,接收,56,DKK1_LRP6,Neural crest,LRP6,DKK1,0.327,0.0
+Branchial arch,接收,57,SEMA4C_PLXNB2,Neural crest,PLXNB2,SEMA4C,0.323,0.0
+Branchial arch,接收,58,BMP4_BMR1A_ACR2A,Neural crest,BMR1A,BMP4,0.321,0.0
+Branchial arch,接收,59,BMP4_BMR1B_AVR2A,Neural crest,BMR1B,BMP4,0.321,0.0
+Branchial arch,接收,60,VEGFA_NRP2,Neural crest,NRP2,VEGFA,0.32,0.0
+Branchial arch,接收,61,BMP4_BMR1B_AVR2B,Neural crest,BMR1B,BMP4,0.319,0.0
+Branchial arch,接收,62,BMP4_BMR1A_AVR2B,Neural crest,BMR1A,BMP4,0.319,0.002
+Branchial arch,接收,63,COL26A1_integrin_a1b1_complex,Neural crest,integrin,COL26A1,0.319,0.006
+Branchial arch,接收,64,DKK1_LRP5,Neural crest,LRP5,DKK1,0.312,0.0
+Branchial arch,接收,65,Cholesterol_byDHCR7_RORA,Neural crest,byDHCR7,Cholesterol,0.311,0.048
+Branchial arch,接收,66,SEMA6A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA6A,0.31,0.0
+Branchial arch,接收,67,SEMA4D_PLXNB2,Neural crest,PLXNB2,SEMA4D,0.307,0.003
+Branchial arch,接收,68,COL11A1_integrin_a1b1_complex,Neural crest,integrin,COL11A1,0.305,0.001
+Branchial arch,接收,69,integrin_aVb1_complex_ADGRE5,Neural crest,aVb1,integrin,0.304,0.0
+Branchial arch,接收,70,COL26A1_integrin_a11b1_complex,Neural crest,integrin,COL26A1,0.304,0.007
+Branchial arch,接收,71,JAG2_NOTCH2,Neural crest,NOTCH2,JAG2,0.295,0.014
+Branchial arch,接收,72,LPAR1_ADGRE5,Neural crest,ADGRE5,LPAR1,0.295,0.003
+Branchial arch,接收,73,VEGFA_NRP1,Neural crest,NRP1,VEGFA,0.295,0.0
+Branchial arch,接收,74,COL11A1_integrin_a11b1_complex,Neural crest,integrin,COL11A1,0.291,0.0
+Branchial arch,接收,75,EFNA4_EPHA3,Neural crest,EPHA3,EFNA4,0.29,0.003
+Branchial arch,接收,76,VEGFB_NRP1,Neural crest,NRP1,VEGFB,0.284,0.024
+Branchial arch,接收,77,GDF6_BMPR1B_BMPR2,Neural crest,BMPR1B,GDF6,0.269,0.0
+Branchial arch,接收,78,DKK1_Kremen1_LRP6,Neural crest,Kremen1,DKK1,0.265,0.0
+Branchial arch,接收,79,EFNA1_EPHA4,Neural crest,EPHA4,EFNA1,0.264,0.026
+Branchial arch,接收,80,GDF6_BMR1A_ACR2A,Neural crest,BMR1A,GDF6,0.259,0.0
+Branchial arch,接收,81,GDF6_BMR1B_AVR2A,Neural crest,BMR1B,GDF6,0.259,0.0
+Branchial arch,接收,82,NRXN3_ADGRL1,Neural crest,ADGRL1,NRXN3,0.259,0.001
+Branchial arch,接收,83,GDF6_BMR1B_AVR2B,Neural crest,BMR1B,GDF6,0.257,0.0
+Branchial arch,接收,84,RSPO2_LGR4,Neural crest,LGR4,RSPO2,0.241,0.0
+Branchial arch,接收,85,CDH3_CDH3,Neural crest,CDH3,CDH3,0.24,0.0
+Branchial arch,接收,86,TGFB2_TGFBR3,Neural crest,TGFBR3,TGFB2,0.234,0.0
+Branchial arch,接收,87,TGFB2_TGFbeta_receptor1,Neural crest,TGFbeta,TGFB2,0.205,0.0
+Branchial arch,接收,88,TGFB2_TGFbeta_receptor2,Neural crest,TGFbeta,TGFB2,0.2,0.0
+Branchial arch,接收,89,BMP5_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP5,0.198,0.003
+Branchial arch,接收,90,VEGFC_FLT4,Neural crest,FLT4,VEGFC,0.19,0.0
+Branchial arch,接收,91,BMP5_BMR1B_AVR2A,Neural crest,BMR1B,BMP5,0.188,0.035
+Branchial arch,接收,92,BMP5_BMR1B_AVR2B,Neural crest,BMR1B,BMP5,0.186,0.045
+Branchial arch,接收,93,SEMA3F_NRP2,Neural crest,NRP2,SEMA3F,0.185,0.036
+Branchial arch,接收,94,COL13A1_integrin_a1b1_complex,Neural crest,integrin,COL13A1,0.166,0.024
+Branchial arch,接收,95,COL13A1_integrin_a11b1_complex,Neural crest,integrin,COL13A1,0.152,0.032
+Branchial arch,接收,96,VCAM1_integrin_a4b1_complex,Neural crest,integrin,VCAM1,0.144,0.036
+Branchial arch,接收,97,COL15A1_integrin_a1b1_complex,Neural crest,integrin,COL15A1,0.139,0.049
+Branchial arch,接收,98,COL4A6_integrin_a1b1_complex,Neural crest,integrin,COL4A6,0.137,0.025
+Branchial arch,接收,99,COL4A6_integrin_a11b1_complex,Neural crest,integrin,COL4A6,0.123,0.024
+Branchial arch,接收,100,IL34_CSF1R,Neural crest,CSF1R,IL34,0.12,0.013
+Cavity,发送,1,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.256,0.0
+Cavity,发送,2,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.232,0.0
+Cavity,发送,3,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,0.978,0.0
+Cavity,发送,4,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.627,0.0
+Cavity,发送,5,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.598,0.0
+Cavity,发送,6,APP_TNFRSF21,Neural crest,APP,TNFRSF21,0.521,0.033
+Cavity,接收,1,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.421,0.001
+Cavity,接收,2,VTN_integrin_aVb1_complex,Neural crest,integrin,VTN,0.406,0.035
+Cavity,接收,3,BMP7_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP7,0.334,0.005
+Cavity,接收,4,BMP7_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP7,0.265,0.001
+Cavity,接收,5,BMP7_BMR1B_AVR2A,Neural crest,BMR1B,BMP7,0.256,0.001
+Cavity,接收,6,BMP7_BMR1A_ACR2A,Neural crest,BMR1A,BMP7,0.256,0.042
+Cavity,接收,7,BMP7_BMR1B_AVR2B,Neural crest,BMR1B,BMP7,0.253,0.001
+Cavity,接收,8,RSPO1_LGR4,Neural crest,LGR4,RSPO1,0.203,0.001
+Cavity,接收,9,RSPO1_Kremen1_LRP6,Neural crest,Kremen1,RSPO1,0.15,0.0
+Cavity,接收,10,RSPO1_FZD8_LRP6,Neural crest,FZD8,RSPO1,0.116,0.0
+Heart,发送,1,IGF2_IGF2R,Neural crest,IGF2,IGF2R,2.085,0.0
+Heart,发送,2,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.444,0.0
+Heart,发送,3,PPIA_BSG,Neural crest,PPIA,BSG,1.25,0.001
+Heart,发送,4,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,1.149,0.0
+Heart,发送,5,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,1.016,0.0
+Heart,发送,6,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.993,0.0
+Heart,发送,7,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.948,0.0
+Heart,发送,8,FN1_integrin_aVb1_complex,Neural crest,FN1,integrin,0.941,0.0
+Heart,发送,9,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.898,0.0
+Heart,发送,10,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.889,0.0
+Heart,发送,11,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,0.887,0.026
+Heart,发送,12,COL4A1_ADGRG6,Neural crest,COL4A1,ADGRG6,0.861,0.0
+Heart,发送,13,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.849,0.012
+Heart,发送,14,APP_SORL1,Neural crest,APP,SORL1,0.783,0.0
+Heart,发送,15,FN1_integrin_aVb5_complex,Neural crest,FN1,integrin,0.773,0.021
+Heart,发送,16,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.756,0.0
+Heart,发送,17,FN1_integrin_a4b1_complex,Neural crest,FN1,integrin,0.734,0.006
+Heart,发送,18,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.733,0.0
+Heart,发送,19,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.689,0.044
+Heart,发送,20,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.679,0.0
+Heart,发送,21,APP_FPR2,Neural crest,APP,FPR2,0.659,0.008
+Heart,发送,22,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.657,0.0
+Heart,发送,23,NTN1_UNC5B,Neural crest,NTN1,UNC5B,0.654,0.0
+Heart,发送,24,APP_PLXNA4,Neural crest,APP,PLXNA4,0.651,0.0
+Heart,发送,25,LAMC1_integrin_a6b1_complex,Neural crest,LAMC1,integrin,0.646,0.0
+Heart,发送,26,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.638,0.0
+Heart,发送,27,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.605,0.006
+Heart,发送,28,COL19A1_integrin_a1b1_complex,Neural crest,COL19A1,integrin,0.574,0.0
+Heart,发送,29,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.571,0.0
+Heart,发送,30,VTN_integrin_aVb1_complex,Neural crest,VTN,integrin,0.56,0.0
+Heart,发送,31,DAG1_NRXN3,Neural crest,DAG1,NRXN3,0.554,0.009
+Heart,发送,32,APLP2_PLXNA4,Neural crest,APLP2,PLXNA4,0.55,0.0
+Heart,发送,33,COL4A2_ADGRG6,Neural crest,COL4A2,ADGRG6,0.547,0.0
+Heart,发送,34,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.546,0.0
+Heart,发送,35,COL5A2_integrin_a1b1_complex,Neural crest,COL5A2,integrin,0.509,0.0
+Heart,发送,36,COL11A1_integrin_a1b1_complex,Neural crest,COL11A1,integrin,0.491,0.0
+Heart,发送,37,COL5A1_integrin_a1b1_complex,Neural crest,COL5A1,integrin,0.487,0.0
+Heart,发送,38,COL9A1_integrin_a1b1_complex,Neural crest,COL9A1,integrin,0.484,0.0
+Heart,发送,39,SDC1_ADGRA2,Neural crest,SDC1,ADGRA2,0.467,0.0
+Heart,发送,40,NRG3_ERBB4,Neural crest,NRG3,ERBB4,0.456,0.0
+Heart,发送,41,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.419,0.049
+Heart,发送,42,BMP4_BMPR1A_BMPR2,Neural crest,BMP4,BMPR1A,0.408,0.037
+Heart,发送,43,COL13A1_integrin_a1b1_complex,Neural crest,COL13A1,integrin,0.391,0.0
+Heart,发送,44,VEGFB_FLT1,Neural crest,VEGFB,FLT1,0.373,0.032
+Heart,发送,45,COL12A1_integrin_a1b1_complex,Neural crest,COL12A1,integrin,0.366,0.0
+Heart,发送,46,COL4A5_integrin_a1b1_complex,Neural crest,COL4A5,integrin,0.361,0.0
+Heart,发送,47,BMP7_ACVR1_BMPR2,Neural crest,BMP7,ACVR1,0.361,0.0
+Heart,发送,48,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.359,0.0
+Heart,发送,49,NLGN1_NRXN3,Neural crest,NLGN1,NRXN3,0.358,0.021
+Heart,发送,50,COL15A1_integrin_a1b1_complex,Neural crest,COL15A1,integrin,0.355,0.0
+Heart,发送,51,COL27A1_integrin_a1b1_complex,Neural crest,COL27A1,integrin,0.35,0.0
+Heart,发送,52,COL6A2_integrin_a1b1_complex,Neural crest,COL6A2,integrin,0.35,0.0
+Heart,发送,53,SDC2_ADGRA2,Neural crest,SDC2,ADGRA2,0.345,0.001
+Heart,发送,54,LRPAP1_SORT1,Neural crest,LRPAP1,SORT1,0.343,0.047
+Heart,发送,55,VEGFA_FLT1,Neural crest,VEGFA,FLT1,0.33,0.026
+Heart,发送,56,VEGFA_NRP2,Neural crest,VEGFA,NRP2,0.328,0.018
+Heart,发送,57,SEMA3A_PlexinA4_complex1,Neural crest,SEMA3A,PlexinA4,0.317,0.0
+Heart,发送,58,SEMA3A_NRP1,Neural crest,SEMA3A,NRP1,0.317,0.001
+Heart,发送,59,BMP5_ACVR1_BMPR2,Neural crest,BMP5,ACVR1,0.317,0.0
+Heart,发送,60,CLSTN1_NRXN3,Neural crest,CLSTN1,NRXN3,0.316,0.024
+Heart,发送,61,LPAR1_ADGRE5,Neural crest,LPAR1,ADGRE5,0.315,0.006
+Heart,发送,62,VEGFB_NRP1,Neural crest,VEGFB,NRP1,0.312,0.034
+Heart,发送,63,integrin_aVb1_complex_ADGRE5,Neural crest,integrin,aVb1,0.296,0.009
+Heart,发送,64,WNT5A_FZD4_LRP5,Neural crest,WNT5A,FZD4,0.279,0.022
+Heart,发送,65,WNT5A_FZD6_LRP5,Neural crest,WNT5A,FZD6,0.279,0.009
+Heart,发送,66,LAMA2_ADGRG6,Neural crest,LAMA2,ADGRG6,0.278,0.0
+Heart,发送,67,WNT5A_FZD4_LRP6,Neural crest,WNT5A,FZD4,0.276,0.025
+Heart,发送,68,WNT5A_FZD6_LRP6,Neural crest,WNT5A,FZD6,0.276,0.016
+Heart,发送,69,SEMA3F_NRP2,Neural crest,SEMA3F,NRP2,0.273,0.007
+Heart,发送,70,VEGFA_NRP1,Neural crest,VEGFA,NRP1,0.27,0.027
+Heart,发送,71,WNT5A_SFRP5,Neural crest,WNT5A,SFRP5,0.255,0.0
+Heart,发送,72,SEMA3A_PlexinA2_complex1,Neural crest,SEMA3A,PlexinA2,0.234,0.042
+Heart,发送,73,COL4A5_ADGRG6,Neural crest,COL4A5,ADGRG6,0.229,0.0
+Heart,发送,74,SEMA3A_PlexinA3_complex1,Neural crest,SEMA3A,PlexinA3,0.228,0.007
+Heart,发送,75,BMP7_ACVR_1A2B_receptor,Neural crest,BMP7,ACVR,0.224,0.02
+Heart,发送,76,ANGPT1_TEK,Neural crest,ANGPT1,TEK,0.22,0.01
+Heart,发送,77,PRNP_ADGRG6,Neural crest,PRNP,ADGRG6,0.216,0.0
+Heart,发送,78,Glutamate_byGLS_and_SLC1A3_Glutamate_Kainate_2_5_complex,Neural crest,Glutamate,byGLS,0.215,0.027
+Heart,发送,79,VCAM1_integrin_a4b1_complex,Neural crest,VCAM1,integrin,0.214,0.011
+Heart,发送,80,TNC_integrin_a4b1_complex,Neural crest,TNC,integrin,0.212,0.006
+Heart,发送,81,WNT5B_FZD6_LRP5,Neural crest,WNT5B,FZD6,0.202,0.029
+Heart,发送,82,WNT5B_FZD6_LRP6,Neural crest,WNT5B,FZD6,0.2,0.035
+Heart,发送,83,PECAM1_CD38,Neural crest,PECAM1,CD38,0.2,0.014
+Heart,发送,84,CDH3_CDH3,Neural crest,CDH3,CDH3,0.187,0.004
+Heart,发送,85,BMP5_ACVR_1A2B_receptor,Neural crest,BMP5,ACVR,0.18,0.036
+Heart,发送,86,WNT5B_SFRP5,Neural crest,WNT5B,SFRP5,0.178,0.0
+Heart,发送,87,LPAR2_ADGRE5,Neural crest,LPAR2,ADGRE5,0.144,0.043
+Heart,发送,88,WNT7B_SFRP5,Neural crest,WNT7B,SFRP5,0.14,0.009
+Heart,发送,89,GDF11_ACVR_1B2B_receptor,Neural crest,GDF11,ACVR,0.125,0.042
+Heart,接收,1,IGF2_IGF2R,Neural crest,IGF2R,IGF2,2.027,0.0
+Heart,接收,2,IGF2_IGF1R,Neural crest,IGF1R,IGF2,1.997,0.0
+Heart,接收,3,FN1_integrin_aVb1_complex,Neural crest,integrin,FN1,1.377,0.0
+Heart,接收,4,FN1_integrin_aVb5_complex,Neural crest,integrin,FN1,1.364,0.0
+Heart,接收,5,FN1_integrin_a4b1_complex,Neural crest,integrin,FN1,1.259,0.0
+Heart,接收,6,FN1_integrin_a3b1_complex,Neural crest,integrin,FN1,1.258,0.0
+Heart,接收,7,FN1_integrin_a11b1_complex,Neural crest,integrin,FN1,1.254,0.0
+Heart,接收,8,FN1_integrin_a8b1_complex,Neural crest,integrin,FN1,1.245,0.0
+Heart,接收,9,COL2A1_integrin_a1b1_complex,Neural crest,integrin,COL2A1,1.136,0.0
+Heart,接收,10,COL2A1_integrin_a11b1_complex,Neural crest,integrin,COL2A1,1.122,0.0
+Heart,接收,11,DLK1_NOTCH2,Neural crest,NOTCH2,DLK1,0.985,0.002
+Heart,接收,12,COL18A1_integrin_a1b1_complex,Neural crest,integrin,COL18A1,0.951,0.0
+Heart,接收,13,TNC_integrin_a9b1_complex,Neural crest,integrin,TNC,0.937,0.0
+Heart,接收,14,COL18A1_integrin_a11b1_complex,Neural crest,integrin,COL18A1,0.936,0.0
+Heart,接收,15,DLK1_NOTCH1,Neural crest,NOTCH1,DLK1,0.929,0.018
+Heart,接收,16,DLK1_NOTCH3,Neural crest,NOTCH3,DLK1,0.873,0.004
+Heart,接收,17,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.849,0.012
+Heart,接收,18,APP_FPR2,Neural crest,FPR2,APP,0.778,0.0
+Heart,接收,19,TNC_integrin_a4b1_complex,Neural crest,integrin,TNC,0.75,0.0
+Heart,接收,20,TNC_integrin_a8b1_complex,Neural crest,integrin,TNC,0.736,0.0
+Heart,接收,21,APP_TNFRSF21,Neural crest,TNFRSF21,APP,0.726,0.0
+Heart,接收,22,DAG1_NRXN3,Neural crest,NRXN3,DAG1,0.7,0.0
+Heart,接收,23,Cholesterol_byDHCR24_RORA,Neural crest,byDHCR24,Cholesterol,0.693,0.038
+Heart,接收,24,BMP4_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP4,0.685,0.0
+Heart,接收,25,APP_SORL1,Neural crest,SORL1,APP,0.682,0.0
+Heart,接收,26,LAMC1_integrin_a6b1_complex,Neural crest,integrin,LAMC1,0.666,0.0
+Heart,接收,27,BMP4_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP4,0.616,0.0
+Heart,接收,28,BMP4_BMR1A_ACR2A,Neural crest,BMR1A,BMP4,0.607,0.0
+Heart,接收,29,BMP4_BMR1B_AVR2A,Neural crest,BMR1B,BMP4,0.607,0.0
+Heart,接收,30,EFNB3_EPHA4,Neural crest,EPHA4,EFNB3,0.605,0.0
+Heart,接收,31,COL1A2_integrin_a1b1_complex,Neural crest,integrin,COL1A2,0.604,0.024
+Heart,接收,32,BMP4_BMR1B_AVR2B,Neural crest,BMR1B,BMP4,0.604,0.0
+Heart,接收,33,BMP4_BMR1A_AVR2B,Neural crest,BMR1A,BMP4,0.604,0.0
+Heart,接收,34,COL1A2_integrin_a11b1_complex,Neural crest,integrin,COL1A2,0.59,0.026
+Heart,接收,35,EFNB3_EPHB4,Neural crest,EPHB4,EFNB3,0.589,0.0
+Heart,接收,36,EFNB3_EPHB2,Neural crest,EPHB2,EFNB3,0.587,0.001
+Heart,接收,37,EFNB3_EPHB3,Neural crest,EPHB3,EFNB3,0.555,0.0
+Heart,接收,38,IGF1_IGF1R,Neural crest,IGF1R,IGF1,0.543,0.002
+Heart,接收,39,IGF1_IGF1R_enhancerComGPC3,Neural crest,IGF1R,IGF1,0.543,0.002
+Heart,接收,40,COL1A1_integrin_a1b1_complex,Neural crest,integrin,COL1A1,0.523,0.0
+Heart,接收,41,COL1A1_integrin_a11b1_complex,Neural crest,integrin,COL1A1,0.509,0.0
+Heart,接收,42,PDGFA_PDGFRA,Neural crest,PDGFRA,PDGFA,0.476,0.0
+Heart,接收,43,COL5A1_integrin_a1b1_complex,Neural crest,integrin,COL5A1,0.474,0.0
+Heart,接收,44,WNT5A_ROR2,Neural crest,ROR2,WNT5A,0.473,0.0
+Heart,接收,45,TGFB2_TGFBR3,Neural crest,TGFBR3,TGFB2,0.47,0.0
+Heart,接收,46,PDGFC_PDGFRA,Neural crest,PDGFRA,PDGFC,0.463,0.007
+Heart,接收,47,COL5A1_integrin_a11b1_complex,Neural crest,integrin,COL5A1,0.46,0.0
+Heart,接收,48,VEGFB_FLT1_complex,Neural crest,FLT1,VEGFB,0.453,0.001
+Heart,接收,49,VEGFB_FLT1,Neural crest,FLT1,VEGFB,0.453,0.001
+Heart,接收,50,NCAM1_AGRN,Neural crest,AGRN,NCAM1,0.449,0.034
+Heart,接收,51,EFNA1_EPHA7,Neural crest,EPHA7,EFNA1,0.443,0.0
+Heart,接收,52,BMP7_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP7,0.443,0.0
+Heart,接收,53,TGFB2_TGFbeta_receptor1,Neural crest,TGFbeta,TGFB2,0.442,0.0
+Heart,接收,54,WNT5A_SFRP2,Neural crest,SFRP2,WNT5A,0.44,0.034
+Heart,接收,55,RSPO3_LGR4,Neural crest,LGR4,RSPO3,0.44,0.0
+Heart,接收,56,LRFN4_PTPRD,Neural crest,PTPRD,LRFN4,0.438,0.041
+Heart,接收,57,TGFB2_TGFbeta_receptor2,Neural crest,TGFbeta,TGFB2,0.436,0.0
+Heart,接收,58,NCAM1_FGFR1,Neural crest,FGFR1,NCAM1,0.434,0.031
+Heart,接收,59,WNT2_SFRP1,Neural crest,SFRP1,WNT2,0.432,0.0
+Heart,接收,60,WNT5A_FZD2_LRP6,Neural crest,FZD2,WNT5A,0.431,0.007
+Heart,接收,61,WNT5A_FZD3_LRP6,Neural crest,FZD3,WNT5A,0.431,0.007
+Heart,接收,62,WNT5A_FZD7_LRP6,Neural crest,FZD7,WNT5A,0.431,0.007
+Heart,接收,63,WNT5A_ROR1,Neural crest,ROR1,WNT5A,0.425,0.002
+Heart,接收,64,WNT5A_FZD3_LRP5,Neural crest,FZD3,WNT5A,0.416,0.014
+Heart,接收,65,WNT5A_FZD2_LRP5,Neural crest,FZD2,WNT5A,0.416,0.014
+Heart,接收,66,WNT5A_FZD7_LRP5,Neural crest,FZD7,WNT5A,0.416,0.014
+Heart,接收,67,integrin_aVb1_complex_ADGRE5,Neural crest,aVb1,integrin,0.416,0.0
+Heart,接收,68,VEGFB_NRP1,Neural crest,NRP1,VEGFB,0.415,0.0
+Heart,接收,69,KITLG_KIT,Neural crest,KIT,KITLG,0.412,0.001
+Heart,接收,70,COL5A2_integrin_a1b1_complex,Neural crest,integrin,COL5A2,0.412,0.005
+Heart,接收,71,VEGFA_KDR,Neural crest,KDR,VEGFA,0.411,0.01
+Heart,接收,72,WNT5A_FRZB,Neural crest,FRZB,WNT5A,0.405,0.004
+Heart,接收,73,COL11A1_integrin_a1b1_complex,Neural crest,integrin,COL11A1,0.4,0.0
+Heart,接收,74,COL5A2_integrin_a11b1_complex,Neural crest,integrin,COL5A2,0.397,0.003
+Heart,接收,75,BMP5_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP5,0.396,0.0
+Heart,接收,76,VCAM1_integrin_a9b1_complex,Neural crest,integrin,VCAM1,0.389,0.0
+Heart,接收,77,COL11A1_integrin_a11b1_complex,Neural crest,integrin,COL11A1,0.386,0.001
+Heart,接收,78,THBS1_integrin_a3b1_complex,Neural crest,integrin,THBS1,0.384,0.0
+Heart,接收,79,SEMA3C_NRP2,Neural crest,NRP2,SEMA3C,0.384,0.0
+Heart,接收,80,COL12A1_integrin_a1b1_complex,Neural crest,integrin,COL12A1,0.378,0.0
+Heart,接收,81,BMP7_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP7,0.375,0.0
+Heart,接收,82,BMP7_BMR1B_AVR2A,Neural crest,BMR1B,BMP7,0.365,0.0
+Heart,接收,83,BMP7_BMR1A_ACR2A,Neural crest,BMR1A,BMP7,0.365,0.002
+Heart,接收,84,COL12A1_integrin_a11b1_complex,Neural crest,integrin,COL12A1,0.364,0.0
+Heart,接收,85,BMP7_BMR1B_AVR2B,Neural crest,BMR1B,BMP7,0.363,0.0
+Heart,接收,86,BMP7_BMR1A_AVR2B,Neural crest,BMR1A,BMP7,0.363,0.003
+Heart,接收,87,WNT2_SFRP2,Neural crest,SFRP2,WNT2,0.359,0.0
+Heart,接收,88,WNT6_SFRP1,Neural crest,SFRP1,WNT6,0.358,0.043
+Heart,接收,89,WNT5A_FZD4_LRP6,Neural crest,FZD4,WNT5A,0.356,0.004
+Heart,接收,90,WNT5A_FZD4_LRP5,Neural crest,FZD4,WNT5A,0.356,0.004
+Heart,接收,91,DKK2_LRP6,Neural crest,LRP6,DKK2,0.355,0.002
+Heart,接收,92,SEMA6D_PlexinA1_complex1,Neural crest,PlexinA1,SEMA6D,0.352,0.003
+Heart,接收,93,WNT2_FZD7_LRP6,Neural crest,FZD7,WNT2,0.35,0.0
+Heart,接收,94,WNT2_FZD3_LRP6,Neural crest,FZD3,WNT2,0.35,0.0
+Heart,接收,95,WNT2_FZD2_LRP6,Neural crest,FZD2,WNT2,0.35,0.0
+Heart,接收,96,VEGFC_KDR,Neural crest,KDR,VEGFC,0.346,0.007
+Heart,接收,97,WNT5A_FZD10_LRP5,Neural crest,FZD10,WNT5A,0.34,0.034
+Heart,接收,98,WNT5A_FZD10_LRP6,Neural crest,FZD10,WNT5A,0.34,0.034
+Heart,接收,99,WNT5A_FZD6_LRP5,Neural crest,FZD6,WNT5A,0.339,0.006
+Heart,接收,100,WNT5A_FZD6_LRP6,Neural crest,FZD6,WNT5A,0.339,0.006
+Mesenchyme,发送,1,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.461,0.0
+Mesenchyme,发送,2,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.285,0.01
+Mesenchyme,发送,3,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,0.928,0.0
+Mesenchyme,发送,4,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.918,0.0
+Mesenchyme,发送,5,DLK1_NOTCH1,Neural crest,DLK1,NOTCH1,0.873,0.018
+Mesenchyme,发送,6,DLK1_NOTCH2,Neural crest,DLK1,NOTCH2,0.872,0.006
+Mesenchyme,发送,7,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.795,0.0
+Mesenchyme,发送,8,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.785,0.0
+Mesenchyme,发送,9,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.772,0.0
+Mesenchyme,发送,10,FN1_integrin_aVb5_complex,Neural crest,FN1,integrin,0.767,0.026
+Mesenchyme,发送,11,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.762,0.0
+Mesenchyme,发送,12,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.727,0.015
+Mesenchyme,发送,13,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.717,0.008
+Mesenchyme,发送,14,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.677,0.0
+Mesenchyme,发送,15,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.667,0.0
+Mesenchyme,发送,16,FN1_integrin_aVb3_complex,Neural crest,FN1,integrin,0.651,0.001
+Mesenchyme,发送,17,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.649,0.0
+Mesenchyme,发送,18,EFNA5_EPHA7,Neural crest,EFNA5,EPHA7,0.642,0.027
+Mesenchyme,发送,19,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.618,0.003
+Mesenchyme,发送,20,CDH6_CDH6,Neural crest,CDH6,CDH6,0.55,0.0
+Mesenchyme,发送,21,VEGFA_KDR,Neural crest,VEGFA,KDR,0.516,0.0
+Mesenchyme,发送,22,VEGFC_KDR,Neural crest,VEGFC,KDR,0.479,0.0
+Mesenchyme,发送,23,EFNA4_EPHA7,Neural crest,EFNA4,EPHA7,0.465,0.049
+Mesenchyme,发送,24,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.458,0.018
+Mesenchyme,发送,25,WNT5A_SFRP2,Neural crest,WNT5A,SFRP2,0.45,0.018
+Mesenchyme,发送,26,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.448,0.009
+Mesenchyme,发送,27,CDH5_CDH5,Neural crest,CDH5,CDH5,0.426,0.018
+Mesenchyme,发送,28,SDC1_ADGRA2,Neural crest,SDC1,ADGRA2,0.406,0.025
+Mesenchyme,发送,29,SEMA3E_PLXND1,Neural crest,SEMA3E,PLXND1,0.39,0.008
+Mesenchyme,发送,30,WNT5B_SFRP2,Neural crest,WNT5B,SFRP2,0.373,0.027
+Mesenchyme,发送,31,LAMC1_integrin_aVb3_complex,Neural crest,LAMC1,integrin,0.369,0.001
+Mesenchyme,发送,32,MMP2_integrin_aVb3_complex,Neural crest,MMP2,integrin,0.365,0.0
+Mesenchyme,发送,33,JAG2_NOTCH2,Neural crest,JAG2,NOTCH2,0.355,0.036
+Mesenchyme,发送,34,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.35,0.023
+Mesenchyme,发送,35,COL1A1_integrin_a11b1_complex,Neural crest,COL1A1,integrin,0.34,0.01
+Mesenchyme,发送,36,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.33,0.0
+Mesenchyme,发送,37,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.325,0.025
+Mesenchyme,发送,38,COL26A1_integrin_a11b1_complex,Neural crest,COL26A1,integrin,0.315,0.014
+Mesenchyme,发送,39,LPAR1_ADGRE5,Neural crest,LPAR1,ADGRE5,0.314,0.003
+Mesenchyme,发送,40,SEMA6D_PlexinA1_complex1,Neural crest,SEMA6D,PlexinA1,0.308,0.011
+Mesenchyme,发送,41,integrin_aVb1_complex_ADGRE5,Neural crest,integrin,aVb1,0.295,0.002
+Mesenchyme,发送,42,SEMA3A_PlexinA3_complex1,Neural crest,SEMA3A,PlexinA3,0.294,0.0
+Mesenchyme,发送,43,SEMA3A_PlexinA1_complex3,Neural crest,SEMA3A,PlexinA1,0.294,0.004
+Mesenchyme,发送,44,SEMA3A_NRP1,Neural crest,SEMA3A,NRP1,0.294,0.008
+Mesenchyme,发送,45,VTN_integrin_aVb3_complex,Neural crest,VTN,integrin,0.27,0.007
+Mesenchyme,发送,46,Glutamate_byGLS_and_SLC1A3_GRIK1,Neural crest,Glutamate,byGLS,0.261,0.0
+Mesenchyme,发送,47,COL9A1_integrin_a11b1_complex,Neural crest,COL9A1,integrin,0.253,0.03
+Mesenchyme,发送,48,SEMA3F_NRP2,Neural crest,SEMA3F,NRP2,0.244,0.017
+Mesenchyme,发送,49,Glutamate_byGLS_and_SLC1A3_GRM8,Neural crest,Glutamate,byGLS,0.24,0.005
+Mesenchyme,发送,50,CD93_IFNGR1,Neural crest,CD93,IFNGR1,0.228,0.007
+Mesenchyme,发送,51,ANGPT1_TEK,Neural crest,ANGPT1,TEK,0.211,0.016
+Mesenchyme,发送,52,THBS1_integrin_aVb3_complex,Neural crest,THBS1,integrin,0.177,0.002
+Mesenchyme,发送,53,IGF1_integrin_aVb3_complex,Neural crest,IGF1,integrin,0.172,0.004
+Mesenchyme,发送,54,VWF_integrin_aVb3_complex,Neural crest,VWF,integrin,0.153,0.001
+Mesenchyme,发送,55,LPAR2_ADGRE5,Neural crest,LPAR2,ADGRE5,0.143,0.013
+Mesenchyme,发送,56,TNC_integrin_aVb3_complex,Neural crest,TNC,integrin,0.129,0.002
+Mesenchyme,发送,57,GDF11_ACVR_1B2A_receptor,Neural crest,GDF11,ACVR,0.126,0.025
+Mesenchyme,发送,58,GDF11_ACVR_1B2B_receptor,Neural crest,GDF11,ACVR,0.126,0.025
+Mesenchyme,接收,1,IGF2_IGF2R,Neural crest,IGF2R,IGF2,1.499,0.0
+Mesenchyme,接收,2,IGF2_IGF1R,Neural crest,IGF1R,IGF2,1.469,0.0
+Mesenchyme,接收,3,DLK1_NOTCH2,Neural crest,NOTCH2,DLK1,1.009,0.0
+Mesenchyme,接收,4,DLK1_NOTCH1,Neural crest,NOTCH1,DLK1,0.953,0.006
+Mesenchyme,接收,5,COL3A1_integrin_a1b1_complex,Neural crest,integrin,COL3A1,0.942,0.004
+Mesenchyme,接收,6,COL3A1_ADGRG1,Neural crest,ADGRG1,COL3A1,0.927,0.033
+Mesenchyme,接收,7,COL3A1_integrin_a11b1_complex,Neural crest,integrin,COL3A1,0.927,0.004
+Mesenchyme,接收,8,DLK1_NOTCH3,Neural crest,NOTCH3,DLK1,0.897,0.001
+Mesenchyme,接收,9,COL4A1_integrin_a1b1_complex,Neural crest,integrin,COL4A1,0.892,0.0
+Mesenchyme,接收,10,COL4A1_integrin_a11b1_complex,Neural crest,integrin,COL4A1,0.878,0.001
+Mesenchyme,接收,11,COL18A1_integrin_a1b1_complex,Neural crest,integrin,COL18A1,0.878,0.0
+Mesenchyme,接收,12,COL18A1_integrin_a11b1_complex,Neural crest,integrin,COL18A1,0.864,0.0
+Mesenchyme,接收,13,COL2A1_integrin_a1b1_complex,Neural crest,integrin,COL2A1,0.755,0.045
+Mesenchyme,接收,14,COL2A1_integrin_a11b1_complex,Neural crest,integrin,COL2A1,0.74,0.044
+Mesenchyme,接收,15,Cholesterol_byDHCR24_RORA,Neural crest,byDHCR24,Cholesterol,0.714,0.021
+Mesenchyme,接收,16,NECTIN2_NECTIN3,Neural crest,NECTIN3,NECTIN2,0.592,0.034
+Mesenchyme,接收,17,DAG1_NRXN3,Neural crest,NRXN3,DAG1,0.59,0.006
+Mesenchyme,接收,18,APP_TNFRSF21,Neural crest,TNFRSF21,APP,0.579,0.048
+Mesenchyme,接收,19,CDH6_CDH6,Neural crest,CDH6,CDH6,0.55,0.0
+Mesenchyme,接收,20,COL4A2_integrin_a1b1_complex,Neural crest,integrin,COL4A2,0.538,0.008
+Mesenchyme,接收,21,APP_SORL1,Neural crest,SORL1,APP,0.536,0.042
+Mesenchyme,接收,22,COL4A2_integrin_a11b1_complex,Neural crest,integrin,COL4A2,0.524,0.009
+Mesenchyme,接收,23,BMP4_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP4,0.47,0.001
+Mesenchyme,接收,24,EFNA1_EPHA7,Neural crest,EPHA7,EFNA1,0.468,0.0
+Mesenchyme,接收,25,IGF1_IGF1R,Neural crest,IGF1R,IGF1,0.468,0.038
+Mesenchyme,接收,26,IGF1_IGF1R_enhancerComGPC3,Neural crest,IGF1R,IGF1,0.468,0.038
+Mesenchyme,接收,27,COL1A1_integrin_a1b1_complex,Neural crest,integrin,COL1A1,0.467,0.0
+Mesenchyme,接收,28,PDGFC_PDGFRA,Neural crest,PDGFRA,PDGFC,0.463,0.007
+Mesenchyme,接收,29,COL1A1_integrin_a11b1_complex,Neural crest,integrin,COL1A1,0.453,0.0
+Mesenchyme,接收,30,PDGFA_PDGFRA,Neural crest,PDGFRA,PDGFA,0.435,0.0
+Mesenchyme,接收,31,SDC1_ADGRA2,Neural crest,ADGRA2,SDC1,0.426,0.03
+Mesenchyme,接收,32,CDH5_CDH5,Neural crest,CDH5,CDH5,0.426,0.018
+Mesenchyme,接收,33,BMP4_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP4,0.401,0.0
+Mesenchyme,接收,34,BMP4_BMR1A_ACR2A,Neural crest,BMR1A,BMP4,0.392,0.001
+Mesenchyme,接收,35,BMP4_BMR1B_AVR2A,Neural crest,BMR1B,BMP4,0.392,0.0
+Mesenchyme,接收,36,BMP4_BMR1B_AVR2B,Neural crest,BMR1B,BMP4,0.389,0.001
+Mesenchyme,接收,37,BMP4_BMR1A_AVR2B,Neural crest,BMR1A,BMP4,0.389,0.002
+Mesenchyme,接收,38,WNT6_SFRP1,Neural crest,SFRP1,WNT6,0.388,0.004
+Mesenchyme,接收,39,BMP5_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP5,0.377,0.001
+Mesenchyme,接收,40,COL26A1_integrin_a1b1_complex,Neural crest,integrin,COL26A1,0.365,0.016
+Mesenchyme,接收,41,COL26A1_integrin_a11b1_complex,Neural crest,integrin,COL26A1,0.351,0.017
+Mesenchyme,接收,42,L1CAM_integrin_a9b1_complex,Neural crest,integrin,L1CAM,0.348,0.0
+Mesenchyme,接收,43,SEMA6A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA6A,0.345,0.015
+Mesenchyme,接收,44,VCAM1_integrin_a9b1_complex,Neural crest,integrin,VCAM1,0.344,0.001
+Mesenchyme,接收,45,TF_TFRC,Neural crest,TFRC,TF,0.338,0.007
+Mesenchyme,接收,46,WNT6_SFRP2,Neural crest,SFRP2,WNT6,0.315,0.0
+Mesenchyme,接收,47,BMP5_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP5,0.309,0.0
+Mesenchyme,接收,48,EDN3_EDNRA,Neural crest,EDNRA,EDN3,0.307,0.0
+Mesenchyme,接收,49,WNT6_FZD2_LRP6,Neural crest,FZD2,WNT6,0.306,0.0
+Mesenchyme,接收,50,WNT6_FZD3_LRP6,Neural crest,FZD3,WNT6,0.306,0.0
+Mesenchyme,接收,51,WNT6_FZD7_LRP6,Neural crest,FZD7,WNT6,0.306,0.0
+Mesenchyme,接收,52,EFNA1_EPHA4,Neural crest,EPHA4,EFNA1,0.304,0.015
+Mesenchyme,接收,53,BMP5_BMR1A_ACR2A,Neural crest,BMR1A,BMP5,0.299,0.002
+Mesenchyme,接收,54,BMP5_BMR1B_AVR2A,Neural crest,BMR1B,BMP5,0.299,0.0
+Mesenchyme,接收,55,BMP5_BMR1B_AVR2B,Neural crest,BMR1B,BMP5,0.297,0.0
+Mesenchyme,接收,56,BMP5_BMR1A_AVR2B,Neural crest,BMR1A,BMP5,0.297,0.007
+Mesenchyme,接收,57,COL9A1_integrin_a1b1_complex,Neural crest,integrin,COL9A1,0.292,0.023
+Mesenchyme,接收,58,WNT6_FZD2_LRP5,Neural crest,FZD2,WNT6,0.291,0.0
+Mesenchyme,接收,59,WNT6_FZD3_LRP5,Neural crest,FZD3,WNT6,0.291,0.0
+Mesenchyme,接收,60,WNT6_FZD7_LRP5,Neural crest,FZD7,WNT6,0.291,0.0
+Mesenchyme,接收,61,WNT6_FRZB,Neural crest,FRZB,WNT6,0.28,0.0
+Mesenchyme,接收,62,L1CAM_integrin_aVb1_complex,Neural crest,integrin,L1CAM,0.279,0.001
+Mesenchyme,接收,63,COL9A1_integrin_a11b1_complex,Neural crest,integrin,COL9A1,0.278,0.026
+Mesenchyme,接收,64,NRXN3_ADGRL1,Neural crest,ADGRL1,NRXN3,0.269,0.028
+Mesenchyme,接收,65,WNT6_FZD1_LRP6,Neural crest,FZD1,WNT6,0.261,0.0
+Mesenchyme,接收,66,WNT6_FZD1_LRP5,Neural crest,FZD1,WNT6,0.261,0.0
+Mesenchyme,接收,67,WNT6_FZD4_LRP6,Neural crest,FZD4,WNT6,0.231,0.0
+Mesenchyme,接收,68,WNT6_FZD4_LRP5,Neural crest,FZD4,WNT6,0.231,0.0
+Mesenchyme,接收,69,BMP5_ACVR_1A2A_receptor,Neural crest,ACVR,BMP5,0.222,0.003
+Mesenchyme,接收,70,BMP5_ACVR_1A2B_receptor,Neural crest,ACVR,BMP5,0.222,0.003
+Mesenchyme,接收,71,BMP5_ACVR1_BMPR2,Neural crest,ACVR1,BMP5,0.222,0.003
+Mesenchyme,接收,72,WNT6_FZD10_LRP6,Neural crest,FZD10,WNT6,0.215,0.0
+Mesenchyme,接收,73,WNT6_FZD10_LRP5,Neural crest,FZD10,WNT6,0.215,0.0
+Mesenchyme,接收,74,WNT6_FZD6_LRP6,Neural crest,FZD6,WNT6,0.214,0.0
+Mesenchyme,接收,75,WNT6_FZD6_LRP5,Neural crest,FZD6,WNT6,0.214,0.0
+Mesenchyme,接收,76,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Neural crest,byALDH1A2,atRetinoicAcid,0.213,0.004
+Mesenchyme,接收,77,WNT6_FZD8_LRP6,Neural crest,FZD8,WNT6,0.21,0.0
+Mesenchyme,接收,78,WNT6_FZD8_LRP5,Neural crest,FZD8,WNT6,0.21,0.0
+Mesenchyme,接收,79,COL6A2_integrin_a1b1_complex,Neural crest,integrin,COL6A2,0.205,0.0
+Mesenchyme,接收,80,PECAM1_CD38,Neural crest,CD38,PECAM1,0.202,0.022
+Mesenchyme,接收,81,integrin_aVb3_complex_ADGRA2,Neural crest,aVb3,integrin,0.2,0.0
+Mesenchyme,接收,82,COL6A2_integrin_a11b1_complex,Neural crest,integrin,COL6A2,0.191,0.001
+Mesenchyme,接收,83,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Neural crest,byALDH1A2,atRetinoicAcid,0.187,0.006
+Mesenchyme,接收,84,EDN3_EDNRB,Neural crest,EDNRB,EDN3,0.183,0.007
+Mesenchyme,接收,85,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Neural crest,byALDH1A2,atRetinoicAcid,0.167,0.007
+Mesenchyme,接收,86,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Neural crest,byALDH1A2,atRetinoicAcid,0.167,0.007
+Mesenchyme,接收,87,atRetinoicAcid_byALDH1A2_RAreceptor_RARG,Neural crest,byALDH1A2,atRetinoicAcid,0.151,0.001
+Mesenchyme,接收,88,integrin_aVb3_complex_ADGRE5,Neural crest,aVb3,integrin,0.127,0.004
+Neural crest,发送,1,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.401,0.0
+Neural crest,发送,2,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.371,0.0
+Neural crest,发送,3,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,0.945,0.0
+Neural crest,发送,4,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,0.93,0.0
+Neural crest,发送,5,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.93,0.0
+Neural crest,发送,6,DLK1_NOTCH2,Neural crest,DLK1,NOTCH2,0.82,0.0
+Neural crest,发送,7,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.812,0.0
+Neural crest,发送,8,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.798,0.0
+Neural crest,发送,9,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.789,0.0
+Neural crest,发送,10,FN1_integrin_aVb1_complex,Neural crest,FN1,integrin,0.776,0.0
+Neural crest,发送,11,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.774,0.0
+Neural crest,发送,12,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.774,0.0
+Neural crest,发送,13,FN1_integrin_aVb5_complex,Neural crest,FN1,integrin,0.763,0.0
+Neural crest,发送,14,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.744,0.0
+Neural crest,发送,15,CADM1_CADM1,Neural crest,CADM1,CADM1,0.733,0.03
+Neural crest,发送,16,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.73,0.0
+Neural crest,发送,17,DLK1_NOTCH3,Neural crest,DLK1,NOTCH3,0.708,0.0
+Neural crest,发送,18,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.694,0.0
+Neural crest,发送,19,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.679,0.0
+Neural crest,发送,20,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.658,0.0
+Neural crest,发送,21,FN1_integrin_a4b1_complex,Neural crest,FN1,integrin,0.658,0.003
+Neural crest,发送,22,FN1_integrin_a11b1_complex,Neural crest,FN1,integrin,0.653,0.005
+Neural crest,发送,23,Cholesterol_byDHCR24_RORA,Neural crest,Cholesterol,byDHCR24,0.649,0.0
+Neural crest,发送,24,EFNA5_EPHA7,Neural crest,EFNA5,EPHA7,0.646,0.0
+Neural crest,发送,25,FN1_integrin_a8b1_complex,Neural crest,FN1,integrin,0.644,0.001
+Neural crest,发送,26,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.643,0.0
+Neural crest,发送,27,APP_FPR2,Neural crest,APP,FPR2,0.622,0.0
+Neural crest,发送,28,APP_TNFRSF21,Neural crest,APP,TNFRSF21,0.569,0.0
+Neural crest,发送,29,APP_SORL1,Neural crest,APP,SORL1,0.526,0.0
+Neural crest,发送,30,BMPR1B_BMPR2_BMPR1A,Neural crest,BMPR1B,BMPR2,0.493,0.0
+Neural crest,发送,31,EFNA5_EPHA4,Neural crest,EFNA5,EPHA4,0.483,0.003
+Neural crest,发送,32,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.475,0.0
+Neural crest,发送,33,EFNA4_EPHA7,Neural crest,EFNA4,EPHA7,0.47,0.0
+Neural crest,发送,34,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.46,0.0
+Neural crest,发送,35,LAMC1_integrin_a6b1_complex,Neural crest,LAMC1,integrin,0.439,0.006
+Neural crest,发送,36,CDH5_CDH5,Neural crest,CDH5,CDH5,0.424,0.0
+Neural crest,发送,37,PDGFC_PDGFRA,Neural crest,PDGFC,PDGFRA,0.421,0.0
+Neural crest,发送,38,SDC1_ADGRA2,Neural crest,SDC1,ADGRA2,0.416,0.0
+Neural crest,发送,39,LRFN4_PTPRD,Neural crest,LRFN4,PTPRD,0.415,0.0
+Neural crest,发送,40,EFNA2_EPHA7,Neural crest,EFNA2,EPHA7,0.415,0.0
+Neural crest,发送,41,EFNA1_EPHA7,Neural crest,EFNA1,EPHA7,0.404,0.0
+Neural crest,发送,42,VTN_integrin_aVb1_complex,Neural crest,VTN,integrin,0.395,0.0
+Neural crest,发送,43,PTPRD_IL1RAPL1,Neural crest,PTPRD,IL1RAPL1,0.388,0.0
+Neural crest,发送,44,PDGFA_PDGFRA,Neural crest,PDGFA,PDGFRA,0.378,0.0
+Neural crest,发送,45,BMP4_BMPR1A_BMPR2,Neural crest,BMP4,BMPR1A,0.369,0.0
+Neural crest,发送,46,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.366,0.0
+Neural crest,发送,47,WNT5A_ROR2,Neural crest,WNT5A,ROR2,0.364,0.0
+Neural crest,发送,48,COL1A1_integrin_a11b1_complex,Neural crest,COL1A1,integrin,0.352,0.0
+Neural crest,发送,49,JAG1_NOTCH2,Neural crest,JAG1,NOTCH2,0.344,0.036
+Neural crest,发送,50,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.342,0.0
+Neural crest,发送,51,VEGFA_KDR,Neural crest,VEGFA,KDR,0.336,0.009
+Neural crest,发送,52,ESAM_ESAM,Neural crest,ESAM,ESAM,0.33,0.0
+Neural crest,发送,53,SEMA3E_PLXND1,Neural crest,SEMA3E,PLXND1,0.328,0.0
+Neural crest,发送,54,COL26A1_integrin_a11b1_complex,Neural crest,COL26A1,integrin,0.327,0.0
+Neural crest,发送,55,BMP7_BMPR1A_BMPR2,Neural crest,BMP7,BMPR1A,0.325,0.0
+Neural crest,发送,56,VCAM1_integrin_a9b1_complex,Neural crest,VCAM1,integrin,0.324,0.0
+Neural crest,发送,57,TNC_integrin_a9b1_complex,Neural crest,TNC,integrin,0.322,0.0
+Neural crest,发送,58,WNT5A_FZD7_LRP6,Neural crest,WNT5A,FZD7,0.322,0.048
+Neural crest,发送,59,EFNB2_EPHB4,Neural crest,EFNB2,EPHB4,0.321,0.006
+Neural crest,发送,60,Cholesterol_byDHCR7_RORA,Neural crest,Cholesterol,byDHCR7,0.318,0.0
+Neural crest,发送,61,WNT5A_ROR1,Neural crest,WNT5A,ROR1,0.316,0.0
+Neural crest,发送,62,TENM4_FLRT3_complex_ADGRL1,Neural crest,TENM4,FLRT3,0.311,0.033
+Neural crest,发送,63,EFNA4_EPHA4,Neural crest,EFNA4,EPHA4,0.306,0.012
+Neural crest,发送,64,Glutamate_byGLS_and_SLC1A3_GRIK2,Neural crest,Glutamate,byGLS,0.305,0.002
+Neural crest,发送,65,COL5A2_integrin_a1b1_complex,Neural crest,COL5A2,integrin,0.304,0.0
+Neural crest,发送,66,JAG2_NOTCH2,Neural crest,JAG2,NOTCH2,0.303,0.001
+Neural crest,发送,67,Cholesterol_byLIPA_RORA,Neural crest,Cholesterol,byLIPA,0.301,0.0
+Neural crest,发送,68,BMP4_BMPR1B_BMPR2,Neural crest,BMP4,BMPR1B,0.3,0.0
+Neural crest,发送,69,VEGFC_KDR,Neural crest,VEGFC,KDR,0.299,0.0
+Neural crest,发送,70,Glutamate_byGLS_and_SLC1A3_GRM7,Neural crest,Glutamate,byGLS,0.296,0.0
+Neural crest,发送,71,WNT5A_FRZB,Neural crest,WNT5A,FRZB,0.296,0.0
+Neural crest,发送,72,SDC2_ADGRA2,Neural crest,SDC2,ADGRA2,0.293,0.0
+Neural crest,发送,73,BMP4_BMR1A_ACR2A,Neural crest,BMP4,BMR1A,0.29,0.001
+Neural crest,发送,74,BMP4_BMR1B_AVR2A,Neural crest,BMP4,BMR1B,0.29,0.0
+Neural crest,发送,75,COL5A2_integrin_a11b1_complex,Neural crest,COL5A2,integrin,0.29,0.0
+Neural crest,发送,76,BMP4_BMR1B_AVR2B,Neural crest,BMP4,BMR1B,0.288,0.0
+Neural crest,发送,77,BMP4_BMR1A_AVR2B,Neural crest,BMP4,BMR1A,0.288,0.007
+Neural crest,发送,78,EFNB2_EPHB3,Neural crest,EFNB2,EPHB3,0.287,0.016
+Neural crest,发送,79,COL11A1_integrin_a1b1_complex,Neural crest,COL11A1,integrin,0.287,0.0
+Neural crest,发送,80,SEMA6A_PlexinA2_complex1,Neural crest,SEMA6A,PlexinA2,0.283,0.0
+Neural crest,发送,81,COL5A1_integrin_a1b1_complex,Neural crest,COL5A1,integrin,0.283,0.0
+Neural crest,发送,82,BMP5_BMPR1A_BMPR2,Neural crest,BMP5,BMPR1A,0.281,0.001
+Neural crest,发送,83,COL9A1_integrin_a1b1_complex,Neural crest,COL9A1,integrin,0.279,0.0
+Neural crest,发送,84,SEMA4D_PLXNB2,Neural crest,SEMA4D,PLXNB2,0.275,0.038
+Neural crest,发送,85,SEMA4C_PLXNB2,Neural crest,SEMA4C,PLXNB2,0.274,0.025
+Neural crest,发送,86,COL11A1_integrin_a11b1_complex,Neural crest,COL11A1,integrin,0.272,0.0
+Neural crest,发送,87,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.272,0.0
+Neural crest,发送,88,LPAR1_ADGRE5,Neural crest,LPAR1,ADGRE5,0.271,0.0
+Neural crest,发送,89,COL5A1_integrin_a11b1_complex,Neural crest,COL5A1,integrin,0.268,0.0
+Neural crest,发送,90,SEMA6D_PlexinA1_complex1,Neural crest,SEMA6D,PlexinA1,0.266,0.0
+Neural crest,发送,91,COL9A1_integrin_a11b1_complex,Neural crest,COL9A1,integrin,0.265,0.0
+Neural crest,发送,92,SEMA3A_PlexinA1_complex3,Neural crest,SEMA3A,PlexinA1,0.264,0.0
+Neural crest,发送,93,SEMA3A_NRP1,Neural crest,SEMA3A,NRP1,0.264,0.0
+Neural crest,发送,94,SEMA3A_PlexinA2_complex1,Neural crest,SEMA3A,PlexinA2,0.261,0.0
+Neural crest,发送,95,VEGFB_NRP1,Neural crest,VEGFB,NRP1,0.259,0.018
+Neural crest,发送,96,BMP7_BMPR1B_BMPR2,Neural crest,BMP7,BMPR1B,0.257,0.0
+Neural crest,发送,97,VEGFA_FLT1_complex,Neural crest,VEGFA,FLT1,0.254,0.039
+Neural crest,发送,98,VEGFA_FLT1,Neural crest,VEGFA,FLT1,0.254,0.039
+Neural crest,发送,99,integrin_aVb1_complex_ADGRE5,Neural crest,integrin,aVb1,0.252,0.0
+Neural crest,发送,100,IGFBP3_TMEM219,Neural crest,IGFBP3,TMEM219,0.251,0.0
+Neural crest,接收,1,IGF2_IGF2R,Neural crest,IGF2R,IGF2,1.401,0.0
+Neural crest,接收,2,IGF2_IGF1R,Neural crest,IGF1R,IGF2,1.371,0.0
+Neural crest,接收,3,COL3A1_integrin_a1b1_complex,Neural crest,integrin,COL3A1,0.945,0.0
+Neural crest,接收,4,COL3A1_ADGRG1,Neural crest,ADGRG1,COL3A1,0.93,0.0
+Neural crest,接收,5,COL3A1_integrin_a11b1_complex,Neural crest,integrin,COL3A1,0.93,0.0
+Neural crest,接收,6,DLK1_NOTCH2,Neural crest,NOTCH2,DLK1,0.82,0.0
+Neural crest,接收,7,COL2A1_integrin_a1b1_complex,Neural crest,integrin,COL2A1,0.812,0.0
+Neural crest,接收,8,COL2A1_integrin_a11b1_complex,Neural crest,integrin,COL2A1,0.798,0.0
+Neural crest,接收,9,COL4A1_integrin_a1b1_complex,Neural crest,integrin,COL4A1,0.789,0.0
+Neural crest,接收,10,FN1_integrin_aVb1_complex,Neural crest,integrin,FN1,0.776,0.0
+Neural crest,接收,11,COL4A1_integrin_a11b1_complex,Neural crest,integrin,COL4A1,0.774,0.0
+Neural crest,接收,12,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.774,0.0
+Neural crest,接收,13,FN1_integrin_aVb5_complex,Neural crest,integrin,FN1,0.763,0.0
+Neural crest,接收,14,COL18A1_integrin_a1b1_complex,Neural crest,integrin,COL18A1,0.744,0.0
+Neural crest,接收,15,CADM1_CADM1,Neural crest,CADM1,CADM1,0.733,0.03
+Neural crest,接收,16,COL18A1_integrin_a11b1_complex,Neural crest,integrin,COL18A1,0.73,0.0
+Neural crest,接收,17,DLK1_NOTCH3,Neural crest,NOTCH3,DLK1,0.708,0.0
+Neural crest,接收,18,COL1A2_integrin_a1b1_complex,Neural crest,integrin,COL1A2,0.694,0.0
+Neural crest,接收,19,COL1A2_integrin_a11b1_complex,Neural crest,integrin,COL1A2,0.679,0.0
+Neural crest,接收,20,FLRT2_ADGRL1,Neural crest,ADGRL1,FLRT2,0.658,0.0
+Neural crest,接收,21,FN1_integrin_a4b1_complex,Neural crest,integrin,FN1,0.658,0.003
+Neural crest,接收,22,FN1_integrin_a11b1_complex,Neural crest,integrin,FN1,0.653,0.005
+Neural crest,接收,23,Cholesterol_byDHCR24_RORA,Neural crest,byDHCR24,Cholesterol,0.649,0.0
+Neural crest,接收,24,EFNA5_EPHA7,Neural crest,EPHA7,EFNA5,0.646,0.0
+Neural crest,接收,25,FN1_integrin_a8b1_complex,Neural crest,integrin,FN1,0.644,0.001
+Neural crest,接收,26,FLRT2_ADGRL3,Neural crest,ADGRL3,FLRT2,0.643,0.0
+Neural crest,接收,27,APP_FPR2,Neural crest,FPR2,APP,0.622,0.0
+Neural crest,接收,28,APP_TNFRSF21,Neural crest,TNFRSF21,APP,0.569,0.0
+Neural crest,接收,29,APP_SORL1,Neural crest,SORL1,APP,0.526,0.0
+Neural crest,接收,30,BMPR1B_BMPR2_BMPR1A,Neural crest,BMPR2,BMPR1B,0.493,0.0
+Neural crest,接收,31,EFNA5_EPHA4,Neural crest,EPHA4,EFNA5,0.483,0.003
+Neural crest,接收,32,COL4A2_integrin_a1b1_complex,Neural crest,integrin,COL4A2,0.475,0.0
+Neural crest,接收,33,EFNA4_EPHA7,Neural crest,EPHA7,EFNA4,0.47,0.0
+Neural crest,接收,34,COL4A2_integrin_a11b1_complex,Neural crest,integrin,COL4A2,0.46,0.0
+Neural crest,接收,35,LAMC1_integrin_a6b1_complex,Neural crest,integrin,LAMC1,0.439,0.006
+Neural crest,接收,36,CDH5_CDH5,Neural crest,CDH5,CDH5,0.424,0.0
+Neural crest,接收,37,PDGFC_PDGFRA,Neural crest,PDGFRA,PDGFC,0.421,0.0
+Neural crest,接收,38,SDC1_ADGRA2,Neural crest,ADGRA2,SDC1,0.416,0.0
+Neural crest,接收,39,LRFN4_PTPRD,Neural crest,PTPRD,LRFN4,0.415,0.0
+Neural crest,接收,40,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.415,0.0
+Neural crest,接收,41,EFNA1_EPHA7,Neural crest,EPHA7,EFNA1,0.404,0.0
+Neural crest,接收,42,VTN_integrin_aVb1_complex,Neural crest,integrin,VTN,0.395,0.0
+Neural crest,接收,43,PTPRD_IL1RAPL1,Neural crest,IL1RAPL1,PTPRD,0.388,0.0
+Neural crest,接收,44,PDGFA_PDGFRA,Neural crest,PDGFRA,PDGFA,0.378,0.0
+Neural crest,接收,45,BMP4_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP4,0.369,0.0
+Neural crest,接收,46,COL1A1_integrin_a1b1_complex,Neural crest,integrin,COL1A1,0.366,0.0
+Neural crest,接收,47,WNT5A_ROR2,Neural crest,ROR2,WNT5A,0.364,0.0
+Neural crest,接收,48,COL1A1_integrin_a11b1_complex,Neural crest,integrin,COL1A1,0.352,0.0
+Neural crest,接收,49,JAG1_NOTCH2,Neural crest,NOTCH2,JAG1,0.344,0.036
+Neural crest,接收,50,COL26A1_integrin_a1b1_complex,Neural crest,integrin,COL26A1,0.342,0.0
+Neural crest,接收,51,VEGFA_KDR,Neural crest,KDR,VEGFA,0.336,0.009
+Neural crest,接收,52,ESAM_ESAM,Neural crest,ESAM,ESAM,0.33,0.0
+Neural crest,接收,53,SEMA3E_PLXND1,Neural crest,PLXND1,SEMA3E,0.328,0.0
+Neural crest,接收,54,COL26A1_integrin_a11b1_complex,Neural crest,integrin,COL26A1,0.327,0.0
+Neural crest,接收,55,BMP7_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP7,0.325,0.0
+Neural crest,接收,56,VCAM1_integrin_a9b1_complex,Neural crest,integrin,VCAM1,0.324,0.0
+Neural crest,接收,57,TNC_integrin_a9b1_complex,Neural crest,integrin,TNC,0.322,0.0
+Neural crest,接收,58,WNT5A_FZD7_LRP6,Neural crest,FZD7,WNT5A,0.322,0.048
+Neural crest,接收,59,EFNB2_EPHB4,Neural crest,EPHB4,EFNB2,0.321,0.006
+Neural crest,接收,60,Cholesterol_byDHCR7_RORA,Neural crest,byDHCR7,Cholesterol,0.318,0.0
+Neural crest,接收,61,WNT5A_ROR1,Neural crest,ROR1,WNT5A,0.316,0.0
+Neural crest,接收,62,TENM4_FLRT3_complex_ADGRL1,Neural crest,FLRT3,TENM4,0.311,0.033
+Neural crest,接收,63,EFNA4_EPHA4,Neural crest,EPHA4,EFNA4,0.306,0.012
+Neural crest,接收,64,Glutamate_byGLS_and_SLC1A3_GRIK2,Neural crest,byGLS,Glutamate,0.305,0.002
+Neural crest,接收,65,COL5A2_integrin_a1b1_complex,Neural crest,integrin,COL5A2,0.304,0.0
+Neural crest,接收,66,JAG2_NOTCH2,Neural crest,NOTCH2,JAG2,0.303,0.001
+Neural crest,接收,67,Cholesterol_byLIPA_RORA,Neural crest,byLIPA,Cholesterol,0.301,0.0
+Neural crest,接收,68,BMP4_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP4,0.3,0.0
+Neural crest,接收,69,VEGFC_KDR,Neural crest,KDR,VEGFC,0.299,0.0
+Neural crest,接收,70,Glutamate_byGLS_and_SLC1A3_GRM7,Neural crest,byGLS,Glutamate,0.296,0.0
+Neural crest,接收,71,WNT5A_FRZB,Neural crest,FRZB,WNT5A,0.296,0.0
+Neural crest,接收,72,SDC2_ADGRA2,Neural crest,ADGRA2,SDC2,0.293,0.0
+Neural crest,接收,73,BMP4_BMR1A_ACR2A,Neural crest,BMR1A,BMP4,0.29,0.001
+Neural crest,接收,74,BMP4_BMR1B_AVR2A,Neural crest,BMR1B,BMP4,0.29,0.0
+Neural crest,接收,75,COL5A2_integrin_a11b1_complex,Neural crest,integrin,COL5A2,0.29,0.0
+Neural crest,接收,76,BMP4_BMR1B_AVR2B,Neural crest,BMR1B,BMP4,0.288,0.0
+Neural crest,接收,77,BMP4_BMR1A_AVR2B,Neural crest,BMR1A,BMP4,0.288,0.007
+Neural crest,接收,78,EFNB2_EPHB3,Neural crest,EPHB3,EFNB2,0.287,0.016
+Neural crest,接收,79,COL11A1_integrin_a1b1_complex,Neural crest,integrin,COL11A1,0.287,0.0
+Neural crest,接收,80,SEMA6A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA6A,0.283,0.0
+Neural crest,接收,81,COL5A1_integrin_a1b1_complex,Neural crest,integrin,COL5A1,0.283,0.0
+Neural crest,接收,82,BMP5_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP5,0.281,0.001
+Neural crest,接收,83,COL9A1_integrin_a1b1_complex,Neural crest,integrin,COL9A1,0.279,0.0
+Neural crest,接收,84,SEMA4D_PLXNB2,Neural crest,PLXNB2,SEMA4D,0.275,0.038
+Neural crest,接收,85,SEMA4C_PLXNB2,Neural crest,PLXNB2,SEMA4C,0.274,0.025
+Neural crest,接收,86,COL11A1_integrin_a11b1_complex,Neural crest,integrin,COL11A1,0.272,0.0
+Neural crest,接收,87,SEMA3C_NRP2,Neural crest,NRP2,SEMA3C,0.272,0.0
+Neural crest,接收,88,LPAR1_ADGRE5,Neural crest,ADGRE5,LPAR1,0.271,0.0
+Neural crest,接收,89,COL5A1_integrin_a11b1_complex,Neural crest,integrin,COL5A1,0.268,0.0
+Neural crest,接收,90,SEMA6D_PlexinA1_complex1,Neural crest,PlexinA1,SEMA6D,0.266,0.0
+Neural crest,接收,91,COL9A1_integrin_a11b1_complex,Neural crest,integrin,COL9A1,0.265,0.0
+Neural crest,接收,92,SEMA3A_PlexinA1_complex3,Neural crest,PlexinA1,SEMA3A,0.264,0.0
+Neural crest,接收,93,SEMA3A_NRP1,Neural crest,NRP1,SEMA3A,0.264,0.0
+Neural crest,接收,94,SEMA3A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA3A,0.261,0.0
+Neural crest,接收,95,VEGFB_NRP1,Neural crest,NRP1,VEGFB,0.259,0.018
+Neural crest,接收,96,BMP7_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP7,0.257,0.0
+Neural crest,接收,97,VEGFA_FLT1_complex,Neural crest,FLT1,VEGFA,0.254,0.039
+Neural crest,接收,98,VEGFA_FLT1,Neural crest,FLT1,VEGFA,0.254,0.039
+Neural crest,接收,99,integrin_aVb1_complex_ADGRE5,Neural crest,aVb1,integrin,0.252,0.0
+Neural crest,接收,100,IGFBP3_TMEM219,Neural crest,TMEM219,IGFBP3,0.251,0.0
+Neural crest_1_7_Target,发送,1,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.366,0.0
+Neural crest_1_7_Target,发送,2,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.311,0.0
+Neural crest_1_7_Target,发送,3,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,0.953,0.0
+Neural crest_1_7_Target,发送,4,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,0.939,0.0
+Neural crest_1_7_Target,发送,5,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.929,0.0
+Neural crest_1_7_Target,发送,6,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.821,0.0
+Neural crest_1_7_Target,发送,7,CADM1_CADM1,Neural crest,CADM1,CADM1,0.806,0.0
+Neural crest_1_7_Target,发送,8,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.798,0.0
+Neural crest_1_7_Target,发送,9,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.797,0.0
+Neural crest_1_7_Target,发送,10,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.795,0.002
+Neural crest_1_7_Target,发送,11,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.774,0.0
+Neural crest_1_7_Target,发送,12,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.753,0.0
+Neural crest_1_7_Target,发送,13,EFNA5_EPHA7,Neural crest,EFNA5,EPHA7,0.737,0.0
+Neural crest_1_7_Target,发送,14,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.729,0.0
+Neural crest_1_7_Target,发送,15,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.702,0.0
+Neural crest_1_7_Target,发送,16,DLK1_NOTCH3,Neural crest,DLK1,NOTCH3,0.695,0.047
+Neural crest_1_7_Target,发送,17,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.678,0.0
+Neural crest_1_7_Target,发送,18,FN1_integrin_a11b1_complex,Neural crest,FN1,integrin,0.653,0.041
+Neural crest_1_7_Target,发送,19,FN1_integrin_a8b1_complex,Neural crest,FN1,integrin,0.648,0.005
+Neural crest_1_7_Target,发送,20,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.631,0.0
+Neural crest_1_7_Target,发送,21,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.619,0.0
+Neural crest_1_7_Target,发送,22,APP_FPR2,Neural crest,APP,FPR2,0.598,0.006
+Neural crest_1_7_Target,发送,23,EFNA4_EPHA7,Neural crest,EFNA4,EPHA7,0.56,0.0
+Neural crest_1_7_Target,发送,24,APP_TNFRSF21,Neural crest,APP,TNFRSF21,0.558,0.0
+Neural crest_1_7_Target,发送,25,VEGFA_KDR,Neural crest,VEGFA,KDR,0.524,0.0
+Neural crest_1_7_Target,发送,26,EFNA2_EPHA7,Neural crest,EFNA2,EPHA7,0.506,0.0
+Neural crest_1_7_Target,发送,27,EFNA1_EPHA7,Neural crest,EFNA1,EPHA7,0.495,0.0
+Neural crest_1_7_Target,发送,28,VEGFC_KDR,Neural crest,VEGFC,KDR,0.487,0.0
+Neural crest_1_7_Target,发送,29,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.484,0.0
+Neural crest_1_7_Target,发送,30,CDH5_CDH5,Neural crest,CDH5,CDH5,0.483,0.0
+Neural crest_1_7_Target,发送,31,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.46,0.0
+Neural crest_1_7_Target,发送,32,ESAM_ESAM,Neural crest,ESAM,ESAM,0.437,0.0
+Neural crest_1_7_Target,发送,33,SDC1_ADGRA2,Neural crest,SDC1,ADGRA2,0.419,0.0
+Neural crest_1_7_Target,发送,34,BMP4_BMPR1A_BMPR2,Neural crest,BMP4,BMPR1A,0.406,0.002
+Neural crest_1_7_Target,发送,35,PDGFC_PDGFRA,Neural crest,PDGFC,PDGFRA,0.403,0.0
+Neural crest_1_7_Target,发送,36,VEGFB_FLT1_complex,Neural crest,VEGFB,FLT1,0.388,0.0
+Neural crest_1_7_Target,发送,37,VEGFB_FLT1,Neural crest,VEGFB,FLT1,0.388,0.0
+Neural crest_1_7_Target,发送,38,VCAM1_integrin_a9b1_complex,Neural crest,VCAM1,integrin,0.383,0.0
+Neural crest_1_7_Target,发送,39,TNC_integrin_a9b1_complex,Neural crest,TNC,integrin,0.381,0.0
+Neural crest_1_7_Target,发送,40,SEMA3E_PLXND1,Neural crest,SEMA3E,PLXND1,0.377,0.0
+Neural crest_1_7_Target,发送,41,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.375,0.0
+Neural crest_1_7_Target,发送,42,PTPRD_IL1RAPL1,Neural crest,PTPRD,IL1RAPL1,0.373,0.019
+Neural crest_1_7_Target,发送,43,WNT5A_ROR2,Neural crest,WNT5A,ROR2,0.371,0.0
+Neural crest_1_7_Target,发送,44,BMP7_BMPR1A_BMPR2,Neural crest,BMP7,BMPR1A,0.362,0.003
+Neural crest_1_7_Target,发送,45,PDGFA_PDGFRA,Neural crest,PDGFA,PDGFRA,0.36,0.0
+Neural crest_1_7_Target,发送,46,COL1A1_integrin_a11b1_complex,Neural crest,COL1A1,integrin,0.351,0.0
+Neural crest_1_7_Target,发送,47,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.351,0.0
+Neural crest_1_7_Target,发送,48,VEGFA_FLT1_complex,Neural crest,VEGFA,FLT1,0.346,0.0
+Neural crest_1_7_Target,发送,49,VEGFA_FLT1,Neural crest,VEGFA,FLT1,0.346,0.0
+Neural crest_1_7_Target,发送,50,COL26A1_integrin_a11b1_complex,Neural crest,COL26A1,integrin,0.327,0.0
+Neural crest_1_7_Target,发送,51,WNT5A_ROR1,Neural crest,WNT5A,ROR1,0.326,0.01
+Neural crest_1_7_Target,发送,52,BMP5_BMPR1A_BMPR2,Neural crest,BMP5,BMPR1A,0.318,0.011
+Neural crest_1_7_Target,发送,53,COL5A2_integrin_a1b1_complex,Neural crest,COL5A2,integrin,0.313,0.001
+Neural crest_1_7_Target,发送,54,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.307,0.0
+Neural crest_1_7_Target,发送,55,Glutamate_byGLS_and_SLC1A3_GRM7,Neural crest,Glutamate,byGLS,0.301,0.01
+Neural crest_1_7_Target,发送,56,SDC2_ADGRA2,Neural crest,SDC2,ADGRA2,0.296,0.0
+Neural crest_1_7_Target,发送,57,COL11A1_integrin_a1b1_complex,Neural crest,COL11A1,integrin,0.295,0.001
+Neural crest_1_7_Target,发送,58,COL5A1_integrin_a1b1_complex,Neural crest,COL5A1,integrin,0.291,0.001
+Neural crest_1_7_Target,发送,59,COL5A2_integrin_a11b1_complex,Neural crest,COL5A2,integrin,0.289,0.001
+Neural crest_1_7_Target,发送,60,COL9A1_integrin_a1b1_complex,Neural crest,COL9A1,integrin,0.288,0.0
+Neural crest_1_7_Target,发送,61,LPAR1_ADGRE5,Neural crest,LPAR1,ADGRE5,0.285,0.001
+Neural crest_1_7_Target,发送,62,VEGFA_NRP2,Neural crest,VEGFA,NRP2,0.277,0.019
+Neural crest_1_7_Target,发送,63,COL11A1_integrin_a11b1_complex,Neural crest,COL11A1,integrin,0.271,0.0
+Neural crest_1_7_Target,发送,64,COL5A1_integrin_a11b1_complex,Neural crest,COL5A1,integrin,0.267,0.001
+Neural crest_1_7_Target,发送,65,integrin_aVb1_complex_ADGRE5,Neural crest,integrin,aVb1,0.266,0.001
+Neural crest_1_7_Target,发送,66,SEMA3A_PlexinA1_complex3,Neural crest,SEMA3A,PlexinA1,0.266,0.001
+Neural crest_1_7_Target,发送,67,SEMA3A_NRP1,Neural crest,SEMA3A,NRP1,0.266,0.001
+Neural crest_1_7_Target,发送,68,COL9A1_integrin_a11b1_complex,Neural crest,COL9A1,integrin,0.264,0.0
+Neural crest_1_7_Target,发送,69,IGFBP3_TMEM219,Neural crest,IGFBP3,TMEM219,0.262,0.0
+Neural crest_1_7_Target,发送,70,Glutamate_byGLS_and_SLC1A3_GRIA4,Neural crest,Glutamate,byGLS,0.25,0.015
+Neural crest_1_7_Target,发送,71,WNT5A_FZD6_LRP5,Neural crest,WNT5A,FZD6,0.24,0.019
+Neural crest_1_7_Target,发送,72,WNT5A_FZD6_LRP6,Neural crest,WNT5A,FZD6,0.24,0.019
+Neural crest_1_7_Target,发送,73,SEMA3A_PlexinA2_complex1,Neural crest,SEMA3A,PlexinA2,0.232,0.005
+Neural crest_1_7_Target,发送,74,SEMA3F_NRP2,Neural crest,SEMA3F,NRP2,0.222,0.001
+Neural crest_1_7_Target,发送,75,CD248_IL6R,Neural crest,CD248,IL6R,0.217,0.0
+Neural crest_1_7_Target,发送,76,CD93_IFNGR1,Neural crest,CD93,IFNGR1,0.204,0.0
+Neural crest_1_7_Target,发送,77,Glutamate_byGLS_and_SLC1A3_GRIA3,Neural crest,Glutamate,byGLS,0.198,0.008
+Neural crest_1_7_Target,发送,78,COL13A1_integrin_a1b1_complex,Neural crest,COL13A1,integrin,0.195,0.001
+Neural crest_1_7_Target,发送,79,ANGPT1_TEK,Neural crest,ANGPT1,TEK,0.191,0.0
+Neural crest_1_7_Target,发送,80,PECAM1_CD38,Neural crest,PECAM1,CD38,0.182,0.0
+Neural crest_1_7_Target,发送,81,TGFB2_TGFbeta_receptor1,Neural crest,TGFB2,TGFbeta,0.179,0.0
+Neural crest_1_7_Target,发送,82,COL13A1_integrin_a11b1_complex,Neural crest,COL13A1,integrin,0.171,0.001
+Neural crest_1_7_Target,发送,83,COL12A1_integrin_a1b1_complex,Neural crest,COL12A1,integrin,0.17,0.004
+Neural crest_1_7_Target,发送,84,VEGFC_FLT4,Neural crest,VEGFC,FLT4,0.167,0.0
+Neural crest_1_7_Target,发送,85,COL15A1_integrin_a1b1_complex,Neural crest,COL15A1,integrin,0.16,0.006
+Neural crest_1_7_Target,发送,86,COL27A1_integrin_a1b1_complex,Neural crest,COL27A1,integrin,0.155,0.009
+Neural crest_1_7_Target,发送,87,COL6A2_integrin_a1b1_complex,Neural crest,COL6A2,integrin,0.155,0.008
+Neural crest_1_7_Target,发送,88,COL12A1_integrin_a11b1_complex,Neural crest,COL12A1,integrin,0.146,0.007
+Neural crest_1_7_Target,发送,89,COL15A1_integrin_a11b1_complex,Neural crest,COL15A1,integrin,0.135,0.013
+Neural crest_1_7_Target,发送,90,COL6A2_integrin_a11b1_complex,Neural crest,COL6A2,integrin,0.131,0.013
+Neural crest_1_7_Target,发送,91,COL27A1_integrin_a11b1_complex,Neural crest,COL27A1,integrin,0.13,0.036
+Neural crest_1_7_Target,发送,92,TNC_integrin_a8b1_complex,Neural crest,TNC,integrin,0.125,0.005
+Neural crest_1_7_Target,发送,93,LPAR2_ADGRE5,Neural crest,LPAR2,ADGRE5,0.115,0.013
+Neural crest_1_7_Target,接收,1,IGF2_IGF2R,Neural crest,IGF2R,IGF2,1.335,0.0
+Neural crest_1_7_Target,接收,2,IGF2_IGF1R,Neural crest,IGF1R,IGF2,1.304,0.0
+Neural crest_1_7_Target,接收,3,COL3A1_integrin_a1b1_complex,Neural crest,integrin,COL3A1,1.08,0.0
+Neural crest_1_7_Target,接收,4,COL3A1_ADGRG1,Neural crest,ADGRG1,COL3A1,1.066,0.0
+Neural crest_1_7_Target,接收,5,COL3A1_integrin_a11b1_complex,Neural crest,integrin,COL3A1,1.066,0.0
+Neural crest_1_7_Target,接收,6,COL4A1_integrin_a1b1_complex,Neural crest,integrin,COL4A1,1.002,0.0
+Neural crest_1_7_Target,接收,7,COL4A1_integrin_a11b1_complex,Neural crest,integrin,COL4A1,0.988,0.0
+Neural crest_1_7_Target,接收,8,CADM1_CADM1,Neural crest,CADM1,CADM1,0.806,0.0
+Neural crest_1_7_Target,接收,9,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.795,0.002
+Neural crest_1_7_Target,接收,10,COL18A1_integrin_a1b1_complex,Neural crest,integrin,COL18A1,0.704,0.026
+Neural crest_1_7_Target,接收,11,COL18A1_integrin_a11b1_complex,Neural crest,integrin,COL18A1,0.69,0.029
+Neural crest_1_7_Target,接收,12,FLRT2_ADGRL1,Neural crest,ADGRL1,FLRT2,0.688,0.0
+Neural crest_1_7_Target,接收,13,FLRT2_ADGRL3,Neural crest,ADGRL3,FLRT2,0.673,0.0
+Neural crest_1_7_Target,接收,14,Cholesterol_byDHCR24_RORA,Neural crest,byDHCR24,Cholesterol,0.635,0.029
+Neural crest_1_7_Target,接收,15,COL4A2_integrin_a1b1_complex,Neural crest,integrin,COL4A2,0.615,0.0
+Neural crest_1_7_Target,接收,16,APP_FPR2,Neural crest,FPR2,APP,0.606,0.023
+Neural crest_1_7_Target,接收,17,COL4A2_integrin_a11b1_complex,Neural crest,integrin,COL4A2,0.6,0.0
+Neural crest_1_7_Target,接收,18,COL1A2_integrin_a1b1_complex,Neural crest,integrin,COL1A2,0.564,0.002
+Neural crest_1_7_Target,接收,19,APP_TNFRSF21,Neural crest,TNFRSF21,APP,0.554,0.017
+Neural crest_1_7_Target,接收,20,COL1A2_integrin_a11b1_complex,Neural crest,integrin,COL1A2,0.55,0.002
+Neural crest_1_7_Target,接收,21,APP_SORL1,Neural crest,SORL1,APP,0.511,0.014
+Neural crest_1_7_Target,接收,22,IGF1_IGF1R,Neural crest,IGF1R,IGF1,0.499,0.0
+Neural crest_1_7_Target,接收,23,IGF1_IGF1R_enhancerComGPC3,Neural crest,IGF1R,IGF1,0.499,0.0
+Neural crest_1_7_Target,接收,24,CDH5_CDH5,Neural crest,CDH5,CDH5,0.483,0.0
+Neural crest_1_7_Target,接收,25,TENM4_ADGRL1,Neural crest,ADGRL1,TENM4,0.466,0.001
+Neural crest_1_7_Target,接收,26,TENM4_ADGRL3,Neural crest,ADGRL3,TENM4,0.451,0.031
+Neural crest_1_7_Target,接收,27,EFNA1_EPHA7,Neural crest,EPHA7,EFNA1,0.442,0.0
+Neural crest_1_7_Target,接收,28,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.438,0.0
+Neural crest_1_7_Target,接收,29,VTN_integrin_aVb1_complex,Neural crest,integrin,VTN,0.438,0.001
+Neural crest_1_7_Target,接收,30,ESAM_ESAM,Neural crest,ESAM,ESAM,0.437,0.0
+Neural crest_1_7_Target,接收,31,EFNA4_EPHA7,Neural crest,EPHA7,EFNA4,0.427,0.007
+Neural crest_1_7_Target,接收,32,EFNB2_EPHA4,Neural crest,EPHA4,EFNB2,0.405,0.01
+Neural crest_1_7_Target,接收,33,COL19A1_integrin_a1b1_complex,Neural crest,integrin,COL19A1,0.396,0.035
+Neural crest_1_7_Target,接收,34,EFNB2_EPHB4,Neural crest,EPHB4,EFNB2,0.389,0.0
+Neural crest_1_7_Target,接收,35,SDC1_ADGRA2,Neural crest,ADGRA2,SDC1,0.384,0.017
+Neural crest_1_7_Target,接收,36,COL19A1_integrin_a11b1_complex,Neural crest,integrin,COL19A1,0.382,0.041
+Neural crest_1_7_Target,接收,37,SDC2_ADGRA2,Neural crest,ADGRA2,SDC2,0.372,0.0
+Neural crest_1_7_Target,接收,38,COL26A1_integrin_a1b1_complex,Neural crest,integrin,COL26A1,0.357,0.0
+Neural crest_1_7_Target,接收,39,Glutamate_byGLS_and_SLC1A3_GRIK2,Neural crest,byGLS,Glutamate,0.356,0.0
+Neural crest_1_7_Target,接收,40,EFNB2_EPHB3,Neural crest,EPHB3,EFNB2,0.354,0.0
+Neural crest_1_7_Target,接收,41,EFNB1_EPHB4,Neural crest,EPHB4,EFNB1,0.351,0.038
+Neural crest_1_7_Target,接收,42,Glutamate_byGLS_and_SLC1A3_GRM7,Neural crest,byGLS,Glutamate,0.347,0.0
+Neural crest_1_7_Target,接收,43,COL26A1_integrin_a11b1_complex,Neural crest,integrin,COL26A1,0.342,0.0
+Neural crest_1_7_Target,接收,44,SEMA3E_PLXND1,Neural crest,PLXND1,SEMA3E,0.34,0.0
+Neural crest_1_7_Target,接收,45,VCAM1_integrin_a9b1_complex,Neural crest,integrin,VCAM1,0.332,0.0
+Neural crest_1_7_Target,接收,46,COL5A2_integrin_a1b1_complex,Neural crest,integrin,COL5A2,0.328,0.001
+Neural crest_1_7_Target,接收,47,BMP5_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP5,0.317,0.0
+Neural crest_1_7_Target,接收,48,COL5A2_integrin_a11b1_complex,Neural crest,integrin,COL5A2,0.314,0.0
+Neural crest_1_7_Target,接收,49,COL5A1_integrin_a1b1_complex,Neural crest,integrin,COL5A1,0.312,0.0
+Neural crest_1_7_Target,接收,50,JAG2_NOTCH2,Neural crest,NOTCH2,JAG2,0.303,0.001
+Neural crest_1_7_Target,接收,51,COL5A1_integrin_a11b1_complex,Neural crest,integrin,COL5A1,0.298,0.0
+Neural crest_1_7_Target,接收,52,VEGFC_KDR,Neural crest,KDR,VEGFC,0.297,0.007
+Neural crest_1_7_Target,接收,53,Glutamate_byGLS_and_SLC1A3_GRIA4,Neural crest,byGLS,Glutamate,0.29,0.0
+Neural crest_1_7_Target,接收,54,Cholesterol_byLIPA_RORA,Neural crest,byLIPA,Cholesterol,0.289,0.036
+Neural crest_1_7_Target,接收,55,PDGFB_PDGFRA,Neural crest,PDGFRA,PDGFB,0.288,0.0
+Neural crest_1_7_Target,接收,56,SEMA6D_PlexinA1_complex1,Neural crest,PlexinA1,SEMA6D,0.279,0.016
+Neural crest_1_7_Target,接收,57,EFNA1_EPHA4,Neural crest,EPHA4,EFNA1,0.278,0.003
+Neural crest_1_7_Target,接收,58,FGF2_FGFR1,Neural crest,FGFR1,FGF2,0.276,0.007
+Neural crest_1_7_Target,接收,59,BMP4_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP4,0.276,0.007
+Neural crest_1_7_Target,接收,60,COL11A1_integrin_a1b1_complex,Neural crest,integrin,COL11A1,0.274,0.041
+Neural crest_1_7_Target,接收,61,Glutamate_byGLS_and_SLC1A3_GRIK3,Neural crest,byGLS,Glutamate,0.271,0.003
+Neural crest_1_7_Target,接收,62,BMP4_BMR1B_AVR2A,Neural crest,BMR1B,BMP4,0.266,0.027
+Neural crest_1_7_Target,接收,63,PDGFB_PDGFR_complex,Neural crest,PDGFR,PDGFB,0.264,0.0
+Neural crest_1_7_Target,接收,64,PDGFB_PDGFRB,Neural crest,PDGFRB,PDGFB,0.264,0.0
+Neural crest_1_7_Target,接收,65,BMP4_BMR1B_AVR2B,Neural crest,BMR1B,BMP4,0.264,0.032
+Neural crest_1_7_Target,接收,66,Glutamate_byGLS_and_SLC1A3_GRIA3,Neural crest,byGLS,Glutamate,0.26,0.0
+Neural crest_1_7_Target,接收,67,COL11A1_integrin_a11b1_complex,Neural crest,integrin,COL11A1,0.259,0.046
+Neural crest_1_7_Target,接收,68,BMP5_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP5,0.248,0.0
+Neural crest_1_7_Target,接收,69,COL9A1_integrin_a1b1_complex,Neural crest,integrin,COL9A1,0.242,0.035
+Neural crest_1_7_Target,接收,70,BMP5_BMR1A_ACR2A,Neural crest,BMR1A,BMP5,0.239,0.0
+Neural crest_1_7_Target,接收,71,BMP5_BMR1B_AVR2A,Neural crest,BMR1B,BMP5,0.239,0.0
+Neural crest_1_7_Target,接收,72,BMP5_BMR1B_AVR2B,Neural crest,BMR1B,BMP5,0.236,0.0
+Neural crest_1_7_Target,接收,73,BMP5_BMR1A_AVR2B,Neural crest,BMR1A,BMP5,0.236,0.009
+Neural crest_1_7_Target,接收,74,BMP7_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP7,0.235,0.026
+Neural crest_1_7_Target,接收,75,COL9A1_integrin_a11b1_complex,Neural crest,integrin,COL9A1,0.228,0.036
+Neural crest_1_7_Target,接收,76,CD93_IFNGR1,Neural crest,IFNGR1,CD93,0.21,0.0
+Neural crest_1_7_Target,接收,77,EFNA1_EPHA3,Neural crest,EPHA3,EFNA1,0.208,0.042
+Neural crest_1_7_Target,接收,78,COL13A1_integrin_a1b1_complex,Neural crest,integrin,COL13A1,0.185,0.001
+Neural crest_1_7_Target,接收,79,PECAM1_CD38,Neural crest,CD38,PECAM1,0.18,0.001
+Neural crest_1_7_Target,接收,80,COL13A1_integrin_a11b1_complex,Neural crest,integrin,COL13A1,0.17,0.001
+Neural crest_1_7_Target,接收,81,ANGPT1_TEK,Neural crest,TEK,ANGPT1,0.166,0.022
+Neural crest_1_7_Target,接收,82,BMP5_ACVR_1A2A_receptor,Neural crest,ACVR,BMP5,0.161,0.002
+Neural crest_1_7_Target,接收,83,BMP5_ACVR_1A2B_receptor,Neural crest,ACVR,BMP5,0.161,0.002
+Neural crest_1_7_Target,接收,84,BMP5_ACVR1_BMPR2,Neural crest,ACVR1,BMP5,0.161,0.002
+Neural crest_1_7_Target,接收,85,COL15A1_integrin_a1b1_complex,Neural crest,integrin,COL15A1,0.159,0.002
+Neural crest_1_7_Target,接收,86,COL12A1_integrin_a1b1_complex,Neural crest,integrin,COL12A1,0.152,0.023
+Neural crest_1_7_Target,接收,87,VCAM1_integrin_a4b1_complex,Neural crest,integrin,VCAM1,0.145,0.018
+Neural crest_1_7_Target,接收,88,COL15A1_integrin_a11b1_complex,Neural crest,integrin,COL15A1,0.144,0.003
+Neural crest_1_7_Target,接收,89,COL12A1_integrin_a11b1_complex,Neural crest,integrin,COL12A1,0.137,0.025
+Neural crest_1_7_Target,接收,90,JAG2_VASN,Neural crest,VASN,JAG2,0.119,0.005
+Notochord,发送,1,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.519,0.0
+Notochord,发送,2,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.339,0.0
+Notochord,发送,3,COL3A1_ADGRG1,Neural crest,COL3A1,ADGRG1,1.181,0.0
+Notochord,发送,4,CADM1_NECTIN3,Neural crest,CADM1,NECTIN3,0.969,0.0
+Notochord,发送,5,DLK1_NOTCH1,Neural crest,DLK1,NOTCH1,0.956,0.0
+Notochord,发送,6,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.93,0.0
+Notochord,发送,7,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,0.925,0.0
+Notochord,发送,8,DLK1_NOTCH2,Neural crest,DLK1,NOTCH2,0.921,0.0
+Notochord,发送,9,LRFN4_PTPRF,Neural crest,LRFN4,PTPRF,0.884,0.0
+Notochord,发送,10,NECTIN2_NECTIN3,Neural crest,NECTIN2,NECTIN3,0.869,0.0
+Notochord,发送,11,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.797,0.0
+Notochord,发送,12,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.793,0.0
+Notochord,发送,13,FN1_integrin_aVb1_complex,Neural crest,FN1,integrin,0.792,0.006
+Notochord,发送,14,DLK1_NOTCH3,Neural crest,DLK1,NOTCH3,0.782,0.0
+Notochord,发送,15,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.774,0.0
+Notochord,发送,16,CADM1_CADM1,Neural crest,CADM1,CADM1,0.772,0.001
+Notochord,发送,17,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.77,0.0
+Notochord,发送,18,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.747,0.019
+Notochord,发送,19,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.74,0.0
+Notochord,发送,20,COL18A1_integrin_a11b1_complex,Neural crest,COL18A1,integrin,0.729,0.0
+Notochord,发送,21,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.725,0.0
+Notochord,发送,22,WNT5A_SFRP1,Neural crest,WNT5A,SFRP1,0.703,0.0
+Notochord,发送,23,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.679,0.0
+Notochord,发送,24,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.675,0.0
+Notochord,发送,25,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.674,0.0
+Notochord,发送,26,NECTIN1_NECTIN3,Neural crest,NECTIN1,NECTIN3,0.672,0.0
+Notochord,发送,27,FN1_integrin_a11b1_complex,Neural crest,FN1,integrin,0.653,0.035
+Notochord,发送,28,Cholesterol_byDHCR24_RORA,Neural crest,Cholesterol,byDHCR24,0.649,0.002
+Notochord,发送,29,WNT5B_SFRP1,Neural crest,WNT5B,SFRP1,0.626,0.0
+Notochord,发送,30,JAM3_JAM3,Neural crest,JAM3,JAM3,0.624,0.0
+Notochord,发送,31,EFNA5_EPHB2,Neural crest,EFNA5,EPHB2,0.618,0.0
+Notochord,发送,32,APP_FPR2,Neural crest,APP,FPR2,0.61,0.0
+Notochord,发送,33,CDH6_CDH6,Neural crest,CDH6,CDH6,0.598,0.0
+Notochord,发送,34,WNT7B_SFRP1,Neural crest,WNT7B,SFRP1,0.588,0.0
+Notochord,发送,35,APP_TNFRSF21,Neural crest,APP,TNFRSF21,0.586,0.0
+Notochord,发送,36,AGRN_PTPRS,Neural crest,AGRN,PTPRS,0.581,0.0
+Notochord,发送,37,IGF1_IGF1R,Neural crest,IGF1,IGF1R,0.557,0.0
+Notochord,发送,38,IGF1_IGF1R_enhancerComGPC3,Neural crest,IGF1,IGF1R,0.557,0.0
+Notochord,发送,39,BMPR1B_BMPR2_BMPR1A,Neural crest,BMPR1B,BMPR2,0.555,0.0
+Notochord,发送,40,EFNA5_EPHA4,Neural crest,EFNA5,EPHA4,0.538,0.0
+Notochord,发送,41,APP_SORL1,Neural crest,APP,SORL1,0.525,0.0
+Notochord,发送,42,TENM3_ADGRL3,Neural crest,TENM3,ADGRL3,0.524,0.001
+Notochord,发送,43,CXCL12_CXCR4,Neural crest,CXCL12,CXCR4,0.52,0.0
+Notochord,发送,44,APP_PLXNA4,Neural crest,APP,PLXNA4,0.506,0.0
+Notochord,发送,45,DAG1_NRXN3,Neural crest,DAG1,NRXN3,0.49,0.013
+Notochord,发送,46,TENM4_ADGRL3,Neural crest,TENM4,ADGRL3,0.481,0.001
+Notochord,发送,47,JAG1_NOTCH1,Neural crest,JAG1,NOTCH1,0.48,0.0
+Notochord,发送,48,EFNB3_EPHB2,Neural crest,EFNB3,EPHB2,0.476,0.0
+Notochord,发送,49,EFNB2_EPHB2,Neural crest,EFNB2,EPHB2,0.472,0.0
+Notochord,发送,50,EFNB1_EPHB2,Neural crest,EFNB1,EPHB2,0.471,0.0
+Notochord,发送,51,JAM2_JAM3,Neural crest,JAM2,JAM3,0.471,0.0
+Notochord,发送,52,COL4A2_integrin_a11b1_complex,Neural crest,COL4A2,integrin,0.46,0.0
+Notochord,发送,53,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.456,0.0
+Notochord,发送,54,JAG1_NOTCH2,Neural crest,JAG1,NOTCH2,0.445,0.0
+Notochord,发送,55,JAG2_NOTCH1,Neural crest,JAG2,NOTCH1,0.439,0.0
+Notochord,发送,56,TGM2_ADGRG1,Neural crest,TGM2,ADGRG1,0.419,0.0
+Notochord,发送,57,LRFN4_PTPRS,Neural crest,LRFN4,PTPRS,0.418,0.0
+Notochord,发送,58,FGF8_FGFR3,Neural crest,FGF8,FGFR3,0.415,0.0
+Notochord,发送,59,VTN_integrin_aVb1_complex,Neural crest,VTN,integrin,0.411,0.005
+Notochord,发送,60,APLP2_PLXNA4,Neural crest,APLP2,PLXNA4,0.405,0.012
+Notochord,发送,61,JAG2_NOTCH2,Neural crest,JAG2,NOTCH2,0.404,0.0
+Notochord,发送,62,EFNB2_EPHA4,Neural crest,EFNB2,EPHA4,0.393,0.007
+Notochord,发送,63,TENM3_FLRT3_complex_ADGRL3,Neural crest,TENM3,FLRT3,0.393,0.0
+Notochord,发送,64,FLRT3_ADGRL3,Neural crest,FLRT3,ADGRL3,0.393,0.0
+Notochord,发送,65,EFNA5_EPHA5,Neural crest,EFNA5,EPHA5,0.392,0.0
+Notochord,发送,66,EFNB1_EPHA4,Neural crest,EFNB1,EPHA4,0.391,0.037
+Notochord,发送,67,EFNA4_EPHA4,Neural crest,EFNA4,EPHA4,0.361,0.0
+Notochord,发送,68,LRPAP1_SORT1,Neural crest,LRPAP1,SORT1,0.357,0.0
+Notochord,发送,69,COL1A1_integrin_a11b1_complex,Neural crest,COL1A1,integrin,0.351,0.0
+Notochord,发送,70,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.347,0.0
+Notochord,发送,71,TENM4_FLRT3_complex_ADGRL1,Neural crest,TENM4,FLRT3,0.327,0.026
+Notochord,发送,72,COL26A1_integrin_a11b1_complex,Neural crest,COL26A1,integrin,0.327,0.0
+Notochord,发送,73,BMP4_BMR1A_ACR2A,Neural crest,BMP4,BMR1A,0.323,0.0
+Notochord,发送,74,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.323,0.0
+Notochord,发送,75,BMP4_BMR1A_AVR2B,Neural crest,BMP4,BMR1A,0.321,0.004
+Notochord,发送,76,EFNB3_EPHB1,Neural crest,EFNB3,EPHB1,0.319,0.017
+Notochord,发送,77,Cholesterol_byDHCR7_RORA,Neural crest,Cholesterol,byDHCR7,0.318,0.027
+Notochord,发送,78,EFNB2_EPHB1,Neural crest,EFNB2,EPHB1,0.315,0.0
+Notochord,发送,79,EFNB1_EPHB1,Neural crest,EFNB1,EPHB1,0.314,0.0
+Notochord,发送,80,IGFBP3_TMEM219,Neural crest,IGFBP3,TMEM219,0.309,0.0
+Notochord,发送,81,JAG1_NOTCH3,Neural crest,JAG1,NOTCH3,0.305,0.002
+Notochord,发送,82,Cholesterol_byLIPA_RORA,Neural crest,Cholesterol,byLIPA,0.301,0.014
+Notochord,发送,83,RSPO3_LGR4,Neural crest,RSPO3,LGR4,0.299,0.0
+Notochord,发送,84,EFNA1_EPHA4,Neural crest,EFNA1,EPHA4,0.296,0.0
+Notochord,发送,85,TENM2_ADGRL3,Neural crest,TENM2,ADGRL3,0.295,0.001
+Notochord,发送,86,NRG3_ERBB4,Neural crest,NRG3,ERBB4,0.294,0.001
+Notochord,发送,87,COL5A2_integrin_a11b1_complex,Neural crest,COL5A2,integrin,0.289,0.0
+Notochord,发送,88,COL5A2_integrin_a1b1_complex,Neural crest,COL5A2,integrin,0.285,0.016
+Notochord,发送,89,Glutamate_byGLS_and_SLC1A3_GRIK3,Neural crest,Glutamate,byGLS,0.281,0.0
+Notochord,发送,90,SEMA4D_PLXNB1,Neural crest,SEMA4D,PLXNB1,0.28,0.0
+Notochord,发送,91,BMP7_BMR1A_ACR2A,Neural crest,BMP7,BMR1A,0.279,0.003
+Notochord,发送,92,BMP4_BMPR1B_BMPR2,Neural crest,BMP4,BMPR1B,0.279,0.003
+Notochord,发送,93,BMP4_BMR1B_AVR2A,Neural crest,BMP4,BMR1B,0.279,0.002
+Notochord,发送,94,BMP4_BMR1B_AVR2B,Neural crest,BMP4,BMR1B,0.279,0.001
+Notochord,发送,95,integrin_aVb5_complex_ADGRB1,Neural crest,integrin,aVb5,0.278,0.0
+Notochord,发送,96,BMP7_BMR1A_AVR2B,Neural crest,BMP7,BMR1A,0.278,0.02
+Notochord,发送,97,COL11A1_integrin_a11b1_complex,Neural crest,COL11A1,integrin,0.272,0.0
+Notochord,发送,98,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.272,0.0
+Notochord,发送,99,COL5A1_integrin_a11b1_complex,Neural crest,COL5A1,integrin,0.268,0.0
+Notochord,发送,100,COL11A1_integrin_a1b1_complex,Neural crest,COL11A1,integrin,0.267,0.017
+Notochord,接收,1,SLIT2_ROBO1,Neural crest,ROBO1,SLIT2,1.149,0.0
+Notochord,接收,2,PPIA_BSG,Neural crest,BSG,PPIA,1.108,0.045
+Notochord,接收,3,SLIT2_ROBO2,Neural crest,ROBO2,SLIT2,1.084,0.0
+Notochord,接收,4,SHH_PTCH_GAS1_transmembrane_receptor,Neural crest,PTCH,SHH,0.969,0.0
+Notochord,接收,5,NTN1_UNC5C,Neural crest,UNC5C,NTN1,0.892,0.0
+Notochord,接收,6,FN1_integrin_aVb1_complex,Neural crest,integrin,FN1,0.867,0.0
+Notochord,接收,7,FN1_integrin_aVb5_complex,Neural crest,integrin,FN1,0.854,0.0
+Notochord,接收,8,SHH_PTCH_CDON_transmembrane_receptor,Neural crest,PTCH,SHH,0.847,0.0
+Notochord,接收,9,NTN1_UNC5B,Neural crest,UNC5B,NTN1,0.792,0.0
+Notochord,接收,10,NTN1_DCC,Neural crest,DCC,NTN1,0.784,0.0
+Notochord,接收,11,CADM1_CADM1,Neural crest,CADM1,CADM1,0.772,0.001
+Notochord,接收,12,SHH_PTCH_BOC_transmembrane_receptor,Neural crest,PTCH,SHH,0.757,0.0
+Notochord,接收,13,FN1_integrin_a4b1_complex,Neural crest,integrin,FN1,0.749,0.0
+Notochord,接收,14,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.747,0.019
+Notochord,接收,15,FN1_integrin_a3b1_complex,Neural crest,integrin,FN1,0.747,0.0
+Notochord,接收,16,FN1_integrin_a11b1_complex,Neural crest,integrin,FN1,0.744,0.0
+Notochord,接收,17,FN1_integrin_a8b1_complex,Neural crest,integrin,FN1,0.735,0.0
+Notochord,接收,18,EFNB3_EPHA4,Neural crest,EPHA4,EFNB3,0.688,0.0
+Notochord,接收,19,VTN_integrin_aVb1_complex,Neural crest,integrin,VTN,0.682,0.0
+Notochord,接收,20,EFNB3_EPHB4,Neural crest,EPHB4,EFNB3,0.672,0.0
+Notochord,接收,21,EFNB3_EPHB2,Neural crest,EPHB2,EFNB3,0.669,0.0
+Notochord,接收,22,TENM4_ADGRL2,Neural crest,ADGRL2,TENM4,0.645,0.017
+Notochord,接收,23,Cholesterol_byDHCR24_RORA,Neural crest,byDHCR24,Cholesterol,0.639,0.013
+Notochord,接收,24,EFNB3_EPHB3,Neural crest,EPHB3,EFNB3,0.637,0.0
+Notochord,接收,25,JAM3_JAM3,Neural crest,JAM3,JAM3,0.624,0.0
+Notochord,接收,26,CDH6_CDH6,Neural crest,CDH6,CDH6,0.598,0.0
+Notochord,接收,27,EFNA5_EPHA7,Neural crest,EPHA7,EFNA5,0.589,0.012
+Notochord,接收,28,SLIT1_ROBO1,Neural crest,ROBO1,SLIT1,0.55,0.0
+Notochord,接收,29,DAG1_NRXN3,Neural crest,NRXN3,DAG1,0.532,0.0
+Notochord,接收,30,KITLG_KIT,Neural crest,KIT,KITLG,0.53,0.0
+Notochord,接收,31,COL4A2_integrin_a1b1_complex,Neural crest,integrin,COL4A2,0.488,0.0
+Notochord,接收,32,WNT5A_SFRP1,Neural crest,SFRP1,WNT5A,0.48,0.032
+Notochord,接收,33,TENM3_ADGRL1,Neural crest,ADGRL1,TENM3,0.478,0.042
+Notochord,接收,34,TENM4_ADGRL1,Neural crest,ADGRL1,TENM4,0.478,0.0
+Notochord,接收,35,LAMC1_integrin_a6b1_complex,Neural crest,integrin,LAMC1,0.475,0.003
+Notochord,接收,36,COL4A2_integrin_a11b1_complex,Neural crest,integrin,COL4A2,0.473,0.0
+Notochord,接收,37,NCAM1_AGRN,Neural crest,AGRN,NCAM1,0.466,0.0
+Notochord,接收,38,TENM4_ADGRL3,Neural crest,ADGRL3,TENM4,0.462,0.006
+Notochord,接收,39,PDGFC_PDGFRA,Neural crest,PDGFRA,PDGFC,0.459,0.0
+Notochord,接收,40,NRXN2_DAG1,Neural crest,DAG1,NRXN2,0.452,0.005
+Notochord,接收,41,NCAM1_FGFR1,Neural crest,FGFR1,NCAM1,0.451,0.0
+Notochord,接收,42,TENM2_FLRT3_complex_ADGRL2,Neural crest,FLRT3,TENM2,0.446,0.042
+Notochord,接收,43,TENM2_ADGRL2,Neural crest,ADGRL2,TENM2,0.446,0.042
+Notochord,接收,44,WNT5A_ROR2,Neural crest,ROR2,WNT5A,0.44,0.0
+Notochord,接收,45,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.434,0.001
+Notochord,接收,46,COL19A1_integrin_a1b1_complex,Neural crest,integrin,COL19A1,0.422,0.0
+Notochord,接收,47,EFNA4_EPHA7,Neural crest,EPHA7,EFNA4,0.409,0.021
+Notochord,接收,48,COL19A1_integrin_a11b1_complex,Neural crest,integrin,COL19A1,0.407,0.0
+Notochord,接收,49,WNT5A_SFRP2,Neural crest,SFRP2,WNT5A,0.407,0.003
+Notochord,接收,50,LRFN4_PTPRD,Neural crest,PTPRD,LRFN4,0.401,0.035
+Notochord,接收,51,WNT5A_FZD2_LRP6,Neural crest,FZD2,WNT5A,0.398,0.0
+Notochord,接收,52,WNT5A_FZD3_LRP6,Neural crest,FZD3,WNT5A,0.398,0.0
+Notochord,接收,53,WNT5A_FZD7_LRP6,Neural crest,FZD7,WNT5A,0.398,0.0
+Notochord,接收,54,WNT5A_ROR1,Neural crest,ROR1,WNT5A,0.392,0.0
+Notochord,接收,55,Glutamate_byGLS_and_SLC1A3_GRIK2,Neural crest,byGLS,Glutamate,0.391,0.0
+Notochord,接收,56,JAM2_JAM3,Neural crest,JAM3,JAM2,0.389,0.01
+Notochord,接收,57,DLL1_NOTCH2,Neural crest,NOTCH2,DLL1,0.385,0.0
+Notochord,接收,58,WNT5A_FZD3_LRP5,Neural crest,FZD3,WNT5A,0.383,0.0
+Notochord,接收,59,WNT5A_FZD2_LRP5,Neural crest,FZD2,WNT5A,0.383,0.0
+Notochord,接收,60,WNT5A_FZD7_LRP5,Neural crest,FZD7,WNT5A,0.383,0.0
+Notochord,接收,61,Glutamate_byGLS_and_SLC1A3_GRM7,Neural crest,byGLS,Glutamate,0.381,0.0
+Notochord,接收,62,SEMA3E_PLXND1,Neural crest,PLXND1,SEMA3E,0.378,0.0
+Notochord,接收,63,WNT5A_FRZB,Neural crest,FRZB,WNT5A,0.372,0.0
+Notochord,接收,64,VEGFA_KDR,Neural crest,KDR,VEGFA,0.361,0.002
+Notochord,接收,65,Cholesterol_byDHCR7_RORA,Neural crest,byDHCR7,Cholesterol,0.343,0.0
+Notochord,接收,66,BMP7_BMPR1A_BMPR2,Neural crest,BMPR1A,BMP7,0.342,0.001
+Notochord,接收,67,Glutamate_byGLS_and_SLC1A3_GRIA4,Neural crest,byGLS,Glutamate,0.325,0.0
+Notochord,接收,68,WNT5A_FZD4_LRP6,Neural crest,FZD4,WNT5A,0.323,0.0
+Notochord,接收,69,WNT5A_FZD4_LRP5,Neural crest,FZD4,WNT5A,0.323,0.0
+Notochord,接收,70,Cholesterol_byLIPA_RORA,Neural crest,byLIPA,Cholesterol,0.318,0.0
+Notochord,接收,71,SPP1_integrin_a9b1_complex,Neural crest,integrin,SPP1,0.317,0.0
+Notochord,接收,72,VEGFB_FLT1_complex,Neural crest,FLT1,VEGFB,0.317,0.046
+Notochord,接收,73,VEGFB_FLT1,Neural crest,FLT1,VEGFB,0.317,0.046
+Notochord,接收,74,DKK2_LRP6,Neural crest,LRP6,DKK2,0.316,0.0
+Notochord,接收,75,SDC2_ADGRA2,Neural crest,ADGRA2,SDC2,0.308,0.0
+Notochord,接收,76,WNT5A_FZD10_LRP5,Neural crest,FZD10,WNT5A,0.307,0.001
+Notochord,接收,77,WNT5A_FZD10_LRP6,Neural crest,FZD10,WNT5A,0.307,0.001
+Notochord,接收,78,DLL3_NOTCH2,Neural crest,NOTCH2,DLL3,0.306,0.001
+Notochord,接收,79,WNT5A_FZD6_LRP5,Neural crest,FZD6,WNT5A,0.306,0.0
+Notochord,接收,80,WNT5A_FZD6_LRP6,Neural crest,FZD6,WNT5A,0.306,0.0
+Notochord,接收,81,Glutamate_byGLS_and_SLC1A3_GRIK3,Neural crest,byGLS,Glutamate,0.306,0.0
+Notochord,接收,82,WNT5A_FZD8_LRP6,Neural crest,FZD8,WNT5A,0.302,0.0
+Notochord,接收,83,WNT5A_FZD8_LRP5,Neural crest,FZD8,WNT5A,0.302,0.0
+Notochord,接收,84,WNT5A_FDZ8_RYK,Neural crest,FDZ8,WNT5A,0.302,0.0
+Notochord,接收,85,COL5A2_integrin_a1b1_complex,Neural crest,integrin,COL5A2,0.301,0.004
+Notochord,接收,86,Glutamate_byGLS_and_SLC1A3_GRIA3,Neural crest,byGLS,Glutamate,0.295,0.0
+Notochord,接收,87,PDGFA_PDGFRA,Neural crest,PDGFRA,PDGFA,0.294,0.012
+Notochord,接收,88,SEMA4C_PLXNB2,Neural crest,PLXNB2,SEMA4C,0.292,0.007
+Notochord,接收,89,COL5A2_integrin_a11b1_complex,Neural crest,integrin,COL5A2,0.287,0.009
+Notochord,接收,90,VEGFA_FLT1_complex,Neural crest,FLT1,VEGFA,0.28,0.007
+Notochord,接收,91,VEGFB_NRP1,Neural crest,NRP1,VEGFB,0.28,0.019
+Notochord,接收,92,VEGFA_FLT1,Neural crest,FLT1,VEGFA,0.28,0.007
+Notochord,接收,93,TENM2_FLRT3_complex_ADGRL1,Neural crest,FLRT3,TENM2,0.279,0.0
+Notochord,接收,94,TENM2_ADGRL1,Neural crest,ADGRL1,TENM2,0.279,0.0
+Notochord,接收,95,BMP7_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP7,0.274,0.0
+Notochord,接收,96,DLL1_NOTCH3,Neural crest,NOTCH3,DLL1,0.273,0.001
+Notochord,接收,97,CLSTN1_NRXN3,Neural crest,NRXN3,CLSTN1,0.272,0.013
+Notochord,接收,98,JAM2_integrin_a4b1_complex,Neural crest,integrin,JAM2,0.27,0.0
+Notochord,接收,99,integrin_aVb1_complex_ADGRE5,Neural crest,aVb1,integrin,0.268,0.003
+Notochord,接收,100,VEGFA_NRP2,Neural crest,NRP2,VEGFA,0.267,0.025
+Sclerotome,发送,1,IGF2_IGF2R,Neural crest,IGF2,IGF2R,1.573,0.0
+Sclerotome,发送,2,IGF2_IGF1R,Neural crest,IGF2,IGF1R,1.437,0.0
+Sclerotome,发送,3,DLK1_NOTCH1,Neural crest,DLK1,NOTCH1,1.028,0.0
+Sclerotome,发送,4,COL3A1_integrin_a1b1_complex,Neural crest,COL3A1,integrin,1.01,0.0
+Sclerotome,发送,5,CADM1_CADM1,Neural crest,CADM1,CADM1,0.942,0.003
+Sclerotome,发送,6,CDH6_CDH6,Neural crest,CDH6,CDH6,0.928,0.0
+Sclerotome,发送,7,DLK1_NOTCH2,Neural crest,DLK1,NOTCH2,0.899,0.009
+Sclerotome,发送,8,2arachidonoylglycerol_byDAGLB_CNR1,Neural crest,2arachidonoylglycerol,byDAGLB,0.895,0.023
+Sclerotome,发送,9,COL3A1_integrin_a11b1_complex,Neural crest,COL3A1,integrin,0.887,0.0
+Sclerotome,发送,10,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.882,0.016
+Sclerotome,发送,11,COL2A1_integrin_a1b1_complex,Neural crest,COL2A1,integrin,0.878,0.0
+Sclerotome,发送,12,COL4A1_integrin_a1b1_complex,Neural crest,COL4A1,integrin,0.855,0.001
+Sclerotome,发送,13,COL18A1_integrin_a1b1_complex,Neural crest,COL18A1,integrin,0.81,0.007
+Sclerotome,发送,14,CADM1_NECTIN3,Neural crest,CADM1,NECTIN3,0.782,0.05
+Sclerotome,发送,15,COL4A1_ADGRG6,Neural crest,COL4A1,ADGRG6,0.767,0.0
+Sclerotome,发送,16,COL1A2_integrin_a1b1_complex,Neural crest,COL1A2,integrin,0.76,0.0
+Sclerotome,发送,17,COL2A1_integrin_a11b1_complex,Neural crest,COL2A1,integrin,0.754,0.003
+Sclerotome,发送,18,FN1_integrin_a4b1_complex,Neural crest,FN1,integrin,0.737,0.021
+Sclerotome,发送,19,COL4A1_integrin_a11b1_complex,Neural crest,COL4A1,integrin,0.731,0.01
+Sclerotome,发送,20,EFNA5_EPHA7,Neural crest,EFNA5,EPHA7,0.699,0.012
+Sclerotome,发送,21,APP_FPR2,Neural crest,APP,FPR2,0.684,0.016
+Sclerotome,发送,22,NECTIN2_NECTIN3,Neural crest,NECTIN2,NECTIN3,0.683,0.009
+Sclerotome,发送,23,FLRT2_ADGRL3,Neural crest,FLRT2,ADGRL3,0.649,0.005
+Sclerotome,发送,24,COL1A2_integrin_a11b1_complex,Neural crest,COL1A2,integrin,0.636,0.0
+Sclerotome,发送,25,FLRT2_ADGRL1,Neural crest,FLRT2,ADGRL1,0.634,0.004
+Sclerotome,发送,26,EFNA5_EPHB2,Neural crest,EFNA5,EPHB2,0.625,0.004
+Sclerotome,发送,27,NTN1_UNC5C,Neural crest,NTN1,UNC5C,0.575,0.004
+Sclerotome,发送,28,JAG1_NOTCH1,Neural crest,JAG1,NOTCH1,0.552,0.006
+Sclerotome,发送,29,WNT5A_ROR1,Neural crest,WNT5A,ROR1,0.55,0.0
+Sclerotome,发送,30,COL4A2_integrin_a1b1_complex,Neural crest,COL4A2,integrin,0.541,0.004
+Sclerotome,发送,31,APP_SORL1,Neural crest,APP,SORL1,0.528,0.023
+Sclerotome,发送,32,EFNA4_EPHA7,Neural crest,EFNA4,EPHA7,0.523,0.018
+Sclerotome,发送,33,APP_PLXNA4,Neural crest,APP,PLXNA4,0.513,0.015
+Sclerotome,发送,34,JAG2_NOTCH1,Neural crest,JAG2,NOTCH1,0.511,0.003
+Sclerotome,发送,35,CDH5_CDH5,Neural crest,CDH5,CDH5,0.502,0.011
+Sclerotome,发送,36,EFNB2_EPHB2,Neural crest,EFNB2,EPHB2,0.479,0.042
+Sclerotome,发送,37,PDGFC_PDGFRA,Neural crest,PDGFC,PDGFRA,0.47,0.018
+Sclerotome,发送,38,CXCL12_CXCR4,Neural crest,CXCL12,CXCR4,0.467,0.0
+Sclerotome,发送,39,SEMA3C_NRP2,Neural crest,SEMA3C,NRP2,0.464,0.0
+Sclerotome,发送,40,EFNA1_EPHA7,Neural crest,EFNA1,EPHA7,0.457,0.03
+Sclerotome,发送,41,COL4A2_ADGRG6,Neural crest,COL4A2,ADGRG6,0.453,0.0
+Sclerotome,发送,42,VEGFA_KDR,Neural crest,VEGFA,KDR,0.451,0.039
+Sclerotome,发送,43,Glutamate_byGLS_and_SLC1A3_GRIK2,Neural crest,Glutamate,byGLS,0.446,0.006
+Sclerotome,发送,44,VCAM1_integrin_a9b1_complex,Neural crest,VCAM1,integrin,0.434,0.005
+Sclerotome,发送,45,VEGFA_NRP2,Neural crest,VEGFA,NRP2,0.433,0.003
+Sclerotome,发送,46,TNC_integrin_a9b1_complex,Neural crest,TNC,integrin,0.432,0.005
+Sclerotome,发送,47,COL1A1_integrin_a1b1_complex,Neural crest,COL1A1,integrin,0.432,0.006
+Sclerotome,发送,48,PDGFA_PDGFRA,Neural crest,PDGFA,PDGFRA,0.427,0.011
+Sclerotome,发送,49,SDC1_ADGRA2,Neural crest,SDC1,ADGRA2,0.417,0.044
+Sclerotome,发送,50,VEGFC_KDR,Neural crest,VEGFC,KDR,0.414,0.02
+Sclerotome,发送,51,COL26A1_integrin_a1b1_complex,Neural crest,COL26A1,integrin,0.408,0.009
+Sclerotome,发送,52,EFNB2_EPHB4,Neural crest,EFNB2,EPHB4,0.399,0.046
+Sclerotome,发送,53,BMP4_BMR1A_AVR2B,Neural crest,BMP4,BMR1A,0.39,0.036
+Sclerotome,发送,54,SEMA3E_PLXND1,Neural crest,SEMA3E,PLXND1,0.384,0.042
+Sclerotome,发送,55,JAG2_NOTCH2,Neural crest,JAG2,NOTCH2,0.382,0.039
+Sclerotome,发送,56,WNT5A_FRZB,Neural crest,WNT5A,FRZB,0.381,0.025
+Sclerotome,发送,57,SEMA3F_NRP2,Neural crest,SEMA3F,NRP2,0.379,0.0
+Sclerotome,发送,58,COL5A2_integrin_a1b1_complex,Neural crest,COL5A2,integrin,0.37,0.023
+Sclerotome,发送,59,RSPO3_LGR4,Neural crest,RSPO3,LGR4,0.356,0.009
+Sclerotome,发送,60,COL11A1_integrin_a1b1_complex,Neural crest,COL11A1,integrin,0.353,0.021
+Sclerotome,发送,61,COL5A1_integrin_a1b1_complex,Neural crest,COL5A1,integrin,0.349,0.022
+Sclerotome,发送,62,PSAP_GPR37,Neural crest,PSAP,GPR37,0.347,0.0
+Sclerotome,发送,63,COL9A1_integrin_a1b1_complex,Neural crest,COL9A1,integrin,0.345,0.014
+Sclerotome,发送,64,KITLG_KIT,Neural crest,KITLG,KIT,0.33,0.007
+Sclerotome,发送,65,WNT5B_FRZB,Neural crest,WNT5B,FRZB,0.304,0.04
+Sclerotome,发送,66,Desmosterol_byDHCR7_NR1H2,Neural crest,Desmosterol,byDHCR7,0.299,0.004
+Sclerotome,发送,67,SEMA3A_PlexinA1_complex3,Neural crest,SEMA3A,PlexinA1,0.28,0.024
+Sclerotome,发送,68,SEMA3A_NRP1,Neural crest,SEMA3A,NRP1,0.28,0.04
+Sclerotome,发送,69,COL13A1_integrin_a1b1_complex,Neural crest,COL13A1,integrin,0.252,0.022
+Sclerotome,发送,70,SEMA3A_PlexinA4_complex1,Neural crest,SEMA3A,PlexinA4,0.23,0.015
+Sclerotome,发送,71,COL12A1_integrin_a1b1_complex,Neural crest,COL12A1,integrin,0.228,0.03
+Sclerotome,发送,72,Glutamate_byGLS_and_SLC1A3_GRIK1,Neural crest,Glutamate,byGLS,0.219,0.027
+Sclerotome,发送,73,COL15A1_integrin_a1b1_complex,Neural crest,COL15A1,integrin,0.217,0.036
+Sclerotome,发送,74,VCAM1_integrin_a4b1_complex,Neural crest,VCAM1,integrin,0.216,0.025
+Sclerotome,发送,75,TNC_integrin_a4b1_complex,Neural crest,TNC,integrin,0.214,0.022
+Sclerotome,发送,76,COL27A1_integrin_a1b1_complex,Neural crest,COL27A1,integrin,0.212,0.041
+Sclerotome,发送,77,COL6A2_integrin_a1b1_complex,Neural crest,COL6A2,integrin,0.212,0.033
+Sclerotome,发送,78,Glutamate_byGLS_and_SLC1A3_Glutamate_Kainate_1_5_complex,Neural crest,Glutamate,byGLS,0.205,0.009
+Sclerotome,发送,79,SHH_PTCH2_BOC_transmembrane_receptor,Neural crest,SHH,PTCH2,0.201,0.037
+Sclerotome,发送,80,FBN1_integrin_a5b1_complex,Neural crest,FBN1,integrin,0.185,0.031
+Sclerotome,发送,81,LAMA2_ADGRG6,Neural crest,LAMA2,ADGRG6,0.183,0.027
+Sclerotome,接收,1,COL3A1_integrin_a1b1_complex,Neural crest,integrin,COL3A1,1.093,0.0
+Sclerotome,接收,2,COL3A1_ADGRG1,Neural crest,ADGRG1,COL3A1,1.079,0.0
+Sclerotome,接收,3,COL3A1_integrin_a11b1_complex,Neural crest,integrin,COL3A1,1.079,0.0
+Sclerotome,接收,4,FN1_integrin_aVb1_complex,Neural crest,integrin,FN1,1.004,0.001
+Sclerotome,接收,5,FN1_integrin_aVb5_complex,Neural crest,integrin,FN1,0.991,0.0
+Sclerotome,接收,6,CADM1_CADM1,Neural crest,CADM1,CADM1,0.942,0.003
+Sclerotome,接收,7,CDH6_CDH6,Neural crest,CDH6,CDH6,0.928,0.0
+Sclerotome,接收,8,COL18A1_integrin_a1b1_complex,Neural crest,integrin,COL18A1,0.904,0.002
+Sclerotome,接收,9,COL18A1_integrin_a11b1_complex,Neural crest,integrin,COL18A1,0.89,0.002
+Sclerotome,接收,10,FN1_integrin_a4b1_complex,Neural crest,integrin,FN1,0.886,0.002
+Sclerotome,接收,11,FN1_integrin_a3b1_complex,Neural crest,integrin,FN1,0.885,0.004
+Sclerotome,接收,12,MPZL1_MPZL1,Neural crest,MPZL1,MPZL1,0.882,0.016
+Sclerotome,接收,13,FN1_integrin_a11b1_complex,Neural crest,integrin,FN1,0.881,0.003
+Sclerotome,接收,14,FN1_integrin_a8b1_complex,Neural crest,integrin,FN1,0.872,0.001
+Sclerotome,接收,15,COL4A1_integrin_a1b1_complex,Neural crest,integrin,COL4A1,0.838,0.021
+Sclerotome,接收,16,CADM1_NECTIN3,Neural crest,NECTIN3,CADM1,0.827,0.029
+Sclerotome,接收,17,COL4A1_integrin_a11b1_complex,Neural crest,integrin,COL4A1,0.823,0.02
+Sclerotome,接收,18,PDGFC_PDGFRA,Neural crest,PDGFRA,PDGFC,0.743,0.0
+Sclerotome,接收,19,EFNA5_EPHA7,Neural crest,EPHA7,EFNA5,0.708,0.022
+Sclerotome,接收,20,SDC1_ADGRA2,Neural crest,ADGRA2,SDC1,0.564,0.0
+Sclerotome,接收,21,LAMC1_integrin_a6b1_complex,Neural crest,integrin,LAMC1,0.54,0.034
+Sclerotome,接收,22,CDH5_CDH5,Neural crest,CDH5,CDH5,0.502,0.011
+Sclerotome,接收,23,EFNA4_EPHA7,Neural crest,EPHA7,EFNA4,0.493,0.026
+Sclerotome,接收,24,EFNA2_EPHA7,Neural crest,EPHA7,EFNA2,0.483,0.018
+Sclerotome,接收,25,COL26A1_integrin_a1b1_complex,Neural crest,integrin,COL26A1,0.437,0.013
+Sclerotome,接收,26,MSTN_TGFR_AVR2A,Neural crest,TGFR,MSTN,0.423,0.0
+Sclerotome,接收,27,COL26A1_integrin_a11b1_complex,Neural crest,integrin,COL26A1,0.422,0.013
+Sclerotome,接收,28,SLITRK2_PTPRD,Neural crest,PTPRD,SLITRK2,0.42,0.0
+Sclerotome,接收,29,MSTN_TGFR_AVR2B,Neural crest,TGFR,MSTN,0.42,0.0
+Sclerotome,接收,30,atRetinoicAcid_byALDH1A2_RAreceptor_RXRB,Neural crest,byALDH1A2,atRetinoicAcid,0.415,0.0
+Sclerotome,接收,31,RSPO3_LGR4,Neural crest,LGR4,RSPO3,0.4,0.0
+Sclerotome,接收,32,SEMA4C_PLXNB2,Neural crest,PLXNB2,SEMA4C,0.398,0.001
+Sclerotome,接收,33,SLITRK6_PTPRS,Neural crest,PTPRS,SLITRK6,0.396,0.005
+Sclerotome,接收,34,SEMA6D_PlexinA1_complex1,Neural crest,PlexinA1,SEMA6D,0.392,0.002
+Sclerotome,接收,35,atRetinoicAcid_byALDH1A2_RAreceptor_RXRA,Neural crest,byALDH1A2,atRetinoicAcid,0.388,0.0
+Sclerotome,接收,36,VCAM1_integrin_a9b1_complex,Neural crest,integrin,VCAM1,0.388,0.002
+Sclerotome,接收,37,CLSTN1_NRXN3,Neural crest,NRXN3,CLSTN1,0.388,0.008
+Sclerotome,接收,38,NLGN3_PTPRD,Neural crest,PTPRD,NLGN3,0.383,0.014
+Sclerotome,接收,39,LRFN5_PTPRD,Neural crest,PTPRD,LRFN5,0.369,0.033
+Sclerotome,接收,40,atRetinoicAcid_byALDH1A2_RAreceptor_RARA_RXRA,Neural crest,byALDH1A2,atRetinoicAcid,0.369,0.0
+Sclerotome,接收,41,atRetinoicAcid_byALDH1A2_RAreceptor_RARA,Neural crest,byALDH1A2,atRetinoicAcid,0.369,0.0
+Sclerotome,接收,42,SEMA3E_PLXND1,Neural crest,PLXND1,SEMA3E,0.369,0.015
+Sclerotome,接收,43,L1CAM_integrin_a9b1_complex,Neural crest,integrin,L1CAM,0.368,0.0
+Sclerotome,接收,44,atRetinoicAcid_byALDH1A2_RAreceptor_RARG,Neural crest,byALDH1A2,atRetinoicAcid,0.352,0.0
+Sclerotome,接收,45,SLITRK2_PTPRS,Neural crest,PTPRS,SLITRK2,0.348,0.002
+Sclerotome,接收,46,BMP4_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP4,0.34,0.036
+Sclerotome,接收,47,SEMA3A_PlexinA1_complex3,Neural crest,PlexinA1,SEMA3A,0.333,0.018
+Sclerotome,接收,48,SEMA3A_NRP1,Neural crest,NRP1,SEMA3A,0.333,0.018
+Sclerotome,接收,49,BMP4_BMR1B_AVR2A,Neural crest,BMR1B,BMP4,0.331,0.048
+Sclerotome,接收,50,SEMA3A_PlexinA2_complex1,Neural crest,PlexinA2,SEMA3A,0.33,0.019
+Sclerotome,接收,51,BMP4_BMR1B_AVR2B,Neural crest,BMR1B,BMP4,0.328,0.05
+Sclerotome,接收,52,COL9A1_integrin_a1b1_complex,Neural crest,integrin,COL9A1,0.303,0.048
+Sclerotome,接收,53,L1CAM_integrin_aVb1_complex,Neural crest,integrin,L1CAM,0.299,0.002
+Sclerotome,接收,54,PDGFD_PDGFRB,Neural crest,PDGFRB,PDGFD,0.288,0.004
+Sclerotome,接收,55,PDGFD_PDGFR_complex,Neural crest,PDGFR,PDGFD,0.288,0.004
+Sclerotome,接收,56,BDNF_SORT1,Neural crest,SORT1,BDNF,0.238,0.003
+Sclerotome,接收,57,BMP5_BMPR1B_BMPR2,Neural crest,BMPR1B,BMP5,0.225,0.048
+Sclerotome,接收,58,Glutamate_byGLS2_and_SLC1A3_GRIK2,Neural crest,byGLS2,Glutamate,0.215,0.044
+Sclerotome,接收,59,Glutamate_byGLS2_and_SLC1A3_GRM7,Neural crest,byGLS2,Glutamate,0.206,0.026
+Sclerotome,接收,60,VCAM1_integrin_a4b1_complex,Neural crest,integrin,VCAM1,0.202,0.022
+Sclerotome,接收,61,WNT11_FZD2_LRP6,Neural crest,FZD2,WNT11,0.2,0.004
+Sclerotome,接收,62,WNT11_FZD3_LRP6,Neural crest,FZD3,WNT11,0.2,0.004
+Sclerotome,接收,63,WNT11_FZD7_LRP6,Neural crest,FZD7,WNT11,0.2,0.003
+Sclerotome,接收,64,WNT11_FZD2_LRP5,Neural crest,FZD2,WNT11,0.185,0.011
+Sclerotome,接收,65,WNT11_FZD3_LRP5,Neural crest,FZD3,WNT11,0.185,0.011
+Sclerotome,接收,66,WNT11_FZD7_LRP5,Neural crest,FZD7,WNT11,0.185,0.01
+Sclerotome,接收,67,WNT11_FRZB,Neural crest,FRZB,WNT11,0.174,0.001
+Sclerotome,接收,68,BDNF_NGFR,Neural crest,NGFR,BDNF,0.159,0.0
+Sclerotome,接收,69,WNT11_FZD1_LRP6,Neural crest,FZD1,WNT11,0.155,0.011
+Sclerotome,接收,70,WNT11_FZD1_LRP5,Neural crest,FZD1,WNT11,0.155,0.011
+Sclerotome,接收,71,Glutamate_byGLS2_and_SLC1A3_GRIA4,Neural crest,byGLS2,Glutamate,0.149,0.035
+Sclerotome,接收,72,INS_INSR,Neural crest,INSR,INS,0.146,0.004
+Sclerotome,接收,73,LPAR3_ADGRE5,Neural crest,ADGRE5,LPAR3,0.136,0.0
+Sclerotome,接收,74,WNT11_FZD4_LRP6,Neural crest,FZD4,WNT11,0.125,0.001
+Sclerotome,接收,75,WNT11_FZD4_LRP5,Neural crest,FZD4,WNT11,0.125,0.001
+Sclerotome,接收,76,NRG2_ERBB3,Neural crest,ERBB3,NRG2,0.123,0.017
+Sclerotome,接收,77,Glutamate_byGLS2_and_SLC1A3_GRIA3,Neural crest,byGLS2,Glutamate,0.119,0.018
+Sclerotome,接收,78,WNT11_FZD10_LRP6,Neural crest,FZD10,WNT11,0.109,0.038
+Sclerotome,接收,79,WNT11_FZD10_LRP5,Neural crest,FZD10,WNT11,0.109,0.038
+Sclerotome,接收,80,WNT11_FZD6_LRP5,Neural crest,FZD6,WNT11,0.108,0.001
+Sclerotome,接收,81,WNT11_FZD6_LRP6,Neural crest,FZD6,WNT11,0.108,0.001
+Sclerotome,接收,82,WNT11_FZD8_LRP6,Neural crest,FZD8,WNT11,0.104,0.004
+Sclerotome,接收,83,WNT11_FZD8_LRP5,Neural crest,FZD8,WNT11,0.104,0.004

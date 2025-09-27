@@ -2,17 +2,34 @@ export class ChannelView {
     constructor(containerId) {
         this.containerId = containerId;
         this.container = d3.select(containerId);
-        this.width = 350;
-        this.height = 990;
-        this.margin = { top: 20, right: 20, bottom: 20, left: 20 };
+        this.width = 375; // 调整为适中的宽度，避免水平滚动
+        this.height = 970;
+        this.margin = { top: 25, right: 20, bottom: 25, left: 20 };
         
         // 悬浮窗管理
         this.floatingWindows = [];
         this.windowCounter = 0;
         
+        // 套索模式状态
+        this.isLassoMode = false;
+        this.currentLassoData = null;
+        
+        // 控制台状态
+        this.selectedGene = null;
+        this.channelDisplayCount = 20;
+        this.availableGenes = new Set();
+        this.currentHeatmapData = null;
+        this.sortByNode = null; // 排序基准节点
+        
         this.init();
         this.registerEventListeners();
         this.initFloatingWindowStyles();
+    }
+
+    updateSVGHeight(height) {
+        if (this.svg) {
+            this.svg.attr('height', height);
+        }
     }
 
     init() {
@@ -28,11 +45,25 @@ export class ChannelView {
             .style('font-size', '18px')
             .text('Cell Communication Channels');
 
-        // 创建SVG容器
-        this.svg = this.container.append('svg')
+        // 创建控制台
+        this.createControlPanel();
+
+        // 创建滚动容器
+        this.scrollContainer = this.container.append('div')
+            .style('width', this.width + 'px')
+            .style('height', (this.height - 100) + 'px') // 给控制台留空间
+            .style('overflow-y', 'auto')
+            .style('overflow-x', 'hidden')
+            .style('border', '1px solid #ddd')
+            .style('background-color', 'white');
+
+        // 在滚动容器内创建SVG
+        this.svg = this.scrollContainer.append('svg')
             .attr('width', this.width)
-            .attr('height', this.height)
-            .style('border', '1px solid #ddd');
+            .style('background-color', 'white');
+        
+        // 初始时设置一个默认高度
+        this.updateSVGHeight(400);
 
         // 创建接收区域（上半部分）
         this.receiveGroup = this.svg.append('g')
@@ -118,38 +149,130 @@ export class ChannelView {
                         max-height: 500px;
                         overflow-y: auto;
                     }
-                    .compare-channel-item {
-                        display: flex;
-                        align-items: center;
-                        padding: 6px 8px;
-                        margin: 2px 0;
-                        background: #f8f9fa;
-                        border-radius: 4px;
-                        border-left: 4px solid #dee2e6;
+
+                    .lasso-heatmap-container {
+                        background: white;
+                        border-radius: 8px;
+                        padding: 15px;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                        margin: 10px 0;
                     }
-                    .compare-rank {
-                        background: #6c757d;
-                        color: white;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 11px;
+                    .heatmap-title {
+                        font-size: 16px;
                         font-weight: bold;
-                        margin-right: 8px;
-                        flex-shrink: 0;
-                    }
-                    .compare-channel-name {
-                        flex: 1;
-                        font-size: 12px;
-                        margin-right: 8px;
-                    }
-                    .compare-intensity {
-                        font-size: 11px;
-                        font-weight: bold;
+                        margin-bottom: 15px;
+                        text-align: center;
                         color: #2c3e50;
+                    }
+                    .heatmap-cell {
+                        stroke: white;
+                        stroke-width: 1;
+                        cursor: pointer;
+                    }
+                    .heatmap-cell:hover {
+                        stroke: #333;
+                        stroke-width: 2;
+                    }
+                    .heatmap-label {
+                        font-size: 11px;
+                        fill: #333;
+                    }
+                    .heatmap-channel-label {
+                        font-size: 10px;
+                        fill: #666;
+                        text-anchor: end;
+                    }
+                    .heatmap-node-label {
+                        font-size: 10px;
+                        fill: #666;
+                        text-anchor: middle;
+                    }
+                    .channel-tag {
+                        font-size: 9px;
+                        fill: white;
+                        text-anchor: middle;
+                        font-weight: 500;
+                    }
+                    .channel-tag-bg {
+                        stroke: none;
+                        rx: 3;
+                        ry: 3;
+                    }
+                    .ligand-tag {
+                        fill: #3498db;
+                    }
+                    .receptor-tag {
+                        fill: #e74c3c;
+                    }
+                    .arrow-symbol {
+                        font-size: 8px;
+                        fill: #666;
+                        text-anchor: middle;
+                    }
+                    .control-panel {
+                        background: #f8f9fa;
+                        border: 1px solid #dee2e6;
+                        border-radius: 6px;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                    }
+                    .control-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        margin-bottom: 8px;
+                    }
+                    .control-row:last-child {
+                        margin-bottom: 0;
+                    }
+                    .control-label {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #495057;
+                        min-width: 60px;
+                    }
+                    .gene-select {
+                        flex: 1;
+                        max-width: 180px;
+                        padding: 4px 8px;
+                        border: 1px solid #ced4da;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        background: white;
+                    }
+                    .channel-count-select {
+                        padding: 4px 8px;
+                        border: 1px solid #ced4da;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        background: white;
+                        min-width: 180px;
+                    }
+                    .sort-node-select {
+                        padding: 4px 8px;
+                        border: 1px solid #ced4da;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        background: white;
+                        min-width: 180px;
+                        max-width: 180px;
+                    }
+                    .clear-btn {
+                        background: #dc3545;
+                        color: white;
+                        border: none;
+                        padding: 6px 12px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        cursor: pointer;
+                        font-weight: 500;
+                    }
+                    .clear-btn:hover {
+                        background: #c82333;
+                    }
+                    .control-divider {
+                        margin-left: auto;
                     }
                 `);
         }
@@ -159,37 +282,256 @@ export class ChannelView {
         document.addEventListener('communicationArcSelected', (event) => {
             const { cellName, neighborCell, communicationType, specificCells } = event.detail;
             
-            // 重要：无论点击内环还是外环，我们都应该查找当前节点（cellName）的子类型数据
-            // 而不是邻居细胞的数据
-            const currentCellName = cellName;        // 当前点击的节点（如AGM）
-            const neighborCellName = neighborCell;   // 邻居细胞（如Brain）
+            // 检查是否处于套索选择状态
+            if (this.isLassoMode && this.currentLassoData) {
+                // 套索模式：显示对应类型的热图
+                this.showLassoChannelHeatmap(this.currentLassoData.pathCells, this.currentLassoData.neighborCells, communicationType, neighborCell);
+            } else {
+                // 普通模式：显示单个节点的通道数据
+                const currentCellName = cellName;        // 当前点击的节点（如AGM）
+                const neighborCellName = neighborCell;   // 邻居细胞（如Brain）
+                
+                this.updateChannelData(currentCellName, neighborCellName, communicationType, specificCells);
+            }
+        });
+
+        // 监听套索选择事件
+        document.addEventListener('showNeighborDetails', (event) => {
+            const { pathCells, neighborCells, lassoSelection } = event.detail;
             
-            this.updateChannelData(currentCellName, neighborCellName, communicationType, specificCells);
+            if (lassoSelection && pathCells && pathCells.length > 1) {
+                // 进入套索模式，保存数据但不立即显示热图
+                this.isLassoMode = true;
+                this.currentLassoData = { pathCells, neighborCells };
+                this.showLassoModeInstruction();
+            } else {
+                // 退出套索模式
+                this.isLassoMode = false;
+                this.currentLassoData = null;
+            }
         });
     }
 
     showEmptyState() {
-        // 清除所有卡片和旧的条目
-        this.receiveGroup.selectAll('.channel-item').remove();
-        this.sendGroup.selectAll('.channel-item').remove();
-        this.receiveGroup.selectAll('.channel-card').remove();
-        this.sendGroup.selectAll('.channel-card').remove();
+        // 清除所有内容
+        if (this.receiveGroup) this.receiveGroup.selectAll('*').remove();
+        if (this.sendGroup) this.sendGroup.selectAll('*').remove();
+        
+        // 重置SVG高度
+        this.updateSVGHeight(400);
 
-        this.receiveGroup.append('text')
-            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
-            .attr('y', 200)
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '14px')
-            .attr('fill', '#666')
-            .text('Click arc to view channel details');
+        if (this.receiveGroup) {
+            this.receiveGroup.append('text')
+                .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+                .attr('y', 200)
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '14px')
+                .attr('fill', '#666')
+                .text('Click arc to view channel details');
+        }
 
-        this.sendGroup.append('text')
-            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
-            .attr('y', 180)
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '14px')
-            .attr('fill', '#666')
-            .text('Click arc to view channel details');
+        if (this.sendGroup) {
+            this.sendGroup.append('text')
+                .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+                .attr('y', 180)
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '14px')
+                .attr('fill', '#666')
+                .text('Click arc to view channel details');
+        }
+    }
+
+    createControlPanel() {
+        // 创建控制台容器
+        const controlPanel = this.container.append('div')
+            .attr('class', 'control-panel');
+
+        // 第一行：基因选择
+        const row1 = controlPanel.append('div')
+            .attr('class', 'control-row');
+
+        row1.append('span')
+            .attr('class', 'control-label')
+            .text('Gene:');
+
+        this.geneSelect = row1.append('select')
+            .attr('class', 'gene-select')
+            .on('change', (event) => {
+                this.selectedGene = event.target.value === 'all' ? null : event.target.value;
+                this.applyFilters();
+            });
+
+        // 默认选项
+        this.geneSelect.append('option')
+            .attr('value', 'all')
+            .text('all');
+
+        // 第二行：排序选择
+        const row2 = controlPanel.append('div')
+            .attr('class', 'control-row');
+
+        row2.append('span')
+            .attr('class', 'control-label')
+            .text('Rank:');
+
+        this.sortNodeSelect = row2.append('select')
+            .attr('class', 'sort-node-select')
+            .on('change', (event) => {
+                this.sortByNode = event.target.value === 'default' ? null : event.target.value;
+                this.applyFilters();
+            });
+
+        // 默认排序选项
+        this.sortNodeSelect.append('option')
+            .attr('value', 'default')
+            .text('default');
+
+        // 第三行：通道数量选择和清除按钮
+        const row3 = controlPanel.append('div')
+            .attr('class', 'control-row');
+
+        row3.append('span')
+            .attr('class', 'control-label')
+            .text('Count:');
+
+        this.channelCountSelect = row3.append('select')
+            .attr('class', 'channel-count-select')
+            .on('change', (event) => {
+                this.channelDisplayCount = parseInt(event.target.value);
+                this.applyFilters();
+            });
+
+        // 通道数量选项
+        const countOptions = [5, 10, 20, 50, 100, 200];
+        countOptions.forEach(count => {
+            const option = this.channelCountSelect.append('option')
+                .attr('value', count)
+                .text(count);
+            if (count === this.channelDisplayCount) {
+                option.attr('selected', 'selected');
+            }
+        });
+
+        // 清除按钮
+        row3.append('div')
+            .attr('class', 'control-divider');
+
+        row3.append('button')
+            .attr('class', 'clear-btn')
+            .text('Clean')
+            .on('click', () => {
+                this.clearHeatmap();
+            });
+    }
+
+    updateGeneOptions(channels) {
+        // 提取所有基因
+        const genes = new Set();
+        channels.forEach(channelKey => {
+            const parts = channelKey.split('_');
+            const channel = parts[0];
+            const channelParts = channel.split('_');
+            if (channelParts.length >= 2) {
+                genes.add(channelParts[0]); // 配体
+                genes.add(channelParts[1]); // 受体
+            } else {
+                genes.add(channel);
+            }
+        });
+
+        // 清除旧选项（保留“所有基因”）
+        this.geneSelect.selectAll('option:not([value="all"])').remove();
+
+        // 添加新选项
+        Array.from(genes).sort().forEach(gene => {
+            this.geneSelect.append('option')
+                .attr('value', gene)
+                .text(gene);
+        });
+
+        this.availableGenes = genes;
+    }
+
+    updateSortNodeOptions(nodes) {
+        if (!this.sortNodeSelect) return;
+        
+        // 清除旧选项（保留“默认排序”）
+        this.sortNodeSelect.selectAll('option:not([value="default"])').remove();
+
+        // 添加节点选项
+        nodes.forEach(node => {
+            this.sortNodeSelect.append('option')
+                .attr('value', node)
+                .text(node.length > 12 ? node.substring(0, 12) + '...' : node);
+        });
+    }
+
+    filterChannelsByGene(channels) {
+        if (!this.selectedGene) {
+            return channels;
+        }
+
+        return channels.filter(channelKey => {
+            const parts = channelKey.split('_');
+            const channel = parts[0];
+            return channel.includes(this.selectedGene);
+        });
+    }
+
+    sortChannelsByNode(channels, intensityMap, nodes) {
+        if (!this.sortByNode || !nodes.includes(this.sortByNode)) {
+            return channels; // 使用默认排序
+        }
+
+        // 按指定节点的强度排序
+        return channels.slice().sort((a, b) => {
+            const intensityA = intensityMap.get(a)?.[this.sortByNode] || 0;
+            const intensityB = intensityMap.get(b)?.[this.sortByNode] || 0;
+            return intensityB - intensityA; // 降序排列
+        });
+    }
+
+    applyFilters() {
+        if (!this.currentHeatmapData) {
+            return;
+        }
+
+        // 重新渲染热图，应用过滤器
+        this.renderFilteredHeatmap(this.currentHeatmapData);
+    }
+
+    clearHeatmap() {
+        // 清除热图
+        if (this.receiveGroup) this.receiveGroup.selectAll('*').remove();
+        if (this.sendGroup) this.sendGroup.selectAll('*').remove();
+        
+        // 重置滚动位置
+        if (this.scrollContainer) {
+            this.scrollContainer.node().scrollTop = 0;
+        }
+        
+        // 重置SVG高度
+        this.updateSVGHeight(400);
+
+        // 重置状态
+        this.currentHeatmapData = null;
+        this.selectedGene = null;
+        this.sortByNode = null;
+        this.availableGenes.clear();
+
+        // 重置选择框
+        if (this.geneSelect) {
+            this.geneSelect.property('value', 'all');
+            this.geneSelect.selectAll('option:not([value="all"])').remove();
+        }
+        
+        if (this.sortNodeSelect) {
+            this.sortNodeSelect.property('value', 'default');
+            this.sortNodeSelect.selectAll('option:not([value="default"])').remove();
+        }
+
+        // 显示初始状态
+        this.showEmptyState();
     }
 
     async updateChannelData(currentCellName, neighborCellName, clickedType, specificCells = null) {
@@ -213,8 +555,8 @@ export class ChannelView {
             // 读取并合并数据，传入细胞总数用于计算平均强度
             const mergedData = await this.loadAndMergeChannelData(currentCellSubTypes, neighborCellName, totalCellCount);
 
-            // 根据点击类型渲染数据
-            this.renderChannelDataByType(mergedData, currentCellName, neighborCellName, clickedType);
+            // 直接显示热图（不使用列表展示）
+            console.log('Channel data loaded, but list display removed. Use heatmap view instead.');
             
         } catch (error) {
             this.showErrorState(error.message);
@@ -245,7 +587,7 @@ export class ChannelView {
         // 测试每个可能的子类型
         for (const subType of possibleSubTypes) {
             try {
-                const filePath = `${baseDir}/${subType}/${subType}_every_top_10.csv`;
+                const filePath = `${baseDir}/${subType}/${subType}_every_top_100.csv`;
                 const response = await fetch(filePath);
                 if (response.ok) {
                     subTypes.push(subType);
@@ -300,7 +642,7 @@ export class ChannelView {
         
         for (const subType of subTypes) {
             try {
-                const filePath = `./js/components/pathSelection/Every_cell_info_withKJL4/${subType}/${subType}_every_top_10.csv`;
+                const filePath = `./js/components/pathSelection/Every_cell_info_withKJL4/${subType}/${subType}_every_top_100.csv`;
                 const response = await fetch(filePath);
                 
                 if (!response.ok) {
@@ -345,6 +687,7 @@ export class ChannelView {
     }
 
     mergeChannelData(allData, totalCellCount = 1) {
+        console.log(`mergeChannelData: Processing ${allData.length} raw channel records`);
         if (allData.length === 0) return { send: [], receive: [] };
 
         // 按通道和方向分组
@@ -395,257 +738,20 @@ export class ChannelView {
 
         const sendData = processedData
             .filter(item => item.direction === '发送')
-            .sort((a, b) => b.averageIntensity - a.averageIntensity)
-            .slice(0, 10);
+            .sort((a, b) => b.averageIntensity - a.averageIntensity);
 
         const receiveData = processedData
             .filter(item => item.direction === '接收')
-            .sort((a, b) => b.averageIntensity - a.averageIntensity)
-            .slice(0, 10);
+            .sort((a, b) => b.averageIntensity - a.averageIntensity);
 
+        console.log(`mergeChannelData: Returning ${sendData.length} send channels, ${receiveData.length} receive channels`);
         return { send: sendData, receive: receiveData };
     }
 
-    renderChannelData(data, sourceCellName, targetCellName) {
-        // 清除之前的数据
-        this.receiveGroup.selectAll('.channel-item').remove();
-        this.sendGroup.selectAll('.channel-item').remove();
-        this.receiveGroup.selectAll('.channel-card').remove();
-        this.sendGroup.selectAll('.channel-card').remove();
 
-        // 更新标题
-        this.receiveGroup.select('text')
-            .text(`${targetCellName} → ${sourceCellName} (Avg Intensity Per Cell)`);
-        
-        this.sendGroup.select('text')
-            .text(`${sourceCellName} → ${targetCellName} (Avg Intensity Per Cell)`);
 
-        // 渲染接收数据
-        this.renderChannelList(this.receiveGroup, data.receive, 'receive');
-        
-        // 渲染发送数据
-        this.renderChannelList(this.sendGroup, data.send, 'send');
-    }
-
-    renderChannelDataByType(data, currentCellName, neighborCellName, clickedType) {
-        if (clickedType === 'receive') {
-            // 点击内环（接收弧线）：只更新上半部分
-            // 显示 currentCellName 接收来自 neighborCellName 的通道
-            
-            // 清除接收区域的旧数据
-            this.receiveGroup.selectAll('.channel-item').remove();
-            this.receiveGroup.selectAll('.channel-card').remove();
-            
-            // 更新接收区域标题：currentCellName 接收来自 neighborCellName 的通道
-            this.receiveGroup.select('text')
-                .text(`${neighborCellName} → ${currentCellName} (Avg Intensity Per Cell)`);
-            
-            // 在CSV数据中，方向='发送'且邻居细胞=neighborCellName 表示neighborCellName发送给currentCellName
-            // 这就是currentCellName的接收数据
-            const receiveData = data.send; // 实际上这里的send数据就是接收数据
-            this.renderChannelList(this.receiveGroup, receiveData, 'receive');
-            
-        } else if (clickedType === 'send') {
-            // 点击外环（发送弧线）：只更新下半部分  
-            // 显示 currentCellName 发送给 neighborCellName 的通道
-            
-            // 清除发送区域的旧数据
-            this.sendGroup.selectAll('.channel-item').remove();
-            this.sendGroup.selectAll('.channel-card').remove();
-            
-            // 更新发送区域标题：currentCellName 发送给 neighborCellName 的通道
-            this.sendGroup.select('text')
-                .text(`${currentCellName} → ${neighborCellName} (Avg Intensity Per Cell)`);
-            
-            // 在CSV数据中，方向='接收'且邻居细胞=neighborCellName 表示currentCellName发送给neighborCellName
-            // 这就是currentCellName的发送数据
-            const sendData = data.receive; // 实际上这里的receive数据就是发送数据
-            this.renderChannelList(this.sendGroup, sendData, 'send');
-        }
-    }
-
-    renderChannelList(group, channelData, type) {
-        if (!channelData || channelData.length === 0) return;
-        
-        const cardHeight = 35; // 缩小高度
-        const cardWidth = this.width - this.margin.left - this.margin.right - 20;
-        const cardMargin = 3; // 缩小间距
-        
-        // 计算最大强度用于归一化进度条
-        const maxIntensity = d3.max(channelData, d => d.averageIntensity || d.intensity) || 1;
-        
-        const items = group.selectAll('.channel-card')
-            .data(channelData)
-            .enter()
-            .append('g')
-            .attr('class', 'channel-card')
-            .attr('transform', (d, i) => `translate(10, ${45 + i * (cardHeight + cardMargin)})`);
-
-        // 创建卡片容器
-        const cardContainer = items.append('g')
-            .attr('class', 'card-container')
-            .style('cursor', 'pointer');
-
-        // 外框边框
-        cardContainer.append('rect')
-            .attr('class', 'card-border')
-            .attr('width', cardWidth)
-            .attr('height', cardHeight)
-            .attr('rx', 6)
-            .attr('ry', 6)
-            .attr('fill', '#ffffff')
-            .attr('stroke', '#e1e5e9')
-            .attr('stroke-width', 1.5)
-            .style('filter', 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))');
-
-        // 进度条背景
-        cardContainer.append('rect')
-            .attr('class', 'progress-bg')
-            .attr('x', 2)
-            .attr('y', 2)
-            .attr('width', cardWidth - 4)
-            .attr('height', cardHeight * 0.4)
-            .attr('rx', 4)
-            .attr('ry', 4)
-            .attr('fill', '#f8f9fa');
-
-        // 进度条填充 (根据强度比例)
-        cardContainer.append('rect')
-            .attr('class', 'progress-fill')
-            .attr('x', 2)
-            .attr('y', 2)
-            .attr('width', d => {
-                const intensity = d.averageIntensity || d.intensity;
-                const ratio = intensity / maxIntensity;
-                return Math.max(0, (cardWidth - 4) * ratio);
-            })
-            .attr('height', cardHeight * 0.4)
-            .attr('rx', 4)
-            .attr('ry', 4)
-            .attr('fill', d => {
-                const colors = type === 'send' 
-                    ? ['#ffebee', '#ffcdd2', '#ef9a9a', '#e57373', '#ef5350', '#f44336', '#d32f2f']
-                    : ['#e8f5e8', '#c8e6c9', '#a5d6a7', '#81c784', '#66bb6a', '#4caf50', '#388e3c'];
-                const intensity = d.averageIntensity || d.intensity;
-                const ratio = intensity / maxIntensity;
-                const colorIndex = Math.min(Math.floor(ratio * colors.length), colors.length - 1);
-                return colors[colorIndex];
-            })
-            .style('transition', 'width 0.3s ease');
-
-        // 排名标签 (左上角小圆圈，调小)
-        cardContainer.append('circle')
-            .attr('cx', 12)
-            .attr('cy', 10)
-            .attr('r', 6) // 缩小半径
-            .attr('fill', type === 'send' ? '#d73027' : '#1a9850')
-            .attr('opacity', 0.9);
-
-        cardContainer.append('text')
-            .attr('x', 12)
-            .attr('y', 10)
-            .attr('dy', '0.35em')
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '9px') // 缩小字体
-            .attr('font-weight', 'bold')
-            .attr('fill', 'white')
-            .text((d, i) => i + 1);
-
-        // 强度数值 (左侧，排名后面)
-        cardContainer.append('text')
-            .attr('x', 28)
-            .attr('y', 10)
-            .attr('dy', '0.35em')
-            .attr('text-anchor', 'start')
-            .attr('font-size', '10px')
-            .attr('font-weight', 'bold')
-            .attr('fill', '#000000') // 改为黑色
-            .text(d => `${(d.averageIntensity || d.intensity).toFixed(1)}×10⁻⁴`);
-
-        // 通道名称 (下半部分居中)
-        cardContainer.append('text')
-            .attr('x', cardWidth / 2)
-            .attr('y', cardHeight * 0.75) // 调整位置适应新高度
-            .attr('dy', '0.35em')
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '11px') // 缩小字体
-            .attr('font-weight', '500')
-            .attr('fill', '#2c3e50')
-            .text(d => d.channel)
-            .each(function(d) {
-                // 截断过长的文本
-                const textElement = this;
-                const maxTextWidth = cardWidth - 40;
-                let text = d.channel;
-                textElement.textContent = text;
-                
-                while (textElement.getComputedTextLength() > maxTextWidth && text.length > 3) {
-                    text = text.slice(0, -4) + '...';
-                    textElement.textContent = text;
-                }
-            });
-
-        // 鼠标悬停效果
-        cardContainer.on('mouseover', function(event, d) {
-            // 卡片悬停效果
-            d3.select(this).select('.card-border')
-                .attr('stroke', type === 'send' ? '#d73027' : '#1a9850')
-                .attr('stroke-width', 2)
-                .style('filter', 'drop-shadow(0px 4px 8px rgba(0,0,0,0.15))');
-
-            // 进度条高亮
-            d3.select(this).select('.progress-fill')
-                .attr('opacity', 0.8);
-            
-            // 显示详细信息的tooltip
-            d3.select('body').selectAll('.channel-tooltip').remove();
-            const tooltip = d3.select('body').append('div')
-                .attr('class', 'channel-tooltip')
-                .style('position', 'absolute')
-                .style('background', 'rgba(0,0,0,0.85)')
-                .style('color', 'white')
-                .style('padding', '10px 12px')
-                .style('border-radius', '6px')
-                .style('font-size', '13px')
-                .style('box-shadow', '0 4px 12px rgba(0,0,0,0.2)')
-                .style('pointer-events', 'none')
-                .style('z-index', '1000')
-                .style('max-width', '250px')
-                .html(`
-                    <div style="font-weight: bold; margin-bottom: 6px; color: #fff;">${d.channel}</div>
-                    <div><strong>Average Intensity Per Cell:</strong> ${(d.averageIntensity || d.intensity).toFixed(2)}×10⁻⁴</div>
-                    <div><strong>Total Intensity:</strong> ${(d.originalIntensity || d.intensity).toFixed(3)}</div>
-                    <div><strong>Total Cell Count:</strong> ${d.totalCellCount || 'N/A'}</div>
-                    <div><strong>Significance:</strong> ${d.significance.toFixed(4)}</div>
-                    <div><strong>Neighbor Gene:</strong> ${d.neighborGene || 'N/A'}</div>
-                    <div><strong>Target Gene:</strong> ${d.targetGene || 'N/A'}</div>
-                `);
-
-            tooltip.style('left', (event.pageX + 15) + 'px')
-                .style('top', (event.pageY - 10) + 'px');
-        })
-        .on('mouseout', function(event, d) {
-            // 恢复卡片样式
-            d3.select(this).select('.card-border')
-                .attr('stroke', '#e1e5e9')
-                .attr('stroke-width', 1.5)
-                .style('filter', 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))');
-
-            d3.select(this).select('.progress-fill')
-                .attr('opacity', 1);
-            
-            d3.select('body').selectAll('.channel-tooltip').remove();
-        })
-        .on('contextmenu', (event, d) => {
-            event.preventDefault(); // 阻止默认右键菜单
-            this.createComparisonWindow(channelData, type);
-        });
-    }
 
     showErrorState(message) {
-        this.receiveGroup.selectAll('.channel-item').remove();
-        this.sendGroup.selectAll('.channel-item').remove();
-
         this.receiveGroup.append('text')
             .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
             .attr('y', 50)
@@ -655,140 +761,608 @@ export class ChannelView {
             .text(`Error: ${message}`);
     }
 
-    createComparisonWindow(channelData, type) {
-        this.windowCounter++;
-        const windowId = `floating-window-${this.windowCounter}`;
+
+
+
+
+
+
+    async showLassoHeatmap(pathCells, neighborCells) {
+        console.log('Showing lasso heatmap for:', pathCells);
         
-        // 创建悬浮窗
-        const floatingWindow = d3.select('body')
-            .append('div')
-            .attr('id', windowId)
-            .attr('class', 'floating-channel-window')
-            .style('left', '50%')
-            .style('top', '30%')
-            .style('transform', 'translate(-50%, -50%)');
+        // 清除现有内容
+        this.receiveGroup.selectAll('*').remove();
+        this.sendGroup.selectAll('*').remove();
+        
+        // 重置滚动位置
+        if (this.scrollContainer) {
+            this.scrollContainer.node().scrollTop = 0;
+        }
 
-        // 窗口标题栏
-        const header = floatingWindow.append('div')
-            .attr('class', 'floating-window-header');
+        // 创建热图标题
+        this.receiveGroup.append('text')
+            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+            .attr('y', 0)
+            .attr('text-anchor', 'middle')
+            .attr('font-weight', 'bold')
+            .attr('font-size', '16px')
+            .text(`Lasso Selection Heatmap (${pathCells.length} nodes)`);
 
-        header.append('div')
-            .attr('class', 'floating-window-title')
-            .text(`Channel Comparison - ${type === 'send' ? 'Send' : 'Receive'}`);
-
-        header.append('button')
-            .attr('class', 'floating-window-close')
-            .html('×')
-            .on('click', () => {
-                floatingWindow.remove();
-                // 从列表中移除
-                this.floatingWindows = this.floatingWindows.filter(w => w.id !== windowId);
-            });
-
-        // 窗口内容
-        const content = floatingWindow.append('div')
-            .attr('class', 'floating-window-content');
-
-        // 添加说明
-        content.append('div')
-            .style('font-size', '12px')
-            .style('color', '#666')
-            .style('margin-bottom', '10px')
-            .text('Channel intensity comparison (×10⁻⁴):');
-
-        // 渲染通道列表
-        const items = content.selectAll('.compare-channel-item')
-            .data(channelData.slice(0, 10)) // 只显示前10个
-            .enter()
-            .append('div')
-            .attr('class', 'compare-channel-item')
-            .style('border-left-color', type === 'send' ? '#d73027' : '#1a9850');
-
-        // 排名
-        items.append('div')
-            .attr('class', 'compare-rank')
-            .style('background', type === 'send' ? '#d73027' : '#1a9850')
-            .text((d, i) => i + 1);
-
-        // 通道名称
-        items.append('div')
-            .attr('class', 'compare-channel-name')
-            .text(d => d.channel);
-
-        // 强度值
-        items.append('div')
-            .attr('class', 'compare-intensity')
-            .text(d => `${(d.averageIntensity || d.intensity).toFixed(2)}`);
-
-        // 保存窗口引用
-        this.floatingWindows.push({
-            id: windowId,
-            element: floatingWindow,
-            data: channelData,
-            type: type
-        });
-
-        // 启用拖拽
-        this.enableWindowDragging(floatingWindow, header);
+        try {
+            // 收集所有节点的通道数据
+            const heatmapData = await this.collectLassoChannelData(pathCells, neighborCells);
+            
+            // 渲染热图
+            this.renderChannelHeatmap(heatmapData, pathCells);
+            
+        } catch (error) {
+            console.error('Error creating lasso heatmap:', error);
+            this.showErrorState('Failed to create heatmap: ' + error.message);
+        }
     }
 
-    enableWindowDragging(windowElement, headerElement) {
-        const windowId = windowElement.attr('id');
+    async collectLassoChannelData(pathCells, neighborCells) {
+        const channelIntensityMap = new Map(); // channel -> {node1: intensity, node2: intensity, ...}
+        const allChannels = new Set();
         
-        // 为每个窗口创建独立的拖拽处理函数
-        const startDrag = (event) => {
-            event.preventDefault();
+        // 为每个路径节点收集通道数据（保持路径顺序和节点的具体子集）
+        for (let i = 0; i < pathCells.length; i++) {
+            const pathCell = pathCells[i];
+            const cellType = pathCell.label;
+            const specificCells = pathCell.specificCells || [];
             
-            const startX = event.clientX;
-            const startY = event.clientY;
+            // 创建节点标识符：节点类型 + 在路径中的位置
+            const nodeId = `${cellType}_${i}`;
             
-            // 获取当前窗口位置
-            const rect = windowElement.node().getBoundingClientRect();
-            const startLeft = rect.left;
-            const startTop = rect.top;
+            console.log(`Processing path node: ${cellType} at position ${i}, specific cells:`, specificCells);
             
-            // 设置拖拽状态样式
-            headerElement.style('cursor', 'grabbing');
-            d3.select('body').style('user-select', 'none');
-            
-            // 创建拖拽移动处理函数
-            const handleDrag = (moveEvent) => {
-                const dx = moveEvent.clientX - startX;
-                const dy = moveEvent.clientY - startY;
+            try {
+                // 获取该路径节点的子类型
+                let subTypes;
+                if (specificCells && specificCells.length > 0) {
+                    subTypes = specificCells.filter(cell => cell.includes(cellType));
+                } else {
+                    subTypes = await this.getSubTypes(cellType);
+                }
                 
-                const newLeft = startLeft + dx;
-                const newTop = startTop + dy;
+                console.log(`SubTypes for ${nodeId}:`, subTypes);
                 
-                windowElement
-                    .style('left', `${newLeft}px`)
-                    .style('top', `${newTop}px`)
-                    .style('transform', 'none'); // 移除居中变换
-            };
-            
-            // 创建拖拽结束处理函数
-            const endDrag = () => {
-                headerElement.style('cursor', 'move');
-                d3.select('body').style('user-select', '');
+                // 获取细胞总数
+                const totalCellCount = await this.getTotalCellCount(subTypes);
                 
-                // 移除临时事件监听器
-                document.removeEventListener('mousemove', handleDrag);
-                document.removeEventListener('mouseup', endDrag);
-            };
-            
-            // 添加临时事件监听器
-            document.addEventListener('mousemove', handleDrag);
-            document.addEventListener('mouseup', endDrag);
+                // 为每个邻居细胞收集通道数据
+                for (const neighborCell of neighborCells) {
+                    const channelData = await this.loadAndMergeChannelData(subTypes, neighborCell, totalCellCount);
+                    
+                    // 合并发送和接收数据
+                    const allChannels_temp = [...channelData.send, ...channelData.receive];
+                    
+                    allChannels_temp.forEach(channel => {
+                        const channelKey = `${channel.channel}_${neighborCell}`;
+                        allChannels.add(channelKey);
+                        
+                        if (!channelIntensityMap.has(channelKey)) {
+                            channelIntensityMap.set(channelKey, {});
+                        }
+                        
+                        // 使用节点标识符作为列名（保持路径位置信息）
+                        channelIntensityMap.get(channelKey)[nodeId] = channel.averageIntensity || 0;
+                    });
+                }
+                
+            } catch (error) {
+                console.warn(`Error processing ${nodeId}:`, error);
+            }
+        }
+        
+        // 生成节点列表，包含位置信息但显示为可读的标签
+        const nodeColumns = pathCells.map((pathCell, i) => {
+            const cellType = pathCell.label;
+            const nodeId = `${cellType}_${i}`;
+            // 如果有多个同类型节点，显示位置信息；否则只显示类型
+            const sameTypeCounts = pathCells.filter(p => p.label === cellType).length;
+            const displayName = sameTypeCounts > 1 ? `${cellType}(${i+1})` : cellType;
+            return { id: nodeId, displayName: displayName };
+        });
+        
+        return {
+            channels: Array.from(allChannels),
+            nodes: nodeColumns.map(n => n.id), // 内部使用的ID
+            nodeDisplayNames: nodeColumns, // 用于显示的名称映射
+            intensityMap: channelIntensityMap
         };
-        
-        // 绑定鼠标按下事件
-        headerElement.on('mousedown', startDrag);
     }
 
-    // 清理所有悬浮窗
-    clearAllFloatingWindows() {
-        this.floatingWindows.forEach(window => {
-            window.element.remove();
+    renderChannelHeatmap(heatmapData, pathCells) {
+        // 保存当前数据用于过滤
+        this.currentHeatmapData = heatmapData;
+        
+        // 更新基因选项
+        if (heatmapData.channels) {
+            this.updateGeneOptions(heatmapData.channels);
+        }
+        
+        // 更新排序节点选项
+        if (heatmapData.nodes) {
+            this.updateSortNodeOptions(heatmapData.nodes, heatmapData.nodeDisplayNames);
+        }
+        
+        // 渲染过滤后的热图
+        this.renderFilteredHeatmap(heatmapData);
+    }
+
+    renderFilteredHeatmap(heatmapData) {
+        const { channels, nodes, intensityMap } = heatmapData;
+        
+        if (channels.length === 0 || nodes.length === 0) {
+            // 清除现有内容
+            this.receiveGroup.selectAll('.lasso-heatmap').remove();
+            this.receiveGroup.append('text')
+                .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+                .attr('y', 100)
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '14px')
+                .attr('fill', '#666')
+                .text('No channel data found for selected nodes');
+            return;
+        }
+        
+        // 应用基因过滤
+        let filteredChannels = this.filterChannelsByGene(channels);
+        
+        if (filteredChannels.length === 0) {
+            // 清除现有内容
+            this.receiveGroup.selectAll('.lasso-heatmap').remove();
+            this.receiveGroup.append('text')
+                .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+                .attr('y', 100)
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '14px')
+                .attr('fill', '#666')
+                .text(`No channels found containing gene: ${this.selectedGene}`);
+            return;
+        }
+        
+        // 应用排序
+        filteredChannels = this.sortChannelsByNode(filteredChannels, intensityMap, nodes);
+
+        // 热图参数
+        const availableWidth = this.width - this.margin.left - this.margin.right - 150; // 减少预留空间
+        const cellWidth = Math.min(Math.max(25, availableWidth / nodes.length), 40); // 限制最大宽度
+        const cellHeight = 16;
+        const labelWidth = 130; // 进一步减小标签区域宽度
+        const labelHeight = 70;
+        const startX = labelWidth;
+        const startY = labelHeight;
+        
+        // 清除之前的热图
+        this.receiveGroup.selectAll('.lasso-heatmap').remove();
+        
+        // 应用数量限制
+        const maxChannels = Math.min(filteredChannels.length, this.channelDisplayCount);
+        const displayChannels = filteredChannels.slice(0, maxChannels);
+        
+        console.log(`renderFilteredHeatmap: Showing ${displayChannels.length} out of ${filteredChannels.length} filtered channels (limit: ${this.channelDisplayCount})`);
+        
+        // 计算并更新SVG高度
+        const heatmapHeight = startY + displayChannels.length * cellHeight + 100; // 额外空间给图例
+        this.updateSVGHeight(heatmapHeight);
+        
+        // 计算所有强度的范围
+        let minIntensity = Infinity;
+        let maxIntensity = -Infinity;
+        
+        intensityMap.forEach(nodeMap => {
+            Object.values(nodeMap).forEach(intensity => {
+                if (intensity > 0) {
+                    minIntensity = Math.min(minIntensity, intensity);
+                    maxIntensity = Math.max(maxIntensity, intensity);
+                }
+            });
         });
-        this.floatingWindows = [];
+        
+        if (minIntensity === Infinity) {
+            minIntensity = 0;
+            maxIntensity = 1;
+        }
+        
+        // 创建颜色比例尺
+        const colorScale = d3.scaleSequential(d3.interpolateYlOrRd)
+            .domain([minIntensity, maxIntensity]);
+        
+        // 创建热图SVG组
+        const heatmapGroup = this.receiveGroup.append('g')
+            .attr('class', 'lasso-heatmap')
+            .attr('transform', `translate(10, 30)`);
+        
+        // 绘制节点标签（列标签）
+        const nodeDisplayNames = heatmapData.nodeDisplayNames || nodes.map(n => ({ id: n, displayName: n }));
+        heatmapGroup.selectAll('.heatmap-node-label')
+            .data(nodes)
+            .enter()
+            .append('text')
+            .attr('class', 'heatmap-node-label')
+            .attr('x', (d, i) => startX + i * cellWidth + cellWidth / 2)
+            .attr('y', startY - 12)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '11px')
+            .attr('font-weight', 'bold')
+            .attr('fill', '#333')
+            .attr('transform', (d, i) => `rotate(-45, ${startX + i * cellWidth + cellWidth / 2}, ${startY - 12})`)
+            .text((nodeId, i) => {
+                const nodeInfo = nodeDisplayNames.find(n => n.id === nodeId);
+                const displayName = nodeInfo ? nodeInfo.displayName : nodeId;
+                return displayName.length > 10 ? displayName.substring(0, 9) + '...' : displayName;
+            });
+        
+        // 绘制通道标签（行标签）- 使用两个tag形式
+        displayChannels.forEach((channelKey, i) => {
+            const parts = channelKey.split('_');
+            const channel = parts[0];
+            const neighbor = parts.slice(1).join('_');
+            
+            // 解析配体和受体
+            const channelParts = channel.split('_');
+            const ligand = channelParts[0] || channel;
+            const receptor = channelParts[1] || channel;
+            
+            const yPos = startY + i * cellHeight + cellHeight / 2;
+            
+            // 创建标签组
+            const labelGroup = heatmapGroup.append('g')
+                .attr('class', 'channel-label-group')
+                .attr('transform', `translate(${startX - 5}, ${yPos})`);
+            
+            // 重新计算标签布局，确保不会超出边界
+            const ligandText = ligand.length > 8 ? ligand.substring(0, 7) + '...' : ligand;
+            const receptorText = receptor.length > 8 ? receptor.substring(0, 7) + '...' : receptor;
+            
+            const ligandWidth = Math.max(ligandText.length * 5.5 + 6, 32);
+            const receptorWidth = Math.max(receptorText.length * 5.5 + 6, 32);
+            const arrowWidth = 15;
+            const totalTagWidth = ligandWidth + arrowWidth + receptorWidth;
+            
+            // 确保标签不会超出预留空间，从右往左布局
+            const rightEdge = -8; // 距离热图左边缘8像素
+            
+            // 受体标签（最右侧）
+            const receptorX = rightEdge - receptorWidth;
+            labelGroup.append('rect')
+                .attr('class', 'channel-tag-bg receptor-tag')
+                .attr('x', receptorX)
+                .attr('y', -6)
+                .attr('width', receptorWidth)
+                .attr('height', 12)
+                .attr('rx', 2)
+                .attr('fill', '#dc3545');
+            
+            labelGroup.append('text')
+                .attr('class', 'channel-tag')
+                .attr('x', receptorX + receptorWidth/2)
+                .attr('y', 0)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '9px')
+                .attr('fill', 'white')
+                .attr('font-weight', 'bold')
+                .text(receptorText);
+            
+            // 箭头符号（中间）
+            const arrowX = receptorX - arrowWidth;
+            labelGroup.append('text')
+                .attr('class', 'arrow-symbol')
+                .attr('x', arrowX + arrowWidth/2)
+                .attr('y', 0)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '10px')
+                .attr('fill', '#666')
+                .attr('font-weight', 'bold')
+                .text('→');
+            
+            // 配体标签（最左侧）
+            const ligandX = arrowX - ligandWidth;
+            labelGroup.append('rect')
+                .attr('class', 'channel-tag-bg ligand-tag')
+                .attr('x', ligandX)
+                .attr('y', -6)
+                .attr('width', ligandWidth)
+                .attr('height', 12)
+                .attr('rx', 2)
+                .attr('fill', '#007bff');
+            
+            labelGroup.append('text')
+                .attr('class', 'channel-tag')
+                .attr('x', ligandX + ligandWidth/2)
+                .attr('y', 0)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '9px')
+                .attr('fill', 'white')
+                .attr('font-weight', 'bold')
+                .text(ligandText);
+        });
+        
+        // 绘制热图单元格
+        displayChannels.forEach((channel, rowIndex) => {
+            nodes.forEach((node, colIndex) => {
+                const intensity = intensityMap.get(channel)?.[node] || 0;
+                
+                heatmapGroup.append('rect')
+                    .attr('class', 'heatmap-cell')
+                    .attr('x', startX + colIndex * cellWidth)
+                    .attr('y', startY + rowIndex * cellHeight)
+                    .attr('width', cellWidth)
+                    .attr('height', cellHeight)
+                    .attr('fill', intensity > 0 ? colorScale(intensity) : '#f0f0f0')
+                    .on('mouseover', function(event) {
+                        // 显示tooltip
+                        d3.select('body').selectAll('.heatmap-tooltip').remove();
+                        const tooltip = d3.select('body').append('div')
+                            .attr('class', 'heatmap-tooltip')
+                            .style('position', 'absolute')
+                            .style('background', 'rgba(0,0,0,0.8)')
+                            .style('color', 'white')
+                            .style('padding', '8px')
+                            .style('border-radius', '4px')
+                            .style('font-size', '12px')
+                            .style('pointer-events', 'none')
+                            .style('z-index', '1000')
+                            .html(`
+                                <strong>Node:</strong> ${node}<br>
+                                <strong>Channel:</strong> ${channel}<br>
+                                <strong>Intensity:</strong> ${intensity.toFixed(2)}×10⁻⁴
+                            `);
+
+                        tooltip.style('left', (event.pageX + 10) + 'px')
+                            .style('top', (event.pageY - 10) + 'px');
+                    })
+                    .on('mouseout', function() {
+                        d3.select('body').selectAll('.heatmap-tooltip').remove();
+                    });
+            });
+        });
+        
+        // 添加颜色图例
+        this.addHeatmapLegend(heatmapGroup, colorScale, minIntensity, maxIntensity, 
+            startX + nodes.length * cellWidth + 20, startY);
+    }
+
+    addHeatmapLegend(parentGroup, colorScale, minValue, maxValue, x, y) {
+        const legendHeight = 150;
+        const legendWidth = 15;
+        const steps = 20;
+        
+        // 创建图例组
+        const legendGroup = parentGroup.append('g')
+            .attr('class', 'heatmap-legend')
+            .attr('transform', `translate(${x}, ${y})`);
+        
+        // 绘制图例色块
+        for (let i = 0; i < steps; i++) {
+            const value = minValue + (maxValue - minValue) * i / (steps - 1);
+            
+            legendGroup.append('rect')
+                .attr('x', 0)
+                .attr('y', legendHeight - (i + 1) * legendHeight / steps)
+                .attr('width', legendWidth)
+                .attr('height', legendHeight / steps)
+                .attr('fill', colorScale(value))
+                .attr('stroke', 'none');
+        }
+        
+        // 添加图例标签
+        legendGroup.append('text')
+            .attr('x', legendWidth + 5)
+            .attr('y', 0)
+            .attr('dy', '0.35em')
+            .attr('font-size', '10px')
+            .attr('fill', '#333')
+            .text(maxValue.toFixed(1));
+        
+        legendGroup.append('text')
+            .attr('x', legendWidth + 5)
+            .attr('y', legendHeight)
+            .attr('dy', '0.35em')
+            .attr('font-size', '10px')
+            .attr('fill', '#333')
+            .text(minValue.toFixed(1));
+        
+        legendGroup.append('text')
+            .attr('x', legendWidth + 5)
+            .attr('y', legendHeight + 15)
+            .attr('dy', '0.35em')
+            .attr('font-size', '9px')
+            .attr('fill', '#666')
+            .text('×10⁻⁴');
+    }
+
+    showLassoModeInstruction() {
+        // 清除现有内容
+        this.receiveGroup.selectAll('*').remove();
+        this.sendGroup.selectAll('*').remove();
+        
+        // 重置SVG高度
+        this.updateSVGHeight(400);
+
+        // 显示套索模式说明
+        this.receiveGroup.append('text')
+            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+            .attr('y', 0)
+            .attr('text-anchor', 'middle')
+            .attr('font-weight', 'bold')
+            .attr('font-size', '16px')
+            .text(`Lasso Mode (${this.currentLassoData.pathCells.length} nodes selected)`);
+
+        this.receiveGroup.append('text')
+            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+            .attr('y', 100)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '14px')
+            .attr('fill', '#666')
+            .html('Click inner arc to view receive channels');
+
+        this.receiveGroup.append('text')
+            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+            .attr('y', 130)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '14px')
+            .attr('fill', '#666')
+            .html('Click outer arc to view send channels');
+
+        this.receiveGroup.append('text')
+            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+            .attr('y', 160)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '12px')
+            .attr('fill', '#999')
+            .html('Heatmap will show all selected nodes');
+    }
+
+    async showLassoChannelHeatmap(pathCells, neighborCells, communicationType, targetNeighbor) {
+        console.log('Showing lasso channel heatmap:', {
+            pathCells: pathCells.length,
+            communicationType,
+            targetNeighbor
+        });
+        
+        // 清除现有内容
+        this.receiveGroup.selectAll('*').remove();
+        this.sendGroup.selectAll('*').remove();
+        
+        // 重置滚动位置
+        if (this.scrollContainer) {
+            this.scrollContainer.node().scrollTop = 0;
+        }
+
+        // 创建热图标题
+        const titleText = communicationType === 'receive' 
+            ? `Receive Channels: → ${targetNeighbor} (${pathCells.length} nodes)`
+            : `Send Channels: ${targetNeighbor} → (${pathCells.length} nodes)`;
+            
+        this.receiveGroup.append('text')
+            .attr('x', (this.width - this.margin.left - this.margin.right) / 2)
+            .attr('y', 0)
+            .attr('text-anchor', 'middle')
+            .attr('font-weight', 'bold')
+            .attr('font-size', '16px')
+            .text(titleText);
+
+        try {
+            // 收集指定类型的通道数据
+            const heatmapData = await this.collectLassoChannelDataByType(
+                pathCells, 
+                [targetNeighbor], 
+                communicationType
+            );
+            
+            // 渲染热图
+            this.renderChannelHeatmap(heatmapData, pathCells);
+            
+        } catch (error) {
+            console.error('Error creating lasso channel heatmap:', error);
+            this.showErrorState('Failed to create heatmap: ' + error.message);
+        }
+    }
+
+    async collectLassoChannelDataByType(pathCells, neighborCells, communicationType) {
+        const channelIntensityMap = new Map(); // channel -> {node1: intensity, node2: intensity, ...}
+        const allChannels = new Set();
+        
+        // 为每个路径节点收集指定类型的通道数据
+        for (let i = 0; i < pathCells.length; i++) {
+            const pathCell = pathCells[i];
+            const cellType = pathCell.label;
+            const specificCells = pathCell.specificCells || [];
+            
+            // 创建节点标识符：节点类型 + 在路径中的位置
+            const nodeId = `${cellType}_${i}`;
+            
+            console.log(`Processing path node: ${cellType} at position ${i}, type: ${communicationType}`);
+            
+            try {
+                // 获取该路径节点的子类型
+                let subTypes;
+                if (specificCells && specificCells.length > 0) {
+                    subTypes = specificCells.filter(cell => cell.includes(cellType));
+                } else {
+                    subTypes = await this.getSubTypes(cellType);
+                }
+                
+                console.log(`SubTypes for ${nodeId}:`, subTypes);
+                
+                // 获取细胞总数
+                const totalCellCount = await this.getTotalCellCount(subTypes);
+                
+                // 为每个邻居细胞收集通道数据
+                for (const neighborCell of neighborCells) {
+                    const channelData = await this.loadAndMergeChannelData(subTypes, neighborCell, totalCellCount);
+                    
+                    // 根据通信类型选择对应的数据
+                    const selectedChannels = communicationType === 'receive' ? channelData.send : channelData.receive;
+                    
+                    console.log(`Channel data for ${nodeId} -> ${neighborCell}:`, selectedChannels.length, 'channels');
+                    
+                    selectedChannels.forEach(channel => {
+                        const channelKey = `${channel.channel}_${neighborCell}`;
+                        allChannels.add(channelKey);
+                        
+                        if (!channelIntensityMap.has(channelKey)) {
+                            channelIntensityMap.set(channelKey, {});
+                        }
+                        
+                        // 使用节点标识符作为列名（保持路径位置信息）
+                        channelIntensityMap.get(channelKey)[nodeId] = channel.averageIntensity || 0;
+                    });
+                }
+                
+            } catch (error) {
+                console.warn(`Error processing ${nodeId}:`, error);
+            }
+        }
+        
+        // 生成节点列表，包含位置信息但显示为可读的标签
+        const nodeColumns = pathCells.map((pathCell, i) => {
+            const cellType = pathCell.label;
+            const nodeId = `${cellType}_${i}`;
+            // 如果有多个同类型节点，显示位置信息；否则只显示类型
+            const sameTypeCounts = pathCells.filter(p => p.label === cellType).length;
+            const displayName = sameTypeCounts > 1 ? `${cellType}(${i+1})` : cellType;
+            return { id: nodeId, displayName: displayName };
+        });
+        
+        return {
+            channels: Array.from(allChannels),
+            nodes: nodeColumns.map(n => n.id), // 内部使用的ID
+            nodeDisplayNames: nodeColumns, // 用于显示的名称映射
+            intensityMap: channelIntensityMap
+        };
+    }
+
+    createUniqueNodeId(pathCell, index, allPathCells) {
+        const cellType = pathCell.label;
+        
+        // 检查是否有其他节点具有相同的label
+        const sameTypeCells = allPathCells.filter(p => p.label === cellType);
+        
+        if (sameTypeCells.length === 1) {
+            // 如果只有一个同类型节点，直接使用label
+            return cellType;
+        } else {
+            // 如果有多个同类型节点，添加索引或使用specificCells的特征
+            const specificCells = pathCell.specificCells || [];
+            if (specificCells.length > 0) {
+                // 使用第一个specific cell的后缀作为区分
+                const firstCell = specificCells[0];
+                const parts = firstCell.split('_');
+                if (parts.length >= 3) {
+                    return `${cellType}_${parts[parts.length-2]}_${parts[parts.length-1]}`;
+                }
+            }
+            
+            // 回退方案：使用索引
+            const sameTypeIndex = allPathCells.filter((p, i) => i <= index && p.label === cellType).length;
+            return `${cellType}_${sameTypeIndex}`;
+        }
     }
 }
