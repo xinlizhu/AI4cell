@@ -3,24 +3,18 @@ class CellSelectionTest {
         this.data = [];
         this.selectedCells = new Set(); // 用于存储选中的细胞名称
         this.colors = {
-            'Heart': '#d4b365',
-            'Neural crest': '#5B9BD5',
-            'Branchial arch': '#70AD47',
-            'AGM': '#00B050',
-            'Liver': '#FF6D01',
-            'Cavity': '#404040',
-            'Blood vessel': '#E1819E',
-            'Brain': '#8B4513',
-            'Connective tissue': '#9966CC',
-            'Dermomyotome': '#FF69B4',
-            'Head mesenchyme': '#20B2AA',
-            'Lung primordium': '#FF4500',
-            'Mesenchyme': '#DAA520',
-            'Notochord': '#4682B4',
-            'Sclerotome': '#32CD32',
-            'Spinal cord': '#8A2BE2',
-            'Surface ectoderm': '#FF1493',
-            'Urogenital ridge': '#00CED1'
+        'Heart': '#EF778C', // 浅红色
+        'Neural crest': '#7BC031', // 绿色
+        'Branchial arch': '#BA956A', // 棕色
+        'AGM': '#B624D9', // 紫色
+        'Liver': '#57A4E8', // 蓝色
+        'Cavity': '#B13E00', // 橙色
+        'Brain': '#F9D7BE', // 米色
+        'Connective tissue': '#1B71CE', // 深蓝色
+        'Dermomyotome': '#EE4FF9', // 粉紫色
+        'Mesenchyme': '#D3245A', // 深红色
+        'Notochord': '#EF833A', // 橙色
+        'Sclerotome': '#35586D' // 深灰色
         };
         this.init();
     }
