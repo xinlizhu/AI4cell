@@ -105,7 +105,7 @@ class PathPattern {
         const headerContainer = this.container.append('div')
             .attr('class', 'pattern-header-row')
             .style('display', 'grid')
-            .style('grid-template-columns', '110px 75px 75px 110px')
+            .style('grid-template-columns', '110px 110px 75px 75px')
             .style('column-gap', '8px')
             .style('padding', '6px 8px')
             .style('background', '#f8f9fa')
@@ -115,9 +115,9 @@ class PathPattern {
             .style('color', '#666');
             
         headerContainer.append('div').text('Start Node');
+        headerContainer.append('div').text('End Node');
         headerContainer.append('div').text('Path Length').style('text-align', 'center');
         headerContainer.append('div').text('Path Count').style('text-align', 'center');
-        headerContainer.append('div').text('End Node');
         
         this.listContainer = this.container.append('div').attr('class', 'pattern-list');
         this.updateVisualization();
@@ -133,11 +133,11 @@ class PathPattern {
         }
 
         // 统一右侧节点位置：中间分为两个独立的bar chart区域
-        // 调整布局为四列：起始节点、路径长度、路径个数、结束节点
+        // 调整布局为四列：起始节点、结束节点、路径长度、路径个数
         const leftColWidth = 110;       // 起始节点列
-        const lengthBarWidth = 75;      // 路径长度bar chart列
-        const countBarWidth = 75;       // 路径个数bar chart列  
         const rightColWidth = 110;      // 结束节点列
+        const lengthBarWidth = 75;      // 路径长度bar chart列
+        const countBarWidth = 75;       // 路径个数bar chart列
         const lenExtent = d3.extent(filteredData, d => +d.path_length || 0);
         const safeLenDomain = (lenExtent && isFinite(lenExtent[0]) && isFinite(lenExtent[1]) && lenExtent[0] !== lenExtent[1])
             ? lenExtent
@@ -182,9 +182,9 @@ class PathPattern {
 
         const contentEnter = patternsEnter.append('div')
             .attr('class', 'pattern-item-content')
-            // 改为网格四列：起始节点/路径长度/路径个数/结束节点
+            // 改为网格四列：起始节点/结束节点/路径长度/路径个数
             .style('display', 'grid')
-            .style('grid-template-columns', `${leftColWidth}px ${lengthBarWidth}px ${countBarWidth}px ${rightColWidth}px`)
+            .style('grid-template-columns', `${leftColWidth}px ${rightColWidth}px ${lengthBarWidth}px ${countBarWidth}px`)
             .style('align-items', 'center')
             .style('column-gap', '8px')
             .style('padding', '6px 8px')
@@ -229,66 +229,6 @@ class PathPattern {
             .style('max-width', `${leftColWidth - 20}px`) // 留空间给圆圈
             .text(d => d.start);
 
-        // 路径长度 bar chart
-        const lengthBarWrap = contentEnter.append('div')
-            .attr('class', 'pattern-length-bar-wrap')
-            .style('width', `${lengthBarWidth}px`)
-            .style('height', '24px')
-            .style('display', 'flex')
-            .style('align-items', 'center')
-            .style('justify-content', 'flex-start')
-            .style('position', 'relative');
-
-        lengthBarWrap.append('div')
-            .attr('class', 'pattern-length-bar')
-            .style('height', '12px')
-            .style('width', d => `${pathLengthScale(d.path_length)}px`)
-            .style('background', '#4CAF50')
-            .style('border-radius', '2px')
-            .style('position', 'relative')
-            .style('flex-shrink', '0');
-
-        // 添加路径长度数值标签
-        lengthBarWrap.append('span')
-            .attr('class', 'length-label')
-            .style('position', 'absolute')
-            .style('left', d => `${pathLengthScale(d.path_length) + 5}px`)
-            .style('top', '50%')
-            .style('transform', 'translateY(-50%)')
-            .style('font-size', '10px')
-            .style('color', '#666')
-            .text(d => d.path_length);
-
-        // 路径个数 bar chart  
-        const countBarWrap = contentEnter.append('div')
-            .attr('class', 'pattern-count-bar-wrap')
-            .style('width', `${countBarWidth}px`)
-            .style('height', '24px')
-            .style('display', 'flex')
-            .style('align-items', 'center')
-            .style('justify-content', 'flex-start')
-            .style('position', 'relative');
-
-        countBarWrap.append('div')
-            .attr('class', 'pattern-count-bar')
-            .style('height', '12px')
-            .style('width', d => `${pathNumScale(d.path_num)}px`)
-            .style('background', '#FF9800')
-            .style('border-radius', '2px')
-            .style('position', 'relative')
-            .style('flex-shrink', '0');
-
-        // 添加路径个数数值标签
-        countBarWrap.append('span')
-            .attr('class', 'count-label')
-            .style('position', 'absolute')
-            .style('left', d => `${pathNumScale(d.path_num) + 5}px`)
-            .style('top', '50%')
-            .style('transform', 'translateY(-50%)')
-            .style('font-size', '10px')
-            .style('color', '#666')
-            .text(d => d.path_num);
-
         const rightWrap = contentEnter.append('div')
             .attr('class', 'pattern-node-wrapper')
             .style('width', `${rightColWidth}px`)
@@ -327,6 +267,66 @@ class PathPattern {
             .style('text-overflow', 'ellipsis')
             .style('max-width', `${rightColWidth - 20}px`) // 留空间给圆圈
             .text(d => d.end);
+
+        // 路径长度 bar chart
+        const lengthBarWrap = contentEnter.append('div')
+            .attr('class', 'pattern-length-bar-wrap')
+            .style('width', `${lengthBarWidth}px`)
+            .style('height', '24px')
+            .style('display', 'flex')
+            .style('align-items', 'center')
+            .style('justify-content', 'flex-start')
+            .style('position', 'relative');
+
+        lengthBarWrap.append('div')
+            .attr('class', 'pattern-length-bar')
+            .style('height', '12px')
+            .style('width', d => `${pathLengthScale(d.path_length)}px`)
+            .style('background', '#5d5d5dff') // 改为灰白色
+            .style('border-radius', '2px')
+            .style('position', 'relative')
+            .style('flex-shrink', '0');
+
+        // 添加路径长度数值标签
+        lengthBarWrap.append('span')
+            .attr('class', 'length-label')
+            .style('position', 'absolute')
+            .style('left', d => `${pathLengthScale(d.path_length) + 5}px`)
+            .style('top', '50%')
+            .style('transform', 'translateY(-50%)')
+            .style('font-size', '10px')
+            .style('color', '#666')
+            .text(d => d.path_length);
+
+        // 路径个数 bar chart  
+        const countBarWrap = contentEnter.append('div')
+            .attr('class', 'pattern-count-bar-wrap')
+            .style('width', `${countBarWidth}px`)
+            .style('height', '24px')
+            .style('display', 'flex')
+            .style('align-items', 'center')
+            .style('justify-content', 'flex-start')
+            .style('position', 'relative');
+
+        countBarWrap.append('div')
+            .attr('class', 'pattern-count-bar')
+            .style('height', '12px')
+            .style('width', d => `${pathNumScale(d.path_num)}px`)
+            .style('background', '#5d5d5dff') // 改为更浅的灰白色
+            .style('border-radius', '2px')
+            .style('position', 'relative')
+            .style('flex-shrink', '0');
+
+        // 添加路径个数数值标签
+        countBarWrap.append('span')
+            .attr('class', 'count-label')
+            .style('position', 'absolute')
+            .style('left', d => `${pathNumScale(d.path_num) + 5}px`)
+            .style('top', '50%')
+            .style('transform', 'translateY(-50%)')
+            .style('font-size', '10px')
+            .style('color', '#666')
+            .text(d => d.path_num);
     }
 
     showPatternTreeView(patternElement, patternData) {

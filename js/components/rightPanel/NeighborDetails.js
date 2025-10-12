@@ -13,10 +13,20 @@ class NeighborDetailsPanel {
         this.container
             .style('display','flex')
             .style('flex-direction','column')
-            .style('gap','8px')
-            .style('min-height','350px')
-            .style('max-height','350px')
-            .style('height','350px');
+            .style('gap','0px')
+            .style('min-height','345px')
+            .style('max-height','345px')
+            .style('height','345px');
+
+        // 添加标题
+        this.container.append('h3')
+            .attr('class', 'neighbor-header')
+            .style('margin', '0 0 0px 0')
+            .style('padding', '0px 0px')
+            .style('font-size', '14px')
+            .style('font-weight', 'bold')
+            .style('color', '#333')
+            .text('Neighbor Details');
 
         this.list = this.container.append('div')
             .attr('class','neighbor-chart-list')

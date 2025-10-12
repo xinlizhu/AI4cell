@@ -52,7 +52,7 @@ export class ChannelView {
         // 创建滚动容器
         this.scrollContainer = this.container.append('div')
             .style('width', this.width + 'px')
-            .style('height', (this.height - 85) + 'px') // 减少控制台占用空间
+            .style('height', (this.height - 78) + 'px') // 减少控制台占用空间
             .style('overflow-y', 'auto')
             .style('overflow-x', 'hidden')
             .style('border', 'none') /* 移除边框，减少视觉噪音 */
@@ -980,7 +980,7 @@ export class ChannelView {
         const cellWidth = Math.min(Math.max(18, availableWidth / nodes.length), 28); // 减小单元格宽度范围
         const cellHeight = 16;
         const labelWidth = 150; // 减少标签区域宽度，让热图更靠近标签
-        const labelHeight = 90; // 增加上方空间，避免倾斜标签被截断
+        const labelHeight = 60; // 减少上方空间，让热图更靠近标题
         const startX = labelWidth;
         const startY = labelHeight;
         
@@ -1033,7 +1033,7 @@ export class ChannelView {
         // 创建热图SVG组
         const heatmapGroup = this.receiveGroup.append('g')
             .attr('class', 'lasso-heatmap')
-            .attr('transform', `translate(10, 30)`);
+            .attr('transform', `translate(0, 0)`);
         
         // 绘制节点标签（列标签）
         const nodeDisplayNames = heatmapData.nodeDisplayNames || nodes.map(n => ({ id: n, displayName: n }));
