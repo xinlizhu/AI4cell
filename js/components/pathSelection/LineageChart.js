@@ -85,7 +85,7 @@ export class LineageChart {
                 .style('background', 'rgba(0,0,0,0.7)')
                 .style('color', 'white')
                 .style('padding', '8px')
-                .style('border-radius', '4px')
+                .style('border-radius', '0px')
                 .style('font-size', '12px');
         }
 

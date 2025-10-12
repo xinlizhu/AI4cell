@@ -100,6 +100,25 @@ class PathPattern {
     render() {
         this.container.selectAll('*').remove();
         this.container.append('h3').attr('class', 'pattern-header').text('Path Patterns');
+        
+        // 添加列标题
+        const headerContainer = this.container.append('div')
+            .attr('class', 'pattern-header-row')
+            .style('display', 'grid')
+            .style('grid-template-columns', '110px 75px 75px 110px')
+            .style('column-gap', '8px')
+            .style('padding', '6px 8px')
+            .style('background', '#f8f9fa')
+            .style('border-bottom', '1px solid #e0e0e0')
+            .style('font-size', '11px')
+            .style('font-weight', 'bold')
+            .style('color', '#666');
+            
+        headerContainer.append('div').text('Start Node');
+        headerContainer.append('div').text('Path Length').style('text-align', 'center');
+        headerContainer.append('div').text('Path Count').style('text-align', 'center');
+        headerContainer.append('div').text('End Node');
+        
         this.listContainer = this.container.append('div').attr('class', 'pattern-list');
         this.updateVisualization();
     }
@@ -113,23 +132,24 @@ class PathPattern {
             );
         }
 
-        // 统一右侧节点位置：中间留出固定宽度区域，内部条形的宽度编码平均路径长度，高度编码路径数
-    // 收窄列宽与间距以适配左侧 450px 面板，右列更靠左且不产生水平滚动
-    const connectorAreaWidth = 150; // 中间连接区更窄
-    const leftColWidth = 110;       // 左列更紧凑
-    const rightColWidth = 110;      // 右列更紧凑
+        // 统一右侧节点位置：中间分为两个独立的bar chart区域
+        // 调整布局为四列：起始节点、路径长度、路径个数、结束节点
+        const leftColWidth = 110;       // 起始节点列
+        const lengthBarWidth = 75;      // 路径长度bar chart列
+        const countBarWidth = 75;       // 路径个数bar chart列  
+        const rightColWidth = 110;      // 结束节点列
         const lenExtent = d3.extent(filteredData, d => +d.path_length || 0);
         const safeLenDomain = (lenExtent && isFinite(lenExtent[0]) && isFinite(lenExtent[1]) && lenExtent[0] !== lenExtent[1])
             ? lenExtent
             : [Math.max(1, (lenExtent && lenExtent[0]) || 2), Math.max(2, ((lenExtent && lenExtent[1]) || 8) + 1)];
-        const pathLengthScale = d3.scaleLinear().domain(safeLenDomain).range([30, connectorAreaWidth]);
+        const pathLengthScale = d3.scaleLinear().domain(safeLenDomain).range([10, lengthBarWidth - 10]);
 
         const numExtent = d3.extent(filteredData, d => +d.path_num || 0);
         const safeNumDomain = (numExtent && isFinite(numExtent[0]) && isFinite(numExtent[1]) && numExtent[0] !== numExtent[1])
             ? numExtent
             : [Math.max(0, (numExtent && numExtent[0]) || 1), Math.max(1, ((numExtent && numExtent[1]) || 30) + 1)];
     // 将条形高度范围翻倍，配合更高的容器实现“框高度翻倍”
-    const pathNumScale = d3.scaleLinear().domain(safeNumDomain).range([8, 32]);
+    const pathNumScale = d3.scaleLinear().domain(safeNumDomain).range([10, countBarWidth - 10]);
 
         const patterns = this.listContainer.selectAll('.pattern-item')
             .data(filteredData, d => `${d.start}-${d.end}`);
@@ -162,9 +182,9 @@ class PathPattern {
 
         const contentEnter = patternsEnter.append('div')
             .attr('class', 'pattern-item-content')
-            // 改为网格三列：左列/连接区/右列固定宽度，锁定起点与终点位置
+            // 改为网格四列：起始节点/路径长度/路径个数/结束节点
             .style('display', 'grid')
-            .style('grid-template-columns', `${leftColWidth}px ${connectorAreaWidth}px ${rightColWidth}px`)
+            .style('grid-template-columns', `${leftColWidth}px ${lengthBarWidth}px ${countBarWidth}px ${rightColWidth}px`)
             .style('align-items', 'center')
             .style('column-gap', '8px')
             .style('padding', '6px 8px')
@@ -190,10 +210,10 @@ class PathPattern {
             .attr('class', 'node-circle')
             .style('width', '12px')
             .style('height', '12px')
-            .style('border-radius', '50%')
+            .style('border-radius', '0')
             .style('background-color', d => this.colors[d.start] || '#ccc')
-            .style('border', '2px solid white')
-            .style('box-shadow', '0 1px 3px rgba(0,0,0,0.2)')
+            .style('border', 'none') /* 移除边框，减少视觉噪音 */
+            .style('box-shadow', 'none') /* 移除阴影 */
             .style('flex-shrink', '0')
             .style('margin-right', '6px');
         
@@ -209,25 +229,65 @@ class PathPattern {
             .style('max-width', `${leftColWidth - 20}px`) // 留空间给圆圈
             .text(d => d.start);
 
-        // 固定宽度的中间连接区域，内部条形宽度=平均路径长度，高度=路径数
-        const connWrap = contentEnter.append('div')
-            .attr('class', 'pattern-connection-wrap')
-            .style('width', `${connectorAreaWidth}px`)
-            // 将连接区域高度从 24px 提升到 48px，使单项高度近似翻倍
-            .style('height', '48px')
+        // 路径长度 bar chart
+        const lengthBarWrap = contentEnter.append('div')
+            .attr('class', 'pattern-length-bar-wrap')
+            .style('width', `${lengthBarWidth}px`)
+            .style('height', '24px')
             .style('display', 'flex')
             .style('align-items', 'center')
             .style('justify-content', 'flex-start')
-            .style('overflow', 'hidden');
+            .style('position', 'relative');
 
-        connWrap.append('div')
-            .attr('class', 'pattern-connection')
-            .style('height', d => `${pathNumScale(d.path_num)}px`)
-            .style('width', d => `${Math.max(4, Math.min(connectorAreaWidth, pathLengthScale(d.path_length)))}px`)
-            .style('margin', '0') // 移除左右外边距，避免溢出挤压右列
-            .style('background', '#c7ccd4')
-            .style('border-radius', '3px')
+        lengthBarWrap.append('div')
+            .attr('class', 'pattern-length-bar')
+            .style('height', '12px')
+            .style('width', d => `${pathLengthScale(d.path_length)}px`)
+            .style('background', '#4CAF50')
+            .style('border-radius', '2px')
+            .style('position', 'relative')
             .style('flex-shrink', '0');
+
+        // 添加路径长度数值标签
+        lengthBarWrap.append('span')
+            .attr('class', 'length-label')
+            .style('position', 'absolute')
+            .style('left', d => `${pathLengthScale(d.path_length) + 5}px`)
+            .style('top', '50%')
+            .style('transform', 'translateY(-50%)')
+            .style('font-size', '10px')
+            .style('color', '#666')
+            .text(d => d.path_length);
+
+        // 路径个数 bar chart  
+        const countBarWrap = contentEnter.append('div')
+            .attr('class', 'pattern-count-bar-wrap')
+            .style('width', `${countBarWidth}px`)
+            .style('height', '24px')
+            .style('display', 'flex')
+            .style('align-items', 'center')
+            .style('justify-content', 'flex-start')
+            .style('position', 'relative');
+
+        countBarWrap.append('div')
+            .attr('class', 'pattern-count-bar')
+            .style('height', '12px')
+            .style('width', d => `${pathNumScale(d.path_num)}px`)
+            .style('background', '#FF9800')
+            .style('border-radius', '2px')
+            .style('position', 'relative')
+            .style('flex-shrink', '0');
+
+        // 添加路径个数数值标签
+        countBarWrap.append('span')
+            .attr('class', 'count-label')
+            .style('position', 'absolute')
+            .style('left', d => `${pathNumScale(d.path_num) + 5}px`)
+            .style('top', '50%')
+            .style('transform', 'translateY(-50%)')
+            .style('font-size', '10px')
+            .style('color', '#666')
+            .text(d => d.path_num);
 
         const rightWrap = contentEnter.append('div')
             .attr('class', 'pattern-node-wrapper')
@@ -249,10 +309,10 @@ class PathPattern {
             .attr('class', 'node-circle')
             .style('width', '12px')
             .style('height', '12px')
-            .style('border-radius', '50%')
+            .style('border-radius', '0')
             .style('background-color', d => this.colors[d.end] || '#ccc')
-            .style('border', '2px solid white')
-            .style('box-shadow', '0 1px 3px rgba(0,0,0,0.2)')
+            .style('border', 'none') /* 移除边框，减少视觉噪音 */
+            .style('box-shadow', 'none') /* 移除阴影 */
             .style('flex-shrink', '0')
             .style('margin-right', '6px');
         
@@ -518,8 +578,8 @@ class PatternTreeVisualization {
                          ${targetY},${targetX}`;
             })
             .style('fill', 'none')
-            .style('stroke', '#999')
-            .style('stroke-width', 1)
+            .style('stroke', '#100f0fff') /* 使用极淡的灰色 */
+            .style('stroke-width', 0.5) /* 大幅减少线条粗细 */
             .style('stroke-opacity', 0.6);
             
         // 绘制节点
@@ -544,9 +604,9 @@ class PatternTreeVisualization {
                 if (d.data.name === 'root') return 'transparent';
                 return this.colors[d.data.name] || '#e0e0e0';
             })
-            .style('stroke', d => (d.data.name === 'root' ? 'none' : 'white'))
-            .style('stroke-width', 2)
-            .style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.2))'); // 添加阴影效果
+            .style('stroke', 'none') /* 移除边框 */
+            .style('stroke-width', 0)
+            .style('filter', 'none'); /* 移除阴影 */
             
         // 节点文本
         nodeGroups.append('text')
@@ -578,11 +638,11 @@ class PatternTreeVisualization {
             .attr('cx', -35) // 展开按钮放在圆圈左侧固定位置
             .attr('cy', 0)
             .attr('r', 7)
-            .style('fill', '#fff')
-            .style('stroke', '#666')
-            .style('stroke-width', 1.5)
+            .style('fill', '#f5f5f5') /* 更淡的背景 */
+            .style('stroke', '#d0d0d0') /* 更淡的边框 */
+            .style('stroke-width', 1)
             .style('cursor', 'pointer')
-            .style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.15))')
+            .style('filter', 'none') /* 移除阴影 */
             .on('click', (event, d) => {
                 event.stopPropagation();
                 console.log('Toggle button clicked for:', d.data.name);

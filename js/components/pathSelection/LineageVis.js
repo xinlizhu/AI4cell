@@ -55,13 +55,12 @@ class LineageVis {
                     .attr('data-parent-key','')
                     .attr('data-depth','0')
                     .style('text-align','center')
-                    .style('border-top','1px dashed #ddd')
-                    .style('padding-top','6px')
+                    .style('padding', '8px 0 4px 0') // 大幅减少内边距，让容器更紧凑
                     .style('width', this.layoutConfig.chartWidth + 'px')
                     .style('margin','0 auto');
                 wrap.append('div')
                     .attr('class','chart-title')
-                    .style('margin-bottom','16px')
+                    .style('margin-bottom','0px') // 减少标题与图表间距
                     .text(type);
                 const id = `branch-root-added-${this.treeSessionId}-${Date.now()}-${idxAdd++}`;
                 wrap.append('div').attr('id', id).classed('lc-host', true);
@@ -132,6 +131,27 @@ class LineageVis {
             modeSelect.on('change', (event) => {
                 this.mouseMode = event.target.value;
                 this.updateMouseMode();
+            });
+
+            // 添加键盘快捷键支持
+            document.addEventListener('keydown', (event) => {
+                // 只在没有输入框聚焦时响应快捷键
+                if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.tagName === 'SELECT') {
+                    return;
+                }
+                
+                const key = event.key.toLowerCase();
+                if (key === 'l') {
+                    this.mouseMode = 'lasso';
+                    modeSelect.property('value', 'lasso');
+                    this.updateMouseMode();
+                    event.preventDefault();
+                } else if (key === 'p') {
+                    this.mouseMode = 'pan';
+                    modeSelect.property('value', 'pan');
+                    this.updateMouseMode();
+                    event.preventDefault();
+                }
             });
 
             // 指标选择下拉框（控制 LineageChart 内外环使用哪种强度数据）
@@ -229,7 +249,7 @@ class LineageVis {
             .style('padding','4px 10px')
             .style('border','1px solid #ccc')
             .style('background','#fff')
-            .style('border-radius','4px')
+            .style('border-radius','0px')
             .style('cursor','pointer')
             .on('click', () => this.clearLineageView());
         const zoomInner = zoomOuter.append('div')
@@ -334,11 +354,10 @@ class LineageVis {
                     .style('text-align','center')
                     .style('width', this.layoutConfig.chartWidth + 'px')
                     .style('margin','0 auto')
-                    .style('padding-top', idx === 0 ? null : '6px')
-                    .style('border-top', idx === 0 ? null : '1px dashed #ddd');
+                    .style('padding', '8px 0 4px 0'); // 大幅减少内边距，让容器更紧凑
                 wrap.append('div')
                     .attr('class','chart-title')
-                    .style('margin-bottom','16px')
+                    .style('margin-bottom','0px') // 减少标题与图表间距
                     .style('font-weight','600')
                     .text(`${type}`);
                 const id = `branch-root-${this.treeSessionId}-${idx}`;
@@ -430,7 +449,7 @@ class LineageVis {
                     .style('margin', '0 auto');
                 wrap.append('div')
                     .attr('class', 'chart-title')
-                    .style('margin-bottom', '16px')
+                    .style('margin-bottom', '0px') // 减少标题与图表间距
                     .style('font-weight', '600')
                     .text(`${type}`);
                 const id = `branch-main-${this.treeSessionId}-${i}`;
@@ -476,13 +495,12 @@ class LineageVis {
                         .attr('data-parent-key', parentKey)
                         .attr('data-depth', String(i))
                         .style('text-align', 'center')
-                        .style('border-top', '1px dashed #ddd')
-                        .style('padding-top', '12px')
+                        .style('padding', '8px 0 4px 0') // 大幅减少内边距，让容器更紧凑
                         .style('width', this.layoutConfig.chartWidth + 'px')
                         .style('margin', '0 auto');
                     wrap.append('div')
                         .attr('class', 'chart-title')
-                        .style('margin-bottom', '16px')
+                        .style('margin-bottom', '0px') // 减少标题与图表间距
                         .text(`${type}`);
                     const id = `branch-fork-${this.treeSessionId}-${i}-${Math.floor(Math.random()*1e6)}`;
                         wrap.append('div').attr('id', id).classed('lc-host', true);
@@ -706,7 +724,7 @@ class LineageVis {
         const leaves = [];
         nodeInfos.forEach(info => { if (info.children.length === 0) leaves.push(info); });
         leaves.sort((a,b)=> (a.depth - b.depth) || 0);
-    const leafGap = 600; // 放大后加大节点垂直间距，避免标题重叠
+    const leafGap = 390; // 略大于容器高度(~388px)，保持最小安全间距
         let nextLeafIndex = 0;
         function assignY(node) {
             if (node.children.length === 0) {

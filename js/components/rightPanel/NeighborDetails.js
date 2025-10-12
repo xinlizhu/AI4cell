@@ -22,9 +22,13 @@ class NeighborDetailsPanel {
             .attr('class','neighbor-chart-list')
             .style('display','flex')
             .style('flex-direction','column')
-            .style('gap','12px')
+            .style('gap','0px') /* 移除gap，用分隔线代替 */
             .style('flex','1 1 auto')
-            .style('overflow-y','scroll');
+            .style('overflow-y','auto')
+            .style('overflow-x','hidden')
+            .style('padding','8px 12px') /* 添加内边距 */
+            .style('scrollbar-width','thin') /* Firefox下细滚动条 */
+            .style('scrollbar-color','#e0e0e0 transparent'); /* Firefox滚动条颜色 */
 
         this.emptyState = this.list.append('div')
             .attr('class','neighbor-empty')
@@ -76,35 +80,63 @@ class NeighborDetailsPanel {
             .attr('class','neighbor-chart-wrapper')
             .attr('data-path-key', pathKey)
             .style('position','relative')
-            .style('border','1px solid #ddd')
-            .style('border-radius','8px')
-            .style('padding','10px')
-            .style('background','#fafafa')
+            .style('border','none') /* 移除边框，减少视觉噪音 */
+            .style('border-radius','0px')
+            .style('padding','12px 8px') /* 调整padding */
+            .style('background','transparent') /* 透明背景 */
             .style('overflow','hidden')
             .style('flex','0 0 auto')
-            .style('min-height','300px');
+            .style('min-height','280px') /* 增加高度以更好地利用空间 */
+            .style('margin-bottom','8px'); /* 添加底部间距 */
+
+        // 只为非最后一个元素添加分隔线
+        if (this.chartCount > 1) {
+            wrap.style('border-top','1px solid #f5f5f5'); /* 顶部分隔线，而非底部 */
+            wrap.style('padding-top','20px'); /* 增加顶部内边距 */
+        }
 
         wrap.append('button')
             .attr('class','neighbor-chart-remove')
-            .text('Delete')
+            .text('×') /* 使用更简洁的关闭符号 */
             .style('position','absolute')
-            .style('top','6px')
-            .style('right','6px')
-            .style('background','#ff5555')
-            .style('color','#fff')
-            .style('border','none')
+            .style('top','8px')
+            .style('right','8px')
+            .style('background','rgba(255,85,85,0.1)') /* 半透明背景 */
+            .style('color','#000000ff')
+            .style('border','1px solid rgba(255,85,85,0.2)') /* 极淡边框 */
             .style('padding','4px 8px')
-            .style('border-radius','4px')
+            .style('border-radius','50%') /* 圆形按钮更现代 */
             .style('cursor','pointer')
-            .style('font-size','12px')
+            .style('font-size','14px')
+            .style('font-weight','bold')
+            .style('width','24px')
+            .style('height','24px')
+            .style('display','flex')
+            .style('align-items','center')
+            .style('justify-content','center')
+            .style('transition','all 0.2s ease')
+            .on('mouseover', function() {
+                d3.select(this)
+                    .style('background','rgba(255,85,85,0.2)')
+                    .style('color','#fff')
+                    .style('background','#ff5555');
+            })
+            .on('mouseout', function() {
+                d3.select(this)
+                    .style('background','rgba(255,85,85,0.1)')
+                    .style('color','#ff5555');
+            })
             .on('click', () => wrap.remove());
 
-        const displayTitle = title || `(${this.chartCount}) ${this.summarizePath(descriptors)}`;
+        const displayTitle = title || `${this.summarizePath(descriptors)}`;
         wrap.append('div')
             .attr('class','neighbor-chart-title')
-            .style('font-weight','600')
-            .style('margin-bottom','6px')
-            .style('font-size','13px')
+            .style('font-weight','500') /* 减轻字重 */
+            .style('margin-bottom','8px')
+            .style('font-size','12px') /* 稍微减小字号 */
+            .style('color','#555') /* 使用更淡的颜色 */
+            .style('border-left','3px solid #e3f2fd') /* 左侧加一条细的彩色线条作为标识 */
+            .style('padding-left','8px')
             .text(displayTitle);
 
         const chartId = `neighbor-overall-${Date.now()}-${Math.floor(Math.random()*1e6)}`;

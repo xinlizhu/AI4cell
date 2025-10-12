@@ -174,12 +174,12 @@ export class OverallCommChart {
         this.width = containerWidth - this.margin.left - this.margin.right - 10; // 减去padding
 
         // 创建三个图表容器，横向排列
-        const chartHeight = 120;
+        const chartHeight = 200; // 增加图表高度以更好地利用容器空间
         
         // 1. 细胞总数图
         const cellCountContainer = container.append('div')
             .style('border', '1px solid #ddd')
-            .style('border-radius', '4px')
+            .style('border-radius', '0px')
             .style('padding', '4px')
             .style('flex', '1')
             .style('min-width', '0');
@@ -196,7 +196,7 @@ export class OverallCommChart {
         // 2. 接收通信图
         const receiveContainer = container.append('div')
             .style('border', '1px solid #ddd')
-            .style('border-radius', '4px')
+            .style('border-radius', '0px')
             .style('padding', '4px')
             .style('flex', '1')
             .style('min-width', '0');
@@ -213,7 +213,7 @@ export class OverallCommChart {
         // 3. 发送通信图
         const sendContainer = container.append('div')
             .style('border', '1px solid #ddd')
-            .style('border-radius', '4px')
+            .style('border-radius', '0px')
             .style('padding', '4px')
             .style('flex', '1')
             .style('min-width', '0');
@@ -292,7 +292,11 @@ export class OverallCommChart {
             .tickValues(cellCountPositions.map(d => d.index))
             .tickFormat(i => {
                 const idx = Math.round(i);
-                return cellCountPositions[idx] ? cellCountPositions[idx].label : `${idx}`;
+                if (cellCountPositions[idx]) {
+                    const label = cellCountPositions[idx].label;
+                    return label.length > 7 ? label.substring(0, 7) + '...' : label;
+                }
+                return `${idx}`;
             });
 
         g.append('g')
@@ -300,8 +304,8 @@ export class OverallCommChart {
             .call(xAxis)
             .selectAll('text')
             .style('font-size', '8px')
-            .attr('text-anchor', 'end')
-            .attr('transform', 'rotate(-45)');
+            .attr('text-anchor', 'middle')
+            .attr('transform', 'rotate(0)'); // 水平显示文本
 
         // Y轴
         const yAxis = d3.axisLeft(y).ticks(3);
@@ -369,7 +373,11 @@ export class OverallCommChart {
             .tickValues(positions.map(d => d.index))
             .tickFormat(i => {
                 const idx = Math.round(i);
-                return positions[idx] ? positions[idx].label : `${idx}`;
+                if (positions[idx]) {
+                    const label = positions[idx].label;
+                    return label.length > 7 ? label.substring(0, 7) + '...' : label;
+                }
+                return `${idx}`;
             });
 
         g.append('g')
@@ -377,8 +385,8 @@ export class OverallCommChart {
             .call(xAxis)
             .selectAll('text')
             .style('font-size', '7px')
-            .attr('text-anchor', 'end')
-            .attr('transform', 'rotate(-45)');
+            .attr('text-anchor', 'middle')
+            .attr('transform', 'rotate(0)'); // 水平显示文本
 
         // 工具提示
         const tooltip = d3.select('body').select('.overall-stacked-tooltip');
@@ -390,7 +398,7 @@ export class OverallCommChart {
             .style('background', 'rgba(0,0,0,0.75)')
             .style('color', '#fff')
             .style('padding', '6px 8px')
-            .style('border-radius', '4px')
+            .style('border-radius', '0px')
             .style('font-size', '11px')
           : tooltip;
 
