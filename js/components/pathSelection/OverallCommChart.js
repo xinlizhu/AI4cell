@@ -184,12 +184,20 @@ export class OverallCommChart {
             .style('flex', '1')
             .style('min-width', '0');
         
-        cellCountContainer.append('div')
-            .style('font-size', '12px')
-            .style('font-weight', 'bold')
-            .style('margin-bottom', '4px')
+        // 添加图标和更专业的标题
+        const cellTitle = cellCountContainer.append('div')
+            .style('font-size', '11px')
+            .style('font-weight', '600')
+            .style('margin-bottom', '6px')
             .style('text-align', 'center')
-            .text('Cell Count');
+            .style('color', '#2c3e50')
+            .style('letter-spacing', '0.3px');
+        
+        cellTitle.append('span')
+            .style('margin-right', '4px')
+            .text('📍');
+        cellTitle.append('span')
+            .text('Population Dynamics');
 
         this.renderCellCountChart(cellCountContainer, cellCountPositions, chartHeight);
 
@@ -201,12 +209,19 @@ export class OverallCommChart {
             .style('flex', '1')
             .style('min-width', '0');
             
-        receiveContainer.append('div')
-            .style('font-size', '12px')
-            .style('font-weight', 'bold')
-            .style('margin-bottom', '4px')
+        const receiveTitle = receiveContainer.append('div')
+            .style('font-size', '11px')
+            .style('font-weight', '600')
+            .style('margin-bottom', '6px')
             .style('text-align', 'center')
-            .text('Receive Communication');
+            .style('color', '#2c3e50')
+            .style('letter-spacing', '0.3px');
+            
+        receiveTitle.append('span')
+            .style('margin-right', '4px')
+            .text('📥');
+        receiveTitle.append('span')
+            .text('Incoming Signals');
 
         this.renderCommChart(receiveContainer, receivePositions, keys, chartHeight, 'receive');
 
@@ -218,12 +233,19 @@ export class OverallCommChart {
             .style('flex', '1')
             .style('min-width', '0');
             
-        sendContainer.append('div')
-            .style('font-size', '12px')
-            .style('font-weight', 'bold')
-            .style('margin-bottom', '4px')
+        const sendTitle = sendContainer.append('div')
+            .style('font-size', '11px')
+            .style('font-weight', '600')
+            .style('margin-bottom', '6px')
             .style('text-align', 'center')
-            .text('Send Communication');
+            .style('color', '#2c3e50')
+            .style('letter-spacing', '0.3px');
+            
+        sendTitle.append('span')
+            .style('margin-right', '4px')
+            .text('📤');
+        sendTitle.append('span')
+            .text('Outgoing Signals');
 
         this.renderCommChart(sendContainer, sendPositions, keys, chartHeight, 'send');
     }
@@ -238,13 +260,16 @@ export class OverallCommChart {
         const g = svg.append('g')
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
 
+        // 为左右边界的标签预留空间
+        const padding = 20; // 左右各预留20px
         const x = d3.scaleLinear()
             .domain([0, Math.max(1, cellCountPositions.length - 1)])
-            .range([0, this.width]);
+            .range([padding, this.width - padding]);
 
         const maxCellCount = d3.max(cellCountPositions, d => d.totalCells) || 1;
+        // 为标签留出更多空间，在最大值基础上增加10%的缓冲
         const y = d3.scaleLinear()
-            .domain([0, maxCellCount])
+            .domain([0, maxCellCount * 1.1])
             .range([height - this.margin.top - this.margin.bottom, 0]);
 
         // 绘制折线图
@@ -274,17 +299,37 @@ export class OverallCommChart {
             .attr('stroke', 'white')
             .attr('stroke-width', 1);
 
-        // 添加数值标签
+        // 添加数值标签 - 智能定位避免遮挡
         g.selectAll('.cell-label')
             .data(cellCountPositions)
             .enter()
             .append('text')
             .attr('class', 'cell-label')
             .attr('x', d => x(d.index))
-            .attr('y', d => y(d.totalCells) - 8)
+            .attr('y', d => {
+                const yPos = y(d.totalCells);
+                const chartTop = 0;
+                const labelHeight = 12;
+                // 如果标签会超出上边界，则放在点的下方
+                if (yPos - labelHeight < chartTop) {
+                    return yPos + 15; // 放在点下方
+                } else {
+                    return yPos - 8; // 正常放在点上方
+                }
+            })
             .attr('text-anchor', 'middle')
-            .attr('font-size', '9px')
-            .attr('fill', '#333')
+            .attr('font-size', '8px') // 稍微减小字体避免拥挤
+            .attr('font-weight', '600')
+            .attr('fill', d => {
+                const yPos = y(d.totalCells);
+                const chartTop = 0;
+                const labelHeight = 12;
+                // 如果标签在点下方，使用稍暗的颜色以避免与轴标签混淆
+                return (yPos - labelHeight < chartTop) ? '#666' : '#2c5aa0';
+            })
+            .attr('stroke', 'white')
+            .attr('stroke-width', '1')
+            .attr('paint-order', 'stroke')
             .text(d => d.totalCells);
 
         // X轴

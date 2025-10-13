@@ -106,7 +106,7 @@ class LineageVis {
             modeGroup.append('label')
                 .style('font-size', '12px')
                 .style('color', '#666')
-                .text('Mouse Mode:');
+                .text('🖱️ Mouse Mode:');
 
             const modeSelect = modeGroup.append('select')
                 .attr('class', 'mouse-mode-select')
