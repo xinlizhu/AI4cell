@@ -26,7 +26,7 @@ class NeighborDetailsPanel {
             .style('font-size', '14px')
             .style('font-weight', 'bold')
             .style('color', '#333')
-            .text('Neighbor Details');
+            .text('Micro-environment Exploration View');
 
         this.list = this.container.append('div')
             .attr('class','neighbor-chart-list')

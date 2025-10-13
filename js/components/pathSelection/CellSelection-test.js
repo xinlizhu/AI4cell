@@ -61,7 +61,7 @@ class CellSelectionTest {
             .attr('class', 'cell-selection-header');
 
         header.append('h2')
-            .text('Cell Selection');
+            .text('Cell Distribution Summary');
 
         const cellList = container.append('div')
             .attr('class', 'cell-list');

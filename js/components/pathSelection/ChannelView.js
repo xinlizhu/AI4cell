@@ -44,7 +44,7 @@ export class ChannelView {
             .style('margin-bottom', '8px') // 减少底部间距
             .style('font-size', '16px') // 减小字号，更紧凑
             .style('color', '#333')
-            .text('Cell Communication Channels');
+            .text('Gene Communication View');
 
         // 创建控制台
         this.createControlPanel();

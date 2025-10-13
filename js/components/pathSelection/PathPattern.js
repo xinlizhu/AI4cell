@@ -99,7 +99,7 @@ class PathPattern {
 
     render() {
         this.container.selectAll('*').remove();
-        this.container.append('h3').attr('class', 'pattern-header').text('Path Patterns');
+        this.container.append('h3').attr('class', 'pattern-header').text('Cell Trajectory Summary');
         
         // 添加列标题
         const headerContainer = this.container.append('div')
