@@ -21,6 +21,22 @@ export class ChannelView {
         this.currentHeatmapData = null;
         this.sortByNode = null; // 排序基准节点
         
+        // 细胞类型颜色映射
+        this.cellTypeColors = {
+            'Heart': '#EF778C', // 浅红色
+            'Neural crest': '#7BC031', // 绿色
+            'Branchial arch': '#BA956A', // 棕色
+            'AGM': '#B624D9', // 紫色
+            'Liver': '#57A4E8', // 蓝色
+            'Cavity': '#B13E00', // 橙色
+            'Brain': '#F9D7BE', // 米色
+            'Connective tissue': '#1B71CE', // 深蓝色
+            'Dermomyotome': '#EE4FF9', // 粉紫色
+            'Mesenchyme': '#D3245A', // 深红色
+            'Notochord': '#EF833A', // 橙色
+            'Sclerotome': '#35586D' // 深灰色
+        };
+        
         this.init();
         this.registerEventListeners();
         this.initFloatingWindowStyles();
@@ -213,12 +229,6 @@ export class ChannelView {
                     }
                     .receptor-tag {
                         fill: #777; /* 使用中灰色代替橙色 */
-                    }
-                    .arrow-symbol {
-                        font-size: 12px; /* 放大箭头符号 */
-                        fill: #666;
-                        text-anchor: middle;
-                        font-weight: bold;
                     }
                     .control-panel {
                         background: #f8fafe; /* 更淡的背景 */
@@ -976,13 +986,16 @@ export class ChannelView {
         filteredChannels = this.sortChannelsByNode(filteredChannels, intensityMap, nodes);
 
         // 热图参数
-        const availableWidth = this.width - this.margin.left - this.margin.right - 200; // 增加预留空间给标签
-        const cellWidth = Math.min(Math.max(18, availableWidth / nodes.length), 28); // 减小单元格宽度范围
+        const availableWidth = this.width - this.margin.left - this.margin.right - 80; // 减少右侧预留空间
+        const cellWidth = Math.min(Math.max(25, availableWidth / nodes.length), 40); // 增大单元格宽度范围
         const cellHeight = 16;
-        const labelWidth = 150; // 减少标签区域宽度，让热图更靠近标签
-        const labelHeight = 60; // 减少上方空间，让热图更靠近标题
+        const labelWidth = 50; // 减少标签区域宽度，让图表更靠左
+        const violinHeight = 160; // 增大小提琴图高度
+        const violinMargin = 40; // 增大小提琴图与热图间距
+        const labelHeight = 50; // 减少上方空间
         const startX = labelWidth;
-        const startY = labelHeight;
+        const violinY = labelHeight; // 小提琴图起始Y位置
+        const startY = violinY + violinHeight + violinMargin; // 热图起始Y位置（在小提琴图下方）
         
         // 清除之前的热图
         this.receiveGroup.selectAll('.lasso-heatmap').remove();
@@ -993,7 +1006,7 @@ export class ChannelView {
         
         console.log(`renderFilteredHeatmap: Showing ${displayChannels.length} out of ${filteredChannels.length} filtered channels (limit: ${this.channelDisplayCount})`);
         
-        // 计算并更新SVG高度
+        // 计算并更新SVG高度（包含小提琴图空间）
         const heatmapHeight = startY + displayChannels.length * cellHeight + 100; // 额外空间给图例
         this.updateSVGHeight(heatmapHeight);
         
@@ -1035,25 +1048,8 @@ export class ChannelView {
             .attr('class', 'lasso-heatmap')
             .attr('transform', `translate(0, 0)`);
         
-        // 绘制节点标签（列标签）
-        const nodeDisplayNames = heatmapData.nodeDisplayNames || nodes.map(n => ({ id: n, displayName: n }));
-        heatmapGroup.selectAll('.heatmap-node-label')
-            .data(nodes)
-            .enter()
-            .append('text')
-            .attr('class', 'heatmap-node-label')
-            .attr('x', (d, i) => startX + i * cellWidth + cellWidth / 2)
-            .attr('y', startY - 25) // 增加上方空间，避免倾斜标签被截断
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '11px')
-            .attr('font-weight', 'bold')
-            .attr('fill', '#333')
-            .attr('transform', (d, i) => `rotate(-45, ${startX + i * cellWidth + cellWidth / 2}, ${startY - 25})`)
-            .text((nodeId, i) => {
-                const nodeInfo = nodeDisplayNames.find(n => n.id === nodeId);
-                const displayName = nodeInfo ? nodeInfo.displayName : nodeId;
-                return displayName.length > 7 ? displayName.substring(0, 7) + '...' : displayName;
-            });
+        // 绘制小提琴图
+        this.renderViolinPlot(heatmapGroup, nodes, intensityMap, displayChannels, startX, violinY, cellWidth, violinHeight, heatmapData.nodeDisplayNames);
         
         // 绘制通道标签（行标签）- 使用两个tag形式
         displayChannels.forEach((channelKey, i) => {
@@ -1083,17 +1079,15 @@ export class ChannelView {
                 .attr('class', 'channel-label-group')
                 .attr('transform', `translate(0, ${yPos})`); // 从左边开始布局
             
-            // 重新计算标签布局，使用固定列宽确保对齐
-            const ligandText = ligand.length > 10 ? ligand.substring(0, 9) + '...' : ligand;
-            const receptorText = receptor.length > 10 ? receptor.substring(0, 9) + '...' : receptor;
+            // 重新计算标签布局
+            const ligandText = ligand.length > 7 ? ligand.substring(0, 6) + '...' : ligand;
+            const receptorText = receptor.length > 7 ? receptor.substring(0, 6) + '...' : receptor;
             
             // 使用固定宽度确保所有标签对齐
-            const ligandWidth = 60;  // 固定配体标签宽度
-            const arrowWidth = 20;   // 固定箭头区域宽度
-            const receptorWidth = 60; // 固定受体标签宽度
+            const ligandWidth = 50;  // 减少配体标签宽度
+            const receptorWidth = 50; // 减少受体标签宽度
             
-            // 从左往右依次排列，确保对齐
-            // 配体标签（最左侧）
+            // 配体标签（左侧）
             const ligandX = 5;
             labelGroup.append('rect')
                 .attr('class', 'channel-tag-bg ligand-tag')
@@ -1115,21 +1109,8 @@ export class ChannelView {
                 .attr('font-weight', 'bold')
                 .text(ligandText);
             
-            // 箭头符号（中间）
-            const arrowX = ligandX + ligandWidth;
-            labelGroup.append('text')
-                .attr('class', 'arrow-symbol')
-                .attr('x', arrowX + arrowWidth/2)
-                .attr('y', 0)
-                .attr('dy', '0.35em')
-                .attr('text-anchor', 'middle')
-                .attr('font-size', '10px')
-                .attr('fill', '#666')
-                .attr('font-weight', 'bold')
-                .text('→');
-            
-            // 受体标签（最右侧）
-            const receptorX = arrowX + arrowWidth;
+            // 受体标签（热图右侧）
+            const receptorX = startX + nodes.length * cellWidth + 5; // 紧跟热图右边
             labelGroup.append('rect')
                 .attr('class', 'channel-tag-bg receptor-tag')
                 .attr('x', receptorX)
@@ -1194,9 +1175,10 @@ export class ChannelView {
             });
         });
         
-        // 添加颜色图例
+        // 添加颜色图例 - 始终贴在右侧，但留出标签空间
+        const legendX = this.width - this.margin.right - 60; // 距离右边界60像素，给标签留空间
         this.addHeatmapLegend(heatmapGroup, colorScale, minIntensity, maxIntensity, 
-            startX + nodes.length * cellWidth + 15, startY); // 减少图例与热图的间距
+            legendX, startY);
     }
 
     addHeatmapLegend(parentGroup, colorScale, minValue, maxValue, x, y) {
@@ -1442,5 +1424,252 @@ export class ChannelView {
             const sameTypeIndex = allPathCells.filter((p, i) => i <= index && p.label === cellType).length;
             return `${cellType}_${sameTypeIndex}`;
         }
+    }
+
+    createColoredPathDisplay(nodeDisplayNames) {
+        // 创建带颜色编码的路径显示，类似于NeighborDetails
+        const pathContainer = document.createElement('span');
+        pathContainer.style.display = 'inline-flex';
+        pathContainer.style.alignItems = 'center';
+        pathContainer.style.gap = '4px';
+        pathContainer.style.flexWrap = 'nowrap'; // 确保在同一行
+        pathContainer.style.whiteSpace = 'nowrap'; // 防止换行
+
+        nodeDisplayNames.forEach((nodeData, index) => {
+            const displayName = nodeData.displayName;
+            // 从displayName中提取基础细胞类型（去掉位置信息）
+            const cellType = displayName.replace(/\(\d+\)$/, '').replace(/_\d+_\d+$/, '').replace(/_\d+$/, '');
+            const color = this.cellTypeColors[cellType] || '#999'; // 使用预定义颜色
+            
+            // 创建颜色指示器
+            const colorIndicator = document.createElement('span');
+            colorIndicator.style.display = 'inline-block';
+            colorIndicator.style.width = '8px';
+            colorIndicator.style.height = '8px';
+            colorIndicator.style.backgroundColor = color;
+            colorIndicator.style.borderRadius = '50%';
+            colorIndicator.style.marginRight = '2px';
+            colorIndicator.style.border = '1px solid rgba(0,0,0,0.1)';
+            colorIndicator.style.flexShrink = '0'; // 防止缩小
+            
+            // 创建文本标签
+            const textLabel = document.createElement('span');
+            textLabel.textContent = cellType;
+            textLabel.style.fontSize = '10px';
+            textLabel.style.fontWeight = '500';
+            textLabel.style.whiteSpace = 'nowrap';
+            textLabel.style.flexShrink = '0'; // 防止缩小
+            
+            // 创建包装容器
+            const cellContainer = document.createElement('span');
+            cellContainer.style.display = 'inline-flex';
+            cellContainer.style.alignItems = 'center';
+            cellContainer.style.flexShrink = '0'; // 防止缩小
+            cellContainer.appendChild(colorIndicator);
+            cellContainer.appendChild(textLabel);
+            
+            pathContainer.appendChild(cellContainer);
+            
+            // 添加箭头（除了最后一个元素）
+            if (index < nodeDisplayNames.length - 1) {
+                const arrow = document.createElement('span');
+                arrow.textContent = '→';
+                arrow.style.margin = '0 3px';
+                arrow.style.color = '#666';
+                arrow.style.fontSize = '9px';
+                arrow.style.flexShrink = '0'; // 防止缩小
+                pathContainer.appendChild(arrow);
+            }
+        });
+
+        return pathContainer;
+    }
+
+    renderViolinPlot(parentGroup, nodes, intensityMap, displayChannels, startX, violinY, cellWidth, violinHeight, nodeDisplayNames) {
+        // 为每个节点收集强度数据
+        const violinData = nodes.map(nodeId => {
+            const intensities = [];
+            displayChannels.forEach(channelKey => {
+                const channelData = intensityMap.get(channelKey);
+                const intensity = (channelData && channelData.intensities) ? 
+                    (channelData.intensities[nodeId] || 0) : 0;
+                if (intensity > 0) {
+                    intensities.push(intensity);
+                }
+            });
+            
+            const nodeInfo = (nodeDisplayNames || []).find(n => n.id === nodeId);
+            const displayName = nodeInfo ? nodeInfo.displayName : nodeId;
+            
+            return {
+                nodeId: nodeId,
+                displayName: displayName,
+                intensities: intensities,
+                count: intensities.length
+            };
+        });
+
+        // 创建小提琴图组
+        const violinGroup = parentGroup.append('g')
+            .attr('class', 'violin-plot-group');
+
+        // 添加路径信息显示
+        if (nodeDisplayNames && nodeDisplayNames.length > 0) {
+            const pathInfoGroup = violinGroup.append('g')
+                .attr('class', 'violin-path-info')
+                .attr('transform', `translate(60, ${violinY - 25})`);
+
+            // 添加Path标签和路径信息在同一行
+            pathInfoGroup.append('text')
+                .style('font-size', '10px')
+                .style('color', '#64748b')
+                .style('font-weight', 'bold')
+                .text('Path: ');
+
+            // 创建包含路径的foreignObject，确保在同一行
+            const pathDisplay = this.createColoredPathDisplay(nodeDisplayNames);
+            const foreignObject = pathInfoGroup.append('foreignObject')
+                .attr('x', 30)
+                .attr('y', -10) // 调整Y位置以确保对齐
+                .attr('width', this.width - 100)
+                .attr('height', 16); // 减少高度以确保紧凑
+            
+            // 设置容器样式确保内容在同一行
+            const container = document.createElement('div');
+            container.style.display = 'flex';
+            container.style.alignItems = 'center';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.appendChild(pathDisplay);
+            
+            foreignObject.node().appendChild(container);
+        }
+
+        // 计算全局强度范围
+        const allIntensities = violinData.flatMap(d => d.intensities);
+        const globalMax = d3.max(allIntensities) || 1;
+        const globalMin = d3.min(allIntensities) || 0;
+
+        // Y轴比例尺（强度）
+        const yScale = d3.scaleLinear()
+            .domain([globalMin, globalMax])
+            .range([violinY + violinHeight - 20, violinY + 20]);
+
+        // 获取细胞类型颜色的函数
+        const getCellTypeColor = (displayName) => {
+            // 从displayName中提取细胞类型（去掉位置信息）
+            const cellType = displayName.replace(/\(\d+\)$/, ''); // 移除末尾的(1), (2)等
+            return this.cellTypeColors[cellType] || '#666'; // 默认灰色
+        };
+
+        // 为每个节点绘制小提琴
+        // 计算小提琴图专用的布局参数，不受热图限制
+        const violinPlotWidth = this.width - this.margin.left - this.margin.right - 100; // 小提琴图总宽度
+        const violinCellWidth = violinPlotWidth / nodes.length; // 每个小提琴的分配宽度
+        const violinStartX = 60; // 小提琴图起始X位置
+        
+        violinData.forEach((nodeData, i) => {
+            if (nodeData.intensities.length === 0) return;
+
+            const violinX = violinStartX + i * violinCellWidth + violinCellWidth / 2;
+            const violinWidth = Math.min(violinCellWidth * 0.8, 80); // 使用更大的小提琴宽度
+
+            // 创建密度估计
+            const bins = d3.histogram()
+                .domain(yScale.domain())
+                .thresholds(20)(nodeData.intensities);
+
+            // 计算最大密度用于归一化
+            const maxDensity = d3.max(bins, d => d.length) || 1;
+
+            // 创建小提琴形状的路径
+            const violinPath = bins.map(bin => {
+                const y = yScale((bin.x0 + bin.x1) / 2);
+                const width = (bin.length / maxDensity) * (violinWidth / 2);
+                return { y: y, width: width };
+            });
+
+            // 绘制小提琴轮廓（左半边）
+            const leftPath = violinPath.map((d, idx) => 
+                `${idx === 0 ? 'M' : 'L'}${violinX - d.width},${d.y}`
+            ).join(' ');
+
+            // 绘制小提琴轮廓（右半边，反向）
+            const rightPath = violinPath.slice().reverse().map((d, idx) => 
+                `L${violinX + d.width},${d.y}`
+            ).join(' ');
+
+            // 完整路径
+            const fullPath = leftPath + rightPath + 'Z';
+
+            // 绘制小提琴形状
+            const cellColor = getCellTypeColor(nodeData.displayName);
+            violinGroup.append('path')
+                .attr('d', fullPath)
+                .attr('fill', cellColor)
+                .attr('fill-opacity', 0.6)
+                .attr('stroke', cellColor)
+                .attr('stroke-width', 1);
+
+            // 绘制中位数线
+            const median = d3.median(nodeData.intensities);
+            if (median !== undefined) {
+                violinGroup.append('line')
+                    .attr('x1', violinX - violinWidth/4)
+                    .attr('x2', violinX + violinWidth/4)
+                    .attr('y1', yScale(median))
+                    .attr('y2', yScale(median))
+                    .attr('stroke', '#333')
+                    .attr('stroke-width', 2);
+            }
+
+            // 绘制四分位数箱线图
+            const q1 = d3.quantile(nodeData.intensities.sort(d3.ascending), 0.25);
+            const q3 = d3.quantile(nodeData.intensities.sort(d3.ascending), 0.75);
+            
+            if (q1 !== undefined && q3 !== undefined) {
+                violinGroup.append('rect')
+                    .attr('x', violinX - 2)
+                    .attr('y', yScale(q3))
+                    .attr('width', 4)
+                    .attr('height', yScale(q1) - yScale(q3))
+                    .attr('fill', 'white')
+                    .attr('stroke', '#333')
+                    .attr('stroke-width', 1);
+            }
+
+            // 小提琴图不显示标签，只在热图上方显示
+            // 节点标签和通道数量标签都被移除
+        });
+
+        // 添加Y轴
+        const yAxis = d3.axisLeft(yScale)
+            .ticks(5)
+            .tickFormat(d => d.toFixed(1));
+
+        violinGroup.append('g')
+            .attr('transform', `translate(${violinStartX - 8}, 0)`) // 使用小提琴图的起始位置
+            .call(yAxis)
+            .selectAll('text')
+            .style('font-size', '8px');
+
+        // 添加Y轴标签
+        violinGroup.append('text')
+            .attr('transform', `translate(${violinStartX - 25}, ${violinY + violinHeight/2}) rotate(-90)`) // 调整位置
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '10px')
+            .attr('font-weight', '600')
+            .attr('fill', '#333')
+            .text('Intensity (×10⁻⁴)');
+
+        // 添加标题
+        violinGroup.append('text')
+            .attr('x', violinStartX + (nodes.length * violinCellWidth) / 2) // 使用小提琴图的中心位置
+            .attr('y', violinY - 5)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '12px')
+            .attr('font-weight', '600')
+            .attr('fill', '#2c3e50')
+            .text('Channel Intensity Distribution');
     }
 }

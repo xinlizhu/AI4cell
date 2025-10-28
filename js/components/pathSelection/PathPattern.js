@@ -410,7 +410,7 @@ class PatternTreeVisualization {
         this.colors = colors;
         this.selectedBranches = new Set();
         this.width = 370;
-        this.height = 340;
+        this.height = 400;
         
         this.init();
     }
@@ -438,11 +438,11 @@ class PatternTreeVisualization {
         
         // 适应较小尺寸的布局
         const treeLayout = d3.tree()
-            .nodeSize([60, 150]) // 更紧凑的节点间距
+            .nodeSize([80, 150]) // 增加垂直间距以适应文字在下方的布局
             .separation((a, b) => {
                 const aNameLength = a.data.name ? a.data.name.length : 0;
                 const bNameLength = b.data.name ? b.data.name.length : 0;
-                const baseSpacing = a.parent === b.parent ? 1.2 : 1.8;
+                const baseSpacing = a.parent === b.parent ? 1.5 : 2.0; // 增加基础间距
                 const lengthFactor = Math.max(aNameLength, bNameLength) / 15;
                 return baseSpacing + lengthFactor;
             });
@@ -548,23 +548,23 @@ class PatternTreeVisualization {
                 const source = d.source;
                 const target = d.target;
                 
-                // 节点布局：展开按钮(-35) -> 圆圈(-20) -> 文字(-10及以后)
-                // 我们需要让连接线从右侧连接到左侧，避开所有元素
+                // 节点布局更新：展开按钮(-35) -> 圆圈(0) -> 文字(下方+15)
+                // 连接线从源节点圆圈右侧连接到目标节点展开按钮左侧
                 
-                // 计算文字长度来确定右边界
+                // 计算文字长度来确定边界（现在文字在下方，不影响水平连接）
                 const sourceTextLength = (source.data.name || '').length;
                 const targetTextLength = (target.data.name || '').length;
                 
-                // 源节点右边界：文字结束位置 + 安全距离
-                const sourceRightBound = Math.max(sourceTextLength * 5, 40) + 10;
+                // 源节点右边界：圆圈右侧 + 安全距离
+                const sourceRightBound = 15; // 圆圈半径6 + 安全距离
                 // 目标节点左边界：展开按钮位置 - 安全距离  
                 const targetLeftBound = -45;
                 
-                // 连接线起点：源节点右侧
+                // 连接线起点：源节点圆圈右侧
                 const sourceX = source.x;
                 const sourceY = source.y + sourceRightBound;
                 
-                // 连接线终点：目标节点左侧
+                // 连接线终点：目标节点展开按钮左侧
                 const targetX = target.x; 
                 const targetY = target.y + targetLeftBound;
                 
@@ -597,7 +597,7 @@ class PatternTreeVisualization {
         // 节点小圆圈
         nodeGroups.append('circle')
             .attr('class', 'node-circle')
-            .attr('cx', -20) // 圆圈在文字左侧更远的位置
+            .attr('cx', 0) // 圆圈居中
             .attr('cy', 0)
             .attr('r', 6)
             .style('fill', d => {
@@ -610,10 +610,11 @@ class PatternTreeVisualization {
             
         // 节点文本
         nodeGroups.append('text')
-            .attr('x', -10) // 文字在圆圈右侧
-            .attr('text-anchor', 'start') // 文字左对齐
+            .attr('x', 0) // 文字居中对齐圆圈
+            .attr('y', 15) // 文字放在圆圈下方
+            .attr('text-anchor', 'middle') // 文字居中对齐
             .attr('dy', '0.35em')
-            .style('font-size', '10px')
+            .style('font-size', '12px') // 从10px增加到12px
             .style('font-weight', 'bold')
             .style('fill', '#333')
             .style('text-shadow', 'none')
@@ -659,7 +660,7 @@ class PatternTreeVisualization {
             .attr('y', 0)
             .attr('text-anchor', 'middle')
             .attr('dy', '0.35em')
-            .style('font-size', '10px')
+            .style('font-size', '12px') // 从10px增加到12px
             .style('font-weight', 'bold')
             .style('pointer-events', 'none')
             .style('fill', '#666')
@@ -853,11 +854,11 @@ class PatternTreeVisualization {
         
         // 不要重新调用 render()，而是重新计算布局并更新现有树
         const treeLayout = d3.tree()
-            .nodeSize([60, 150])
+            .nodeSize([80, 150]) // 增加垂直间距以适应文字在下方的布局
             .separation((a, b) => {
                 const aNameLength = a.data.name ? a.data.name.length : 0;
                 const bNameLength = b.data.name ? b.data.name.length : 0;
-                const baseSpacing = a.parent === b.parent ? 1.2 : 1.8;
+                const baseSpacing = a.parent === b.parent ? 1.5 : 2.0; // 增加基础间距
                 const lengthFactor = Math.max(aNameLength, bNameLength) / 15;
                 return baseSpacing + lengthFactor;
             });

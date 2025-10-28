@@ -5,6 +5,24 @@ class NeighborDetailsPanel {
         this.container = d3.select(containerId);
         this.list = null;
         this.chartCount = 0;
+        
+        // 颜色映射：与OverallCommChart保持一致
+        this.typeColorMap = {
+            'Heart': '#EF778C', // 浅红色
+            'Neural crest': '#7BC031', // 绿色
+            'Branchial arch': '#BA956A', // 棕色
+            'AGM': '#B624D9', // 紫色
+            'Liver': '#57A4E8', // 蓝色
+            'Cavity': '#B13E00', // 橙色
+            'Brain': '#F9D7BE', // 米色
+            'Connective tissue': '#1B71CE', // 深蓝色
+            'Dermomyotome': '#EE4FF9', // 粉紫色
+            'Mesenchyme': '#D3245A', // 深红色
+            'Notochord': '#EF833A', // 橙色
+            'Sclerotome': '#35586D' // 深灰色
+        };
+        this.scheme = d3.schemeCategory10;
+        
         this.init();
     }
 
@@ -73,6 +91,73 @@ class NeighborDetailsPanel {
                     .text('No data available');
             } catch(_) {}
         });
+    }
+
+    getColorForCellType(cellType) {
+        // 获取细胞类型的颜色
+        if (this.typeColorMap[cellType]) {
+            return this.typeColorMap[cellType];
+        }
+        // 如果没有预定义颜色，使用哈希算法生成
+        let hash = 0;
+        const s = String(cellType);
+        for (let i = 0; i < s.length; i++) {
+            hash = ((hash << 5) - hash) + s.charCodeAt(i);
+            hash |= 0;
+        }
+        const idx = Math.abs(hash) % this.scheme.length;
+        return this.scheme[idx];
+    }
+
+    createColoredPathDisplay(descriptors) {
+        // 创建带颜色编码的路径显示
+        const pathContainer = document.createElement('span');
+        pathContainer.style.display = 'inline-flex';
+        pathContainer.style.alignItems = 'center';
+        pathContainer.style.gap = '4px';
+        pathContainer.style.flexWrap = 'wrap';
+
+        descriptors.forEach((descriptor, index) => {
+            const cellType = descriptor.label;
+            const color = this.getColorForCellType(cellType);
+            
+            // 创建颜色指示器
+            const colorIndicator = document.createElement('span');
+            colorIndicator.style.display = 'inline-block';
+            colorIndicator.style.width = '8px';
+            colorIndicator.style.height = '8px';
+            colorIndicator.style.backgroundColor = color;
+            colorIndicator.style.borderRadius = '50%';
+            colorIndicator.style.marginRight = '2px';
+            colorIndicator.style.border = '1px solid rgba(0,0,0,0.1)';
+            
+            // 创建文本标签
+            const textLabel = document.createElement('span');
+            textLabel.textContent = cellType;
+            textLabel.style.fontSize = '10px';
+            textLabel.style.fontWeight = '500';
+            
+            // 创建包装容器
+            const cellContainer = document.createElement('span');
+            cellContainer.style.display = 'inline-flex';
+            cellContainer.style.alignItems = 'center';
+            cellContainer.appendChild(colorIndicator);
+            cellContainer.appendChild(textLabel);
+            
+            pathContainer.appendChild(cellContainer);
+            
+            // 添加箭头（除了最后一个元素）
+            if (index < descriptors.length - 1) {
+                const arrow = document.createElement('span');
+                arrow.textContent = '→';
+                arrow.style.margin = '0 3px';
+                arrow.style.color = '#666';
+                arrow.style.fontSize = '9px';
+                pathContainer.appendChild(arrow);
+            }
+        });
+
+        return pathContainer;
     }
 
     summarizePath(descriptors) {
@@ -144,10 +229,22 @@ class NeighborDetailsPanel {
             .style('display','flex')
             .style('gap','12px')
             .style('font-size','10px')
-            .style('color','#64748b');
+            .style('color','#64748b')
+            .style('align-items','center');
             
-        detailsRow.append('span')
-            .html(`<strong>Path:</strong> ${pathSummary}`);
+        // 路径显示部分 - 使用带颜色编码的显示
+        const pathSection = detailsRow.append('div')
+            .style('display','flex')
+            .style('align-items','center')
+            .style('gap','4px');
+            
+        pathSection.append('span')
+            .html('<strong>Path:</strong>')
+            .style('margin-right','4px');
+            
+        // 添加带颜色编码的路径
+        const coloredPath = this.createColoredPathDisplay(descriptors);
+        pathSection.node().appendChild(coloredPath);
             
         detailsRow.append('span')
             .html(`<strong>Nodes:</strong> ${nodeCount}`);

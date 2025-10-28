@@ -15,7 +15,7 @@ async function computeThreeChartSeries(pathCellsOrDescriptors, neighborCells, me
         switch (mode) {
             case '通道数':
                 return { send: (+row['发送通道数'] || 0), recv: (+row['接收通道数'] || 0) };
-            case '平均通道数':
+            case '平均通道数':Nodes:
                 return { send: (+row['平均发送通道数'] || 0), recv: (+row['平均接收通道数'] || 0) };
             case '平均通道强度':
                 return { send: (+row['发送平均强度'] || 0), recv: (+row['接收平均强度'] || 0) };
@@ -370,9 +370,11 @@ export class OverallCommChart {
         const g = svg.append('g')
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
 
-        const x = d3.scaleLinear()
-            .domain([0, Math.max(1, positions.length - 1)])
-            .range([0, this.width]);
+        // 使用 band scale 用于柱状图
+        const x = d3.scaleBand()
+            .domain(positions.map(d => d.index))
+            .range([0, this.width])
+            .padding(0.2); // 柱子之间的间距
 
         // 计算最大值
         const maxTotal = d3.max(positions, p => d3.sum(keys, k => +p[k] || 0)) || 1;
@@ -384,13 +386,6 @@ export class OverallCommChart {
         const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
         const series = stack(positions);
 
-        // 面积生成器
-        const area = d3.area()
-            .x(d => x(d.data.index))
-            .y0(d => y(d[0]))
-            .y1(d => y(d[1]))
-            .curve(d3.curveMonotoneX);
-
         // 颜色函数
         const colorFor = (key) => {
             const base = (key || '').split('_')[0];
@@ -401,23 +396,28 @@ export class OverallCommChart {
             return this.scheme[idx];
         };
 
-        // 绘制堆叠面积图
+        // 绘制堆叠柱状图
         g.selectAll('.stack-layer')
             .data(series)
             .enter()
-            .append('path')
+            .append('g')
             .attr('class', 'stack-layer')
-            .attr('d', area)
             .attr('fill', s => colorFor(s.key))
-            .attr('fill-opacity', 0.8)
+            .selectAll('rect')
+            .data(d => d)
+            .enter()
+            .append('rect')
+            .attr('x', d => x(d.data.index))
+            .attr('y', d => y(d[1]))
+            .attr('height', d => y(d[0]) - y(d[1]))
+            .attr('width', x.bandwidth())
             .attr('stroke', 'white')
             .attr('stroke-width', 0.5);
 
         // X轴
         const xAxis = d3.axisBottom(x)
-            .tickValues(positions.map(d => d.index))
             .tickFormat(i => {
-                const idx = Math.round(i);
+                const idx = +i;
                 if (positions[idx]) {
                     const label = positions[idx].label;
                     return label.length > 7 ? label.substring(0, 7) + '...' : label;
@@ -447,14 +447,12 @@ export class OverallCommChart {
             .style('font-size', '11px')
           : tooltip;
 
-        // 悬浮交互
+        // 悬浮交互 - 修改为适配柱状图
         g.selectAll('.stack-layer')
-            .on('mousemove', (event, layer) => {
-                const [mx] = d3.pointer(event, g.node());
-                const i = Math.round(x.invert(mx));
-                const idx = Math.max(0, Math.min(positions.length - 1, i));
-                const d = positions[idx];
-                const val = +d[layer.key] || 0;
+            .selectAll('rect')
+            .on('mouseover', (event, d) => {
+                const layer = d3.select(event.target.parentNode).datum();
+                const val = +d.data[layer.key] || 0;
                 tip.style('opacity', 1)
                     .style('left', (event.pageX + 10) + 'px')
                     .style('top', (event.pageY - 24) + 'px')

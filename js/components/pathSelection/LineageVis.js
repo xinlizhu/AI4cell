@@ -61,6 +61,8 @@ class LineageVis {
                 wrap.append('div')
                     .attr('class','chart-title')
                     .style('margin-bottom','0px') // 减少标题与图表间距
+                    .style('font-size','30px') // 增大字体
+                    .style('font-weight','600')
                     .text(type);
                 const id = `branch-root-added-${this.treeSessionId}-${Date.now()}-${idxAdd++}`;
                 wrap.append('div').attr('id', id).classed('lc-host', true);
@@ -358,6 +360,7 @@ class LineageVis {
                 wrap.append('div')
                     .attr('class','chart-title')
                     .style('margin-bottom','0px') // 减少标题与图表间距
+                    .style('font-size','30px') // 增大字体
                     .style('font-weight','600')
                     .text(`${type}`);
                 const id = `branch-root-${this.treeSessionId}-${idx}`;
@@ -450,6 +453,7 @@ class LineageVis {
                 wrap.append('div')
                     .attr('class', 'chart-title')
                     .style('margin-bottom', '0px') // 减少标题与图表间距
+                    .style('font-size','30px') // 增大字体
                     .style('font-weight', '600')
                     .text(`${type}`);
                 const id = `branch-main-${this.treeSessionId}-${i}`;
@@ -501,6 +505,8 @@ class LineageVis {
                     wrap.append('div')
                         .attr('class', 'chart-title')
                         .style('margin-bottom', '0px') // 减少标题与图表间距
+                        .style('font-size','30px') // 增大字体
+                        .style('font-weight','600')
                         .text(`${type}`);
                     const id = `branch-fork-${this.treeSessionId}-${i}-${Math.floor(Math.random()*1e6)}`;
                         wrap.append('div').attr('id', id).classed('lc-host', true);
@@ -605,10 +611,9 @@ class LineageVis {
                 if (!parent) return;
                 const src = centerRight(parent);
                 const dst = centerLeft(node);
-                const isFork = node.getAttribute('data-main') === '0';
                 const childKey = node.getAttribute('data-key');
                 const parentKey = parent.getAttribute('data-key');
-                const pathSel = this.drawConnector(g, src, dst, isFork);
+                const pathSel = this.drawConnector(g, src, dst);
                 pathSel.attr('data-child-key', childKey || '')
                        .attr('data-parent-key', parentKey || '')
                        .attr('data-role','visible');
@@ -776,16 +781,66 @@ class LineageVis {
         requestAnimationFrame(()=>this.updateConnectors());
     }
 
-    drawConnector(g, src, dst, dashed) {
-        const mx = (src.x + dst.x) / 2;
+    drawConnector(g, src, dst) {
+        // 计算直角弧线路径
+        const dx = dst.x - src.x;
+        const dy = dst.y - src.y;
+        
+        // 弧线半径，可以根据距离调整
+        const radius = Math.min(Math.abs(dx) * 0.3, Math.abs(dy) * 0.3, 30);
+        
+        // 中间点的 x 坐标（水平线到垂直线的转折点）
+        const midX = src.x + dx * 0.7; // 70% 处转折
+        
+        let pathData;
+        
+        if (dy > 0) {
+            // 向下的连接
+            if (dx > 0) {
+                // 向右下：水平线 → 向下弧 → 垂直线
+                pathData = `M${src.x},${src.y} 
+                           L${midX - radius},${src.y} 
+                           Q${midX},${src.y} ${midX},${src.y + radius}
+                           L${midX},${dst.y - radius}
+                           Q${midX},${dst.y} ${midX + radius},${dst.y}
+                           L${dst.x},${dst.y}`;
+            } else {
+                // 向左下：水平线 → 向下弧 → 垂直线
+                pathData = `M${src.x},${src.y} 
+                           L${midX + radius},${src.y} 
+                           Q${midX},${src.y} ${midX},${src.y + radius}
+                           L${midX},${dst.y - radius}
+                           Q${midX},${dst.y} ${midX - radius},${dst.y}
+                           L${dst.x},${dst.y}`;
+            }
+        } else {
+            // 向上的连接
+            if (dx > 0) {
+                // 向右上：水平线 → 向上弧 → 垂直线
+                pathData = `M${src.x},${src.y} 
+                           L${midX - radius},${src.y} 
+                           Q${midX},${src.y} ${midX},${src.y - radius}
+                           L${midX},${dst.y + radius}
+                           Q${midX},${dst.y} ${midX + radius},${dst.y}
+                           L${dst.x},${dst.y}`;
+            } else {
+                // 向左上：水平线 → 向上弧 → 垂直线
+                pathData = `M${src.x},${src.y} 
+                           L${midX + radius},${src.y} 
+                           Q${midX},${src.y} ${midX},${src.y - radius}
+                           L${midX},${dst.y + radius}
+                           Q${midX},${dst.y} ${midX - radius},${dst.y}
+                           L${dst.x},${dst.y}`;
+            }
+        }
+        
         return g.append('path')
             .attr('class', 'lv-connector')
-            .attr('d', `M${src.x},${src.y} C${mx},${src.y} ${mx},${dst.y} ${dst.x},${dst.y}`)
+            .attr('d', pathData)
             .attr('fill', 'none')
             .attr('stroke', '#999')
             .attr('stroke-width', 1.5)
             .attr('marker-end', 'url(#lv-arrow)')
-            .attr('stroke-dasharray', dashed ? '4,3' : null)
             .style('cursor','pointer')
             .style('pointer-events','stroke');
     }
