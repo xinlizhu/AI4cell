@@ -1427,13 +1427,15 @@ export class ChannelView {
     }
 
     createColoredPathDisplay(nodeDisplayNames) {
-        // 创建带颜色编码的路径显示，类似于NeighborDetails
+        // 创建带颜色编码的路径显示，支持自动换行
         const pathContainer = document.createElement('span');
         pathContainer.style.display = 'inline-flex';
-        pathContainer.style.alignItems = 'center';
+        pathContainer.style.alignItems = 'flex-start'; // 顶部对齐，支持多行
         pathContainer.style.gap = '4px';
-        pathContainer.style.flexWrap = 'nowrap'; // 确保在同一行
-        pathContainer.style.whiteSpace = 'nowrap'; // 防止换行
+        pathContainer.style.flexWrap = 'wrap'; // 允许换行
+        pathContainer.style.whiteSpace = 'normal'; // 允许换行
+        pathContainer.style.maxWidth = '100%'; // 限制最大宽度
+        pathContainer.style.lineHeight = '1.3'; // 设置行高
 
         nodeDisplayNames.forEach((nodeData, index) => {
             const displayName = nodeData.displayName;
@@ -1465,6 +1467,7 @@ export class ChannelView {
             cellContainer.style.display = 'inline-flex';
             cellContainer.style.alignItems = 'center';
             cellContainer.style.flexShrink = '0'; // 防止缩小
+            cellContainer.style.marginBottom = '2px'; // 行间距
             cellContainer.appendChild(colorIndicator);
             cellContainer.appendChild(textLabel);
             
@@ -1478,6 +1481,7 @@ export class ChannelView {
                 arrow.style.color = '#666';
                 arrow.style.fontSize = '9px';
                 arrow.style.flexShrink = '0'; // 防止缩小
+                arrow.style.marginBottom = '2px'; // 行间距
                 pathContainer.appendChild(arrow);
             }
         });
@@ -1517,29 +1521,32 @@ export class ChannelView {
         if (nodeDisplayNames && nodeDisplayNames.length > 0) {
             const pathInfoGroup = violinGroup.append('g')
                 .attr('class', 'violin-path-info')
-                .attr('transform', `translate(60, ${violinY - 25})`);
+                .attr('transform', `translate(20, ${violinY - 35})`); // 更靠左，增加上方空间
 
-            // 添加Path标签和路径信息在同一行
+            // 添加Path标签
             pathInfoGroup.append('text')
+                .attr('x', 0)
+                .attr('y', 0)
                 .style('font-size', '10px')
-                .style('color', '#64748b')
+                .style('fill', '#64748b')
                 .style('font-weight', 'bold')
                 .text('Path: ');
 
-            // 创建包含路径的foreignObject，确保在同一行
+            // 创建包含路径的foreignObject，支持换行
             const pathDisplay = this.createColoredPathDisplay(nodeDisplayNames);
             const foreignObject = pathInfoGroup.append('foreignObject')
                 .attr('x', 30)
-                .attr('y', -10) // 调整Y位置以确保对齐
-                .attr('width', this.width - 100)
-                .attr('height', 16); // 减少高度以确保紧凑
+                .attr('y', -8) // 调整Y位置对齐文字
+                .attr('width', this.width - 80) // 增加可用宽度
+                .attr('height', 30); // 增加高度支持两行
             
-            // 设置容器样式确保内容在同一行
+            // 设置容器样式支持换行
             const container = document.createElement('div');
             container.style.display = 'flex';
-            container.style.alignItems = 'center';
+            container.style.alignItems = 'flex-start'; // 顶部对齐
             container.style.height = '100%';
-            container.style.overflow = 'hidden';
+            container.style.overflow = 'visible'; // 允许内容可见
+            container.style.lineHeight = '1.2'; // 设置行高
             container.appendChild(pathDisplay);
             
             foreignObject.node().appendChild(container);
@@ -1564,9 +1571,9 @@ export class ChannelView {
 
         // 为每个节点绘制小提琴
         // 计算小提琴图专用的布局参数，不受热图限制
-        const violinPlotWidth = this.width - this.margin.left - this.margin.right - 100; // 小提琴图总宽度
+        const violinPlotWidth = this.width - this.margin.left - this.margin.right - 120; // 减少总宽度为Y轴标签留空间
         const violinCellWidth = violinPlotWidth / nodes.length; // 每个小提琴的分配宽度
-        const violinStartX = 60; // 小提琴图起始X位置
+        const violinStartX = 80; // 增加起始X位置，为Y轴标签留出更多空间
         
         violinData.forEach((nodeData, i) => {
             if (nodeData.intensities.length === 0) return;
@@ -1653,9 +1660,9 @@ export class ChannelView {
             .selectAll('text')
             .style('font-size', '8px');
 
-        // 添加Y轴标签
+        // 添加Y轴标签 - 增加左侧距离避免遮挡
         violinGroup.append('text')
-            .attr('transform', `translate(${violinStartX - 25}, ${violinY + violinHeight/2}) rotate(-90)`) // 调整位置
+            .attr('transform', `translate(${violinStartX - 45}, ${violinY + violinHeight/2}) rotate(-90)`) // 从-25增加到-45
             .attr('text-anchor', 'middle')
             .attr('font-size', '10px')
             .attr('font-weight', '600')

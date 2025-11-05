@@ -716,23 +716,8 @@ class PatternTreeVisualization {
     
     updateNodeSelection() {
         this.g.selectAll('.tree-node .node-circle')
-            .style('stroke-width', d => {
-                return this.selectedBranches.has(d.data.id) ? 3 : 2;
-            })
-            .style('stroke', d => {
-                return this.selectedBranches.has(d.data.id) ? '#ff6b6b' : 'white';
-            })
             .style('r', d => {
-                return this.selectedBranches.has(d.data.id) ? 8 : 6; // 选中时圆圈略大
-            });
-        
-        // 同时更新文字样式
-        this.g.selectAll('.tree-node text')
-            .style('font-weight', d => {
-                return this.selectedBranches.has(d.data.id) ? 'bold' : 'bold';
-            })
-            .style('fill', d => {
-                return this.selectedBranches.has(d.data.id) ? '#ff6b6b' : '#333';
+                return this.selectedBranches.has(d.data.id) ? 10 : 6; // 选中时圆圈变大
             });
     }
     
