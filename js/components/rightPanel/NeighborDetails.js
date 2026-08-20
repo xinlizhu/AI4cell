@@ -12,10 +12,10 @@ class NeighborDetailsPanel {
             'Neural crest': '#7BC031', // 绿色
             'Branchial arch': '#BA956A', // 棕色
             'AGM': '#B624D9', // 紫色
-            'Liver': '#57A4E8', // 蓝色
+            'Liver': '#D4A017', // 金黄色，和路径选中蓝色区分
             'Cavity': '#B13E00', // 橙色
             'Brain': '#F9D7BE', // 米色
-            'Connective tissue': '#1B71CE', // 深蓝色
+            'Connective tissue': '#008C95', // 青绿色，和路径选中蓝色区分
             'Dermomyotome': '#EE4FF9', // 粉紫色
             'Mesenchyme': '#D3245A', // 深红色
             'Notochord': '#EF833A', // 橙色
@@ -35,16 +35,6 @@ class NeighborDetailsPanel {
             .style('min-height','345px')
             .style('max-height','345px')
             .style('height','345px');
-
-        // 添加标题
-        this.container.append('h3')
-            .attr('class', 'neighbor-header')
-            .style('margin', '0 0 0px 0')
-            .style('padding', '0px 0px')
-            .style('font-size', '14px')
-            .style('font-weight', 'bold')
-            .style('color', '#333')
-            .text('🔬 Micro-environment Exploration View');
 
         this.list = this.container.append('div')
             .attr('class','neighbor-chart-list')

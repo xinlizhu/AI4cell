@@ -27,10 +27,10 @@ export class ChannelView {
             'Neural crest': '#7BC031', // 绿色
             'Branchial arch': '#BA956A', // 棕色
             'AGM': '#B624D9', // 紫色
-            'Liver': '#57A4E8', // 蓝色
+            'Liver': '#D4A017', // 金黄色，和路径选中蓝色区分
             'Cavity': '#B13E00', // 橙色
             'Brain': '#F9D7BE', // 米色
-            'Connective tissue': '#1B71CE', // 深蓝色
+            'Connective tissue': '#008C95', // 青绿色，和路径选中蓝色区分
             'Dermomyotome': '#EE4FF9', // 粉紫色
             'Mesenchyme': '#D3245A', // 深红色
             'Notochord': '#EF833A', // 橙色
@@ -1088,7 +1088,7 @@ export class ChannelView {
             const receptorWidth = 50; // 减少受体标签宽度
             
             // 配体标签（左侧）
-            const ligandX = 5;
+            const ligandX = 0; // 标签右边缘与热图起点对齐，避免被单元格覆盖
             labelGroup.append('rect')
                 .attr('class', 'channel-tag-bg ligand-tag')
                 .attr('x', ligandX)
@@ -1658,13 +1658,15 @@ export class ChannelView {
             .attr('transform', `translate(${violinStartX - 8}, 0)`) // 使用小提琴图的起始位置
             .call(yAxis)
             .selectAll('text')
-            .style('font-size', '8px');
+            .style('font-size', '11px')
+            .style('font-weight', '500')
+            .style('fill', '#333');
 
         // 添加Y轴标签 - 增加左侧距离避免遮挡
         violinGroup.append('text')
             .attr('transform', `translate(${violinStartX - 45}, ${violinY + violinHeight/2}) rotate(-90)`) // 从-25增加到-45
             .attr('text-anchor', 'middle')
-            .attr('font-size', '10px')
+            .attr('font-size', '12px')
             .attr('font-weight', '600')
             .attr('fill', '#333')
             .text('Intensity (×10⁻⁴)');

@@ -13,6 +13,13 @@ class LineageVis {
         this.renderedForkKeys = new Set();
         this.nodePathMap = {};
         this.currentPreviewKey = null;
+        // 只有在 Lineage View 内点击 connector 后才产生高亮路线。
+        this.activeConnectorKeys = new Set();
+        this.connectorColors = {
+            base: '#aeb7c0',
+            preview: '#5d9dcc',
+            selected: '#2f80ed'
+        };
         // 预览锁定（点击切换）
         this.previewLocked = false;
         this.lockedPreviewKey = null;
@@ -200,6 +207,13 @@ class LineageVis {
             const depthLimit = event.detail.depthLimit; // 选到哪就展示到哪
             
             if (!selectedPathData || selectedPathData.length === 0) return;
+            // Summary selection controls which branches are available, but it is
+            // not a path selection in the trajectory view. Connector highlighting
+            // is driven only by interactions inside this view.
+            this.activeConnectorKeys.clear();
+            this.previewLocked = false;
+            this.lockedPreviewKey = null;
+            this.clearPreviewPath();
             // 合并：多次在 PathView 里点分支，会产生新的路径集合；需要把新的累加进来而不是覆盖
             const mergePaths = (oldArr, newArr) => {
                 const map = new Map();
@@ -277,14 +291,41 @@ class LineageVis {
         defs.append('marker')
             .attr('id', 'lv-arrow')
             .attr('viewBox', '0 0 8 8')
+            // Anchor the marker at its tip so the final path tangent keeps the
+            // parent-to-child direction, including for branch connectors.
             .attr('refX', 8)
             .attr('refY', 4)
-            .attr('markerWidth', 4.5)
-            .attr('markerHeight', 4.5)
-            .attr('orient', 'auto-start-reverse')
+            .attr('markerWidth', 8)
+            .attr('markerHeight', 8)
+            .attr('markerUnits', 'userSpaceOnUse')
+            .attr('orient', 'auto')
             .append('path')
             .attr('d', 'M 0 0 L 8 4 L 0 8 z')
-            .attr('fill', '#aeb7c0');
+            .attr('fill', this.connectorColors.base);
+        defs.append('marker')
+            .attr('id', 'lv-arrow-selected')
+            .attr('viewBox', '0 0 8 8')
+            .attr('refX', 8)
+            .attr('refY', 4)
+            .attr('markerWidth', 8)
+            .attr('markerHeight', 8)
+            .attr('markerUnits', 'userSpaceOnUse')
+            .attr('orient', 'auto')
+            .append('path')
+            .attr('d', 'M 0 0 L 8 4 L 0 8 z')
+            .attr('fill', this.connectorColors.selected);
+        defs.append('marker')
+            .attr('id', 'lv-arrow-preview')
+            .attr('viewBox', '0 0 8 8')
+            .attr('refX', 8)
+            .attr('refY', 4)
+            .attr('markerWidth', 8)
+            .attr('markerHeight', 8)
+            .attr('markerUnits', 'userSpaceOnUse')
+            .attr('orient', 'auto')
+            .append('path')
+            .attr('d', 'M 0 0 L 8 4 L 0 8 z')
+            .attr('fill', this.connectorColors.preview);
 
         this.branchLayout = {
             root: chartsRow,
@@ -623,29 +664,26 @@ class LineageVis {
             });
         });
 
+            this.updateConnectorSelection();
+
         g.selectAll('path.lv-connector, path.lv-connector-hit').on('.preview', null);
         g.selectAll('path.lv-connector-hit')
             .on('mouseover.preview', (event) => {
                 if (this.previewLocked) return; // 锁定时不响应悬停预览切换
                 const childKey = event.currentTarget.getAttribute('data-child-key');
-                g.selectAll('path.lv-connector').filter(function(){
-                    return this.getAttribute('data-child-key') === childKey;
-                }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
+                this.styleConnectorsForKeys(this.getConnectorPrefixKeys(childKey), 'preview');
                 if (childKey) this.previewPathByChildKey(childKey);
             })
             .on('mouseout.preview', (event) => {
                 const childKey = event.currentTarget.getAttribute('data-child-key');
+                const prefixKeys = this.getConnectorPrefixKeys(childKey);
                 // 若已锁定并且是锁定的路径，则保持高亮与预览
                 if (this.previewLocked && this.lockedPreviewKey === childKey) {
-                    g.selectAll('path.lv-connector').filter(function(){
-                        return this.getAttribute('data-child-key') === childKey;
-                    }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
+                    this.styleConnectorsForKeys(prefixKeys, 'preview');
                     return;
                 }
                 // 恢复该条的默认样式
-                g.selectAll('path.lv-connector').filter(function(){
-                    return this.getAttribute('data-child-key') === childKey;
-                    }).attr('stroke', '#aeb7c0').attr('stroke-width', 1.2);
+                this.styleConnectorsForKeys(prefixKeys);
                 // 未锁定时才清理预览
                 if (!this.previewLocked) this.clearPreviewPath();
             })
@@ -657,9 +695,7 @@ class LineageVis {
                     this.previewLocked = true;
                     this.lockedPreviewKey = childKey;
                     this.previewPathByChildKey(childKey);
-                    g.selectAll('path.lv-connector').filter(function(){
-                        return this.getAttribute('data-child-key') === childKey;
-                    }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
+                    this.styleConnectorsForKeys(this.getConnectorPrefixKeys(childKey), 'preview');
                 } else {
                     if (this.lockedPreviewKey === childKey) {
                         // 解锁
@@ -667,33 +703,25 @@ class LineageVis {
                         this.lockedPreviewKey = null;
                         this.clearPreviewPath();
                         // 恢复样式
-                        g.selectAll('path.lv-connector').filter(function(){
-                            return this.getAttribute('data-child-key') === childKey;
-                        }).attr('stroke', '#aeb7c0').attr('stroke-width', 1.2);
+                        this.styleConnectorsForKeys(this.getConnectorPrefixKeys(childKey));
                     } else {
                         // 切换锁定到另一条
                         const prevKey = this.lockedPreviewKey;
                         this.lockedPreviewKey = childKey;
                         if (prevKey) {
-                            g.selectAll('path.lv-connector').filter(function(){
-                                return this.getAttribute('data-child-key') === prevKey;
-                            }).attr('stroke', '#aeb7c0').attr('stroke-width', 1.2);
+                            this.styleConnectorsForKeys(this.getConnectorPrefixKeys(prevKey));
                         }
                         this.previewPathByChildKey(childKey);
-                        g.selectAll('path.lv-connector').filter(function(){
-                            return this.getAttribute('data-child-key') === childKey;
-                        }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
+                        this.styleConnectorsForKeys(this.getConnectorPrefixKeys(childKey), 'preview');
                     }
                 }
             });
 
-        // 若存在被锁定的预览，重绘后恢复其高亮与内容
-        if (this.previewLocked && this.lockedPreviewKey) {
-            const k = this.lockedPreviewKey;
-            g.selectAll('path.lv-connector').filter(function(){
-                return this.getAttribute('data-child-key') === k;
-            }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
-            this.previewPathByChildKey(k);
+        // Redrawing the overlay must not drop the currently previewed route.
+        const previewKey = this.previewLocked ? this.lockedPreviewKey : this.currentPreviewKey;
+        if (previewKey) {
+            this.styleConnectorsForKeys(this.getConnectorPrefixKeys(previewKey), 'preview');
+            this.previewPathByChildKey(previewKey);
         }
     }
 
@@ -782,7 +810,6 @@ class LineageVis {
         
         // 中间点的 x 坐标（水平线到垂直线的转折点）
         const midX = src.x + dx * 0.7; // 70% 处转折
-        
         let pathData;
         
         if (dy > 0) {
@@ -829,13 +856,62 @@ class LineageVis {
             .attr('class', 'lv-connector')
             .attr('d', pathData)
             .attr('fill', 'none')
-            .attr('stroke', '#aeb7c0')
+            .attr('stroke', this.connectorColors.base)
             .attr('stroke-width', 1.2)
             .attr('marker-end', 'url(#lv-arrow)')
             .attr('stroke-linecap', 'round')
             .attr('stroke-linejoin', 'round')
             .style('cursor','pointer')
             .style('pointer-events','stroke');
+    }
+
+    updateConnectorSelection() {
+        if (!this.branchLayout) return;
+        this.branchLayout.overlayG.selectAll('path.lv-connector').each((_, i, nodes) => {
+            const path = d3.select(nodes[i]);
+            const childKey = path.attr('data-child-key') || '';
+            const selected = this.activeConnectorKeys.has(childKey);
+            path.attr('stroke', selected ? this.connectorColors.selected : this.connectorColors.base)
+                .attr('stroke-width', selected ? 2.2 : 1.2)
+                .attr('marker-end', selected ? 'url(#lv-arrow-selected)' : 'url(#lv-arrow)');
+        });
+    }
+
+    styleConnectorsForKey(childKey, mode = 'base') {
+        this.styleConnectorsForKeys(childKey ? [childKey] : [], mode);
+    }
+
+    styleConnectorsForKeys(childKeys, mode = 'base') {
+        if (!this.branchLayout) return;
+        const keys = new Set(childKeys || []);
+        const preview = mode === 'preview';
+        this.branchLayout.overlayG.selectAll('path.lv-connector')
+            .each((_, i, nodes) => {
+                const path = d3.select(nodes[i]);
+                const key = path.attr('data-child-key') || '';
+                if (!keys.has(key)) return;
+                const selected = this.activeConnectorKeys.has(key);
+                const inPreview = preview && keys.has(key);
+                const stroke = selected
+                    ? this.connectorColors.selected
+                    : (inPreview ? this.connectorColors.preview : this.connectorColors.base);
+                const width = selected || inPreview ? 2.2 : 1.2;
+                const marker = selected
+                    ? 'url(#lv-arrow-selected)'
+                    : (inPreview ? 'url(#lv-arrow-preview)' : 'url(#lv-arrow)');
+                path.attr('stroke', stroke)
+                    .attr('stroke-width', width)
+                    .attr('marker-end', marker);
+            });
+    }
+
+    getConnectorPrefixKeys(childKey) {
+        const parts = String(childKey || '').split('->').filter(Boolean);
+        const keys = [];
+        for (let i = 1; i < parts.length; i++) {
+            keys.push(parts.slice(0, i + 1).join('->'));
+        }
+        return keys;
     }
 
     previewPathByChildKey(childKey) {
@@ -885,6 +961,7 @@ class LineageVis {
         this.renderedForkKeys.clear();
         this.currentPathsSubset = [];
         this.nodePathMap = {};
+        this.activeConnectorKeys = new Set();
         this.currentPreviewKey = null;
         this.previewLocked = false;
         this.lockedPreviewKey = null;

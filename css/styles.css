@@ -56,6 +56,7 @@ body {
     gap: 10px; /* 视图之间的间距 */
     width: 450px; /* 左侧面板宽度 */
     flex-shrink: 0; /* 防止面板在空间不足时被压缩 */
+    min-height: 0;
 }
 
 /* 新增：中间面板 */
@@ -222,6 +223,15 @@ body {
     gap: 10px;
     width: 400px;
     flex-shrink: 0;
+    min-height: 0;
+}
+
+/* 让左右两侧的最后一个大视图填满面板剩余高度，与中间视图齐平 */
+#channelViewContainer {
+    flex: 1 1 0;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 }
 
 /* 固定 Neighbor Overall Communication 容器高度 400 */
@@ -274,9 +284,12 @@ body {
 
 
 #pathPatternContainer {
-    max-height: 645px; /* 限制整体容器最大高度，原为1200 */
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: none;
     overflow-y: auto;
     overflow-x: hidden; /* 不显示水平滚动条 */
+    scrollbar-gutter: stable; /* 提前为展开后的垂直滚动条保留空间，避免内容贴到滚动条下方 */
 }
 
 .pattern-header {
@@ -587,28 +600,22 @@ body {
 }
 
 .path-preview-ring .lineage-selection-band {
-    stroke: #efff00;
-    stroke-width: 1px;
-    stroke-opacity: 0.78;
-    filter:
-        drop-shadow(0 0 0.8px rgba(239, 255, 0, 0.72))
-        drop-shadow(0 0 2.4px rgba(239, 255, 0, 0.28));
     animation: lineage-selection-fade 2.6s ease-in-out infinite;
 }
 
 @keyframes lineage-selection-fade {
     0%, 100% {
-        opacity: 0.42;
+        opacity: 0.34;
     }
     50% {
-        opacity: 0.82;
+        opacity: 0.72;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .path-preview-ring .lineage-selection-band {
         animation: none;
-        opacity: 0.62;
+        opacity: 0.54;
     }
 }
 

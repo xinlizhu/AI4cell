@@ -30,10 +30,10 @@ export class LineageChart {
         'Neural crest': '#7BC031', // 绿色
         'Branchial arch': '#BA956A', // 棕色
         'AGM': '#B624D9', // 紫色
-        'Liver': '#57A4E8', // 蓝色
+        'Liver': '#D4A017', // 金黄色，和路径选中蓝色区分
         'Cavity': '#B13E00', // 橙色
         'Brain': '#F9D7BE', // 米色
-        'Connective tissue': '#1B71CE', // 深蓝色
+        'Connective tissue': '#008C95', // 青绿色，和路径选中蓝色区分
         'Dermomyotome': '#EE4FF9', // 粉紫色
         'Mesenchyme': '#D3245A', // 深红色
         'Notochord': '#EF833A', // 橙色
@@ -73,19 +73,42 @@ export class LineageChart {
             .attr('width', this.width)
             .attr('height', this.height);
 
-        // A narrow edge highlight follows the glyph's outermost contour.
+        const defs = this.svg.append('defs');
+        const selectionGradientId = `lineage-selection-gradient-${this.containerId}`.replace(/[^a-zA-Z0-9_-]/g, '_');
+        const selectionGradient = defs.append('radialGradient')
+            .attr('id', selectionGradientId)
+            .attr('gradientUnits', 'userSpaceOnUse')
+            .attr('cx', this.centerX)
+            .attr('cy', this.centerY)
+            .attr('r', this.maxOuterRadius);
+
+        // The glow starts at the shared send/receive baseline (r = 120)
+        // and fades only toward the outer side of the glyph.
+        [
+            ['0%', 0],
+            ['76%', 0],
+            ['79%', 0],
+            ['80%', 0.34],
+            ['83%', 0.28],
+            ['89%', 0.14],
+            ['95%', 0.05],
+            ['100%', 0]
+        ].forEach(([offset, opacity]) => {
+            selectionGradient.append('stop')
+                .attr('offset', offset)
+                .attr('stop-color', '#2f80ed')
+                .attr('stop-opacity', opacity);
+        });
+
         this.svg.append('circle')
             .attr('class', 'lineage-selection-band')
             .attr('cx', this.centerX)
             .attr('cy', this.centerY)
-            .attr('r', this.maxOuterRadius - 1.75)
-            .attr('fill', 'none')
-            .attr('stroke', '#efff00')
-            .attr('stroke-width', 1)
+            .attr('r', this.maxOuterRadius)
+            .attr('fill', `url(#${selectionGradientId})`)
             .attr('pointer-events', 'none');
 
         // Keep labels inside the chart boundary and let long names follow the upper arc.
-        const defs = this.svg.append('defs');
         const titlePathId = `lineage-title-path-${this.containerId}`.replace(/[^a-zA-Z0-9_-]/g, '_');
         defs.append('path')
             .attr('id', titlePathId)

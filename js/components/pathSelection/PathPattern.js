@@ -15,10 +15,10 @@ class PathPattern {
         'Neural crest': '#7BC031', // 绿色
         'Branchial arch': '#BA956A', // 棕色
         'AGM': '#B624D9', // 紫色
-        'Liver': '#57A4E8', // 蓝色
+        'Liver': '#D4A017', // 金黄色，和路径选中蓝色区分
         'Cavity': '#B13E00', // 橙色
         'Brain': '#F9D7BE', // 米色
-        'Connective tissue': '#1B71CE', // 深蓝色
+        'Connective tissue': '#008C95', // 青绿色，和路径选中蓝色区分
         'Dermomyotome': '#EE4FF9', // 粉紫色
         'Mesenchyme': '#D3245A', // 深红色
         'Notochord': '#EF833A', // 橙色
@@ -138,21 +138,43 @@ class PathPattern {
         const rightColWidth = 110;      // 结束节点列
         const lengthBarWidth = 75;      // 路径长度bar chart列
         const countBarWidth = 75;       // 路径个数bar chart列
-        const lenExtent = d3.extent(filteredData, d => +d.path_length || 0);
+        const lengthLabelWidth = 18;    // 路径长度固定数字区
+        const lengthLabelGap = 2;       // 路径长度柱条与数字区的间距
+        const lengthRightInset = 4;     // 路径长度数字区右侧留白
+        const lengthTrackWidth = lengthBarWidth - lengthLabelWidth - lengthLabelGap - lengthRightInset;
+        const countLabelWidth = 24;     // 为路径个数数值预留固定空间
+        const countRightInset = 8;      // 与容器右侧/滚动条之间的视觉安全距离
+        const countLabelGap = 2;        // 柱条与数值之间的间距
+        const countTrackWidth = countBarWidth - countLabelWidth - countRightInset - countLabelGap;
+
+        // The tree view collapses duplicate cell-type routes, so the summary
+        // metrics must use the same deduplicated routes instead of raw records.
+        const displayData = filteredData.map(pattern => {
+            const metrics = this.getVisualPathMetrics(pattern);
+            return {
+                ...pattern,
+                visualPathNum: metrics.pathCount,
+                visualPathLength: metrics.pathLength
+            };
+        });
+
+        const lenExtent = d3.extent(displayData, d => d.visualPathLength);
         const safeLenDomain = (lenExtent && isFinite(lenExtent[0]) && isFinite(lenExtent[1]) && lenExtent[0] !== lenExtent[1])
             ? lenExtent
             : [Math.max(1, (lenExtent && lenExtent[0]) || 2), Math.max(2, ((lenExtent && lenExtent[1]) || 8) + 1)];
-        const pathLengthScale = d3.scaleLinear().domain(safeLenDomain).range([10, lengthBarWidth - 10]);
+        const pathLengthScale = d3.scaleLinear().domain(safeLenDomain).range([8, lengthTrackWidth]);
 
-        const numExtent = d3.extent(filteredData, d => +d.path_num || 0);
+        const numExtent = d3.extent(displayData, d => d.visualPathNum);
         const safeNumDomain = (numExtent && isFinite(numExtent[0]) && isFinite(numExtent[1]) && numExtent[0] !== numExtent[1])
             ? numExtent
             : [Math.max(0, (numExtent && numExtent[0]) || 1), Math.max(1, ((numExtent && numExtent[1]) || 30) + 1)];
     // 将条形高度范围翻倍，配合更高的容器实现“框高度翻倍”
-    const pathNumScale = d3.scaleLinear().domain(safeNumDomain).range([10, countBarWidth - 10]);
+        const pathNumScale = d3.scaleLinear()
+            .domain(safeNumDomain)
+            .range([8, countTrackWidth]);
 
         const patterns = this.listContainer.selectAll('.pattern-item')
-            .data(filteredData, d => `${d.start}-${d.end}`);
+            .data(displayData, d => `${d.start}-${d.end}`);
 
         patterns.exit().remove();
 
@@ -203,6 +225,7 @@ class PathPattern {
             .style('display', 'flex')
             .style('align-items', 'center')
             .style('justify-content', 'flex-start')
+            .style('padding', '0')
             .style('width', `${leftColWidth}px`);
         
         // 左侧小圆圈（先添加，在文字前面）
@@ -242,6 +265,7 @@ class PathPattern {
             .style('display', 'flex')
             .style('align-items', 'center')
             .style('justify-content', 'flex-start')
+            .style('padding', '0')
             .style('width', `${rightColWidth}px`);
         
         // 右侧小圆圈（先添加，在文字左侧）
@@ -276,12 +300,13 @@ class PathPattern {
             .style('display', 'flex')
             .style('align-items', 'center')
             .style('justify-content', 'flex-start')
-            .style('position', 'relative');
+            .style('position', 'relative')
+            .style('overflow', 'hidden');
 
         lengthBarWrap.append('div')
             .attr('class', 'pattern-length-bar')
             .style('height', '12px')
-            .style('width', d => `${pathLengthScale(d.path_length)}px`)
+            .style('width', d => `${pathLengthScale(d.visualPathLength)}px`)
             .style('background', '#5d5d5dff') // 改为灰白色
             .style('border-radius', '2px')
             .style('position', 'relative')
@@ -291,12 +316,14 @@ class PathPattern {
         lengthBarWrap.append('span')
             .attr('class', 'length-label')
             .style('position', 'absolute')
-            .style('left', d => `${pathLengthScale(d.path_length) + 5}px`)
+            .style('left', `${lengthTrackWidth + lengthLabelGap}px`)
+            .style('width', `${lengthLabelWidth}px`)
+            .style('text-align', 'left')
             .style('top', '50%')
             .style('transform', 'translateY(-50%)')
             .style('font-size', '10px')
             .style('color', '#666')
-            .text(d => d.path_length);
+            .text(d => this.formatPathMetric(d.visualPathLength));
 
         // 路径个数 bar chart  
         const countBarWrap = contentEnter.append('div')
@@ -306,12 +333,13 @@ class PathPattern {
             .style('display', 'flex')
             .style('align-items', 'center')
             .style('justify-content', 'flex-start')
-            .style('position', 'relative');
+            .style('position', 'relative')
+            .style('overflow', 'hidden');
 
         countBarWrap.append('div')
             .attr('class', 'pattern-count-bar')
             .style('height', '12px')
-            .style('width', d => `${pathNumScale(d.path_num)}px`)
+            .style('width', d => `${pathNumScale(d.visualPathNum)}px`)
             .style('background', '#5d5d5dff') // 改为更浅的灰白色
             .style('border-radius', '2px')
             .style('position', 'relative')
@@ -321,12 +349,15 @@ class PathPattern {
         countBarWrap.append('span')
             .attr('class', 'count-label')
             .style('position', 'absolute')
-            .style('left', d => `${pathNumScale(d.path_num) + 5}px`)
+            .style('left', `${countTrackWidth + countLabelGap}px`)
+            .style('width', `${countLabelWidth}px`)
+            .style('right', 'auto')
+            .style('text-align', 'left')
             .style('top', '50%')
             .style('transform', 'translateY(-50%)')
             .style('font-size', '10px')
             .style('color', '#666')
-            .text(d => d.path_num);
+            .text(d => d.visualPathNum);
     }
 
     showPatternTreeView(patternElement, patternData) {
@@ -390,6 +421,45 @@ class PathPattern {
         this.listContainer.selectAll('.path-view-dropdown').remove();
     }
 
+    getVisualPathMetrics(patternData) {
+        const matchingPaths = this.filterPathsByPattern(patternData);
+        const uniqueRoutes = new Map();
+
+        matchingPaths.forEach(path => {
+            const nodes = String(path.path_string || '')
+                .split(' -> ')
+                .map(node => this.extractCellType(String(node || '').trim()))
+                .filter(node => node && node.toLowerCase() !== 'root');
+
+            if (nodes.length >= 2) {
+                uniqueRoutes.set(nodes.join(' -> '), nodes);
+            }
+        });
+
+        const routeLengths = Array.from(uniqueRoutes.values())
+            .map(nodes => nodes.length - 1);
+
+        // Keep the table usable if the detailed path file is unavailable.
+        if (routeLengths.length === 0) {
+            return {
+                pathCount: Number(patternData.path_num) || 0,
+                pathLength: Number(patternData.path_length) || 0
+            };
+        }
+
+        return {
+            pathCount: routeLengths.length,
+            pathLength: d3.mean(routeLengths)
+        };
+    }
+
+    formatPathMetric(value) {
+        if (!Number.isFinite(value)) return '0';
+        return Number.isInteger(value)
+            ? String(value)
+            : value.toFixed(2).replace(/\.?0+$/, '');
+    }
+
     triggerPatternSelection(startCell, endCell) {
         const event = new CustomEvent('patternSelected', {
             detail: {
@@ -409,6 +479,8 @@ class PatternTreeVisualization {
         this.pathsData = pathsData;
         this.colors = colors;
         this.selectedBranches = new Set();
+        this.nodeClickTimers = new Map();
+        this.nodeClickDelay = 240;
         this.width = 370;
         this.height = 400;
         
@@ -548,8 +620,8 @@ class PatternTreeVisualization {
                 const source = d.source;
                 const target = d.target;
                 
-                // 节点布局更新：展开按钮(-35) -> 圆圈(0) -> 文字(下方+15)
-                // 连接线从源节点圆圈右侧连接到目标节点展开按钮左侧
+                // 节点布局：圆圈(0) -> 文字(下方+15)
+                // 连接线从源节点圆圈右侧连接到目标节点圆圈左侧
                 
                 // 计算文字长度来确定边界（现在文字在下方，不影响水平连接）
                 const sourceTextLength = (source.data.name || '').length;
@@ -557,14 +629,14 @@ class PatternTreeVisualization {
                 
                 // 源节点右边界：圆圈右侧 + 安全距离
                 const sourceRightBound = 15; // 圆圈半径6 + 安全距离
-                // 目标节点左边界：展开按钮位置 - 安全距离  
-                const targetLeftBound = -45;
+                // 目标节点左边界：圆圈左侧 - 安全距离
+                const targetLeftBound = -10;
                 
                 // 连接线起点：源节点圆圈右侧
                 const sourceX = source.x;
                 const sourceY = source.y + sourceRightBound;
                 
-                // 连接线终点：目标节点展开按钮左侧
+                // 连接线终点：目标节点圆圈左侧
                 const targetX = target.x; 
                 const targetY = target.y + targetLeftBound;
                 
@@ -599,14 +671,36 @@ class PatternTreeVisualization {
             .attr('class', 'node-circle')
             .attr('cx', 0) // 圆圈居中
             .attr('cy', 0)
-            .attr('r', 6)
+            .attr('r', 8.5)
             .style('fill', d => {
                 if (d.data.name === 'root') return 'transparent';
                 return this.colors[d.data.name] || '#e0e0e0';
             })
             .style('stroke', 'none') /* 移除边框 */
             .style('stroke-width', 0)
-            .style('filter', 'none'); /* 移除阴影 */
+            .style('filter', 'none') /* 移除阴影 */
+            .on('click', (event, d) => this.handleNodeCircleClick(event, d))
+            .on('dblclick', (event, d) => this.handleNodeCircleDoubleClick(event, d));
+
+        // Keep the expand/collapse affordance inside the colored node.
+        nodeGroups.filter(d => (d.children || d._children) && d.data.name !== 'root')
+            .append('text')
+            .attr('class', 'node-toggle-mark')
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('text-anchor', 'middle')
+            .attr('dy', '0.35em')
+            .style('font-size', '12px')
+            .style('font-weight', '800')
+            .style('font-family', 'Arial, sans-serif')
+            .style('fill', d => {
+                const color = d3.color(this.colors[d.data.name] || '#e0e0e0');
+                if (!color) return '#fff';
+                const brightness = 0.299 * color.r + 0.587 * color.g + 0.114 * color.b;
+                return brightness > 175 ? '#344054' : '#fff';
+            })
+            .style('pointer-events', 'none')
+            .text(d => d.children ? '−' : '+');
             
         // 节点文本
         nodeGroups.append('text')
@@ -623,55 +717,51 @@ class PatternTreeVisualization {
                 return `${d.data.name}`;
             });
             
-        // 展开/折叠按钮 - 只为有子节点的节点添加
-        const nodesWithChildren = nodeGroups.filter(d => {
-            const hasChildren = (d.children || d._children) && d.data.name !== 'root';
-            if (hasChildren) {
-                // has children
-            }
-            return hasChildren;
-        });
-        
-        console.log('Nodes with children:', nodesWithChildren.size());
-        
-        nodesWithChildren.append('circle')
-            .attr('class', 'toggle-btn')
-            .attr('cx', -35) // 展开按钮放在圆圈左侧固定位置
-            .attr('cy', 0)
-            .attr('r', 7)
-            .style('fill', '#f5f5f5') /* 更淡的背景 */
-            .style('stroke', '#d0d0d0') /* 更淡的边框 */
-            .style('stroke-width', 1)
-            .style('cursor', 'pointer')
-            .style('filter', 'none') /* 移除阴影 */
-            .on('click', (event, d) => {
-                event.stopPropagation();
-                console.log('Toggle button clicked for:', d.data.name);
-                console.log('Node state before toggle:', {
-                    hasChildren: !!d.children,
-                    hasHiddenChildren: !!d._children
-                });
-                this.toggle(d);
-                this.updateTree();
-            });
-            
-        nodesWithChildren.append('text')
-            .attr('x', -35) // 展开按钮文字对应位置
-            .attr('y', 0)
-            .attr('text-anchor', 'middle')
-            .attr('dy', '0.35em')
-            .style('font-size', '12px') // 从10px增加到12px
-            .style('font-weight', 'bold')
-            .style('pointer-events', 'none')
-            .style('fill', '#666')
-            .text(d => d.children ? '−' : '+');
+    }
+
+    handleNodeCircleClick(event, d) {
+        event.stopPropagation();
+        if (d.data.name === 'root') return;
+
+        const nodeId = d.data.id;
+        const previousTimer = this.nodeClickTimers.get(nodeId);
+        if (previousTimer) clearTimeout(previousTimer);
+
+        // Delay only circle clicks so a following dblclick can take over the gesture.
+        const selectionEvent = {
+            ctrlKey: event.ctrlKey,
+            shiftKey: event.shiftKey,
+            metaKey: event.metaKey,
+            stopPropagation: () => {}
+        };
+        const timer = setTimeout(() => {
+            this.nodeClickTimers.delete(nodeId);
+            this.handleNodeClick(selectionEvent, d);
+        }, this.nodeClickDelay);
+        this.nodeClickTimers.set(nodeId, timer);
+    }
+
+    handleNodeCircleDoubleClick(event, d) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (d.data.name === 'root' || !(d.children || d._children)) return;
+
+        const nodeId = d.data.id;
+        const pendingTimer = this.nodeClickTimers.get(nodeId);
+        if (pendingTimer) clearTimeout(pendingTimer);
+        this.nodeClickTimers.delete(nodeId);
+
+        this.toggle(d);
+        this.updateTree();
     }
     
     // 添加节点点击处理方法
     handleNodeClick(event, d) {
         if (d.data.name === 'root') return;
-        
-    // node clicked
+
+        if (event && typeof event.stopPropagation === 'function') {
+            event.stopPropagation();
+        }
         
         const nodeId = d.data.id;
         
@@ -717,7 +807,7 @@ class PatternTreeVisualization {
     updateNodeSelection() {
         this.g.selectAll('.tree-node .node-circle')
             .style('r', d => {
-                return this.selectedBranches.has(d.data.id) ? 10 : 6; // 选中时圆圈变大
+                return this.selectedBranches.has(d.data.id) ? 10.5 : 8.5; // 选中时圆圈变大
             });
     }
     
