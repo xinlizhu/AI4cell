@@ -20,9 +20,9 @@ class LineageVis {
         this.mouseMode = 'pan'; // 默认拖拽模式
         // 布局参数
         this.layoutConfig = {
-            columnWidth: 500,   // 放大 2 倍
-            chartWidth: 660,    // 与 LineageChart scaleFactor=2 匹配
-            colGap: 200          // 稍微加大间距
+            chartWidth: 360,    // 与 LineageChart 实际 SVG 宽度一致，避免节点容器产生空白
+            columnWidth: 360,
+            colGap: 64
         };
     }
 
@@ -185,6 +185,11 @@ class LineageVis {
                 window.lineageMetricMode = mode; // 记住选择
                 document.dispatchEvent(new CustomEvent('lineageMetricModeChanged', { detail: { mode } }));
             });
+
+            bar.append('button')
+                .text('Clear')
+                .attr('class', 'lv-clear-btn')
+                .on('click', () => this.clearLineageView());
         }
     }
 
@@ -240,20 +245,6 @@ class LineageVis {
             .style('position','relative')
             .style('background','#fff')
             .style('cursor','grab');
-        // 顶部右上角清空按钮（绝对定位）
-        zoomOuter.append('button')
-            .text('Clear')
-            .attr('class','lv-clear-btn')
-            .style('position','absolute')
-            .style('top','8px')
-            .style('right','8px')
-            .style('z-index','10')
-            .style('padding','4px 10px')
-            .style('border','1px solid #ccc')
-            .style('background','#fff')
-            .style('border-radius','0px')
-            .style('cursor','pointer')
-            .on('click', () => this.clearLineageView());
         const zoomInner = zoomOuter.append('div')
             .attr('class','lineage-zoom-inner')
             .style('position','absolute')
@@ -285,15 +276,15 @@ class LineageVis {
         const defs = overlay.append('defs');
         defs.append('marker')
             .attr('id', 'lv-arrow')
-            .attr('viewBox', '0 0 10 10')
-            .attr('refX', 10)
-            .attr('refY', 5)
-            .attr('markerWidth', 6)
-            .attr('markerHeight', 6)
+            .attr('viewBox', '0 0 8 8')
+            .attr('refX', 8)
+            .attr('refY', 4)
+            .attr('markerWidth', 4.5)
+            .attr('markerHeight', 4.5)
             .attr('orient', 'auto-start-reverse')
             .append('path')
-            .attr('d', 'M 0 0 L 10 5 L 0 10 z')
-            .attr('fill', '#999');
+            .attr('d', 'M 0 0 L 8 4 L 0 8 z')
+            .attr('fill', '#aeb7c0');
 
         this.branchLayout = {
             root: chartsRow,
@@ -394,12 +385,12 @@ class LineageVis {
                     .attr('class', `branch-col depth-${depth}`)
                     .style('display', 'flex')
                     .style('flex-direction', 'column')
-                    .style('gap', '16px')
+                    .style('gap', '8px')
                     .style('align-items', 'center')
                     .style('position', 'relative')
                     .style('z-index', '2')
-                    .style('flex', '0 0 560px')
-                    .style('min-width', '560px');
+                    .style('flex', `0 0 ${this.layoutConfig.columnWidth}px`)
+                    .style('min-width', this.layoutConfig.columnWidth + 'px');
                 this.branchLayout.cols.set(depth, col);
             }
         }
@@ -639,7 +630,7 @@ class LineageVis {
                 const childKey = event.currentTarget.getAttribute('data-child-key');
                 g.selectAll('path.lv-connector').filter(function(){
                     return this.getAttribute('data-child-key') === childKey;
-                }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
                 if (childKey) this.previewPathByChildKey(childKey);
             })
             .on('mouseout.preview', (event) => {
@@ -648,13 +639,13 @@ class LineageVis {
                 if (this.previewLocked && this.lockedPreviewKey === childKey) {
                     g.selectAll('path.lv-connector').filter(function(){
                         return this.getAttribute('data-child-key') === childKey;
-                    }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                    }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
                     return;
                 }
                 // 恢复该条的默认样式
                 g.selectAll('path.lv-connector').filter(function(){
                     return this.getAttribute('data-child-key') === childKey;
-                }).attr('stroke', '#999').attr('stroke-width', 1.5);
+                    }).attr('stroke', '#aeb7c0').attr('stroke-width', 1.2);
                 // 未锁定时才清理预览
                 if (!this.previewLocked) this.clearPreviewPath();
             })
@@ -668,7 +659,7 @@ class LineageVis {
                     this.previewPathByChildKey(childKey);
                     g.selectAll('path.lv-connector').filter(function(){
                         return this.getAttribute('data-child-key') === childKey;
-                    }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                    }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
                 } else {
                     if (this.lockedPreviewKey === childKey) {
                         // 解锁
@@ -678,7 +669,7 @@ class LineageVis {
                         // 恢复样式
                         g.selectAll('path.lv-connector').filter(function(){
                             return this.getAttribute('data-child-key') === childKey;
-                        }).attr('stroke', '#999').attr('stroke-width', 1.5);
+                        }).attr('stroke', '#aeb7c0').attr('stroke-width', 1.2);
                     } else {
                         // 切换锁定到另一条
                         const prevKey = this.lockedPreviewKey;
@@ -686,12 +677,12 @@ class LineageVis {
                         if (prevKey) {
                             g.selectAll('path.lv-connector').filter(function(){
                                 return this.getAttribute('data-child-key') === prevKey;
-                            }).attr('stroke', '#999').attr('stroke-width', 1.5);
+                            }).attr('stroke', '#aeb7c0').attr('stroke-width', 1.2);
                         }
                         this.previewPathByChildKey(childKey);
                         g.selectAll('path.lv-connector').filter(function(){
                             return this.getAttribute('data-child-key') === childKey;
-                        }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+                        }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
                     }
                 }
             });
@@ -701,7 +692,7 @@ class LineageVis {
             const k = this.lockedPreviewKey;
             g.selectAll('path.lv-connector').filter(function(){
                 return this.getAttribute('data-child-key') === k;
-            }).attr('stroke', '#1e90ff').attr('stroke-width', 3);
+            }).attr('stroke', '#5d9dcc').attr('stroke-width', 2.2);
             this.previewPathByChildKey(k);
         }
     }
@@ -729,7 +720,7 @@ class LineageVis {
         const leaves = [];
         nodeInfos.forEach(info => { if (info.children.length === 0) leaves.push(info); });
         leaves.sort((a,b)=> (a.depth - b.depth) || 0);
-    const leafGap = 390; // 略大于容器高度(~388px)，保持最小安全间距
+        const leafGap = 380; // 标题移入环图后，保持节点之间仅留必要间距
         let nextLeafIndex = 0;
         function assignY(node) {
             if (node.children.length === 0) {
@@ -838,9 +829,11 @@ class LineageVis {
             .attr('class', 'lv-connector')
             .attr('d', pathData)
             .attr('fill', 'none')
-            .attr('stroke', '#999')
-            .attr('stroke-width', 1.5)
+            .attr('stroke', '#aeb7c0')
+            .attr('stroke-width', 1.2)
             .attr('marker-end', 'url(#lv-arrow)')
+            .attr('stroke-linecap', 'round')
+            .attr('stroke-linejoin', 'round')
             .style('cursor','pointer')
             .style('pointer-events','stroke');
     }
@@ -869,18 +862,12 @@ class LineageVis {
             const previewId = `preview-${prefixKey.replace(/[^a-zA-Z0-9]/g,'_')}`;
             nodeSel.selectAll(`.lc-preview-host#${previewId}`).remove();
             const host = nodeSel.append('div')
-                .attr('class','lc-preview-host')
+                .attr('class','lc-preview-host path-preview-ring')
                 .attr('id', previewId)
                 .style('position','relative')
                 .style('z-index','3');
             new LineageChart(previewId, chain[depth], specificCells, depth, true);
         }
-        chain.forEach((_, depth)=>{
-            const prefixKey = chain.slice(0, depth + 1).join('->');
-            this.branchLayout.root.select(`.branch-chart[data-key='${prefixKey}']`)
-                .classed('preview-active', true)
-                .style('box-shadow','0 0 0 2px rgba(30,144,255,0.5)');
-        });
     }
 
     clearPreviewPath() {
@@ -888,9 +875,6 @@ class LineageVis {
         if (!this.currentPreviewKey) return;
         this.branchLayout.root.selectAll('.lc-preview-host').remove();
         this.branchLayout.root.selectAll('.lc-host').style('display', null);
-        this.branchLayout.root.selectAll('.preview-active')
-            .classed('preview-active', false)
-            .style('box-shadow', null);
         this.currentPreviewKey = null;
     }
 
@@ -924,6 +908,7 @@ class LineageVis {
         try { window.__overallCommCurrentMode = '总强度'; } catch (_) {}
         // 触发一次模式变化，便于其他监听者同步复位（若存在）
         try { document.dispatchEvent(new CustomEvent('lineageMetricModeChanged', { detail: { mode: '总强度' } })); } catch (_) {}
+        this.initializeGlobalControls();
     }
 
     async getAllNeighborCells(pathCellsOrDescriptors) {
@@ -1276,6 +1261,7 @@ class LineageVis {
 
     // 清除套索路径
     clearLassoPath() {
+        if (!this.lassoData) return;
         if (this.lassoData.lassoGroup) {
             this.lassoData.lassoGroup.remove();
             this.lassoData.lassoGroup = null;

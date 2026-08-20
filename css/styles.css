@@ -24,7 +24,7 @@ body {
 
 .app-title {
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 1px;
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1;
@@ -544,5 +544,88 @@ body {
 /* 在缩放时给一点平滑过渡（可选） */
 .lineage-zoom-inner.scaling-transition {
     transition: transform 0.12s ease-out;
+}
+
+/* Cell Trajectory View controls and selected path feedback */
+.lv-global-controls {
+    align-items: center;
+}
+
+.lv-global-controls select,
+.lv-clear-btn {
+    height: 23px;
+    box-sizing: border-box;
+}
+
+.lv-clear-btn {
+    padding: 2px 10px;
+    border: 1px solid #aeb7c2;
+    border-radius: 3px;
+    background: #fff;
+    color: #344054;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.lv-clear-btn:hover {
+    background: #f2f7fc;
+    border-color: #6f9fcc;
+}
+
+.path-preview-ring {
+    position: relative;
+}
+
+.path-preview-ring > svg {
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.lineage-selection-band {
+    opacity: 0;
+}
+
+.path-preview-ring .lineage-selection-band {
+    stroke: #efff00;
+    stroke-width: 1px;
+    stroke-opacity: 0.78;
+    filter:
+        drop-shadow(0 0 0.8px rgba(239, 255, 0, 0.72))
+        drop-shadow(0 0 2.4px rgba(239, 255, 0, 0.28));
+    animation: lineage-selection-fade 2.6s ease-in-out infinite;
+}
+
+@keyframes lineage-selection-fade {
+    0%, 100% {
+        opacity: 0.42;
+    }
+    50% {
+        opacity: 0.82;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .path-preview-ring .lineage-selection-band {
+        animation: none;
+        opacity: 0.62;
+    }
+}
+
+/* Titles are drawn on the SVG arc so they stay inside the selected ring. */
+.branch-chart .chart-title {
+    display: none;
+}
+
+.lineage-chart-title {
+    fill: #2f3439;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    paint-order: stroke;
+    stroke: #fff;
+    stroke-width: 7px;
+    stroke-linejoin: round;
+    pointer-events: none;
 }
 

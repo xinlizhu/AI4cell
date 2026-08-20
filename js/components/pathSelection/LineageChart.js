@@ -69,8 +69,36 @@ export class LineageChart {
     init() {
         this.svg = d3.select(`#${this.containerId}`)
             .append('svg')
+            .attr('class', 'lineage-chart-svg')
             .attr('width', this.width)
             .attr('height', this.height);
+
+        // A narrow edge highlight follows the glyph's outermost contour.
+        this.svg.append('circle')
+            .attr('class', 'lineage-selection-band')
+            .attr('cx', this.centerX)
+            .attr('cy', this.centerY)
+            .attr('r', this.maxOuterRadius - 1.75)
+            .attr('fill', 'none')
+            .attr('stroke', '#efff00')
+            .attr('stroke-width', 1)
+            .attr('pointer-events', 'none');
+
+        // Keep labels inside the chart boundary and let long names follow the upper arc.
+        const defs = this.svg.append('defs');
+        const titlePathId = `lineage-title-path-${this.containerId}`.replace(/[^a-zA-Z0-9_-]/g, '_');
+        defs.append('path')
+            .attr('id', titlePathId)
+            .attr('d', `M ${this.centerX - 146} ${this.centerY} A 146 146 0 0 1 ${this.centerX + 146} ${this.centerY}`)
+            .attr('fill', 'none');
+        this.svg.append('text')
+            .attr('class', 'lineage-chart-title')
+            .attr('text-anchor', 'middle')
+            .attr('aria-label', this.cellName)
+            .append('textPath')
+            .attr('href', `#${titlePathId}`)
+            .attr('startOffset', '50%')
+            .text(this.cellName);
 
         this.g = this.svg.append('g')
             .attr('transform', `translate(${this.centerX}, ${this.centerY})`);
