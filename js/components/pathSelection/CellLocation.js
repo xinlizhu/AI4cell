@@ -77,6 +77,7 @@ export class CellLocation {
             const levelData = this.getLevelData(level);
             const size = opts.size ?? 80;
             const baseType = opts.baseType; // 可用于统一颜色
+            const backgroundPointRadius = size / 140;
 
             // 目标集合
             const targetSet = new Set((specificNames || []).filter(Boolean));
@@ -95,7 +96,8 @@ export class CellLocation {
                 .attr('class', 'cell-location-mini')
                 .attr('opacity', 0);
 
-            // 其他细胞（灰色、较小、透明）
+            // Use an opaque neutral fill so overlapping samples cannot create
+            // resolution-dependent dark bands in the miniature silhouette.
             g.selectAll('.other-cell')
                 .data(otherCells)
                 .enter()
@@ -103,9 +105,9 @@ export class CellLocation {
                 .attr('class', 'other-cell')
                 .attr('cx', d => xScale(d.x))
                 .attr('cy', d => yScale(d.y))
-                .attr('r', 0.8)
-                .attr('fill', 'gray')
-                .attr('fill-opacity', 0.4)
+                .attr('r', backgroundPointRadius)
+                .attr('fill', '#e8e8e8')
+                .attr('fill-opacity', 1)
                 .attr('stroke', 'none');
 
             // 目标细胞（按类型上色）
