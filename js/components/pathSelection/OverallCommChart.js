@@ -113,18 +113,18 @@ export class OverallCommChart {
 
         // 颜色映射：优先与既有类型色一致，回退到 Category10
         this.typeColorMap = {
-        'Heart': '#EF778C', // 浅红色
-        'Neural crest': '#7BC031', // 绿色
-        'Branchial arch': '#BA956A', // 棕色
-        'AGM': '#B624D9', // 紫色
-        'Liver': '#D4A017', // 金黄色，和路径选中蓝色区分
-        'Cavity': '#B13E00', // 橙色
-        'Brain': '#F9D7BE', // 米色
-        'Connective tissue': '#008C95', // 青绿色，和路径选中蓝色区分
-        'Dermomyotome': '#EE4FF9', // 粉紫色
-        'Mesenchyme': '#D3245A', // 深红色
-        'Notochord': '#EF833A', // 橙色
-        'Sclerotome': '#35586D' // 深灰色
+        'Heart': 'rgba(239, 119, 140, 0.6)', // 浅红色
+        'Neural crest': 'rgba(123, 192, 49, 0.6)', // 绿色
+        'Branchial arch': 'rgba(186, 149, 106, 0.6)', // 棕色
+        'AGM': 'rgba(182, 36, 217, 0.6)', // 紫色
+        'Liver': 'rgba(212, 160, 23, 0.6)', // 金黄色，和路径选中蓝色区分
+        'Cavity': 'rgba(177, 62, 0, 0.6)', // 橙色
+        'Brain': 'rgba(249, 215, 190, 0.6)', // 米色
+        'Connective tissue': 'rgba(0, 140, 149, 0.6)', // 青绿色，和路径选中蓝色区分
+        'Dermomyotome': 'rgba(238, 79, 249, 0.6)', // 粉紫色
+        'Mesenchyme': 'rgba(211, 36, 90, 0.6)', // 深红色
+        'Notochord': 'rgba(239, 131, 58, 0.6)', // 橙色
+        'Sclerotome': 'rgba(53, 88, 109, 0.6)' // 深灰色
         };
         this.scheme = d3.schemeCategory10;
 
@@ -332,7 +332,8 @@ export class OverallCommChart {
             .attr('paint-order', 'stroke')
             .text(d => d.totalCells);
 
-        // X轴
+        // X轴 — 让 axis line 延伸到 0 处，与 Y 轴相交；
+        // 但 ticks（标签和刻度线）仍保持在 padding 之后，使第一个坐标点不与 Y 轴重合。
         const xAxis = d3.axisBottom(x)
             .tickValues(cellCountPositions.map(d => d.index))
             .tickFormat(i => {
@@ -344,10 +345,21 @@ export class OverallCommChart {
                 return `${idx}`;
             });
 
-        g.append('g')
-            .attr('transform', `translate(0,${height - this.margin.top - this.margin.bottom})`)
-            .call(xAxis)
-            .selectAll('text')
+        const xAxisY = height - this.margin.top - this.margin.bottom;
+        const xAxisG = g.append('g')
+            .attr('transform', `translate(0,${xAxisY})`)
+            .call(xAxis);
+
+        // 重写 X 轴底部 axis line：让 line 从 0 延伸到右边，覆盖左侧 padding 区域，使 X 轴线与 Y 轴相交
+        xAxisG.select('.domain').remove();
+        xAxisG.append('path')
+            .attr('class', 'domain')
+            .attr('fill', 'none')
+            .attr('stroke', 'currentColor')
+            .attr('stroke-width', '1px')
+            .attr('d', `M0,0H${this.width}`);
+
+        xAxisG.selectAll('text')
             .style('font-size', '8px')
             .attr('text-anchor', 'middle')
             .attr('transform', 'rotate(0)'); // 水平显示文本

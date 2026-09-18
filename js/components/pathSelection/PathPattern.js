@@ -11,18 +11,18 @@ class PathPattern {
         this.allPaths = [];
         this.selectedCells = [];
         this.colors = {
-        'Heart': '#EF778C', // 浅红色
-        'Neural crest': '#7BC031', // 绿色
-        'Branchial arch': '#BA956A', // 棕色
-        'AGM': '#B624D9', // 紫色
-        'Liver': '#D4A017', // 金黄色，和路径选中蓝色区分
-        'Cavity': '#B13E00', // 橙色
-        'Brain': '#F9D7BE', // 米色
-        'Connective tissue': '#008C95', // 青绿色，和路径选中蓝色区分
-        'Dermomyotome': '#EE4FF9', // 粉紫色
-        'Mesenchyme': '#D3245A', // 深红色
-        'Notochord': '#EF833A', // 橙色
-        'Sclerotome': '#35586D' // 深灰色
+        'Heart': 'rgba(239, 119, 140, 0.6)', // 浅红色
+        'Neural crest': 'rgba(123, 192, 49, 0.6)', // 绿色
+        'Branchial arch': 'rgba(186, 149, 106, 0.6)', // 棕色
+        'AGM': 'rgba(182, 36, 217, 0.6)', // 紫色
+        'Liver': 'rgba(212, 160, 23, 0.6)', // 金黄色，和路径选中蓝色区分
+        'Cavity': 'rgba(177, 62, 0, 0.6)', // 橙色
+        'Brain': 'rgba(249, 215, 190, 0.6)', // 米色
+        'Connective tissue': 'rgba(0, 140, 149, 0.6)', // 青绿色，和路径选中蓝色区分
+        'Dermomyotome': 'rgba(238, 79, 249, 0.6)', // 粉紫色
+        'Mesenchyme': 'rgba(211, 36, 90, 0.6)', // 深红色
+        'Notochord': 'rgba(239, 131, 58, 0.6)', // 橙色
+        'Sclerotome': 'rgba(53, 88, 109, 0.6)' // 深灰色
         };
         this.init();
     }
@@ -693,12 +693,7 @@ class PatternTreeVisualization {
             .style('font-size', '12px')
             .style('font-weight', '800')
             .style('font-family', 'Arial, sans-serif')
-            .style('fill', d => {
-                const color = d3.color(this.colors[d.data.name] || '#e0e0e0');
-                if (!color) return '#fff';
-                const brightness = 0.299 * color.r + 0.587 * color.g + 0.114 * color.b;
-                return brightness > 175 ? '#344054' : '#fff';
-            })
+            .style('fill', '#000')
             .style('pointer-events', 'none')
             .text(d => d.children ? '−' : '+');
             
