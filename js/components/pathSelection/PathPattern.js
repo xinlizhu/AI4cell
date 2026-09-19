@@ -436,8 +436,16 @@ class PathPattern {
             }
         });
 
-        const routeLengths = Array.from(uniqueRoutes.values())
-            .map(nodes => nodes.length - 1);
+        const routes = Array.from(uniqueRoutes.values());
+
+        // The tree renders terminal branches. A route that is a prefix of a
+        // longer route ends at an intermediate node and must not be counted
+        // as a separate displayed path.
+        const terminalRoutes = routes.filter(route => !routes.some(other =>
+            other.length > route.length &&
+            route.every((node, index) => other[index] === node)
+        ));
+        const routeLengths = terminalRoutes.map(nodes => nodes.length - 1);
 
         // Keep the table usable if the detailed path file is unavailable.
         if (routeLengths.length === 0) {
