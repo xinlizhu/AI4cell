@@ -52,16 +52,6 @@ export class ChannelView {
         // 清空容器
         this.container.selectAll('*').remove();
         
-        // 创建标题
-        this.container.append('div')
-            .attr('class', 'channel-view-title')
-            .style('text-align', 'center')
-            .style('font-weight', '600') // 稍微减轻字重
-            .style('margin-bottom', '8px') // 减少底部间距
-            .style('font-size', '16px') // 减小字号，更紧凑
-            .style('color', '#333')
-            .text('Control Panel');
-
         // 创建控制台
         this.createControlPanel();
 

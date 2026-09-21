@@ -99,7 +99,7 @@ class PathPattern {
 
     render() {
         this.container.selectAll('*').remove();
-        this.container.append('h3').attr('class', 'pattern-header').text('📈 Cell Trajectory Summary');
+        this.container.append('h3').attr('class', 'pattern-header').text('📈 Trajectory Structure Summary');
         
         // 添加列标题
         const headerContainer = this.container.append('div')
@@ -137,15 +137,11 @@ class PathPattern {
         const leftColWidth = 110;       // 起始节点列
         const rightColWidth = 110;      // 结束节点列
         const lengthBarWidth = 75;      // 路径长度bar chart列
-        const countBarWidth = 75;       // 路径个数bar chart列
+        const countBarWidth = 36;       // 路径个数列（仅显示居中数字）
         const lengthLabelWidth = 18;    // 路径长度固定数字区
         const lengthLabelGap = 2;       // 路径长度柱条与数字区的间距
         const lengthRightInset = 4;     // 路径长度数字区右侧留白
         const lengthTrackWidth = lengthBarWidth - lengthLabelWidth - lengthLabelGap - lengthRightInset;
-        const countLabelWidth = 24;     // 为路径个数数值预留固定空间
-        const countRightInset = 8;      // 与容器右侧/滚动条之间的视觉安全距离
-        const countLabelGap = 2;        // 柱条与数值之间的间距
-        const countTrackWidth = countBarWidth - countLabelWidth - countRightInset - countLabelGap;
 
         // The tree view collapses duplicate cell-type routes, so the summary
         // metrics must use the same deduplicated routes instead of raw records.
@@ -165,13 +161,10 @@ class PathPattern {
         const pathLengthScale = d3.scaleLinear().domain(safeLenDomain).range([8, lengthTrackWidth]);
 
         const numExtent = d3.extent(displayData, d => d.visualPathNum);
+        // 仅用作最大值参考，不再用于绘制柱状条
         const safeNumDomain = (numExtent && isFinite(numExtent[0]) && isFinite(numExtent[1]) && numExtent[0] !== numExtent[1])
             ? numExtent
             : [Math.max(0, (numExtent && numExtent[0]) || 1), Math.max(1, ((numExtent && numExtent[1]) || 30) + 1)];
-    // 将条形高度范围翻倍，配合更高的容器实现“框高度翻倍”
-        const pathNumScale = d3.scaleLinear()
-            .domain(safeNumDomain)
-            .range([8, countTrackWidth]);
 
         const patterns = this.listContainer.selectAll('.pattern-item')
             .data(displayData, d => `${d.start}-${d.end}`);
@@ -325,38 +318,17 @@ class PathPattern {
             .style('color', '#666')
             .text(d => this.formatPathMetric(d.visualPathLength));
 
-        // 路径个数 bar chart  
-        const countBarWrap = contentEnter.append('div')
-            .attr('class', 'pattern-count-bar-wrap')
+        // 路径个数：仅居中显示数字，去掉柱状条
+        contentEnter.append('div')
+            .attr('class', 'pattern-count-text')
             .style('width', `${countBarWidth}px`)
             .style('height', '24px')
             .style('display', 'flex')
             .style('align-items', 'center')
-            .style('justify-content', 'flex-start')
-            .style('position', 'relative')
-            .style('overflow', 'hidden');
-
-        countBarWrap.append('div')
-            .attr('class', 'pattern-count-bar')
-            .style('height', '12px')
-            .style('width', d => `${pathNumScale(d.visualPathNum)}px`)
-            .style('background', '#5d5d5dff') // 改为更浅的灰白色
-            .style('border-radius', '2px')
-            .style('position', 'relative')
-            .style('flex-shrink', '0');
-
-        // 添加路径个数数值标签
-        countBarWrap.append('span')
-            .attr('class', 'count-label')
-            .style('position', 'absolute')
-            .style('left', `${countTrackWidth + countLabelGap}px`)
-            .style('width', `${countLabelWidth}px`)
-            .style('right', 'auto')
-            .style('text-align', 'left')
-            .style('top', '50%')
-            .style('transform', 'translateY(-50%)')
-            .style('font-size', '10px')
-            .style('color', '#666')
+            .style('justify-content', 'center')
+            .style('font-size', '12px')
+            .style('color', '#333')
+            .style('text-align', 'center')
             .text(d => d.visualPathNum);
     }
 

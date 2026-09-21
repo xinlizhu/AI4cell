@@ -29,7 +29,7 @@ class LineageVis {
         this.layoutConfig = {
             chartWidth: 360,    // 与 LineageChart 实际 SVG 宽度一致，避免节点容器产生空白
             columnWidth: 360,
-            colGap: 64
+            colGap: 320         // 加大列间距，让列间连接箭头横向拉长（纵向不动）
         };
     }
 
@@ -106,16 +106,41 @@ class LineageVis {
                 .style('gap', '8px')
                 .style('margin-bottom', '8px');
 
-            // 鼠标操作模式选择框
+            // 指标选择下拉框（控制 LineageChart 内外环使用哪种强度数据）
+            const metricSelect = bar.append('select')
+                .attr('class', 'lineage-metric-select')
+                .style('padding', '2px 4px')
+                .style('font-size', '12px');
+
+            const options = [
+                { value: '总强度', label: 'Total Intensity' },
+                { value: '通道数', label: 'Channel Count' },
+                { value: '平均通道数', label: 'Avg Channel Count' },
+                { value: '平均通道强度', label: 'Avg Channel Intensity' },
+                { value: '细胞接收强度', label: 'Cell Avg Intensity' } // 使用“细胞接收强度”关键字匹配用户描述
+            ];
+            metricSelect.selectAll('option')
+                .data(options)
+                .enter()
+                .append('option')
+                .attr('value', d => d.value)
+                .text(d => d.label);
+
+            // 恢复全局模式（若之前已选择）
+            const savedMode = window.lineageMetricMode || '总强度';
+            metricSelect.property('value', savedMode);
+
+            metricSelect.on('change', (event) => {
+                const mode = event.target.value;
+                window.lineageMetricMode = mode; // 记住选择
+                document.dispatchEvent(new CustomEvent('lineageMetricModeChanged', { detail: { mode } }));
+            });
+
+            // 鼠标操作模式选择框（Pan / Lasso），放到指标下拉框之后
             const modeGroup = bar.append('div')
                 .style('display', 'flex')
                 .style('align-items', 'center')
                 .style('gap', '4px');
-            
-            modeGroup.append('label')
-                .style('font-size', '12px')
-                .style('color', '#666')
-                .text('🖱️ Mouse Mode:');
 
             const modeSelect = modeGroup.append('select')
                 .attr('class', 'mouse-mode-select')
@@ -148,7 +173,7 @@ class LineageVis {
                 if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.tagName === 'SELECT') {
                     return;
                 }
-                
+
                 const key = event.key.toLowerCase();
                 if (key === 'l') {
                     this.mouseMode = 'lasso';
@@ -161,36 +186,6 @@ class LineageVis {
                     this.updateMouseMode();
                     event.preventDefault();
                 }
-            });
-
-            // 指标选择下拉框（控制 LineageChart 内外环使用哪种强度数据）
-            const metricSelect = bar.append('select')
-                .attr('class', 'lineage-metric-select')
-                .style('padding', '2px 4px')
-                .style('font-size', '12px');
-
-            const options = [
-                { value: '总强度', label: 'Total Intensity' },
-                { value: '通道数', label: 'Channel Count' },
-                { value: '平均通道数', label: 'Avg Channel Count' },
-                { value: '平均通道强度', label: 'Avg Channel Intensity' },
-                { value: '细胞接收强度', label: 'Cell Avg Intensity' } // 使用“细胞接收强度”关键字匹配用户描述
-            ];
-            metricSelect.selectAll('option')
-                .data(options)
-                .enter()
-                .append('option')
-                .attr('value', d => d.value)
-                .text(d => d.label);
-
-            // 恢复全局模式（若之前已选择）
-            const savedMode = window.lineageMetricMode || '总强度';
-            metricSelect.property('value', savedMode);
-
-            metricSelect.on('change', (event) => {
-                const mode = event.target.value;
-                window.lineageMetricMode = mode; // 记住选择
-                document.dispatchEvent(new CustomEvent('lineageMetricModeChanged', { detail: { mode } }));
             });
 
             bar.append('button')
@@ -805,8 +800,8 @@ class LineageVis {
         const dx = dst.x - src.x;
         const dy = dst.y - src.y;
         
-        // 弧线半径，可以根据距离调整
-        const radius = Math.min(Math.abs(dx) * 0.3, Math.abs(dy) * 0.3, 30);
+        // 弧线半径：收紧分叉口，让连接线更像顶会风格（紧凑直角弧）
+        const radius = Math.min(Math.abs(dx) * 0.08, Math.abs(dy) * 0.08, 8);
         
         // 中间点的 x 坐标（水平线到垂直线的转折点）
         const midX = src.x + dx * 0.7; // 70% 处转折
@@ -1049,7 +1044,7 @@ class LineageVis {
                 const mouseX = event.offsetX;
                 const mouseY = event.offsetY;
                 const prevScale = this.viewState.scale;
-                const delta = -event.deltaY * 0.001;
+                const delta = -event.deltaY * 0.0003;
                 this.viewState.scale = Math.min(3, Math.max(0.3, this.viewState.scale + delta));
                 const k = this.viewState.scale / prevScale;
                 this.viewState.translateX = mouseX - k * (mouseX - this.viewState.translateX);
