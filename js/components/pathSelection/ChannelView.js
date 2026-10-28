@@ -336,7 +336,7 @@ export class ChannelView {
         document.addEventListener('showNeighborDetails', (event) => {
             const { pathCells, neighborCells, lassoSelection } = event.detail;
             
-            if (lassoSelection && pathCells && pathCells.length > 1) {
+            if (lassoSelection && pathCells && pathCells.length > 0) {
                 // 进入套索模式，保存数据但不立即显示热图
                 this.isLassoMode = true;
                 this.currentLassoData = { pathCells, neighborCells };
