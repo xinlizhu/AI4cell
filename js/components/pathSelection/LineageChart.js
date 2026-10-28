@@ -703,13 +703,6 @@ export class LineageChart {
                 }));
             });
 
-        // 添加边框圆圈
-        centerGroup.append('circle')
-            .attr('r', 40 * this.scaleFactor)
-            .attr('fill', 'none')
-            .attr('stroke', '#ccc')
-            .attr('stroke-width', 0.5);
-
         // 使用 CellLocation 渲染迷你位置散点（固定 L6）
         try {
             if (!LineageChart._cellLocation) {
