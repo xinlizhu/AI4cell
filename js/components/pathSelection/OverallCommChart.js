@@ -178,6 +178,7 @@ export class OverallCommChart {
         
         // 1. 细胞总数图
         const cellCountContainer = container.append('div')
+            .style('background', '#fff')
             .style('border', '1px solid #ddd')
             .style('border-radius', '0px')
             .style('padding', '4px')
@@ -203,6 +204,7 @@ export class OverallCommChart {
 
         // 2. 接收通信图
         const receiveContainer = container.append('div')
+            .style('background', '#fff')
             .style('border', '1px solid #ddd')
             .style('border-radius', '0px')
             .style('padding', '4px')
@@ -227,6 +229,7 @@ export class OverallCommChart {
 
         // 3. 发送通信图
         const sendContainer = container.append('div')
+            .style('background', '#fff')
             .style('border', '1px solid #ddd')
             .style('border-radius', '0px')
             .style('padding', '4px')
@@ -444,6 +447,14 @@ export class OverallCommChart {
             .style('font-size', '7px')
             .attr('text-anchor', 'middle')
             .attr('transform', 'rotate(0)'); // 水平显示文本
+
+        // Y轴与堆叠柱共用比例尺，随当前通信指标更新。
+        // 使用紧凑数值格式，避免较大或较小的数值超出左侧边距。
+        g.append('g')
+            .attr('class', 'comm-y-axis')
+            .call(d3.axisLeft(y).ticks(4, '~s').tickSizeOuter(0))
+            .selectAll('text')
+            .style('font-size', '8px');
 
         // 工具提示
         const tooltip = d3.select('body').select('.overall-stacked-tooltip');

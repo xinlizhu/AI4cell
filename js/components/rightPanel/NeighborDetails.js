@@ -40,7 +40,7 @@ class NeighborDetailsPanel {
             .attr('class','neighbor-chart-list')
             .style('display','flex')
             .style('flex-direction','column')
-            .style('gap','0px') /* 移除gap，用分隔线代替 */
+            .style('gap','16px') /* 使用卡片之间的留白分隔分析结果 */
             .style('flex','1 1 auto')
             .style('overflow-y','auto')
             .style('overflow-x','hidden')
@@ -165,22 +165,13 @@ class NeighborDetailsPanel {
             .attr('class','neighbor-chart-wrapper')
             .attr('data-path-key', pathKey)
             .style('position','relative')
-            .style('border','none') /* 移除边框，减少视觉噪音 */
-            .style('border-radius','0px')
-            .style('padding','12px 8px') /* 调整padding */
-            .style('background','transparent') /* 透明背景 */
+            .style('border','none')
+            .style('border-radius','8px')
+            .style('padding','12px 8px')
+            .style('background','#e8f2ff')
             .style('overflow','hidden')
             .style('flex','0 0 auto')
-            .style('min-height','280px') /* 增加高度以更好地利用空间 */
-            .style('margin-bottom','8px'); /* 添加底部间距 */
-
-        // 只为非最后一个元素添加分隔线
-        if (this.chartCount > 1) {
-            wrap.style('border-top','1px solid #f5f5f5'); /* 顶部分隔线，而非底部 */
-            wrap.style('padding-top','20px'); /* 增加顶部内边距 */
-        }
-
-
+            .style('min-height','280px');
 
         const pathSummary = this.summarizePath(descriptors);
         const nodeCount = descriptors.length;
@@ -190,10 +181,9 @@ class NeighborDetailsPanel {
         const titleContainer = wrap.append('div')
             .attr('class','neighbor-chart-title-container')
             .style('margin-bottom','12px')
-            .style('padding','8px 12px')
-            .style('background','linear-gradient(135deg, #f8faff 0%, #e8f2ff 100%)')
-            .style('border-radius','6px')
-            .style('border','1px solid #e3efff')
+            .style('padding','8px 40px 8px 12px')
+            .style('background','transparent')
+            .style('border','none')
             .style('position','relative'); /* 添加相对定位，为删除按钮提供定位上下文 */
         
         // 主标题行
