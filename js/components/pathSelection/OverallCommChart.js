@@ -275,11 +275,11 @@ export class OverallCommChart {
             .domain([0, maxCellCount * 1.1])
             .range([height - this.margin.top - this.margin.bottom, 0]);
 
-        // 绘制折线图
+        // 按相邻观测值绘制直线段，不对节点之间的变化进行平滑插值。
         const line = d3.line()
             .x(d => x(d.index))
             .y(d => y(d.totalCells))
-            .curve(d3.curveMonotoneX);
+            .curve(d3.curveLinear);
 
         // 绘制折线
         g.append('path')
